@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulado Abordagem Policial</title>
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace; /* Fonte monoespaçada para um visual mais tecnológico */
+      background: linear-gradient(to bottom, #1a1a1a, #333); /* Fundo escuro */
+      color: #f5f5f5; /* Cor do texto mais clara */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px; /* Espaçamento interno */
+    }
+    .container {
+      width: 100%;
+      max-width: 900px;
+      padding: 20px;
+      background: #2c2c2c; /* Cor de fundo da caixa */
+      border: 1px solid #555; /* Borda mais escura */
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Sombra mais intensa */
+      transition: transform 0.2s;
+    }
+
+    h1 {
+      text-align: center;
+      color: #e67e22; /* Laranja vibrante */
+      text-transform: uppercase; /* Letras maiúsculas */
+      letter-spacing: 2px; /* Espaçamento entre letras */
+    }
+    .question {
+      margin-bottom: 20px;
+      padding: 10px; /* Espaçamento interno das questões */
+      border: 1px solid #555; /* Borda das perguntas */
+      border-radius: 5px;
+      background-color: #3a3a3a; /* Fundo das perguntas */
+    }
+    .options label {
+      display: block;
+      margin: 5px 0;
+      padding: 5px; /* Espaçamento interno nos rótulos */
+      border-radius: 4px; /* Bordas arredondadas */
+      transition: background 0.3s; /* Transição de fundo */
+    }
+    .options input[type="radio"] {
+      margin-right: 10px;
+    }
+    .options label:hover {
+      background-color: #444; /* Fundo ao passar o mouse */
+    }
+    #submitBtn {
+      display: block;
+      width: 100%;
+      padding: 15px; /* Aumentar o espaçamento */
+      margin-top: 20px;
+      background-color: #2980b9; /* Azul padrão */
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px; /* Aumentar o tamanho da fonte */
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s;
+    }
+    #submitBtn:hover {
+      background-color: #3498db; /* Azul claro */
+      transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    }
+    #result {
+      margin-top: 20px;
+      padding: 15px;
+      text-align: center;
+      font-size: 20px; /* Aumentar o tamanho da fonte do resultado */
+      background-color: #ecf0f1;
+      border-radius: 5px;
+      display: none;
+      color: #333; /* Cor do texto do resultado */
+    }
+
+    .correct {
+        background-color: lightgreen;
+        color: black;
+        
+    }
+    .incorrect {
+        background-color: lightcoral;
+        color: black;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Simulado Abordagem Psiclogica</h1>
+    <form id="quizForm">
+      
+      
+      <div class="question">
+        <p>2. Em relação à disciplina policial militar, assinale a alternativa correta:</p>
+        <div class="options">
+          <label><input type="radio" name="question2" value="a"> A disciplina policial militar é caracterizada pela pronta obediência, inteligente, espontânea e entusiástica às ordens do superior.</label>
+          <label><input type="radio" name="question2" value="b"> A disciplina policial militar é somente o acatamento formal das leis, sem necessidade de inteligência ou entusiasmo.</label>
+          <label><input type="radio" name="question2" value="c"> A disciplina policial militar exige apenas o cumprimento de normas e regulamentos, sem considerar a motivação do militar.</label>
+          <label><input type="radio" name="question2" value="d"> A disciplina policial militar é o acatamento integral das leis, regulamentos, normas e disposições que fundamentam o organismo policial militar e coordenam seu funcionamento regular e harmônico.</label>
+          <label><input type="radio" name="question2" value="e"> A disciplina policial militar se restringe ao cumprimento de ordens de maneira rígida, sem levar em conta o contexto ou a situação.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>3. Sobre os distintivos e símbolos utilizados na Brigada Militar, assinale a alternativa correta:</p>
+        <div class="options">
+          <label><input type="radio" name="question3" value="a"> A Bandeira do Estado do Rio Grande do Sul é a única permitida a ser apostada na manga direita da camisa dos militares da Brigada Militar.</label>
+          <label><input type="radio" name="question3" value="b"> A manga direita da camisa pode conter apenas o Listel, sem a inclusão de outros distintivos ou símbolos.</label>
+          <label><input type="radio" name="question3" value="c"> A manga direita da camisa pode conter, além da Bandeira do Estado do Rio Grande do Sul, um Listel e um Distintivo de Curso regular e reconhecido pela Brigada Militar, sendo este último posicionado acima da Bandeira do Estado.</label>
+          <label><input type="radio" name="question3" value="d"> O Distintivo de Curso regular e reconhecido pela Brigada Militar deve ser colocado no lado esquerdo da camisa, independentemente de sua relação com a Bandeira do Estado do Rio Grande do Sul.</label>
+          <label><input type="radio" name="question3" value="e"> A Brigada Militar proíbe a utilização do Listel e Distintivo de Curso na manga direita, devendo ser usados apenas na manga esquerda.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>4. Sobre o uso do coldre preto, assinale a alternativa correta:</p>
+        <div class="options">
+          <label><input type="radio" name="question4" value="a"> O uso do coldre preto com presilha na coxa é permitido para todos os membros da Brigada Militar.</label>
+          <label><input type="radio" name="question4" value="b"> O uso de coldre de perna é permitido apenas para o efetivo do Choque e BOPE.</label>
+          <label><input type="radio" name="question4" value="c"> O uso do coldre preto com presilha na coxa (coldre de perna) é permitido para todo efetivo da Brigada Militar, incluindo o Choque e BOPE.</label>
+          <label><input type="radio" name="question4" value="d"> O uso do coldre preto com presilha na coxa é vedado, exceto para os efetivos do Choque e BOPE.</label>
+          <label><input type="radio" name="question4" value="e"> O uso de coldre de perna é permitido apenas para os oficiais superiores da Brigada Militar.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>5. Sobre o uso do suéter na Brigada Militar, assinale a alternativa correta:</p>
+        <div class="options">
+          <label><input type="radio" name="question5" value="a"> O suéter é utilizado apenas pelos oficiais em serviço operacional.</label>
+          <label><input type="radio" name="question5" value="b"> O suéter é utilizado pelo efetivo em serviço administrativo.</label>
+          <label><input type="radio" name="question5" value="c"> O suéter é destinado apenas aos efetivos do Choque e BOPE durante serviços especiais.</label>
+          <label><input type="radio" name="question5" value="d"> O suéter é utilizado exclusivamente pelos efetivos em serviço externo e operações de campo.</label>
+          <label><input type="radio" name="question5" value="e"> O uso do suéter é permitido apenas durante o inverno para todos os efetivos da Brigada Militar.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>6. Sobre a continência na Brigada Militar, assinale a alternativa correta:</p>
+        <div class="options">
+          <label><input type="radio" name="question6" value="a"> A continência é uma saudação prestada pelo militar, podendo ser feita apenas pela tropa e não individualmente.</label>
+          <label><input type="radio" name="question6" value="b"> A continência é impessoal e visa a pessoa do militar, não a sua autoridade.</label>
+          <label><input type="radio" name="question6" value="c"> A continência parte sempre do militar de maior precedência hierárquica ou mais antigo.</label>
+          <label><input type="radio" name="question6" value="d"> Todo militar deve, obrigatoriamente, retribuir a continência que lhe é prestada.</label>
+          <label><input type="radio" name="question6" value="e"> A continência é uma saudação apenas em contextos formais e não é obrigatória para todos os militares.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>7. Sobre o aperto de mão como forma de cumprimento na Brigada Militar, assinale a alternativa correta:</p>
+        <div class="options">
+          <label><input type="radio" name="question7" value="a"> O militar mais moderno deve sempre tomar a iniciativa de estender a mão para cumprimentar o superior.</label>
+          <label><input type="radio" name="question7" value="b"> O aperto de mão é uma forma de cumprimento que o superior pode conceder ao mais moderno, e este deve sempre recusar o cumprimento.</label>
+          <label><input type="radio" name="question7" value="c"> O militar mais moderno não deve tomar a iniciativa de estender a mão, mas, se o superior o fizer, não pode se recusar ao cumprimento.</label>
+          <label><input type="radio" name="question7" value="d"> O aperto de mão é uma saudação impessoal e deve ser iniciado pelo militar mais moderno.</label>
+          <label><input type="radio" name="question7" value="e"> O aperto de mão não é uma forma de cumprimento utilizada na Brigada Militar, sendo substituído exclusivamente pela continência.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>8. Sobre a continência individual na Brigada Militar, assinale a alternativa correta:</p>
+        <div class="options">
+          <label><input type="radio" name="question8" value="a"> A continência individual é realizada apenas em contextos formais, sem a necessidade de cumprimento a símbolos ou autoridades.</label>
+          <label><input type="radio" name="question8" value="b"> A continência individual é uma saudação que o militar presta aos símbolos, autoridades e à tropa formada, podendo ser feita com ou sem cobertura.</label>
+          <label><input type="radio" name="question8" value="c"> A continência individual é obrigatória apenas em cerimônias militares, não sendo necessária em outras situações.</label>
+          <label><input type="radio" name="question8" value="d"> A continência individual é a saudação feita apenas aos superiores hierárquicos, sem necessidade de prestá-la aos símbolos ou à tropa formada.</label>
+          <label><input type="radio" name="question8" value="e"> A continência individual não é praticada com cobertura, sendo exclusiva aos momentos de interação com autoridades superiores.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>9. Sobre os elementos essenciais da continência, assinale a alternativa correta:</p>
+        <div class="options">
+          <label><input type="radio" name="question9" value="a"> A continência é composta apenas pela atitude do militar, sem a necessidade de gesto ou duração específicos.</label>
+          <label><input type="radio" name="question9" value="b"> Os elementos essenciais da continência incluem atitude, gesto e duração, sendo que a postura marcial, os movimentos do corpo e o tempo de execução são fundamentais.</label>
+          <label><input type="radio" name="question9" value="c"> A continência não exige um conjunto de movimentos do corpo, sendo apenas uma atitude de respeito sem necessidade de duração.</label>
+          <label><input type="radio" name="question9" value="d"> O gesto da continência não inclui movimentos das mãos, sendo realizado apenas com o corpo do militar.</label>
+          <label><input type="radio" name="question9" value="e"> A continência é uma forma de cumprimento que não exige postura marcial, sendo o gesto e a duração os únicos elementos essenciais.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>10. Assinale as alternativas corretas sobre quem tem direito à continência na Brigada Militar:</p>
+        <div class="options">
+          <label><input type="radio" name="question10" value="a"> A continência é prestada apenas ao Presidente da República e aos ministros de Estado.</label>
+          <label><input type="radio" name="question10" value="b"> A continência é prestada à Bandeira Nacional, Hino Nacional, Presidentes da República e Vice-Presidente, e outros altos cargos, incluindo militares da ativa e da reserva, bem como à tropa formada.</label>
+          <label><input type="radio" name="question10" value="c"> Apenas o Presidente da República tem direito à continência, sem incluir outras autoridades ou a tropa formada.</label>
+          <label><input type="radio" name="question10" value="d"> A continência não é prestada a militares da reserva ou à tropa quando formada, mesmo que o comandante seja mais moderno.</label>
+          <label><input type="radio" name="question10" value="e"> A continência é prestada apenas à tropa formada, sem incluir autoridades como os ministros de Estado ou os Presidentes do Senado e da Câmara dos Deputados.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>11. Sobre a continência ao Hino Nacional, assinale a alternativa correta:</p>
+        <div class="options">
+          <label><input type="radio" name="question11" value="a"> A continência ao Hino Nacional é feita em posição de sentido, e o movimento de apresentar arma é realizado apenas se a Bandeira Nacional estiver presente.</label>
+          <label><input type="radio" name="question11" value="b"> A continência ao Hino Nacional é realizada em qualquer posição, independentemente da presença da Bandeira Nacional.</label>
+          <label><input type="radio" name="question11" value="c"> O Hino Nacional pode ser interrompido durante as formaturas, caso necessário, para garantir o bom andamento da cerimônia.</label>
+          <label><input type="radio" name="question11" value="d"> O Hino Nacional deve ser tocado apenas parcialmente, para não ocupar muito tempo nas cerimônias militares.</label>
+          <label><input type="radio" name="question11" value="e"> A continência ao Hino Nacional é feita de forma irrestrita, independentemente do contexto ou local.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>12. Em relação ao Hino Nacional em recintos fechados, assinale a alternativa correta:</p>
+        <div class="options">
+          <label><input type="radio" name="question12" value="a"> Quando o Hino Nacional é tocado em recintos fechados, o militar deve ficar voltado para a Bandeira Nacional, mesmo que não esteja sendo hasteada.</label>
+          <label><input type="radio" name="question12" value="b"> Em recintos fechados, onde não há hasteamento ou desfralde da Bandeira Nacional, o militar deve ficar voltado para o local de onde vem a música.</label>
+          <label><input type="radio" name="question12" value="c"> Quando o Hino Nacional é tocado em recintos fechados, a posição de sentido não é necessária, e o militar pode se mover livremente.</label>
+          <label><input type="radio" name="question12" value="d"> O militar deve ignorar a música e continuar suas atividades quando o Hino Nacional for tocado em recintos fechados.</label>
+          <label><input type="radio" name="question12" value="e"> A continência não é obrigatória em recintos fechados quando o Hino Nacional for tocado sem a presença da Bandeira Nacional.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>13. Sobre o Hino Nacional e o seu tocado durante formaturas, assinale a alternativa correta:</p>
+        <div class="options">
+          <label><input type="radio" name="question13" value="a"> O Hino Nacional pode ser interrompido durante as formaturas se necessário, sem prejuízo para o respeito devido ao símbolo.</label>
+          <label><input type="radio" name="question13" value="b"> O Hino Nacional deve ser tocado inteiramente durante as formaturas, sem interrupções.</label>
+          <label><input type="radio" name="question13" value="c"> O Hino Nacional pode ser tocado parcialmente durante as formaturas, desde que seja considerado o tempo da cerimônia.</label>
+          <label><input type="radio" name="question13" value="d"> A continência ao Hino Nacional durante formaturas deve ser feita apenas por oficiais superiores.</label>
+          <label><input type="radio" name="question13" value="e"> O Hino Nacional não é tocado durante formaturas, sendo substituído por outras músicas.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>14. Sobre os significados das cores da Bandeira do Rio Grande do Sul, assinale a alternativa correta:</p>
+        <div class="options">
+          <label><input type="radio" name="question14" value="a"> A faixa verde simboliza as riquezas nacionais do território gaúcho, a vermelha representa o ideal revolucionário e a amarela significa a mata dos pampas.</label>
+          <label><input type="radio" name="question14" value="b"> A faixa verde representa o ideal revolucionário e a coragem do povo, a vermelha simboliza a mata dos pampas e a amarela as riquezas nacionais do território gaúcho.</label>
+          <label><input type="radio" name="question14" value="c"> A faixa verde simboliza as riquezas nacionais do território gaúcho, a vermelha a mata dos pampas e a amarela representa o ideal revolucionário e a coragem do povo.</label>
+          <label><input type="radio" name="question14" value="d"> A faixa verde representa o ideal revolucionário, a vermelha a mata dos pampas e a amarela as riquezas nacionais do território gaúcho.</label>
+          <label><input type="radio" name="question14" value="e"> A faixa verde simboliza a coragem do povo, a vermelha as riquezas nacionais e a amarela representa a mata dos pampas.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>15. Sobre os procedimentos de hasteamento e arriamento da Bandeira Nacional, assinale a alternativa correta:</p>
+        <div class="options">
+          <label><input type="radio" name="question15" value="a"> A Bandeira Nacional deve ser hasteada às 06:00 horas e arriada às 20:00 horas, independentemente das condições climáticas.</label>
+          <label><input type="radio" name="question15" value="b"> O hasteamento da Bandeira Nacional ocorre normalmente às 08:00 horas, e o arriamento às 18:00 horas, ou ao pôr-do-sol, podendo ser mantida durante a noite, desde que iluminada.</label>
+          <label><input type="radio" name="question15" value="c"> A Bandeira Nacional deve ser hasteada apenas durante o dia e nunca à noite.</label>
+          <label><input type="radio" name="question15" value="d"> A Bandeira Nacional nunca pode ser hasteada em dias de chuva, independentemente da ocasião.</label>
+          <label><input type="radio" name="question15" value="e"> A Bandeira Nacional deve ser hasteada e arriada a qualquer hora, sem necessidade de horários fixos, e pode ser descartada quando inservível.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>16. Em relação aos procedimentos de luto nacional e descarte de Bandeiras Nacionais, assinale a alternativa correta:</p>
+        <div class="options">
+          <label><input type="radio" name="question16" value="a"> Nos dias de Luto Nacional e no dia de Finados, a Bandeira Nacional é hasteada normalmente, sem modificações.</label>
+          <label><input type="radio" name="question16" value="b"> Nos dias de Luto Nacional e no dia de Finados, a Bandeira Nacional é hasteada até o topo do mastro e mantida a meio mastro durante todo o dia.</label>
+          <label><input type="radio" name="question16" value="c"> A Bandeira Nacional deve ser mantida a meio mastro nos dias de Luto Nacional e no dia de Finados, começando no topo e descendo para a posição de meio mastro.</label>
+          <label><input type="radio" name="question16" value="d"> Bandeiras Nacionais danificadas devem ser descartadas imediatamente, sem necessidade de cerimônia ou guarda especial.</label>
+          <label><input type="radio" name="question16" value="e"> As Bandeiras Nacionais inservíveis devem ser incineradas durante uma cerimônia no dia 19 de novembro, perante a tropa.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>17. Sobre a Bandeira Nacional e a Bandeira do Rio Grande do Sul, assinale a alternativa correta:</p>
+        <div class="options">
+          <label><input type="radio" name="question17" value="a"> A Bandeira do Rio Grande do Sul pode ser hasteada sem a presença de uma Bandeira Nacional ao lado.</label>
+          <label><input type="radio" name="question17" value="b"> Quando várias bandeiras são hasteadas juntas, a Bandeira Nacional deve ser a última a atingir o topo e a primeira a descer.</label>
+          <label><input type="radio" name="question17" value="c"> A Bandeira Nacional deve sempre estar hasteada ao lado da Bandeira do Rio Grande do Sul, sendo a primeira a atingir o topo e a última a descer quando várias bandeiras são hasteadas juntas.</label>
+          <label><input type="radio" name="question17" value="d"> A Bandeira Nacional pode ser colocada sem a Bandeira do Rio Grande do Sul, desde que esteja posicionada no topo do mastro.</label>
+          <label><input type="radio" name="question17" value="e"> Quando várias bandeiras são hasteadas juntas, a Bandeira Nacional não tem uma ordem de destaque, podendo ser hasteada em qualquer posição.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>18. Sobre a Câmara Ardente, assinale a alternativa correta:</p>
+        <div class="options">
+          <label><input type="radio" name="question18" value="a"> A Câmara Ardente é uma homenagem prestada exclusivamente aos militares de alta patente, com a Guarda Fúnebre sendo realizada por civis.</label>
+          <label><input type="radio" name="question18" value="b"> A Câmara Ardente é a homenagem prestada às autoridades que têm direito à Guarda Fúnebre, sendo realizada a Sentinela pelos militares, em posição de Em funeral Arma.</label>
+          <label><input type="radio" name="question18" value="c"> A Câmara Ardente é uma cerimônia privada, sem a presença de militares, e a Guarda Fúnebre é opcional para todas as autoridades.</label>
+          <label><input type="radio" name="question18" value="d"> A Câmara Ardente não envolve Sentinela, e a Guarda Fúnebre é realizada apenas por familiares da autoridade falecida.</label>
+          <label><input type="radio" name="question18" value="e"> A Câmara Ardente é uma cerimônia exclusivamente civil, sem a participação de militares em qualquer momento.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>19. Sobre a Guarda Fúnebre e quem tem direito a ela, assinale a alternativa correta:</p>
+        <div class="options">
+          <label><input type="radio" name="question19" value="a"> A Guarda Fúnebre é prestada apenas aos Oficiais Superiores, sendo a tropa composta por um Pelotão.</label>
+          <label><input type="radio" name="question19" value="b"> A Guarda Fúnebre é a tropa armada especialmente postada para render honras aos despojos mortais de militares da ativa e altas autoridades civis, sendo o efetivo variável conforme o grau hierárquico do falecido.</label>
+          <label><input type="radio" name="question19" value="c"> A Guarda Fúnebre é exclusiva para Sargentos e Soldados, com o efetivo de uma Companhia.</label>
+          <label><input type="radio" name="question19" value="d"> Oficiais Superiores têm direito a uma tropa com o efetivo de um Pelotão para a Guarda Fúnebre.</label>
+          <label><input type="radio" name="question19" value="e"> A tropa para a Guarda Fúnebre dos Oficiais Subalternos é composta apenas por um GPM, independentemente do grau hierárquico do falecido.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>20. Sobre o comportamento da tropa em ambientes fechados, assinale a alternativa correta:</p>
+        <div class="options">
+          <label><input type="radio" name="question20" value="a"> Em ambientes fechados, como alojamento e auditório, os militares devem sempre comandar "Sentido" e "Descansar", independentemente da autoridade que adentrar o local.</label>
+          <label><input type="radio" name="question20" value="b"> Quando um Oficial adentra um alojamento, o primeiro militar a avistá-lo deve comandar "Alojamento - Atenção!", mas os militares devem parar todas as atividades e aguardar a ordem de "à vontade".</label>
+          <label><input type="radio" name="question20" value="c"> Em um alojamento, os militares devem sempre permanecer em silêncio ao avistar um Oficial, mas não há necessidade de comando de atenção ou parada nas atividades.</label>
+          <label><input type="radio" name="question20" value="d"> Quando um Oficial adentra um auditório ou sala de instrução, os militares devem tomar a posição de Sentido até que o oficial comande "à vontade", momento em que poderão se sentar.</label>
+          <label><input type="radio" name="question20" value="e"> Não há necessidade de qualquer comando ou mudança de postura quando um Oficial adentra um auditório ou alojamento, mesmo que o Oficial seja de maior patente.</label>
+        </div>
+      </div>
+
+
+                                                                                          
+                       
+      <!-- Continue até a questão 30 -->
+      
+      <button type="button" id="submitBtn" onclick="calculateScore()">Enviar</button>
+    </form>
+    
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const correctAnswers = {
+        
+  question1: "c",
+question2: "b",
+question3: "a",
+question4: "c",
+question5: "b",
+question6: "c",
+question7: "d",
+question8: "c",
+question9: "e",
+question10: "a",
+question11: "b",
+question12: "d",
+question13: "c",
+question14: "a",
+question15: "b",
+question16: "e",
+question17: "c",
+question18: "b",
+question19: "b",
+question20: "d"
+
+
+
+
+}
+
+    
+
+    function calculateScore() {
+        const form = document.getElementById('quizForm');
+        let score = 0;
+        const totalQuestions = Object.keys(correctAnswers).length; // Total de perguntas
+
+        for (let question in correctAnswers) {
+            const userAnswer = form[question] ? form[question].value : null;
+            const options = document.querySelectorAll(`input[name="${question}"]`);
+
+            options.forEach(option => {
+                // Remove classes anteriores
+                option.parentElement.classList.remove('correct', 'incorrect');
+                
+                // Aplica classe correta
+                if (option.value === correctAnswers[question]) {
+                    option.parentElement.classList.add('correct');
+                } 
+                // Aplica classe incorreta se for a resposta escolhida
+                else if (userAnswer === option.value) {
+                    option.parentElement.classList.add('incorrect');
+                }
+            });
+
+            // Contagem de respostas corretas
+            if (userAnswer === correctAnswers[question]) {
+                score++;
+            }
+        }
+
+        // Exibição do resultado
+        const resultDiv = document.getElementById('result');
+        resultDiv.style.display = 'block';
+        resultDiv.innerHTML = `Você acertou <strong>${score}</strong> de <strong>${totalQuestions}</strong> questões.<br>Sua nota final é <strong>${(score / totalQuestions * 10).toFixed(1)}</strong>`;
+    }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questões de Estado e Sociedade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #000000;
+            color:white;
+        }
+        .question {
+            background-color: #070907;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #28a745;
+            color: rgb(214, 0, 0);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .explanation {
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+        .result {
+            font-weight: bold;
+        }
+        .correct {
+            color: green;
+        }
+        .wrong {
+            color: red;
+        }
+        .loss-image {
+    display: none;
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    margin-left: 10px;
+}
+
+    </style>
+</head>
+<body>
+
+<h1>Questões sobre Estado, Sociedade e Segurança Pública: Slide 6 até o 14</h1>
+
+<div class="questions">
+    <div class="question" id="question01">
+        <p><strong>Questão 1:</strong> O que a violência pode abranger, segundo a definição da Organização Mundial da Saúde (OMS)?</p>
+        <label><input type="radio" name="q01" value="a"> (a) Apenas atos físicos de agressão.</label><br>
+        <label><input type="radio" name="q01" value="b"> (b) O uso de força física ou poder que resulte em sofrimento, morte ou dano psicológico.</label><br>
+        <label><input type="radio" name="q01" value="c"> (c) Somente a violência verbal e emocional.</label><br>
+        <label><input type="radio" name="q01" value="d"> (d) Exclusivamente atos cometidos por autoridades governamentais.</label><br>
+        <button onclick="checkAnswer('q01', 'b', 'A alternativa CORRETA é: O uso de força física ou poder que resulte em sofrimento, morte ou dano psicológico.')">Enviar</button>
+        <div class="explanation" id="explanation-q01"></div>
+    </div>
+    
+    <div class="question" id="question02">
+        <p><strong>Questão 2:</strong> Qual é uma característica importante da violência mencionada no texto?</p>
+        <label><input type="radio" name="q02" value="a"> (a) É uma prática que ocorre apenas em sociedades modernas.</label><br>
+        <label><input type="radio" name="q02" value="b"> (b) É um evento homogêneo e previsível.</label><br>
+        <label><input type="radio" name="q02" value="c"> (c) Resulta da soma de poder e pode gerar mais violência.</label><br>
+        <label><input type="radio" name="q02" value="d"> (d) Sempre é intencional e planejada.</label><br>
+        <button onclick="checkAnswer('q02', 'c', 'A alternativa CORRETA é: Resulta da soma de poder e pode gerar mais violência.')">Enviar</button>
+        <div class="explanation" id="explanation-q02"></div>
+    </div>
+    
+    <div class="question" id="question03">
+        <p><strong>Questão 3:</strong> Como a violência é percebida ao longo da história, de acordo com o texto?</p>
+        <label><input type="radio" name="q03" value="a"> (a) Sempre teve as mesmas causas e efeitos.</label><br>
+        <label><input type="radio" name="q03" value="b"> (b) Se manifestou de forma distinta, caracterizando-se segundo os padrões de cada época.</label><br>
+        <label><input type="radio" name="q03" value="c"> (c) É uma invenção recente da sociedade moderna.</label><br>
+        <label><input type="radio" name="q03" value="d"> (d) Não tem relação com o contexto social.</label><br>
+        <button onclick="checkAnswer('q03', 'b', 'A alternativa CORRETA é: Se manifestou de forma distinta, caracterizando-se segundo os padrões de cada época.')">Enviar</button>
+        <div class="explanation" id="explanation-q03"></div>
+    </div>
+    
+    <div class="question" id="question04">
+        <p><strong>Questão 4:</strong> Qual é uma das formas de violência mencionadas no texto?</p>
+        <label><input type="radio" name="q04" value="a"> (a) Exclusivamente a violência política.</label><br>
+        <label><input type="radio" name="q04" value="b"> (b) Apenas a violência física.</label><br>
+        <label><input type="radio" name="q04" value="c"> (c) Violência patrimonial, psicológica, e ecológica.</label><br>
+        <label><input type="radio" name="q04" value="d"> (d) Somente a violência sexual.</label><br>
+        <button onclick="checkAnswer('q04', 'c', 'A alternativa CORRETA é: Violência patrimonial, psicológica, e ecológica.')">Enviar</button>
+        <div class="explanation" id="explanation-q04"></div>
+    </div>
+    
+    <div class="question" id="question05">
+        <p><strong>Questão 5:</strong> De acordo com o texto, a violência é considerada:</p>
+        <label><input type="radio" name="q05" value="a"> (a) Uma característica exclusiva de algumas culturas.</label><br>
+        <label><input type="radio" name="q05" value="b"> (b) Algo que não faz parte da natureza humana.</label><br>
+        <label><input type="radio" name="q05" value="c"> (c) Uma prática que se manifesta em todos os indivíduos e sociedades.</label><br>
+        <label><input type="radio" name="q05" value="d"> (d) Um fenômeno temporário que desaparecerá com o tempo.</label><br>
+        <button onclick="checkAnswer('q05', 'c', 'A alternativa CORRETA é: Uma prática que se manifesta em todos os indivíduos e sociedades.')">Enviar</button>
+        <div class="explanation" id="explanation-q05"></div>
+    </div>
+    
+    <div class="question" id="question06">
+        <p><strong>Questão 6:</strong> Qual é o principal objetivo da violência psicológica?</p>
+        <label><input type="radio" name="q06" value="a"> (a) Gerar consequências físicas no agressor.</label><br>
+        <label><input type="radio" name="q06" value="b"> (b) Causar dano emocional e diminuição da autoestima da vítima.</label><br>
+        <label><input type="radio" name="q06" value="c"> (c) Criar um ambiente cultural favorável.</label><br>
+        <label><input type="radio" name="q06" value="d"> (d) Desencadear um processo legal contra o agressor.</label><br>
+        <button onclick="checkAnswer('q06', 'b', 'A alternativa CORRETA é: Causar dano emocional e diminuição da autoestima da vítima.')">Enviar</button>
+        <div class="explanation" id="explanation-q06"></div>
+    </div>
+    
+    <div class="question" id="question07">
+        <p><strong>Questão 7:</strong> Como a violência institucional se manifesta, de acordo com o texto?</p>
+        <label><input type="radio" name="q07" value="a"> (a) Através de ações de violência física entre cidadãos.</label><br>
+        <label><input type="radio" name="q07" value="b"> (b) Quando um funcionário público realiza ações discriminatórias, humilhantes ou preconceituosas.</label><br>
+        <label><input type="radio" name="q07" value="c"> (c) Por meio de atitudes culturais que reforçam estereótipos.</label><br>
+        <label><input type="radio" name="q07" value="d"> (d) Exclusivamente em ambientes escolares.</label><br>
+        <button onclick="checkAnswer('q07', 'b', 'A alternativa CORRETA é: Quando um funcionário público realiza ações discriminatórias, humilhantes ou preconceituosas.')">Enviar</button>
+        <div class="explanation" id="explanation-q07"></div>
+    </div>
+    
+    <div class="question" id="question08">
+        <p><strong>Questão 8:</strong> Qual das alternativas a seguir caracteriza a violência moral?</p>
+        <label><input type="radio" name="q08" value="a"> (a) Ações que afetam a cultura e a arte de uma sociedade.</label><br>
+        <label><input type="radio" name="q08" value="b"> (b) Condutas que configuram calúnia, difamação ou injúria.</label><br>
+        <label><input type="radio" name="q08" value="c"> (c) A perda de bens com valor sentimental para a vítima.</label><br>
+        <label><input type="radio" name="q08" value="d"> (d) A discriminação com base em ideologia política.</label><br>
+        <button onclick="checkAnswer('q08', 'b', 'A alternativa CORRETA é: Condutas que configuram calúnia, difamação ou injúria.')">Enviar</button>
+        <div class="explanation" id="explanation-q08"></div>
+    </div>
+    
+    <div class="question" id="question09">
+        <p><strong>Questão 9:</strong> O que é abordado pela violência cultural?</p>
+        <label><input type="radio" name="q09" value="a"> (a) O respeito às diferenças de opinião em sociedades democráticas.</label><br>
+        <label><input type="radio" name="q09" value="b"> (b) Preconceitos relativos à religião, ideologia, linguagem, arte e ciência.</label><br>
+        <label><input type="radio" name="q09" value="c"> (c) O apoio a iniciativas que visam preservar bens patrimoniais.</label><br>
+        <label><input type="radio" name="q09" value="d"> (d) O tratamento legal de crimes contra o patrimônio.</label><br>
+        <button onclick="checkAnswer('q09', 'b', 'A alternativa CORRETA é: Preconceitos relativos à religião, ideologia, linguagem, arte e ciência.')">Enviar</button>
+        <div class="explanation" id="explanation-q09"></div>
+    </div>
+    
+    <div class="question" id="question10">
+        <p><strong>Questão 10:</strong> Qual é uma característica da violência patrimonial?</p>
+        <label><input type="radio" name="q10" value="a"> (a) Envolve apenas danos físicos à vítima.</label><br>
+        <label><input type="radio" name="q10" value="b"> (b) Refere-se à geração de prejuízo financeiro ou perda de bens com valor sentimental.</label><br>
+        <label><input type="radio" name="q10" value="c"> (c) É uma forma de violência que ocorre exclusivamente no ambiente familiar.</label><br>
+        <label><input type="radio" name="q10" value="d"> (d) Está relacionada a ações de discriminação no local de trabalho.</label><br>
+        <button onclick="checkAnswer('q10', 'b', 'A alternativa CORRETA é: Refere-se à geração de prejuízo financeiro ou perda de bens com valor sentimental.')">Enviar</button>
+        <div class="explanation" id="explanation-q10"></div>
+    </div>
+    
+    <div class="question" id="question11">
+        <p><strong>Questão 11:</strong> A violência é um fenômeno complexo que se manifesta de diversas formas. Segundo a Organização Mundial da Saúde (OMS), como é definida a violência?</p>
+        <label><input type="radio" name="q11" value="a"> (a) O uso de força física ou poder contra si mesmo, outra pessoa ou grupo.</label><br>
+        <label><input type="radio" name="q11" value="b"> (b) Uma prática social exclusivamente política.</label><br>
+        <label><input type="radio" name="q11" value="c"> (c) Um evento homogêneo e previsível.</label><br>
+        <label><input type="radio" name="q11" value="d"> (d) A simples ocorrência de conflitos entre indivíduos.</label><br>
+        <button onclick="checkAnswer('q11', 'a', 'A alternativa CORRETA é: O uso de força física ou poder contra si mesmo, outra pessoa ou grupo.')">Enviar</button>
+        <div class="explanation" id="explanation-q11"></div>
+    </div>
+    
+    <div class="question" id="question12">
+        <p><strong>Questão 12:</strong> Qual das seguintes formas de violência é caracterizada por ações discriminatórias realizadas por um funcionário público?</p>
+        <label><input type="radio" name="q12" value="a"> (a) Violência psicológica</label><br>
+        <label><input type="radio" name="q12" value="b"> (b) Violência institucional</label><br>
+        <label><input type="radio" name="q12" value="c"> (c) Violência patrimonial</label><br>
+        <label><input type="radio" name="q12" value="d"> (d) Violência cultural</label><br>
+        <button onclick="checkAnswer('q12', 'b', 'A alternativa CORRETA é: Violência institucional.')">Enviar</button>
+        <div class="explanation" id="explanation-q12"></div>
+    </div>
+    
+    <div class="question" id="question13">
+        <p><strong>Questão 13:</strong> No contexto brasileiro, a associação entre pobreza e criminalidade é uma percepção comum na classe média urbana. De qual autor é essa observação?</p>
+        <label><input type="radio" name="q13" value="a"> (a) Michel Misse</label><br>
+        <label><input type="radio" name="q13" value="b"> (b) Emile Durkheim</label><br>
+        <label><input type="radio" name="q13" value="c"> (c) Linda L. Dahlberg</label><br>
+        <label><input type="radio" name="q13" value="d"> (d) Etienne G. Krug</label><br>
+        <button onclick="checkAnswer('q13', 'a', 'A alternativa CORRETA é: Michel Misse.')">Enviar</button>
+        <div class="explanation" id="explanation-q13"></div>
+    </div>
+    
+    <div class="question" id="question14">
+        <p><strong>Questão 14:</strong> A ideia fundamental da sociologia durkheimiana é que:</p>
+        <label><input type="radio" name="q14" value="a"> (a) O indivíduo precede a sociedade.</label><br>
+        <label><input type="radio" name="q14" value="b"> (b) A sociedade e o indivíduo são igualmente importantes.</label><br>
+        <label><input type="radio" name="q14" value="c"> (c) A sociedade precede o indivíduo e é baseada na solidariedade.</label><br>
+        <label><input type="radio" name="q14" value="d"> (d) A solidariedade é irrelevante para a análise social.</label><br>
+        <button onclick="checkAnswer('q14', 'c', 'A alternativa CORRETA é: A sociedade precede o indivíduo e é baseada na solidariedade.')">Enviar</button>
+        <div class="explanation" id="explanation-q14"></div>
+    </div>
+    
+    <div class="question" id="question15">
+        <p><strong>Questão 15:</strong> No estudo da sociologia da violência e do crime, um conceito importante é:</p>
+        <label><input type="radio" name="q15" value="a"> (a) Ordem social</label><br>
+        <label><input type="radio" name="q15" value="b"> (b) Violência institucional</label><br>
+        <label><input type="radio" name="q15" value="c"> (c) Crime como fenômeno isolado</label><br>
+        <label><input type="radio" name="q15" value="d"> (d) Solidariedade mecânica apenas</label><br>
+        <button onclick="checkAnswer('q15', 'a', 'A alternativa CORRETA é: Ordem social.')">Enviar</button>
+        <div class="explanation" id="explanation-q15"></div>
+    </div>
+    <div class="question" id="question16">
+        <p><strong>Questão 16:</strong> A violência é um fenômeno complexo e multifacetado. De acordo com a definição da Organização Mundial da Saúde (OMS), como a violência é caracterizada?</p>
+        <label><input type="radio" name="q16" value="a"> (a) Uso de força física apenas em situações de conflito armado.</label><br>
+        <label><input type="radio" name="q16" value="b"> (b) Ameaça ou uso de força física contra si mesmo, outra pessoa ou grupo, resultando em danos.</label><br>
+        <label><input type="radio" name="q16" value="c"> (c) Práticas culturais que não envolvem danos físicos.</label><br>
+        <label><input type="radio" name="q16" value="d"> (d) Ações que têm por objetivo promover a paz e a harmonia social.</label><br>
+        <button onclick="checkAnswer('q16', 'b', 'A alternativa CORRETA é: Ameaça ou uso de força física contra si mesmo, outra pessoa ou grupo, resultando em danos.')">Enviar</button>
+        <div class="explanation" id="explanation-q16"></div>
+    </div>
+    
+    <div class="question" id="question17">
+        <p><strong>Questão 17:</strong> Qual das seguintes opções não é considerada uma forma de violência segundo o conteúdo apresentado?</p>
+        <label><input type="radio" name="q17" value="a"> (a) Violência psicológica</label><br>
+        <label><input type="radio" name="q17" value="b"> (b) Violência institucional</label><br>
+        <label><input type="radio" name="q17" value="c"> (c) Violência recreativa</label><br>
+        <label><input type="radio" name="q17" value="d"> (d) Violência patrimonial</label><br>
+        <button onclick="checkAnswer('q17', 'c', 'A alternativa CORRETA é: Violência recreativa.')">Enviar</button>
+        <div class="explanation" id="explanation-q17"></div>
+    </div>
+    
+    <div class="question" id="question18">
+        <p><strong>Questão 18:</strong> No contexto brasileiro, a associação entre pobreza e criminalidade é um tema recorrente. Que fenômeno social mencionado pode influenciar diretamente os índices de criminalidade?</p>
+        <label><input type="radio" name="q18" value="a"> (a) Aumento da escolaridade</label><br>
+        <label><input type="radio" name="q18" value="b"> (b) Crescimento econômico desigual</label><br>
+        <label><input type="radio" name="q18" value="c"> (c) Melhora na saúde pública</label><br>
+        <label><input type="radio" name="q18" value="d"> (d) Redução da taxa de natalidade</label><br>
+        <button onclick="checkAnswer('q18', 'b', 'A alternativa CORRETA é: Crescimento econômico desigual.')">Enviar</button>
+        <div class="explanation" id="explanation-q18"></div>
+    </div>
+    
+    <div class="question" id="question19">
+        <p><strong>Questão 19:</strong> A teoria da Escola de Chicago destaca a importância de um fator geográfico para a compreensão do crime. Qual é a principal ideia apresentada por essa teoria?</p>
+        <label><input type="radio" name="q19" value="a"> (a) O crime é resultado de falhas individuais na moralidade.</label><br>
+        <label><input type="radio" name="q19" value="b"> (b) O crime é influenciado por zonas de delinquência e ecologia da cidade.</label><br>
+        <label><input type="radio" name="q19" value="c"> (c) A criminalidade é igual em todas as regiões urbanas.</label><br>
+        <label><input type="radio" name="q19" value="d"> (d) O crime é um fenômeno exclusivamente rural.</label><br>
+        <button onclick="checkAnswer('q19', 'b', 'A alternativa CORRETA é: O crime é influenciado por zonas de delinquência e ecologia da cidade.')">Enviar</button>
+        <div class="explanation" id="explanation-q19"></div>
+    </div>
+    
+    <div class="question" id="question20">
+        <p><strong>Questão 20:</strong> Como a sociologia pode ser aplicada na segurança pública?</p>
+        <label><input type="radio" name="q20" value="a"> (a) Fornecendo dados sobre os fenômenos naturais que afetam a criminalidade.</label><br>
+        <label><input type="radio" name="q20" value="b"> (b) Analisando as interações sociais e as relações humanas para prevenir a criminalidade.</label><br>
+        <label><input type="radio" name="q20" value="c"> (c) Enfatizando a importância do policiamento em áreas rurais.</label><br>
+        <label><input type="radio" name="q20" value="d"> (d) Promovendo campanhas de conscientização sobre a segurança do trânsito.</label><br>
+        <button onclick="checkAnswer('q20', 'b', 'A alternativa CORRETA é: Analisando as interações sociais e as relações humanas para prevenir a criminalidade.')">Enviar</button>
+        <div class="explanation" id="explanation-q20"></div>
+    </div>
+    <div class="question" id="question21">
+        <p><strong>Questão 21:</strong> O que caracteriza a violência interpessoal segundo a tipologia apresentada?</p>
+        <label><input type="radio" name="q21" value="a"> (a) Agressões físicas e verbais entre indivíduos.</label><br>
+        <label><input type="radio" name="q21" value="b"> (b) Desigualdade econômica entre grupos sociais.</label><br>
+        <label><input type="radio" name="q21" value="c"> (c) Abusos cometidos por instituições de segurança.</label><br>
+        <label><input type="radio" name="q21" value="d"> (d) Atos de vandalismo em locais públicos.</label><br>
+        <button onclick="checkAnswer('q21', 'a', 'A alternativa CORRETA é: Agressões físicas e verbais entre indivíduos.')">Enviar</button>
+        <div class="explanation" id="explanation-q21"></div>
+    </div>
+    
+    <div class="question" id="question22">
+        <p><strong>Questão 22:</strong> Quais são os diferentes tipos de violência interpessoal mencionados no conteúdo?</p>
+        <label><input type="radio" name="q22" value="a"> (a) Violência coletiva, violência doméstica e violência de gênero.</label><br>
+        <label><input type="radio" name="q22" value="b"> (b) Violência doméstica, agressões nas ruas e conflitos interpessoais.</label><br>
+        <label><input type="radio" name="q22" value="c"> (c) Violência política, violência social e violência institucional.</label><br>
+        <label><input type="radio" name="q22" value="d"> (d) Violência juvenil, violência escolar e violência urbana.</label><br>
+        <button onclick="checkAnswer('q22', 'b', 'A alternativa CORRETA é: Violência doméstica, agressões nas ruas e conflitos interpessoais.')">Enviar</button>
+        <div class="explanation" id="explanation-q22"></div>
+    </div>
+    
+    <div class="question" id="question23">
+        <p><strong>Questão 23:</strong> A violência estrutural está relacionada a quais aspectos sociais, conforme discutido?</p>
+        <label><input type="radio" name="q23" value="a"> (a) Oposição entre as classes sociais.</label><br>
+        <label><input type="radio" name="q23" value="b"> (b) Desigualdade de renda, acesso limitado a serviços básicos e discriminação.</label><br>
+        <label><input type="radio" name="q23" value="c"> (c) Falta de educação e conscientização social.</label><br>
+        <label><input type="radio" name="q23" value="d"> (d) Aumento das taxas de criminalidade nas áreas urbanas.</label><br>
+        <button onclick="checkAnswer('q23', 'b', 'A alternativa CORRETA é: Desigualdade de renda, acesso limitado a serviços básicos e discriminação.')">Enviar</button>
+        <div class="explanation" id="explanation-q23"></div>
+    </div>
+    
+    <div class="question" id="question24">
+        <p><strong>Questão 24:</strong> O que a tipologia da violência institucional envolve?</p>
+        <label><input type="radio" name="q24" value="a"> (a) Ações violentas perpetradas por indivíduos comuns.</label><br>
+        <label><input type="radio" name="q24" value="b"> (b) Ações violentas perpetradas por instituições, incluindo órgãos de segurança pública.</label><br>
+        <label><input type="radio" name="q24" value="c"> (c) O uso da força em protestos e manifestações.</label><br>
+        <label><input type="radio" name="q24" value="d"> (d) Apenas atos de vandalismo por grupos organizados.</label><br>
+        <button onclick="checkAnswer('q24', 'b', 'A alternativa CORRETA é: Ações violentas perpetradas por instituições, incluindo órgãos de segurança pública.')">Enviar</button>
+        <div class="explanation" id="explanation-q24"></div>
+    </div>
+    
+    <div class="question" id="question25">
+        <p><strong>Questão 25:</strong> Quais são alguns exemplos de violência institucional mencionados?</p>
+        <label><input type="radio" name="q25" value="a"> (a) Violência doméstica e conflitos interpessoais.</label><br>
+        <label><input type="radio" name="q25" value="b"> (b) Abuso de poder, corrupção, uso excessivo de força e violações de direitos humanos.</label><br>
+        <label><input type="radio" name="q25" value="c"> (c) Desigualdade social e violência política.</label><br>
+        <label><input type="radio" name="q25" value="d"> (d) Crimes de ódio e violência urbana.</label><br>
+        <button onclick="checkAnswer('q25', 'b', 'A alternativa CORRETA é: Abuso de poder, corrupção, uso excessivo de força e violações de direitos humanos.')">Enviar</button>
+        <div class="explanation" id="explanation-q25"></div>
+    </div>
+    <div class="question" id="question26">
+        <p><strong>Questão 26:</strong> Segundo Émile Durkheim, o crime é considerado:</p>
+        <label><input type="radio" name="q26" value="a"> (a) Uma doença social que deve ser erradicada.</label><br>
+        <label><input type="radio" name="q26" value="b"> (b) Um fenômeno social normal e até benéfico em certas condições.</label><br>
+        <label><input type="radio" name="q26" value="c"> (c) Um reflexo direto da pobreza e da desigualdade.</label><br>
+        <label><input type="radio" name="q26" value="d"> (d) Um problema exclusivamente urbano.</label><br>
+        <button onclick="checkAnswer('q26', 'b', 'A alternativa CORRETA é: Um fenômeno social normal e até benéfico em certas condições.')">Enviar</button>
+        <div class="explanation" id="explanation-q26"></div>
+    </div>
+    
+    <div class="question" id="question27">
+        <p><strong>Questão 27:</strong> A crítica de Michel Misse sobre a associação entre crime e pobreza sugere que:</p>
+        <label><input type="radio" name="q27" value="a"> (a) A pobreza é a única causa do crime.</label><br>
+        <label><input type="radio" name="q27" value="b"> (b) A noção de pobreza é muito complexa e não pode ser usada como explicação única para a criminalidade.</label><br>
+        <label><input type="radio" name="q27" value="c"> (c) A pobreza não está relacionada à criminalidade nas grandes metrópoles.</label><br>
+        <label><input type="radio" name="q27" value="d"> (d) A pobreza é um conceito ultrapassado na análise do crime.</label><br>
+        <button onclick="checkAnswer('q27', 'b', 'A alternativa CORRETA é: A noção de pobreza é muito complexa e não pode ser usada como explicação única para a criminalidade.')">Enviar</button>
+        <div class="explanation" id="explanation-q27"></div>
+    </div>
+    
+    <div class="question" id="question28">
+        <p><strong>Questão 28:</strong> De acordo com o pensamento sociológico de Augusto Comte, qual é a importância da observação empírica?</p>
+        <label><input type="radio" name="q28" value="a"> (a) É irrelevante para o estudo da sociedade.</label><br>
+        <label><input type="radio" name="q28" value="b"> (b) Deve ser evitada em favor de teorias abstratas.</label><br>
+        <label><input type="radio" name="q28" value="c"> (c) É fundamental para a construção de conhecimentos sociais sólidos.</label><br>
+        <label><input type="radio" name="q28" value="d"> (d) É uma prática desatualizada.</label><br>
+        <button onclick="checkAnswer('q28', 'c', 'A alternativa CORRETA é: É fundamental para a construção de conhecimentos sociais sólidos.')">Enviar</button>
+        <div class="explanation" id="explanation-q28"></div>
+    </div>
+    
+    <div class="question" id="question29">
+        <p><strong>Questão 29:</strong> A evolução do pensamento sociológico segundo Augusto Comte está baseada principalmente em:</p>
+        <label><input type="radio" name="q29" value="a"> (a) Teorias subjetivas e filosóficas.</label><br>
+        <label><input type="radio" name="q29" value="b"> (b) Práticas intuitivas e não verificáveis.</label><br>
+        <label><input type="radio" name="q29" value="c"> (c) Uma abordagem positivista que busca a ordem social.</label><br>
+        <label><input type="radio" name="q29" value="d"> (d) Uma visão pessimista sobre a sociedade.</label><br>
+        <button onclick="checkAnswer('q29', 'c', 'A alternativa CORRETA é: Uma abordagem positivista que busca a ordem social.')">Enviar</button>
+        <div class="explanation" id="explanation-q29"></div>
+    </div>
+    
+    <div class="question" id="question30">
+        <p><strong>Questão 30:</strong> A visão de Durkheim sobre a relação entre crime e sociedade sugere que:</p>
+        <label><input type="radio" name="q30" value="a"> (a) O crime deve ser completamente eliminado para uma sociedade saudável.</label><br>
+        <label><input type="radio" name="q30" value="b"> (b) O crime é um sinal de falha institucional.</label><br>
+        <label><input type="radio" name="q30" value="c"> (c) A criminalidade pode ser um indicador de mudanças sociais e evolução.</label><br>
+        <label><input type="radio" name="q30" value="d"> (d) A criminalidade é irrelevante para o entendimento social.</label><br>
+        <button onclick="checkAnswer('q30', 'c', 'A alternativa CORRETA é: A criminalidade pode ser um indicador de mudanças sociais e evolução.')">Enviar</button>
+        <div class="explanation" id="explanation-q30"></div>
+    </div>
+    
+    <div class="question" id="question31">
+        <p><strong>Questão 31:</strong> Karl Marx acreditava que a principal maneira de mudar a sociedade e acabar com as injustiças era por meio de:</p>
+        <label><input type="radio" name="q31" value="a"> (a) Reformas pacíficas e diálogo.</label><br>
+        <label><input type="radio" name="q31" value="b"> (b) Revolução e luta armada.</label><br>
+        <label><input type="radio" name="q31" value="c"> (c) Educação e conscientização.</label><br>
+        <label><input type="radio" name="q31" value="d"> (d) Adoção de sistemas democráticos.</label><br>
+        <button onclick="checkAnswer('q31', 'b', 'A alternativa CORRETA é: Revolução e luta armada.')">Enviar</button>
+        <div class="explanation" id="explanation-q31"></div>
+    </div>
+    
+    <div class="question" id="question32">
+        <p><strong>Questão 32:</strong> Segundo Marx, os interesses da burguesia e do proletariado são:</p>
+        <label><input type="radio" name="q32" value="a"> (a) Complementares e cooperativos.</label><br>
+        <label><input type="radio" name="q32" value="b"> (b) Diferentes e irreconciliáveis.</label><br>
+        <label><input type="radio" name="q32" value="c"> (c) Idênticos em suas necessidades.</label><br>
+        <label><input type="radio" name="q32" value="d"> (d) Superáveis por meio do diálogo.</label><br>
+        <button onclick="checkAnswer('q32', 'b', 'A alternativa CORRETA é: Diferentes e irreconciliáveis.')">Enviar</button>
+        <div class="explanation" id="explanation-q32"></div>
+    </div>
+    
+    <div class="question" id="question33">
+        <p><strong>Questão 33:</strong> Para Marx, o valor de uma mercadoria é determinado por:</p>
+        <label><input type="radio" name="q33" value="a"> (a) Sua demanda no mercado.</label><br>
+        <label><input type="radio" name="q33" value="b"> (b) A quantidade de lucro que pode gerar.</label><br>
+        <label><input type="radio" name="q33" value="c"> (c) O tempo de trabalho socialmente necessário para sua produção.</label><br>
+        <label><input type="radio" name="q33" value="d"> (d) O prestígio da marca.</label><br>
+        <button onclick="checkAnswer('q33', 'c', 'A alternativa CORRETA é: O tempo de trabalho socialmente necessário para sua produção.')">Enviar</button>
+        <div class="explanation" id="explanation-q33"></div>
+    </div>
+    
+    <div class="question" id="question34">
+        <p><strong>Questão 34:</strong> Max Weber argumentava que a sociedade poderia ser modificada através de:</p>
+        <label><input type="radio" name="q34" value="a"> (a) Revoluções armadas.</label><br>
+        <label><input type="radio" name="q34" value="b"> (b) Ações sociais individuais.</label><br>
+        <label><input type="radio" name="q34" value="c"> (c) Intervenções do governo.</label><br>
+        <label><input type="radio" name="q34" value="d"> (d) Conflitos de classe.</label><br>
+        <button onclick="checkAnswer('q34', 'b', 'A alternativa CORRETA é: Ações sociais individuais.')">Enviar</button>
+        <div class="explanation" id="explanation-q34"></div>
+    </div>
+    
+    <div class="question" id="question35">
+        <p><strong>Questão 35:</strong> A abordagem de Weber sobre a burocracia sugere que:</p>
+        <label><input type="radio" name="q35" value="a"> (a) É sempre ineficiente.</label><br>
+        <label><input type="radio" name="q35" value="b"> (b) Pode ser uma forma eficaz de organização social.</label><br>
+        <label><input type="radio" name="q35" value="c"> (c) Deveria ser abolida em favor de sistemas democráticos.</label><br>
+        <label><input type="radio" name="q35" value="d"> (d) Não tem relevância na administração moderna.</label><br>
+        <button onclick="checkAnswer('q35', 'b', 'A alternativa CORRETA é: Pode ser uma forma eficaz de organização social.')">Enviar</button>
+        <div class="explanation" id="explanation-q35"></div>
+    </div>
+
+    
+    <div class="question" id="question36">
+        <p><strong>Questão 36:</strong> A violência urbana é caracterizada por:</p>
+        <label><input type="radio" name="q36" value="a"> (a) A existência exclusiva de crimes violentos intencionais.</label><br>
+        <label><input type="radio" name="q36" value="b"> (b) Uma multiplicidade de eventos vinculados ao modo de vida nas metrópoles.</label><br>
+        <label><input type="radio" name="q36" value="c"> (c) Um fenômeno restrito às áreas rurais.</label><br>
+        <label><input type="radio" name="q36" value="d"> (d) A ausência de motivações sociais e culturais.</label><br>
+        <button onclick="checkAnswer('q36', 'b', 'A alternativa CORRETA é: Uma multiplicidade de eventos vinculados ao modo de vida nas metrópoles.')">Enviar</button>
+        <div class="explanation" id="explanation-q36"></div>
+    </div>
+    
+    <div class="question" id="question37">
+        <p><strong>Questão 37:</strong> Um exemplo de ação criminosa não-intencional mencionada no material é:</p>
+        <label><input type="radio" name="q37" value="a"> (a) Homicídio premeditado.</label><br>
+        <label><input type="radio" name="q37" value="b"> (b) Furto qualificado.</label><br>
+        <label><input type="radio" name="q37" value="c"> (c) Negligência provocando um acidente.</label><br>
+        <label><input type="radio" name="q37" value="d"> (d) Roubo à mão armada.</label><br>
+        <button onclick="checkAnswer('q37', 'c', 'A alternativa CORRETA é: Negligência provocando um acidente.')">Enviar</button>
+        <div class="explanation" id="explanation-q37"></div>
+    </div>
+    
+    <div class="question" id="question38">
+        <p><strong>Questão 38:</strong> A etimologia da palavra "psicologia" sugere que este campo de estudo é:</p>
+        <label><input type="radio" name="q38" value="a"> (a) A análise da sociedade e suas estruturas.</label><br>
+        <label><input type="radio" name="q38" value="b"> (b) O estudo das interações sociais.</label><br>
+        <label><input type="radio" name="q38" value="c"> (c) O estudo da mente e dos fenômenos associados.</label><br>
+        <label><input type="radio" name="q38" value="d"> (d) O estudo das forças econômicas.</label><br>
+        <button onclick="checkAnswer('q38', 'c', 'A alternativa CORRETA é: O estudo da mente e dos fenômenos associados.')">Enviar</button>
+        <div class="explanation" id="explanation-q38"></div>
+    </div>
+    
+    <div class="question" id="question39">
+        <p><strong>Questão 39:</strong> As principais causas da violência urbana podem incluir:</p>
+        <label><input type="radio" name="q39" value="a"> (a) Apenas fatores individuais.</label><br>
+        <label><input type="radio" name="q39" value="b"> (b) Somente questões econômicas.</label><br>
+        <label><input type="radio" name="q39" value="c"> (c) Um conjunto de fatores sociais, econômicos e psicológicos.</label><br>
+        <label><input type="radio" name="q39" value="d"> (d) Exclusivamente problemas de saúde mental.</label><br>
+        <button onclick="checkAnswer('q39', 'c', 'A alternativa CORRETA é: Um conjunto de fatores sociais, econômicos e psicológicos.')">Enviar</button>
+        <div class="explanation" id="explanation-q39"></div>
+    </div>
+    
+    <div class="question" id="question40">
+        <p><strong>Questão 40:</strong> Um dos objetivos das abordagens terapêuticas em psicologia é:</p>
+        <label><input type="radio" name="q40" value="a"> (a) Aumentar a agressividade em indivíduos.</label><br>
+        <label><input type="radio" name="q40" value="b"> (b) Promover uma cultura de cuidado e apoio.</label><br>
+        <label><input type="radio" name="q40" value="c"> (c) Ignorar sinais de problemas psicológicos.</label><br>
+        <label><input type="radio" name="q40" value="d"> (d) Focar apenas no comportamento criminal.</label><br>
+        <button onclick="checkAnswer('q40', 'b', 'A alternativa CORRETA é: Promover uma cultura de cuidado e apoio.')">Enviar</button>
+        <div class="explanation" id="explanation-q40"></div>
+    </div>
+    
+    <div class="question" id="question41">
+        <p><strong>Questão 41:</strong> Qual das seguintes abordagens psicológicas sugere que o indivíduo nasce como uma "folha em branco"?</p>
+        <label><input type="radio" name="q41" value="a"> (a) Abordagem Cognitiva</label><br>
+        <label><input type="radio" name="q41" value="b"> (b) Abordagem Humanista</label><br>
+        <label><input type="radio" name="q41" value="c"> (c) Abordagem Comportamental</label><br>
+        <label><input type="radio" name="q41" value="d"> (d) Abordagem Psicanalítica</label><br>
+        <button onclick="checkAnswer('q41', 'c', 'A alternativa CORRETA é: Abordagem Comportamental.')">Enviar</button>
+        <div class="explanation" id="explanation-q41"></div>
+    </div>
+    
+    <div class="question" id="question42">
+        <p><strong>Questão 42:</strong> A Abordagem Psicanalítica é caracterizada por:</p>
+        <label><input type="radio" name="q42" value="a"> (a) Focar apenas nos sintomas que o paciente apresenta.</label><br>
+        <label><input type="radio" name="q42" value="b"> (b) Ignorar o passado do indivíduo.</label><br>
+        <label><input type="radio" name="q42" value="c"> (c) Ver o paciente como um conjunto completo, considerando seu histórico.</label><br>
+        <label><input type="radio" name="q42" value="d"> (d) Utilizar métodos quantitativos exclusivamente.</label><br>
+        <button onclick="checkAnswer('q42', 'c', 'A alternativa CORRETA é: Ver o paciente como um conjunto completo, considerando seu histórico.')">Enviar</button>
+        <div class="explanation" id="explanation-q42"></div>
+    </div>
+    
+    <div class="question" id="question43">
+        <p><strong>Questão 43:</strong> Qual é o objetivo da Abordagem Humanista na psicologia?</p>
+        <label><input type="radio" name="q43" value="a"> (a) Diagnosticar e tratar doenças mentais.</label><br>
+        <label><input type="radio" name="q43" value="b"> (b) Enfatizar o poder da autorrealização do ser humano.</label><br>
+        <label><input type="radio" name="q43" value="c"> (c) Condenar comportamentos inadequados.</label><br>
+        <label><input type="radio" name="q43" value="d"> (d) Analisar apenas o comportamento visível.</label><br>
+        <button onclick="checkAnswer('q43', 'b', 'A alternativa CORRETA é: Enfatizar o poder da autorrealização do ser humano.')">Enviar</button>
+        <div class="explanation" id="explanation-q43"></div>
+    </div>
+    
+    <div class="question" id="question44">
+        <p><strong>Questão 44:</strong> A Abordagem Cognitiva na psicologia busca explicar a criatividade a partir de:</p>
+        <label><input type="radio" name="q44" value="a"> (a) Condições ambientais.</label><br>
+        <label><input type="radio" name="q44" value="b"> (b) Comportamentos observáveis.</label><br>
+        <label><input type="radio" name="q44" value="c"> (c) Fenômenos relacionados à forma como aprendemos sobre o mundo.</label><br>
+        <label><input type="radio" name="q44" value="d"> (d) Estruturas sociais.</label><br>
+        <button onclick="checkAnswer('q44', 'c', 'A alternativa CORRETA é: Fenômenos relacionados à forma como aprendemos sobre o mundo.')">Enviar</button>
+        <div class="explanation" id="explanation-q44"></div>
+    </div>
+    
+    <div class="question" id="question45">
+        <p><strong>Questão 45:</strong> O conceito de "agressividade" na psicologia é frequentemente visto como:</p>
+        <label><input type="radio" name="q45" value="a"> (a) Exclusivamente uma resposta a provocações externas.</label><br>
+        <label><input type="radio" name="q45" value="b"> (b) Um comportamento que pode ter raízes tanto biológicas quanto sociais.</label><br>
+        <label><input type="radio" name="q45" value="c"> (c) Totalmente determinado por fatores genéticos.</label><br>
+        <label><input type="radio" name="q45" value="d"> (d) Sempre uma manifestação de transtornos mentais.</label><br>
+        <button onclick="checkAnswer('q45', 'b', 'A alternativa CORRETA é: Um comportamento que pode ter raízes tanto biológicas quanto sociais.')">Enviar</button>
+        <div class="explanation" id="explanation-q45"></div>
+    </div>
+    <div class="question" id="question46">
+        <p><strong>Questão 46:</strong> Quais são as características principais dos transtornos de ansiedade?</p>
+        <label><input type="radio" name="q46" value="a"> (a) Alterações no comportamento social.</label><br>
+        <label><input type="radio" name="q46" value="b"> (b) Preocupação excessiva e constante sobre eventos futuros.</label><br>
+        <label><input type="radio" name="q46" value="c"> (c) Fadiga extrema e falta de energia.</label><br>
+        <label><input type="radio" name="q46" value="d"> (d) Aumento da capacidade de concentração.</label><br>
+        <button onclick="checkAnswer('q46', 'b', 'A alternativa CORRETA é: Preocupação excessiva e constante sobre eventos futuros.')">Enviar</button>
+        <div class="explanation" id="explanation-q46"></div>
+    </div>
+    
+    <div class="question" id="question47">
+        <p><strong>Questão 47:</strong> O que define um transtorno do humor?</p>
+        <label><input type="radio" name="q47" value="a"> (a) Uma condição que resulta de experiências traumáticas.</label><br>
+        <label><input type="radio" name="q47" value="b"> (b) Alterações patológicas no temperamento e comportamento.</label><br>
+        <label><input type="radio" name="q47" value="c"> (c) Uma forma de comportamento anti-social.</label><br>
+        <label><input type="radio" name="q47" value="d"> (d) A incapacidade de lidar com estresse.</label><br>
+        <button onclick="checkAnswer('q47', 'b', 'A alternativa CORRETA é: Alterações patológicas no temperamento e comportamento.')">Enviar</button>
+        <div class="explanation" id="explanation-q47"></div>
+    </div>
+    
+    <div class="question" id="question48">
+        <p><strong>Questão 48:</strong> O transtorno de estresse pós-traumático (TEPT) é mais frequentemente associado a:</p>
+        <label><input type="radio" name="q48" value="a"> (a) Experiências de felicidade extrema.</label><br>
+        <label><input type="radio" name="q48" value="b"> (b) Ações violentas ou situações traumáticas.</label><br>
+        <label><input type="radio" name="q48" value="c"> (c) Relações interpessoais positivas.</label><br>
+        <label><input type="radio" name="q48" value="d"> (d) Altas capacidades de liderança.</label><br>
+        <button onclick="checkAnswer('q48', 'b', 'A alternativa CORRETA é: Ações violentas ou situações traumáticas.')">Enviar</button>
+        <div class="explanation" id="explanation-q48"></div>
+    </div>
+    
+    <div class="question" id="question49">
+        <p><strong>Questão 49:</strong> Qual é uma abordagem terapêutica comumente utilizada para o tratamento de transtornos psicológicos?</p>
+        <label><input type="radio" name="q49" value="a"> (a) Julgamento.</label><br>
+        <label><input type="radio" name="q49" value="b"> (b) Arbitragem.</label><br>
+        <label><input type="radio" name="q49" value="c"> (c) Psicoterapia.</label><br>
+        <label><input type="radio" name="q49" value="d"> (d) Negociação.</label><br>
+        <button onclick="checkAnswer('q49', 'c', 'A alternativa CORRETA é: Psicoterapia.')">Enviar</button>
+        <div class="explanation" id="explanation-q49"></div>
+    </div>
+    
+    <div class="question" id="question50">
+        <p><strong>Questão 50:</strong> Qual dos seguintes métodos é um meio de solução de conflitos?</p>
+        <label><input type="radio" name="q50" value="a"> (a) Exclusão.</label><br>
+        <label><input type="radio" name="q50" value="b"> (b) Mediação.</label><br>
+        <label><input type="radio" name="q50" value="c"> (c) Isolamento.</label><br>
+        <label><input type="radio" name="q50" value="d"> (d) Resolução.</label><br>
+        <button onclick="checkAnswer('q50', 'b', 'A alternativa CORRETA é: Mediação.')">Enviar</button>
+        <div class="explanation" id="explanation-q50"></div>
+    </div>
+    
+    <div class="question" id="question51">
+        <p><strong>Questão 51:</strong> O que caracteriza o método de julgamento na solução de conflitos?</p>
+        <label><input type="radio" name="q51" value="a"> (a) Decisão das partes envolvidas.</label><br>
+        <label><input type="radio" name="q51" value="b"> (b) Apreciar os fatos e aplicar o direito por um juiz.</label><br>
+        <label><input type="radio" name="q51" value="c"> (c) Escolha de um árbitro pelas partes.</label><br>
+        <label><input type="radio" name="q51" value="d"> (d) Busca de um acordo informal.</label><br>
+        <button onclick="checkAnswer('q51', 'b', 'A alternativa CORRETA é: Apreciar os fatos e aplicar o direito por um juiz.')">Enviar</button>
+        <div class="explanation" id="explanation-q51"></div>
+    </div>
+    
+    <div class="question" id="question52">
+        <p><strong>Questão 52:</strong> Na arbitragem, quem é responsável por decidir a lide?</p>
+        <label><input type="radio" name="q52" value="a"> (a) O juiz do tribunal.</label><br>
+        <label><input type="radio" name="q52" value="b"> (b) Um árbitro escolhido pelas partes.</label><br>
+        <label><input type="radio" name="q52" value="c"> (c) O Ministério Público.</label><br>
+        <label><input type="radio" name="q52" value="d"> (d) As partes diretamente.</label><br>
+        <button onclick="checkAnswer('q52', 'b', 'A alternativa CORRETA é: Um árbitro escolhido pelas partes.')">Enviar</button>
+        <div class="explanation" id="explanation-q52"></div>
+    </div>
+    
+    <div class="question" id="question53">
+        <p><strong>Questão 53:</strong> A negociação é frequentemente utilizada para resolver conflitos relacionados a:</p>
+        <label><input type="radio" name="q53" value="a"> (a) Relações pessoais.</label><br>
+        <label><input type="radio" name="q53" value="b"> (b) Bens materiais.</label><br>
+        <label><input type="radio" name="q53" value="c"> (c) Questões filosóficas.</label><br>
+        <label><input type="radio" name="q53" value="d"> (d) Violência.</label><br>
+        <button onclick="checkAnswer('q53', 'b', 'A alternativa CORRETA é: Bens materiais.')">Enviar</button>
+        <div class="explanation" id="explanation-q53"></div>
+    </div>
+    
+    <div class="question" id="question54">
+        <p><strong>Questão 54:</strong> Qual é o papel do conciliador no processo de conciliação?</p>
+        <label><input type="radio" name="q54" value="a"> (a) Decidir sobre a disputa.</label><br>
+        <label><input type="radio" name="q54" value="b"> (b) Propor soluções e intervir nas conversas.</label><br>
+        <label><input type="radio" name="q54" value="c"> (c) Escolher um árbitro.</label><br>
+        <label><input type="radio" name="q54" value="d"> (d) Mediar o julgamento.</label><br>
+        <button onclick="checkAnswer('q54', 'b', 'A alternativa CORRETA é: Propor soluções e intervir nas conversas.')">Enviar</button>
+        <div class="explanation" id="explanation-q54"></div>
+    </div>
+    <div class="question" id="question55">
+        <p><strong>Questão 55:</strong> Quais fatores sócio-econômicos são mencionados por Jean-Claude Chesnais como causas da violência urbana no Brasil?</p>
+        <label><input type="radio" name="q55" value="a"> (a) Aumento da educação e do acesso a serviços básicos.</label><br>
+        <label><input type="radio" name="q55" value="b"> (b) Pobreza, agravamento das desigualdades e herança da hiperinflação.</label><br>
+        <label><input type="radio" name="q55" value="c"> (c) Desenvolvimento econômico e estabilidade política.</label><br>
+        <label><input type="radio" name="q55" value="d"> (d) Aumento da renda média e melhoria das condições de vida.</label><br>
+        <button onclick="checkAnswer('q55', 'b', 'A alternativa CORRETA é: Pobreza, agravamento das desigualdades e herança da hiperinflação.')">Enviar</button>
+        <div class="explanation" id="explanation-q55"></div>
+    </div>
+    
+    <div class="question" id="question56">
+        <p><strong>Questão 56:</strong> Como a insuficiência do Estado pode contribuir para a violência urbana, de acordo com Chesnais?</p>
+        <label><input type="radio" name="q56" value="a"> (a) Aumentando a presença policial nas comunidades.</label><br>
+        <label><input type="radio" name="q56" value="b"> (b) Fortalecendo as instituições de ensino.</label><br>
+        <label><input type="radio" name="q56" value="c"> (c) Causando a desintegração do modelo familiar e reduzindo o poder da Igreja.</label><br>
+        <label><input type="radio" name="q56" value="d"> (d) Promovendo a inclusão social e econômica.</label><br>
+        <button onclick="checkAnswer('q56', 'c', 'A alternativa CORRETA é: Causando a desintegração do modelo familiar e reduzindo o poder da Igreja.')">Enviar</button>
+        <div class="explanation" id="explanation-q56"></div>
+    </div>
+    
+    <div class="question" id="question57">
+        <p><strong>Questão 57:</strong> De que maneira a mídia pode impactar a percepção da violência na sociedade?</p>
+        <label><input type="radio" name="q57" value="a"> (a) Minimiza a violência ao não cobrir crimes.</label><br>
+        <label><input type="radio" name="q57" value="b"> (b) Colabora para a apologia da violência e sensacionaliza os crimes.</label><br>
+        <label><input type="radio" name="q57" value="c"> (c) Educa o público sobre as causas do crime e como preveni-lo.</label><br>
+        <label><input type="radio" name="q57" value="d"> (d) Foca apenas em reportagens positivas sobre segurança pública.</label><br>
+        <button onclick="checkAnswer('q57', 'b', 'A alternativa CORRETA é: Colabora para a apologia da violência e sensacionaliza os crimes.')">Enviar</button>
+        <div class="explanation" id="explanation-q57"></div>
+    </div>
+    
+    <div class="question" id="question58">
+        <p><strong>Questão 58:</strong> Qual é o efeito da globalização na criminalidade, segundo Chesnais?</p>
+        <label><input type="radio" name="q58" value="a"> (a) Redução das atividades criminosas locais.</label><br>
+        <label><input type="radio" name="q58" value="b"> (b) Fortalecimento das fronteiras e controle sobre o narcotráfico.</label><br>
+        <label><input type="radio" name="q58" value="c"> (c) Contestação da noção de fronteiras e aumento do crime organizado.</label><br>
+        <label><input type="radio" name="q58" value="d"> (d) Melhoria na cooperação internacional para combater o crime.</label><br>
+        <button onclick="checkAnswer('q58', 'c', 'A alternativa CORRETA é: Contestação da noção de fronteiras e aumento do crime organizado.')">Enviar</button>
+        <div class="explanation" id="explanation-q58"></div>
+    </div>
+    
+    <div class="question" id="question59">
+        <p><strong>Questão 59:</strong> Como a análise crítica das notícias é importante na discussão sobre violência e crime?</p>
+        <label><input type="radio" name="q59" value="a"> (a) Permite que o público aceite as informações sem questionamento.</label><br>
+        <label><input type="radio" name="q59" value="b"> (b) Ajuda a desinformar a sociedade sobre a real situação da segurança pública.</label><br>
+        <label><input type="radio" name="q59" value="c"> (c) Fornece uma compreensão mais profunda dos contextos sociais e culturais que influenciam a criminalidade.</label><br>
+        <label><input type="radio" name="q59" value="d"> (d) Faz com que o público ignore os problemas sociais relacionados ao crime.</label><br>
+        <button onclick="checkAnswer('q59', 'c', 'A alternativa CORRETA é: Fornece uma compreensão mais profunda dos contextos sociais e culturais que influenciam a criminalidade.')">Enviar</button>
+        <div class="explanation" id="explanation-q59"></div>
+    </div>
+    
+    <div class="question" id="question60">
+        <p><strong>Questão 60:</strong> Como Zygmunt Bauman descreve a relação entre a globalização e as políticas locais?</p>
+        <label><input type="radio" name="q60" value="a"> (a) As políticas locais se tornam cada vez mais eficazes em resolver problemas globais.</label><br>
+        <label><input type="radio" name="q60" value="b"> (b) As políticas locais enfrentam desafios devido à inadequação dos recursos globais.</label><br>
+        <label><input type="radio" name="q60" value="c"> (c) A globalização tem um impacto positivo nas políticas locais.</label><br>
+        <label><input type="radio" name="q60" value="d"> (d) A globalização reduz a necessidade de políticas locais.</label><br>
+        <button onclick="checkAnswer('q60', 'b', 'A alternativa CORRETA é: As políticas locais enfrentam desafios devido à inadequação dos recursos globais.')">Enviar</button>
+        <div class="explanation" id="explanation-q60"></div>
+    </div>
+    
+    <div class="question" id="question61">
+        <p><strong>Questão 61:</strong> Quais são os efeitos da segregação das novas elites globais mencionados por Bauman?</p>
+        <label><input type="radio" name="q61" value="a"> (a) Aumento da solidariedade entre diferentes classes sociais.</label><br>
+        <label><input type="radio" name="q61" value="b"> (b) Distanciamento entre as elites e as populações locais, resultando em uma maior alienação.</label><br>
+        <label><input type="radio" name="q61" value="c"> (c) Melhora na comunicação entre as elites e as comunidades.</label><br>
+        <label><input type="radio" name="q61" value="d"> (d) Integração das comunidades e redução da desigualdade.</label><br>
+        <button onclick="checkAnswer('q61', 'b', 'A alternativa CORRETA é: Distanciamento entre as elites e as populações locais, resultando em uma maior alienação.')">Enviar</button>
+        <div class="explanation" id="explanation-q61"></div>
+    </div>
+    
+    <div class="question" id="question62">
+        <p><strong>Questão 62:</strong> O que James Q. Wilson argumenta sobre a criminalidade violenta?</p>
+        <label><input type="radio" name="q62" value="a"> (a) A criminalidade violenta fortalece as comunidades.</label><br>
+        <label><input type="radio" name="q62" value="b"> (b) A criminalidade violenta é irrelevante para a coesão social.</label><br>
+        <label><input type="radio" name="q62" value="c"> (c) A criminalidade violenta causa atomização da sociedade e difunde o medo.</label><br>
+        <label><input type="radio" name="q62" value="d"> (d) A criminalidade violenta tem pouco impacto sobre a vida social.</label><br>
+        <button onclick="checkAnswer('q62', 'c', 'A alternativa CORRETA é: A criminalidade violenta causa atomização da sociedade e difunde o medo.')">Enviar</button>
+        <div class="explanation" id="explanation-q62"></div>
+    </div>
+    
+    <div class="question" id="question63">
+        <p><strong>Questão 63:</strong> Como a sociedade brasileira tem reagido à criminalidade, segundo o texto?</p>
+        <label><input type="radio" name="q63" value="a"> (a) Reduzindo o uso de sistemas de segurança em residências.</label><br>
+        <label><input type="radio" name="q63" value="b"> (b) Aumentando a frequência em espaços públicos.</label><br>
+        <label><input type="radio" name="q63" value="c"> (c) Aceitando a dominação dos delinquentes em espaços públicos e optando por viver em segurança restritiva.</label><br>
+        <label><input type="radio" name="q63" value="d"> (d) Promovendo a construção de mais espaços públicos acessíveis.</label><br>
+        <button onclick="checkAnswer('q63', 'c', 'A alternativa CORRETA é: Aceitando a dominação dos delinquentes em espaços públicos e optando por viver em segurança restritiva.')">Enviar</button>
+        <div class="explanation" id="explanation-q63"></div>
+    </div>
+    
+    <div class="question" id="question64">
+        <p><strong>Questão 64:</strong> O que significa a "atomização da sociedade" em relação à violência policial?</p>
+        <label><input type="radio" name="q64" value="a"> (a) A união das comunidades em torno da polícia.</label><br>
+        <label><input type="radio" name="q64" value="b"> (b) A fragmentação da vida comunitária devido ao medo da violência.</label><br>
+        <label><input type="radio" name="q64" value="c"> (c) O fortalecimento da presença da polícia em áreas vulneráveis.</label><br>
+        <label><input type="radio" name="q64" value="d"> (d) O aumento da confiança entre cidadãos e policiais.</label><br>
+        <button onclick="checkAnswer('q64', 'b', 'A alternativa CORRETA é: A fragmentação da vida comunitária devido ao medo da violência.')">Enviar</button>
+        <div class="explanation" id="explanation-q64"></div>
+    </div>
+    
+  
+    
+    
+    
+        
+
+    
+    
+    </body>
+    </html>
+
+    
+
+
+
+
+    
+ 
+    
+    
+    
+        
+    
+
+</div>
+<img id="lossImage" class="loss-image" src="img/loss.png" alt="Erro" style="display:none;">
+<script>
+
+
+    function checkAnswer(questionId, correctAnswer, explanation) {
+        const selectedOption = document.querySelector(`input[name="${questionId}"]:checked`);
+        const explanationDiv = document.getElementById(`explanation-${questionId}`);
+        const lossImage = document.getElementById('lossImage'); // Obter a imagem de erro
+
+        if (!selectedOption) {
+            explanationDiv.innerHTML = "Por favor, selecione uma opção.";
+            explanationDiv.className = "explanation";
+            return;
+        }
+
+        const userAnswer = selectedOption.value;
+        if (userAnswer === correctAnswer) {
+            explanationDiv.innerHTML = `<span class="result correct">Resposta correta!</span> ${explanation}`;
+            lossImage.style.display = "none"; // Esconder a imagem de erro
+        } else {
+            lossImage.style.display = "inline"; // Mostrar a imagem de erro
+            explanationDiv.innerHTML = `<span class="result wrong">Resposta incorreta.</span> ${explanation} ${lossImage.outerHTML}`;
+        }
+        explanationDiv.className = "explanation";
+    }
+</script>
+
+</body>
+</html>

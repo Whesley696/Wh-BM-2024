@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulado Abordagem Policial</title>
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace; /* Fonte monoespaçada para um visual mais tecnológico */
+      background: linear-gradient(to bottom, #1a1a1a, #333); /* Fundo escuro */
+      color: #f5f5f5; /* Cor do texto mais clara */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px; /* Espaçamento interno */
+    }
+    .container {
+      width: 100%;
+      max-width: 900px;
+      padding: 20px;
+      background: #2c2c2c; /* Cor de fundo da caixa */
+      border: 1px solid #555; /* Borda mais escura */
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Sombra mais intensa */
+      transition: transform 0.2s;
+    }
+
+    h1 {
+      text-align: center;
+      color: #e67e22; /* Laranja vibrante */
+      text-transform: uppercase; /* Letras maiúsculas */
+      letter-spacing: 2px; /* Espaçamento entre letras */
+    }
+    .question {
+      margin-bottom: 20px;
+      padding: 10px; /* Espaçamento interno das questões */
+      border: 1px solid #555; /* Borda das perguntas */
+      border-radius: 5px;
+      background-color: #3a3a3a; /* Fundo das perguntas */
+    }
+    .options label {
+      display: block;
+      margin: 5px 0;
+      padding: 5px; /* Espaçamento interno nos rótulos */
+      border-radius: 4px; /* Bordas arredondadas */
+      transition: background 0.3s; /* Transição de fundo */
+    }
+    .options input[type="radio"] {
+      margin-right: 10px;
+    }
+    .options label:hover {
+      background-color: #444; /* Fundo ao passar o mouse */
+    }
+    #submitBtn {
+      display: block;
+      width: 100%;
+      padding: 15px; /* Aumentar o espaçamento */
+      margin-top: 20px;
+      background-color: #2980b9; /* Azul padrão */
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px; /* Aumentar o tamanho da fonte */
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s;
+    }
+    #submitBtn:hover {
+      background-color: #3498db; /* Azul claro */
+      transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    }
+    #result {
+      margin-top: 20px;
+      padding: 15px;
+      text-align: center;
+      font-size: 20px; /* Aumentar o tamanho da fonte do resultado */
+      background-color: #ecf0f1;
+      border-radius: 5px;
+      display: none;
+      color: #333; /* Cor do texto do resultado */
+    }
+
+    .correct {
+        background-color: lightgreen;
+        color: black;
+        
+    }
+    .incorrect {
+        background-color: lightcoral;
+        color: black;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Simulado Abordagem Policial</h1>
+    <form id="quizForm">
+      
+      <!-- Exemplo de estrutura para uma questão -->
+      <div class="question">
+        <p>1. O que caracteriza o ato de abordagem realizado pelo Policial Militar, conforme o Código de Processo Penal?</p>
+        <div class="options">
+          <label><input type="radio" name="question1" value="a"> A aproximação e interpelamento de qualquer pessoa, exclusivamente em áreas de grande movimentação, com o objetivo de assegurar a ordem pública.</label>
+          <label><input type="radio" name="question1" value="b"> A condução forçada de qualquer pessoa para delegacias, independentemente de suspeita fundada.</label>
+          <label><input type="radio" name="question1" value="c"> O ato de aproximação e interpelamento de qualquer pessoa, a pé ou em veículo, com o objetivo de identificá-la e/ou realizar busca pessoal, caso haja fundada suspeita, conforme o art. 244 do Código de Processo Penal.</label>
+          <label><input type="radio" name="question1" value="d"> A aproximação e observação de grupos suspeitos, sem a necessidade de interpelar ou identificar os indivíduos.</label>
+          <label><input type="radio" name="question1" value="e"> A identificação de qualquer pessoa, mas sem a realização de busca pessoal, mesmo havendo fundada suspeita.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>2. Como se caracteriza o início de uma abordagem policial?</p>
+        <div class="options">
+          <label><input type="radio" name="question3" value="a"> Apenas por uma determinação verbal feita pelo policial.</label>
+          <label><input type="radio" name="question3" value="b"> Exclusivamente por sinais luminosos e sirene, sempre que o abordado estiver em atitude suspeita.</label>
+          <label><input type="radio" name="question3" value="c"> Através de uma determinação verbal, gestos, sinais do policial, ou outros sinais, como luminosos e sirene, independentemente de suspeita.</label>
+          <label><input type="radio" name="question3" value="d"> Apenas quando o policial utiliza gestos e sinais, desde que o abordado esteja em comportamento suspeito.</label>
+          <label><input type="radio" name="question3" value="e"> Principalmente por meio de ordens verbais e sirene, apenas se a pessoa abordada estiver em fuga.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>3. Como deve ser entendido o poder de polícia no contexto das ações estatais?</p>
+        <div class="options">
+          <label><input type="radio" name="question4" value="a"> Como uma série de ações que promovem a liberdade individual, permitindo que os cidadãos ajam sem restrições.</label>
+          <label><input type="radio" name="question4" value="b"> Como um conjunto de ações que limitam e sancionam o direito individual, autorizando a intervenção do Estado. </label>
+          <label><input type="radio" name="question4" value="c"> Apenas como uma ferramenta para garantir a segurança pública sem implicações sobre direitos individuais.</label>
+          <label><input type="radio" name="question4" value="d"> Como uma forma de controle social que busca fortalecer o poder dos indivíduos sobre o Estado.</label>
+          <label><input type="radio" name="question4" value="e"> Como um conjunto de leis que asseguram a impunidade dos agentes públicos em suas ações.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>4. Qual a característica do ato de abordar no contexto policial?</p>
+        <div class="options">
+          <label><input type="radio" name="question5" value="a"> O ato de abordar é obrigatório e deve ser realizado sempre que um policial visualizar um suspeito.</label>
+          <label><input type="radio" name="question5" value="b"> O ato de abordar é discricionário, permitindo ao policial decidir quando e como abordará uma pessoa.</label>
+          <label><input type="radio" name="question5" value="c"> O ato de abordar deve ser realizado somente em locais de grande movimentação e sob ordens superiores.</label>
+          <label><input type="radio" name="question5" value="d"> O ato de abordar é restrito apenas a casos de flagrante delito, sem exceções.</label>
+          <label><input type="radio" name="question5" value="e"> O ato de abordar deve ser formalizado através de um documento, independentemente da situação.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>5. Qual das seguintes práticas deve ser evitada durante uma abordagem policial, conforme as diretrizes da POP nº 1.4?</p>
+        <div class="options">
+          <label><input type="radio" name="question6" value="a"> Utilizar proteção adequada durante a abordagem e planejar a ação previamente.</label>
+          <label><input type="radio" name="question6" value="b"> Permitir que o cidadão abordado manuseie seus pertences, como mochila e carteira.</label>
+          <label><input type="radio" name="question6" value="c"> Manter medidas de segurança e controle de área durante a abordagem.</label>
+          <label><input type="radio" name="question6" value="d"> Manter a arma encontrada com o cidadão abordado em local seguro e sob controle do policial.</label>
+          <label><input type="radio" name="question6" value="e"> Deixar de adotar medidas de segurança e controle de área durante a abordagem.</label>
+        </div>
+      </div>
+      
+      
+      <div class="question">
+        <p>6. Qual é o principal objetivo do princípio da Segurança na abordagem policial?</p>
+        <div class="options">
+          <label><input type="radio" name="question7" value="a"> Aumentar a velocidade da abordagem para surpreender o suspeito.</label>
+          <label><input type="radio" name="question7" value="b"> Minimizar os riscos e preservar a integridade física dos policiais e dos indivíduos envolvidos.</label>
+          <label><input type="radio" name="question7" value="c"> Garantir que todos os procedimentos sejam seguidos, independentemente dos riscos.</label>
+          <label><input type="radio" name="question7" value="d"> Promover um ambiente de tensão para garantir o controle da situação.</label>
+          <label><input type="radio" name="question7" value="e"> Obter informações do suspeito de forma agressiva e rápida.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>7. O que caracteriza o princípio da Surpresa na abordagem policial?</p>
+        <div class="options">
+          <label><input type="radio" name="question8" value="a"> A abordagem deve ser feita de maneira planejada e visível.</label>
+          <label><input type="radio" name="question8" value="b"> O indivíduo abordado deve ser alertado com antecedência sobre a ação policial.</label>
+          <label><input type="radio" name="question8" value="c"> A ação policial deve ocorrer de forma inesperada, reduzindo a capacidade de reação do suspeito.</label>
+          <label><input type="radio" name="question8" value="d"> O princípio deve ser aplicado apenas em situações de alto risco.</label>
+          <label><input type="radio" name="question8" value="e"> O uso de sirenes e luzes deve ser evitado para não alarmar o suspeito.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>8. Como o princípio da Rapidez se relaciona com a abordagem policial?</p>
+        <div class="options">
+          <label><input type="radio" name="question9" value="a"> Ele deve ser aplicado apenas em situações de grande risco e sempre acompanhado de violência.</label>
+          <label><input type="radio" name="question9" value="b"> O princípio se refere à velocidade da abordagem, impedindo a reação do suspeito.</label>
+          <label><input type="radio" name="question9" value="c"> Ele enfatiza a necessidade de planejamento e organização antes da abordagem.</label>
+          <label><input type="radio" name="question9" value="d"> O princípio não é relevante em abordagens feitas de forma discreta.</label>
+          <label><input type="radio" name="question9" value="e"> A rapidez deve ser priorizada em detrimento da segurança da guarnição.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>9. O que significa o princípio da Ação Vigorosa na abordagem policial?</p>
+        <div class="options">
+          <label><input type="radio" name="question10" value="a"> Uma atitude passiva que visa evitar confrontos.</label>
+          <label><input type="radio" name="question10" value="b"> Uma atitude firme e resoluta, minimizando a possibilidade de reação do abordado.</label>
+          <label><input type="radio" name="question10" value="c"> O uso de técnicas de comunicação amigáveis para desarmar o suspeito.</label>
+          <label><input type="radio" name="question10" value="d"> Um princípio que prioriza a persuasão em vez da força física.</label>
+          <label><input type="radio" name="question10" value="e"> A necessidade de se evitar qualquer forma de confronto durante a abordagem.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>10. Como deve ser exercida a Unidade de Comando durante uma abordagem policial?</p>
+        <div class="options">
+          <label><input type="radio" name="question11" value="a"> Apenas o Comandante-da-Guarnição deve emitir comandos, sem reforços dos demais policiais.</label>
+          <label><input type="radio" name="question11" value="b"> Os comandos devem ser emitidos de forma confusa para desorientar o abordado.</label>
+          <label><input type="radio" name="question11" value="c"> Os comandos verbais devem ser claros e compreensíveis, podendo ser reforçados pelos demais policiais.</label>
+          <label><input type="radio" name="question11" value="d"> A unidade de comando deve ser ignorada em situações de baixo risco.</label>
+          <label><input type="radio" name="question11" value="e"> Cada policial deve agir de forma independente, sem necessidade de coordenação.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>11. O que caracteriza o Policiamento Ostensivo realizado pelas Polícias Militares?</p>
+        <div class="options">
+          <label><input type="radio" name="question12" value="a"> Ação policial encoberta, sem a identificação visual dos policiais.</label>
+          <label><input type="radio" name="question12" value="b"> O uso de veículos não identificados para surpreender a criminalidade.</label>
+          <label><input type="radio" name="question12" value="c"> Emprego de homens ou frações de tropa visivelmente identificados por farda, equipamento ou viatura, visando a manutenção da ordem pública.</label>
+          <label><input type="radio" name="question12" value="d"> Realização de ações policiais apenas em áreas urbanas densamente povoadas.</label>
+          <label><input type="radio" name="question12" value="e"> Policiamento que se concentra exclusivamente em atividades investigativas e de inteligência.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>12. Segundo o artigo 144 da Constituição Federal, qual é a legitimidade dos policiais no que diz respeito à realização de buscas pessoais?</p>
+        <div class="options">
+          <label><input type="radio" name="question13" value="a"> Os policiais podem realizar buscas pessoais apenas com mandado judicial.</label>
+          <label><input type="radio" name="question13" value="b"> Somente os policiais civis têm legitimidade para realizar buscas pessoais em qualquer situação.</label>
+          <label><input type="radio" name="question13" value="c"> Policiais têm legitimidade para realizar buscas pessoais sempre que houver fundada suspeita, atuando em nome do Estado.</label>
+          <label><input type="radio" name="question13" value="d"> Os policiais podem realizar buscas pessoais apenas em casos de crimes graves e com autorização prévia.</label>
+          <label><input type="radio" name="question13" value="e"> A busca pessoal só pode ser realizada se houver testemunhas presentes durante a abordagem.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>13. O que caracteriza a "fundada suspeita" segundo as normas policiais?</p>
+        <div class="options">
+          <label><input type="radio" name="question14" value="a"> A suspeita deve se basear apenas em indícios sem comprovação.</label>
+          <label><input type="radio" name="question14" value="b"> A fundada suspeita deve ser baseada em informações anônimas sem confirmação.</label>
+          <label><input type="radio" name="question14" value="c"> Deve haver razões para acreditar que a pessoa está na posse de arma ilegal ou objetos que sejam elementos de prova ou produtos de crime.</label>
+          <label><input type="radio" name="question14" value="d"> A fundada suspeita é válida apenas em casos de crimes violentos.</label>
+          <label><input type="radio" name="question14" value="e"> Não é necessário ter qualquer evidência para caracterizar fundada suspeita.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>14. De acordo com a decisão do Superior Tribunal de Justiça, qual das situações a seguir caracteriza fundada suspeita, autorizando a busca pessoal?</p>
+        <div class="options">
+          <label><input type="radio" name="question15" value="a"> O indivíduo está parado em um local isolado, sem qualquer atitude suspeita.</label>
+          <label><input type="radio" name="question15" value="b"> O comportamento excessivamente nervoso do indivíduo, conhecido por envolvimento com o tráfico de drogas, caracteriza fundada suspeita.</label>
+          <label><input type="radio" name="question15" value="c"> A presença de um único policial em uma abordagem sem testemunhas.</label>
+          <label><input type="radio" name="question15" value="d"> A abordagem policial em horário diurno em um local tranquilo.</label>
+          <label><input type="radio" name="question15" value="e"> Indivíduos que não estão em movimento e não apresentam comportamento estranho.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>15. Qual das alternativas a seguir justifica a realização da busca pessoal de acordo com o entendimento do STJ sobre fundada suspeita?</p>
+        <div class="options">
+          <label><input type="radio" name="question16" value="a"> Um veículo parado durante a madrugada, sem pessoas em seu interior.</label>
+          <label><input type="radio" name="question16" value="b"> Um indivíduo que observa a polícia e continua a caminhar normalmente.</label>
+          <label><input type="radio" name="question16" value="c"> Um veículo parado à noite com quatro indivíduos dentro, sem qualquer comportamento suspeito.</label>
+          <label><input type="radio" name="question16" value="d"> Indivíduo que deixa uma sacola ao visualizar a polícia, gerando fundada suspeita de posse de objetos ilícitos.</label>
+          <label><input type="radio" name="question16" value="e"> Uma abordagem realizada em um local com segurança privada presente.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>16. Considerando as definições sobre flagrante delito, qual das alternativas a seguir apresenta a correta caracterização de quem se considera em flagrante delito?</p>
+        <div class="options">
+          <label><input type="radio" name="question17" value="a"> Apenas quem está cometendo a infração penal é considerado em flagrante delito.</label>
+          <label><input type="radio" name="question17" value="b"> Somente quem acaba de cometer a infração penal é considerado em flagrante delito.</label>
+          <label><input type="radio" name="question17" value="c"> É considerado em flagrante delito quem é perseguido logo após pela autoridade ou por qualquer pessoa em situação que faça presumir ser autor da infração.</label>
+          <label><input type="radio" name="question17" value="d"> É considerado em flagrante delito quem é encontrado com instrumentos ou objetos que façam presumir ser autor da infração.</label>
+          <label><input type="radio" name="question17" value="e"> Todas as alternativas acima estão corretas.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>17. Ao realizar a prisão em flagrante, quais dos direitos constitucionais o Policial Militar deve comunicar imediatamente ao preso?</p>
+        <div class="options">
+          <label><input type="radio" name="question18" value="a"> O direito de ser levado para sua casa.</label>
+          <label><input type="radio" name="question18" value="b"> O direito de permanecer calado.</label>
+          <label><input type="radio" name="question18" value="c"> O direito de realizar uma ligação para um amigo.</label>
+          <label><input type="radio" name="question18" value="d"> O motivo da prisão em flagrante.</label>
+          <label><input type="radio" name="question18" value="e"> O nome de quem efetuou a prisão e para qual delegacia está sendo conduzido.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>18. O que caracteriza a voz de prisão em flagrante no contexto do procedimento policial?</p>
+        <div class="options">
+          <label><input type="radio" name="question19" value="a"> A voz de prisão é uma forma de advertência que não implica em consequências legais.</label>
+          <label><input type="radio" name="question19" value="b"> A voz de prisão marca o início da persecução penal e implica na privação da liberdade de locomoção do sujeito passivo.</label>
+          <label><input type="radio" name="question19" value="c"> A voz de prisão só é válida após o recolhimento do preso ao cárcere.</label>
+          <label><input type="radio" name="question19" value="d"> A voz de prisão é um procedimento que não envolve a constatação de infração penal.</label>
+          <label><input type="radio" name="question19" value="e"> A voz de prisão não é necessária para a efetuação da prisão em flagrante.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>19. Qual das alternativas descreve corretamente a finalidade da abordagem policial militar conforme o artigo 4º da Norma Geral de Ação ROTAM?</p>
+        <div class="options">
+          <label><input type="radio" name="question20" value="a"> A abordagem é realizada exclusivamente para prender indivíduos em flagrante delito.</label>
+          <label><input type="radio" name="question20" value="b"> A abordagem tem como objetivo principal verificar comportamentos inadequados e prestar assistência ao público.</label>
+          <label><input type="radio" name="question20" value="c"> A abordagem deve ser feita apenas em situações de flagrante delito.</label>
+          <label><input type="radio" name="question20" value="d"> A abordagem visa unicamente informar o cidadão sobre boas práticas de segurança.</label>
+          <label><input type="radio" name="question20" value="e"> A abordagem é uma ação que visa privar a liberdade de um indivíduo sem necessidade de justificativa.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>20. Qual é a finalidade da abordagem policial que se refere ao ato de interpelar o cidadão em conduta inconveniente?</p>
+        <div class="options">
+          <label><input type="radio" name="question21" value="a"> Averiguar</label>
+          <label><input type="radio" name="question21" value="b"> Assistir</label>
+          <label><input type="radio" name="question21" value="c"> Advertir</label>
+          <label><input type="radio" name="question21" value="d"> Autuar</label>
+          <label><input type="radio" name="question21" value="e"> Orientar</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>21. Sempre que o uso legítimo da força ou de armas de fogo seja inevitável, os funcionários responsáveis pela aplicação da lei deverão:</p>
+        <div class="options">
+          <label><input type="radio" name="question22" value="a"> Utilizá-las com moderação e a sua ação deve ser proporcional à gravidade da infração e ao objetivo legítimo a alcançar;</label>
+          <label><input type="radio" name="question22" value="b"> Minimizar os danos e as lesões, e respeitar e preservar a vida humana;</label>
+          <label><input type="radio" name="question22" value="c"> Assegurar a prestação de assistência e cuidados médicos às pessoas feridas ou afetadas, tão rapidamente quanto possível;</label>
+          <label><input type="radio" name="question22" value="d"> Assegurar a comunicação da ocorrência à família ou pessoas próximas da pessoa ferida ou afetada, tão rapidamente quanto possível;</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>22. Quais são as fases da abordagem policial conforme a Norma Geral de Ação ROTAM?</p>
+        <div class="options">
+          <label><input type="radio" name="question23" value="a"> Planejamento mental, plano de ação, execução, comunicado a sala de operações, tomada de posições, anunciação, busca, identificação, decisão decorrente da abordagem, encerramento;</label>
+          <label><input type="radio" name="question23" value="b"> Planejamento mental, identificação, busca, encerramento;</label>
+          <label><input type="radio" name="question23" value="c"> Anunciação, busca, plano de ação, encerramento;</label>
+          <label><input type="radio" name="question23" value="d"> Comunicação, execução, tomada de posições, encerramento;</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>23. Qual é um dos cuidados essenciais durante o acompanhamento de veículo na atividade policial?</p>
+        <div class="options">
+          <label><input type="radio" name="question24" value="a"> Efetuar disparos de arma de fogo com a finalidade de pará-lo;</label>
+          <label><input type="radio" name="question24" value="b"> Informar a SOp do início do acompanhamento e repassar características do veículo suspeito;</label>
+          <label><input type="radio" name="question24" value="c"> Ignorar as características do veículo suspeito;</label>
+          <label><input type="radio" name="question24" value="d"> Realizar o acompanhamento sem acionar os sinais de emergência;</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>24. Qual das seguintes práticas deve ser evitada durante a condução de presos, conforme o POP Nº 1.7?</p>
+        <div class="options">
+          <label><input type="radio" name="question25" value="a"> Conduzir o preso algemado com as mãos para frente do corpo;</label>
+          <label><input type="radio" name="question25" value="b"> Conduzir o preso em local apropriado;</label>
+          <label><input type="radio" name="question25" value="c"> Conduzir até dois presos por viatura;</label>
+          <label><input type="radio" name="question25" value="d"> Conduzir o preso sem revista minuciosa antes de entrar na viatura;</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>25. Em qual das seguintes situações o uso de algemas é justificado conforme o Manual de Patrulhamento Tático Motorizado da Brigada Militar?</p>
+        <div class="options">
+          <label><input type="radio" name="question26" value="a"> Quando o suspeito não apresenta resistência e está cooperando;</label>
+          <label><input type="radio" name="question26" value="b"> Quando o suspeito apresenta indícios de fuga;</label>
+          <label><input type="radio" name="question26" value="c"> Quando o suspeito é menor de idade;</label>
+          <label><input type="radio" name="question26" value="d"> Quando o suspeito está acompanhado de familiares;</label>
+          <label><input type="radio" name="question26" value="e"> Quando o suspeito está em um local público sem ninguém ao redor;</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>26. Qual é a primeira ação que o Comandante (1ºH) deve realizar ao iniciar uma abordagem policial?</p>
+        <div class="options">
+          <label><input type="radio" name="question27" value="a"> Posicionar a viatura a 1 metro do veículo abordado;</label>
+          <label><input type="radio" name="question27" value="b"> Acionar o sinal sonoro;</label>
+          <label><input type="radio" name="question27" value="c"> Desembarcar imediatamente da viatura;</label>
+          <label><input type="radio" name="question27" value="d"> Comunicar à Sala de Operações;</label>
+          <label><input type="radio" name="question27" value="e"> Anunciar a abordagem diretamente;</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>27. Durante a abordagem, como a guarnição deve se posicionar?</p>
+        <div class="options">
+          <label><input type="radio" name="question28" value="a"> Completamente desembarcada;</label>
+          <label><input type="radio" name="question28" value="b"> Em posição de ataque;</label>
+          <label><input type="radio" name="question28" value="c"> Semidesembarcada, abrigada pelo vão das portas;</label>
+          <label><input type="radio" name="question28" value="d"> Com as portas abertas;</label>
+          <label><input type="radio" name="question28" value="e"> Em posição de espera;</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>28. O que o Comandante (1ºH) deve anunciar ao realizar a abordagem ao veículo?</p>
+        <div class="options">
+          <label><input type="radio" name="question29" value="a"> "Polícia! Todos permaneçam tranquilos!";</label>
+          <label><input type="radio" name="question29" value="b"> "Polícia! Saia do veículo agora!";</label>
+          <label><input type="radio" name="question29" value="c"> "Polícia! Atenção ocupantes do veículo! Mãos acima da cabeça!";</label>
+          <label><input type="radio" name="question29" value="d"> "Polícia! Desligue o motor!";</label>
+          <label><input type="radio" name="question29" value="e"> "Polícia! Desça imediatamente do carro!";</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>29. O que o Comandante (1ºH) deve questionar ao motorista durante a abordagem?</p>
+        <div class="options">
+          <label><input type="radio" name="question30" value="a"> "Há mais pessoas no veículo?";</label>
+          <label><input type="radio" name="question30" value="b"> "Você tem algum documento de identidade?";</label>
+          <label><input type="radio" name="question30" value="c"> "Você está armado?";</label>
+          <label><input type="radio" name="question30" value="d"> "Qual é o seu nome?";</label>
+          <label><input type="radio" name="question30" value="e"> "Por que você parou aqui?";</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>30. Após a conferência do veículo, onde o Comandante (1ºH) deve se posicionar?</p>
+        <div class="options">
+          <label><input type="radio" name="question31" value="a"> Na calçada, à frente do veículo;</label>
+          <label><input type="radio" name="question31" value="b"> Junto ao motorista (2ºH), na viatura;</label>
+          <label><input type="radio" name="question31" value="c"> Próximo à roda dianteira direita da viatura;</label>
+          <label><input type="radio" name="question31" value="d"> No banco de trás da viatura;</label>
+          <label><input type="radio" name="question31" value="e"> Em frente ao veículo abordado;</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>31. Como os abordados devem se posicionar após a busca pessoal?</p>
+        <div class="options">
+          <label><input type="radio" name="question32" value="a"> Com os braços levantados;</label>
+          <label><input type="radio" name="question32" value="b"> De pé, com os braços para frente;</label>
+          <label><input type="radio" name="question32" value="c"> Em fila indiana;</label>
+          <label><input type="radio" name="question32" value="d"> Em linha com os braços para trás, à lateral esquerda do Comandante;</label>
+          <label><input type="radio" name="question32" value="e"> Sentados no chão;</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>32. O que o motorista (2ºH) deve fazer antes de iniciar a busca veicular?</p>
+        <div class="options">
+          <label><input type="radio" name="question33" value="a"> Fechar o porta-malas;</label>
+          <label><input type="radio" name="question33" value="b"> Informar ao Comandante sobre a presença de outros passageiros;</label>
+          <label><input type="radio" name="question33" value="c"> Abrir o porta-malas para rápida verificação;</label>
+          <label><input type="radio" name="question33" value="d"> Solicitar a presença de um supervisor;</label>
+          <label><input type="radio" name="question33" value="e"> Desligar o veículo;</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>33. Qual a pergunta que o Comandante (1ºH) deve fazer ao condutor durante a abordagem?</p>
+        <div class="options">
+          <label><input type="radio" name="question34" value="a"> "Você está com sua família?";</label>
+          <label><input type="radio" name="question34" value="b"> "Você sabe por que eu parei você?";</label>
+          <label><input type="radio" name="question34" value="c"> "Há drogas, armas, valores ou algo ilícito dentro do veículo?";</label>
+          <label><input type="radio" name="question34" value="d"> "Você já foi parado pela polícia antes?";</label>
+          <label><input type="radio" name="question34" value="e"> "Qual é a sua profissão?";</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>34. O que deve acontecer com os documentos do veículo durante a abordagem?</p>
+        <div class="options">
+          <label><input type="radio" name="question35" value="a"> Os documentos podem ser entregues aos abordados;</label>
+          <label><input type="radio" name="question35" value="b"> O condutor pode buscar os documentos enquanto a abordagem está em andamento;</label>
+          <label><input type="radio" name="question35" value="c"> Os documentos devem ser apresentados ao Comandante sem que os abordados mexam no veículo;</label>
+          <label><input type="radio" name="question35" value="d"> O Comandante deve solicitar os documentos somente após a busca veicular;</label>
+          <label><input type="radio" name="question35" value="e"> O motorista deve deixar os documentos na viatura;</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>35. O que o comandante (1ºH) deve fazer após encerrar a abordagem?</p>
+        <div class="options">
+          <label><input type="radio" name="question36" value="a"> Solicitar a presença de um supervisor;</label>
+          <label><input type="radio" name="question36" value="b"> Explicar o motivo da abordagem e conscientizar os ocupantes sobre sua importância;</label>
+          <label><input type="radio" name="question36" value="c"> Libertar imediatamente os ocupantes do veículo;</label>
+          <label><input type="radio" name="question36" value="d"> Apenas liberar os ocupantes sem mais delongas;</label>
+          <label><input type="radio" name="question36" value="e"> Encerrar a operação sem qualquer explicação;</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>36. O que deve ser feito após a consulta dos documentos pelo motorista (2ºH)?</p>
+        <div class="options">
+          <label><input type="radio" name="question37" value="a"> Os documentos devem ser descartados;</label>
+          <label><input type="radio" name="question37" value="b"> O comandante (1ºH) repassa os documentos ao motorista para consulta;</label>
+          <label><input type="radio" name="question37" value="c"> O motorista deve guardar os documentos sem revisão;</label>
+          <label><input type="radio" name="question37" value="d"> Os documentos são entregues ao Comandante;</label>
+          <label><input type="radio" name="question37" value="e"> Os documentos devem ser entregues ao advogado dos abordados;</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>37. O que deve ocorrer ao final da abordagem, caso nada ilícito seja encontrado?</p>
+        <div class="options">
+          <label><input type="radio" name="question38" value="a"> O comandante (1ºH) deve realizar uma nova abordagem;</label>
+          <label><input type="radio" name="question38" value="b"> A equipe deve se retirar imediatamente sem aviso;</label>
+          <label><input type="radio" name="question38" value="c"> O comandante (1ºH) encerra a abordagem e deixa uma boa impressão sobre a Brigada Militar;</label>
+          <label><input type="radio" name="question38" value="d"> Os ocupantes do veículo devem ser revistados novamente;</label>
+          <label><input type="radio" name="question38" value="e"> Os policiais devem permanecer no local sem nenhuma explicação;</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>39. Qual é a primeira ação do 1º homem ao iniciar a abordagem?</p>
+        <div class="options">
+          <label><input type="radio" name="question39" value="a"> Ele posiciona a viatura a 3 a 5 metros do veículo abordado;</label>
+          <label><input type="radio" name="question39" value="b"> Ele escolhe o local para abordar e aciona os sinais sonoros e luminosos da viatura;</label>
+          <label><input type="radio" name="question39" value="c"> Ele realiza a verbalização semidesembarcado;</label>
+          <label><input type="radio" name="question39" value="d"> Ele permanece atento ao seu setor de observação;</label>
+          <label><input type="radio" name="question39" value="e"> Ele desembarca e se posiciona ao lado do 1º homem;</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>40. O que deve fazer o 3º homem durante a abordagem?</p>
+        <div class="options">
+          <label><input type="radio" name="question40" value="a"> Ele deve desembarcar e realizar a segurança da retaguarda;</label>
+          <label><input type="radio" name="question40" value="b"> Ele permanece atento em seu setor de observação;</label>
+          <label><input type="radio" name="question40" value="c"> Ele posiciona a viatura a uma distância de 3 a 5 metros;</label>
+          <label><input type="radio" name="question40" value="d"> Ele realiza a segurança à frente sem desembarcar;</label>
+          <label><input type="radio" name="question40" value="e"> Ele escolhe o local para abordagem;</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>41. Durante a busca pessoal, qual homem realiza a segurança do revistador (4º homem)?</p>
+        <div class="options">
+          <label><input type="radio" name="question41" value="a"> O 1º homem;</label>
+          <label><input type="radio" name="question41" value="b"> O 2º homem;</label>
+          <label><input type="radio" name="question41" value="c"> O 3º homem;</label>
+          <label><input type="radio" name="question41" value="d"> O 4º homem;</label>
+          <label><input type="radio" name="question41" value="e"> Nenhum dos homens;</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>42. Qual é a função do 4º homem durante a abordagem, após a varredura?</p>
+        <div class="options">
+          <label><input type="radio" name="question42" value="a"> Ele realiza a segurança externa;</label>
+          <label><input type="radio" name="question42" value="b"> Ele entrega a documentação aos abordados;</label>
+          <label><input type="radio" name="question42" value="c"> Ele realiza a busca pessoal;</label>
+          <label><input type="radio" name="question42" value="d"> Ele realiza a varredura do porta-malas;</label>
+          <label><input type="radio" name="question42" value="e"> Ele aguarda a ordem de embarque;</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>43. Após o encerramento da abordagem, qual é a ordem correta de embarque da equipe?</p>
+        <div class="options">
+          <label><input type="radio" name="question43" value="a"> 1º homem, 2º homem, 4º homem, 3º homem;</label>
+          <label><input type="radio" name="question43" value="b"> 2º homem, 1º homem, 3º homem, 4º homem;</label>
+          <label><input type="radio" name="question43" value="c"> 4º homem, 3º homem, 1º homem, 2º homem;</label>
+          <label><input type="radio" name="question43" value="d"> 3º homem, 4º homem, 1º homem, 2º homem;</label>
+          <label><input type="radio" name="question43" value="e"> 2º homem, 1º homem, 4º homem, 3º homem;</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>44. Na abordagem a uma pessoa, quem é responsável por conduzir a ação, mesmo que o ponta seja o primeiro a verbalizar?</p>
+        <div class="options">
+          <label><input type="radio" name="question44" value="a"> O ponta;</label>
+          <label><input type="radio" name="question44" value="b"> O 2º homem;</label>
+          <label><input type="radio" name="question44" value="c"> O comandante da guarnição;</label>
+          <label><input type="radio" name="question44" value="d"> O motorista;</label>
+          <label><input type="radio" name="question44" value="e"> O revistador;</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>45. A busca pessoal é realizada quando há fundada suspeita de que a pessoa está portando:</p>
+        <div class="options">
+          <label><input type="radio" name="question45" value="a"> Apenas objetos de valor;</label>
+          <label><input type="radio" name="question45" value="b"> Armas proibidas, coisas achadas ou obtidas por meios criminosos;</label>
+          <label><input type="radio" name="question45" value="c"> Somente documentos pessoais;</label>
+          <label><input type="radio" name="question45" value="d"> Apenas drogas;</label>
+          <label><input type="radio" name="question45" value="e"> Qualquer objeto em posse do suspeito, independentemente do contexto;</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>46. A busca pessoal a um suspeito a pé pode ser realizada sem mandado judicial, desde que:</p>
+        <div class="options">
+          <label><input type="radio" name="question46" value="a"> O policial tenha certeza da culpa do indivíduo;</label>
+          <label><input type="radio" name="question46" value="b"> Haja fundada suspeita baseada na conjugação entre comportamento e ambiente;</label>
+          <label><input type="radio" name="question46" value="c"> O suspeito esteja em um local público;</label>
+          <label><input type="radio" name="question46" value="d"> O suspeito tenha sido previamente identificado como criminoso;</label>
+          <label><input type="radio" name="question46" value="e"> O policial tenha autorização verbal de um superior;</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>47. De acordo com o artigo 292 do Código de Processo Penal (CPP), ao abordado cabe:</p>
+        <div class="options">
+          <label><input type="radio" name="question47" value="a"> Ignorar as ordens do policial militar;</label>
+          <label><input type="radio" name="question47" value="b"> Cumprir as ordens emanadas pelo policial militar, sob pena de crime de desobediência;</label>
+          <label><input type="radio" name="question47" value="c"> Resistir à busca pessoal sem consequências legais;</label>
+          <label><input type="radio" name="question47" value="d"> Solicitar a presença de um advogado antes de obedecer às ordens;</label>
+          <label><input type="radio" name="question47" value="e"> Informar ao policial sobre seus direitos antes de cumprir as ordens;</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>48. A busca ligeira é realizada principalmente para:</p>
+        <div class="options">
+          <label><input type="radio" name="question48" value="a"> Verificar a posse de documentos pessoais;</label>
+          <label><input type="radio" name="question48" value="b"> Proteger a integridade do abordado;</label>
+          <label><input type="radio" name="question48" value="c"> Identificar a posse de armas ou objetos perigosos;</label>
+          <label><input type="radio" name="question48" value="d"> Realizar uma verificação detalhada das roupas;</label>
+          <label><input type="radio" name="question48" value="e"> Solicitar informações sobre antecedentes criminais;</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>49. A busca minuciosa deve ser realizada quando:</p>
+        <div class="options">
+          <label><input type="radio" name="question49" value="a"> Não houver suspeita de porte de objetos ilícitos;</label>
+          <label><input type="radio" name="question49" value="b"> Houver suspeita de que o abordado porte objetos ilícitos difíceis de detectar;</label>
+          <label><input type="radio" name="question49" value="c"> O abordado estiver em uma situação de alta vulnerabilidade;</label>
+          <label><input type="radio" name="question49" value="d"> O policial não tiver a certeza de que a busca ligeira foi suficiente;</label>
+          <label><input type="radio" name="question49" value="e"> O abordado se recusar a se despir;</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>50. A busca completa é caracterizada por:</p>
+        <div class="options">
+          <label><input type="radio" name="question50" value="a"> Ser realizada apenas com inspeção visual;</label>
+          <label><input type="radio" name="question50" value="b"> O abordado se despindo e entregando seu vestuário ao policial militar;</label>
+          <label><input type="radio" name="question50" value="c"> Ser realizada somente em veículos;</label>
+          <label><input type="radio" name="question50" value="d"> O policial não podendo tocar no corpo do abordado;</label>
+          <label><input type="radio" name="question50" value="e"> A busca sendo feita sem a presença do abordado;</label>
+        </div>
+      </div>
+                  
+                       
+      <!-- Continue até a questão 30 -->
+      
+      <button type="button" id="submitBtn" onclick="calculateScore()">Enviar</button>
+    </form>
+    
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const correctAnswers = {
+        question1: "c",
+        question2: "a", // Adicione a resposta correta para question2
+        question3: "c",
+        question4: "b",
+        question5: "e",
+        question6: "b",
+        question7: "c",
+        question8: "b",
+        question9: "b",
+        question10: "b",
+        question11: "c",
+        question12: "c",
+        question13: "c",
+        question14: "b",
+        question15: "d",
+        question16: "e",
+        question17: "b",
+        question18: "b",
+        question19: "b",
+        question20: "b",
+        question21: "a",
+        question22: "a",
+        question23: "a",
+        question24: "b",
+        question25: "d",
+        question26: "b",
+        question27: "c",
+        question28: "c",
+        question29: "a",
+        question30: "c",
+        question31: "d",
+        question32: "b",
+        question33: "c",
+        question34: "c",
+        question35: "b",
+        question36: "b",
+        question37: "c",
+        question38: "c",
+        question39: "b",
+        question40: "a",
+        question41: "b",
+        question42: "a",
+        question43: "e",
+        question44: "c",
+        question45: "b",
+        question46: "b",
+        question47: "b",
+        question48: "c",
+        question49: "b",
+        question50: "b"
+    };
+
+    function calculateScore() {
+        const form = document.getElementById('quizForm');
+        let score = 0;
+        const totalQuestions = Object.keys(correctAnswers).length; // Total de perguntas
+
+        for (let question in correctAnswers) {
+            const userAnswer = form[question] ? form[question].value : null;
+            const options = document.querySelectorAll(`input[name="${question}"]`);
+
+            options.forEach(option => {
+                // Remove classes anteriores
+                option.parentElement.classList.remove('correct', 'incorrect');
+                
+                // Aplica classe correta
+                if (option.value === correctAnswers[question]) {
+                    option.parentElement.classList.add('correct');
+                } 
+                // Aplica classe incorreta se for a resposta escolhida
+                else if (userAnswer === option.value) {
+                    option.parentElement.classList.add('incorrect');
+                }
+            });
+
+            // Contagem de respostas corretas
+            if (userAnswer === correctAnswers[question]) {
+                score++;
+            }
+        }
+
+        // Exibição do resultado
+        const resultDiv = document.getElementById('result');
+        resultDiv.style.display = 'block';
+        resultDiv.innerHTML = `Você acertou <strong>${score}</strong> de <strong>${totalQuestions}</strong> questões.<br>Sua nota final é <strong>${(score / totalQuestions * 10).toFixed(1)}</strong>`;
+    }
+</script>
+
+
+</body>
+</html>

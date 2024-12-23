@@ -1,0 +1,2450 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumos Interativos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+        }
+
+        header {
+            background-color: #6200EA;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #FFFFFF;
+            font-size: 2.5rem;
+        }
+
+        .summary-box {
+            background-color: #1E1E1E;
+            border: 2px solid #03DAC5;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .summary-box h2 {
+            color: #03DAC5;
+        }
+
+        .summary-content {
+            display: none;
+            margin-top: 15px;
+        }
+
+        .summary-content div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .summary-content div i {
+            color: gold;
+            margin-right: 10px;
+        }
+
+        .button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: red;
+            animation: blink 1s infinite;
+            border: none;
+            cursor: pointer;
+        }
+
+        .button.clicked {
+            background-color: green;
+            animation: none;
+        }
+
+        @keyframes blink {
+            0%, 50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        footer {
+            background-color: #6200EA;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            color: white;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Resumos Fundamentos Juridicos 2</h1>
+    </header>
+
+    <div class="container mt-5">
+        <div class="summary-box">
+            <h2>Princípios</h2>
+            <button class="button" onclick="toggleSummary(this)"></button>
+            <div class="summary-content">
+                <h2>Princípio da Legalidade</h2>
+                <div><i></i>🟡Não há crime sem lei anterior que o defina: Uma conduta só pode ser considerada crime se houver uma lei prévia definindo-a como tal.</div>
+                <div><i></i>🟡Não há pena sem prévia cominação legal: A punição só pode ser aplicada se estiver previamente estabelecida em lei.</div>
+    
+                <div><h3>Crime</h3></div>
+                <div><i></i>🟡Pena prevista: Pode ser de reclusão ou detenção, com ou sem multa.</div>
+                <div><i></i>🟡Pune tentativa: A tentativa de cometer um crime também é punida, conforme o Art. 14, II do Código Penal.</div>
+                <div><i></i>🟡Exemplo: Lesão Corporal (Art. 129 do Código Penal).</div>
+    
+                <div><h3>Contravenção Penal</h3></div>
+                <div><i></i>🟡Pena prevista: Geralmente, prisão simples com multa ou apenas multa.</div>
+                <div><i></i>🟡Não pune tentativa: A tentativa de cometer uma contravenção não é punida, de acordo com o Art. 3º da Lei das Contravenções Penais (LCP).</div>
+                <div><i></i>🟡Exemplo: Perturbação do Sossego (Art. 42 da LCP).</div>
+    
+                <h2>Princípio da Irretroatividade</h2>
+                <div style="color:red"><i></i>Define que uma infração penal não retroage no tempo, exceto para beneficiar!</div>
+                <div><i></i><b>🟡Abolitio Criminis</b> : Se a nova lei descriminaliza uma conduta, beneficia todos os réus, acusados e condenados por essa infração.</div>
+                <div><i></i><b>🟡Novatio Legis in Mellius</b> : Se a nova lei reduz a pena ou traz um regime mais benéfico, ela beneficia os réus, acusados e condenados.</div>
+                <div><i></i><b>🟡Novatio Legis in Pejus</b> : Se a nova lei agrava a pena ou cria uma nova infração, ela não se aplica retroativamente, valendo apenas para fatos ocorridos após sua vigência.</div>
+                <h5 style="background-color: white; color:black">Abolir crimes beneficia, melhorar penas beneficia, piorar não retroage</h5>
+    
+                <h2>Princípio da Inocência</h2>
+                <div style="color:red"><i></i>Ninguém será culpado até o trânsito em julgado de sentença penal condenatória</div>
+                <div><i></i><b>🟡Investigado</b> : Indivíduo que está respondendo a Inquérito Policial ou a Termo Circunstanciado perante à Autoridade Policial.</div>
+                <div><i></i><b>🟡Indiciado</b> : Indivíduo que a Autoridade Policial, em seu relatório, concluiu com indícios de autoria e materialidade.</div>
+                <div><i></i><b>🟡Acusado</b> : Indivíduo que foi denunciado pelo Ministério Público, após análise do procedimento policial, pelo Ministério Público.</div>
+<!-- Princípio da Ampla Defesa -->
+<h2>Princípio da Ampla Defesa</h2>
+<div style="color:red"><i></i>Aos litigantes, em processo judicial ou administrativo, e aos acusados em geral, são assegurados o contraditório e ampla defesa, com os meios e recursos necessários.</div>
+
+<!-- Princípio do Contraditório -->
+<h2>Princípio do Contraditório</h2>
+<div><i></i><b>🟡Direito à Informação</b> : Acesso aos documentos e provas do processo.</div>
+<div><i></i><b>🟡Direito à Reação</b> : O direito de se defender, respondendo às acusações.</div>
+<div><i></i><b>🟡Direito à Influência</b> : A capacidade de influenciar as decisões do processo.</div>
+
+<!-- Princípio da Dignidade Humana -->
+<h2>Princípio da Dignidade Humana</h2>
+<div><i></i>Refere-se à qualidade intrínseca de cada ser humano, garantindo que todas as pessoas merecem respeito e consideração. Este princípio implica a proteção contra atos degradantes e desumanos, garantindo condições mínimas para uma vida saudável.</div>
+
+<!-- Princípios Derivados da Dignidade Humana -->
+<h2>Princípios Derivados da Dignidade Humana</h2>
+<div><i></i><b>🟡Responsabilidade Subjetiva</b> : Para ser punido, é necessário que a pessoa tenha dolo (intenção) ou culpa (negligência, imprudência, ou imperícia).</div>
+<div><i></i><b>🟡Lesividade</b> : Não há crime sem possibilidade de ofensa a alguém.</div>
+<div><i></i><b>🟡Alteridade</b> : A conduta deve causar ofensa a outra pessoa, e não àquela que a pratica.</div>
+<div><i></i><b>🟡Proporcionalidade</b> : A punição não pode ser excessiva nem insuficiente, deve ser proporcional ao ato praticado.</div>
+
+                </div>
+                
+            
+            
+        </div>
+        <div class="summary-box">
+            <h2>Fontes do Direito Penal</h2>
+            <button class="button" onclick="toggleSummary(this)"></button>
+            <div class="summary-content">
+                <!-- Fonte Material -->
+<h2>Fonte Material</h2>
+<div>🟡 Refere-se a quem tem a competência para criar as normas penais. Apenas a União pode legislar sobre Direito Penal (Art. 22, I, CF/88), com exceção de casos específicos em que os Estados também podem legislar.</div>
+
+<!-- Fonte Formal -->
+<h2>Fonte Formal</h2>
+<div>🟡 Refere-se aos meios pelos quais o Direito Penal é expressado.</div>
+<div>🟡 <b>Imediata (Lei)</b>: A principal fonte do Direito Penal, são as leis que definem crimes e punições.</div>
+<div>🟡 <b>Mediata (Costumes e Princípios Gerais)</b>: São as normas não escritas, como costumes e princípios gerais do direito que podem influenciar a interpretação e aplicação das leis penais.</div>
+
+            </div>
+            
+
+        </div>
+        <div class="summary-box">
+            <h2>Costumes Penais</h2>
+            <button class="button" onclick="toggleSummary(this)"></button>
+            <div class="summary-content">
+<!-- Costume Incriminador -->
+<h2>Costume Incriminador</h2>
+<div>🟡 <b>Proibido</b>: O costume não pode criar infrações penais nem estabelecer penas. Apenas a lei tem o poder de definir crimes e punições.</div>
+
+<!-- Costume Abolicionista -->
+<h2>Costume Abolicionista</h2>
+<div>🟡 <b>Proibido</b>: O costume não pode revogar leis. Por exemplo, práticas como o jogo do bicho não podem ser legalizadas pelo costume, pois a lei ainda mantém essas atividades como infração penal.</div>
+
+<!-- Costume Interpretativo -->
+<h2>Costume Interpretativo</h2>
+<div>🟡 <b>Permitido</b>: O costume pode ser utilizado para interpretar a lei em casos específicos. Por exemplo, o conceito de horário noturno pode ser determinado com base no costume social, ajudando na aplicação da lei.</div>
+
+
+
+            </div>
+    </div>
+    <div class="summary-box">
+        <h2>Normas Penais</h2>
+        <button class="button" onclick="toggleSummary(this)"></button>
+        <!-- Norma Penal Incriminadora -->
+        <div class="summary-content">
+        <h2>Norma Penal Incriminadora</h2>
+        <div>🟡 <b>Preceito Primário</b>: Define a conduta criminosa. Exemplo:</div>
+        <div>🟡 <i>Art. 147:</i> "Ameaçar alguém, por palavra, escrito ou gesto, ou qualquer outro meio simbólico, de causar-lhe mal injusto e grave."</div>
+        <div>🟡 <b>Preceito Secundário</b>: Estabelece a pena para a conduta descrita no preceito primário. Exemplo:</div>
+        <div>🟡 Pena: Detenção de <b>1 a 6 meses</b> ou <b>multa</b>.</div>
+    
+        <!-- Norma Penal Não Incriminadora -->
+        <h2>Norma Penal Não Incriminadora</h2>
+        <div>🟡 <b>Permissivas</b>: Justificam ou excluem a ilicitude ou a culpabilidade da conduta, trazendo excludentes de ilicitude (como legítima defesa) ou excludentes de culpabilidade (como a inimputabilidade).</div>
+        <div>🟡 <b>Explicativas</b>: Servem para explicar o conceito de algum termo ou situação presente na norma penal.</div>
+        <div>🟡 <b>Complementares</b>: Ajudam na aplicação da norma penal, orientando como deve ser a aplicação em contextos específicos. Exemplo: <i>Art. 59, CP</i>, que trata da fixação da pena.</div>
+    
+        <!-- Norma Penal em Branco -->
+        <h2>Norma Penal em Branco</h2>
+        <div>🟡 A norma penal em branco tem um <b>preceito primário incompleto</b>, ou seja, ela remete para outra norma para ser completamente compreendida.</div>
+        <div>🟡 Exemplo: O <i>Art. 1º da Lei 11.343/2006</i> sobre drogas, que remete à <i>Portaria do Ministério da Saúde</i> para definir o que são substâncias entorpecentes.</div>
+    </div>
+    </div>
+    <div class="summary-box">
+        <h2>Lei Penal no Espaço</h2>
+        <button class="button" onclick="toggleSummary(this)"></button>
+        <div class="summary-content">
+            <!-- Lugar do Crime -->
+            <h2>Lugar do Crime</h2>
+            <div>🟡 O crime é considerado praticado no lugar da conduta, ou seja, no local onde a ação ocorreu, ou onde o resultado deveria ter se produzido (<i>Art. 6º, CP</i>).</div>
+            <div>🟡 Teoria da Ubiquidade ou Mista: Para fixação da competência territorial, o que importa é o lugar do resultado (<i>Art. 70 do CPP</i>), ou seja, o local onde o dano ou o efeito do crime se concretizou.</div>
+    
+            <!-- Tempo do Crime -->
+            <h2>Tempo do Crime</h2>
+            <div>🟡 O tempo do crime é o momento em que o sujeito pratica a conduta (ação ou omissão), independente do momento em que o resultado (dano) ocorre (<i>Art. 4º, CP</i>).</div>
+            <div>🟡 Teoria da Atividade: Para efeitos de prescrição, o que importa é o momento da consumação do crime (<i>Art. 111, I, do CP</i>), ou seja, quando o crime se consumou efetivamente.</div>
+        </div>
+    </div>
+    <div class="summary-box">
+        <h2>Teoria do Crime</h2>
+        <button class="button" onclick="toggleSummary(this)"></button>
+        <div class="summary-content">
+            <!-- Sujeito Passivo Mediato -->
+            <h2>Sujeito Passivo Mediato</h2>
+            <div>🟡 Refere-se ao Estado, que é o detentor do direito de punir. Ele é quem exerce o poder de aplicar a pena ao autor do crime.</div>
+    
+            <!-- Sujeito Ativo do Crime -->
+            <h2>Sujeito Ativo do Crime</h2>
+            <div>🟡 É a pessoa que realiza a conduta criminosa, ou seja, quem comete o crime.</div>
+    
+            <!-- Sujeito Passivo Imediato -->
+            <h2>Sujeito Passivo Imediato</h2>
+            <div>🟡 É a pessoa que sofre diretamente o impacto da conduta criminosa, sendo titular do bem jurídico tutelado pelo direito penal (exemplo: vítima de um roubo, que tem o bem patrimonial protegido).</div>
+    
+            <!-- Quem pode ser autor? -->
+            <h2>Quem pode ser autor?</h2>
+            <div>🟡 Pessoa física: A pessoa que comete o crime, desde que seja capaz.</div>
+            <div>🟡 Pessoa jurídica: Pode ser autora de crimes em crimes ambientais, de acordo com a legislação específica.</div>
+        </div>
+    </div>
+    <div class="summary-box">
+        <h2>Conceitos de Crime</h2>
+        <button class="button" onclick="toggleSummary(this)"></button>
+        <div class="summary-content">
+            <!-- Conceito Material -->
+            <h2>Material</h2>
+            <div>🟡 Crime é uma ação ou omissão que viola bens jurídicos mais importantes, ou seja, prejudica direitos essenciais (como a vida, a liberdade, o patrimônio).</div>
+    
+            <!-- Conceito Legal -->
+            <h2>Legal</h2>
+            <div>🟡 Crime é o que a lei define como infração penal, com pena de reclusão ou detenção, isolada ou combinada com multa.</div>
+    
+            <!-- Conceito Analítico (Teoria Tripartite) -->
+            <h2>Analítico (Teoria Tripartite)</h2>
+            <div>🟡 O crime é analisado considerando os elementos estruturais da conduta:</div>
+            <div>🟡 <b>Fato Típico</b>: A conduta que se enquadra na descrição legal de um crime.</div>
+            <div>🟡 <b>Ilicitude</b>: A contrariedade da conduta com o direito, ou seja, a ilegalidade do ato.</div>
+            <div>🟡 <b>Culpabilidade</b>: A reprovação da conduta do agente, levando em consideração sua imputabilidade, a consciência sobre a ilicitude do fato e a exigibilidade de conduta diversa.</div>
+        </div>
+    </div>
+    
+    <div class="summary-box">
+        <h2>Elementos Estruturais do Crime (Teoria Tripartite)</h2>
+        <button class="button" onclick="toggleSummary(this)"></button>
+        <div class="summary-content">
+            <!-- Fato Típico -->
+            <h2>Fato Típico</h2>
+            <div>🟡 A conduta praticada que corresponde à descrição do crime na lei.</div>
+            <div>🟡 Conduta</div>
+            <div>🟡 Resultado</div>
+            <div>🟡 Nexo causal (causa o resultado)</div>
+            <div>🟡 Tipicidade (a conduta é prevista na lei como crime)</div>
+    
+            <!-- Ilicitude -->
+            <h2>Ilicitude</h2>
+            <div>🟡 A conduta é contrária ao direito, ou seja, é proibida pela lei.</div>
+    
+            <!-- Culpabilidade -->
+            <h2>Culpabilidade</h2>
+            <div>🟡 O agente é culpável pela conduta ilícita, levando em conta sua imputabilidade, sua consciência sobre a ilicitude do ato e se era exigível uma conduta diferente.</div>
+        </div>
+    </div>
+    <div class='summary-box'>
+        <h2>Fundamentos Penais ligado a função Policial Militar</h2>
+
+    <button class="button" onclick="toggleSummary(this)"></button>
+    <div class="summary-content">
+        <!-- Definição de Tipicidade -->
+        <h2>Tipicidade</h2>
+        <div>🟡 É a adequação da conduta ao tipo penal descrito na lei.</div>
+        <div>🟡 Sem tipicidade, não há crime, pois não há correspondência entre o comportamento e a descrição legal de infração penal.</div>
+
+
+
+        <!-- Elementos Objetivos -->
+        <h2>Elementos Objetivos</h2>
+        <div>🟡 Dados concretos relacionados ao fato, como o objeto, a conduta e os resultados observáveis.</div>
+
+        <!-- Elementos Subjetivos -->
+        <h2>Elementos Subjetivos</h2>
+        <div>🟡 Relacionados ao agente e sua intenção ao praticar o ato, como o dolo (intenção) ou a culpa (negligência, imprudência ou imperícia).</div>
+
+        <!-- Elementos Normativos -->
+        <h2>Elementos Normativos</h2>
+        <div>🟡 Exigem uma valoração jurídica ou cultural, como conceitos de justiça, moralidade ou autorização legal (exemplo: "consentimento da vítima").</div>
+    </div>
+    <div class="summary-box">
+        <h2>Conduta Humana</h2>
+        <button class="button" onclick="toggleSummary(this)"></button>
+        <div class="summary-content">
+            <!-- Conceito -->
+            <h2>Conceito</h2>
+            <div>🟡 É a base do fato típico no direito penal, sendo a ação ou omissão de um indivíduo que infringe uma norma jurídica.</div>
+    
+            <!-- Ação -->
+            <h2>Ação</h2>
+            <div>🟡 Comportamento positivo que viola uma norma proibitiva.</div>
+            <div>🟡 Exemplo: Atacar alguém fisicamente.</div>
+    
+            <!-- Omissão Própria -->
+            <h2>Omissão Própria</h2>
+            <div>🟡 Comportamento negativo que viola uma norma preceptiva (ordem de fazer algo).</div>
+            <div>🟡 Exemplo: Não prestar socorro (Art. 135, CP).</div>
+    
+            <!-- Omissão Imprópria -->
+            <h2>Omissão Imprópria</h2>
+            <div>🟡 É o não agir em situações onde o agente tinha um dever especial de impedir o resultado, sendo equiparada à ação e sujeitando o agente às mesmas consequências penais de um crime ativo.</div>
+    
+            <!-- Requisitos para Configuração -->
+            <h2>Requisitos para Configuração</h2>
+            <div>🟡 Poder concreto de agir: Capacidade real e efetiva de impedir o resultado.</div>
+            <div>🟡 Obrigação legal: Existência de norma ou contrato que imponha o dever de agir.</div>
+            <div>🟡 Posição de garantidor/garante: O agente tem um vínculo especial que exige impedir o dano (Art. 13, § 2º, CP).</div>
+    
+            <!-- Atenção -->
+            <h2>Atenção</h2>
+            <div>🟡 O agente só responde por omissão quando podia e devia agir, ou seja, tinha meios reais e legais para impedir o resultado.</div>
+        </div>
+    </div>
+    <div class="summary-box">
+        <h2>Exclusão da Conduta e Tipos de Crime</h2>
+        <button class="button" onclick="toggleSummary(this)"></button>
+        <div class="summary-content">
+            <!-- Exclusão da Conduta -->
+            <h2>Exclusão da Conduta</h2>
+            <div>🟡 São situações em que não há conduta penalmente relevante, porque faltam elementos essenciais como a vontade ou o controle.</div>
+    
+            <!-- Ato Reflexo -->
+            <h2>Ato Reflexo</h2>
+            <div>🟡 Resposta biológica automática, sem controle da vontade.</div>
+            <div>🟡 <strong>Cuidado:</strong> Difere de ações em "curto circuito" (ações emocionais intensas que ainda têm controle, ex.: homicídio privilegiado, Art. 121, § 1º, CP).</div>
+    
+            <!-- Força Maior -->
+            <h2>Força Maior</h2>
+            <div>🟡 Violência irresistível que impede totalmente o controle do agente.</div>
+    
+            <!-- Estados de Inconsciência -->
+            <h2>Estados de Inconsciência</h2>
+            <div>🟡 Condições em que o agente não tem controle sobre si, como sonambulismo.</div>
+    
+            <!-- Coação -->
+            <h2>Coação</h2>
+            <div>🟡 Coação Física: Exclui a conduta porque o agente não teve escolha (sem tipicidade).</div>
+            <div>🟡 Coação Moral: Não exclui a conduta, mas pode excluir a culpabilidade.</div>
+    
+            <!-- Tipos de Crime -->
+            <h2 style="color:gold">Tipos de Crime</h2>
+    
+            <!-- Crime Material -->
+            <h2>Crime Material</h2>
+            <div>🟡 Exige um resultado material para se configurar.</div>
+            <div>🟡 Exemplo: Homicídio.</div>
+    
+            <!-- Crime Formal -->
+            <h2>Crime Formal</h2>
+            <div>🟡 O resultado material é dispensado; o ato já configura o crime, e o resultado é apenas o exaurimento.</div>
+            <div>🟡 Exemplo: Extorsão mediante sequestro.</div>
+    
+            <!-- Crime de Mera Conduta -->
+            <h2>Crime de Mera Conduta</h2>
+            <div>🟡 Não exige resultado material; basta a ação ou omissão para a infração ocorrer.</div>
+            <div>🟡 Exemplo: Porte ilegal de arma de fogo.</div>
+        </div>
+        
+    </div>
+    <div class="summary-box">
+        <h2>Nexo de Causalidade</h2>
+        <button class="button" onclick="toggleSummary(this)"></button>
+        <div class="summary-content">
+            <h2>Definição</h2>
+            <div>🟡 Relação entre a conduta e o resultado.</div>
+            <h2>Art. 13, CP</h2>
+            <div>🟡 O resultado só pode ser atribuído a quem lhe deu causa.</div>
+            <h2>Causa Relativamente Independente</h2>
+            <div>🟡 Se a causa posterior produz o resultado por si só, exclui a imputação ao agente anterior.</div>
+            <div>🟡 Os fatos anteriores ainda são imputados a quem os praticou.</div>
+        </div>
+    </div>
+    
+    <div class="summary-box">
+        <h2>Elemento Subjetivo do Tipo</h2>
+        <button class="button" onclick="toggleSummary(this)"></button>
+        <div class="summary-content">
+            <h2>Conceito</h2>
+            <div>🟡 Intenção ou estado mental do agente em relação à conduta.</div>
+            <h2>Elementos</h2>
+            <div>🟡 Cognitivo: O agente tem consciência do ato.</div>
+            <div>🟡 Volitivo: O agente tem vontade de realizar o ato.</div>
+        </div>
+    </div>
+    
+    <div class="summary-box">
+        <h2>Dolo</h2>
+        <button class="button" onclick="toggleSummary(this)"></button>
+        <div class="summary-content">
+            <h2>Definição</h2>
+            <div>🟡 O agente deseja o resultado ou assume o risco de produzi-lo (Art. 18, parágrafo único, CP).</div>
+            <h2>Espécies</h2>
+            <h2>Dolo Direto</h2>
+            <div>🟡 O agente tem vontade clara de praticar o crime.</div>
+            <div>🟡 Exemplo: Disparo de arma com intenção de matar.</div>
+            <h2>Dolo Eventual</h2>
+            <div>🟡 O agente prevê o resultado e aceita o risco.</div>
+            <div>🟡 Exemplo: Disparo em uma multidão com intenção de ferir alguém, mas aceita o risco de matar.</div>
+        </div>
+    </div>
+    
+    <div class="summary-box">
+        <h2>Culpa</h2>
+        <button class="button" onclick="toggleSummary(this)"></button>
+        <div class="summary-content">
+            <h2>Definição</h2>
+            <div>🟡 O agente causa o resultado por imprudência, negligência ou imperícia (não há intenção).</div>
+            <h2>Exemplo</h2>
+            <div>🟡 Acidente de trânsito por desatenção.</div>
+        </div>
+    </div>
+    
+    <div class="summary-box">
+        <h2>Crime Culposo (Art. 18, II, CP)</h2>
+        <button class="button" onclick="toggleSummary(this)"></button>
+        <div class="summary-content">
+            <h2>Definição</h2>
+            <div>🟡 Ocorre quando o agente causa o resultado por:</div>
+            <div>🟡 Imprudência: Ação precipitada ou perigosa.</div>
+            <div>🟡 Negligência: Omissão de cuidados necessários.</div>
+            <div>🟡 Imperícia: Falta de habilidade técnica.</div>
+        </div>
+    </div>
+    
+    <div class="summary-box">
+        <h2>Impossibilidade de Tentativa em Crimes Culposos</h2>
+        <button class="button" onclick="toggleSummary(this)"></button>
+        <div class="summary-content">
+            <h2>Motivo</h2>
+            <div>🟡 A tentativa só é aplicável a crimes dolosos, pois exige a intenção (dolo) de cometer o crime.</div>
+            <div>🟡 No crime culposo, o agente não quer ou assume o resultado, portanto, não há iter criminis (caminho do crime).</div>
+        </div>
+    </div>
+    
+    <div class="summary-box">
+        <h2>Distinção entre Culpa Consciente e Dolo Eventual</h2>
+        <button class="button" onclick="toggleSummary(this)"></button>
+        <div class="summary-content">
+            <h2>Culpa Consciente</h2>
+            <div>🟡 O agente prevê o resultado, mas acredita que pode evitá-lo.</div>
+            <div>🟡 Exemplo: Exceder a velocidade pensando que conseguirá evitar um acidente.</div>
+            <h2>Dolo Eventual</h2>
+            <div>🟡 O agente prevê o resultado, mas aceita o risco de sua ocorrência.</div>
+            <div>🟡 Exemplo: Dirigir embriagado e ignorar os riscos de atropelar alguém.</div>
+        </div>
+    </div>
+    <div class="summary-box">
+        <h2>Resultado do Crime</h2>
+        <button class="button" onclick="toggleSummary(this)"></button>
+        <div class="summary-content">
+            <h3>Jurídico</h3>
+            <div>🟡 Refere-se à violação do tipo penal, como lesão ou perigo de lesão ao bem jurídico.</div>
+            <div>🟡 Aplica-se a todos os tipos de crimes: materiais, formais e de mera conduta.</div>
+    
+            <h3>Naturalístico</h3>
+            <div>🟡 Modificação do mundo exterior, ou seja, uma mudança concreta no ambiente.</div>
+            <div>🟡 Aplica-se apenas a crimes materiais.</div>
+        </div>
+    </div>
+    
+    <div class="summary-box">
+        <h2>Iter Criminis (Caminho do Crime)</h2>
+        <button class="button" onclick="toggleSummary(this)"></button>
+        <div class="summary-content">
+            <h3>1. Cogitação</h3>
+            <div>🟡 Fase subjetiva e não punível.</div>
+            <div>🟡 Pode ser:
+                <ul>
+                    <li>Cogitação de ímpeto: Surge de repente e a conduta é realizada.</li>
+                    <li>Premeditação: Planejamento da ação delitiva.</li>
+                </ul>
+            </div>
+    
+            <h3>2. Exteriorização (Atos Preparatórios)</h3>
+            <div>🟡 Atos iniciais que não são puníveis, pois ainda não há perigo concreto do crime, exceto em crimes autônomos, como o crime de porte de arma.</div>
+    
+            <h3>3. Execução</h3>
+            <div>🟡 Quando o agente começa a colocar em prática a conduta criminosa.</div>
+            <div>🟡 Exposição do bem jurídico a perigo e punível como tentativa (Art. 14, II, CP).</div>
+    
+            <h3>4. Consumação</h3>
+            <div>🟡 Quando o crime atinge seu objetivo.</div>
+            <div>🟡 O crime é punido como crime consumado (Art. 14, I, CP).</div>
+            <div>🟡 Exemplo: Súmula 582, STJ - O crime de roubo se consuma quando há inversão da posse do bem, mesmo que por breve período.</div>
+    
+            <h3>5. Exaurimento</h3>
+            <div>🟡 Consequências pós-consumação do crime.</div>
+            <div>🟡 Em geral, não é punível; exceções ocorrem quando o tipo penal prevê punição.</div>
+            <div>🟡 Exemplo punível: Art. 333, CP - O crime de corrupção passiva é consumado com o oferecimento da vantagem, e o que o agente fizer depois é considerado exaurimento.</div>
+        </div>
+    </div>
+    
+</div><div class="summary-box">
+    <h2>Crime Permanente</h2>
+    <button class="button" onclick="toggleSummary(this)"></button>
+    <div class="summary-content">
+        <div>🟡 Definição: Crime cuja consumação se prolonga no tempo, ou seja, a infração continua a ser praticada enquanto não cessar sua ocorrência.</div>
+        <div>🟡 Exemplo: Sequestro (o crime se mantém enquanto a vítima está sob a custódia do criminoso).</div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2>Crime Continuado</h2>
+    <button class="button" onclick="toggleSummary(this)"></button>
+    <div class="summary-content">
+        <div>🟡 Definição: Vários crimes praticados de forma autônoma, mas tratados como um único crime devido à ficção jurídica.</div>
+        <div>🟡 Exemplo: Diversos furtos realizados no mesmo contexto, como em uma série de roubos ocorrendo no mesmo local e de maneira semelhante.</div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2>Crime Habitual</h2>
+    <button class="button" onclick="toggleSummary(this)"></button>
+    <div class="summary-content">
+        <div>🟡 Definição: Crime cometido por reiteração de atos, onde o sujeito pratica o crime de forma repetitiva e regular.</div>
+        <div>🟡 Exemplo: O uso contínuo de substâncias ilícitas ou outros comportamentos que se tornam rotina criminosa.</div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2>Crime Tentado</h2>
+    <button class="button" onclick="toggleSummary(this)"></button>
+    <div class="summary-content">
+        <div>🟡 Teoria Objetiva: Foca-se no perigo de lesão ao bem jurídico. Mesmo que o resultado não tenha sido consumado, o agente colocou o bem jurídico em risco.</div>
+
+        <h3>Elementos da Tentativa</h3>
+        <ul>
+            <li>🟢 Dolo da consumação: O agente tem a intenção de cometer o crime e alcançar o resultado.</li>
+            <li>🟢 Início de execução do crime: O agente começa a execução do crime, dando início aos atos necessários para consumá-lo.</li>
+            <li>🟢 Ausência de consumação por circunstâncias alheias à vontade do agente: O crime não se consuma, não por falta de intenção do agente, mas devido a fatores externos (interrupção da ação antes do resultado).</li>
+        </ul>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2>Tentativa no Crime de Roubo</h2>
+    <button class="button" onclick="toggleSummary(this)"></button>
+    <div class="summary-content">
+        <div>🟡 Crime de Roubo: Considerado um crime complexo, formado pela combinação de dois tipos penais: ameaça/violência à pessoa e furto (subtração).</div>
+
+        <h3>Roubo Consumado</h3>
+        <div>🟢 Grave ameaça ou violência à pessoa + subtração realizada.</div>
+
+        <h3>Roubo Tentado</h3>
+        <div>🟢 Grave ameaça ou violência à pessoa + subtração não realizada (o agente não consegue concluir o furto, mas a ameaça ou violência foi consumada).</div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2>Latrocínio</h2>
+    <button class="button" onclick="toggleSummary(this)"></button>
+    <div class="summary-content">
+        <div>🟡 Crime complexo (roubo + homicídio).</div>
+        <div>🟡 Súmula 610, STF: O latrocínio se consuma quando ocorre a morte da vítima, mesmo que a subtração não seja concluída.</div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2>Exclusão da Tipicidade da Tentativa</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <ul>
+            <li><strong>Atos livres de coação:</strong> Os atos do agente devem ser realizados de forma voluntária, sem coação física ou moral.</li>
+            <li><strong>Atos eficazes para evitar a consumação:</strong> O agente deve realizar ações que efetivamente possam impedir a consumação do crime.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2>Desistência Voluntária vs. Arrependimento Eficaz</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <h3>Desistência Voluntária:</h3>
+        <div>O agente inicia a execução do crime, mas interrompe a ação antes de consumá-lo por decisão própria.</div>
+        <div><strong>Exemplo:</strong> Fulano leva Ciclana para o mato com a intenção de matá-la, mas desiste.</div>
+
+        <h3>Arrependimento Eficaz:</h3>
+        <div>O agente continua a execução do crime, mas age para evitar a consumação do resultado.</div>
+        <div><strong>Exemplo:</strong> Roberto desfere dois tiros contra João, mas se arrepende e o leva ao hospital.</div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2>Arrependimento Posterior (Art. 16, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div><strong>Definição:</strong> O arrependimento posterior ocorre quando o agente repara o dano causado pelo crime, desde que seja um crime sem violência ou grave ameaça.</div>
+        <div><strong>Condição temporal:</strong> O arrependimento deve ocorrer antes do recebimento da denúncia.</div>
+        <div><strong>Efeito:</strong> O arrependimento posterior causa diminuição de pena.</div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2>Crime Impossível (Art. 17, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div><strong>Definição:</strong> O erro do agente recai sobre a inidoneidade do meio ou do objeto material, ou seja, quando o agente utiliza um meio ou objeto que não tem potencialidade lesiva ao resultado desejado.</div>
+        <div>O Código Penal adota a <strong>Teoria Objetiva Temperada Relativa</strong>, considerando o crime impossível quando o bem jurídico não é colocado em perigo.</div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2>Tipos de Crime Impossível</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <h3>Impropriedade Absoluta do Objeto:</h3>
+        <div>O objeto material utilizado pelo agente não é adequado para a prática do crime.</div>
+        <div><strong>Exemplo:</strong> Ciclana quer abortar, mas sua gravidez é psicológica (não há gravidez real).</div>
+
+        <h3>Ineficácia Absoluta do Meio:</h3>
+        <div>O meio utilizado pelo agente não tem eficácia para alcançar o resultado desejado.</div>
+        <div><strong>Exemplo:</strong> Tentativa de furto utilizando um objeto inadequado, como uma chave que não funciona.</div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2>Concurso de Pessoas</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div>O <strong>concurso de pessoas</strong> ocorre quando duas ou mais pessoas se reúnem com o intuito de praticar um crime. Esse concurso pode ser de várias formas, mas sempre demanda a adesão da vontade dos participantes até a consumação do crime.</div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2>Classificação do Concurso de Pessoas</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <h3>1. Crime Unissubjetivo:</h3>
+        <div>O delito pode ser praticado por uma ou várias pessoas associadas. Esse tipo de crime é a regra no Código Penal (CP).</div>
+        <div><strong>Exemplos:</strong></div>
+        <ul>
+            <li>Art. 121 (homicídio)</li>
+            <li>Art. 155 (furto)</li>
+            <li>Art. 157 (roubo)</li>
+            <li>Art. 213 (estupro)</li>
+        </ul>
+
+        <h3>2. Crime Plurissubjetivo:</h3>
+        <div>O crime é necessariamente praticado por várias pessoas, ou seja, sempre há concurso de pessoas. Este é um caso excepcional no CP.</div>
+        <div><strong>Exemplo:</strong></div>
+        <ul>
+            <li>Art. 288 (associação criminosa)</li>
+        </ul>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2>Tipos de Concurso de Pessoas</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <h3>Concurso de Pessoas Eventual:</h3>
+        <div>Quando a participação de várias pessoas ocorre de forma eventual, sem um plano pré-estabelecido.</div>
+
+        <h3>Concurso de Pessoas Necessário:</h3>
+        <div>O crime não pode ser praticado por apenas uma pessoa, sendo essencial a colaboração de outras para a realização do crime. Este é o caso dos crimes que exigem uma ação conjunta, como no exemplo do <strong>art. 288</strong> (associação criminosa).</div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2>Art. 29 - Código Penal Brasileiro</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <h3>Art. 29, caput:</h3>
+        <div>"Quem, de qualquer modo, concorre para o crime incide nas penas a este cominadas, na medida de sua culpabilidade."</div>
+        <div>Isso significa que, mesmo que alguém não tenha praticado diretamente o crime, ele será responsabilizado de acordo com sua participação e grau de culpabilidade.</div>
+
+        <h3>§ 1º:</h3>
+        <div>"Se a participação for de menor importância, a pena pode ser diminuída de um sexto a um terço."</div>
+        <div>Se alguém teve uma participação secundária no crime, a pena pode ser reduzida proporcionalmente.</div>
+
+        <h3>§ 2º:</h3>
+        <div>"Se algum dos concorrentes quis participar de crime menos grave, ser-lhe-á aplicada a pena deste; essa pena será aumentada até metade, na hipótese de ter sido previsível o resultado mais grave."</div>
+        <div>Se o agente tinha intenção de participar de um crime menos grave, mas o resultado final foi mais grave, ele pode ser punido com uma pena maior, dependendo da previsibilidade do resultado.</div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2>Teoria Monista e Pluralista</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div>O <strong>Código Penal Brasileiro</strong> adota a <strong>teoria monista</strong>, ou seja, todos os concorrentes são responsáveis por <strong>um único crime</strong>, independentemente de sua participação específica.</div>
+        <div><strong>Exceções pluralistas</strong> podem ocorrer em casos específicos, onde há uma classificação distinta para os tipos de participação no crime.</div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Ilicitude ou Antijuridicidade</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div><strong style="color: #FFEB3B;">Conceito:</strong> A ilicitude refere-se à contrariedade de uma conduta à ordem jurídica, ou seja, quando a ação viola bens jurídicos protegidos pela lei.</div>
+        <div><strong style="color: #FFEB3B;">Verificação:</strong> A ilicitude é analisada após a tipicidade, ou seja, após a verificação de que a ação corresponde a um tipo penal. A teoria aceita pelo Código Penal para a ilicitude é a <strong style="color: #FF9800;">Rácio Cognoscendi</strong>, que se refere à razão de "conhecer" a ilicitude de uma conduta, presumindo-se que a ação é ilícita uma vez praticada.</div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Excludentes de Ilicitude</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <h3 style="color: #FF9800;">Erro de Tipo Permissivo:</h3>
+        <div>O agente acredita que está praticando um ato legítimo, pois supõe erroneamente um fato que, caso existisse, tornaria sua ação legítima (Art. 20, §1º, CP).</div>
+        <div><strong style="color: #FFEB3B;">Se o erro é evitável:</strong> O agente pode responder por <strong style="color: #FF9800;">culpa</strong>, se houver previsão legal.</div>
+        <div><strong style="color: #FFEB3B;">Se o erro é inevitável:</strong> <span style="color: #FF5722;">Não há pena.</span></div>
+
+        <h3 style="color: #FF9800;">Erro de Proibição Indireto:</h3>
+        <div>O agente erra sobre a <strong style="color: #FFEB3B;">existência</strong> ou os <strong style="color: #FFEB3B;">limites</strong> de uma excludente de ilicitude.</div>
+        <div><strong style="color: #FFEB3B;">Exemplo:</strong> O agente toma objetos de um caminhão acidentado, acreditando erroneamente que o ato seria permitido.</div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Espécies de Excludentes de Ilicitude</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <h3 style="color: #FF9800;">1. Estado de Necessidade (Art. 24, CP)</h3>
+        <div><strong style="color: #FFEB3B;">Definição:</strong> Acontece quando alguém pratica um ato para salvar um direito próprio ou alheio de um perigo atual, que não foi causado por sua vontade, e que não podia ser evitado de outra forma. O sacrifício do direito não deve ser razoavelmente exigido nas circunstâncias.</div>
+        <div><strong style="color: #FFEB3B;">Requisitos:</strong></div>
+        <ul style="color: #FFEB3B;">
+            <li>Não pode ser alegado por quem tem o dever legal de enfrentar o perigo.</li>
+            <li>Se o sacrifício do direito ameaçado era razoável, a pena pode ser reduzida de um a dois terços.</li>
+        </ul>
+        <div><strong style="color: #FFEB3B;">Espécies:</strong></div>
+        <ul>
+            <li><strong style="color: #FF9800;">Justificante:</strong> O bem atingido é menor que o bem salvo, excluindo a ilicitude.</li>
+            <li><strong style="color: #FF9800;">Exculpante:</strong> O bem sacrificado é igual ou maior que o bem salvo, excluindo a culpabilidade.</li>
+        </ul>
+
+        <h3 style="color: #FF9800;">2. Legítima Defesa (Art. 25, CP)</h3>
+        <div><strong style="color: #FFEB3B;">Definição:</strong> Considera-se em legítima defesa quem repele uma agressão injusta, atual ou iminente, usando moderadamente os meios necessários para defender um direito próprio ou alheio.</div>
+        <div><strong style="color: #FFEB3B;">Requisitos:</strong></div>
+        <ul style="color: #FFEB3B;">
+            <li>O meio utilizado deve ser adequado para o tipo de agressão sofrida.</li>
+            <li>A reação deve ser exclusiva para defesa.</li>
+            <li>O agente deve adotar o método que cause o menor dano possível.</li>
+        </ul>
+        <div><strong style="color: #FFEB3B;">Especificidade:</strong> O agente de segurança pública que repele uma agressão ou risco de agressão a uma vítima mantida refém durante a prática de crimes também está em legítima defesa.</div>
+
+        <h3 style="color: #FF9800;">3. Estrito Cumprimento do Dever Legal</h3>
+        <div><strong style="color: #FFEB3B;">Definição:</strong> Acontece quando alguém pratica um ato com base em uma ordem legal emergente. O Código Penal não prevê um tipo permissivo para isso.</div>
+        <div><strong style="color: #FFEB3B;">Requisitos:</strong></div>
+        <ul style="color: #FFEB3B;">
+            <li>O ato é exigido por lei.</li>
+            <li>Deve ser praticado por um funcionário público.</li>
+            <li>O excesso no cumprimento do dever legal é punível.</li>
+        </ul>
+
+        <h3 style="color: #FF9800;">4. Exercício Regular de Direito</h3>
+        <div><strong style="color: #FFEB3B;">Definição:</strong> Trata-se da prática de uma conduta típica, mas autorizada ou não proibida pela lei.</div>
+        <div><strong style="color: #FFEB3B;">Exemplo:</strong> O uso de objetos de defesa pessoal ou da propriedade, como cacos de vidro no muro, que é um exemplo de ofendículo (artifícios usados para defesa).</div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Culpabilidade</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: #FFEB3B;">
+            A culpabilidade é o juízo de reprovação sobre o autor de um fato típico e ilícito. Ela está diretamente relacionada à capacidade do agente de entender e se comportar de acordo com a ilicitude de seu ato.
+        </div>
+
+        <h3 style="color: #FF9800;">Teorias sobre a Culpabilidade:</h3>
+        <ul style="color: #FFEB3B;">
+            <li><strong>Bipartite:</strong> O crime é composto por fato típico e ilícito, sendo a culpabilidade um pressuposto para a aplicação da pena.</li>
+            <li><strong>Tripartite:</strong> O crime é composto por fato típico, ilícito e culpável, sendo a culpabilidade um elemento integrante do conceito de crime.</li>
+        </ul>
+
+        <h3 style="color: #FF9800;">Elementos da Culpabilidade:</h3>
+        <ul style="color: #FFEB3B;">
+            <li><strong>Imputabilidade:</strong> Refere-se à capacidade penal de compreender o caráter ilícito do fato e de agir conforme esse entendimento. Se a imputabilidade estiver ausente, não há pena, pois a conduta não é considerada reprovável.</li>
+            <li><strong>Consciência da Ilicitude:</strong> O agente deve ter consciência de que sua conduta é ilícita.</li>
+            <li><strong>Exigibilidade de Conduta Diversa:</strong> Exige-se que o agente tenha a possibilidade de agir de maneira diferente da que escolheu, ou seja, a exigibilidade de uma conduta diversa é um elemento importante para a culpabilidade.</li>
+        </ul>
+
+        <h3 style="color: #FF9800;">Excludentes de Culpabilidade:</h3>
+        <ul style="color: #FFEB3B;">
+            <li><strong>Inimputabilidade (ou semi-imputabilidade):</strong> Quando o agente, por razões de saúde mental ou outras, não possui capacidade de entendimento ou autodeterminação para compreender o ilícito.</li>
+            <li><strong>Erro de Proibição:</strong> O agente comete o fato acreditando erradamente que sua conduta é lícita, o que pode excluir a culpabilidade dependendo das circunstâncias.</li>
+            <li><strong>Obediência Hierárquica:</strong> Quando o agente age em cumprimento de uma ordem hierárquica, mesmo sabendo que a conduta é ilícita, mas a ordem não é manifestamente ilegal.</li>
+        </ul>
+
+        <div style="color: #FFEB3B;">
+            O Código Penal Brasileiro adota a <strong>teoria tripartite</strong>, considerando a culpabilidade como um dos elementos fundamentais para a caracterização do crime.
+        </div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Erro de Proibição</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            O <span style="color: #FFEB3B;"><strong>erro de proibição</strong></span> ocorre quando o agente não tem consciência da ilicitude de sua conduta. Ele pode ser:
+        </div>
+
+        <h3 style="color: #FF9800;">Erro de Proibição Direto:</h3>
+        <div style="color: white;">
+            O agente erra sobre a proibição de sua conduta. Ele desconhece que o ato é ilícito.
+        </div>
+        <div style="color: #4CAF50;">
+            Exemplo: O agente acredita estar agindo em legítima defesa ao atirar em alguém.
+        </div>
+
+        <h3 style="color: #FF9800;">Erro de Proibição Indireto:</h3>
+        <div style="color: white;">
+            O agente sabe que sua conduta é proibida, mas erra sobre os limites da proibição ou suas consequências.
+        </div>
+        <div style="color: #4CAF50;">
+            Exemplo: O agente acredita que pode pegar uma carga na estrada porque acha que a lei permite.
+        </div>
+
+        <h2 style="color: #03DAC5;">Imputabilidade</h2>
+        <div style="color: white;">
+            A <span style="color: #FFEB3B;"><strong>imputabilidade</strong></span> é a capacidade do agente de compreender o caráter ilícito do fato e de agir conforme esse entendimento. O Código Penal adota o <span style="color: #FFEB3B;"><strong>Sistema Biopsicológico</strong></span>, que considera fatores biológicos e psicológicos para avaliar a responsabilidade penal do agente.
+        </div>
+    </div>
+    
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Obediência Hierárquica</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            A <span style="color: #FFEB3B;">obediência hierárquica</span> é uma excludente de culpabilidade, com os seguintes requisitos:
+        </div>
+        
+        <h3 style="color: #FF9800;">Relação de direito público (hierarquia):</h3>
+        <div style="color: white;">
+            O agente deve estar subordinado a uma autoridade superior.
+        </div>
+
+        <h3 style="color: #FF9800;">Ordem superior ilícita:</h3>
+        <div style="color: white;">
+            A ordem dada deve ser de caráter ilícito.
+        </div>
+
+        <h3 style="color: #FF9800;">Ilegalidade não manifesta:</h3>
+        <div style="color: white;">
+            A ilegalidade da ordem não deve ser evidente para o subordinado.
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Crimes Contra a Vida</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <h3 style="color: #FF9800;">Homicídio Simples (Art. 121, CP)</h3>
+        <div style="color: white;">
+            <b>Definição:</b> Matar alguém.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Reclusão de seis a vinte anos.
+        </div>
+        <div style="color: white;">
+            <b>Sujeito Ativo e Passivo:</b> Qualquer pessoa pode ser o autor ou a vítima, não exigindo qualidades especiais.
+        </div>
+        <div style="color: white;">
+            <b>Elemento Subjetivo:</b> Dolo direto ou eventual.
+        </div>
+        <div style="color: white;">
+            <b>Bem Jurídico Tutelado:</b> A vida extrauterina.
+        </div>
+        <div style="color: white;">
+            <b>Modalidade Culposa:</b> Admite-se a prática culposa de homicídio simples.
+        </div>
+
+        <h3 style="color: #FF9800;">Diminuição de Pena (Homicídio Privilegiado)</h3>
+        <div style="color: white;">
+            Se o agente cometer o homicídio por motivo de valor social ou moral relevante, ou sob violenta emoção provocada injustamente pela vítima, a pena pode ser reduzida de um sexto a um terço.
+        </div>
+        <div style="color: #4CAF50;">
+            Exemplo: Eutanásia pode ser vista como um valor moral relevante.
+        </div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Homicídio Qualificado</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            O <span style="color: #FFEB3B;">homicídio qualificado</span> é um tipo de homicídio em que a motivação ou as circunstâncias tornam o crime mais grave, incluindo o <span style="color: #FFEB3B;">feminicídio</span>, que ocorre quando a vítima é mulher e a motivação do crime está ligada à condição de sexo feminino.
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Infanticídio (Art. 123, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Matar o próprio filho sob a influência do estado puerperal, durante o parto ou logo após.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Detenção de 2 a 6 anos.
+        </div>
+        <div style="color: white;">
+            <b>Características:</b>
+        </div>
+        <div style="color: #FF9800;">
+            Forma especial e privilegiada de homicídio.
+        </div>
+        <div style="color: #FF9800;">
+            <b>Critério fisio-psíquico</b> para caracterizar o estado puerperal (alterações hormonais ou psicológicas).
+        </div>
+        <div style="color: #FF9800;">
+            Crime <span style="color: #FFEB3B;">exclusivo da mãe</span>.
+        </div>
+        <div style="color: #FF9800;">
+            Ocorre <span style="color: #FFEB3B;">durante o parto ou logo após</span>.
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Feminicídio</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Homicídio praticado contra a mulher, cuja motivação tenha relação com sua condição de sexo feminino.
+        </div>
+        <div style="color: white;">
+            <b>Exemplos de motivação:</b> Violência doméstica, discriminação ou menosprezo pela condição de mulher.
+        </div>
+        <div style="color: #FF9800;">
+            <b>Sujeito Passivo:</b> Somente mulher pode ser vítima.
+        </div>
+        <div style="color: #FF9800;">
+            <b>Exclusão:</b> Não é considerado feminicídio o homicídio de uma mulher por um homem em contexto de discriminação não relacionada ao sexo feminino, como em relações homoafetivas.
+        </div>
+
+        <div style="color: white;">
+            <b>Aumento de Pena:</b> A pena do feminicídio pode ser aumentada de 1/3 a 1/2 nas seguintes situações:
+        </div>
+        <ul style="color: white;">
+            <li><span style="color: #FF9800;">Durante a gestação ou nos três meses após o parto.</span></li>
+            <li><span style="color: #FF9800;">Contra pessoas com mais de 60 anos, com deficiência, ou doenças degenerativas que as tornem vulneráveis.</span></li>
+            <li><span style="color: #FF9800;">Na presença física ou virtual de descendentes ou ascendentes da vítima.</span></li>
+            <li><span style="color: #FF9800;">Em descumprimento de medidas protetivas de urgência (Lei 11.340/06).</span></li>
+        </ul>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Aborto</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Bem jurídico tutelado:</b> Vida intrauterina.
+        </div>
+        <div style="color: white;">
+            <b>1. Aborto provocado pela gestante ou com seu consentimento (Art. 124, CP)</b>
+        </div>
+        <div style="color: white;">
+            <b>Definição:</b> Provocar aborto em si mesma ou consentir que outra pessoa o faça.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Detenção de 1 a 3 anos.
+        </div>
+        <div style="color: white;">
+            <b>2. Aborto provocado por terceiro (Art. 125, CP)</b>
+        </div>
+        <div style="color: white;">
+            <b>Definição:</b> Provocar aborto sem o consentimento da gestante.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Reclusão de 3 a 10 anos.
+        </div>
+        <div style="color: white;">
+            <b>3. Aborto com consentimento da gestante (Art. 126, CP)</b>
+        </div>
+        <div style="color: white;">
+            <b>Definição:</b> Provocar aborto com o consentimento da gestante.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Reclusão de 1 a 4 anos.
+        </div>
+        <div style="color: white;">
+            <b>4. Exclusões de ilicitude (Art. 128, CP)</b>
+        </div>
+        <div style="color: #FF9800;">
+            <b>Aborto necessário:</b> Quando não há outro meio de salvar a vida da gestante.
+        </div>
+        <div style="color: #FF9800;">
+            <b>Aborto em caso de gravidez resultante de estupro:</b> Se a gestante consente ou, quando incapaz, seu representante legal consente.
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Lesão Corporal (Art. 129, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Ofender a integridade corporal ou a saúde de outra pessoa.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Detenção de 3 meses a 1 ano (para lesões leves).
+        </div>
+        <div style="color: white;">
+            <b>Características:</b>
+        </div>
+        <div style="color: #FF9800;">
+            <b>Sujeito ativo e passivo:</b> Qualquer pessoa (não exige uma qualidade especial).
+        </div>
+        <div style="color: #FF9800;">
+            <b>Elemento subjetivo:</b> Dolo direto ou eventual.
+        </div>
+        <div style="color: #FF9800;">
+            <b>Bem jurídico tutelado:</b> Integridade física, psíquica e fisiológica.
+        </div>
+        <div style="color: #FF9800;">
+            <b>Modalidade culposa:</b> Admitida.
+        </div>
+        <div style="color: white;">
+            <b>Observações:</b>
+        </div>
+        <div style="color: white;">
+            <b>Lesão corporal não deve ser confundida com vias de fato</b> (art. 21 LCP).
+        </div>
+        <div style="color: white;">
+            <b>Exame de corpo de delito:</b> Obrigatório quando houver vestígios da infração (Art. 158, CPP).
+        </div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Lesão Qualificada pela Violência (Art. 129, §9º, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Quando a lesão é praticada contra ascendente, descendente, irmão, cônjuge, companheiro, ou qualquer pessoa com quem o agente tenha convivido, ou prevalecendo-se das relações domésticas, de coabitação ou de hospitalidade.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Detenção de 3 meses a 3 anos.
+        </div>
+        <div style="color: white;">
+            <b>Observação:</b> A ação penal relativa ao crime de lesão corporal resultante de violência doméstica contra a mulher é pública incondicionada, conforme a <span style="color: #FF9800;">Súmula 542 do STJ</span>.
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Abandono de Incapaz (Art. 133, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Abandonar pessoa sob seu cuidado, guarda, vigilância ou autoridade, incapaz de se defender dos riscos decorrentes do abandono.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Detenção de 6 meses a 3 anos.
+        </div>
+        <div style="color: white;">
+            <b>Observações:</b>
+        </div>
+        <div style="color: #FF9800;">
+            <b>Sujeito ativo:</b> Pessoa responsável pelo cuidado, guarda, vigilância ou autoridade da vítima.
+        </div>
+        <div style="color: #FF9800;">
+            <b>Sujeito passivo:</b> Pessoa assistida, incapaz de se defender.
+        </div>
+        <div style="color: #FF9800;">
+            <b>Elemento subjetivo:</b> Dolo de expor a vítima ao risco.
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Omissão de Socorro (Art. 135, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Deixar de prestar assistência à criança abandonada, pessoa inválida ou ferida, ou em grave e iminente perigo, ou não solicitar ajuda à autoridade pública quando possível fazê-lo sem risco pessoal.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Detenção de 1 a 6 meses ou multa.
+        </div>
+        <div style="color: white;">
+            <b>Observação:</b>
+        </div>
+        <div style="color: #FF9800;">
+            A pena é <b>aumentada de metade</b> se resultar lesão corporal grave e <b>triplicada</b> se resultar em morte.
+        </div>
+        <div style="color: #FF9800;">
+            <b>Crime comum</b>, admite apenas <b>dolo</b>.
+        </div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Crimes Contra a Honra</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Ação Penal Privada:</b> Os crimes contra a honra são de ação penal privada, ou seja, cabe à vítima a iniciativa para a propositura da ação.
+        </div>
+        <div style="color: white;">
+            <b>Prazo Decadencial:</b> Para a confecção do Boletim de Ocorrência (BO-COP ou BO-TC), deve-se informar à vítima sobre o prazo decadencial de 6 meses para a propositura da ação.
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Calúnia (Art. 138, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Imputar falsamente a alguém fato definido como crime.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Detenção de 6 meses a 2 anos, e multa.
+        </div>
+        <div style="color: white;">
+            <b>Observações:</b>
+        </div>
+        <div style="color: #FF9800;">
+            Tutela a honra <b>objetiva</b>.
+        </div>
+        <div style="color: #FF9800;">
+            Admite tentativa quando feita de forma <b>escrita</b>.
+        </div>
+        <div style="color: #FF9800;">
+            <b>Calúnia contra mortos</b> também é punível.
+        </div>
+        <div style="color: #FF9800;">
+            A ação penal é <b>privada</b>.
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Calúnia vs. Denunciação Caluniosa</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Calúnia:</b> Imputação falsa de crime para atingir a honra da vítima.
+        </div>
+        <div style="color: white;">
+            <b>Denunciação Caluniosa:</b> Imputação falsa de crime com a intenção de prejudicar a vítima perante as autoridades (crime contra a administração da justiça), sendo de <span style="color: #FF9800;">ação penal pública incondicionada</span>.
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Difamação (Art. 139, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Imputar a alguém fato ofensivo à sua reputação, sem que seja necessariamente crime.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Detenção de 3 meses a 1 ano, e multa.
+        </div>
+        <div style="color: white;">
+            <b>Observações:</b>
+        </div>
+        <div style="color: #FF9800;">
+            Tutela a honra <b>objetiva</b>.
+        </div>
+        <div style="color: #FF9800;">
+            A exceção da verdade é <b>admitida</b> somente quando o ofendido é <b>funcionário público</b> e a ofensa está relacionada ao exercício de suas funções.
+        </div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Injúria (Art. 140, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Injuriar alguém, ofendendo-lhe a dignidade ou o decoro, por meio de palavras ou atitudes que atentam contra sua autoestima.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Detenção de 1 a 6 meses, ou multa.
+        </div>
+        <div style="color: white;">
+            <b>Observações:</b>
+        </div>
+        <div style="color: #FF9800;">
+            <b>Tutela a honra subjetiva</b> (a percepção de alguém sobre seus próprios atributos).
+        </div>
+        <div style="color: #FF9800;">
+            Envolve <b>xingamentos ou acusações genéricas</b>, sem a necessidade de individualização de um fato específico.
+        </div>
+        <div style="color: #FF9800;">
+            <b>Honra Objetiva vs. Honra Subjetiva:</b>
+        </div>
+        <div style="color: #FF9800;">
+            <b>Honra objetiva:</b> Refere-se ao <b>bom nome</b> e à <b>reputação social</b>.
+        </div>
+        <div style="color: #FF9800;">
+            <b>Honra subjetiva:</b> Refere-se ao <b>sentimento pessoal</b> de dignidade de uma pessoa.
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Perseguição ("Stalking") - Art. 147-A, CP</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Perseguir alguém reiteradamente e por qualquer meio, ameaçando sua integridade física ou psicológica, restringindo sua liberdade de locomoção ou invadindo sua privacidade.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Reclusão de 6 meses a 2 anos, e multa.
+        </div>
+        <div style="color: white;">
+            <b>Aumento de Pena:</b> A pena é aumentada de metade se o crime for cometido:
+        </div>
+        <div style="color: #FF9800;">
+            Contra <b>criança, adolescente ou idoso</b>.
+        </div>
+        <div style="color: #FF9800;">
+            Contra <b>mulher, por razões de sexo feminino</b>.
+        </div>
+        <div style="color: #FF9800;">
+            Mediante <b>concurso de 2 ou mais pessoas ou com o emprego de arma</b>.
+        </div>
+        <div style="color: white;">
+            <b>Observações:</b>
+        </div>
+        <div style="color: #FF9800;">
+            <b>Tutela a liberdade individual</b>.
+        </div>
+        <div style="color: #FF9800;">
+            Crime <b>comum</b> e <b>habitual</b>; consuma-se com a reiteração dos atos.
+        </div>
+        <div style="color: #FF9800;">
+            O <b>elemento subjetivo</b> é doloso (intenção de perseguir e intimidar).
+        </div>
+        <div style="color: #FF9800;">
+            A ação penal é <b>pública condicionada</b>, dependendo da <b>representação</b> do ofendido.
+        </div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Violência Psicológica Contra Mulher (Art. 147-B, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Causar dano emocional à mulher que a prejudique e perturbe seu pleno desenvolvimento ou que vise a degradar ou a controlar suas ações, comportamentos, crenças e decisões, mediante ameaça, constrangimento, humilhação, manipulação, isolamento, chantagem, ridicularização, limitação do direito de ir e vir ou qualquer outro meio que cause prejuízo à sua saúde psicológica e autodeterminação.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Reclusão, de 6 meses a 2 anos, e multa, se a conduta não constituir crime mais grave.
+        </div>
+        <div style="color: white;">
+            <b>Observações:</b>
+        </div>
+        <div style="color: #FF9800;">
+            A violência psicológica é cumulativa e gera uma redução progressiva da esfera de autodeterminação da mulher, com abalos emocionais significativos.
+        </div>
+        <div style="color: #FF9800;">
+            É de <b>ação penal pública incondicionada</b>.
+        </div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Furto Simples (Art. 155, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Subtrair, para si ou para outrem, coisa alheia móvel.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Reclusão, de 1 a 4 anos, e multa.
+        </div>
+        <div style="color: white;">
+            <b>Objeto jurídico:</b> Coisa alheia móvel.
+        </div>
+        <div style="color: white;">
+            <b>Posse vigiada da vítima:</b> O crime se configura quando há controle ou vigilância sobre o bem.
+        </div>
+        <div style="color: white;">
+            <b>Ação penal:</b> Pública incondicionada.
+        </div>
+        <div style="color: #FF9800;">
+            <b>Exemplo:</b> Em uma loja de roupas, se o agente subtrai uma peça do provador, é furto, pois a posse da peça está vigiada.
+        </div>
+        <div style="color: white;">
+            <b>Consumação:</b> Com a inversão da posse do bem.
+        </div>
+        <div style="color: #FF9800;">
+            <b>Exemplo:</b> O agente que detém a posse de fato do bem de outro, mesmo que a vítima possa recuperá-lo, comete furto consumado.
+        </div>
+        <div style="color: white;">
+            <b>Jurisprudência:</b> Não há crime impossível se o estabelecimento comercial tiver sistema de vigilância.
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Furto Agravado pelo Repouso Noturno (Art. 155, §1º, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Aumento de pena:</b> A pena é aumentada de 1/3 se o crime for praticado durante o repouso noturno.
+        </div>
+        <div style="color: white;">
+            <b>Observação:</b> Não é necessário que a casa esteja habitada.
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Furto Privilegiado (Art. 155, §2º, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Requisitos:</b> 
+            - Infrator primário.
+            - Coisa de pequeno valor.
+            - Sem condenações anteriores (admite-se condenação anterior por contravenção).
+            - O valor da coisa não ultrapassa um salário mínimo, sendo aferido ao tempo do fato.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> O juiz pode substituir a pena de reclusão pela de detenção, diminuí-la de 1/3 a 2/3 ou aplicar somente a pena de multa.
+        </div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Furto Qualificado (Art. 155, §4º e §4º-A, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Pena:</b> Reclusão de 2 a 8 anos, e multa (se o crime for cometido com as qualificadoras listadas).
+        </div>
+        <div style="color: white;">
+            <b>Qualificadoras:</b>
+            <ul>
+                <li>Com destruição ou rompimento de obstáculo à subtração da coisa.</li>
+                <li>Com abuso de confiança, ou mediante fraude, escalada ou destreza.</li>
+                <li>Com emprego de chave falsa.</li>
+                <li>Mediante concurso de 2 ou mais pessoas.</li>
+            </ul>
+        </div>
+        <div style="color: white;">
+            <b>Qualificadora adicional:</b>
+            <ul>
+                <li>Se houver emprego de explosivo ou artefato análogo que cause perigo comum: Reclusão de 4 a 10 anos e multa (Art. 155, §4º-A).</li>
+            </ul>
+        </div>
+        <div style="color: white;">
+            <b>Observação:</b> Essas qualificadoras tratam do modo de execução do furto.
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Diferença entre Furto Mediante Fraude e Estelionato</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Furto Mediante Fraude:</b> A fraude é utilizada para burlar a vigilância da vítima, que tem seu bem subtraído sem perceber.
+        </div>
+        <div style="color: white;">
+            <b>Estelionato:</b> A fraude é usada para obter o consentimento da vítima, que entrega o bem ao agente.
+        </div>
+        <div style="color: white;">
+            <b>Ação Penal:</b>
+            <ul>
+                <li>Furto Mediante Fraude: Ação penal pública incondicionada.</li>
+                <li>Estelionato: Ação penal pública condicionada à representação.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Roubo Simples (Art. 157, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Subtrair coisa móvel alheia, para si ou para outrem, mediante grave ameaça ou violência à pessoa, ou após reduzir a vítima à impossibilidade de resistência.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Reclusão, de 4 a 10 anos, e multa.
+        </div>
+        <div style="color: white;">
+            <b>Exemplo:</b> Stive, muito alterado, empurra Joana ao chão com a intenção de fugir após pegar sua mochila.
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Roubo Próprio vs. Roubo Impróprio</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Roubo Próprio:</b> A violência ou ameaça é exercida antes ou durante a subtração do bem.
+        </div>
+        <div style="color: white;">
+            <b>Roubo Impróprio:</b> A violência ou ameaça é exercida após a subtração do bem, caracterizando um crime progressivo (começa como furto e termina como roubo).
+        </div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Roubo Majorado (Art. 157, §2º-A, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Pena de aumento:</b> A pena é aumentada em 2/3 se a violência ou ameaça for exercida nas seguintes situações:
+        </div>
+        <div style="color: white;">
+            <b>Qualificadoras:</b>
+            <ul>
+                <li>Se a violência ou ameaça é exercida com o emprego de arma de fogo.</li>
+                <li>Se há destruição ou rompimento de obstáculo mediante o emprego de explosivo ou artefato análogo que cause perigo comum.</li>
+            </ul>
+        </div>
+        <div style="color: white;">
+            <b>Observação:</b> Não é necessário que a arma seja apreendida e periciada para que a causa de aumento seja aplicada, desde que haja provas por outros meios.
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Roubo Qualificado pelo Resultado (Art. 157, §3º, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Quando a violência empregada no roubo resulta em:
+        </div>
+        <div style="color: white;">
+            <b>Consequências e penas:</b>
+            <ul>
+                <li>Se resulta em lesão corporal grave: Reclusão de 7 a 18 anos, e multa.</li>
+                <li>Se resulta em morte: Reclusão de 20 a 30 anos, e multa.</li>
+            </ul>
+        </div>
+        <div style="color: white;">
+            <b>Competência:</b> Juiz singular, quando a violência foi empregada em razão do roubo.
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Extorsão Simples (Art. 158, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Constranger alguém, mediante violência ou grave ameaça, para obter para si ou para outrem vantagem econômica indevida, fazendo com que a vítima faça, tolere ou deixe de fazer algo.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Reclusão, de 4 a 10 anos, e multa.
+        </div>
+        <div style="color: white;">
+            <b>Observações:</b>
+            <ul>
+                <li>Dolo específico de obter vantagem econômica indevida.</li>
+                <li>Crime formal, ou seja, independe da obtenção da vantagem econômica.</li>
+                <li>O agente faz com que a vítima entregue a coisa, havendo a tradição da coisa (traditio).</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Extorsão Qualificada pelo Resultado</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Trata-se de uma extorsão qualificada que resulta em consequências graves devido ao resultado da violência ou ameaça.
+        </div>
+        <div style="color: white;">
+            <b>Extorsão Qualificada pela Restrição da Liberdade da Vítima (Sequestro Relâmpago):</b>
+            <ul>
+                <li>O sequestro relâmpago difere do sequestro simples porque não exige resgate por terceiros, mas pela própria pessoa sequestrada.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Estelionato (Art. 171, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Obter, para si ou para outrem, vantagem ilícita em prejuízo alheio, induzindo ou mantendo alguém em erro por meio de artifício, ardil ou outro meio fraudulento.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Reclusão, de 1 a 5 anos, e multa (de quinhentos mil réis a dez contos de réis).
+        </div>
+        <div style="color: white;">
+            <b>Observações:</b>
+            <ul>
+                <li>Elemento principal: fraude, vantagem ilícita e prejuízo alheio.</li>
+                <li>Crime material, consuma-se com a aferição da vantagem ilícita.</li>
+                <li>Exige <b>representação</b> da vítima, exceto quando a vítima for:
+                    <ul>
+                        <li>Administração Pública (direta ou indireta).</li>
+                        <li>Criança ou adolescente.</li>
+                        <li>Pessoa com deficiência mental.</li>
+                        <li>Maior de 70 anos ou incapaz.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Recepção (Art. 180, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Adquirir, receber, transportar, conduzir ou ocultar, em proveito próprio ou alheio, coisa que se sabe ser produto de crime, ou influir para que terceiro, de boa-fé, a adquira, receba ou oculte.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Reclusão, de 1 a 4 anos, e multa.
+        </div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Estupro (Art. 213, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Constranger alguém, mediante violência ou grave ameaça, a ter conjunção carnal ou a praticar ou permitir que com ele se pratique outro ato libidinoso.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Reclusão, de 6 a 10 anos.
+        </div>
+        <div style="color: white;">
+            <b>Observações:</b>
+            <ul>
+                <li><b>🟡 Bem jurídico:</b> Liberdade sexual e integridade física e psíquica.</li>
+                <li><b>🟡 Abarca:</b> Todo e qualquer ato revestido de conotação sexual.</li>
+                <li><b>🟡 Envolve:</b> Toda forma de agressão ou uso de força física.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Estupro de Vulnerável (Art. 217-A, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Ter conjunção carnal ou praticar outro ato libidinoso com menor de 14 anos.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Reclusão, de 8 a 15 anos.
+        </div>
+        <div style="color: white;">
+            <b>Observações:</b>
+            <ul>
+                <li><b>🟡 Vulnerabilidade:</b> Não é necessário violência ou grave ameaça, bastando que a vítima esteja em uma das situações de vulnerabilidade previstas.</li>
+                <li><b>🟡 Presunção absoluta de vulnerabilidade:</b> Vítimas menores de 14 anos, enfermos ou deficientes mentais sem o necessário discernimento, ou aqueles que não podem oferecer resistência.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Dos Crimes Contra a Administração Pública</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Os crimes contra a Administração Pública podem ser praticados tanto pelo funcionário público (crimes funcionais) quanto pelo particular.
+        </div>
+        <div style="color: white;">
+            <b>Crimes Funcionais:</b> Admitiram, em regra, o concurso de pessoas, pois a elementar "funcionário público" se comunica ao particular quando ele sabe que se trata de um funcionário público.
+        </div>
+        <div style="color: white;">
+            <b>Norma Interpretativa:</b> O artigo 327 do Código Penal é uma norma penal interpretativa, ampliando o conceito de funcionário público para além do direito administrativo, abrangendo estagiários, colaboradores, entre outros.
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Peculato (Art. 312, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Apropriar-se o funcionário público de dinheiro, valor ou qualquer outro bem móvel, público ou particular, de que tem a posse em razão do cargo, ou desviá-lo, em proveito próprio ou alheio.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Reclusão, de 2 a 12 anos, e multa.
+        </div>
+        <div style="color: white;">
+            <b>Observações:</b>
+            <ul>
+                <li><b>🟡 Sujeito passivo:</b> Estado.</li>
+                <li><b>🟡 Sujeito ativo:</b> Qualquer funcionário público.</li>
+                <li><b>🟡 Ação penal:</b> Pública incondicionada.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Peculato - § 1º</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Aplica-se a mesma pena se o funcionário público, embora não tenha a posse do dinheiro, valor ou bem, o subtrai, ou concorre para que seja subtraído, em proveito próprio ou alheio, valendo-se da facilidade que lhe proporciona sua qualidade de funcionário.
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Diferença entre Peculato, Apropriação, Desvio e Furto</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Observações:</b>
+            <ul>
+                <li><b>🟡 Apropriação:</b> O agente se apodera de coisa que tem sob sua posse legítima.</li>
+                <li><b>🟡 Desvio:</b> O agente confere destinação diversa à coisa.</li>
+                <li><b>🟡 Furto:</b> Ocorre quando o funcionário público, embora não tenha a posse do dinheiro, valor ou bem, o subtrai ou concorre para que seja subtraído, em proveito próprio ou alheio.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Peculato Culposo</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Se o funcionário concorre culposamente para o crime de outrem.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Detenção, de 3 meses a 1 ano.
+        </div>
+        <div style="color: white;">
+            <b>Observações:</b>
+            <ul>
+                <li><b>🟡 Reparação do dano:</b> Se precede à sentença irrecorrível, extingue a punibilidade; se for posterior, reduz de metade a pena imposta.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Concussão (Art. 316, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Exigir, para si ou para outrem, direta ou indiretamente, ainda que fora da função ou antes de assumi-la, mas em razão dela, vantagem indevida.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Reclusão, de 2 a 12 anos, e multa.
+        </div>
+        <div style="color: white;">
+            <b>Observações:</b>
+            <ul>
+                <li><b>🟡 Crime formal:</b> Consuma-se com a exigência.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Corrupção Passiva (Art. 317, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Solicitar ou receber, para si ou para outrem, direta ou indiretamente, vantagem indevida, ou aceitar promessa de tal vantagem, ainda que fora da função ou antes de assumi-la, mas em razão dela.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Reclusão, de 2 a 12 anos, e multa.
+        </div>
+        <div style="color: white;">
+            <b>Observações:</b>
+            <ul>
+                <li><b>🟡 Aumento da pena:</b> Se, em consequência da vantagem ou promessa, o funcionário retarda ou deixa de praticar qualquer ato de ofício ou o pratica infringindo dever funcional, a pena é aumentada de 1/3.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Prevaricação (Art. 319, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Retardar ou deixar de praticar, indevidamente, ato de ofício, ou praticá-lo contra disposição expressa de lei, para satisfazer interesse ou sentimento pessoal.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Detenção, de 3 meses a 1 ano, e multa.
+        </div>
+        <div style="color: white;">
+            <b>Observações:</b>
+            <ul>
+                <li><b>🟡 Elemento subjetivo:</b> Dolo específico de satisfazer interesse ou sentimento pessoal.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Condescendência Criminosa (Art. 320, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Deixar o funcionário, por indulgência, de responsabilizar subordinado que cometeu infração no exercício do cargo ou, quando lhe falta competência, não levar o fato ao conhecimento da autoridade competente.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Detenção, de quinze dias a um mês, ou multa.
+        </div>
+        <div style="color: white;">
+            <b>Observações:</b>
+            <ul>
+                <li><b>🟡 Pressupõe que o agente, ciente da infração do subordinado e por indulgência (clemência, tolerância), deixe de atuar.</b></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Resistência (Art. 329, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Opor-se à execução de ato legal, mediante violência ou ameaça a funcionário competente para executá-lo ou a quem lhe esteja prestando auxílio.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Detenção, de dois meses a dois anos.
+        </div>
+        <div style="color: white;">
+            <b>Observações:</b>
+            <ul>
+                <li><b>🟡 Se o ato, em razão da resistência, não se executa, a pena é de reclusão, de um a três anos.</b></li>
+                <li><b>🟡 As penas deste artigo são aplicáveis sem prejuízo das correspondentes à violência.</b></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Desobediência (Art. 330, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Desobedecer a ordem legal de funcionário público.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Detenção, de quinze dias a seis meses, e multa.
+        </div>
+        <div style="color: white;">
+            <b>Observações:</b>
+            <ul>
+                <li><b>🟡 A desobediência à ordem legal de parada, emanada por agentes públicos em contexto de policiamento ostensivo, constitui conduta penalmente típica, prevista no art. 330 do Código Penal Brasileiro.</b></li>
+                <li><b>🟡 Decisão relevante: STJ, REsp 1859933-SC, Rel. Min. Antonio Saldanha Palheiro, julgado em 09/03/2022.</b></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Desacato (Art. 331, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Desacatar funcionário público no exercício da função ou em razão dela.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Detenção, de seis meses a dois anos, ou multa.
+        </div>
+        <div style="color: white;">
+            <b>Observações:</b>
+            <ul>
+                <li><b>🟡 A caracterização do crime independe de o funcionário público se julgar ou não ofendido.</b></li>
+                <li><b>🟡 A liberdade de manifestação de pensamento não afasta o crime de desacato.</b></li>
+                <li><b>🟡 Decisão relevante: STF, RHC 165086, Rel. Marco Aurélio, Primeira Turma, julgado em 28/09/2020.</b></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Corrupção Ativa (Art. 333, CP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> Oferecer ou prometer vantagem indevida a funcionário público, para determiná-lo a praticar, omitir ou retardar ato de ofício.
+        </div>
+        <div style="color: white;">
+            <b>Pena:</b> Reclusão, de 2 a 12 anos, e multa.
+        </div>
+        <div style="color: white;">
+            <b>Observações:</b>
+            <ul>
+                <li><b>🟡 Quem toma a iniciativa é o particular que oferece ou promete alguma vantagem indevida.</b></li>
+                <li><b>🟡 A pena é aumentada de 1/3 se, em razão da vantagem ou promessa, o funcionário retarda ou omite ato de ofício, ou o pratica infringindo dever funcional.</b></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Contrabando e Descaminho</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Contrabando (Art. 334-A, CP):</b> Consiste em “importar ou exportar mercadoria proibida”.
+        </div>
+        <div style="color: white;">
+            <b>Descaminho (Art. 334, CP):</b> Consiste em “iludir, no todo ou em parte, o pagamento de direito ou imposto devido pela entrada, pela saída ou pelo consumo de mercadoria”.
+        </div>
+        <div style="color: white;">
+            <b>Diferença entre contrabando e descaminho:</b>
+            <ul>
+                <li><b>🟡 Contrabando: Mercadoria proibida.</b></li>
+                <li><b>🟡 Descaminho: Produtos permitidos.</b></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Papel da Polícia Militar</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Funções principais:</b>
+            <ul>
+                <li><b>🟡 Policiamento comunitário;</b></li>
+                <li><b>🟡 Rádio patrulha;</b></li>
+                <li><b>🟡 Atendimento de chamados de ocorrências;</b></li>
+                <li><b>🟡 Função investigativa em relação a crimes militares;</b></li>
+                <li><b>🟡 Condução de suspeito de crime comum à Delegacia.</b></li>
+            </ul>
+        </div>
+        <div style="color: white;">
+            <b>Polícia Administrativa vs. Polícia Judiciária:</b>
+            <ul>
+                <li><b>🟡 Polícia Administrativa:</b> Atua de forma preventiva e repressiva, sem necessidade de autorização judicial. Prevista no Art. 4º, parágrafo único, do CPP. Exemplo: Polícia Militar.</li>
+                <li><b>🟡 Polícia Judiciária:</b> Auxilia o Poder Judiciário após a prática de infração penal, coletando indícios de autoria e materialidade. Prevista no Art. 4º do CPP. Exemplo: Polícia Civil.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Introdução ao Inquérito Policial</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Definição:</b> O Inquérito Policial é um procedimento administrativo conduzido pela autoridade da Polícia Judiciária para apurar infrações penais e sua autoria, fornecendo elementos para que o autor da ação penal possa ingressar em Juízo.
+        </div>
+        <div style="color: white;">
+            <b>Observação:</b>
+            <ul>
+                <li><b>🟡 É uma peça meramente informativa.</b></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Funções do Inquérito Policial</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Dupla função:</b>
+            <ul>
+                <li><b>🟡 Função Preservadora:</b> Evita a instauração de um processo penal desprovido e preserva a imagem do investigado.</li>
+                <li><b>🟡 Função Preparatória:</b> Auxilia na formação da opinião do autor da ação penal com base em um lastro probatório mínimo.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Finalidade do Inquérito Policial</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>🟡 Finalidade:</b> Colher informações sobre autoria e materialidade do crime.
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Características do Inquérito Policial</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <b>Características principais:</b>
+            <ul>
+                <li><b>🟡 Administrativo;</b></li>
+                <li><b>🟡 Escrito;</b></li>
+                <li><b>🟡 Discricionário;</b></li>
+                <li><b>🟡 Inquisitorial;</b></li>
+                <li><b>🟡 Indisponível:</b> Vide Art. 17, CPP. O arquivamento é um ato complexo que exige manifestação do Ministério Público e homologação judicial.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Oficiosidade e Oficialidade</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <ul>
+                <li><b>🟡 Oficiosidade:</b> A investigação é realizada por agente público.</li>
+                <li><b>🟡 Oficialidade:</b> Refere-se à responsabilidade do órgão público em conduzir as investigações.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Notícia de Infração Penal</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <p><b>🟡 O inquérito policial se inicia com a notícia de uma infração penal levada ao conhecimento da autoridade policial.</b></p>
+            <p><b>Classificada em três tipos:</b></p>
+            <ul>
+                <li><b>🟡 Notícia da Infração Direta:</b> Conhecimento da ocorrência de um crime de forma direta, por meio de atividades funcionais rotineiras.</li>
+                <li><b>🟡 Notícia da Infração Indireta:</b> Conhecimento da ocorrência por meio de algum ato jurídico de comunicação formal do delito previsto na legislação processual.</li>
+                <li><b>🟡 Notícia da Infração por Cognição Coercitiva:</b> Ocorre na hipótese de prisão em flagrante delito, em que a autoridade policial lavra o respectivo auto.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Delatio Criminis</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <p><b>🟡 Subespécie de Notitia Criminis:</b></p>
+            <ul>
+                <li><b>🟡 Delatio Criminis Postulatória:</b> Comunicação de um crime por uma pessoa ofendida, com legitimidade para a representação.</li>
+                <li><b>🟡 Delatio Criminis Simples:</b> Comunicação de um crime por qualquer pessoa do povo. Instaura-se mediante portaria.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Diligências</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <p><b>🟡 Art. 6º do CPP - Rol exemplificativo, não obrigatório, não exclusivo da autoridade policial:</b></p>
+            <ul>
+                <li><b>🟡 I:</b> Dirigir-se ao local, providenciando para que não se alterem o estado e conservação das coisas, até a chegada dos peritos criminais (preservação do local do fato).</li>
+                <li><b>🟡 III:</b> Colher todas as provas que servirem para o esclarecimento do fato e suas circunstâncias.</li>
+                <li><b>🟡 IV:</b> Ouvir o ofendido.</li>
+                <li><b>🟡 VI:</b> Proceder ao reconhecimento de pessoas e coisas e acareações.</li>
+                <li><b>🟡 VII:</b> Determinar exames de corpo de delito e quaisquer outras perícias (discricionariedade mitigada).</li>
+                <li><b>🟡 VIII:</b> Ordenar a identificação do indiciado pelo processo datiloscópico, se possível, e juntar aos autos sua folha de antecedentes.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Prazo para Conclusão</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <p><b>🟡 Prazos para conclusão do Inquérito Policial:</b></p>
+            <ul>
+                <li><b>🟡 Regra Geral (art. 10 do CPP):</b> 10 dias (preso) / 30 dias (solto).</li>
+                <li><b>🟡 Inquérito Policial Federal:</b> 15 + 15 dias (preso) / 30 dias (solto).</li>
+                <li><b>🟡 Inquérito Policial Militar:</b> 20 dias (preso) / 40 + 20 dias (solto).</li>
+                <li><b>🟡 Lei de Drogas:</b> 30 + 30 dias (preso) / 90 + 90 dias (solto).</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Relatório</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <p><b>🟡 Considerações:</b></p>
+            <ul>
+                <li>É o último ato do procedimento policial.</li>
+                <li>Possibilita o indiciamento quando presentes indícios de materialidade e autoria.</li>
+                <li>A autoridade policial não pode arquivar os autos do IP (Art. 17 do CPP).</li>
+                <li>Se o juiz ordenar o arquivamento por falta de base para denúncia, a autoridade policial pode proceder a novas investigações (Art. 18 do CPP).</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Termo Circunstanciado</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <p><b>🟡 Características:</b></p>
+            <ul>
+                <li>Substitui o inquérito policial para delitos de menor potencial ofensivo.</li>
+                <li>Aplica-se a contravenções penais e crimes cuja pena máxima não ultrapasse 2 anos (Lei 9.099/90).</li>
+            </ul>
+            <p><b>🟡 Não se aplica o TC:</b></p>
+            <ul>
+                <li>Esfera militar.</li>
+                <li>Violência doméstica.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Ação Penal</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <p><b>🟡 Base Legal:</b> Arts. 24 ao 62 do CPP.</p>
+            <p><b>🟡 Definição:</b> Direito público subjetivo de requerer sanção pelo descumprimento de norma penal.</p>
+            <p><b>🟡 Titulares:</b> Ministério Público, ofendido ou representante legal.</p>
+            <p><b>🟡 Formas de Início:</b></p>
+            <ul>
+                <li><b>🟡 Denúncia:</b> (Art. 24, CPP) - Ação penal pública (incondicionada, condicionada à representação ou requisição do Ministro da Justiça).</li>
+                <li><b>🟡 Queixa-crime:</b> (Arts. 29 e 30, CPP) - Ação penal privada ou privada subsidiária da pública.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Condições da Ação Penal</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <p><b>🟡 Condições Gerais:</b> Necessárias para todas as ações penais (interesse de agir, legitimidade das partes).</p>
+            <ul>
+                <li><b>🟡 Possibilidade Jurídica do Pedido:</b> Conduta deve ser fato típico, crime ou contravenção penal. Observação: Doutrina majoritária considera que deixou de ser uma condição após o novo CPC.</li>
+                <li><b>🟡 Interesse de Agir:</b> Elementos viabilizadores da acusação ("fumaça da infração penal").</li>
+                <ul>
+                    <li><b>🟡 Utilidade:</b> Estado só age quando suas ações são úteis.</li>
+                    <li><b>🟡 Adequação:</b> Respeito às normas do CPP.</li>
+                    <li><b>🟡 Necessidade:</b> Penalidade só pode ser aplicada por processo penal.</li>
+                </ul>
+            </ul>
+            <p><b>🟡 Legitimidade das Partes:</b></p>
+            <ul>
+                <li><b>🟡 Ad Causam:</b></li>
+                <ul>
+                    <li><b>🟡 Ativa:</b> Ministério Público (ação penal pública), vítima (ação penal privada).</li>
+                    <li><b>🟡 Passiva:</b> Acusado.</li>
+                </ul>
+                <li><b>🟡 Ad Processum:</b></li>
+                <ul>
+                    <li><b>🟡 Ativa:</b> Promotor ou Procurador (ação penal pública).</li>
+                    <li><b>🟡 Passiva:</b> Autor maior de 18 anos.</li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Espécies de Ação Penal</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <p><b>🟡 Ação Penal Pública Incondicionada (Art. 24, parte 1, do CPP):</b></p>
+            <ul>
+                <li>Independe da manifestação da vítima para ser iniciada.</li>
+                <li>O titular da ação penal é o Ministério Público.</li>
+                <li>Qualquer um pode provocar o MP, fornecendo informações sobre o fato e autoria (art. 27, do CPP).</li>
+            </ul>
+            <p><b>🟡 Ação Penal Pública Condicionada à Representação (Art. 24, parte II, do CPP):</b></p>
+            <ul>
+                <li>Necessita da manifestação da vítima ou de quem tenha qualidade para representá-la.</li>
+                <li><b>Prazo:</b> 06 meses a partir do conhecimento do autor do fato.</li>
+                <li><b>Forma:</b> Oral ou escrita.</li>
+            </ul>
+            <p><b>🟡 Representação após Falecimento da Vítima (Art. 24, § 1º, do CPP):</b></p>
+            <ul>
+                <li>Passa para: 1. Cônjuge, 2. Ascendente, 3. Descendente, 4. Irmão.</li>
+                <li>A representação é irretratável após oferecida a denúncia (Art. 25, do CPP).</li>
+                <li><b>Exceção:</b> Na Lei Maria da Penha, a retratação pode ocorrer até o recebimento da denúncia, em audiência especial diante do juiz.</li>
+            </ul>
+            <p><b>🟡 Ação Penal Privada Propriamente Dita (Arts. 30 ao 36, do CPP):</b></p>
+            <ul>
+                <li>“Somente se procede mediante queixa”.</li>
+                <li>Titularidade do ofendido ou de quem tenha qualidade para representá-lo.</li>
+                <li>Legitimidade transferida para oferecer a ação penal.</li>
+                <li><b>PRAZO:</b> 06 meses, a partir do conhecimento da autoria.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Prazos para Oferecimento da Denúncia e Extinção da Ação Penal</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <p><b>🟡 Prazos para Oferecimento da Denúncia:</b></p>
+            <ul>
+                <li><b>05 dias:</b> Para investigado preso, contado da data em que o MP receber os autos do IP (Art. 46, parte I, do CPP).</li>
+                <li><b>15 dias:</b> Para investigado solto ou afiançado (Art. 46, parte II, do CPP).</li>
+            </ul>
+            <p><b>🟡 Extinção da Ação Penal (Decadência, Renúncia, Perdão e Perempção):</b></p>
+            <ul>
+                <li><b>a) Decadência:</b> 
+                    <ul>
+                        <li>Perda do direito de ajuizar a ação penal pelo esgotamento do prazo legal.</li>
+                        <li>Aplica-se apenas à ação penal pública condicionada à representação e à ação penal privada.</li>
+                        <li><b>PRAZO:</b> 06 meses, a contar do conhecimento da autoria.</li>
+                    </ul>
+                </li>
+                <li><b>b) Renúncia:</b>
+                    <ul>
+                        <li>A vítima desiste de exercer o direito de entrar ou prosseguir com a ação.</li>
+                        <li>Deve ocorrer <b>antes</b> do oferecimento da queixa (apenas na ação penal privada).</li>
+                        <li>Características: Unilateral, pré-processual, indivisível, irretratável.</li>
+                        <li>Admite-se a renúncia tácita.</li>
+                        <li>Estende-se a todos os ofendidos (Art. 49, do CPP).</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Da Prova (Arts. 155 a 250 do CPP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <p><b>🟡 Definição:</b> Prova é a busca pela verdade real dos fatos, com o objetivo de convencer o juiz.</p>
+            <p><b>🟡 Diferenças:</b></p>
+            <ul>
+                <li><b>🟡 Elementos informativos:</b> Coletados durante a investigação, sem participação das partes.</li>
+                <li><b>🟡 Provas:</b> Produzidas no curso do processo judicial com a participação das partes.</li>
+            </ul>
+            <p><b>🟡 Destinatários da Prova:</b></p>
+            <ul>
+                <li><b>🟡 Destinatário Direto:</b> Juiz.</li>
+                <li><b>🟡 Destinatário Indireto:</b> Partes do processo.</li>
+            </ul>
+            <p><b>🟡 Objetivo:</b> Formar a convicção do juiz sobre a veracidade dos fatos.</p>
+            <p><b>🟡 Exceções:</b> Fatos impossíveis, intuitivos, com presunção legal, irrelevantes ou notórios não precisam de prova.</p>
+            <p><b>🟡 Natureza Jurídica:</b> A prova é um direito subjetivo.</p>
+            <p><b>🟡 Ônus da Prova:</b></p>
+            <ul>
+                <li><b>🟡 Regra:</b> O autor da ação penal deve provar os fatos alegados.</li>
+                <li><b>🟡 Exceção:</b> O réu pode provar a legítima defesa.</li>
+            </ul>
+            <p><b>🟡 Art. 156 do CPP:</b></p>
+            <ul>
+                <li><b>🟡 Produção antecipada:</b> O juiz pode ordenar a produção antecipada de provas urgentes.</li>
+                <li><b>🟡 Diligências:</b> O juiz pode determinar diligências para esclarecer pontos relevantes antes da sentença.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Da Prova (Art. 156 do CPP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <p><b>🟡 Art. 156 do CPP:</b> A prova da alegação incumbirá a quem a fizer, com a possibilidade do juiz ordenar a produção antecipada de provas urgentes e relevantes.</p>
+            <p><b>🟡 Diligências:</b> O juiz pode determinar diligências para esclarecer pontos relevantes.</p>
+            
+            <p><b>🟡 Princípios Aplicáveis à Prova:</b></p>
+            <ul>
+                <li><b>🟡 Presunção de inocência:</b> O réu é presumido inocente até prova em contrário.</li>
+                <li><b>🟡 Nemo tenetur se detegere:</b> Ninguém é obrigado a se autoincriminar.</li>
+                <li><b>🟡 Busca da Verdade:</b> O principal objetivo da prova é a busca pela verdade dos fatos.</li>
+                <li><b>🟡 Comunhão da prova:</b> A prova deve ser compartilhada entre as partes.</li>
+                <li><b>🟡 Autorresponsabilidade das partes:</b> As partes têm responsabilidade em produzir suas provas.</li>
+                <li><b>🟡 Oralidade:</b> A prova deve ser, sempre que possível, oral.</li>
+            </ul>
+
+            <p><b>🟡 Cadeia de Custódia (Art. 158-A ao 158-F do CPP):</b></p>
+            <ul>
+                <li><b>🟡 Início da cadeia de custódia:</b> Preservação do local do crime e coleta dos vestígios preferencialmente por perito oficial.</li>
+                <li><b>🟡 Procedimentos proibidos:</b> Remoção de vestígios sem liberação do perito é proibida.</li>
+                <li><b>🟡 Devolução do material:</b> Após a perícia, o material deve ser devolvido à central de custódia.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Etapas da Cadeia de Custódia (Art. 158-B do CPP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <p><b>🟡 Fase Externa:</b> 
+                <ul>
+                    <li>Reconhecimento</li>
+                    <li>Isolamento</li>
+                    <li>Fixação</li>
+                    <li>Coleta</li>
+                    <li>Acondicionamento</li>
+                    <li>Transporte</li>
+                    <li>Recebimento</li>
+                </ul>
+            </p>
+            <p><b>🟡 Fase Interna:</b> 
+                <ul>
+                    <li>Análise pericial</li>
+                    <li>Guarda e devolução do vestígio de prova</li>
+                    <li>Guarda para contra perícia</li>
+                    <li>Registro da cadeia de custódia</li>
+                </ul>
+            </p>
+            
+            <p><b>🟡 Exame de Corpo de Delito:</b></p>
+            <ul>
+                <li><b>Prioridades:</b> Casos de violência doméstica contra a mulher, e violência contra crianças, adolescentes, idosos ou pessoas com deficiência.</li>
+                <li><b>Confissão não substitui:</b> O exame de corpo de delito não pode ser substituído pela confissão do réu.</li>
+            </ul>
+
+            <p><b>🟡 Dispensa do Exame de Corpo de Delito:</b></p>
+            <ul>
+                <li>O exame pode ser substituído por laudos médicos fornecidos por hospitais ou postos de saúde em certos casos (Art. 12, § 3º, da Lei 11.340/2006).</li>
+                <li><b>Realização:</b> Peritos ou, na falta deles, duas pessoas idôneas com diploma superior, preferencialmente na área específica.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Interrogatório (Art. 185 a 196 do CPP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <p><b>🟡 Momento da realização:</b> O interrogatório, na apuração de ato infracional, é o último ato da instrução (HC 212.693, Rel. Min. Ricardo Lewandowski).</p>
+
+            <h3><b>🟡 Confissão (Art. 197 a 200 do CPP):</b></h3>
+            <ul>
+                <li>A confissão é a aceitação do réu quanto ao crime imputado, perante o juiz ou autoridade policial.</li>
+                <li>Confissão é <b>retrátil</b> e <b>divisível</b> (Art. 200 do CPP).</li>
+                <li>O silêncio do réu <b>não equivale a confissão</b>.</li>
+            </ul>
+
+            <h3><b>🟡 Busca e Apreensão (Art. 240 a 250 do CPP):</b></h3>
+            <p><b>Busca:</b> Objetivo de encontrar pessoas ou coisas. Tipos de busca:</p>
+            <ul>
+                <li>Busca pessoal</li>
+                <li>Busca domiciliar</li>
+            </ul>
+            <p><b>Apreensão:</b> Põe sob custódia a coisa ou pessoa localizada.</p>
+
+            <h3><b>🟡 Busca Domiciliar:</b></h3>
+            <ul>
+                <li>A Constituição (Art. 5º, XI, CF) garante a inviolabilidade do domicílio, permitindo a entrada apenas em casos de flagrante delito, desastre, socorro ou por ordem judicial durante o dia.</li>
+                <li>A Nova Lei de Abuso de Autoridade criminaliza o cumprimento de mandado de busca e apreensão domiciliar entre <b>21h e 5h</b>.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Busca Domiciliar</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <h3><b>🟡 Durante o Dia:</b></h3>
+            <ul>
+                <li>Flagrante delito</li>
+                <li>Desastre</li>
+                <li>Prestar socorro</li>
+                <li>Cumprimento de determinação judicial (ex: busca e apreensão, mandado de prisão).</li>
+            </ul>
+
+            <h3><b>🟡 Durante a Noite:</b></h3>
+            <ul>
+                <li>As situações são mais restritas, observando garantias legais e constitucionais.</li>
+            </ul>
+
+            <h2 style="color: #03DAC5;">Medidas Cautelares (Art. 282 e 319 a 320 do CPP)</h2>
+            <p><b>Objetivo:</b> Garantir a eficácia do processo penal.</p>
+            <h3><b>🟡 Classificação das Medidas Cautelares:</b></h3>
+            <ul>
+                <li><b>Pessoais:</b> Restritivas e privativas de liberdade.</li>
+                <li><b>Patrimoniais:</b> Relativas à reparação dos danos e perda de bens.</li>
+                <li><b>Probatórias:</b> Visam à obtenção de provas.</li>
+            </ul>
+
+            <h3><b>🟡 Medidas Cautelares Diversas da Prisão (Art. 319 do CPP):</b></h3>
+            <ul>
+                <li>Comparecimento periódico em juízo</li>
+                <li>Proibição de acesso a certos lugares</li>
+                <li>Proibição de contato com determinadas pessoas</li>
+            </ul>
+
+            <h3><b>🟡 Presupostos das Medidas Cautelares:</b></h3>
+            <ul>
+                <li><b>Fumus comissi delicti:</b> Indícios suficientes de autoria e existência do crime.</li>
+                <li><b>Periculum libertatis:</b> Perigo do réu ser mantido livre.</li>
+            </ul>
+
+            <h3><b>🟡 Contraditório e Revogabilidade:</b></h3>
+            <ul>
+                <li>Contraditório prévio necessário, salvo em casos de urgência ou perigo.</li>
+                <li>Medidas podem ser revogadas ou substituídas se desaparecerem os motivos (Art. 282, § 5º, CPP).</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Prisão (Art. 283 do CPP)</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <p><b>A prisão é a restrição ou privação de liberdade de locomoção do indivíduo.</b></p>
+            <ul>
+                <li>Por flagrante delito, ordem judicial ou transgressão militar.</li>
+                <li><b>Constituição (Art. 5º, LXI):</b> A prisão deve ser legal e fundamentada.</li>
+            </ul>
+
+            <h3><b>🟡 Espécies de Prisão:</b></h3>
+            <ul>
+                <li><b>Prisão Extrapenal:</b> Prisão civil (devedor de alimentos) e prisão militar.</li>
+                <li><b>Prisão Pena:</b> Decorrente do trânsito em julgado, fase de execução.</li>
+                <li><b>Prisão Cautelar, Provisória ou Processual:</b> Antes do trânsito em julgado, durante investigação ou processo.</li>
+            </ul>
+
+            <h2 style="color: #03DAC5;">Prisão em Flagrante (Art. 301 a 310 do CPP)</h2>
+            <p><b>Funções da prisão em flagrante:</b></p>
+            <ul>
+                <li>Evitar a fuga do investigado</li>
+                <li>Auxiliar na coleta de elementos informativos</li>
+                <li>Evitar o exaurimento do crime</li>
+                <li>Preservar a integridade do preso</li>
+            </ul>
+
+            <h3><b>🟡 Modalidades de Flagrante:</b></h3>
+            <ul>
+                <li><b>Flagrante Facultativo:</b> Qualquer pessoa pode prender em flagrante delito.</li>
+                <li><b>Flagrante Obrigatório:</b> Autoridades policiais devem prender em flagrante delito no cumprimento do dever legal.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Modalidades de Flagrante</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <h3><b>🟡 Flagrante Próprio ou Real</b></h3>
+            <p>Quando o sujeito é capturado cometendo o delito ou imediatamente após a infração (Art. 302, I e II, do CPP).</p>
+
+            <h3><b>🟡 Flagrante Impróprio ou Irreal</b></h3>
+            <p>Quando o sujeito é perseguido logo após a prática da infração, com circunstâncias que fazem presumir que cometeu o crime (Art. 302, III, do CPP). A perseguição deve ser contínua e ininterrupta.</p>
+
+            <h3><b>🟡 Flagrante Presumido ou Ficto</b></h3>
+            <p>Quando o sujeito é encontrado logo após a prática do delito com objetos ou instrumentos que indicam o crime (Art. 302, IV, do CPP).</p>
+
+            <h3><b>🟡 Flagrante Forjado</b></h3>
+            <p>Quando o flagrante é fabricado para incriminar uma pessoa inocente, como no caso de um policial plantando drogas. Este flagrante é atípico e ilegal, sendo passível de relaxamento.</p>
+
+            <h2 style="color: #03DAC5;">Procedimento da Prisão em Flagrante</h2>
+            <ul>
+                <li><b>Leitura do Art. 304, CPP:</b> Procedimentos após a prisão em flagrante.</li>
+                <li><b>Audiência de Custódia (Art. 310, CPP):</b> O juiz decide sobre a legalidade da prisão.</li>
+                <li><b>Infrações de menor potencial ofensivo:</b> O Auto de Prisão em Flagrante é substituído pelo Termo Circunstanciado, com liberação do preso, conforme Art. 69 da Lei 9.099/95.</li>
+            </ul>
+
+            <h2 style="color: #03DAC5;">Prisão Preventiva (Art. 312, CPP)</h2>
+            <ul>
+                <li><b>Garantia da ordem pública:</b> Risco de reincidência.</li>
+                <li><b>Garantia da ordem econômica:</b> Impedir crimes contra a ordem econômica.</li>
+                <li><b>Conveniência da instrução criminal:</b> Impedir que o réu atrapalhe o processo.</li>
+                <li><b>Assegurar a aplicação da lei penal:</b> Evitar fuga.</li>
+                <li><b>Ausência de identificação civil:</b> Quando o réu não tem documentos ou sua identidade é incerta (Art. 313, §1º, do CPP).</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="summary-box">
+    <h2 style="color: #03DAC5;">Substituição da Prisão Preventiva por Prisão Domiciliar</h2>
+    <button class="button" onclick="toggleSummary(this)">+</button>
+    <div class="summary-content">
+        <div style="color: white;">
+            <h3><b>🟡 Prisão Domiciliar</b></h3>
+            <p>A prisão domiciliar consiste no recolhimento do acusado à sua residência, sendo necessária autorização judicial para qualquer saída (Art. 317, CPP).</p>
+
+            <h3><b>🟡 Hipóteses de Substituição</b></h3>
+            <p>A prisão preventiva pode ser convertida em prisão domiciliar por motivos humanitários, conforme Art. 318 do CPP.</p>
+            
+            <h3><b>🟡 Substituição para Mulheres Gestantes ou Mães</b></h3>
+            <p>Mulheres gestantes, mães ou responsáveis por crianças ou pessoas com deficiência podem ter a prisão preventiva substituída por prisão domiciliar, desde que não cometam crimes com violência ou contra seus dependentes (Art. 318-A, do CPP).</p>
+
+            <h3><b>🟡 Cumulatividade</b></h3>
+            <p>A prisão domiciliar pode ser cumulada com medidas cautelares alternativas.</p>
+
+            <h2 style="color: #03DAC5;">Prisão Temporária</h2>
+            <p>É uma prisão cautelar com a finalidade de assegurar a eficácia das investigações criminais, podendo ser decretada apenas durante a fase investigativa (Art. 313, do CPP).</p>
+            <p><b>Prazo:</b> 
+                <ul>
+                    <li><b>Regra:</b> 5 dias, prorrogáveis por mais 5 dias.</li>
+                    <li><b>Crimes Hediondos:</b> 30 dias, prorrogáveis por mais 30 dias.</li>
+                </ul>
+            </p>
+
+            <h2 style="color: #03DAC5;">Liberdade Provisória com ou sem Fiança</h2>
+            <p><b>Conceito:</b> A liberdade provisória é o direito de aguardar o julgamento em liberdade (Arts. 321 a 350, do CPP).</p>
+            <p><b>Requisitos:</b> Levam em consideração a natureza da infração, as condições do acusado e a sua periculosidade (Art. 321, do CPP).</p>
+
+            <h3><b>🟡 Hipóteses em que a Fiança Não Será Concedida:</b></h3>
+            <ul>
+                <li>Racismo</li>
+                <li>Crimes hediondos, tráfico de drogas, terrorismo e tortura</li>
+                <li>Ação de grupos armados contra a ordem constitucional e o Estado Democrático</li>
+                <li>Quebra de fiança no mesmo processo ou descumprimento das obrigações (Arts. 327 e 328, do CPP)</li>
+                <li>Prisões civis ou militares</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+        
+
+    
+    
+    
+    <footer>
+        <p>© 2024 - Resumos Interativos</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleSummary(button) {
+            const summary = button.nextElementSibling;
+            if (summary.style.display === "none" || !summary.style.display) {
+                summary.style.display = "block";
+                button.classList.add("clicked");
+            } else {
+                summary.style.display = "none";
+                button.classList.remove("clicked");
+            }
+        }
+    </script>
+</body>
+</html>

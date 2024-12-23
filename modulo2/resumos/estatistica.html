@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumos Interativos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+        }
+
+        header {
+            background-color: #6200EA;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #FFFFFF;
+            font-size: 2.5rem;
+        }
+
+        .summary-box {
+            background-color: #1E1E1E;
+            border: 2px solid #03DAC5;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .summary-box h2 {
+            color: #03DAC5;
+        }
+
+        .summary-content {
+            display: none;
+            margin-top: 15px;
+        }
+
+        .summary-content div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .summary-content div i {
+            color: gold;
+            margin-right: 10px;
+        }
+
+        .button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: red;
+            animation: blink 1s infinite;
+            border: none;
+            cursor: pointer;
+        }
+
+        .button.clicked {
+            background-color: green;
+            animation: none;
+        }
+
+        @keyframes blink {
+            0%, 50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        footer {
+            background-color: #6200EA;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            color: white;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Resumos Estatistica</h1>
+    </header>
+    <div class="container mt-5">
+        <div class="container mt-5">
+            <div class="summary-box">
+                <h2>O que é Estatística?</h2>
+                <button class="button" onclick="toggleSummary(this)"></button>
+                <div class="summary-content">
+                    <h2>A Estatística é a gramática da Ciência</h2>
+                    <div><i></i>🟡Ela ajuda a entender os fenômenos que afetam nosso cotidiano, como disse Karl Pearson.</div>
+                    <div><i></i>🟡Relacionada a métodos científicos: A estatística envolve a coleta, organização, resumo, apresentação e análise de dados para tirar conclusões e tomar decisões válidas.</div>
+                    <div><i></i>🟡Importância na gestão da segurança pública: Associa dados a problemas e gera informações relevantes para auxiliar na tomada de decisões e melhorar a gestão da segurança pública.</div>
+                
+                    <h2>Estatística Descritiva e Inferencial</h2>
+<div><i></i>🟡Estatística Descritiva: Trata da descrição tabular, gráfica e paramétrica dos dados provenientes de populações e amostras, buscando descrever o comportamento dos dados e analisar um grupo específico, sem fazer inferências sobre um grupo maior.</div>
+<div><i></i>🟡Estatística Inferencial: Parte dos resultados obtidos nas amostras para fazer inferências sobre a população, estudando a estimação e testes sobre parâmetros populacionais. A inferência estatística permite extrapolar as informações de uma amostra para um grande conjunto de dados.</div>
+
+<h2>Classificação das Variáveis</h2>
+<div><i></i>🟡Variáveis Qualitativas (não métricas): Usadas para descrever qualidades e categorias, como sexo, cor dos olhos e classe de renda. São classificadas em:</div>
+<div><i></i>🟡Escala Nominal Dicotômica: Variação qualitativa com duas opções, como masculino ou feminino, ímpar ou par, policial militar ativo ou inativo.</div>
+<div><i></i>🟡Escala Nominal Categórica: Variação qualitativa com mais de duas opções, como estado civil, time preferido, religião, etc.</div>
+<div><i></i>🟡Escala Ordinal: Captura a variabilidade com alguma ordem, como o grau de instrução.</div>
+
+<div><i></i>🟡Variáveis Quantitativas (métricas): Descrevem quantidades e podem ser comparadas a conjuntos numéricos. São classificadas em:</div>
+<div><i></i>🟡Intervalar: Variáveis com zero arbitrário e intervalos iguais representam diferenças significativas. Por exemplo, a diferença entre 30°C e 40°C é a mesma que entre 15°C e 25°C, mas 40°C não é duas vezes mais quente do que 20°C.</div>
+
+<h2>Estatística Descritiva x Estatística Inferencial</h2>
+<div><i></i>🟡Estatística Descritiva: Descreve e resume os dados coletados por meio de tabelas, gráficos e parâmetros, analisando um grupo específico sem fazer inferências sobre a população.</div>
+<div><i></i>🟡Estatística Inferencial: Utiliza dados de amostras para fazer inferências sobre a população, estudando a estimação e realizando testes sobre parâmetros populacionais.</div>
+
+<h2>Classificação das Variáveis</h2>
+<div><i></i>🟡Variáveis Qualitativas (não métricas): Descrevem qualidades e categorias (ex.: sexo, cor dos olhos). São classificadas em:</div>
+<div><i></i>🟡Escala Nominal Dicotômica: Duas opções (ex.: masculino ou feminino, ímpar ou par).</div>
+<div><i></i>🟡Escala Nominal Categórica: Mais de duas opções (ex.: estado civil, time preferido).</div>
+<div><i></i>🟡Escala Ordinal: Captura variação com ordem (ex.: grau de instrução).</div>
+
+<div><i></i>🟡Variáveis Quantitativas (métricas): Descrevem quantidades e podem ser comparadas numericamente. São classificadas em:</div>
+<div><i></i>🟡Intervalar: Zero arbitrário, distâncias significativas, mas sem proporção (ex.: temperatura em °C).</div>
+<div><i></i>🟡Razão: Ponto zero verdadeiro, permitindo multiplicação e divisão (ex.: tempo de serviço de um PM).</div>
+
+<h2>Características das Variáveis</h2>
+<div><i></i>🟡Variáveis Intervalares: Possuem todas as propriedades de variáveis nominais e ordinais. O zero é arbitrário e as distâncias representam diferenças iguais (ex.: 30°C a 40°C é a mesma diferença que 15°C a 25°C).</div>
+<div><i></i>🟡Variáveis de Razão: Têm ponto zero verdadeiro, permitindo operações de multiplicação e divisão (ex.: 20 anos de serviço é o dobro de 10 anos de serviço).</div>
+
+<h2>Classificação: Discretas e Contínuas</h2>
+<div><i></i>🟡Variáveis Discretas: Assumem valores inteiros e são usadas para contagens (ex.: número de PMs em serviço).</div>
+<div><i></i>🟡Variáveis Contínuas: Podem assumir qualquer valor entre dois valores dados (ex.: altura das pessoas, que pode ser 1,651m ou 1,6501m).</div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="summary-box">
+        <h2>Parâmetro, Variáveis, População, Amostra e Censo</h2>
+        <button class="button" onclick="toggleSummary(this)"></button>
+        <div class="summary-content">
+            <div><i></i>🟡Parâmetro: Medida numérica que descreve uma característica da população. Exemplo: quantidade de anos de idade do efetivo, anos de serviço, grau de instrução ou gênero.</div>
+            <div><i></i>🟡Variáveis: Caráter que descreve uma característica associada à população resultante de um experimento. Variabilidade é o conceito central nas investigações e análises.</div>
+            <div><i></i>🟡População: Conjunto de informações que têm ao menos uma característica em comum, como efetivo da Brigada Militar, viaturas de um batalhão, alunos soldados, etc.</div>
+            <div><i></i>🟡Amostra: Parte representativa da população. A amostra é analisada quando não é possível ou viável observar todo o grupo (população) devido ao seu tamanho.</div>
+            <div><i></i>🟡Variáveis, Amostra, População e Censo: Variáveis armazenam informações sobre um fenômeno. A amostra é uma parte representativa da população, usada quando não é viável estudar todo o grupo. População é o conjunto de dados relativos a todos os elementos de uma população, e o Censo é a coleta de dados de todos os elementos dessa população.</div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="summary-box">
+            <h2>Representação Tabular e Gráfica</h2>
+            <button class="button" onclick="toggleSummary(this)"></button>
+            <div class="summary-content">
+                <div><i></i>🟡Rol: Arranjo de dados numéricos brutos em ordem crescente ou decrescente de grandeza. É uma lista com os valores dispostos em uma ordem determinada.</div>
+                <div><i></i>🟡Amplitude Total: Diferença entre o valor máximo (limite superior) e o valor mínimo (limite inferior) da amostra.</div>
+                <div><i></i>🟡Séries Estatísticas: Tabelas que apresentam a distribuição de dados em função de três elementos: época, local e espécie. Existem quatro tipos fundamentais de séries estatísticas:
+                    <ul>
+                        <li><b>Séries Temporais ou Cronológicas:</b> Dados reunidos segundo o tempo que varia, mantendo o local e a espécie fixos.</li>
+                        <li><b>Séries Geográficas:</b> Dados reunidos segundo o local que varia, mantendo o tempo e a espécie fixos.</li>
+                        <li><b>Séries Específicas ou Categóricas:</b> Descrição dos valores segundo especificações ou categorias, com tempo e local fixos.</li>
+                        <li><b>Séries Composta ou Mista:</b> Combinação de duas ou mais séries estatísticas.</li>
+                    </ul>
+                </div>
+                <div><i></i>🟡Distribuição de Frequência: Apresentação dos dados estatísticos em forma tabular ou gráfica. Pode ser classificada em dados agrupados (frequência por intervalos ou pontos) ou não agrupados (séries temporais históricas e geográficas).</div>
+                <div><i></i>🟡Dados Brutos ou Tabela Primitiva: São os dados coletados que ainda não foram numericamente organizados. Exemplo: amostra do tempo de resposta para a chegada de uma viatura ao atendimento de ocorrência, em minutos.</div>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+        
+
+    
+    
+    
+<footer>
+    <p>© 2024 - Resumos Interativos</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function toggleSummary(button) {
+        const summary = button.nextElementSibling;
+        if (summary.style.display === "none" || !summary.style.display) {
+            summary.style.display = "block";
+            button.classList.add("clicked");
+        } else {
+            summary.style.display = "none";
+            button.classList.remove("clicked");
+        }
+    }
+</script>
+</body>
+</html>

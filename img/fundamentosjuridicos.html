@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questões de Estado e Sociedade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #000000;
+            color:white;
+        }
+        .question {
+            background-color: #070907;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #28a745;
+            color: rgb(214, 0, 0);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .explanation {
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+        .result {
+            font-weight: bold;
+        }
+        .correct {
+            color: green;
+        }
+        .wrong {
+            color: red;
+        }
+        .loss-image {
+    display: none;
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    margin-left: 10px;
+}
+
+    </style>
+</head>
+<body>
+
+<h1>Questões sobre Estado, Sociedade e Segurança Pública: Slide 6 até o 14</h1>
+
+<div class="questions">
+
+    <div class="question" id="question01">
+        <p><strong>Questão 01:</strong> Qual é o papel do policial no contexto da aplicação do direito, segundo o texto?</p>
+        <label><input type="radio" name="q01" value="a"> (a) Atuar apenas em ambientes formais, como tribunais.</label><br>
+        <label><input type="radio" name="q01" value="b"> (b) Relacionar-se diretamente com a população, aplicando a prática jurídica em tempo real.</label><br>
+        <label><input type="radio" name="q01" value="c"> (c) Ignorar as leis e agir de acordo com a intuição.</label><br>
+        <label><input type="radio" name="q01" value="d"> (d) Substituir os juízes na resolução de conflitos.</label><br>
+        <label><input type="radio" name="q01" value="e"> (e) Focar apenas em atividades administrativas sem interação com a comunidade.</label><br>
+        <button onclick="checkAnswer('q01', 'b', 'A alternativa CORRETA é: Relacionar-se diretamente com a população, aplicando a prática jurídica em tempo real.')">Enviar</button>
+        <div class="explanation" id="explanation-q01"></div>
+    </div>
+    
+    <div class="question" id="question02">
+        <p><strong>Questão 02:</strong> De acordo com o texto, qual deve ser o nível de conhecimento legal do policial em relação ao cidadão comum?</p>
+        <label><input type="radio" name="q02" value="a"> (a) Superior ao conhecimento médio do cidadão, mas não necessariamente aplicado.</label><br>
+        <label><input type="radio" name="q02" value="b"> (b) Igual ao conhecimento médio do cidadão comum.</label><br>
+        <label><input type="radio" name="q02" value="c"> (c) Inferior ao conhecimento do cidadão comum.</label><br>
+        <label><input type="radio" name="q02" value="d"> (d) Apenas teórico, sem necessidade de aplicação prática.</label><br>
+        <label><input type="radio" name="q02" value="e"> (e) Maior que o conhecimento médio, adequado ao exercício de sua profissão.</label><br>
+        <button onclick="checkAnswer('q02', 'e', 'A alternativa CORRETA é: Maior que o conhecimento médio, adequado ao exercício de sua profissão.')">Enviar</button>
+        <div class="explanation" id="explanation-q02"></div>
+    </div>
+    
+    <div class="question" id="question03">
+        <p><strong>Questão 03:</strong> Como o policial deve fundamentar suas decisões, segundo o texto?</p>
+        <label><input type="radio" name="q03" value="a"> (a) Baseando-se em sua experiência pessoal.</label><br>
+        <label><input type="radio" name="q03" value="b"> (b) Seguindo as ordens de superiores sem questionar.</label><br>
+        <label><input type="radio" name="q03" value="c"> (c) Formulando um raciocínio jurídico e decidindo com amparo na fundamentação legal.</label><br>
+        <label><input type="radio" name="q03" value="d"> (d) Ignorando a legislação e agindo conforme a situação exige.</label><br>
+        <label><input type="radio" name="q03" value="e"> (e) Consultando advogados para cada situação.</label><br>
+        <button onclick="checkAnswer('q03', 'c', 'A alternativa CORRETA é: Formulando um raciocínio jurídico e decidindo com amparo na fundamentação legal.')">Enviar</button>
+        <div class="explanation" id="explanation-q03"></div>
+    </div>
+    
+    <div class="question" id="question04">
+        <p><strong>Questão 04:</strong> Qual a principal diferença entre Direito Público e Direito Privado, conforme apresentado no texto?</p>
+        <label><input type="radio" name="q04" value="a"> (a) Direito Público envolve apenas relações entre particulares, enquanto Direito Privado envolve o Estado.</label><br>
+        <label><input type="radio" name="q04" value="b"> (b) Direito Público trata das relações entre o Estado e os particulares, enquanto Direito Privado disciplina as relações entre particulares.</label><br>
+        <label><input type="radio" name="q04" value="c"> (c) Direito Público é mais importante que Direito Privado.</label><br>
+        <label><input type="radio" name="q04" value="d"> (d) Direito Público se aplica apenas a casos criminais, enquanto Direito Privado é sobre contratos.</label><br>
+        <label><input type="radio" name="q04" value="e"> (e) Não há diferença, ambos tratam do mesmo conteúdo jurídico.</label><br>
+        <button onclick="checkAnswer('q04', 'b', 'A alternativa CORRETA é: Direito Público trata das relações entre o Estado e os particulares, enquanto Direito Privado disciplina as relações entre particulares.')">Enviar</button>
+        <div class="explanation" id="explanation-q04"></div>
+    </div>
+    
+    <div class="question" id="question05">
+        <p><strong>Questão 05:</strong> Quais dos seguintes ramos pertencem ao Direito Público?</p>
+        <label><input type="radio" name="q05" value="a"> (a) Direito Civil e Direito do Consumidor.</label><br>
+        <label><input type="radio" name="q05" value="b"> (b) Direito Empresarial e Direito do Trabalho.</label><br>
+        <label><input type="radio" name="q05" value="c"> (c) Direito Constitucional e Direito Penal.</label><br>
+        <label><input type="radio" name="q05" value="d"> (d) Direito Internacional Privado e Direito do Trabalho.</label><br>
+        <label><input type="radio" name="q05" value="e"> (e) Direito do Consumidor e Direito Internacional Privado.</label><br>
+        <button onclick="checkAnswer('q05', 'c', 'A alternativa CORRETA é: Direito Constitucional e Direito Penal.')">Enviar</button>
+        <div class="explanation" id="explanation-q05"></div>
+    </div>
+    
+    <div class="question" id="question06">
+        <p><strong>Questão 06:</strong> O que compõe o conceito de Estado, segundo o texto?</p>
+        <label><input type="radio" name="q06" value="a"> (a) Apenas o povo e o governo.</label><br>
+        <label><input type="radio" name="q06" value="b"> (b) Povo, território e governo soberano.</label><br>
+        <label><input type="radio" name="q06" value="c"> (c) Território e recursos naturais.</label><br>
+        <label><input type="radio" name="q06" value="d"> (d) Governo e sistema jurídico.</label><br>
+        <label><input type="radio" name="q06" value="e"> (e) Somente o governo soberano.</label><br>
+        <button onclick="checkAnswer('q06', 'b', 'A alternativa CORRETA é: Povo, território e governo soberano.')">Enviar</button>
+        <div class="explanation" id="explanation-q06"></div>
+    </div>
+    
+    <div class="question" id="question07">
+        <p><strong>Questão 07:</strong> Qual é a natureza do Estado, conforme mencionado no texto?</p>
+        <label><input type="radio" name="q07" value="a"> (a) Uma criação natural.</label><br>
+        <label><input type="radio" name="q07" value="b"> (b) Um produto da cultura humana.</label><br>
+        <label><input type="radio" name="q07" value="c"> (c) Um conceito filosófico sem aplicação prática.</label><br>
+        <label><input type="radio" name="q07" value="d"> (d) Um organismo vivo.</label><br>
+        <label><input type="radio" name="q07" value="e"> (e) Um fenômeno social temporário.</label><br>
+        <button onclick="checkAnswer('q07', 'b', 'A alternativa CORRETA é: Um produto da cultura humana.')">Enviar</button>
+        <div class="explanation" id="explanation-q07"></div>
+    </div>
+    
+    <div class="question" id="question08">
+        <p><strong>Questão 08:</strong> De acordo com o Art. 2º da Constituição Federal, quais são os Poderes da União?</p>
+        <label><input type="radio" name="q08" value="a"> (a) Legislativo, Executivo e Militar.</label><br>
+        <label><input type="radio" name="q08" value="b"> (b) Legislativo, Executivo e Judiciário.</label><br>
+        <label><input type="radio" name="q08" value="c"> (c) Executivo, Judiciário e Administrativo.</label><br>
+        <label><input type="radio" name="q08" value="d"> (d) Judiciário, Militar e Executivo.</label><br>
+        <label><input type="radio" name="q08" value="e"> (e) Legislativo, Administrativo e Financeiro.</label><br>
+        <button onclick="checkAnswer('q08', 'b', 'A alternativa CORRETA é: Legislativo, Executivo e Judiciário.')">Enviar</button>
+        <div class="explanation" id="explanation-q08"></div>
+    </div>
+    
+    <div class="question" id="question09">
+        <p><strong>Questão 09:</strong> Qual é a função principal do Poder Legislativo, segundo o texto?</p>
+        <label><input type="radio" name="q09" value="a"> (a) Executar as leis.</label><br>
+        <label><input type="radio" name="q09" value="b"> (b) Julgar os cidadãos.</label><br>
+        <label><input type="radio" name="q09" value="c"> (c) Criar e modificar as leis.</label><br>
+        <label><input type="radio" name="q09" value="d"> (d) Manter a ordem pública.</label><br>
+        <label><input type="radio" name="q09" value="e"> (e) Proteger os direitos dos indivíduos.</label><br>
+        <button onclick="checkAnswer('q09', 'c', 'A alternativa CORRETA é: Criar e modificar as leis.')">Enviar</button>
+        <div class="explanation" id="explanation-q09"></div>
+    </div>
+    
+    <div class="question" id="question10">
+        <p><strong>Questão 10:</strong> O que caracteriza a função do Poder Executivo?</p>
+        <label><input type="radio" name="q10" value="a"> (a) Elaborar projetos de lei.</label><br>
+        <label><input type="radio" name="q10" value="b"> (b) Julgar ações judiciais.</label><br>
+        <label><input type="radio" name="q10" value="c"> (c) Implementar as leis e administrar o Estado.</label><br>
+        <label><input type="radio" name="q10" value="d"> (d) Criar normas administrativas.</label><br>
+        <label><input type="radio" name="q10" value="e"> (e) Manter o controle financeiro do país.</label><br>
+        <button onclick="checkAnswer('q10', 'c', 'A alternativa CORRETA é: Implementar as leis e administrar o Estado.')">Enviar</button>
+        <div class="explanation" id="explanation-q10"></div>
+    </div>
+    
+    <div class="question" id="question11">
+        <p><strong>Questão 11:</strong> Qual é a função do Poder Judiciário, de acordo com o texto?</p>
+        <label><input type="radio" name="q11" value="a"> (a) Elaborar políticas públicas.</label><br>
+        <label><input type="radio" name="q11" value="b"> (b) Garantir a aplicação da lei e resolver conflitos.</label><br>
+        <label><input type="radio" name="q11" value="c"> (c) Criar leis.</label><br>
+        <label><input type="radio" name="q11" value="d"> (d) Fiscalizar os atos do Executivo.</label><br>
+        <label><input type="radio" name="q11" value="e"> (e) Proteger a constituição apenas.</label><br>
+        <button onclick="checkAnswer('q11', 'b', 'A alternativa CORRETA é: Garantir a aplicação da lei e resolver conflitos.')">Enviar</button>
+        <div class="explanation" id="explanation-q11"></div>
+    </div>
+    <div class="question" id="question12">
+        <p><strong>Questão 12:</strong> O que se entende por "finalidade" na Administração Pública?</p>
+        <label><input type="radio" name="q12" value="a"> (a) A capacidade do administrador público de agir segundo seus interesses pessoais.</label><br>
+        <label><input type="radio" name="q12" value="b"> (b) O objetivo da atividade administrativa, que deve sempre contemplar o interesse público estabelecido pela lei.</label><br>
+        <label><input type="radio" name="q12" value="c"> (c) A busca pela eficiência em todas as ações da Administração Pública, sem considerar o interesse público.</label><br>
+        <label><input type="radio" name="q12" value="d"> (d) A liberdade do administrador público para ignorar a lei em nome de resultados rápidos.</label><br>
+        <label><input type="radio" name="q12" value="e"> (e) O princípio que permite ao administrador agir sem prestar contas à sociedade.</label><br>
+        <button onclick="checkAnswer('q12', 'b', 'A alternativa CORRETA é: O objetivo da atividade administrativa, que deve sempre contemplar o interesse público estabelecido pela lei.')">Enviar</button>
+        <div class="explanation" id="explanation-q12"></div>
+    </div>
+    
+    <div class="question" id="question13">
+        <p><strong>Questão 13:</strong> Como a proporcionalidade se relaciona com o princípio da finalidade na Administração Pública?</p>
+        <label><input type="radio" name="q13" value="a"> (a) A proporcionalidade não é relevante nas ações administrativas.</label><br>
+        <label><input type="radio" name="q13" value="b"> (b) A proporcionalidade exige que o sacrifício dos direitos individuais para o benefício da coletividade seja justificado e equilibrado.</label><br>
+        <label><input type="radio" name="q13" value="c"> (c) O princípio da finalidade ignora a necessidade de proporcionalidade em qualquer sacrifício de direitos.</label><br>
+        <label><input type="radio" name="q13" value="d"> (d) A proporcionalidade só se aplica quando há interesse particular em jogo.</label><br>
+        <label><input type="radio" name="q13" value="e"> (e) O administrador pode sacrificar direitos sem qualquer consideração proporcional.</label><br>
+        <button onclick="checkAnswer('q13', 'b', 'A alternativa CORRETA é: A proporcionalidade exige que o sacrifício dos direitos individuais para o benefício da coletividade seja justificado e equilibrado.')">Enviar</button>
+        <div class="explanation" id="explanation-q13"></div>
+    </div>
+    
+    <div class="question" id="question14">
+        <p><strong>Questão 14:</strong> O que implica a prevalência do interesse público sobre o interesse particular?</p>
+        <label><input type="radio" name="q14" value="a"> (a) O administrador público deve sempre agir em benefício de seus amigos e aliados.</label><br>
+        <label><input type="radio" name="q14" value="b"> (b) O interesse coletivo deve ser priorizado em detrimento dos interesses individuais, mas deve respeitar a proporcionalidade nas ações administrativas.</label><br>
+        <label><input type="radio" name="q14" value="c"> (c) O interesse público é irrelevante se o administrador acreditar que suas ações são benéficas.</label><br>
+        <label><input type="radio" name="q14" value="d"> (d) A prevalência do interesse público permite que o administrador ignore os direitos dos cidadãos.</label><br>
+        <label><input type="radio" name="q14" value="e"> (e) O interesse particular deve ser sempre respeitado, mesmo em ações administrativas.</label><br>
+        <button onclick="checkAnswer('q14', 'b', 'A alternativa CORRETA é: O interesse coletivo deve ser priorizado em detrimento dos interesses individuais, mas deve respeitar a proporcionalidade nas ações administrativas.')">Enviar</button>
+        <div class="explanation" id="explanation-q14"></div>
+    </div>
+    
+    <div class="question" id="question15">
+        <p><strong>Questão 15:</strong> Quais são as consequências de não seguir o princípio da finalidade na Administração Pública?</p>
+        <label><input type="radio" name="q15" value="a"> (a) Não há consequências, pois o administrador pode agir como desejar.</label><br>
+        <label><input type="radio" name="q15" value="b"> (b) A atuação administrativa pode ser considerada ilegítima, levando a sanções e questionamentos legais.</label><br>
+        <label><input type="radio" name="q15" value="c"> (c) A ausência de finalidade não afeta a legalidade das ações administrativas.</label><br>
+        <label><input type="radio" name="q15" value="d"> (d) O administrador terá a liberdade de atuar sem supervisão.</label><br>
+        <label><input type="radio" name="q15" value="e"> (e) O princípio da finalidade é apenas uma diretriz e não implica em responsabilidade.</label><br>
+        <button onclick="checkAnswer('q15', 'b', 'A alternativa CORRETA é: A atuação administrativa pode ser considerada ilegítima, levando a sanções e questionamentos legais.')">Enviar</button>
+        <div class="explanation" id="explanation-q15"></div>
+    </div>
+    
+    <div class="question" id="question16">
+        <p><strong>Questão 16:</strong> Como o princípio da finalidade contribui para a legitimidade das ações da Administração Pública?</p>
+        <label><input type="radio" name="q16" value="a"> (a) Ele permite que o administrador tome decisões arbitrárias.</label><br>
+        <label><input type="radio" name="q16" value="b"> (b) Ao garantir que todas as ações administrativas visem o interesse público, o princípio da finalidade confere legitimidade e aceitação social às ações do Estado.</label><br>
+        <label><input type="radio" name="q16" value="c"> (c) O princípio da finalidade é irrelevante para a legitimidade, pois a lei já confere autoridade ao administrador.</label><br>
+        <label><input type="radio" name="q16" value="d"> (d) Ele apenas se aplica a ações de interesse privado.</label><br>
+        <label><input type="radio" name="q16" value="e"> (e) O princípio da finalidade é opcional e pode ser ignorado se houver pressão popular.</label><br>
+        <button onclick="checkAnswer('q16', 'b', 'A alternativa CORRETA é: Ao garantir que todas as ações administrativas visem o interesse público, o princípio da finalidade confere legitimidade e aceitação social às ações do Estado.')">Enviar</button>
+        <div class="explanation" id="explanation-q16"></div>
+    </div>
+    
+    <div class="question" id="question17">
+        <p><strong>Questão 17:</strong> O que o princípio do devido processo legal garante na Administração Pública?</p>
+        <label><input type="radio" name="q17" value="a"> (a) Que os atos administrativos possam ser realizados sem necessidade de justificar suas decisões.</label><br>
+        <label><input type="radio" name="q17" value="b"> (b) Que a atividade administrativa é obrigatória e não pode parar, garantindo a proteção dos interesses da coletividade.</label><br>
+        <label><input type="radio" name="q17" value="c"> (c) Que todos os atos administrativos devem ser revogados sem a necessidade de justificativa.</label><br>
+        <label><input type="radio" name="q17" value="d"> (d) Que os órgãos da Administração podem atuar de maneira independente, sem supervisão.</label><br>
+        <label><input type="radio" name="q17" value="e"> (e) Que a continuidade da atividade administrativa é opcional.</label><br>
+        <button onclick="checkAnswer('q17', 'b', 'A alternativa CORRETA é: Que a atividade administrativa é obrigatória e não pode parar, garantindo a proteção dos interesses da coletividade.')">Enviar</button>
+        <div class="explanation" id="explanation-q17"></div>
+    </div>
+    
+    <div class="question" id="question18">
+        <p><strong>Questão 18:</strong> Qual é a importância da continuidade na Administração Pública?</p>
+        <label><input type="radio" name="q18" value="a"> (a) A continuidade não é relevante, pois os atos administrativos podem ser cancelados a qualquer momento.</label><br>
+        <label><input type="radio" name="q18" value="b"> (b) A continuidade assegura que a Administração Pública não deve parar de funcionar, garantindo a proteção dos direitos da coletividade.</label><br>
+        <label><input type="radio" name="q18" value="c"> (c) A continuidade permite que a Administração ignore a legalidade em prol da eficiência.</label><br>
+        <label><input type="radio" name="q18" value="d"> (d) A continuidade é importante apenas para atos que envolvem interesses privados.</label><br>
+        <label><input type="radio" name="q18" value="e"> (e) A continuidade é irrelevante, já que todos os atos administrativos são permanentes.</label><br>
+        <button onclick="checkAnswer('q18', 'b', 'A alternativa CORRETA é: A continuidade assegura que a Administração Pública não deve parar de funcionar, garantindo a proteção dos direitos da coletividade.')">Enviar</button>
+        <div class="explanation" id="explanation-q18"></div>
+    </div>
+    
+    <div class="question" id="question19">
+        <p><strong>Questão 19:</strong> O que se entende por autotutela na Administração Pública?</p>
+        <label><input type="radio" name="q19" value="a"> (a) A capacidade da Administração Pública de agir fora de suas atribuições legais sem consequências.</label><br>
+        <label><input type="radio" name="q19" value="b"> (b) O dever dos órgãos e entidades de controlar seus atos, anulando os ilegais e revogando os que não atendem ao interesse público.</label><br>
+        <label><input type="radio" name="q19" value="c"> (c) A autonomia da Administração para ignorar decisões judiciais.</label><br>
+        <label><input type="radio" name="q19" value="d"> (d) A possibilidade de os órgãos públicos delegarem suas funções a particulares sem restrições.</label><br>
+        <label><input type="radio" name="q19" value="e"> (e) A autotutela permite que a Administração realize ações estranhas à sua missão legal.</label><br>
+        <button onclick="checkAnswer('q19', 'b', 'A alternativa CORRETA é: O dever dos órgãos e entidades de controlar seus atos, anulando os ilegais e revogando os que não atendem ao interesse público.')">Enviar</button>
+        <div class="explanation" id="explanation-q19"></div>
+    </div>
+    
+    <div class="question" id="question20">
+        <p><strong>Questão 20:</strong> Como a autotutela se relaciona com a legalidade dos atos administrativos?</p>
+        <label><input type="radio" name="q20" value="a"> (a) A autotutela assegura que todos os atos administrativos, independentemente de sua legalidade, permaneçam em vigor.</label><br>
+        <label><input type="radio" name="q20" value="b"> (b) A autotutela obriga a Administração a anular atos ilegais e revogar aqueles que não atendem ao interesse público, assegurando a legalidade.</label><br>
+        <label><input type="radio" name="q20" value="c"> (c) A autotutela permite que a Administração mantenha atos ilegais se forem populares.</label><br>
+        <label><input type="radio" name="q20" value="d"> (d) A autotutela é um conceito que não influencia a legalidade dos atos administrativos.</label><br>
+        <label><input type="radio" name="q20" value="e"> (e) A autotutela somente se aplica a atos que já foram judicialmente contestados.</label><br>
+        <button onclick="checkAnswer('q20', 'b', 'A alternativa CORRETA é: A autotutela obriga a Administração a anular atos ilegais e revogar aqueles que não atendem ao interesse público, assegurando a legalidade.')">Enviar</button>
+        <div class="explanation" id="explanation-q20"></div>
+    </div>
+    
+    <div class="question" id="question21">
+        <p><strong>Questão 21:</strong> Qual é a consequência da não observância do devido processo legal na Administração Pública?</p>
+        <label><input type="radio" name="q21" value="a"> (a) Não há consequências, pois o devido processo legal é uma recomendação.</label><br>
+        <label><input type="radio" name="q21" value="b"> (b) A falta de observância do devido processo legal pode levar à anulação de atos administrativos e à responsabilização dos agentes públicos.</label><br>
+        <label><input type="radio" name="q21" value="c"> (c) Os atos administrativos podem ser mantidos independentemente de processo legal.</label><br>
+        <label><input type="radio" name="q21" value="d"> (d) A consequência é apenas um atraso na execução dos atos administrativos.</label><br>
+        <label><input type="radio" name="q21" value="e"> (e) Não seguir o devido processo legal permite à Administração agir com mais liberdade.</label><br>
+        <button onclick="checkAnswer('q21', 'b', 'A alternativa CORRETA é: A falta de observância do devido processo legal pode levar à anulação de atos administrativos e à responsabilização dos agentes públicos.')">Enviar</button>
+        <div class="explanation" id="explanation-q21"></div>
+    </div>
+    
+    <div class="question" id="question22">
+        <p><strong>Questão 22:</strong> O que o princípio da razoabilidade implica no controle dos atos da Administração Pública?</p>
+        <label><input type="radio" name="q22" value="a"> (a) Os atos administrativos podem ser praticados sem a necessidade de motivação.</label><br>
+        <label><input type="radio" name="q22" value="b"> (b) A razoabilidade assegura que as lesões ou ameaças à direitos não podem ser apreciadas pelo Poder Judiciário.</label><br>
+        <label><input type="radio" name="q22" value="c"> (c) O princípio da razoabilidade garante que atos administrativos ilegais podem ser revisados pelo Poder Judiciário.</label><br>
+        <label><input type="radio" name="q22" value="d"> (d) A razoabilidade permite que a Administração Pública atue de forma discricionária sem limites.</label><br>
+        <label><input type="radio" name="q22" value="e"> (e) O princípio não tem relação com a atuação do Poder Judiciário.</label><br>
+        <button onclick="checkAnswer('q22', 'c', 'A alternativa CORRETA é: O princípio da razoabilidade garante que atos administrativos ilegais podem ser revisados pelo Poder Judiciário.')">Enviar</button>
+        <div class="explanation" id="explanation-q22"></div>
+    </div>
+    
+    <div class="question" id="question23">
+        <p><strong>Questão 23:</strong> O que caracteriza a motivação dos atos administrativos?</p>
+        <label><input type="radio" name="q23" value="a"> (a) A motivação é opcional, dependendo da importância do ato praticado.</label><br>
+        <label><input type="radio" name="q23" value="b"> (b) A Administração deve justificar todos os atos, apresentando razões de fato e de direito que embasam a sua prática.</label><br>
+        <label><input type="radio" name="q23" value="c"> (c) A motivação serve apenas para atos que envolvem sanções.</label><br>
+        <label><input type="radio" name="q23" value="d"> (d) A motivação é necessária apenas para atos administrativos de grande repercussão.</label><br>
+        <label><input type="radio" name="q23" value="e"> (e) A motivação não é exigida para atos de mero expediente.</label><br>
+        <button onclick="checkAnswer('q23', 'b', 'A alternativa CORRETA é: A Administração deve justificar todos os atos, apresentando razões de fato e de direito que embasam a sua prática.')">Enviar</button>
+        <div class="explanation" id="explanation-q23"></div>
+    </div>
+    
+    <div class="question" id="question24">
+        <p><strong>Questão 24:</strong> O que significa o princípio da isonomia na Administração Pública?</p>
+        <label><input type="radio" name="q24" value="a"> (a) Significa que a Administração pode tratar diferentes situações de forma desigual.</label><br>
+        <label><input type="radio" name="q24" value="b"> (b) Implica que todos os administrados devem ser tratados de forma igual, sem privilégios ou discriminações injustificadas.</label><br>
+        <label><input type="radio" name="q24" value="c"> (c) A isonomia permite que a Administração conceda favores a quem julgar merecedor.</label><br>
+        <label><input type="radio" name="q24" value="d"> (d) Este princípio não se aplica à relação entre a Administração e os particulares.</label><br>
+        <label><input type="radio" name="q24" value="e"> (e) A isonomia é uma diretriz para a atuação de órgãos e entidades apenas em situações de crise.</label><br>
+        <button onclick="checkAnswer('q24', 'b', 'A alternativa CORRETA é: Implica que todos os administrados devem ser tratados de forma igual, sem privilégios ou discriminações injustificadas.')">Enviar</button>
+        <div class="explanation" id="explanation-q24"></div>
+    </div>
+    
+    <div class="question" id="question25">
+        <p><strong>Questão 25:</strong> O que representa a segurança jurídica na Administração Pública?</p>
+        <label><input type="radio" name="q25" value="a"> (a) A segurança jurídica é desconsiderada em casos de urgência.</label><br>
+        <label><input type="radio" name="q25" value="b"> (b) Representa a previsibilidade e estabilidade das relações jurídicas, garantindo que os administrados possam confiar nas normas e atos da Administração.</label><br>
+        <label><input type="radio" name="q25" value="c"> (c) A segurança jurídica impede qualquer alteração na legislação vigente.</label><br>
+        <label><input type="radio" name="q25" value="d"> (d) Este princípio é irrelevante em um Estado democrático.</label><br>
+        <label><input type="radio" name="q25" value="e"> (e) A segurança jurídica só é necessária em contratos administrativos.</label><br>
+        <button onclick="checkAnswer('q25', 'b', 'A alternativa CORRETA é: Representa a previsibilidade e estabilidade das relações jurídicas, garantindo que os administrados possam confiar nas normas e atos da Administração.')">Enviar</button>
+        <div class="explanation" id="explanation-q25"></div>
+    </div>
+
+    <div class="question" id="question26">
+        <p><strong>Questão 1:</strong> No contexto da Administração Pública, o que caracteriza a supremacia do interesse público?</p>
+        <label><input type="radio" name="q26" value="a"> (a) A Administração Pública atua apenas em benefício de interesses particulares.</label><br>
+        <label><input type="radio" name="q26" value="b"> (b) O interesse público prevalece sobre o interesse privado, permitindo que a Administração atue em prol da coletividade.</label><br>
+        <label><input type="radio" name="q26" value="c"> (c) A supremacia do interesse público permite a prática de atos ilegais pela Administração.</label><br>
+        <label><input type="radio" name="q26" value="d"> (d) Este princípio não se aplica a atos de fiscalização.</label><br>
+        <label><input type="radio" name="q26" value="e"> (e) O interesse público é secundário em relação ao interesse particular na atuação administrativa.</label><br>
+        <button onclick="checkAnswer('q26', 'b', 'A alternativa CORRETA é: O interesse público prevalece sobre o interesse privado, permitindo que a Administração atue em prol da coletividade.')">Enviar</button>
+        <div class="explanation" id="explanation-q26"></div>
+    </div>
+    
+    <div class="question" id="question27">
+        <p><strong>Questão 2:</strong> A indisponibilidade do interesse público implica que:</p>
+        <label><input type="radio" name="q27" value="a"> (a) A Administração Pública pode dispor livremente dos bens públicos.</label><br>
+        <label><input type="radio" name="q27" value="b"> (b) O interesse público é propriedade exclusiva da Administração Pública.</label><br>
+        <label><input type="radio" name="q27" value="c"> (c) O administrador público deve atuar dentro dos limites legais, assegurando que a atuação administrativa beneficie a coletividade.</label><br>
+        <label><input type="radio" name="q27" value="d"> (d) Os particulares têm a mesma autoridade que a Administração Pública para decidir sobre interesses públicos.</label><br>
+        <label><input type="radio" name="q27" value="e"> (e) A indisponibilidade do interesse público elimina a necessidade de lei para a atuação administrativa.</label><br>
+        <button onclick="checkAnswer('q27', 'c', 'A alternativa CORRETA é: O administrador público deve atuar dentro dos limites legais, assegurando que a atuação administrativa beneficie a coletividade.')">Enviar</button>
+        <div class="explanation" id="explanation-q27"></div>
+    </div>
+    
+    <div class="question" id="question28">
+        <p><strong>Questão 3:</strong> Quais são as prerrogativas da Administração Pública que permitem a interdição de estabelecimentos?</p>
+        <label><input type="radio" name="q28" value="a"> (a) Prerrogativas que garantem à Administração agir apenas em situações de urgência.</label><br>
+        <label><input type="radio" name="q28" value="b"> (b) Poderes de fiscalizar e intervir em atividades que possam comprometer a saúde pública e segurança da coletividade.</label><br>
+        <label><input type="radio" name="q28" value="c"> (c) Prerrogativas que conferem a liberdade total ao comerciante.</label><br>
+        <label><input type="radio" name="q28" value="d"> (d) Poderes de interdição somente em casos de reclamações dos consumidores.</label><br>
+        <label><input type="radio" name="q28" value="e"> (e) A Administração não possui prerrogativas para interditar estabelecimentos.</label><br>
+        <button onclick="checkAnswer('q28', 'b', 'A alternativa CORRETA é: Poderes de fiscalizar e intervir em atividades que possam comprometer a saúde pública e segurança da coletividade.')">Enviar</button>
+        <div class="explanation" id="explanation-q28"></div>
+    </div>
+    
+    <div class="question" id="question29">
+        <p><strong>Questão 4:</strong> No caso de JOAQUIM e PAULO, qual é a justificativa legal para a interdição do estabelecimento "Carne Boa"?</p>
+        <label><input type="radio" name="q29" value="a"> (a) A interdição foi feita sem a presença de um advogado.</label><br>
+        <label><input type="radio" name="q29" value="b"> (b) A Vigilância Sanitária encontrou carnes impróprias para o consumo humano, justificando a interdição em nome da saúde pública.</label><br>
+        <label><input type="radio" name="q29" value="c"> (c) A interdição foi imposta apenas pela Brigada Militar, sem justificativa.</label><br>
+        <label><input type="radio" name="q29" value="d"> (d) O estabelecimento não estava cumprindo horários de funcionamento, portanto, a interdição é inválida.</label><br>
+        <label><input type="radio" name="q29" value="e"> (e) A interdição ocorreu devido a uma denúncia anônima sem fundamento.</label><br>
+        <button onclick="checkAnswer('q29', 'b', 'A alternativa CORRETA é: A Vigilância Sanitária encontrou carnes impróprias para o consumo humano, justificando a interdição em nome da saúde pública.')">Enviar</button>
+        <div class="explanation" id="explanation-q29"></div>
+    </div>
+    
+    <div class="question" id="question30">
+        <p><strong>Questão 5:</strong> Como a atuação de PAULO em relação à interdição pode ser analisada sob a perspectiva dos direitos do cidadão?</p>
+        <label><input type="radio" name="q30" value="a"> (a) PAULO pode ignorar a interdição e reabrir o estabelecimento, pois a Administração não tem autoridade.</label><br>
+        <label><input type="radio" name="q30" value="b"> (b) PAULO deve respeitar a interdição e buscar regularizar sua situação, já que a ação da Vigilância Sanitária visa proteger o interesse público.</label><br>
+        <label><input type="radio" name="q30" value="c"> (c) PAULO pode processar a Administração por danos, independentemente das condições do estabelecimento.</label><br>
+        <label><input type="radio" name="q30" value="d"> (d) A interdição não se aplica a estabelecimentos que não possuem reclamações anteriores.</label><br>
+        <label><input type="radio" name="q30" value="e"> (e) PAULO não tem nenhum recurso, pois a decisão da Vigilância é irreversível.</label><br>
+        <button onclick="checkAnswer('q30', 'b', 'A alternativa CORRETA é: PAULO deve respeitar a interdição e buscar regularizar sua situação, já que a ação da Vigilância Sanitária visa proteger o interesse público.')">Enviar</button>
+        <div class="explanation" id="explanation-q30"></div>
+    </div>
+    
+    <div class="question" id="question31">
+        <p><strong>Questão 6:</strong> O que significa o poder-dever de agir no contexto da Administração Pública?</p>
+        <label><input type="radio" name="q31" value="a"> (a) O administrador público tem a liberdade de decidir quando ou se deve agir.</label><br>
+        <label><input type="radio" name="q31" value="b"> (b) O administrador deve agir sempre que necessário para proteger o interesse público, conforme estabelecido pela lei.</label><br>
+        <label><input type="radio" name="q31" value="c"> (c) O poder-dever de agir permite que o administrador ignore as normas legais em situações de emergência.</label><br>
+        <label><input type="radio" name="q31" value="d"> (d) O administrador público só deve agir em resposta a denúncias dos cidadãos.</label><br>
+        <label><input type="radio" name="q31" value="e"> (e) Este poder-dever é exclusivo para casos de fiscalização.</label><br>
+        <button onclick="checkAnswer('q31', 'b', 'A alternativa CORRETA é: O administrador deve agir sempre que necessário para proteger o interesse público, conforme estabelecido pela lei.')">Enviar</button>
+        <div class="explanation" id="explanation-q31"></div>
+    </div>
+    
+    <div class="question" id="question32">
+        <p><strong>Questão 7:</strong> O dever de eficiência implica que:</p>
+        <label><input type="radio" name="q32" value="a"> (a) A Administração Pública pode agir sem considerar a eficácia de suas ações.</label><br>
+        <label><input type="radio" name="q32" value="b"> (b) Os administradores devem buscar a melhor utilização dos recursos públicos, assegurando resultados positivos para a sociedade.</label><br>
+        <label><input type="radio" name="q32" value="c"> (c) A eficiência é uma diretriz opcional para a Administração Pública.</label><br>
+        <label><input type="radio" name="q32" value="d"> (d) O dever de eficiência refere-se apenas à redução de custos.</label><br>
+        <label><input type="radio" name="q32" value="e"> (e) A eficiência deve ser ignorada em favor da formalidade dos processos.</label><br>
+        <button onclick="checkAnswer('q32', 'b', 'A alternativa CORRETA é: Os administradores devem buscar a melhor utilização dos recursos públicos, assegurando resultados positivos para a sociedade.')">Enviar</button>
+        <div class="explanation" id="explanation-q32"></div>
+    </div>
+    
+    <div class="question" id="question33">
+        <p><strong>Questão 8:</strong> O dever de probidade refere-se a:</p>
+        <label><input type="radio" name="q33" value="a"> (a) A obrigação do administrador público de agir com honestidade e integridade em sua função.</label><br>
+        <label><input type="radio" name="q33" value="b"> (b) A possibilidade de o administrador agir de forma arbitrária em favor de interesses particulares.</label><br>
+        <label><input type="radio" name="q33" value="c"> (c) A responsabilidade do administrador de manter sigilo sobre suas decisões.</label><br>
+        <label><input type="radio" name="q33" value="d"> (d) O direito do administrador de se beneficiar de sua posição em ações públicas.</label><br>
+        <label><input type="radio" name="q33" value="e"> (e) A exigência de que o administrador atue sem considerar os princípios éticos.</label><br>
+        <button onclick="checkAnswer('q33', 'a', 'A alternativa CORRETA é: A obrigação do administrador público de agir com honestidade e integridade em sua função.')">Enviar</button>
+        <div class="explanation" id="explanation-q33"></div>
+    </div>
+    
+    <div class="question" id="question34">
+        <p><strong>Questão 9:</strong> O dever de prestar contas é fundamental porque:</p>
+        <label><input type="radio" name="q34" value="a"> (a) Permite que os administradores ocultem informações sobre suas atividades.</label><br>
+        <label><input type="radio" name="q34" value="b"> (b) Garante que a Administração Pública seja transparente e responsável perante a sociedade, assegurando que as ações sejam devidamente justificadas.</label><br>
+        <label><input type="radio" name="q34" value="c"> (c) É uma formalidade que não influencia a atuação administrativa.</label><br>
+        <label><input type="radio" name="q34" value="d"> (d) Os administradores podem optar por prestar contas apenas se desejarem.</label><br>
+        <label><input type="radio" name="q34" value="e"> (e) O dever de prestar contas se aplica apenas a atos de fiscalização.</label><br>
+        <button onclick="checkAnswer('q34', 'b', 'A alternativa CORRETA é: Garante que a Administração Pública seja transparente e responsável perante a sociedade, assegurando que as ações sejam devidamente justificadas.')">Enviar</button>
+        <div class="explanation" id="explanation-q34"></div>
+    </div>
+    
+    <div class="question" id="question35">
+        <p><strong>Questão 10:</strong> Como as prerrogativas da Administração Pública se relacionam com os deveres do administrador?</p>
+        <label><input type="radio" name="q35" value="a"> (a) As prerrogativas permitem que os administradores ajam sem qualquer limitação.</label><br>
+        <label><input type="radio" name="q35" value="b"> (b) As prerrogativas são sempre mais importantes que os deveres do administrador público.</label><br>
+        <label><input type="radio" name="q35" value="c"> (c) As prerrogativas conferem ao administrador poderes, enquanto os deveres garantem que essas ações sejam realizadas em conformidade com o interesse público e sob controle social.</label><br>
+        <label><input type="radio" name="q35" value="d"> (d) As prerrogativas e deveres são independentes e não influenciam um ao outro.</label><br>
+        <label><input type="radio" name="q35" value="e"> (e) As prerrogativas limitam o alcance dos deveres do administrador.</label><br>
+        <button onclick="checkAnswer('q35', 'c', 'A alternativa CORRETA é: As prerrogativas conferem ao administrador poderes, enquanto os deveres garantem que essas ações sejam realizadas em conformidade com o interesse público e sob controle social.')">Enviar</button>
+        <div class="explanation" id="explanation-q35"></div>
+    </div>
+    
+    <div class="question" id="question36">
+        <p><strong>Questão 11:</strong> O que caracteriza o poder vinculado na Administração Pública?</p>
+        <label><input type="radio" name="q36" value="a"> (a) É a liberdade total do administrador público para decidir como e quando agir.</label><br>
+        <label><input type="radio" name="q36" value="b"> (b) É o poder que permite ao administrador ignorar as normas legais.</label><br>
+        <label><input type="radio" name="q36" value="c"> (c) É o poder que exige a observância estrita das normas legais, sem margem para discricionariedade.</label><br>
+        <label><input type="radio" name="q36" value="d"> (d) É o poder que o administrador pode usar de acordo com sua vontade pessoal.</label><br>
+        <label><input type="radio" name="q36" value="e"> (e) É um poder que não requer qualquer justificativa legal.</label><br>
+        <button onclick="checkAnswer('q36', 'c', 'A alternativa CORRETA é: É o poder que exige a observância estrita das normas legais, sem margem para discricionariedade.')">Enviar</button>
+        <div class="explanation" id="explanation-q36"></div>
+    </div>
+    
+    <div class="question" id="question37">
+        <p><strong>Questão 12:</strong> Segundo a definição, como muitos doutrinadores vêem o poder vinculado?</p>
+        <label><input type="radio" name="q37" value="a"> (a) Como um poder absoluto da Administração Pública.</label><br>
+        <label><input type="radio" name="q37" value="b"> (b) Como um atributo de outros poderes ou um dever da Administração Pública.</label><br>
+        <label><input type="radio" name="q37" value="c"> (c) Como uma forma de discricionariedade.</label><br>
+        <label><input type="radio" name="q37" value="d"> (d) Como um poder que deve ser exercido sem limites.</label><br>
+        <label><input type="radio" name="q37" value="e"> (e) Como um poder exclusivo de agentes políticos.</label><br>
+        <button onclick="checkAnswer('q37', 'b', 'A alternativa CORRETA é: Como um atributo de outros poderes ou um dever da Administração Pública.')">Enviar</button>
+        <div class="explanation" id="explanation-q37"></div>
+    </div>
+    
+    <div class="question" id="question38">
+        <p><strong>Questão 13:</strong> O que define o poder discricionário na Administração Pública?</p>
+        <label><input type="radio" name="q38" value="a"> (a) É a ausência de regras que guiem a atuação administrativa.</label><br>
+        <label><input type="radio" name="q38" value="b"> (b) É a capacidade de o agente administrativo decidir sobre a oportunidade e conveniência de um ato, dentro dos limites legais.</label><br>
+        <label><input type="radio" name="q38" value="c"> (c) É a obrigação de seguir estritamente a lei, sem qualquer margem de manobra.</label><br>
+        <label><input type="radio" name="q38" value="d"> (d) É o poder que permite ao agente ignorar os direitos dos cidadãos.</label><br>
+        <label><input type="radio" name="q38" value="e"> (e) É um poder que não deve ser exercido em situações de emergência.</label><br>
+        <button onclick="checkAnswer('q38', 'b', 'A alternativa CORRETA é: É a capacidade de o agente administrativo decidir sobre a oportunidade e conveniência de um ato, dentro dos limites legais.')">Enviar</button>
+        <div class="explanation" id="explanation-q38"></div>
+    </div>
+    
+    <div class="question" id="question39">
+        <p><strong>Questão 14:</strong> O que diferencia o poder discricionário do poder vinculado?</p>
+        <label><input type="radio" name="q39" value="a"> (a) O poder vinculado não possui regulamentação legal.</label><br>
+        <label><input type="radio" name="q39" value="b"> (b) O poder vinculado é exercido com liberdade, enquanto o discricionário é estritamente regulamentado.</label><br>
+        <label><input type="radio" name="q39" value="c"> (c) O poder vinculado é regulado por normas legais que limitam a atuação do administrador, ao passo que o discricionário oferece margem de escolha.</label><br>
+        <label><input type="radio" name="q39" value="d"> (d) Não há diferença entre os dois tipos de poder.</label><br>
+        <label><input type="radio" name="q39" value="e"> (e) O poder discricionário é exercido por pessoas públicas, enquanto o vinculado é restrito a órgãos governamentais.</label><br>
+        <button onclick="checkAnswer('q39', 'c', 'A alternativa CORRETA é: O poder vinculado é regulado por normas legais que limitam a atuação do administrador, ao passo que o discricionário oferece margem de escolha.')">Enviar</button>
+        <div class="explanation" id="explanation-q39"></div>
+    </div>
+    
+    <div class="question" id="question40">
+        <p><strong>Questão 15:</strong> Em que situações o poder discricionário deve ser exercido?</p>
+        <label><input type="radio" name="q40" value="a"> (a) Apenas em situações de urgência.</label><br>
+        <label><input type="radio" name="q40" value="b"> (b) Sempre que a legislação não permitir a escolha do administrador.</label><br>
+        <label><input type="radio" name="q40" value="c"> (c) Nas situações em que a lei permite a escolha do agente administrativo, considerando a conveniência e a oportunidade.</label><br>
+        <label><input type="radio" name="q40" value="d"> (d) O poder discricionário nunca deve ser exercido.</label><br>
+        <label><input type="radio" name="q40" value="e"> (e) Somente em situações de supervisão e fiscalização.</label><br>
+        <button onclick="checkAnswer('q40', 'c', 'A alternativa CORRETA é: Nas situações em que a lei permite a escolha do agente administrativo, considerando a conveniência e a oportunidade.')">Enviar</button>
+        <div class="explanation" id="explanation-q40"></div>
+    </div>
+    
+    <div class="question" id="question41">
+        <p><strong>Questão 16:</strong> O que caracteriza a legalidade na Administração Pública?</p>
+        <label><input type="radio" name="q41" value="a"> (a) A Administração Pública pode agir fora da legislação em casos de urgência.</label><br>
+        <label><input type="radio" name="q41" value="b"> (b) A Administração Pública deve agir estritamente dentro dos limites da lei, respeitando os direitos dos cidadãos e os interesses da coletividade.</label><br>
+        <label><input type="radio" name="q41" value="c"> (c) A legalidade é um conceito opcional na atuação administrativa.</label><br>
+        <label><input type="radio" name="q41" value="d"> (d) A legalidade se aplica apenas a atos administrativos de fiscalização.</label><br>
+        <label><input type="radio" name="q41" value="e"> (e) A legalidade não é relevante em decisões administrativas.</label><br>
+        <button onclick="checkAnswer('q41', 'b', 'A alternativa CORRETA é: A Administração Pública deve agir estritamente dentro dos limites da lei, respeitando os direitos dos cidadãos e os interesses da coletividade.')">Enviar</button>
+        <div class="explanation" id="explanation-q41"></div>
+    </div>
+    
+    <div class="question" id="question42">
+        <p><strong>Questão 17:</strong> O que significa a continuidade do serviço público?</p>
+        <label><input type="radio" name="q42" value="a"> (a) O serviço público pode ser interrompido a qualquer momento.</label><br>
+        <label><input type="radio" name="q42" value="b"> (b) O serviço público deve ser prestado de forma contínua, assegurando que a população não seja privada de serviços essenciais.</label><br>
+        <label><input type="radio" name="q42" value="c"> (c) A continuidade do serviço público é opcional para a Administração Pública.</label><br>
+        <label><input type="radio" name="q42" value="d"> (d) A continuidade do serviço se aplica apenas a serviços de saúde.</label><br>
+        <label><input type="radio" name="q42" value="e"> (e) O serviço público pode ser prestado de forma intermitente, conforme a conveniência do administrador.</label><br>
+        <button onclick="checkAnswer('q42', 'b', 'A alternativa CORRETA é: O serviço público deve ser prestado de forma contínua, assegurando que a população não seja privada de serviços essenciais.')">Enviar</button>
+        <div class="explanation" id="explanation-q42"></div>
+    </div>
+    
+    <div class="question" id="question43">
+        <p><strong>Questão 18:</strong> O que implica o princípio da autotutela?</p>
+        <label><input type="radio" name="q43" value="a"> (a) A Administração Pública pode rever seus atos a qualquer momento, sem necessidade de justificar essa revisão.</label><br>
+        <label><input type="radio" name="q43" value="b"> (b) A autotutela é um direito exclusivo dos cidadãos, sem relação com a Administração Pública.</label><br>
+        <label><input type="radio" name="q43" value="c"> (c) O princípio da autotutela significa que a Administração Pública pode revisar seus atos em busca de legalidade, conveniência e oportunidade.</label><br>
+        <label><input type="radio" name="q43" value="d"> (d) A autotutela se aplica apenas a atos administrativos sancionatórios.</label><br>
+        <label><input type="radio" name="q43" value="e"> (e) O princípio da autotutela não é reconhecido pela lei.</label><br>
+        <button onclick="checkAnswer('q43', 'c', 'A alternativa CORRETA é: O princípio da autotutela significa que a Administração Pública pode revisar seus atos em busca de legalidade, conveniência e oportunidade.')">Enviar</button>
+        <div class="explanation" id="explanation-q43"></div>
+    </div>
+    
+    <div class="question" id="question44">
+        <p><strong>Questão 19:</strong> O princípio da razoabilidade na Administração Pública implica que:</p>
+        <label><input type="radio" name="q44" value="a"> (a) A Administração pode tomar decisões arbitrárias, sem considerar as circunstâncias do caso.</label><br>
+        <label><input type="radio" name="q44" value="b"> (b) As decisões administrativas devem ser tomadas com base em critérios que garantam equilíbrio e proporcionalidade, evitando excessos.</label><br>
+        <label><input type="radio" name="q44" value="c"> (c) A razoabilidade é um princípio que pode ser ignorado pela Administração Pública.</label><br>
+        <label><input type="radio" name="q44" value="d"> (d) A razoabilidade aplica-se apenas em situações de crise.</label><br>
+        <label><input type="radio" name="q44" value="e"> (e) A razoabilidade não é relevante para a atuação administrativa.</label><br>
+        <button onclick="checkAnswer('q44', 'b', 'A alternativa CORRETA é: As decisões administrativas devem ser tomadas com base em critérios que garantam equilíbrio e proporcionalidade, evitando excessos.')">Enviar</button>
+        <div class="explanation" id="explanation-q44"></div>
+    </div>
+    
+    <div class="question" id="question45">
+        <p><strong>Questão 20:</strong> O que caracteriza a motivação dos atos administrativos?</p>
+        <label><input type="radio" name="q45" value="a"> (a) A motivação é opcional, dependendo da conveniência do administrador.</label><br>
+        <label><input type="radio" name="q45" value="b"> (b) A motivação é um requisito essencial que garante transparência e permite o controle social sobre a Administração Pública.</label><br>
+        <label><input type="radio" name="q45" value="c"> (c) A motivação só se aplica a atos administrativos sancionatórios.</label><br>
+        <label><input type="radio" name="q45" value="d"> (d) A motivação é irrelevante para a validade dos atos administrativos.</label><br>
+        <label><input type="radio" name="q45" value="e"> (e) A motivação se aplica apenas a atos de natureza discricionária.</label><br>
+        <button onclick="checkAnswer('q45', 'b', 'A alternativa CORRETA é: A motivação é um requisito essencial que garante transparência e permite o controle social sobre a Administração Pública.')">Enviar</button>
+        <div class="explanation" id="explanation-q45"></div>
+    </div>
+    
+    <div class="question" id="question46">
+        <p><strong>Questão 21:</strong> O princípio da isonomia na Administração Pública implica que:</p>
+        <label><input type="radio" name="q46" value="a"> (a) Todos os cidadãos devem ser tratados de forma igual, sem distinções.</label><br>
+        <label><input type="radio" name="q46" value="b"> (b) A isonomia é um princípio que permite discriminação entre os cidadãos.</label><br>
+        <label><input type="radio" name="q46" value="c"> (c) A isonomia se aplica apenas a serviços públicos e não à atuação da Administração Pública.</label><br>
+        <label><input type="radio" name="q46" value="d"> (d) A isonomia é irrelevante para o funcionamento da Administração Pública.</label><br>
+        <label><input type="radio" name="q46" value="e"> (e) A isonomia é um princípio que não é reconhecido pela Constituição.</label><br>
+        <button onclick="checkAnswer('q46', 'a', 'A alternativa CORRETA é: Todos os cidadãos devem ser tratados de forma igual, sem distinções.')">Enviar</button>
+        <div class="explanation" id="explanation-q46"></div>
+    </div>
+    
+    <div class="question" id="question47">
+        <p><strong>Questão 22:</strong> O que caracteriza o princípio da segurança jurídica?</p>
+        <label><input type="radio" name="q47" value="a"> (a) A insegurança nas relações jurídicas é benéfica para a Administração Pública.</label><br>
+        <label><input type="radio" name="q47" value="b"> (b) A segurança jurídica implica estabilidade e previsibilidade nas relações entre a Administração Pública e os cidadãos.</label><br>
+        <label><input type="radio" name="q47" value="c"> (c) O princípio da segurança jurídica é irrelevante na atuação administrativa.</label><br>
+        <label><input type="radio" name="q47" value="d"> (d) A segurança jurídica é um princípio que pode ser ignorado em favor da agilidade administrativa.</label><br>
+        <label><input type="radio" name="q47" value="e"> (e) A segurança jurídica é um princípio que não é reconhecido pela legislação.</label><br>
+        <button onclick="checkAnswer('q47', 'b', 'A alternativa CORRETA é: A segurança jurídica implica estabilidade e previsibilidade nas relações entre a Administração Pública e os cidadãos.')">Enviar</button>
+        <div class="explanation" id="explanation-q47"></div>
+    </div>
+    <div class="question" id="question48">
+        <p><strong>Questão 1:</strong> O que caracteriza a discricionariedade na Administração Pública?</p>
+        <label><input type="radio" name="q48" value="a"> (a) A ausência total de regras.</label><br>
+        <label><input type="radio" name="q48" value="b"> (b) A obrigatoriedade de seguir instruções detalhadas.</label><br>
+        <label><input type="radio" name="q48" value="c"> (c) Um certo grau de liberdade deixado pela lei.</label><br>
+        <label><input type="radio" name="q48" value="d"> (d) A completa liberdade de ação do administrador.</label><br>
+        <button onclick="checkAnswer('q48', 'c', 'A alternativa CORRETA é: Um certo grau de liberdade deixado pela lei.')">Enviar</button>
+        <div class="explanation" id="explanation-q48"></div>
+    </div>
+    
+    <div class="question" id="question49">
+        <p><strong>Questão 2:</strong> Qual das seguintes atribuições NÃO faz parte das faculdades decorrentes do poder hierárquico?</p>
+        <label><input type="radio" name="q49" value="a"> (a) Dar ordens.</label><br>
+        <label><input type="radio" name="q49" value="b"> (b) Fiscalizar.</label><br>
+        <label><input type="radio" name="q49" value="c"> (c) Delegar.</label><br>
+        <label><input type="radio" name="q49" value="d"> (d) Criar leis.</label><br>
+        <button onclick="checkAnswer('q49', 'd', 'A alternativa CORRETA é: A criação de leis não é uma atribuição do poder hierárquico.')">Enviar</button>
+        <div class="explanation" id="explanation-q49"></div>
+    </div>
+    
+    <div class="question" id="question50">
+        <p><strong>Questão 3:</strong> Qual é a principal função do poder hierárquico na Administração Pública?</p>
+        <label><input type="radio" name="q50" value="a"> (a) Criar normas que regem a sociedade.</label><br>
+        <label><input type="radio" name="q50" value="b"> (b) Distribuir e escalonar as funções dos órgãos administrativos.</label><br>
+        <label><input type="radio" name="q50" value="c"> (c) Aplicar penalidades de forma aleatória.</label><br>
+        <label><input type="radio" name="q50" value="d"> (d) Promover eleições para novos administradores.</label><br>
+        <button onclick="checkAnswer('q50', 'b', 'A alternativa CORRETA é: O poder hierárquico tem a função de distribuir e escalonar as funções dos órgãos.')">Enviar</button>
+        <div class="explanation" id="explanation-q50"></div>
+    </div>
+    
+    <div class="question" id="question51">
+        <p><strong>Questão 4:</strong> O poder disciplinar na Administração Pública é:</p>
+        <label><input type="radio" name="q51" value="a"> (a) Um poder meramente consultivo.</label><br>
+        <label><input type="radio" name="q51" value="b"> (b) Um poder-dever de averiguar infrações e aplicar penalidades.</label><br>
+        <label><input type="radio" name="q51" value="c"> (c) Exclusivo aos tribunais judiciais.</label><br>
+        <label><input type="radio" name="q51" value="d"> (d) Independente do poder hierárquico.</label><br>
+        <button onclick="checkAnswer('q51', 'b', 'A alternativa CORRETA é: O poder disciplinar é um poder-dever da Administração Pública.')">Enviar</button>
+        <div class="explanation" id="explanation-q51"></div>
+    </div>
+    
+    <div class="question" id="question52">
+        <p><strong>Questão 5:</strong> Como se relacionam o poder hierárquico e o poder disciplinar?</p>
+        <label><input type="radio" name="q52" value="a"> (a) São independentes e não se influenciam mutuamente.</label><br>
+        <label><input type="radio" name="q52" value="b"> (b) O poder hierárquico não pode ser exercido em situações disciplinares.</label><br>
+        <label><input type="radio" name="q52" value="c"> (c) O poder disciplinar é exercido em decorrência do controle interno ligado ao poder hierárquico.</label><br>
+        <label><input type="radio" name="q52" value="d"> (d) O poder disciplinar é superior ao poder hierárquico.</label><br>
+        <button onclick="checkAnswer('q52', 'c', 'A alternativa CORRETA é: O poder disciplinar está intimamente ligado ao poder hierárquico.')">Enviar</button>
+        <div class="explanation" id="explanation-q52"></div>
+    </div>
+    
+    <div class="question" id="question53">
+        <p><strong>Questão 6:</strong> Qual é a principal diferença entre o poder disciplinar da Administração e o poder punitivo do Estado?</p>
+        <label><input type="radio" name="q53" value="a"> (a) O poder disciplinar é exercido em benefício do serviço, enquanto o poder punitivo defende a sociedade.</label><br>
+        <label><input type="radio" name="q53" value="b"> (b) Ambos têm a mesma finalidade.</label><br>
+        <label><input type="radio" name="q53" value="c"> (c) O poder punitivo é exclusivo da Administração.</label><br>
+        <label><input type="radio" name="q53" value="d"> (d) O poder disciplinar é judicial, enquanto o poder punitivo é administrativo.</label><br>
+        <button onclick="checkAnswer('q53', 'a', 'A alternativa CORRETA é: O poder disciplinar da Administração é exercido em benefício do serviço.')">Enviar</button>
+        <div class="explanation" id="explanation-q53"></div>
+    </div>
+    
+    <div class="question" id="question54">
+        <p><strong>Questão 7:</strong> O poder regulamentar é definido como:</p>
+        <label><input type="radio" name="q54" value="a"> (a) A capacidade de julgar processos administrativos.</label><br>
+        <label><input type="radio" name="q54" value="b"> (b) A competência exclusiva do Chefe do Poder Executivo para editar atos normativos.</label><br>
+        <label><input type="radio" name="q54" value="c"> (c) Um poder que pode ser exercido por qualquer servidor público.</label><br>
+        <label><input type="radio" name="q54" value="d"> (d) Um poder que não está previsto na Constituição Federal.</label><br>
+        <button onclick="checkAnswer('q54', 'b', 'A alternativa CORRETA é: O poder regulamentar é a competência exclusiva do Chefe do Poder Executivo.')">Enviar</button>
+        <div class="explanation" id="explanation-q54"></div>
+    </div>
+    
+    <div class="question" id="question55">
+        <p><strong>Questão 8:</strong> Qual a natureza dos atos administrativos editados pelo poder regulamentar?</p>
+        <label><input type="radio" name="q55" value="a"> (a) Específicos e direcionados a indivíduos.</label><br>
+        <label><input type="radio" name="q55" value="b"> (b) Gerais e abstratos.</label><br>
+        <label><input type="radio" name="q55" value="c"> (c) Exclusivos e limitados.</label><br>
+        <label><input type="radio" name="q55" value="d"> (d) Temporários e sujeitos a prazos.</label><br>
+        <button onclick="checkAnswer('q55', 'b', 'A alternativa CORRETA é: Os atos administrativos editados pelo poder regulamentar são gerais e abstratos.')">Enviar</button>
+        <div class="explanation" id="explanation-q55"></div>
+    </div>
+    
+    <div class="question" id="question56">
+        <p><strong>Questão 9:</strong> De acordo com a Constituição Federal, qual é uma das competências do Presidente da República relacionada ao poder regulamentar?</p>
+        <label><input type="radio" name="q56" value="a"> (a) Julgar processos judiciais.</label><br>
+        <label><input type="radio" name="q56" value="b"> (b) Editar normas de segurança pública.</label><br>
+        <label><input type="radio" name="q56" value="c"> (c) Executar a lei, visando sua fiel execução.</label><br>
+        <label><input type="radio" name="q56" value="d"> (d) Criar novas leis.</label><br>
+        <button onclick="checkAnswer('q56', 'c', 'A alternativa CORRETA é: O Presidente da República deve editar normas para executar a lei visando sua fiel execução.')">Enviar</button>
+        <div class="explanation" id="explanation-q56"></div>
+    </div>
+    
+    <div class="question" id="question57">
+        <p><strong>Questão 10:</strong> O que define o limite do poder de polícia?</p>
+        <label><input type="radio" name="q57" value="a"> (a) A vontade do administrador.</label><br>
+        <label><input type="radio" name="q57" value="b"> (b) As normas legais e os direitos fundamentais.</label><br>
+        <label><input type="radio" name="q57" value="c"> (c) A necessidade de agir rapidamente.</label><br>
+        <label><input type="radio" name="q57" value="d"> (d) O interesse privado dos administrados.</label><br>
+        <button onclick="checkAnswer('q57', 'b', 'A alternativa CORRETA é: O limite do poder de polícia é definido pelas normas legais e pelos direitos fundamentais.')">Enviar</button>
+        <div class="explanation" id="explanation-q57"></div>
+    </div>
+    
+    <div class="question" id="question58">
+        <p><strong>Questão 11:</strong> Qual é o objetivo principal do poder de polícia na Administração Pública?</p>
+        <label><input type="radio" name="q58" value="a"> (a) Expandir os direitos individuais dos cidadãos.</label><br>
+        <label><input type="radio" name="q58" value="b"> (b) Proteger a ordem pública e o interesse coletivo.</label><br>
+        <label><input type="radio" name="q58" value="c"> (c) Estabelecer normas para a criação de novos direitos.</label><br>
+        <label><input type="radio" name="q58" value="d"> (d) Impedir a atuação de outras esferas de governo.</label><br>
+        <button onclick="checkAnswer('q58', 'b', 'A alternativa CORRETA é: O objetivo principal do poder de polícia é proteger a ordem pública e o interesse coletivo.')">Enviar</button>
+        <div class="explanation" id="explanation-q58"></div>
+    </div>
+    
+    <div class="question" id="question59">
+        <p><strong>Questão 12:</strong> O que caracteriza a polícia judiciária?</p>
+        <label><input type="radio" name="q59" value="a"> (a) Atuação apenas preventiva.</label><br>
+        <label><input type="radio" name="q59" value="b"> (b) Exclusividade em ações administrativas.</label><br>
+        <label><input type="radio" name="q59" value="c"> (c) Investigação de infrações penais.</label><br>
+        <label><input type="radio" name="q59" value="d"> (d) Ações sem supervisão do Poder Judiciário.</label><br>
+        <button onclick="checkAnswer('q59', 'c', 'A alternativa CORRETA é: A polícia judiciária caracteriza-se pela investigação de infrações penais.')">Enviar</button>
+        <div class="explanation" id="explanation-q59"></div>
+    </div>
+    
+    <div class="question" id="question60">
+        <p><strong>Questão 13:</strong> Quais são os limites do poder de polícia?</p>
+        <label><input type="radio" name="q60" value="a"> (a) Nenhum limite, pois é absoluto.</label><br>
+        <label><input type="radio" name="q60" value="b"> (b) Limites estabelecidos por normas legais e direitos fundamentais.</label><br>
+        <label><input type="radio" name="q60" value="c"> (c) Apenas os limites impostos pela Constituição.</label><br>
+        <label><input type="radio" name="q60" value="d"> (d) Limites estabelecidos pelos órgãos de controle.</label><br>
+        <button onclick="checkAnswer('q60', 'b', 'A alternativa CORRETA é: O poder de polícia é limitado por normas legais e direitos fundamentais.')">Enviar</button>
+        <div class="explanation" id="explanation-q60"></div>
+    </div>
+    
+    <div class="question" id="question61">
+        <p><strong>Questão 14:</strong> Como a polícia administrativa atua em relação aos direitos dos cidadãos?</p>
+        <label><input type="radio" name="q61" value="a"> (a) Aumentando a liberdade individual sem restrições.</label><br>
+        <label><input type="radio" name="q61" value="b"> (b) Impedindo qualquer tipo de liberdade.</label><br>
+        <label><input type="radio" name="q61" value="c"> (c) Regulando a prática de atividades e estabelecendo normas para garantir o interesse público.</label><br>
+        <label><input type="radio" name="q61" value="d"> (d) Ignorando as normas estabelecidas pelo Estado.</label><br>
+        <button onclick="checkAnswer('q61', 'c', 'A alternativa CORRETA é: A polícia administrativa regula atividades para garantir o interesse público.')">Enviar</button>
+        <div class="explanation" id="explanation-q61"></div>
+    </div>
+    
+    <div class="question" id="question62">
+        <p><strong>Questão 15:</strong> Qual a principal função das polícias civis dentro do Sistema de Justiça Criminal?</p>
+        <label><input type="radio" name="q62" value="a"> (a) Exercer a função de polícia militar.</label><br>
+        <label><input type="radio" name="q62" value="b"> (b) Prevenir crimes de natureza federal.</label><br>
+        <label><input type="radio" name="q62" value="c"> (c) Investigar crimes e apurar infrações penais.</label><br>
+        <label><input type="radio" name="q62" value="d"> (d) Realizar a segurança de eventos públicos.</label><br>
+        <button onclick="checkAnswer('q62', 'c', 'A alternativa CORRETA é: A principal função das polícias civis é investigar crimes e apurar infrações penais.')">Enviar</button>
+        <div class="explanation" id="explanation-q62"></div>
+    </div>
+    <div class="question" id="question63">
+        <p><strong>Questão 1:</strong> Quais são os órgãos da Justiça Criminal no nível federal?</p>
+        <label><input type="radio" name="q63" value="a"> (a) Juízes estaduais, Tribunais de Justiça e Defensoria Pública Estadual.</label><br>
+        <label><input type="radio" name="q63" value="b"> (b) Juízes federais, Tribunais Regionais Federais, Ministério Público Federal e Defensoria Pública da União.</label><br>
+        <label><input type="radio" name="q63" value="c"> (c) Polícias Civis e Militares, Corpo de Bombeiros e Guardas Municipais.</label><br>
+        <label><input type="radio" name="q63" value="d"> (d) Justiça Eleitoral, Justiça Militar da União e Justiça do Trabalho.</label><br>
+        <button onclick="checkAnswer('q63', 'b', 'A alternativa CORRETA é: Juízes federais, Tribunais Regionais Federais, Ministério Público Federal e Defensoria Pública da União.')">Enviar</button>
+        <div class="explanation" id="explanation-q63"></div>
+    </div>
+    
+    <div class="question" id="question64">
+        <p><strong>Questão 2:</strong> Qual é a função dos Tribunais Regionais Federais?</p>
+        <label><input type="radio" name="q64" value="a"> (a) Julgar em primeira instância todas as infrações penais.</label><br>
+        <label><input type="radio" name="q64" value="b"> (b) Julgar, em grau de recurso, as causas decididas pelos juízes federais.</label><br>
+        <label><input type="radio" name="q64" value="c"> (c) Atuar exclusivamente em questões trabalhistas.</label><br>
+        <label><input type="radio" name="q64" value="d"> (d) Supervisionar as polícias federais.</label><br>
+        <button onclick="checkAnswer('q64', 'b', 'A alternativa CORRETA é: Julgar, em grau de recurso, as causas decididas pelos juízes federais.')">Enviar</button>
+        <div class="explanation" id="explanation-q64"></div>
+    </div>
+    
+    <div class="question" id="question65">
+        <p><strong>Questão 3:</strong> O que caracteriza os Juizados Especiais Federais Criminais?</p>
+        <label><input type="radio" name="q65" value="a"> (a) Julgar causas de grande potencial ofensivo.</label><br>
+        <label><input type="radio" name="q65" value="b"> (b) Julgar infrações de menor potencial ofensivo de competência da Justiça federal.</label><br>
+        <label><input type="radio" name="q65" value="c"> (c) Atuar apenas em nível estadual.</label><br>
+        <label><input type="radio" name="q65" value="d"> (d) Ser compostos exclusivamente por juízes estaduais.</label><br>
+        <button onclick="checkAnswer('q65', 'b', 'A alternativa CORRETA é: Julgar infrações de menor potencial ofensivo de competência da Justiça federal.')">Enviar</button>
+        <div class="explanation" id="explanation-q65"></div>
+    </div>
+    
+    <div class="question" id="question66">
+        <p><strong>Questão 4:</strong> Quais são os órgãos da Justiça Criminal no nível estadual?</p>
+        <label><input type="radio" name="q66" value="a"> (a) Juízes federais, Ministério Público Federal e Tribunais Regionais Federais.</label><br>
+        <label><input type="radio" name="q66" value="b"> (b) Juízes estaduais, Tribunais de Justiça, Ministério Público Estadual e Defensoria Pública Estadual.</label><br>
+        <label><input type="radio" name="q66" value="c"> (c) Juízes militares, Tribunais Militares e Defensoria Pública Militar.</label><br>
+        <label><input type="radio" name="q66" value="d"> (d) Polícias Civis, Polícias Militares e Corpo de Bombeiros.</label><br>
+        <button onclick="checkAnswer('q66', 'b', 'A alternativa CORRETA é: Juízes estaduais, Tribunais de Justiça, Ministério Público Estadual e Defensoria Pública Estadual.')">Enviar</button>
+        <div class="explanation" id="explanation-q66"></div>
+    </div>
+    
+    <div class="question" id="question67">
+        <p><strong>Questão 5:</strong> Como o Poder Judiciário nos estados é estruturado?</p>
+        <label><input type="radio" name="q67" value="a"> (a) Apenas por juízes federais e Tribunais Regionais.</label><br>
+        <label><input type="radio" name="q67" value="b"> (b) Juízes de direito em primeira instância e Tribunais de Justiça em segunda instância.</label><br>
+        <label><input type="radio" name="q67" value="c"> (c) Exclusivamente por juízes militares e tribunais federais.</label><br>
+        <label><input type="radio" name="q67" value="d"> (d) Somente por juízes estaduais sem qualquer tribunal.</label><br>
+        <button onclick="checkAnswer('q67', 'b', 'A alternativa CORRETA é: Juízes de direito em primeira instância e Tribunais de Justiça em segunda instância.')">Enviar</button>
+        <div class="explanation" id="explanation-q67"></div>
+    </div>
+    
+    <div class="question" id="question68">
+        <p><strong>Questão 6:</strong> Quais instâncias da Justiça Criminal atuam no âmbito penal?</p>
+        <label><input type="radio" name="q68" value="a"> (a) Apenas as Varas Criminais.</label><br>
+        <label><input type="radio" name="q68" value="b"> (b) Varas Criminais, Juizados Especiais Criminais e Tribunais do Júri.</label><br>
+        <label><input type="radio" name="q68" value="c"> (c) Apenas os Tribunais de Justiça.</label><br>
+        <label><input type="radio" name="q68" value="d"> (d) Juízes Militares e Tribunais Regionais Federais.</label><br>
+        <button onclick="checkAnswer('q68', 'b', 'A alternativa CORRETA é: Varas Criminais, Juizados Especiais Criminais e Tribunais do Júri.')">Enviar</button>
+        <div class="explanation" id="explanation-q68"></div>
+    </div>
+    
+    <div class="question" id="question69">
+        <p><strong>Questão 7:</strong> O que determina os ritos e procedimentos da Justiça Criminal?</p>
+        <label><input type="radio" name="q69" value="a"> (a) A vontade do juiz responsável pelo caso.</label><br>
+        <label><input type="radio" name="q69" value="b"> (b) Fatores relacionados à infração penal cometida, como tipo de crime e pena cominada.</label><br>
+        <label><input type="radio" name="q69" value="c"> (c) Normas gerais de qualquer área do direito.</label><br>
+        <label><input type="radio" name="q69" value="d"> (d) As leis de outros países.</label><br>
+        <button onclick="checkAnswer('q69', 'b', 'A alternativa CORRETA é: Fatores relacionados à infração penal cometida, como tipo de crime e pena cominada.')">Enviar</button>
+        <div class="explanation" id="explanation-q69"></div>
+    </div>
+    
+    <div class="question" id="question70">
+        <p><strong>Questão 8:</strong> Como os órgãos da Justiça Criminal são regidos no nível estadual?</p>
+        <label><input type="radio" name="q70" value="a"> (a) Apenas pela legislação federal.</label><br>
+        <label><input type="radio" name="q70" value="b"> (b) Pelas constituições estaduais e normas específicas de organização e atribuições.</label><br>
+        <label><input type="radio" name="q70" value="c"> (c) Unicamente por decretos do Presidente da República.</label><br>
+        <label><input type="radio" name="q70" value="d"> (d) Por leis internacionais.</label><br>
+        <button onclick="checkAnswer('q70', 'b', 'A alternativa CORRETA é: Pelas constituições estaduais e normas específicas de organização e atribuições.')">Enviar</button>
+        <div class="explanation" id="explanation-q70"></div>
+    </div>
+    
+    <div class="question" id="question71">
+        <p><strong>Questão 9:</strong> O que caracteriza a Defensoria Pública?</p>
+        <label><input type="radio" name="q71" value="a"> (a) Atuar exclusivamente em questões civis.</label><br>
+        <label><input type="radio" name="q71" value="b"> (b) Garantir a defesa dos direitos dos cidadãos que não têm condições de arcar com os custos de um advogado.</label><br>
+        <label><input type="radio" name="q71" value="c"> (c) Representar o Estado em ações penais.</label><br>
+        <label><input type="radio" name="q71" value="d"> (d) Ser um órgão privado.</label><br>
+        <button onclick="checkAnswer('q71', 'b', 'A alternativa CORRETA é: Garantir a defesa dos direitos dos cidadãos que não têm condições de arcar com os custos de um advogado.')">Enviar</button>
+        <div class="explanation" id="explanation-q71"></div>
+    </div>
+    
+    <div class="question" id="question72">
+        <p><strong>Questão 10:</strong> Qual é a função do Ministério Público na Justiça Criminal?</p>
+        <label><input type="radio" name="q72" value="a"> (a) Defender apenas interesses privados.</label><br>
+        <label><input type="radio" name="q72" value="b"> (b) Promover a ação penal e defender os interesses da sociedade.</label><br>
+        <label><input type="radio" name="q72" value="c"> (c) Julgar os casos de corrupção.</label><br>
+        <label><input type="radio" name="q72" value="d"> (d) Ser um órgão exclusivamente administrativo.</label><br>
+        <button onclick="checkAnswer('q72', 'b', 'A alternativa CORRETA é: Promover a ação penal e defender os interesses da sociedade.')">Enviar</button>
+        <div class="explanation" id="explanation-q72"></div>
+    </div>
+    
+    <div class="question" id="question73">
+        <p><strong>Questão 11:</strong> O que é o Sistema de Execução Penal?</p>
+        <label><input type="radio" name="q73" value="a"> (a) Um conjunto de leis que regula apenas a prisão preventiva.</label><br>
+        <label><input type="radio" name="q73" value="b"> (b) Um conjunto de normas que regula a execução das penas e medidas de segurança.</label><br>
+        <label><input type="radio" name="q73" value="c"> (c) Uma instituição que cuida apenas da reintegração de presos à sociedade.</label><br>
+        <label><input type="radio" name="q73" value="d"> (d) Uma organização militar.</label><br>
+        <button onclick="checkAnswer('q73', 'b', 'A alternativa CORRETA é: Um conjunto de normas que regula a execução das penas e medidas de segurança.')">Enviar</button>
+        <div class="explanation" id="explanation-q73"></div>
+    </div>
+    <div class="question" id="question74">
+        <p><strong>Questão 01:</strong> Quais são os órgãos essenciais à Justiça no Brasil?</p>
+        <label><input type="radio" name="q74" value="a"> (a) Apenas o Judiciário.</label><br>
+        <label><input type="radio" name="q74" value="b"> (b) O Judiciário, o Ministério Público e a Defensoria Pública.</label><br>
+        <label><input type="radio" name="q74" value="c"> (c) O Judiciário e a Advocacia Pública.</label><br>
+        <label><input type="radio" name="q74" value="d"> (d) O Judiciário, a Advocacia Pública e a Polícia Federal.</label><br>
+        <button onclick="checkAnswer('q74', 'b', 'A alternativa CORRETA é: O Judiciário, o Ministério Público e a Defensoria Pública.')">Enviar</button>
+        <div class="explanation" id="explanation-q74"></div>
+    </div>
+    
+    <div class="question" id="question75">
+        <p><strong>Questão 02:</strong> Qual é a função principal do Ministério Público?</p>
+        <label><input type="radio" name="q75" value="a"> (a) Proteger os direitos dos cidadãos e garantir a aplicação da lei.</label><br>
+        <label><input type="radio" name="q75" value="b"> (b) Representar o governo em processos judiciais.</label><br>
+        <label><input type="radio" name="q75" value="c"> (c) Defender os interesses do Estado apenas em casos de grande repercussão.</label><br>
+        <label><input type="radio" name="q75" value="d"> (d) Atuar apenas em questões administrativas.</label><br>
+        <button onclick="checkAnswer('q75', 'a', 'A alternativa CORRETA é: Proteger os direitos dos cidadãos e garantir a aplicação da lei.')">Enviar</button>
+        <div class="explanation" id="explanation-q75"></div>
+    </div>
+    
+    <div class="question" id="question76">
+        <p><strong>Questão 03:</strong> O que é a Defensoria Pública?</p>
+        <label><input type="radio" name="q76" value="a"> (a) Um órgão que representa os interesses do governo.</label><br>
+        <label><input type="radio" name="q76" value="b"> (b) Uma instituição que oferece assistência jurídica gratuita a quem não pode pagar.</label><br>
+        <label><input type="radio" name="q76" value="c"> (c) Um escritório de advocacia particular.</label><br>
+        <label><input type="radio" name="q76" value="d"> (d) Um tribunal especial para casos de defensores.</label><br>
+        <button onclick="checkAnswer('q76', 'b', 'A alternativa CORRETA é: Uma instituição que oferece assistência jurídica gratuita a quem não pode pagar.')">Enviar</button>
+        <div class="explanation" id="explanation-q76"></div>
+    </div>
+    
+    <div class="question" id="question77">
+        <p><strong>Questão 04:</strong> Qual é o papel da Polícia Federal no Sistema de Justiça Criminal?</p>
+        <label><input type="radio" name="q77" value="a"> (a) Julgar crimes federais.</label><br>
+        <label><input type="radio" name="q77" value="b"> (b) Investigar crimes federais e combater o tráfico de drogas.</label><br>
+        <label><input type="radio" name="q77" value="c"> (c) Proteger o presidente da República.</label><br>
+        <label><input type="radio" name="q77" value="d"> (d) Realizar apenas atividades administrativas.</label><br>
+        <button onclick="checkAnswer('q77', 'b', 'A alternativa CORRETA é: Investigar crimes federais e combater o tráfico de drogas.')">Enviar</button>
+        <div class="explanation" id="explanation-q77"></div>
+    </div>
+    
+    <div class="question" id="question78">
+        <p><strong>Questão 05:</strong> O que abrange o Sistema de Execução Penal no Brasil?</p>
+        <label><input type="radio" name="q78" value="a"> (a) Somente a prisão de indivíduos.</label><br>
+        <label><input type="radio" name="q78" value="b"> (b) A execução das penas privativas de liberdade e medidas alternativas.</label><br>
+        <label><input type="radio" name="q78" value="c"> (c) O controle das atividades policiais.</label><br>
+        <label><input type="radio" name="q78" value="d"> (d) Apenas o acompanhamento de apenados em liberdade condicional.</label><br>
+        <button onclick="checkAnswer('q78', 'b', 'A alternativa CORRETA é: A execução das penas privativas de liberdade e medidas alternativas.')">Enviar</button>
+        <div class="explanation" id="explanation-q78"></div>
+    </div>
+    
+    <div class="question" id="question79">
+        <p><strong>Questão 06:</strong> Qual é a principal função do Poder Judiciário?</p>
+        <label><input type="radio" name="q79" value="a"> (a) Criar leis.</label><br>
+        <label><input type="radio" name="q79" value="b"> (b) Julgar e aplicar as leis.</label><br>
+        <label><input type="radio" name="q79" value="c"> (c) Representar o Estado em questões internacionais.</label><br>
+        <label><input type="radio" name="q79" value="d"> (d) Realizar investigações policiais.</label><br>
+        <button onclick="checkAnswer('q79', 'b', 'A alternativa CORRETA é: Julgar e aplicar as leis.')">Enviar</button>
+        <div class="explanation" id="explanation-q79"></div>
+    </div>
+    
+    <div class="question" id="question80">
+        <p><strong>Questão 07:</strong> O que é a justiça restaurativa?</p>
+        <label><input type="radio" name="q80" value="a"> (a) Um tipo de punição severa para criminosos.</label><br>
+        <label><input type="radio" name="q80" value="b"> (b) Um método de resolução de conflitos que busca reparar danos.</label><br>
+        <label><input type="radio" name="q80" value="c"> (c) Uma forma de justiça militar.</label><br>
+        <label><input type="radio" name="q80" value="d"> (d) Um sistema que promove a vingança.</label><br>
+        <button onclick="checkAnswer('q80', 'b', 'A alternativa CORRETA é: Um método de resolução de conflitos que busca reparar danos.')">Enviar</button>
+        <div class="explanation" id="explanation-q80"></div>
+    </div>
+    
+    <div class="question" id="question81">
+        <p><strong>Questão 08:</strong> O que é o poder de polícia?</p>
+        <label><input type="radio" name="q81" value="a"> (a) O poder de prender indivíduos sem justificativa.</label><br>
+        <label><input type="radio" name="q81" value="b"> (b) A capacidade do Estado de restringir direitos para garantir a ordem pública.</label><br>
+        <label><input type="radio" name="q81" value="c"> (c) O controle das atividades de todos os cidadãos.</label><br>
+        <label><input type="radio" name="q81" value="d"> (d) Uma função exclusiva da polícia militar.</label><br>
+        <button onclick="checkAnswer('q81', 'b', 'A alternativa CORRETA é: A capacidade do Estado de restringir direitos para garantir a ordem pública.')">Enviar</button>
+        <div class="explanation" id="explanation-q81"></div>
+    </div>
+    
+    <div class="question" id="question82">
+        <p><strong>Questão 09:</strong> Quais são as modalidades do poder de polícia?</p>
+        <label><input type="radio" name="q82" value="a"> (a) Polícia administrativa e polícia judiciária.</label><br>
+        <label><input type="radio" name="q82" value="b"> (b) Polícia militar e polícia civil.</label><br>
+        <label><input type="radio" name="q82" value="c"> (c) Polícia administrativa e polícia de manutenção da ordem pública.</label><br>
+        <label><input type="radio" name="q82" value="d"> (d) Somente a polícia militar.</label><br>
+        <button onclick="checkAnswer('q82', 'c', 'A alternativa CORRETA é: Polícia administrativa e polícia de manutenção da ordem pública.')">Enviar</button>
+        <div class="explanation" id="explanation-q82"></div>
+    </div>
+    
+    <div class="question" id="question83">
+        <p><strong>Questão 10:</strong> O que é a responsabilização penal?</p>
+        <label><input type="radio" name="q83" value="a"> (a) A sanção aplicada a quem comete crimes.</label><br>
+        <label><input type="radio" name="q83" value="b"> (b) O processo de julgamento de pessoas inocentes.</label><br>
+        <label><input type="radio" name="q83" value="c"> (c) A isenção de penalidades para menores de idade.</label><br>
+        <label><input type="radio" name="q83" value="d"> (d) A aplicação de multas administrativas.</label><br>
+        <button onclick="checkAnswer('q83', 'a', 'A alternativa CORRETA é: A sanção aplicada a quem comete crimes.')">Enviar</button>
+        <div class="explanation" id="explanation-q83"></div>
+    </div>
+    
+    <div class="question" id="question84">
+        <p><strong>Questão 11:</strong> O que caracteriza o sistema acusatório?</p>
+        <label><input type="radio" name="q84" value="a"> (a) O juiz atua como parte no processo.</label><br>
+        <label><input type="radio" name="q84" value="b"> (b) As partes têm autonomia para apresentar suas provas e argumentos.</label><br>
+        <label><input type="radio" name="q84" value="c"> (c) O juiz decide sem ouvir as partes.</label><br>
+        <label><input type="radio" name="q84" value="d"> (d) O promotor tem total controle sobre o processo.</label><br>
+        <button onclick="checkAnswer('q84', 'b', 'A alternativa CORRETA é: As partes têm autonomia para apresentar suas provas e argumentos.')">Enviar</button>
+        <div class="explanation" id="explanation-q84"></div>
+    </div>
+    
+    <div class="question" id="question85">
+        <p><strong>Questão 12:</strong> O que é a execução provisória da pena?</p>
+        <label><input type="radio" name="q85" value="a"> (a) A pena é cumprida antes do trânsito em julgado da sentença.</label><br>
+        <label><input type="radio" name="q85" value="b"> (b) A pena é cumprida somente após a confirmação da sentença em instância superior.</label><br>
+        <label><input type="radio" name="q85" value="c"> (c) A pena é suspensa até novo julgamento.</label><br>
+        <label><input type="radio" name="q85" value="d"> (d) A pena é cumprida apenas em regime fechado.</label><br>
+        <button onclick="checkAnswer('q85', 'a', 'A alternativa CORRETA é: A pena é cumprida antes do trânsito em julgado da sentença.')">Enviar</button>
+        <div class="explanation" id="explanation-q85"></div>
+    </div>
+    
+    <div class="question" id="question86">
+        <p><strong>Questão 13:</strong> Quais são as penas previstas no Código Penal Brasileiro?</p>
+        <label><input type="radio" name="q86" value="a"> (a) Somente pena de morte.</label><br>
+        <label><input type="radio" name="q86" value="b"> (b) Pena privativa de liberdade, multa e pena restritiva de direitos.</label><br>
+        <label><input type="radio" name="q86" value="c"> (c) Apenas penas restritivas de direitos.</label><br>
+        <label><input type="radio" name="q86" value="d"> (d) Somente penas de multa.</label><br>
+        <button onclick="checkAnswer('q86', 'b', 'A alternativa CORRETA é: Pena privativa de liberdade, multa e pena restritiva de direitos.')">Enviar</button>
+        <div class="explanation" id="explanation-q86"></div>
+    </div>
+    
+    <div class="question" id="question87">
+        <p><strong>Questão 14:</strong> O que é a justiça criminal?</p>
+        <label><input type="radio" name="q87" value="a"> (a) O sistema que lida apenas com crimes contra a propriedade.</label><br>
+        <label><input type="radio" name="q87" value="b"> (b) O conjunto de órgãos e normas que regulam a persecução penal.</label><br>
+        <label><input type="radio" name="q87" value="c"> (c) O sistema que trata apenas de crimes políticos.</label><br>
+        <label><input type="radio" name="q87" value="d"> (d) O sistema que julga apenas menores infratores.</label><br>
+        <button onclick="checkAnswer('q87', 'b', 'A alternativa CORRETA é: O conjunto de órgãos e normas que regulam a persecução penal.')">Enviar</button>
+        <div class="explanation" id="explanation-q87"></div>
+    </div>
+    
+    <div class="question" id="question88">
+        <p><strong>Questão 15:</strong> O que significa a expressão "trânsito em julgado"?</p>
+        <label><input type="radio" name="q88" value="a"> (a) O momento em que uma decisão judicial não pode mais ser contestada.</label><br>
+        <label><input type="radio" name="q88" value="b"> (b) O prazo para recorrer de uma decisão judicial.</label><br>
+        <label><input type="radio" name="q88" value="c"> (c) O início da execução da pena.</label><br>
+        <label><input type="radio" name="q88" value="d"> (d) O julgamento de um novo recurso.</label><br>
+        <button onclick="checkAnswer('q88', 'a', 'A alternativa CORRETA é: O momento em que uma decisão judicial não pode mais ser contestada.')">Enviar</button>
+        <div class="explanation" id="explanation-q88"></div>
+    </div>
+    
+    <div class="question" id="question89">
+        <p><strong>Questão 16:</strong> O que é a pena de multa?</p>
+        <label><input type="radio" name="q89" value="a"> (a) Uma sanção que envolve a prisão do condenado.</label><br>
+        <label><input type="radio" name="q89" value="b"> (b) Uma penalidade pecuniária imposta ao condenado.</label><br>
+        <label><input type="radio" name="q89" value="c"> (c) A libertação de um apenado.</label><br>
+        <label><input type="radio" name="q89" value="d"> (d) Uma medida de segurança.</label><br>
+        <button onclick="checkAnswer('q89', 'b', 'A alternativa CORRETA é: Uma penalidade pecuniária imposta ao condenado.')">Enviar</button>
+        <div class="explanation" id="explanation-q89"></div>
+    </div>
+    
+    <div class="question" id="question90">
+        <p><strong>Questão 17:</strong> Quais são os princípios do Direito Penal?</p>
+        <label><input type="radio" name="q90" value="a"> (a) Legalidade, culpabilidade e proporcionalidade.</label><br>
+        <label><input type="radio" name="q90" value="b"> (b) Autonomia, liberdade e moralidade.</label><br>
+        <label><input type="radio" name="q90" value="c"> (c) Responsabilidade, subjetividade e arbitrariedade.</label><br>
+        <label><input type="radio" name="q90" value="d"> (d) Oportunidade, parcialidade e conveniência.</label><br>
+        <button onclick="checkAnswer('q90', 'a', 'A alternativa CORRETA é: Legalidade, culpabilidade e proporcionalidade.')">Enviar</button>
+        <div class="explanation" id="explanation-q90"></div>
+    </div>
+    
+    <div class="question" id="question91">
+        <p><strong>Questão 18:</strong> O que é a fase de instrução no processo penal?</p>
+        <label><input type="radio" name="q91" value="a"> (a) A fase em que se apresenta a defesa do réu.</label><br>
+        <label><input type="radio" name="q91" value="b"> (b) A fase em que são colhidas as provas e testemunhas.</label><br>
+        <label><input type="radio" name="q91" value="c"> (c) A fase final do julgamento.</label><br>
+        <label><input type="radio" name="q91" value="d"> (d) A fase de apelação da decisão.</label><br>
+        <button onclick="checkAnswer('q91', 'b', 'A alternativa CORRETA é: A fase em que são colhidas as provas e testemunhas.')">Enviar</button>
+        <div class="explanation" id="explanation-q91"></div>
+    </div>
+    
+    <div class="question" id="question92">
+        <p><strong>Questão 19:</strong> O que é a pena privativa de liberdade?</p>
+        <label><input type="radio" name="q92" value="a"> (a) A sanção que implica restrição da liberdade do condenado.</label><br>
+        <label><input type="radio" name="q92" value="b"> (b) A imposição de uma multa ao condenado.</label><br>
+        <label><input type="radio" name="q92" value="c"> (c) A advertência formal ao infrator.</label><br>
+        <label><input type="radio" name="q92" value="d"> (d) O perdão judicial.</label><br>
+        <button onclick="checkAnswer('q92', 'a', 'A alternativa CORRETA é: A sanção que implica restrição da liberdade do condenado.')">Enviar</button>
+        <div class="explanation" id="explanation-q92"></div>
+    </div>
+    
+    <div class="question" id="question93">
+        <p><strong>Questão 20:</strong> O que caracteriza a reincidência penal?</p>
+        <label><input type="radio" name="q93" value="a"> (a) A prática de um crime após a aplicação de pena.</label><br>
+        <label><input type="radio" name="q93" value="b"> (b) A condenação a uma pena superior a cinco anos.</label><br>
+        <label><input type="radio" name="q93" value="c"> (b) O cometimento de um delito pela primeira vez.</label><br>
+        <label><input type="radio" name="q93" value="d"> (d) A absolvição em um processo criminal.</label><br>
+        <button onclick="checkAnswer('q93', 'a', 'A alternativa CORRETA é: A prática de um crime após a aplicação de pena.')">Enviar</button>
+        <div class="explanation" id="explanation-q93"></div>
+    </div>
+
+    <div class="question" id="question94">
+        <p><strong>Questão 1:</strong> Quanto ao Sistema de Segurança Pública brasileiro, assinale a alternativa que correlaciona o órgão com sua função:</p>
+        <label><input type="radio" name="q94" value="a"> (a) I – B, II – C e III - A</label><br>
+        <label><input type="radio" name="q94" value="b"> (b) I – A, II – B e III – C</label><br>
+        <label><input type="radio" name="q94" value="c"> (c) I – B, II – A e III - C</label><br>
+        <label><input type="radio" name="q94" value="d"> (d) I – C, II – B e III - A</label><br>
+        <label><input type="radio" name="q94" value="e"> (e) I – C, II – A e III - B</label><br>
+        <button onclick="checkAnswer('q94', 'e', 'A alternativa CORRETA é: I – C, II – A e III - B.')">Enviar</button>
+        <div class="explanation" id="explanation-q94"></div>
+    </div>
+    
+    <div class="question" id="question95">
+        <p><strong>Questão 2:</strong> Não é um dever do administrador público:</p>
+        <label><input type="radio" name="q95" value="a"> (a) Dever de empatia</label><br>
+        <label><input type="radio" name="q95" value="b"> (b) Dever de eficiência</label><br>
+        <label><input type="radio" name="q95" value="c"> (c) Poder-dever de agir</label><br>
+        <label><input type="radio" name="q95" value="d"> (d) Dever de prestar contas</label><br>
+        <label><input type="radio" name="q95" value="e"> (e) Dever de probidade</label><br>
+        <button onclick="checkAnswer('q95', 'a', 'A alternativa CORRETA é: Dever de empatia.')">Enviar</button>
+        <div class="explanation" id="explanation-q95"></div>
+    </div>
+    
+    <div class="question" id="question96">
+        <p><strong>Questão 3:</strong> Quanto às fases do Poder de Polícia (ciclo de polícia), assinale a alternativa correta:</p>
+        <label><input type="radio" name="q96" value="a"> (a) I e III;</label><br>
+        <label><input type="radio" name="q96" value="b"> (b) Todas estão corretas.</label><br>
+        <label><input type="radio" name="q96" value="c"> (c) I e II;</label><br>
+        <label><input type="radio" name="q96" value="d"> (d) I;</label><br>
+        <label><input type="radio" name="q96" value="e"> (e) II e III;</label><br>
+        <button onclick="checkAnswer('q96', 'b', 'A alternativa CORRETA é: Todas estão corretas.')">Enviar</button>
+        <div class="explanation" id="explanation-q96"></div>
+    </div>
+    
+    <div class="question" id="question97">
+        <p><strong>Questão 4:</strong> Sobre os Princípios da Administração pública, está correto:</p>
+        <label><input type="radio" name="q97" value="a"> (a) IMPESSOALIDADE Estabelece que o administrador público poderá praticar o seu ato para o fim legal.</label><br>
+        <label><input type="radio" name="q97" value="b"> (b) MORALIDADE A moral administrativa significa o dever do administrador de apenas cumprir a lei formalmente.</label><br>
+        <label><input type="radio" name="q97" value="c"> (c) EFICIÊNCIA é elemento formativo do ato, é requisito de eficácia.</label><br>
+        <label><input type="radio" name="q97" value="d"> (d) PUBLICIDADE o dever do administrador de não apenas cumprir a lei formalmente, mas cumprir substancialmente.</label><br>
+        <label><input type="radio" name="q97" value="e"> (e) LEGALIDADE A legalidade significa que o administrador público está sujeito aos mandamentos da lei.</label><br>
+        <button onclick="checkAnswer('q97', 'e', 'A alternativa CORRETA é: LEGALIDADE A legalidade significa que o administrador público está, em toda a sua atividade funcional, sujeito aos mandamentos da lei.')">Enviar</button>
+        <div class="explanation" id="explanation-q97"></div>
+    </div>
+    
+    <div class="question" id="question98">
+        <p><strong>Questão 5:</strong> Os poderes administrativos são as prerrogativas que a ordem jurídica confere aos agentes públicos. Nesse sentido, é CORRETO afirmar que se trata do poder que autoriza a Administração Pública a restringir ou limitar o exercício de direitos:</p>
+        <label><input type="radio" name="q98" value="a"> (a) De Polícia</label><br>
+        <label><input type="radio" name="q98" value="b"> (b) Hierárquico</label><br>
+        <label><input type="radio" name="q98" value="c"> (c) Discricionário</label><br>
+        <label><input type="radio" name="q98" value="d"> (d) Disciplinar</label><br>
+        <label><input type="radio" name="q98" value="e"> (e) Regulamentar</label><br>
+        <button onclick="checkAnswer('q98', 'a', 'A alternativa CORRETA é: De Polícia.')">Enviar</button>
+        <div class="explanation" id="explanation-q98"></div>
+    </div>
+    
+    <div class="question" id="question99">
+        <p><strong>Questão 6:</strong> A doutrina afirma que o ciclo de polícia se desenvolve em quatro fases, exceto:</p>
+        <label><input type="radio" name="q99" value="a"> (a) o consentimento de polícia;</label><br>
+        <label><input type="radio" name="q99" value="b"> (b) discricionaridade de polícia;</label><br>
+        <label><input type="radio" name="q99" value="c"> (c) a ordem de polícia;</label><br>
+        <label><input type="radio" name="q99" value="d"> (d) a sanção de polícia;</label><br>
+        <label><input type="radio" name="q99" value="e"> (e) a fiscalização de polícia;</label><br>
+        <button onclick="checkAnswer('q99', 'b', 'A alternativa CORRETA é: discricionaridade de polícia.')">Enviar</button>
+        <div class="explanation" id="explanation-q99"></div>
+    </div>
+    
+    <div class="question" id="question100">
+        <p><strong>Questão 7:</strong> Sobre a hierarquia das leis, conforme a Pirâmide de Kelsen, está correto:</p>
+        <label><input type="radio" name="q100" value="a"> (a) Decretos, Resoluções e Portarias, Emenda constitucional, Norma fundamental</label><br>
+        <label><input type="radio" name="q100" value="b"> (b) Norma fundamental, Emenda constitucional, Resoluções e Portarias, Decretos</label><br>
+        <label><input type="radio" name="q100" value="c"> (c) Emenda constitucional, Leis complementares, Leis Ordinárias, Decretos</label><br>
+        <label><input type="radio" name="q100" value="d"> (d) Emenda constitucional, Leis complementares, Norma Fundamental, Decretos</label><br>
+        <label><input type="radio" name="q100" value="e"> (e) Leis complementares, Leis Ordinárias, Norma Fundamental, Emenda constitucional</label><br>
+        <button onclick="checkAnswer('q100', 'c', 'A alternativa CORRETA é: Emenda constitucional, Leis complementares, Leis Ordinárias, Decretos.')">Enviar</button>
+        <div class="explanation" id="explanation-q100"></div>
+    </div>
+    
+    <div class="question" id="question101">
+        <p><strong>Questão 8:</strong> A segurança pública, dever do Estado, é exercida para a preservação da ordem pública. Assinale a alternativa correta sobre os órgãos responsáveis:</p>
+        <label><input type="radio" name="q101" value="a"> (a) Somente as Polícias Civil e Militar</label><br>
+        <label><input type="radio" name="q101" value="b"> (b) A segurança pública é exercida apenas por órgãos públicos federais.</label><br>
+        <label><input type="radio" name="q101" value="c"> (c) A segurança pública é exercida por órgãos da União e Estados.</label><br>
+        <label><input type="radio" name="q101" value="d"> (d) Apenas o Ministério Público é responsável pela segurança pública.</label><br>
+        <label><input type="radio" name="q101" value="e"> (e) A segurança pública é uma atribuição exclusiva do Exército Brasileiro.</label><br>
+        <button onclick="checkAnswer('q101', 'c', 'A alternativa CORRETA é: A segurança pública é exercida por órgãos da União e Estados.')">Enviar</button>
+        <div class="explanation" id="explanation-q101"></div>
+    </div>
+    
+    <div class="question" id="question102">
+        <p><strong>Questão 9:</strong> O direito à liberdade é um direito fundamental garantido pela Constituição. No que diz respeito ao poder de polícia, é correto afirmar que:</p>
+        <label><input type="radio" name="q102" value="a"> (a) O poder de polícia não pode ser exercido em relação à liberdade do cidadão.</label><br>
+        <label><input type="radio" name="q102" value="b"> (b) O poder de polícia pode restringir a liberdade, mas deve sempre seguir a legalidade.</label><br>
+        <label><input type="radio" name="q102" value="c"> (c) O poder de polícia não é limitado pela legalidade.</label><br>
+        <label><input type="radio" name="q102" value="d"> (d) O poder de polícia deve ser exercido de maneira arbitrária.</label><br>
+        <label><input type="radio" name="q102" value="e"> (e) O poder de polícia não está relacionado aos direitos fundamentais.</label><br>
+        <button onclick="checkAnswer('q102', 'b', 'A alternativa CORRETA é: O poder de polícia pode restringir a liberdade, mas deve sempre seguir a legalidade.')">Enviar</button>
+        <div class="explanation" id="explanation-q102"></div>
+    </div>
+    
+    <div class="question" id="question103">
+        <p><strong>Questão 10:</strong> A diferença entre poder vinculado e poder discricionário reside em:</p>
+        <label><input type="radio" name="q103" value="a"> (a) O poder vinculado não permite qualquer escolha, enquanto o discricionário permite.</label><br>
+        <label><input type="radio" name="q103" value="b"> (b) O poder discricionário é sempre ilegal.</label><br>
+        <label><input type="radio" name="q103" value="c"> (c) Ambos os poderes são sempre exercidos da mesma forma.</label><br>
+        <label><input type="radio" name="q103" value="d"> (d) O poder vinculado é sempre mais eficaz que o discricionário.</label><br>
+        <label><input type="radio" name="q103" value="e"> (e) O poder vinculado é discricionário.</label><br>
+        <button onclick="checkAnswer('q103', 'a', 'A alternativa CORRETA é: O poder vinculado não permite qualquer escolha, enquanto o discricionário permite.')">Enviar</button>
+        <div class="explanation" id="explanation-q103"></div>
+    </div>
+    
+    <div class="question" id="question104">
+        <p><strong>Questão 11:</strong> A disciplina administrativa abrange:</p>
+        <label><input type="radio" name="q104" value="a"> (a) Apenas atos ilegais dos servidores públicos.</label><br>
+        <label><input type="radio" name="q104" value="b"> (b) Todos os atos administrativos, independentemente de sua legalidade.</label><br>
+        <label><input type="radio" name="q104" value="c"> (c) Atos legais e ilegais, além de faltas disciplinares.</label><br>
+        <label><input type="radio" name="q104" value="d"> (d) Apenas atos discricionários.</label><br>
+        <label><input type="radio" name="q104" value="e"> (e) Somente atos vinculados.</label><br>
+        <button onclick="checkAnswer('q104', 'c', 'A alternativa CORRETA é: Atos legais e ilegais, além de faltas disciplinares.')">Enviar</button>
+        <div class="explanation" id="explanation-q104"></div>
+    </div>
+    
+    <div class="question" id="question105">
+        <p><strong>Questão 12:</strong> O que caracteriza a situação de emergência, que autoriza o uso de força policial:</p>
+        <label><input type="radio" name="q105" value="a"> (a) A urgência da situação que impede a espera por ordem judicial.</label><br>
+        <label><input type="radio" name="q105" value="b"> (b) A situação de emergência é irrelevante para a atuação policial.</label><br>
+        <label><input type="radio" name="q105" value="c"> (c) Somente a autorização judicial é válida.</label><br>
+        <label><input type="radio" name="q105" value="d"> (d) O uso da força é sempre ilegal.</label><br>
+        <label><input type="radio" name="q105" value="e"> (e) O estado de emergência não pode ser invocado.</label><br>
+        <button onclick="checkAnswer('q105', 'a', 'A alternativa CORRETA é: A urgência da situação que impede a espera por ordem judicial.')">Enviar</button>
+        <div class="explanation" id="explanation-q105"></div>
+    </div>
+
+    <div class="question" id="question106">
+        <p><strong>Questão 12:</strong> Assinale a alternativa correta quanto à Administração Pública:</p>
+        <label><input type="radio" name="q106" value="a"> (a) Não possuem agentes.</label><br>
+        <label><input type="radio" name="q106" value="b"> (b) A Administração Pública é o conjunto de órgãos e agentes estatais no exercício da função administrativa, independentemente do Poder a que pertençam.</label><br>
+        <label><input type="radio" name="q106" value="c"> (c) A Administração Pública é o conjunto de órgãos e agentes estatais no exercício da função administrativa, dependendo do poder a que pertençam.</label><br>
+        <label><input type="radio" name="q106" value="d"> (d) Não exercem função administrativa.</label><br>
+        <label><input type="radio" name="q106" value="e"> (e) É o conjunto de entidades que contribuem ao Estado.</label><br>
+        <button onclick="checkAnswer('q106', 'b', 'A alternativa CORRETA é: A Administração Pública é o conjunto de órgãos e agentes estatais no exercício da função administrativa, independentemente do Poder a que pertençam.')">Enviar</button>
+        <div class="explanation" id="explanation-q106"></div>
+    </div>
+    
+    <div class="question" id="question107">
+        <p><strong>Questão 13:</strong> Assinale a alternativa correta que refere um ramo exclusivamente de direito privado:</p>
+        <label><input type="radio" name="q107" value="a"> (a) Direito Internacional.</label><br>
+        <label><input type="radio" name="q107" value="b"> (b) Direito Tributário.</label><br>
+        <label><input type="radio" name="q107" value="c"> (c) Direito Processual.</label><br>
+        <label><input type="radio" name="q107" value="d"> (d) Direito Administrativo.</label><br>
+        <label><input type="radio" name="q107" value="e"> (e) Direito do Trabalho.</label><br>
+        <button onclick="checkAnswer('q107', 'e', 'A alternativa CORRETA é: Direito do Trabalho.')">Enviar</button>
+        <div class="explanation" id="explanation-q107"></div>
+    </div>
+    
+    <div class="question" id="question108">
+        <p><strong>Questão 14:</strong> Assinale a alternativa INCORRETA quanto aos poderes da administração pública:</p>
+        <label><input type="radio" name="q108" value="a"> (a) Poder hierárquico pressupõe hierarquia e subordinação.</label><br>
+        <label><input type="radio" name="q108" value="b"> (b) Poder vinculado possibilita ao administrador uma razoável liberdade de atuação, podendo valorar a oportunidade e conveniência da prática do ato.</label><br>
+        <label><input type="radio" name="q108" value="c"> (c) Poder disciplinar e Poder hierárquico estão intimamente ligados, uma vez que o primeiro é decorrente do segundo.</label><br>
+        <label><input type="radio" name="q108" value="d"> (d) Poder disciplinar pode aplicar penalidades aos servidores públicos.</label><br>
+        <label><input type="radio" name="q108" value="e"> (e) Poder discricionário há mérito administrativo.</label><br>
+        <button onclick="checkAnswer('q108', 'b', 'A alternativa CORRETA é: Poder vinculado possibilita ao administrador uma razoável liberdade de atuação, podendo valorar a oportunidade e conveniência da prática do ato.')">Enviar</button>
+        <div class="explanation" id="explanation-q108"></div>
+    </div>
+    
+    <div class="question" id="question109">
+        <p><strong>Questão 15:</strong> “É um poder-dever que cabe à Administração de examinar infrações cometidas por servidores públicos e demais pessoas com vínculo jurídico específico, sujeitas à disciplina administrativa.” Qual dos poderes da administração pública está conceituado pela frase acima?</p>
+        <label><input type="radio" name="q109" value="a"> (a) Discricionário.</label><br>
+        <label><input type="radio" name="q109" value="b"> (b) Vinculado.</label><br>
+        <label><input type="radio" name="q109" value="c"> (c) De Polícia.</label><br>
+        <label><input type="radio" name="q109" value="d"> (d) Disciplinar.</label><br>
+        <label><input type="radio" name="q109" value="e"> (e) Hierárquico.</label><br>
+        <button onclick="checkAnswer('q109', 'd', 'A alternativa CORRETA é: Disciplinar.')">Enviar</button>
+        <div class="explanation" id="explanation-q109"></div>
+    </div>
+    
+    <div class="question" id="question110">
+        <p><strong>Questão 16:</strong> O poder de polícia decorre de que o Estado tem de ______ em prol do interesse coletivo. Complete a lacuna.</p>
+        <label><input type="radio" name="q110" value="a"> (a) Restringir os direitos dos exercícios individuais.</label><br>
+        <label><input type="radio" name="q110" value="b"> (b) Integrar os exercícios dos direitos individuais.</label><br>
+        <label><input type="radio" name="q110" value="c"> (c) Interagir juntamente com a sociedade.</label><br>
+        <label><input type="radio" name="q110" value="d"> (d) Restringir os exercícios dos direitos coletivos.</label><br>
+        <label><input type="radio" name="q110" value="e"> (e) Restringir os exercícios dos direitos individuais.</label><br>
+        <button onclick="checkAnswer('q110', 'e', 'A alternativa CORRETA é: Restringir os exercícios dos direitos individuais.')">Enviar</button>
+        <div class="explanation" id="explanation-q110"></div>
+    </div>
+    
+    <div class="question" id="question111">
+        <p><strong>Questão 17:</strong> Com base no material de estudo, os atributos do poder de polícia são:</p>
+        <label><input type="radio" name="q111" value="a"> (a) Coercibilidade e a não autorização judicial.</label><br>
+        <label><input type="radio" name="q111" value="b"> (b) Vinculação e egresso de limites.</label><br>
+        <label><input type="radio" name="q111" value="c"> (c) Discricionariedade e autoexecutoriedade.</label><br>
+        <label><input type="radio" name="q111" value="d"> (d) Discricionariedade e imunidade ao controle.</label><br>
+        <label><input type="radio" name="q111" value="e"> (e) Devido processo legal e coercibilidade.</label><br>
+        <button onclick="checkAnswer('q111', 'c', 'A alternativa CORRETA é: Discricionariedade e autoexecutoriedade.')">Enviar</button>
+        <div class="explanation" id="explanation-q111"></div>
+    </div>
+    
+    <div class="question" id="question112">
+        <p><strong>Questão 18:</strong> Marque V para as questões verdadeiras e F para as questões falsas:</p>
+        <p>(   ) O Estado não surge da natureza, trata-se sim de uma criação dos homens, sendo cultural e não natural;</p>
+        <p>(   ) Conforme tripartição dos Poderes do art. 2º CF, são Poderes da União, independentes e harmônicos entre si, o Legislativo, o Executivo e o Judiciário;</p>
+        <p>(   ) A Administração Pública submete-se, prioritariamente, ao regime jurídico de direito privado;</p>
+        <p>(   ) O Direito do Consumidor está entre os ramos do Direito Público;</p>
+        <p>(   ) Estado é a conjugação de um elemento subjetivo (povo), um elemento objetivo (território) e um elemento político ou condutor (governo soberano), o Estado, tal qual o Direito é fruto da cultura do Homem;</p>
+        <label><input type="radio" name="q112" value="a"> (a) V, V, V, V, F.</label><br>
+        <label><input type="radio" name="q112" value="b"> (b) F, V, F, V, V.</label><br>
+        <label><input type="radio" name="q112" value="c"> (c) V, V, F, F, V.</label><br>
+        <label><input type="radio" name="q112" value="d"> (d) F, V, F, F, V.</label><br>
+        <label><input type="radio" name="q112" value="e"> (e) Todas são verdadeiras.</label><br>
+        <button onclick="checkAnswer('q112', 'c', 'A alternativa CORRETA é: V, V, F, F, V.')">Enviar</button>
+        <div class="explanation" id="explanation-q112"></div>
+    </div>
+    
+    <div class="question" id="question113">
+        <p><strong>Questão 19:</strong> Marque as alternativas conforme a sua atribuição:</p>
+        <label>( A ) Polícia Administrativa</label><br>
+        <label>( B ) Polícia Judiciária e Polícia de Manutenção da Ordem Pública</label><br>
+        <p>(   ) atuação essencialmente preventiva;</p>
+        <p>(   ) visa a coibir a desordem social;</p>
+        <p>(   ) Incide sobre a própria pessoa;</p>
+        <p>(   ) busca a responsabilização penal;</p>
+        <p>(   ) incide sobre a propriedade, a liberdade e as atividades dos indivíduos;</p>
+        <p>(   ) atuação repressiva.</p>
+        <label><input type="radio" name="q113" value="a"> (a) A, A, B, B, B, A.</label><br>
+        <label><input type="radio" name="q113" value="b"> (b) A, A, B, B, A, B.</label><br>
+        <label><input type="radio" name="q113" value="c"> (c) B, A, A, B, B, A.</label><br>
+        <label><input type="radio" name="q113" value="d"> (d) A, A, B, A, B, B.</label><br>
+        <label><input type="radio" name="q113" value="e"> (e) A, B, A, B, A, B.</label><br>
+        <button onclick="checkAnswer('q113', 'a', 'A alternativa CORRETA é: A, A, B, B, A, B.')">Enviar</button>
+        <div class="explanation" id="explanation-q113"></div>
+    </div>
+    
+    <div class="question" id="question114">
+        <p><strong>Questão 20:</strong> A proibição para a Administração Pública da interrupção total do desempenho de atividades do serviço público, prestadas à população e seus usuários, limitando inclusive o direito de greve. Isso se refere ao princípio da?</p>
+        <label><input type="radio" name="q114" value="a"> (a) Autotutela.</label><br>
+        <label><input type="radio" name="q114" value="b"> (b) Publicidade.</label><br>
+        <label><input type="radio" name="q114" value="c"> (c) Especialidade.</label><br>
+        <label><input type="radio" name="q114" value="d"> (d) Continuidade.</label><br>
+        <label><input type="radio" name="q114" value="e"> (e) Simplicidade.</label><br>
+        <button onclick="checkAnswer('q114', 'd', 'A alternativa CORRETA é: Continuidade.')">Enviar</button>
+        <div class="explanation" id="explanation-q114"></div>
+    </div>
+    
+    
+  
+    
+    
+    
+        
+
+    
+    
+    </body>
+    </html>
+
+    
+
+
+
+
+    
+ 
+    
+    
+    
+        
+    
+
+</div>
+<img id="lossImage" class="loss-image" src="img/loss.png" alt="Erro" style="display:none;">
+<script>
+
+
+    function checkAnswer(questionId, correctAnswer, explanation) {
+        const selectedOption = document.querySelector(`input[name="${questionId}"]:checked`);
+        const explanationDiv = document.getElementById(`explanation-${questionId}`);
+        const lossImage = document.getElementById('lossImage'); // Obter a imagem de erro
+
+        if (!selectedOption) {
+            explanationDiv.innerHTML = "Por favor, selecione uma opção.";
+            explanationDiv.className = "explanation";
+            return;
+        }
+
+        const userAnswer = selectedOption.value;
+        if (userAnswer === correctAnswer) {
+            explanationDiv.innerHTML = `<span class="result correct">Resposta correta!</span> ${explanation}`;
+            lossImage.style.display = "none"; // Esconder a imagem de erro
+        } else {
+            lossImage.style.display = "inline"; // Mostrar a imagem de erro
+            explanationDiv.innerHTML = `<span class="result wrong">Resposta incorreta.</span> ${explanation} ${lossImage.outerHTML}`;
+        }
+        explanationDiv.className = "explanation";
+    }
+</script>
+
+</body>
+</html>

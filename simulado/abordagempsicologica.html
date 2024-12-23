@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulado Abordagem Policial</title>
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace; /* Fonte monoespaçada para um visual mais tecnológico */
+      background: linear-gradient(to bottom, #1a1a1a, #333); /* Fundo escuro */
+      color: #f5f5f5; /* Cor do texto mais clara */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px; /* Espaçamento interno */
+    }
+    .container {
+      width: 100%;
+      max-width: 900px;
+      padding: 20px;
+      background: #2c2c2c; /* Cor de fundo da caixa */
+      border: 1px solid #555; /* Borda mais escura */
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Sombra mais intensa */
+      transition: transform 0.2s;
+    }
+
+    h1 {
+      text-align: center;
+      color: #e67e22; /* Laranja vibrante */
+      text-transform: uppercase; /* Letras maiúsculas */
+      letter-spacing: 2px; /* Espaçamento entre letras */
+    }
+    .question {
+      margin-bottom: 20px;
+      padding: 10px; /* Espaçamento interno das questões */
+      border: 1px solid #555; /* Borda das perguntas */
+      border-radius: 5px;
+      background-color: #3a3a3a; /* Fundo das perguntas */
+    }
+    .options label {
+      display: block;
+      margin: 5px 0;
+      padding: 5px; /* Espaçamento interno nos rótulos */
+      border-radius: 4px; /* Bordas arredondadas */
+      transition: background 0.3s; /* Transição de fundo */
+    }
+    .options input[type="radio"] {
+      margin-right: 10px;
+    }
+    .options label:hover {
+      background-color: #444; /* Fundo ao passar o mouse */
+    }
+    #submitBtn {
+      display: block;
+      width: 100%;
+      padding: 15px; /* Aumentar o espaçamento */
+      margin-top: 20px;
+      background-color: #2980b9; /* Azul padrão */
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px; /* Aumentar o tamanho da fonte */
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s;
+    }
+    #submitBtn:hover {
+      background-color: #3498db; /* Azul claro */
+      transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    }
+    #result {
+      margin-top: 20px;
+      padding: 15px;
+      text-align: center;
+      font-size: 20px; /* Aumentar o tamanho da fonte do resultado */
+      background-color: #ecf0f1;
+      border-radius: 5px;
+      display: none;
+      color: #333; /* Cor do texto do resultado */
+    }
+
+    .correct {
+        background-color: lightgreen;
+        color: black;
+        
+    }
+    .incorrect {
+        background-color: lightcoral;
+        color: black;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Simulado Abordagem Psiclogica</h1>
+    <form id="quizForm">
+      
+      <!-- Exemplo de estrutura para uma questão -->
+      <div class="question">
+        <p>1. Sobre a diversidade de formas de violência, assinale a alternativa correta:</p>
+        <div class="options">
+          <label><input type="radio" name="question1" value="a"> A violência é um fenômeno homogêneo e suas práticas sociais se manifestam de forma idêntica em todas as culturas e épocas.</label>
+          <label><input type="radio" name="question1" value="b"> A violência se restringe apenas a formas físicas, desconsiderando outras práticas sociais como a psicológica ou a moral.</label>
+          <label><input type="radio" name="question1" value="c"> A violência pode assumir diversas formas e práticas sociais, incluindo política, física, psicológica, moral, entre outras, variando conforme a época e o lugar.</label>
+          <label><input type="radio" name="question1" value="d"> A violência é um conceito que permanece inalterado, independentemente das teorias e explicações ao longo do tempo.</label>
+          <label><input type="radio" name="question1" value="e"> A violência institucional é a única forma de violência reconhecida nas práticas sociais contemporâneas.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>2. Sobre a natureza e a evolução da violência nas sociedades humanas, assinale a alternativa correta:</p>
+        <div class="options">
+          <label><input type="radio" name="question2" value="a"> A violência é um fenômeno recente, surgindo apenas com as sociedades contemporâneas.</label>
+          <label><input type="radio" name="question2" value="b"> A violência não tem relação com o poder, sendo um ato isolado que não provoca reações em cadeia.</label>
+          <label><input type="radio" name="question2" value="c"> A violência resulta da soma de poder contra alguém e gera novos conflitos, manifestando-se de formas distintas ao longo da história.</label>
+          <label><input type="radio" name="question2" value="d"> A violência é uma característica exclusiva de determinadas sociedades, não sendo inerente à natureza humana.</label>
+          <label><input type="radio" name="question2" value="e"> A forma de violência praticada nas sociedades é a mesma desde a antiguidade, sem variações ao longo do tempo.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>3. De acordo com a definição da Organização Mundial da Saúde (OMS), como a violência é caracterizada?</p>
+        <div class="options">
+          <label><input type="radio" name="question3" value="a"> A violência é definida como qualquer ato de desobediência civil que visa protestar contra injustiças.</label>
+          <label><input type="radio" name="question3" value="b"> A violência refere-se exclusivamente ao uso de força física em conflitos entre grupos organizados.</label>
+          <label><input type="radio" name="question3" value="c"> A OMS define a violência como o uso de força física ou poder, em ameaça ou prática, contra si próprio ou outros, resultando em sofrimento, morte ou privação.</label>
+          <label><input type="radio" name="question3" value="d"> A violência é vista como um fenômeno natural que ocorre independentemente das ações humanas.</label>
+          <label><input type="radio" name="question3" value="e"> A OMS considera a violência um problema social, mas não a define de forma precisa.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>4. Qual das opções a seguir melhor descreve a violência patrimonial?</p>
+        <div class="options">
+          <label><input type="radio" name="question4" value="a"> A violência exercida por familiares em situações de conflito.</label>
+          <label><input type="radio" name="question4" value="b"> Prejuízos financeiros ou perda de bens que têm valor sentimental para a vítima.</label>
+          <label><input type="radio" name="question4" value="c"> Atos de calúnia ou injúria que afetam a reputação de uma pessoa.</label>
+          <label><input type="radio" name="question4" value="d"> A prática de atos de agressão física que não resultam em danos permanentes.</label>
+          <label><input type="radio" name="question4" value="e"> A imposição de regras e normas culturais sem consideração pela individualidade.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>5. A violência moral é caracterizada por qual das seguintes condutas?</p>
+        <div class="options">
+          <label><input type="radio" name="question5" value="a"> O uso de força física para controlar outra pessoa.</label>
+          <label><input type="radio" name="question5" value="b"> A prática de atos discriminatórios realizados em ambientes de trabalho.</label>
+          <label><input type="radio" name="question5" value="c"> Condutas que configuram calúnia, difamação ou injúria.</label>
+          <label><input type="radio" name="question5" value="d"> O uso de ameaças para obter consentimento em situações sexuais.</label>
+          <label><input type="radio" name="question5" value="e"> Qualquer ação que cause dano emocional, mas sem contato físico.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>6. A violência sexual é definida pela ausência de qual elemento essencial?</p>
+        <div class="options">
+          <label><input type="radio" name="question6" value="a"> O uso de força física pelo agressor.</label>
+          <label><input type="radio" name="question6" value="b"> O consentimento da vítima para a prática de atos sexuais.</label>
+          <label><input type="radio" name="question6" value="c"> A presença de testemunhas durante o ato.</label>
+          <label><input type="radio" name="question6" value="d"> A relação prévia entre agressor e vítima.</label>
+          <label><input type="radio" name="question6" value="e"> A utilização de objetos ou armas durante o ato.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>7. Qual é o nome do livro que impactou as ciências sociais no Brasil no final dos anos 70, escrito por Michel Foucault?</p>
+        <div class="options">
+          <label><input type="radio" name="question7" value="a"> Vigiar e Punir</label>
+          <label><input type="radio" name="question7" value="b"> A Sociedade do Espetáculo</label>
+          <label><input type="radio" name="question7" value="c"> O Anti-Édipo</label>
+          <label><input type="radio" name="question7" value="d"> A Ordem do Discurso</label>
+          <label><input type="radio" name="question7" value="e"> A História da Sexualidade</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>8. Em que anos e em quais cidades Michel Foucault apresentou pela primeira vez os esboços de sua obra "Vigiar e Punir" ao público brasileiro?</p>
+        <div class="options">
+          <label><input type="radio" name="question8" value="a"> 1970, Rio de Janeiro e São Paulo</label>
+          <label><input type="radio" name="question8" value="b"> 1973, Rio de Janeiro e São Paulo</label>
+          <label><input type="radio" name="question8" value="c"> 1980, Brasília e Belo Horizonte</label>
+          <label><input type="radio" name="question8" value="d"> 1975, Porto Alegre e Curitiba</label>
+          <label><input type="radio" name="question8" value="e"> 1985, Salvador e Recife</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>9. Segundo Émile Durkheim, qual é a ideia fundamental que sustenta sua sociologia e como a solidariedade se manifesta nas sociedades?</p>
+        <div class="options">
+          <label><input type="radio" name="question9" value="a"> A sociedade é formada apenas por indivíduos que buscam interesses próprios, e a solidariedade é irrelevante.</label>
+          <label><input type="radio" name="question9" value="b"> A sociedade precede o indivíduo, e a solidariedade se manifesta de forma mecânica e orgânica, variando conforme o grau de complexidade da sociedade.</label>
+          <label><input type="radio" name="question9" value="c"> O indivíduo é mais importante que a sociedade, e a solidariedade é uma construção secundária que surge de interesses pessoais.</label>
+          <label><input type="radio" name="question9" value="d"> A solidariedade é um conceito irrelevante para a sociologia, que se concentra apenas nas ações individuais.</label>
+          <label><input type="radio" name="question9" value="e"> A sociedade e o indivíduo são independentes, e a solidariedade não influencia a formação da consciência individual.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>10. O que se entende por estrutura social em uma sociedade?</p>
+        <div class="options">
+          <label><input type="radio" name="question10" value="a"> É a soma de todas as interações sociais que ocorrem em um determinado contexto.</label>
+          <label><input type="radio" name="question10" value="b"> É a rede de relações de interdependência relativamente estáveis que existem entre posições sociais, papéis e instituições.</label>
+          <label><input type="radio" name="question10" value="c"> É o conjunto de normas e valores que regem o comportamento dos indivíduos em sociedade.</label>
+          <label><input type="radio" name="question10" value="d"> É o processo pelo qual os indivíduos aprendem a se comportar em sociedade.</label>
+          <label><input type="radio" name="question10" value="e"> É a forma como as classes sociais são organizadas em um sistema econômico.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>11. Qual é a definição de ordem social que está relacionada à coesão social e à manutenção dos sistemas sociais integrados?</p>
+        <div class="options">
+          <label><input type="radio" name="question11" value="a"> Ordem social é sinônimo de controle social, que se refere ao respeito às normas e valores.</label>
+          <label><input type="radio" name="question11" value="b"> Ordem social se refere aos padrões de comportamento que caracterizam a vida nos sistemas sociais.</label>
+          <label><input type="radio" name="question11" value="c"> Ordem social é a coesão social que permite que os sistemas sociais se mantenham integrados.</label>
+          <label><input type="radio" name="question11" value="d"> Ordem social é a forma como os grupos e classes se organizam em uma sociedade.</label>
+          <label><input type="radio" name="question11" value="e"> Ordem social é o resultado do controle social, que visa garantir a conformidade das condutas sociais.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>12. O controle social pode ser dividido em dois tipos. Quais são eles?</p>
+        <div class="options">
+          <label><input type="radio" name="question12" value="a"> Controle social informal e formal.</label>
+          <label><input type="radio" name="question12" value="b"> Controle social positivo e negativo.</label>
+          <label><input type="radio" name="question12" value="c"> Controle social individual e coletivo.</label>
+          <label><input type="radio" name="question12" value="d"> Controle social direto e indireto.</label>
+          <label><input type="radio" name="question12" value="e"> Controle social legal e ilegal.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>13. Como o controle social informal se caracteriza, em oposição ao controle social formal?</p>
+        <div class="options">
+          <label><input type="radio" name="question13" value="a"> É organizado por instituições e é baseado em normas legais.</label>
+          <label><input type="radio" name="question13" value="b"> É natural, espontâneo e baseado em relações pessoais e familiares.</label>
+          <label><input type="radio" name="question13" value="c"> É exclusivamente relacionado a punições e sanções legais.</label>
+          <label><input type="radio" name="question13" value="d"> É aplicado por grupos secundários e instituições formais.</label>
+          <label><input type="radio" name="question13" value="e"> É praticado apenas em contextos urbanos e organizados.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>14. O controle social é fundamental para assegurar que os indivíduos:</p>
+        <div class="options">
+          <label><input type="radio" name="question14" value="a"> Sejam sempre livres para agir de acordo com suas vontades.</label>
+          <label><input type="radio" name="question14" value="b"> Cumpram com as normas e valores estabelecidos pela sociedade.</label>
+          <label><input type="radio" name="question14" value="c"> Sejam punidos quando violam regras sociais.</label>
+          <label><input type="radio" name="question14" value="d"> Tenham autonomia total sobre suas ações, sem interferência.</label>
+          <label><input type="radio" name="question14" value="e"> Se mantenham indiferentes às normas sociais.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>15. O que a Escola de Chicago propõe como principal explicação para a ocorrência de crimes em uma cidade?</p>
+        <div class="options">
+          <label><input type="radio" name="question15" value="a"> O crime é resultado da pobreza e da falta de educação.</label>
+          <label><input type="radio" name="question15" value="b"> O crime é influenciado pela cultura local e pelas tradições.</label>
+          <label><input type="radio" name="question15" value="c"> O crime pode ser compreendido por meio das zonas de delinquência, que são espaços geográficos que explicam a sua distribuição.</label>
+          <label><input type="radio" name="question15" value="d"> O crime é um fenômeno isolado, sem relação com o ambiente social.</label>
+          <label><input type="radio" name="question15" value="e"> O crime é causado principalmente por fatores psicológicos individuais.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>16. De acordo com as teorias da Escola de Chicago, o que se entende por "zonas de delinquência"?</p>
+        <div class="options">
+          <label><input type="radio" name="question16" value="a"> Regiões onde as leis não são aplicadas e o crime é permitido.</label>
+          <label><input type="radio" name="question16" value="b"> Áreas específicas dentro de uma cidade onde a criminalidade é mais alta devido a fatores sociais e ambientais.</label>
+          <label><input type="radio" name="question16" value="c"> Locais onde a presença policial é intensa e os crimes são rapidamente solucionados.</label>
+          <label><input type="radio" name="question16" value="d"> Zonas residenciais onde a segurança é prioritária e as comunidades são unidas.</label>
+          <label><input type="radio" name="question16" value="e"> Regiões de baixo custo habitacional, sem relação com a criminalidade.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>17. Qual é a principal característica das subculturas, segundo as teorias subculturais, em relação às maiorias?</p>
+        <div class="options">
+          <label><input type="radio" name="question17" value="a"> Elas são sempre benéficas e contribuem para a harmonia social.</label>
+          <label><input type="radio" name="question17" value="b"> Elas possuem valores e práticas que diferem e frequentemente chocam com os da cultura dominante.</label>
+          <label><input type="radio" name="question17" value="c"> Elas se baseiam exclusivamente em tradições culturais antigas.</label>
+          <label><input type="radio" name="question17" value="d"> Elas não têm relação com a criminalidade ou comportamentos delinquentes.</label>
+          <label><input type="radio" name="question17" value="e"> Elas são formadas apenas por indivíduos de alta classe social.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>18. De acordo com as teorias subculturais, como os jovens delinquentes tendem a se posicionar em relação aos valores da classe média dominante?</p>
+        <div class="options">
+          <label><input type="radio" name="question18" value="a"> Eles adotam os mesmos valores e se esforçam para se integrar à classe média.</label>
+          <label><input type="radio" name="question18" value="b"> Eles rejeitam os valores da classe média e criam seus próprios valores e metas, muitas vezes legitimando práticas ilegais.</label>
+          <label><input type="radio" name="question18" value="c"> Eles buscam soluções pacíficas para resolver seus conflitos com a classe média.</label>
+          <label><input type="radio" name="question18" value="d"> Eles são indiferentes aos valores sociais e não se envolvem em qualquer forma de rebeldia.</label>
+          <label><input type="radio" name="question18" value="e"> Eles tentam mudar a sociedade pela via política e pacífica.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>19. Qual é a principal contribuição das Teorias da Aprendizagem Social para a compreensão do crime em relação às classes sociais?</p>
+        <div class="options">
+          <label><input type="radio" name="question19" value="a"> Elas sugerem que apenas indivíduos da classe baixa estão envolvidos em atividades criminosas.</label>
+          <label><input type="radio" name="question19" value="b"> Elas afirmam que o crime é um fenômeno restrito a contextos rurais.</label>
+          <label><input type="radio" name="question19" value="c"> Elas destacam que indivíduos de classes média e alta também podem delinquir, desafiando o paradigma tradicional.</label>
+          <label><input type="radio" name="question19" value="d"> Elas sustentam que a criminalidade é sempre uma questão de biologia e genética.</label>
+          <label><input type="radio" name="question19" value="e"> Elas focam exclusivamente nas circunstâncias sociais de indivíduos em situação de pobreza.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>20. Segundo as Teorias da Aprendizagem Social, como os indivíduos aprendem comportamentos criminosos?</p>
+        <div class="options">
+          <label><input type="radio" name="question20" value="a"> Por meio de experiências isoladas e nunca por influência social.</label>
+          <label><input type="radio" name="question20" value="b"> Através da observação e interação com outros que já estão envolvidos em atividades delituosas.</label>
+          <label><input type="radio" name="question20" value="c"> Apenas por meio da leitura de livros sobre criminalidade.</label>
+          <label><input type="radio" name="question20" value="d"> Por meio de heranças genéticas que predisponham ao crime.</label>
+          <label><input type="radio" name="question20" value="e"> Pela imposição de normas rígidas da sociedade que não toleram a delinquência.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>21. Qual dos seguintes fenômenos sociais é mencionado como um fator que pode impactar os índices criminais?</p>
+        <div class="options">
+          <label><input type="radio" name="question21" value="a"> Aumento da educação formal na população.</label>
+          <label><input type="radio" name="question21" value="b"> Redução da taxa de mortalidade.</label>
+          <label><input type="radio" name="question21" value="c"> Crescimento econômico desigual.</label>
+          <label><input type="radio" name="question21" value="d"> Melhora nas condições habitacionais.</label>
+          <label><input type="radio" name="question21" value="e"> Aumento da participação política da sociedade.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>22. Qual dos seguintes fatores é mencionado como um influenciador da criminalidade?</p>
+        <div class="options">
+          <label><input type="radio" name="question22" value="a"> Crescimento da classe média.</label>
+          <label><input type="radio" name="question22" value="b"> Analfabetismo.</label>
+          <label><input type="radio" name="question22" value="c"> Aumento da segurança pública.</label>
+          <label><input type="radio" name="question22" value="d"> Expansão de áreas verdes nas cidades.</label>
+          <label><input type="radio" name="question22" value="e"> Melhoria da infraestrutura urbana.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>23. Qual é um dos fatores que pode contribuir para o aumento da criminalidade, segundo a análise apresentada?</p>
+        <div class="options">
+          <label><input type="radio" name="question23" value="a"> Urbanização desordenada.</label>
+          <label><input type="radio" name="question23" value="b"> Crescimento da educação superior.</label>
+          <label><input type="radio" name="question23" value="c"> Redução das taxas de desemprego.</label>
+          <label><input type="radio" name="question23" value="d"> Desenvolvimento de programas de inclusão social.</label>
+          <label><input type="radio" name="question23" value="e"> Aumento da renda per capita.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>24. Qual é a principal diferença entre violência autoinfligida e violência interpessoal?</p>
+        <div class="options">
+          <label><input type="radio" name="question24" value="a"> A violência autoinfligida refere-se a ações de um indivíduo contra si mesmo, enquanto a violência interpessoal envolve ações entre indivíduos.</label>
+          <label><input type="radio" name="question24" value="b"> A violência autoinfligida ocorre apenas em ambientes familiares, enquanto a violência interpessoal ocorre apenas na comunidade.</label>
+          <label><input type="radio" name="question24" value="c"> Ambas as violências envolvem interações sociais, mas a violência autoinfligida é mais comum em jovens.</label>
+          <label><input type="radio" name="question24" value="d"> A violência interpessoal é sempre violenta, enquanto a autoinfligida é geralmente pacífica.</label>
+          <label><input type="radio" name="question24" value="e"> A violência interpessoal é uma forma de violência coletiva.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>25. A violência coletiva é subdividida em três categorias principais. Qual das seguintes opções não é uma subcategoria da violência coletiva?</p>
+        <div class="options">
+          <label><input type="radio" name="question25" value="a"> Violência social.</label>
+          <label><input type="radio" name="question25" value="b"> Violência de família.</label>
+          <label><input type="radio" name="question25" value="c"> Violência política.</label>
+          <label><input type="radio" name="question25" value="d"> Violência econômica.</label>
+          <label><input type="radio" name="question25" value="e"> Nenhuma das alternativas acima.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>26. Segundo a sociologia criminal de Émile Durkheim, como o crime é considerado em relação à sociedade?</p>
+        <div class="options">
+          <label><input type="radio" name="question26" value="a"> O crime é visto como uma doença social que deve ser erradicada para garantir a saúde da sociedade.</label>
+          <label><input type="radio" name="question26" value="b"> O crime é um fenômeno inseparável da sociedade e pode ter aspectos positivos para a evolução do grupo social.</label>
+          <label><input type="radio" name="question26" value="c"> O crime é um fenômeno raro que ocorre apenas em sociedades em crise.</label>
+          <label><input type="radio" name="question26" value="d"> O crime deve ser ignorado, pois não afeta a coesão social.</label>
+          <label><input type="radio" name="question26" value="e"> O crime é exclusivamente negativo e não traz nenhum benefício à sociedade.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>27. Qual é a principal ideia defendida por Augusto Comte no contexto do positivismo?</p>
+        <div class="options">
+          <label><input type="radio" name="question27" value="a"> O conhecimento científico é considerado a única forma de conhecimento verdadeiro, capaz de explicar fenômenos sociais e naturais.</label>
+          <label><input type="radio" name="question27" value="b"> A religião e a filosofia são as principais fontes de conhecimento sobre a realidade.</label>
+          <label><input type="radio" name="question27" value="c"> O progresso social deve ser alcançado através de valores morais e éticos, independentemente do conhecimento científico.</label>
+          <label><input type="radio" name="question27" value="d"> O conhecimento é subjetivo e varia de acordo com a cultura e a sociedade.</label>
+          <label><input type="radio" name="question27" value="e"> A ordem social não é relevante para o progresso da ciência e da sociedade.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>28. Segundo Émile Durkheim, como a violência deve ser analisada e quais fatores influenciam sua ocorrência?</p>
+        <div class="options">
+          <label><input type="radio" name="question28" value="a"> A violência é um fenômeno isolado e deve ser analisada apenas a partir de suas consequências imediatas.</label>
+          <label><input type="radio" name="question28" value="b"> A violência deve ser considerada um fato social, decorrente de fatores como desigualdade, condições financeiras e sociais, além da busca por poder.</label>
+          <label><input type="radio" name="question28" value="c"> A violência é sempre um reflexo de problemas psicológicos individuais e não está relacionada a fatores sociais.</label>
+          <label><input type="radio" name="question28" value="d"> A análise da violência deve se concentrar exclusivamente nas respostas legais e institucionais para combatê-la.</label>
+          <label><input type="radio" name="question28" value="e"> A violência é um fenômeno natural que ocorre independentemente das condições sociais e econômicas.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>29. No contexto do pensamento sociológico de Karl Marx, quais conceitos são fundamentais para entender suas análises sobre desigualdades sociais e exploração da classe trabalhadora?</p>
+        <div class="options">
+          <label><input type="radio" name="question29" value="a"> Luta de classes, estrutura social, alienação e modo de produção.</label>
+          <label><input type="radio" name="question29" value="b"> Individualismo, consumo, liberdade de mercado e propriedade privada.</label>
+          <label><input type="radio" name="question29" value="c"> Solidariedade social, integração, controle social e coesão.</label>
+          <label><input type="radio" name="question29" value="d"> Ética, moralidade, justiça social e responsabilidade individual.</label>
+          <label><input type="radio" name="question29" value="e"> Cultura, identidade, diversidade e pertencimento.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>30. Segundo Max Weber, como as ações sociais influenciam a modificação da sociedade?</p>
+        <div class="options">
+          <label><input type="radio" name="question30" value="a"> As ações sociais são sempre impulsionadas por interesses econômicos e financeiros.</label>
+          <label><input type="radio" name="question30" value="b"> Através do uso das ações sociais, os indivíduos podem modificar a sociedade, a política, as relações sociais e as organizações institucionais e governamentais.</label>
+          <label><input type="radio" name="question30" value="c"> As ações sociais têm pouca relevância nas dinâmicas sociais, pois a estrutura social é mais importante.</label>
+          <label><input type="radio" name="question30" value="d"> As ações sociais são sempre coletivas e permanentes, formando a base da sociedade.</label>
+          <label><input type="radio" name="question30" value="e"> A sociedade é moldada apenas por normas e valores pré-estabelecidos, sem espaço para ações individuais.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>31. De acordo com Max Weber, qual é a principal função do Estado em relação à força e violência?</p>
+        <div class="options">
+          <label><input type="radio" name="question31" value="a"> O Estado deve promover a força e a violência como meio de controle social.</label>
+          <label><input type="radio" name="question31" value="b"> O Estado é uma instituição que detém o monopólio da força e da violência mediante a legalidade para evitar que indivíduos exerçam a força e a violência.</label>
+          <label><input type="radio" name="question31" value="c"> O Estado deve abolir qualquer forma de força e violência na sociedade.</label>
+          <label><input type="radio" name="question31" value="d"> O Estado não tem papel significativo no controle da violência, pois os indivíduos são naturalmente pacíficos.</label>
+          <label><input type="radio" name="question31" value="e"> O Estado é responsável por incentivar o uso da força para resolver conflitos entre indivíduos.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>32. A abordagem cognitiva na psicologia busca explicar a criatividade a partir de quais fenômenos?</p>
+        <div class="options">
+          <label><input type="radio" name="question32" value="a"> Dos processos emocionais que afetam o comportamento.</label>
+          <label><input type="radio" name="question32" value="b"> Das experiências de vida e da maneira como aprendemos o mundo.</label>
+          <label><input type="radio" name="question32" value="c"> Das relações interpessoais e sociais que moldam a personalidade.</label>
+          <label><input type="radio" name="question32" value="d"> Da análise dos sonhos e do inconsciente.</label>
+          <label><input type="radio" name="question32" value="e"> Da observação do comportamento em situações específicas.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>33. Na abordagem comportamental, o que se entende por "folha em branco" em relação ao indivíduo?</p>
+        <div class="options">
+          <label><input type="radio" name="question33" value="a"> O indivíduo é inato e não sofre influência do ambiente.</label>
+          <label><input type="radio" name="question33" value="b"> O indivíduo é moldado exclusivamente por suas interações sociais.</label>
+          <label><input type="radio" name="question33" value="c"> O indivíduo nasce sem conhecimentos e aprende com as experiências de vida.</label>
+          <label><input type="radio" name="question33" value="d"> O indivíduo já possui uma personalidade definida desde o nascimento.</label>
+          <label><input type="radio" name="question33" value="e"> O indivíduo é programado geneticamente para ter determinadas condutas.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>34. Qual é o foco principal da abordagem psicanalítica na terapia?</p>
+        <div class="options">
+          <label><input type="radio" name="question34" value="a"> A resolução imediata dos sintomas do paciente.</label>
+          <label><input type="radio" name="question34" value="b"> A análise dos traumas da infância e sua influência na vida atual.</label>
+          <label><input type="radio" name="question34" value="c"> A compreensão do paciente em seu conjunto completo e histórico.</label>
+          <label><input type="radio" name="question34" value="d"> A medicação para tratar os sintomas apresentados.</label>
+          <label><input type="radio" name="question34" value="e"> O uso de técnicas de relaxamento e controle da ansiedade.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>35. Na abordagem humanista, o que se destaca sobre o ser humano?</p>
+        <div class="options">
+          <label><input type="radio" name="question35" value="a"> O ser humano é um ser passivo em relação ao ambiente.</label>
+          <label><input type="radio" name="question35" value="b"> O ser humano não tem controle sobre suas ações e decisões.</label>
+          <label><input type="radio" name="question35" value="c"> O ser humano possui a capacidade de autorrealização e autodesenvolvimento.</label>
+          <label><input type="radio" name="question35" value="d"> O ser humano é definido unicamente por seus instintos e impulsos.</label>
+          <label><input type="radio" name="question35" value="e"> O ser humano é totalmente determinado por fatores sociais e econômicos.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>36. Como a abordagem comportamental se diferencia das demais abordagens mencionadas?</p>
+        <div class="options">
+          <label><input type="radio" name="question36" value="a"> Foca apenas na biologia do ser humano.</label>
+          <label><input type="radio" name="question36" value="b"> Enfatiza a aprendizagem por meio da observação e reforços.</label>
+          <label><input type="radio" name="question36" value="c"> Ignora o ambiente e suas influências sobre o indivíduo.</label>
+          <label><input type="radio" name="question36" value="d"> Busca entender o inconsciente e seus efeitos nas ações.</label>
+          <label><input type="radio" name="question36" value="e"> Prioriza a autoexploração e o autoconhecimento do indivíduo.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>37. O que caracteriza o método terapêutico da psicanálise, segundo Sigmund Freud?</p>
+        <div class="options">
+          <label><input type="radio" name="question37" value="a"> A interpretação dos sonhos e sua relação com a realidade.</label>
+          <label><input type="radio" name="question37" value="b"> O tratamento dos sintomas físicos das doenças mentais.</label>
+          <label><input type="radio" name="question37" value="c"> A análise dos conteúdos inconscientes de palavras, ações e produções imaginárias.</label>
+          <label><input type="radio" name="question37" value="d"> A aplicação de técnicas comportamentais para modificar ações.</label>
+          <label><input type="radio" name="question37" value="e"> A ênfase na autoajuda e no desenvolvimento pessoal do paciente.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>38. Qual é o foco principal do behaviorismo na psicologia?</p>
+        <div class="options">
+          <label><input type="radio" name="question38" value="a"> O estudo das emoções e sentimentos humanos.</label>
+          <label><input type="radio" name="question38" value="b"> A análise do inconsciente e seus efeitos nas ações.</label>
+          <label><input type="radio" name="question38" value="c"> A observação e estudo do comportamento humano e animal.</label>
+          <label><input type="radio" name="question38" value="d"> A exploração das relações interpessoais na sociedade.</label>
+          <label><input type="radio" name="question38" value="e"> A investigação dos processos de aprendizagem através da cognição.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>39. Na psicologia humanista, qual é a visão fundamental sobre os seres humanos?</p>
+        <div class="options">
+          <label><input type="radio" name="question39" value="a"> Os seres humanos são moldados exclusivamente por fatores sociais.</label>
+          <label><input type="radio" name="question39" value="b"> Os seres humanos devem ser tratados como seres únicos e individuais.</label>
+          <label><input type="radio" name="question39" value="c"> Os seres humanos não têm controle sobre suas ações.</label>
+          <label><input type="radio" name="question39" value="d"> Os seres humanos são definidos por suas experiências passadas.</label>
+          <label><input type="radio" name="question39" value="e"> Os seres humanos são produtos do seu ambiente e contexto social.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>40. O que caracteriza a Terapia Cognitivo-Comportamental (TCC)?</p>
+        <div class="options">
+          <label><input type="radio" name="question40" value="a"> A análise do comportamento sem considerar os pensamentos.</label>
+          <label><input type="radio" name="question40" value="b"> A combinação de conceitos do behaviorismo e teorias cognitivas.</label>
+          <label><input type="radio" name="question40" value="c"> O foco exclusivo na interpretação de sonhos e no inconsciente.</label>
+          <label><input type="radio" name="question40" value="d"> O uso de medicamentos para tratar distúrbios mentais.</label>
+          <label><input type="radio" name="question40" value="e"> A ênfase na experiência subjetiva do paciente durante a terapia.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>41. Qual é a principal crítica à abordagem psicanalítica em relação ao tratamento de doenças mentais?</p>
+        <div class="options">
+          <label><input type="radio" name="question41" value="a"> Não considera a biologia do paciente.</label>
+          <label><input type="radio" name="question41" value="b"> Ignora a importância do comportamento observável.</label>
+          <label><input type="radio" name="question41" value="c"> Foca apenas nos sintomas imediatos.</label>
+          <label><input type="radio" name="question41" value="d"> É um método que demanda muito tempo e não apresenta resultados rápidos.</label>
+          <label><input type="radio" name="question41" value="e"> Acredita que a cultura não influencia o comportamento humano.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>42. Qual das alternativas abaixo descreve corretamente uma característica dos transtornos de ansiedade, transtornos de humor e transtornos pós-traumáticos?</p>
+        <div class="options">
+          <label><input type="radio" name="question42" value="a"> Os transtornos de ansiedade são definidos pela ausência de preocupações, enquanto os transtornos de humor envolvem apenas mudanças de comportamento sem sintomas físicos.</label>
+          <label><input type="radio" name="question42" value="b"> Os transtornos de humor incluem apenas depressão, enquanto os transtornos de ansiedade se referem a qualquer preocupação excessiva.</label>
+          <label><input type="radio" name="question42" value="c"> O transtorno de estresse pós-traumático é um tipo de transtorno de ansiedade que ocorre após experiências traumáticas, enquanto os transtornos de humor envolvem alterações emocionais que afetam o comportamento e a energia.</label>
+          <label><input type="radio" name="question42" value="d"> Os transtornos de ansiedade e de humor são sempre causados por fatores genéticos, enquanto o transtorno pós-traumático é exclusivamente resultado de experiências ambientais.</label>
+          <label><input type="radio" name="question42" value="e"> Os transtornos de ansiedade se manifestam apenas na infância, enquanto os transtornos de humor ocorrem principalmente na idade adulta.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>43. Qual é a principal característica do julgamento como método de solução de conflitos?</p>
+        <div class="options">
+          <label><input type="radio" name="question43" value="a"> O juiz não tem poder de decisão.</label>
+          <label><input type="radio" name="question43" value="b"> A decisão é tomada pelas partes envolvidas.</label>
+          <label><input type="radio" name="question43" value="c"> O juiz decide baseado na aplicação da lei e análise dos fatos.</label>
+          <label><input type="radio" name="question43" value="d"> As partes podem escolher o juiz.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>44. Na arbitragem, qual é a função principal do árbitro?</p>
+        <div class="options">
+          <label><input type="radio" name="question44" value="a"> Fazer uma análise psicológica das partes.</label>
+          <label><input type="radio" name="question44" value="b"> Decidir a lide escolhendo a melhor solução.</label>
+          <label><input type="radio" name="question44" value="c"> Mediar a comunicação entre as partes.</label>
+          <label><input type="radio" name="question44" value="d"> Substituir a decisão judicial.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>45. Qual é a principal diferença entre negociação e conciliação?</p>
+        <div class="options">
+          <label><input type="radio" name="question45" value="a"> Na conciliação, uma parte decide a questão.</label>
+          <label><input type="radio" name="question45" value="b"> Na negociação, um terceiro é envolvido.</label>
+          <label><input type="radio" name="question45" value="c"> A conciliação não busca resolver questões pessoais.</label>
+          <label><input type="radio" name="question45" value="d"> A negociação é sempre informal.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>46. Como a mediação aborda as divergências entre as partes?</p>
+        <div class="options">
+          <label><input type="radio" name="question46" value="a"> O mediador impõe uma solução.</label>
+          <label><input type="radio" name="question46" value="b"> O mediador busca realinhar os interesses das partes.</label>
+          <label><input type="radio" name="question46" value="c"> O mediador decide quem está certo ou errado.</label>
+          <label><input type="radio" name="question46" value="d"> O mediador não se envolve nas queixas manifestas.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>47. Em uma situação de arbitragem, como é definida a decisão final?</p>
+        <div class="options">
+          <label><input type="radio" name="question47" value="a"> Pela vontade do árbitro apenas.</label>
+          <label><input type="radio" name="question47" value="b"> Com base na análise do juiz do caso.</label>
+          <label><input type="radio" name="question47" value="c"> Pelas partes, em conjunto com o árbitro escolhido.</label>
+          <label><input type="radio" name="question47" value="d"> A decisão é imposta pelo sistema judicial.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>48. Qual dos seguintes fatores, segundo Jean-Claude Chesnais, não é considerado um fator que contribui para a violência urbana no Brasil?</p>
+        <div class="options">
+          <label><input type="radio" name="question48" value="a"> Fatores socioeconômicos, como pobreza e desigualdade social.</label>
+          <label><input type="radio" name="question48" value="b"> Fatores institucionais, incluindo a insuficiência do Estado e a crise do modelo familiar.</label>
+          <label><input type="radio" name="question48" value="c"> Fatores culturais, como problemas de integração racial e desordem moral.</label>
+          <label><input type="radio" name="question48" value="d"> Fatores tecnológicos, como o avanço da informação e comunicação.</label>
+          <label><input type="radio" name="question48" value="e"> Fatores históricos, como a herança da hiperinflação e suas consequências sociais.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>49. De acordo com Jean-Claude Chesnais, qual dos fatores abaixo contribui para o aumento da violência urbana no Brasil ao trazer pressões relacionadas ao crescimento das metrópoles?</p>
+        <div class="options">
+          <label><input type="radio" name="question49" value="a"> A globalização mundial, que enfraquece a noção de fronteiras.</label>
+          <label><input type="radio" name="question49" value="b"> A mídia, ao promover a apologia da violência.</label>
+          <label><input type="radio" name="question49" value="c"> O surgimento de grandes centros urbanos sem infraestrutura adequada.</label>
+          <label><input type="radio" name="question49" value="d"> A crise do modelo familiar e o recuo do poder da Igreja.</label>
+          <label><input type="radio" name="question49" value="e"> A herança da hiperinflação e o aumento das desigualdades socioeconômicas.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>50. A respeito da influência da mídia na percepção da violência e do crime, considerando os pontos apresentados sobre a cobertura midiática, a relação com a segurança pública e as características da insegurança moderna, assinale a alternativa que melhor resume o impacto dessa influência na sociedade:</p>
+        <div class="options">
+          <label><input type="radio" name="question50" value="a"> A cobertura excessiva de eventos violentos pela mídia, com uma abordagem frequentemente sensacionalista, visa apenas o aumento de audiência e não causa impactos significativos na percepção de segurança da sociedade. A divulgação dos crimes é fundamental para manter o público informado, e a contextualização dos fatos, quando ocorre, é suficiente para evitar qualquer distorção emocional ou aumento do medo.</label>
+          <label><input type="radio" name="question50" value="b"> Ao divulgar notícias de violência sem uma devida contextualização, a mídia pode provocar uma sensação exacerbada de insegurança, influenciando as emoções do público de forma negativa, como medo e desejo de vingança. Essa abordagem sensacionalista contribui para a formação de uma sociedade que se sente cada vez mais vulnerável, especialmente nas cidades, que se tornaram locais com diversos problemas associados à globalização e ao crescimento urbano desordenado.</label>
+          <label><input type="radio" name="question50" value="c"> A relação da mídia com a segurança pública é meramente informativa e não interfere na percepção de insegurança dos cidadãos, pois cabe ao público interpretar os fatos de maneira crítica. A mídia, ao fazer cobertura de crimes e atos de violência, cumpre seu papel de informar, sem responsabilidade direta sobre o impacto emocional causado.</label>
+          <label><input type="radio" name="question50" value="d"> A insegurança moderna nas cidades está totalmente desvinculada da cobertura midiática, pois é causada exclusivamente por fatores estruturais e socioeconômicos, como a desigualdade social, o aumento da criminalidade e a insuficiência de infraestrutura urbana. O papel da mídia é secundário e não contribui de forma relevante para a percepção do medo na sociedade.</label>
+          <label><input type="radio" name="question50" value="e"> A mídia, ao priorizar a divulgação de crimes e violência de forma sensacionalista, pode aumentar a sensação de insegurança pública, mas ao mesmo tempo fortalece parcerias importantes para o combate ao crime, auxiliando na investigação e na identificação de criminosos. Dessa forma, a mídia exerce um papel ambíguo, tanto como fonte de informação quanto como catalisadora de emoções, sendo importante sua responsabilidade social na divulgação de fatos de maneira contextualizada para evitar uma percepção distorcida do público.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>51. De acordo com Tim Larkin em sua análise sobre as duas espécies de violência, a "agressão social" e a "violência associal", assinale a alternativa que descreve corretamente a distinção entre essas formas de violência e os elementos que as caracterizam:</p>
+        <div class="options">
+          <label><input type="radio" name="question51" value="a"> A "agressão social" visa a destruição de outra pessoa, promovendo o caos e a miséria, enquanto a "violência associal" se limita a disputas de status e à afirmação da condição dominante, sem o objetivo de causar dano físico.</label>
+          <label><input type="radio" name="question51" value="b"> A principal diferença entre "agressão social" e "violência associal" é a presença de comunicação; a "agressão social" envolve tentativas de dominar sem intenção de causar ferimentos graves, enquanto a "violência associal" é caracterizada por brutalidade e silêncio, com o objetivo de destruir sem qualquer forma de interação comunicativa.</label>
+          <label><input type="radio" name="question51" value="c"> A "agressão social" e a "violência associal" possuem características semelhantes, com ambas as formas visando elevar o status social por meio da submissão do adversário e do colapso de estruturas de ordem e poder.</label>
+          <label><input type="radio" name="question51" value="d"> Segundo Larkin, tanto a "agressão social" quanto a "violência associal" são formas de violência que envolvem comunicação, porém a primeira é silenciosa e inequívoca, enquanto a segunda é caracterizada por uma intenção clara de evitar ferimentos graves.</label>
+          <label><input type="radio" name="question51" value="e"> A "violência associal" promove a ordem e o domínio social, utilizando formas de comunicação primitiva para controlar o adversário, enquanto a "agressão social" tem como objetivo final a destruição e a morte do oponente, sem qualquer forma de interação.</label>
+        </div>
+      </div>
+      ```
+                       
+      <!-- Continue até a questão 30 -->
+      
+      <button type="button" id="submitBtn" onclick="calculateScore()">Enviar</button>
+    </form>
+    
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const correctAnswers = {
+        
+    question1: "c",
+    question2: "c",
+    question3: "c",
+    question4: "b",
+    question5: "c",
+    question6: "b",
+    question7: "a",
+    question8: "b",
+    question9: "b",
+    question10: "b",
+question11: "c",
+question12: "a",
+question13: "b",
+question14: "b",
+question15: "c",
+question16: "b",
+question17: "b",
+question18: "b",
+question19: "c",
+question20: "b",
+question21: "c",
+question22: "b",
+question23: "a",
+question24: "a",
+question25: "b",
+question26: "b",
+question27: "a",
+question28: "b",
+question29: "a",
+question30: "b",
+question31: "b",
+question32: "b",
+question33: "c",
+question34: "b",
+question35: "c",
+question36: "b",
+question37: "c",
+question38: "c",
+question39: "b",
+question40: "b",
+question41: "d",
+question42: "c",
+question43: "c",
+question44: "b",
+question45: "d",
+question46: "b",
+question47: "c",
+question48: "d",
+question49: "c",
+question50: "b",
+question51: "a"
+
+
+
+}
+
+    
+
+    function calculateScore() {
+        const form = document.getElementById('quizForm');
+        let score = 0;
+        const totalQuestions = Object.keys(correctAnswers).length; // Total de perguntas
+
+        for (let question in correctAnswers) {
+            const userAnswer = form[question] ? form[question].value : null;
+            const options = document.querySelectorAll(`input[name="${question}"]`);
+
+            options.forEach(option => {
+                // Remove classes anteriores
+                option.parentElement.classList.remove('correct', 'incorrect');
+                
+                // Aplica classe correta
+                if (option.value === correctAnswers[question]) {
+                    option.parentElement.classList.add('correct');
+                } 
+                // Aplica classe incorreta se for a resposta escolhida
+                else if (userAnswer === option.value) {
+                    option.parentElement.classList.add('incorrect');
+                }
+            });
+
+            // Contagem de respostas corretas
+            if (userAnswer === correctAnswers[question]) {
+                score++;
+            }
+        }
+
+        // Exibição do resultado
+        const resultDiv = document.getElementById('result');
+        resultDiv.style.display = 'block';
+        resultDiv.innerHTML = `Você acertou <strong>${score}</strong> de <strong>${totalQuestions}</strong> questões.<br>Sua nota final é <strong>${(score / totalQuestions * 10).toFixed(1)}</strong>`;
+    }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulado Abordagem Policial</title>
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace; /* Fonte monoespaçada para um visual mais tecnológico */
+      background: linear-gradient(to bottom, #1a1a1a, #333); /* Fundo escuro */
+      color: #f5f5f5; /* Cor do texto mais clara */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px; /* Espaçamento interno */
+    }
+    .container {
+      width: 100%;
+      max-width: 900px;
+      padding: 20px;
+      background: #2c2c2c; /* Cor de fundo da caixa */
+      border: 1px solid #555; /* Borda mais escura */
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Sombra mais intensa */
+      transition: transform 0.2s;
+    }
+
+    h1 {
+      text-align: center;
+      color: #e67e22; /* Laranja vibrante */
+      text-transform: uppercase; /* Letras maiúsculas */
+      letter-spacing: 2px; /* Espaçamento entre letras */
+    }
+    .question {
+      margin-bottom: 20px;
+      padding: 10px; /* Espaçamento interno das questões */
+      border: 1px solid #555; /* Borda das perguntas */
+      border-radius: 5px;
+      background-color: #3a3a3a; /* Fundo das perguntas */
+    }
+    .options label {
+      display: block;
+      margin: 5px 0;
+      padding: 5px; /* Espaçamento interno nos rótulos */
+      border-radius: 4px; /* Bordas arredondadas */
+      transition: background 0.3s; /* Transição de fundo */
+    }
+    .options input[type="radio"] {
+      margin-right: 10px;
+    }
+    .options label:hover {
+      background-color: #444; /* Fundo ao passar o mouse */
+    }
+    #submitBtn {
+      display: block;
+      width: 100%;
+      padding: 15px; /* Aumentar o espaçamento */
+      margin-top: 20px;
+      background-color: #2980b9; /* Azul padrão */
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px; /* Aumentar o tamanho da fonte */
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s;
+    }
+    #submitBtn:hover {
+      background-color: #3498db; /* Azul claro */
+      transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    }
+    #result {
+      margin-top: 20px;
+      padding: 15px;
+      text-align: center;
+      font-size: 20px; /* Aumentar o tamanho da fonte do resultado */
+      background-color: #ecf0f1;
+      border-radius: 5px;
+      display: none;
+      color: #333; /* Cor do texto do resultado */
+    }
+
+    .correct {
+        background-color: lightgreen;
+        color: black;
+        
+    }
+    .incorrect {
+        background-color: lightcoral;
+        color: black;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Simulado Abordagem Psiclogica</h1>
+    <form id="quizForm">
+      
+      <!-- Exemplo de estrutura para uma questão -->
+      <div class="question">
+        <p>1. A respeito do conceito de linguagem, assinale a alternativa correta:</p>
+        <div class="options">
+          <label><input type="radio" name="question1" value="a"> A linguagem se limita apenas à comunicação falada entre as pessoas.</label>
+          <label><input type="radio" name="question1" value="b"> Linguagem é exclusivamente o conjunto de palavras e frases usadas em diálogos escritos.</label>
+          <label><input type="radio" name="question1" value="c"> A linguagem compreende qualquer sistema de signos simbólicos utilizados para expressar e comunicar ideias e sentimentos.</label>
+          <label><input type="radio" name="question1" value="d"> A linguagem só é considerada linguagem quando é expressa de forma escrita.</label>
+          <label><input type="radio" name="question1" value="e"> A linguagem é sinônimo de língua, pois ambas se referem à mesma forma de comunicação.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>2. Sobre os diferentes tipos de linguagem mencionados, assinale a alternativa que melhor os define:</p>
+        <div class="options">
+          <label><input type="radio" name="question2" value="a"> A linguagem falada é feita por gestos, enquanto a mímica utiliza sons orais para comunicação.</label>
+          <label><input type="radio" name="question2" value="b"> A linguagem escrita é a única forma de comunicação reconhecida, sendo a linguagem falada e a mímica formas menos formais de linguagem.</label>
+          <label><input type="radio" name="question2" value="c"> A linguagem falada utiliza sons orais, a mímica é feita por gestos e a escrita é composta por sinais, marcas e gravações.</label>
+          <label><input type="radio" name="question2" value="d"> A linguagem falada, a mímica e a escrita se limitam ao uso de palavras, sem a aplicação de símbolos ou sinais.</label>
+          <label><input type="radio" name="question2" value="e"> A linguagem mímica é baseada apenas em desenhos e a escrita em gravações sonoras.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>3. Sobre a função emotiva da linguagem, assinale a alternativa correta:</p>
+        <div class="options">
+          <label><input type="radio" name="question3" value="a"> A função emotiva é centrada no contexto e tem como objetivo informar de maneira neutra sobre a realidade.</label>
+          <label><input type="radio" name="question3" value="b"> A função emotiva é centrada no emissor e busca expressar sentimentos e emoções pessoais.</label>
+          <label><input type="radio" name="question3" value="c"> A função emotiva tem como objetivo principal persuadir o receptor da mensagem.</label>
+          <label><input type="radio" name="question3" value="d"> A função emotiva é utilizada apenas em discursos científicos e técnicos, com ênfase na precisão das informações.</label>
+          <label><input type="radio" name="question3" value="e"> A função emotiva é exclusiva de textos publicitários e anúncios comerciais.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>4. Assinale a alternativa que descreve corretamente a função conativa da linguagem:</p>
+        <div class="options">
+          <label><input type="radio" name="question4" value="a"> A função conativa é centrada no emissor e visa expressar suas emoções e sentimentos.</label>
+          <label><input type="radio" name="question4" value="b"> A função conativa é voltada para o receptor e tem como objetivo persuadi-lo ou influenciar seu comportamento.</label>
+          <label><input type="radio" name="question4" value="c"> A função conativa está sempre centrada no contexto, buscando transmitir informações objetivas.</label>
+          <label><input type="radio" name="question4" value="d"> A função conativa só aparece em textos científicos e técnicos, focando na precisão e na clareza das informações.</label>
+          <label><input type="radio" name="question4" value="e"> A função conativa se limita à expressão de sentimentos pessoais em poemas e canções.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>5. Qual das alternativas a seguir apresenta um exemplo de uso da função referencial da linguagem?</p>
+        <div class="options">
+          <label><input type="radio" name="question5" value="a"> "Que incrível esta obra de arte!"</label>
+          <label><input type="radio" name="question5" value="b"> "Não perca essa promoção, compre agora!"</label>
+          <label><input type="radio" name="question5" value="c"> "A vacina contra a gripe está disponível nos postos de saúde da cidade."</label>
+          <label><input type="radio" name="question5" value="d"> "Estou tão feliz com os resultados dos meus estudos!"</label>
+          <label><input type="radio" name="question5" value="e"> "O céu está lindo hoje, não acha?"</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>6. Qual das opções a seguir melhor exemplifica a função conativa da linguagem?</p>
+        <div class="options">
+          <label><input type="radio" name="question6" value="a"> "Não deixe de assistir ao filme que está em cartaz!"</label>
+          <label><input type="radio" name="question6" value="b"> "A temperatura no local está em torno de 22°C."</label>
+          <label><input type="radio" name="question6" value="c"> "Acordei muito feliz hoje e quero compartilhar isso com todos."</label>
+          <label><input type="radio" name="question6" value="d"> "Os planetas do sistema solar giram ao redor do Sol."</label>
+          <label><input type="radio" name="question6" value="e"> "A pintura expressa sentimentos profundos do artista."</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>7. A função metalinguística da linguagem é caracterizada por:</p>
+        <div class="options">
+          <label><input type="radio" name="question7" value="a"> Focar no contexto para transmitir informações objetivas sobre a realidade.</label>
+          <label><input type="radio" name="question7" value="b"> Colocar em evidência o próprio código de comunicação, como filmes que falam sobre cinema.</label>
+          <label><input type="radio" name="question7" value="c"> Expressar emoções e sentimentos do emissor, buscando uma comunicação pessoal.</label>
+          <label><input type="radio" name="question7" value="d"> Focar no receptor para influenciar ou persuadi-lo a tomar uma ação específica.</label>
+          <label><input type="radio" name="question7" value="e"> Priorizar o meio de contato utilizado, como em expressões do tipo "Né?" ou "Sabe?"</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>8. Qual das alternativas a seguir caracteriza a função fática da linguagem?</p>
+        <div class="options">
+          <label><input type="radio" name="question8" value="a"> Uso de figuras de linguagem, como metáforas e antíteses, para criar um efeito estético.</label>
+          <label><input type="radio" name="question8" value="b"> Centrar-se no próprio código de comunicação, esclarecendo ou explicando o uso da língua.</label>
+          <label><input type="radio" name="question8" value="c"> Priorizar o meio de contato e assegurar que a comunicação está ocorrendo, como em expressões como "Né?" ou "Entende?"</label>
+          <label><input type="radio" name="question8" value="d"> Focar em sentimentos e emoções do emissor, revelando seu estado de espírito.</label>
+          <label><input type="radio" name="question8" value="e"> Transmitir informações objetivas sobre o contexto e a realidade.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>9. Assinale a alternativa que exemplifica a função poética da linguagem:</p>
+        <div class="options">
+          <label><input type="radio" name="question9" value="a"> "Por favor, passe o açúcar."</label>
+          <label><input type="radio" name="question9" value="b"> "O curso de água corrente faz sua trilha pelas montanhas como se dançasse ao som do vento."</label>
+          <label><input type="radio" name="question9" value="c"> "Preciso que você preencha este formulário antes de sair."</label>
+          <label><input type="radio" name="question9" value="d"> "Esta expressão significa que devemos ser prudentes nas decisões."</label>
+          <label><input type="radio" name="question9" value="e"> "Olhe, não é verdade que ele estava certo?"</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>10. A função poética da linguagem se caracteriza por:</p>
+        <div class="options">
+          <label><input type="radio" name="question10" value="a"> Dar ênfase ao receptor, com o intuito de influenciá-lo ou persuadi-lo.</label>
+          <label><input type="radio" name="question10" value="b"> Transmitir informações objetivas e neutras sobre o contexto.</label>
+          <label><input type="radio" name="question10" value="c"> Focar no código e seu uso correto, como em definições e explicações de palavras.</label>
+          <label><input type="radio" name="question10" value="d"> Criar uma mensagem que se destaca pela forma e estética, usando figuras de linguagem e apelos sensoriais.</label>
+          <label><input type="radio" name="question10" value="e"> Garantir que a comunicação está ocorrendo, mantendo a conexão entre emissor e receptor.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>11. Assinale a alternativa que melhor descreve o discurso direto:</p>
+        <div class="options">
+          <label><input type="radio" name="question11" value="a"> O narrador reproduz o que o personagem disse, mas usando suas próprias palavras e na terceira pessoa.</label>
+          <label><input type="radio" name="question11" value="b"> O personagem é chamado a apresentar suas próprias palavras, com a presença de verbos como "dizer", "afirmar" e "sugerir".</label>
+          <label><input type="radio" name="question11" value="c"> O narrador se mistura com o personagem, assumindo seus pensamentos e reflexões.</label>
+          <label><input type="radio" name="question11" value="d"> O narrador insere falas das personagens, mas com uma interpretação própria, sem verbos declarativos.</label>
+          <label><input type="radio" name="question11" value="e"> O narrador expressa somente suas próprias reflexões, sem reproduzir falas de personagens.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>12. Sobre o discurso indireto, assinale a alternativa correta:</p>
+        <div class="options">
+          <label><input type="radio" name="question12" value="a"> No discurso indireto, o narrador interrompe a narrativa para inserir exclamações e interrogações dos personagens.</label>
+          <label><input type="radio" name="question12" value="b"> O discurso indireto utiliza um verbo declarativo em uma oração subordinada substantiva, geralmente em terceira pessoa.</label>
+          <label><input type="radio" name="question12" value="c"> O discurso indireto permite que o personagem fale diretamente, sem intervenção do narrador.</label>
+          <label><input type="radio" name="question12" value="d"> O discurso indireto é feito exclusivamente na primeira pessoa do discurso.</label>
+          <label><input type="radio" name="question12" value="e"> No discurso indireto, não há presença de verbos declarativos nem estrutura subordinada.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>13. Assinale a alternativa que melhor caracteriza o discurso indireto livre:</p>
+        <div class="options">
+          <label><input type="radio" name="question13" value="a"> O narrador apenas narra os eventos sem inserir reflexões ou pensamentos das personagens.</label>
+          <label><input type="radio" name="question13" value="b"> O narrador interrompe a narrativa para registrar reflexões ou pensamentos das personagens, mantendo exclamações e interrogações.</label>
+          <label><input type="radio" name="question13" value="c"> O discurso indireto livre utiliza apenas a primeira pessoa e não inclui emoções das personagens.</label>
+          <label><input type="radio" name="question13" value="d"> O narrador se limita a relatar os fatos sem interferir nos pensamentos dos personagens.</label>
+          <label><input type="radio" name="question13" value="e"> O discurso indireto livre é exclusivo de narrativas que utilizam apenas a terceira pessoa.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>14. Qual das alternativas a seguir apresenta um exemplo de discurso direto?</p>
+        <div class="options">
+          <label><input type="radio" name="question14" value="a"> Maria disse que estava cansada.</label>
+          <label><input type="radio" name="question14" value="b"> Maria exclamou: "Estou tão cansada!"</label>
+          <label><input type="radio" name="question14" value="c"> Maria estava cansada, pensou o narrador, refletindo sobre o dia difícil dela.</label>
+          <label><input type="radio" name="question14" value="d"> "Estou tão cansada," Maria refletiu, mas o narrador ignorou.</label>
+          <label><input type="radio" name="question14" value="e"> Maria comentou em silêncio sobre seu cansaço.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>15. Qual das alternativas a seguir representa a estrutura básica do discurso indireto?</p>
+        <div class="options">
+          <label><input type="radio" name="question15" value="a"> Verbo de elocução + fala do narrador + conjunção + fala da personagem.</label>
+          <label><input type="radio" name="question15" value="b"> Fala da personagem diretamente, sem intervenção do narrador.</label>
+          <label><input type="radio" name="question15" value="c"> Fala do narrador + verbo de elocução + conjunção + fala da personagem pelas palavras do narrador.</label>
+          <label><input type="radio" name="question15" value="d"> Fala do narrador + fala direta da personagem sem conjunção.</label>
+          <label><input type="radio" name="question15" value="e"> Verbo de elocução + fala direta da personagem, sem uso de conjunções.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>16. Assinale a alternativa correta sobre sinônimos:</p>
+        <div class="options">
+          <label><input type="radio" name="question16" value="a"> Sinônimos são palavras com significados opostos entre si.</label>
+          <label><input type="radio" name="question16" value="b"> Sinônimos são palavras que possuem o mesmo significado ou significados muito semelhantes.</label>
+          <label><input type="radio" name="question16" value="c"> Sinônimos são palavras que têm sons iguais, mas significados diferentes.</label>
+          <label><input type="radio" name="question16" value="d"> Sinônimos são palavras que possuem a mesma grafia, mas têm significados diferentes dependendo do contexto.</label>
+          <label><input type="radio" name="question16" value="e"> Sinônimos são palavras que apresentam ambiguidade e múltiplos significados em contextos diferentes.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>17. Assinale a alternativa correta sobre antônimos:</p>
+        <div class="options">
+          <label><input type="radio" name="question17" value="a"> Antônimos são palavras com significados semelhantes.</label>
+          <label><input type="radio" name="question17" value="b"> Antônimos são palavras que apresentam sons parecidos, mas grafias e significados diferentes.</label>
+          <label><input type="radio" name="question17" value="c"> Antônimos são palavras que possuem significados opostos ou contrários entre si.</label>
+          <label><input type="radio" name="question17" value="d"> Antônimos são palavras que compartilham a mesma origem, mas têm diferentes sentidos em contextos específicos.</label>
+          <label><input type="radio" name="question17" value="e"> Antônimos são palavras que apresentam ambiguidade dependendo do contexto.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>18. Homônimos são palavras que:</p>
+        <div class="options">
+          <label><input type="radio" name="question18" value="a"> Têm a mesma pronúncia e significado, mas grafia diferente.</label>
+          <label><input type="radio" name="question18" value="b"> Possuem a mesma grafia ou pronúncia, mas têm significados diferentes.</label>
+          <label><input type="radio" name="question18" value="c"> Têm significados e grafias completamente diferentes, sem relação de som ou sentido.</label>
+          <label><input type="radio" name="question18" value="d"> São sempre palavras de origem estrangeira com grafias adaptadas ao português.</label>
+          <label><input type="radio" name="question18" value="e"> Têm sons e grafias idênticas, mas representam sinônimos em contextos distintos.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>19. Assinale a alternativa que descreve corretamente os parônimos:</p>
+        <div class="options">
+          <label><input type="radio" name="question19" value="a"> Parônimos são palavras que possuem grafias e pronúncias semelhantes, mas significados diferentes.</label>
+          <label><input type="radio" name="question19" value="b"> Parônimos são palavras que possuem significados opostos.</label>
+          <label><input type="radio" name="question19" value="c"> Parônimos são palavras com múltiplos significados que variam conforme o contexto.</label>
+          <label><input type="radio" name="question19" value="d"> Parônimos são palavras com grafias e pronúncias idênticas e significados semelhantes.</label>
+          <label><input type="radio" name="question19" value="e"> Parônimos são expressões que representam ideias ambíguas e polissêmicas.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>20. Sobre polissemia, assinale a alternativa correta:</p>
+        <div class="options">
+          <label><input type="radio" name="question20" value="a"> Polissemia ocorre quando uma palavra tem múltiplos significados relacionados em diferentes contextos.</label>
+          <label><input type="radio" name="question20" value="b"> Polissemia ocorre quando duas palavras diferentes têm significados opostos.</label>
+          <label><input type="radio" name="question20" value="c"> Polissemia ocorre quando palavras possuem grafias semelhantes, mas significados distintos.</label>
+          <label><input type="radio" name="question20" value="d"> Polissemia é quando uma palavra se refere a outro termo de significado semelhante.</label>
+          <label><input type="radio" name="question20" value="e"> Polissemia ocorre somente em palavras com som igual e significado idêntico.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>21. Qual das alternativas a seguir exemplifica a ambiguidade?</p>
+        <div class="options">
+          <label><input type="radio" name="question21" value="a"> "O banco está aberto para novos investimentos."</label>
+          <label><input type="radio" name="question21" value="b"> "A menina viu o homem com o binóculo."</label>
+          <label><input type="radio" name="question21" value="c"> "A casa é grande e confortável."</label>
+          <label><input type="radio" name="question21" value="d"> "O menino correu rapidamente para casa."</label>
+          <label><input type="radio" name="question21" value="e"> "O cachorro latiu para o vizinho."</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>22. Assinale a alternativa que melhor define a semântica:</p>
+        <div class="options">
+          <label><input type="radio" name="question22" value="a"> Semântica é o estudo dos sons das palavras e sua pronúncia correta.</label>
+          <label><input type="radio" name="question22" value="b"> Semântica é a área da linguística que se dedica ao estudo do significado das palavras e da relação entre sentido e estrutura dentro de um enunciado.</label>
+          <label><input type="radio" name="question22" value="c"> Semântica é a análise das origens das palavras em uma língua específica.</label>
+          <label><input type="radio" name="question22" value="d"> Semântica é o estudo da conjugação verbal e da gramática normativa.</label>
+          <label><input type="radio" name="question22" value="e"> Semântica refere-se apenas ao estudo de palavras com múltiplos significados.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>23. O que é campo semântico?</p>
+        <div class="options">
+          <label><input type="radio" name="question23" value="a"> Um conjunto de palavras que possuem a mesma raiz etimológica.</label>
+          <label><input type="radio" name="question23" value="b"> A análise da fonética das palavras de uma língua.</label>
+          <label><input type="radio" name="question23" value="c"> O estudo do significado de cada vocábulo que existe em uma língua, agrupando palavras por sentido.</label>
+          <label><input type="radio" name="question23" value="d"> A relação entre palavras de pronúncia similar, mas com significados diferentes.</label>
+          <label><input type="radio" name="question23" value="e"> Uma lista de palavras sinônimas que pertencem a uma mesma categoria.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>24. Qual das alternativas representa um exemplo de palavras que pertencem ao mesmo campo semântico?</p>
+        <div class="options">
+          <label><input type="radio" name="question24" value="a"> Casa, sol, beleza, correr.</label>
+          <label><input type="radio" name="question24" value="b"> Banco, cadeira, sofá, poltrona.</label>
+          <label><input type="radio" name="question24" value="c"> Caminhar, televisão, frio, comida.</label>
+          <label><input type="radio" name="question24" value="d"> Ar, vida, morte, paz.</label>
+          <label><input type="radio" name="question24" value="e"> Computador, livro, jardim, coragem.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>25. Sobre o conceito de ambiguidade na semântica, assinale a alternativa correta:</p>
+        <div class="options">
+          <label><input type="radio" name="question25" value="a"> Ambiguidade ocorre quando uma palavra tem um único significado claro e direto.</label>
+          <label><input type="radio" name="question25" value="b"> Ambiguidade ocorre quando uma expressão ou frase pode ser interpretada de várias maneiras diferentes.</label>
+          <label><input type="radio" name="question25" value="c"> Ambiguidade é o estudo das palavras que possuem o mesmo significado.</label>
+          <label><input type="radio" name="question25" value="d"> Ambiguidade só ocorre em frases que contêm palavras parônimas.</label>
+          <label><input type="radio" name="question25" value="e"> Ambiguidade é um conceito que se refere a palavras com significado oposto.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>26. Assinale a alternativa que melhor define o conceito de frase:</p>
+        <div class="options">
+          <label><input type="radio" name="question26" value="a"> Frase é todo enunciado de sentido completo, que necessariamente deve conter um verbo.</label>
+          <label><input type="radio" name="question26" value="b"> Frase é um enunciado de sentido completo, podendo ser composto por uma ou várias palavras, com ou sem a presença de verbo.</label>
+          <label><input type="radio" name="question26" value="c"> Frase é um conjunto de palavras sem necessariamente formar um sentido completo.</label>
+          <label><input type="radio" name="question26" value="d"> Frase é apenas uma sequência de palavras que compõem o título de um texto.</label>
+          <label><input type="radio" name="question26" value="e"> Frase é um enunciado que sempre contém tópicos frasais e desenvolvimento.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>27. Qual das alternativas a seguir contém exemplos de frases?</p>
+        <div class="options">
+          <label><input type="radio" name="question27" value="a"> "Lindo", "Que dia!", "Correrá amanhã se chover".</label>
+          <label><input type="radio" name="question27" value="b"> "Fogo!", "Atenção!", "Que inocência! Que aurora!".</label>
+          <label><input type="radio" name="question27" value="c"> "Alguns anos vivi em Itabira", "Que alegria!"</label>
+          <label><input type="radio" name="question27" value="d"> Somente as alternativas b e c estão corretas.</label>
+          <label><input type="radio" name="question27" value="e"> Nenhuma das alternativas anteriores contém frases.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>28. Sobre o conceito de parágrafo, assinale a alternativa correta:</p>
+        <div class="options">
+          <label><input type="radio" name="question28" value="a"> Parágrafo é uma unidade de texto com sentido completo que, necessariamente, não possui recuo na margem.</label>
+          <label><input type="radio" name="question28" value="b"> Parágrafo organiza o texto em trechos, iniciando com recuo na margem esquerda e encerrando com ponto final.</label>
+          <label><input type="radio" name="question28" value="c"> Parágrafo é a repetição de uma ideia central sem a presença de tópicos frasais ou desenvolvimento.</label>
+          <label><input type="radio" name="question28" value="d"> Parágrafo é um agrupamento de frases sem conexão que divide o texto em blocos.</label>
+          <label><input type="radio" name="question28" value="e"> Parágrafo é o resumo de um texto em uma única frase.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>29. Os elementos que estruturam um parágrafo são:</p>
+        <div class="options">
+          <label><input type="radio" name="question29" value="a"> Tópico frasal, introdução e desenvolvimento.</label>
+          <label><input type="radio" name="question29" value="b"> Introdução, conclusão e explicação.</label>
+          <label><input type="radio" name="question29" value="c"> Tópico frasal, desenvolvimento e conclusão.</label>
+          <label><input type="radio" name="question29" value="d"> Síntese, desenvolvimento e pergunta final.</label>
+          <label><input type="radio" name="question29" value="e"> Desenvolvimento, citação e conclusão.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>30. Em relação à função dos parágrafos em um texto, assinale a alternativa correta:</p>
+        <div class="options">
+          <label><input type="radio" name="question30" value="a"> Parágrafos têm a única função de dividir visualmente o texto, sem organização de ideias.</label>
+          <label><input type="radio" name="question30" value="b"> Parágrafos servem para organizar as ideias de um texto em introdução, desenvolvimento e conclusão.</label>
+          <label><input type="radio" name="question30" value="c"> Parágrafos devem sempre apresentar uma citação para validar o conteúdo exposto.</label>
+          <label><input type="radio" name="question30" value="d"> Parágrafos são unidades de texto com sentido independente, sem relação entre si.</label>
+          <label><input type="radio" name="question30" value="e"> Parágrafos são apenas uma convenção estética sem função no conteúdo do texto.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>31. Assinale a alternativa que define corretamente o conceito de tipos textuais:</p>
+        <div class="options">
+          <label><input type="radio" name="question31" value="a"> Tipos textuais são estilos de escrita que se limitam à narrativa e à descrição.</label>
+          <label><input type="radio" name="question31" value="b"> Tipos textuais são estruturas que delimitam e possibilitam a construção de textos de diferentes gêneros, com base em elementos estruturais.</label>
+          <label><input type="radio" name="question31" value="c"> Tipos textuais referem-se aos diferentes temas que podem ser abordados em um texto.</label>
+          <label><input type="radio" name="question31" value="d"> Tipos textuais representam exclusivamente os textos de caráter argumentativo.</label>
+          <label><input type="radio" name="question31" value="e"> Tipos textuais são formas de textos que não possuem regras estruturais.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>32. Qual das alternativas abaixo apresenta corretamente os tipos textuais?</p>
+        <div class="options">
+          <label><input type="radio" name="question32" value="a"> Expositivo, narrativo, dissertativo, analítico e explicativo.</label>
+          <label><input type="radio" name="question32" value="b"> Descritivo, narrativo, injuntivo, expositivo e dissertativo.</label>
+          <label><input type="radio" name="question32" value="c"> Injuntivo, analítico, descritivo, narrativo e conclusivo.</label>
+          <label><input type="radio" name="question32" value="d"> Expositivo, dissertativo, interpretativo, narrativo e descritivo.</label>
+          <label><input type="radio" name="question32" value="e"> Narrativo, dissertativo, explicativo, descritivo e argumentativo.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>33. Sobre o tipo textual narrativo, assinale a alternativa correta:</p>
+        <div class="options">
+          <label><input type="radio" name="question33" value="a"> O tipo textual narrativo é caracterizado pela apresentação de argumentos e opiniões.</label>
+          <label><input type="radio" name="question33" value="b"> O tipo textual narrativo tem como foco principal a descrição de objetos e cenários.</label>
+          <label><input type="radio" name="question33" value="c"> O tipo textual narrativo desenvolve uma sequência de fatos ou acontecimentos, geralmente envolvendo personagens e um enredo.</label>
+          <label><input type="radio" name="question33" value="d"> O tipo textual narrativo é usado apenas em textos científicos.</label>
+          <label><input type="radio" name="question33" value="e"> O tipo textual narrativo se limita a comandos e instruções.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>34. Qual é a principal característica do tipo textual injuntivo?</p>
+        <div class="options">
+          <label><input type="radio" name="question34" value="a"> Descrever um objeto ou cena com detalhes precisos.</label>
+          <label><input type="radio" name="question34" value="b"> Narrar uma sequência de eventos fictícios ou reais.</label>
+          <label><input type="radio" name="question34" value="c"> Apresentar informações sobre um tema de forma objetiva e clara.</label>
+          <label><input type="radio" name="question34" value="d"> Orientar ou instruir o leitor, como em manuais e receitas.</label>
+          <label><input type="radio" name="question34" value="e"> Expor opiniões e argumentações sobre determinado assunto.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>35. O tipo textual dissertativo é comumente associado a:</p>
+        <div class="options">
+          <label><input type="radio" name="question35" value="a"> Explicações de conceitos científicos e definições de termos técnicos.</label>
+          <label><input type="radio" name="question35" value="b"> Textos que objetivam persuadir o leitor, com a apresentação de argumentos e opiniões.</label>
+          <label><input type="radio" name="question35" value="c"> Histórias fictícias, com personagens e enredo.</label>
+          <label><input type="radio" name="question35" value="d"> Descrições detalhadas de cenários e objetos.</label>
+          <label><input type="radio" name="question35" value="e"> Comandos e orientações para realização de atividades.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>36. Qual das alternativas descreve corretamente o tipo textual narrativo?</p>
+        <div class="options">
+          <label><input type="radio" name="question36" value="a"> O tipo textual narrativo se caracteriza por descrever de maneira detalhada um tema sem a necessidade de enredo.</label>
+          <label><input type="radio" name="question36" value="b"> O tipo textual narrativo é centrado em apresentar argumentos e opiniões sobre um tema específico.</label>
+          <label><input type="radio" name="question36" value="c"> O tipo textual narrativo tem como foco principal a sequência de acontecimentos, reais ou ficcionais, e envolve narrador, personagens, tempo e espaço.</label>
+          <label><input type="radio" name="question36" value="d"> O tipo textual narrativo apresenta exclusivamente dados e informações objetivas sem a presença de personagens.</label>
+          <label><input type="radio" name="question36" value="e"> O tipo textual narrativo é focado em instruções e orientações para o leitor.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>37. No tipo textual dissertativo, o autor busca:</p>
+        <div class="options">
+          <label><input type="radio" name="question37" value="a"> Persuadir o leitor por meio de apresentação de dados e exemplos, além de apresentar uma defesa clara de um tema.</label>
+          <label><input type="radio" name="question37" value="b"> Narrar acontecimentos em uma sequência lógica, com foco em personagens e espaço.</label>
+          <label><input type="radio" name="question37" value="c"> Apresentar uma sequência de instruções para o leitor, sem a necessidade de defesa de um tema.</label>
+          <label><input type="radio" name="question37" value="d"> Descrever a aparência e as características dos personagens de forma detalhada.</label>
+          <label><input type="radio" name="question37" value="e"> Transmitir sentimentos e emoções de forma subjetiva, sem argumentação estruturada.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>38. Quais elementos são essenciais para a construção de um texto narrativo?</p>
+        <div class="options">
+          <label><input type="radio" name="question38" value="a"> Apenas a sequência de ações, sem a necessidade de personagens ou espaço.</label>
+          <label><input type="radio" name="question38" value="b"> Presença de narrador, personagens, tempo e espaço, que estruturam a narrativa.</label>
+          <label><input type="radio" name="question38" value="c"> Foco em argumentos e justificativas, com ausência de personagens ou enredo.</label>
+          <label><input type="radio" name="question38" value="d"> Somente o enredo, sem a necessidade de interações entre os personagens.</label>
+          <label><input type="radio" name="question38" value="e"> Utilização exclusiva de dados científicos e dados objetivos.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>39. A estrutura de um texto dissertativo se divide em:</p>
+        <div class="options">
+          <label><input type="radio" name="question39" value="a"> Introdução, desenvolvimento e conclusão, com o objetivo de defender uma ideia por meio de argumentos.</label>
+          <label><input type="radio" name="question39" value="b"> Apenas desenvolvimento e conclusão, sem a necessidade de uma introdução formal.</label>
+          <label><input type="radio" name="question39" value="c"> Somente uma introdução, sem a necessidade de defesa ou posicionamento do autor.</label>
+          <label><input type="radio" name="question39" value="d"> Desenvolvimento de argumentos e exemplos sem a necessidade de conclusão.</label>
+          <label><input type="radio" name="question39" value="e"> Apresentação de uma narrativa fictícia, sem a necessidade de defesa de um ponto de vista.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>40. Qual a principal característica do tipo textual dissertativo?</p>
+        <div class="options">
+          <label><input type="radio" name="question40" value="a"> Focar em narrativas de eventos fictícios com uma grande quantidade de personagens.</label>
+          <label><input type="radio" name="question40" value="b"> Apresentar um posicionamento claro sobre um tema, utilizando argumentos e exemplos para persuadir o leitor.</label>
+          <label><input type="radio" name="question40" value="c"> Utilizar a descrição detalhada de ambientes e pessoas para construir um enredo fictício.</label>
+          <label><input type="radio" name="question40" value="d"> Apresentar exclusivamente instruções práticas e passos para execução de uma tarefa.</label>
+          <label><input type="radio" name="question40" value="e"> Ser estruturado de forma livre, sem seguir uma organização pré-determinada.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>41. O que caracteriza a coerência sintática em um texto?</p>
+        <div class="options">
+          <label><input type="radio" name="question41" value="a"> A relação entre as palavras e expressões, garantindo que o texto tenha sentido.</label>
+          <label><input type="radio" name="question41" value="b"> A relação entre os componentes de um texto, como sujeito, predicado e demais elementos da oração.</label>
+          <label><input type="radio" name="question41" value="c"> A utilização da variedade linguística correta, de acordo com o contexto.</label>
+          <label><input type="radio" name="question41" value="d"> A escolha adequada do gênero textual utilizado no texto.</label>
+          <label><input type="radio" name="question41" value="e"> A utilização de elementos extralinguísticos, como o contexto social e cultural.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>42. Qual é o princípio da coerência textual que está relacionado à ausência de contradição no conteúdo de um texto?</p>
+        <div class="options">
+          <label><input type="radio" name="question42" value="a"> Coerência semântica.</label>
+          <label><input type="radio" name="question42" value="b"> Coerência estilística.</label>
+          <label><input type="radio" name="question42" value="c"> Não contradição.</label>
+          <label><input type="radio" name="question42" value="d"> Coerência temática.</label>
+          <label><input type="radio" name="question42" value="e"> Coesão.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>43. O que caracteriza a coerência semântica em um texto?</p>
+        <div class="options">
+          <label><input type="radio" name="question43" value="a"> A relação entre as palavras ou expressões, garantindo que o texto tenha sentido.</label>
+          <label><input type="radio" name="question43" value="b"> A manutenção do mesmo tema ao longo do texto.</label>
+          <label><input type="radio" name="question43" value="c"> A utilização de uma linguagem apropriada ao contexto.</label>
+          <label><input type="radio" name="question43" value="d"> A escolha correta do gênero textual de acordo com o propósito do texto.</label>
+          <label><input type="radio" name="question43" value="e"> A organização de um texto que se baseia no contexto extralinguístico.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>44. A coerência pragmática está associada a qual elemento do texto?</p>
+        <div class="options">
+          <label><input type="radio" name="question44" value="a"> À relação entre palavras e expressões no contexto textual.</label>
+          <label><input type="radio" name="question44" value="b"> Aos elementos extralinguísticos, como o contexto social e cultural.</label>
+          <label><input type="radio" name="question44" value="c"> À escolha do gênero textual apropriado.</label>
+          <label><input type="radio" name="question44" value="d"> À utilização de uma estrutura sintática correta.</label>
+          <label><input type="radio" name="question44" value="e"> À variedade linguística utilizada no texto.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>45. A coerência temática de um texto ocorre quando:</p>
+        <div class="options">
+          <label><input type="radio" name="question45" value="a"> O texto apresenta palavras e expressões que não fazem sentido no contexto.</label>
+          <label><input type="radio" name="question45" value="b"> O texto foge do tema central proposto.</label>
+          <label><input type="radio" name="question45" value="c"> O texto utiliza uma linguagem formal adequada ao contexto social.</label>
+          <label><input type="radio" name="question45" value="d"> O texto mantém o mesmo tema ao longo de toda a sua construção.</label>
+          <label><input type="radio" name="question45" value="e"> O texto utiliza elementos de coesão para organizar suas ideias.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>46. O que é coesão textual e qual seu papel na coerência?</p>
+        <div class="options">
+          <label><input type="radio" name="question46" value="a"> A coesão textual refere-se à relação entre as palavras, e sua função é garantir a compreensão do texto.</label>
+          <label><input type="radio" name="question46" value="b"> A coesão textual se refere aos elementos estruturais do texto, como conectivos, que ajudam a organizar e articular as ideias, facilitando a coerência.</label>
+          <label><input type="radio" name="question46" value="c"> A coesão textual está relacionada à escolha do gênero textual adequado.</label>
+          <label><input type="radio" name="question46" value="d"> A coesão textual se refere à sequência de acontecimentos dentro do texto, sem interferência de elementos linguísticos.</label>
+          <label><input type="radio" name="question46" value="e"> A coesão textual diz respeito à construção de frases curtas e sem detalhes, sem a necessidade de conectores.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>47. O que caracteriza a coesão textual referencial?</p>
+        <div class="options">
+          <label><input type="radio" name="question47" value="a"> A relação entre palavras e expressões no contexto do texto.</label>
+          <label><input type="radio" name="question47" value="b"> A articulação entre os elementos de um texto, onde um elemento retoma outro.</label>
+          <label><input type="radio" name="question47" value="c"> A organização lógica das ideias ao longo do texto, sem considerar a linguagem.</label>
+          <label><input type="radio" name="question47" value="d"> A sequência de palavras que ajudam a conectar diferentes seções do texto.</label>
+          <label><input type="radio" name="question47" value="e"> A relação entre as palavras e o contexto social em que o texto foi produzido.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>48. A coesão textual sequencial está relacionada a qual aspecto do texto?</p>
+        <div class="options">
+          <label><input type="radio" name="question48" value="a"> À relação entre partes do texto que formam sequências de ideias, com base em sua ordem lógica.</label>
+          <label><input type="radio" name="question48" value="b"> À forma como os elementos do texto se conectam em relação ao contexto social e cultural.</label>
+          <label><input type="radio" name="question48" value="c"> Ao uso de conectivos para articular as ideias dentro do texto.</label>
+          <label><input type="radio" name="question48" value="d"> À articulação entre elementos de um texto que retoma um ao outro.</label>
+          <label><input type="radio" name="question48" value="e"> À sequência temporal de acontecimentos que não dependem da articulação entre ideias.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>49. Qual a principal diferença entre coesão referencial e coesão sequencial?</p>
+        <div class="options">
+          <label><input type="radio" name="question49" value="a"> A coesão referencial é voltada à articulação lógica das ideias, enquanto a coesão sequencial trata das retomações dos elementos no texto.</label>
+          <label><input type="radio" name="question49" value="b"> A coesão referencial retoma elementos dentro do texto, enquanto a coesão sequencial articula a sequência lógica das ideias.</label>
+          <label><input type="radio" name="question49" value="c"> A coesão referencial está relacionada à articulação das palavras de forma isolada, enquanto a sequencial não depende da organização do texto.</label>
+          <label><input type="radio" name="question49" value="d"> A coesão referencial se refere a palavras e expressões usadas na sequência do texto, enquanto a sequencial está ligada à variação estilística.</label>
+          <label><input type="radio" name="question49" value="e"> A coesão referencial está relacionada à estrutura linguística do texto, enquanto a sequencial depende dos aspectos extralinguísticos.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>50. Como a coesão textual contribui para a coerência de um texto?</p>
+        <div class="options">
+          <label><input type="radio" name="question50" value="a"> A coesão textual não tem impacto sobre a coerência do texto.</label>
+          <label><input type="radio" name="question50" value="b"> A coesão textual ajuda na construção de uma relação lógica entre as ideias, facilitando a compreensão do sentido do texto.</label>
+          <label><input type="radio" name="question50" value="c"> A coesão textual é um fenômeno extralinguístico que depende do contexto cultural do texto.</label>
+          <label><input type="radio" name="question50" value="d"> A coesão textual organiza apenas a forma do texto, sem relação com o conteúdo.</label>
+          <label><input type="radio" name="question50" value="e"> A coesão textual só pode ser observada em textos dissertativos.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>51. Quais são os principais tipos de coesão textual?</p>
+        <div class="options">
+          <label><input type="radio" name="question51" value="a"> Coesão semântica e estilística.</label>
+          <label><input type="radio" name="question51" value="b"> Coesão referencial e sequencial.</label>
+          <label><input type="radio" name="question51" value="c"> Coesão pragmática e sintática.</label>
+          <label><input type="radio" name="question51" value="d"> Coesão narrativa e descritiva.</label>
+          <label><input type="radio" name="question51" value="e"> Coesão temática e de estrutura.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>52. Qual a principal diferença entre coesão e coerência em um texto?</p>
+        <div class="options">
+          <label><input type="radio" name="question52" value="a"> A coesão está relacionada à construção do significado do texto, enquanto a coerência se refere aos mecanismos linguísticos usados para articular as ideias.</label>
+          <label><input type="radio" name="question52" value="b"> A coesão depende de elementos extralinguísticos, enquanto a coerência é um fenômeno apenas linguístico.</label>
+          <label><input type="radio" name="question52" value="c"> A coesão se refere aos mecanismos linguísticos que ligam os elementos do texto, enquanto a coerência está relacionada ao sentido do texto, envolvendo aspectos extralinguísticos.</label>
+          <label><input type="radio" name="question52" value="d"> A coesão e a coerência são fenômenos que ocorrem apenas em textos escritos.</label>
+          <label><input type="radio" name="question52" value="e"> A coesão é irrelevante para a construção do sentido do texto, que depende apenas da coerência.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>53. A coesão é um fenômeno restrito a qual aspecto do texto?</p>
+        <div class="options">
+          <label><input type="radio" name="question53" value="a"> Ao contexto sociocultural do texto.</label>
+          <label><input type="radio" name="question53" value="b"> À estrutura linguística do texto.</label>
+          <label><input type="radio" name="question53" value="c"> À intencionalidade do autor.</label>
+          <label><input type="radio" name="question53" value="d"> Ao conteúdo semântico do texto.</label>
+          <label><input type="radio" name="question53" value="e"> Ao sentido do texto, incluindo os aspectos emocionais do leitor.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>54. A coerência textual depende de quais fatores além dos linguísticos?</p>
+        <div class="options">
+          <label><input type="radio" name="question54" value="a"> Apenas dos elementos linguísticos presentes no texto.</label>
+          <label><input type="radio" name="question54" value="b"> Apenas da intenção do autor ao escrever.</label>
+          <label><input type="radio" name="question54" value="c"> Dos elementos extralinguísticos, como aspectos cognitivos e socioculturais.</label>
+          <label><input type="radio" name="question54" value="d"> Do uso correto da pontuação e gramática.</label>
+          <label><input type="radio" name="question54" value="e"> Da estrutura formal do texto, como introdução, desenvolvimento e conclusão.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>55. A coesão ajuda a formar qual parte do texto?</p>
+        <div class="options">
+          <label><input type="radio" name="question55" value="a"> O conteúdo semântico e a interpretação do texto.</label>
+          <label><input type="radio" name="question55" value="b"> O significado global e as implicações extralinguísticas.</label>
+          <label><input type="radio" name="question55" value="c"> A estrutura linguística e as ligações entre os elementos do texto.</label>
+          <label><input type="radio" name="question55" value="d"> A recepção emocional e cultural do leitor.</label>
+          <label><input type="radio" name="question55" value="e"> A análise crítica do texto.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>56. Qual das afirmações abaixo sobre coesão e coerência está correta?</p>
+        <div class="options">
+          <label><input type="radio" name="question56" value="a"> A coesão não depende de aspectos extralinguísticos, enquanto a coerência se baseia unicamente na estrutura linguística.</label>
+          <label><input type="radio" name="question56" value="b"> A coesão é um aspecto linguístico restrito à organização de palavras, enquanto a coerência envolve a construção de sentido que pode depender de fatores externos.</label>
+          <label><input type="radio" name="question56" value="c"> A coesão e a coerência são fenômenos distintos, mas ambos dependem exclusivamente dos aspectos linguísticos do texto.</label>
+          <label><input type="radio" name="question56" value="d"> A coerência depende apenas da gramática do texto, enquanto a coesão está relacionada aos fatores extralinguísticos.</label>
+          <label><input type="radio" name="question56" value="e"> A coesão é responsável pela construção do sentido do texto, enquanto a coerência se refere à estrutura formal e organização das palavras.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>57. O que caracteriza a ambiguidade ou anfibologia em uma frase?</p>
+        <div class="options">
+          <label><input type="radio" name="question57" value="a"> Quando a frase tem um único sentido claro e objetivo, sem possibilidade de confusão.</label>
+          <label><input type="radio" name="question57" value="b"> Quando a frase apresenta mais de um sentido devido à má pontuação ou má colocação das palavras.</label>
+          <label><input type="radio" name="question57" value="c"> Quando a frase é extremamente clara e objetiva, sem erros de construção.</label>
+          <label><input type="radio" name="question57" value="d"> Quando a frase apresenta um sentido, mas com palavras de difícil compreensão.</label>
+          <label><input type="radio" name="question57" value="e"> Quando a frase contém um exagero de palavras para expressar uma ideia simples.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>58. Qual é a causa da obscuridade em um texto?</p>
+        <div class="options">
+          <label><input type="radio" name="question58" value="a"> Clareza no uso da pontuação e simples construção das frases.</label>
+          <label><input type="radio" name="question58" value="b"> Uso adequado da pontuação, da regência e concordância.</label>
+          <label><input type="radio" name="question58" value="c"> O uso excessivo de palavras difíceis, frases muito curtas ou longas, e erros de concordância.</label>
+          <label><input type="radio" name="question58" value="d"> O texto que possui uma sequência lógica de ideias e bem estruturadas.</label>
+          <label><input type="radio" name="question58" value="e"> Quando a frase apresenta um único significado e não necessita de interpretação.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>59. O que caracteriza a prolixidade em um texto?</p>
+        <div class="options">
+          <label><input type="radio" name="question59" value="a"> A clareza e objetividade nas ideias, sem palavras desnecessárias.</label>
+          <label><input type="radio" name="question59" value="b"> A repetição excessiva de palavras para expressar uma ideia simples.</label>
+          <label><input type="radio" name="question59" value="c"> A utilização de palavras complexas para enriquecer o conteúdo.</label>
+          <label><input type="radio" name="question59" value="d"> O uso de frases curtas e objetivas, com poucas palavras.</label>
+          <label><input type="radio" name="question59" value="e"> O uso excessivo de palavras para dizer quase nada, tornando o texto longo e enfadonho.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>60. Em qual situação ocorre a ambiguidade na frase: "O guarda deteve o suspeito em sua casa"?</p>
+        <div class="options">
+          <label><input type="radio" name="question60" value="a"> O suspeito estava na casa do guarda, mas o texto não deixa claro.</label>
+          <label><input type="radio" name="question60" value="b"> O guarda estava na casa do suspeito, mas o texto não deixa claro.</label>
+          <label><input type="radio" name="question60" value="c"> O texto não apresenta ambiguidade, pois está perfeitamente claro.</label>
+          <label><input type="radio" name="question60" value="d"> A ambiguidade ocorre porque o texto não menciona a casa de nenhum dos dois personagens.</label>
+          <label><input type="radio" name="question60" value="e"> A ambiguidade ocorre porque o texto descreve as ações sem detalhamento sobre o contexto.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>61. Qual das alternativas a seguir caracteriza corretamente a obscuridade em um texto?</p>
+        <div class="options">
+          <label><input type="radio" name="question61" value="a"> Uso correto da pontuação e frases objetivas e curtas.</label>
+          <label><input type="radio" name="question61" value="b"> Texto com linguagem clara, direta e sem palavras difíceis.</label>
+          <label><input type="radio" name="question61" value="c"> Texto longo, com erros de concordância e frases complexas, causando falta de clareza.</label>
+          <label><input type="radio" name="question61" value="d"> Texto com repetição de palavras para reforçar a mensagem.</label>
+          <label><input type="radio" name="question61" value="e"> Uso de sinônimos e antonímicos para facilitar a compreensão.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>62. O que caracteriza os desvios não intencionais da norma gramatical?</p>
+        <div class="options">
+          <label><input type="radio" name="question62" value="a"> Quando o falante utiliza palavras fora do contexto de sua língua.</label>
+          <label><input type="radio" name="question62" value="b"> Quando o falante se expressa de maneira não aceita pela norma-padrão de sua língua, gerando problemas na comunicação.</label>
+          <label><input type="radio" name="question62" value="c"> Quando o falante usa figuras de linguagem de maneira excessiva.</label>
+          <label><input type="radio" name="question62" value="d"> Quando o falante utiliza termos específicos de um determinado contexto técnico.</label>
+          <label><input type="radio" name="question62" value="e"> Quando o falante usa um vocabulário erudito para impressionar o ouvinte.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>63. Qual das alternativas a seguir NÃO é um exemplo de desvio não intencional da norma gramatical?</p>
+        <div class="options">
+          <label><input type="radio" name="question63" value="a"> Solecismo</label>
+          <label><input type="radio" name="question63" value="b"> Barbarismo</label>
+          <label><input type="radio" name="question63" value="c"> Estrangeirismo</label>
+          <label><input type="radio" name="question63" value="d"> Pleonasmo vicioso</label>
+          <label><input type="radio" name="question63" value="e"> Uso correto da norma gramatical</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>64. O que caracteriza o pleonasmo vicioso?</p>
+        <div class="options">
+          <label><input type="radio" name="question64" value="a"> Uso excessivo de palavras para reforçar uma ideia, sem necessidade.</label>
+          <label><input type="radio" name="question64" value="b"> Uso de palavras difíceis e eruditas sem necessidade.</label>
+          <label><input type="radio" name="question64" value="c"> Uso de expressões redundantes para enriquecer o discurso.</label>
+          <label><input type="radio" name="question64" value="d"> O uso de uma construção sintática errada que compromete a clareza.</label>
+          <label><input type="radio" name="question64" value="e"> Uso de figuras de linguagem que deixam o texto mais criativo.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>65. O que caracteriza a ambiguidade como desvio gramatical?</p>
+        <div class="options">
+          <label><input type="radio" name="question65" value="a"> Quando a frase tem mais de um sentido devido à escolha inadequada de palavras ou pontuação.</label>
+          <label><input type="radio" name="question65" value="b"> Quando a frase apresenta ideias repetitivas que não agregam valor ao texto.</label>
+          <label><input type="radio" name="question65" value="c"> Quando a frase tem uma construção muito formal e erudita.</label>
+          <label><input type="radio" name="question65" value="d"> Quando a frase é expressa de maneira excessivamente simplificada.</label>
+          <label><input type="radio" name="question65" value="e"> Quando a frase contém um erro de concordância verbal que dificulta a compreensão.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>66. O que caracteriza o barbarismo?</p>
+        <div class="options">
+          <label><input type="radio" name="question66" value="a"> Uso incorreto de palavras e expressões, como neologismos não reconhecidos pela língua padrão.</label>
+          <label><input type="radio" name="question66" value="b"> Uso de palavras de origem estrangeira que são integradas de forma incorreta à língua.</label>
+          <label><input type="radio" name="question66" value="c"> Uso de palavras ou expressões que são antigas e caíram em desuso.</label>
+          <label><input type="radio" name="question66" value="d"> Uso redundante de palavras para reforçar a mensagem.</label>
+          <label><input type="radio" name="question66" value="e"> Uso correto da norma gramatical e das palavras em seu contexto adequado.</label>
+        </div>
+      </div>
+      <div class="question">
+        <p>67. Qual é a característica do solecismo, um dos vícios de linguagem?</p>
+        <div class="options">
+          <label><input type="radio" name="question67" value="a"> Uso incorreto da pontuação, o que dificulta a compreensão do texto.</label>
+          <label><input type="radio" name="question67" value="b"> Erro na concordância verbal ou nominal, violando a norma gramatical.</label>
+          <label><input type="radio" name="question67" value="c"> Uso de palavras excessivamente difíceis e raras, sem necessidade.</label>
+          <label><input type="radio" name="question67" value="d"> Uso de palavras de forma imprecisa ou fora de contexto.</label>
+          <label><input type="radio" name="question67" value="e"> Repetição de palavras ou expressões sem necessidade.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>68. O que caracteriza o barbarismo como vício de linguagem?</p>
+        <div class="options">
+          <label><input type="radio" name="question68" value="a"> Uso incorreto de palavras ou expressões, como neologismos ou estrangeirismos.</label>
+          <label><input type="radio" name="question68" value="b"> Uso de palavras redundantes que não agregam significado à frase.</label>
+          <label><input type="radio" name="question68" value="c"> Utilização excessiva de termos técnicos que dificultam a compreensão.</label>
+          <label><input type="radio" name="question68" value="d"> Substituição de palavras de maneira equivocada, por erro de concordância.</label>
+          <label><input type="radio" name="question68" value="e"> Uso de metáforas e outras figuras de linguagem de forma exagerada.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>69. O que caracteriza o estrangeirismo como vício de linguagem?</p>
+        <div class="options">
+          <label><input type="radio" name="question69" value="a"> Uso excessivo de palavras estrangeiras que não são integradas adequadamente à língua portuguesa.</label>
+          <label><input type="radio" name="question69" value="b"> Uso incorreto de palavras brasileiras em contextos inadequados.</label>
+          <label><input type="radio" name="question69" value="c"> Uso de palavras de origem antiga e que caíram em desuso.</label>
+          <label><input type="radio" name="question69" value="d"> Uso de palavras que já foram adaptadas pela língua portuguesa, mas que ainda geram confusão.</label>
+          <label><input type="radio" name="question69" value="e"> Uso de termos que alteram o significado de uma frase, gerando ambiguidade.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>70. O que caracteriza o pleonasmo vicioso como vício de linguagem?</p>
+        <div class="options">
+          <label><input type="radio" name="question70" value="a"> Uso de palavras ou expressões redundantes, que não agregam valor ao texto.</label>
+          <label><input type="radio" name="question70" value="b"> Uso excessivo de conjunções que complicam a fluidez do texto.</label>
+          <label><input type="radio" name="question70" value="c"> Utilização de metáforas que não possuem um significado claro.</label>
+          <label><input type="radio" name="question70" value="d"> Emprego de palavras difíceis para transmitir uma ideia simples.</label>
+          <label><input type="radio" name="question70" value="e"> Substituição inadequada de palavras que resultam em ambiguidade.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>71. O que caracteriza a ambiguidade como vício de linguagem?</p>
+        <div class="options">
+          <label><input type="radio" name="question71" value="a"> Quando uma frase tem mais de um sentido devido a erros de pontuação ou estruturação inadequada das palavras.</label>
+          <label><input type="radio" name="question71" value="b"> Quando a frase apresenta excesso de informações redundantes e desnecessárias.</label>
+          <label><input type="radio" name="question71" value="c"> Quando a frase contém palavras arcaicas e de difícil compreensão.</label>
+          <label><input type="radio" name="question71" value="d"> Quando o falante utiliza palavras em contextos inadequados, prejudicando o entendimento.</label>
+          <label><input type="radio" name="question71" value="e"> Quando a frase apresenta um erro de concordância que prejudica a compreensão.</label>
+        </div>
+      </div>
+      
+      <div class="question">
+        <p>72. O que caracteriza a cacofonia como vício de linguagem?</p>
+        <div class="options">
+          <label><input type="radio" name="question72" value="a"> Uso de sons que criam efeitos desagradáveis ou engraçados ao serem ouvidos.</label>
+          <label><input type="radio" name="question72" value="b"> Uso de palavras com significados imprecisos ou vagos, dificultando a clareza.</label>
+          <label><input type="radio" name="question72" value="c"> Uso de termos excessivamente técnicos, criando um texto difícil de entender.</label>
+          <label><input type="radio" name="question72" value="d"> Uso de palavras de origem estrangeira de forma incorreta.</label>
+          <label><input type="radio" name="question72" value="e"> Uso excessivo de metáforas e figuras de linguagem.</label>
+        </div>
+      </div>
+                                                                                                
+
+      
+      <button type="button" id="submitBtn" onclick="calculateScore()">Enviar</button>
+    </form>
+    
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const correctAnswers = {
+
+        question1: "c",
+question2: "c",
+question3: "b",
+question4: "b",
+question5: "c",
+question6: "a",
+question7: "b",
+question8: "c",
+question9: "b",
+question10: "d",
+question11: "b",
+question12: "b",
+question13: "b",
+question14: "b",
+question15: "c",
+question16: "b",
+question17: "c",
+question18: "b",
+question19: "a",
+question20: "a",
+question21: "b",
+question22: "b",
+question23: "c",
+question24: "b",
+question25: "b",
+question26: "b",
+question27: "d",
+question28: "b",
+question29: "c",
+question30: "b",
+question31: "b",
+question32: "b",
+question33: "c",
+question34: "d",
+question35: "b",
+question36: "c",
+question37: "a",
+question38: "b",
+question39: "a",
+question40: "b",
+question41: "a",
+question42: "c",
+question43: "a",
+question44: "b",
+question45: "d",
+question46: "b",
+question47: "b",
+question48: "a",
+question49: "b",
+question50: "b", 
+question51: "b",
+question52: "c",
+question53: "b",
+question54: "c",
+question55: "c",
+question56: "b",
+question57: "b",
+question58: "c",
+question59: "e",
+question60: "b",
+question61: "c",
+question62: "b",
+question63: "e",
+question64: "a",
+question65: "a",
+question66: "a",
+question67: "b",
+question68: "a",
+question69: "a",
+question70: "a",
+question71: "a",
+question72: "a",
+
+
+
+
+
+
+
+}
+
+    
+
+    function calculateScore() {
+        const form = document.getElementById('quizForm');
+        let score = 0;
+        const totalQuestions = Object.keys(correctAnswers).length; // Total de perguntas
+
+        for (let question in correctAnswers) {
+            const userAnswer = form[question] ? form[question].value : null;
+            const options = document.querySelectorAll(`input[name="${question}"]`);
+
+            options.forEach(option => {
+                // Remove classes anteriores
+                option.parentElement.classList.remove('correct', 'incorrect');
+                
+                // Aplica classe correta
+                if (option.value === correctAnswers[question]) {
+                    option.parentElement.classList.add('correct');
+                } 
+                // Aplica classe incorreta se for a resposta escolhida
+                else if (userAnswer === option.value) {
+                    option.parentElement.classList.add('incorrect');
+                }
+            });
+
+            // Contagem de respostas corretas
+            if (userAnswer === correctAnswers[question]) {
+                score++;
+            }
+        }
+
+        // Exibição do resultado
+        const resultDiv = document.getElementById('result');
+        resultDiv.style.display = 'block';
+        resultDiv.innerHTML = `Você acertou <strong>${score}</strong> de <strong>${totalQuestions}</strong> questões.<br>Sua nota final é <strong>${(score / totalQuestions * 10).toFixed(1)}</strong>`;
+    }
+</script>
+
+
+</body>
+</html>

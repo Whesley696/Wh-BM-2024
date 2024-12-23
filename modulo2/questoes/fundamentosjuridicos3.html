@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Questões</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: white;
+        }
+
+        header {
+            background-color: #6200EA;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            color: #FFFFFF;
+            font-size: 2.5rem;
+        }
+
+        .summary-button {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            background-color: #03DAC5;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .summary-button:hover {
+            background-color: #018786;
+            color: white;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .question-box {
+            background-color: #1E1E1E;
+            border: 2px solid #03DAC5;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        .question-box h2 {
+            color: #03DAC5;
+        }
+
+        .explanation {
+            background-color: #333;
+            border-left: 4px solid #FF0266;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .explanation h3 {
+            color: #FF0266;
+            margin: 0;
+        }
+
+        .button {
+            background-color: #03DAC5;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #018786;
+            color: white;
+        }
+
+        footer {
+            background-color: #6200EA;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            color: white;
+            font-size: 0.9rem;
+        }
+    </style>
+    <script>
+        function verificarResposta() {
+            const explanation = document.querySelector('.explanation');
+            explanation.style.display = 'block';
+        }
+
+        function mostrarResumo() {
+            alert('Esta função exibirá um resumo dos conteúdos abordados.');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Questões Fundamentos Juridicos 2</h1>
+        <a href="/modulo2/resumos/fundamentosjuridicos2-resumos.html"> <button class="summary-button" >Conteúdo Fundamentos Juridicos</button></a>
+    </header>
+
+    <div class="container">
+<!-- Primeira Pergunta -->
+<div class="question-box">
+    <h2>Qual a principal diferença entre crime e contravenção penal?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q1a1" name="q2" value="a"> A pena prevista para crime é sempre prisão simples, enquanto a contravenção penal resulta em reclusão ou detenção.</li>
+        <li><input type="radio" id="q1a2" name="q2" value="b"> O crime resulta em reclusão ou detenção com ou sem multa, enquanto a contravenção penal resulta em prisão simples ou multa.</li>
+        <li><input type="radio" id="q1a3" name="q2" value="c"> A contravenção penal pune a tentativa, mas o crime não.</li>
+        <li><input type="radio" id="q1a4" name="q2" value="d"> O crime não pune a tentativa, enquanto a contravenção penal pune a tentativa de forma semelhante ao crime consumado.</li>
+        <li><input type="radio" id="q1a5" name="q2" value="e"> A contravenção penal envolve crimes mais graves que os crimes comuns.</li>
+    </ul>
+    <div class="explanation" id="explanation-q2">
+        <h3>Explicação:</h3>
+        <p>O crime resulta em pena de reclusão ou detenção, podendo ser com ou sem multa, e pune tentativa (Art. 14, II, do Código Penal). Já a contravenção penal resulta em prisão simples ou multa, e não pune tentativa, conforme o Art. 3º da Lei das Contravenções Penais (LCP).</p>
+    </div>
+    <button class="button" onclick="verificarResposta('q2', 'b')">Verificar Resposta</button>
+</div>
+
+    </div>
+    
+    <script>
+        function verificarResposta(questionId, correctAnswer) {
+            var options = document.getElementsByName(questionId);
+            var explanation = document.getElementById("explanation-" + questionId);
+            var isCorrect = false;
+            
+            // Verificando a resposta correta
+            for (var i = 0; i < options.length; i++) {
+                var option = options[i];
+                if (option.checked) {
+                    if (option.value === correctAnswer) {
+                        option.parentElement.style.backgroundColor = "green"; // Verde para resposta correta
+                        explanation.style.color = "green";
+                        isCorrect = true;
+                    } else {
+                        option.parentElement.style.backgroundColor = "red"; // Vermelho para resposta errada
+                        explanation.style.color = "red";
+                    }
+                }
+            }
+    
+            // Exibindo a explicação
+            explanation.style.display = "block";
+        }
+    </script>
+    
+    <footer>
+        <p>© 2024 - Plataforma de Questões</p>
+    </footer>
+</body>
+</html>

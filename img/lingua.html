@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questões de Estado e Sociedade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #000000;
+            color:white;
+        }
+        .question {
+            background-color: #070907;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #28a745;
+            color: rgb(214, 0, 0);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .explanation {
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+        .result {
+            font-weight: bold;
+        }
+        .correct {
+            color: green;
+        }
+        .wrong {
+            color: red;
+        }
+        .loss-image {
+    display: none;
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    margin-left: 10px;
+}
+
+    </style>
+</head>
+<body>
+
+<h1>subereck é gay</h1>
+
+<div class="questions">
+
+    
+    
+    <div class="question" id="question1">
+        <p><strong>1. A linguagem pode ser compreendida como:</strong></p>
+        <label><input type="radio" name="q1" value="a"> (a) Um sistema de normas gramaticais rígidas.</label><br>
+        <label><input type="radio" name="q1" value="b"> (b) Qualquer sistema de signos simbólicos utilizado na intercomunicação social para expressar ideias e sentimentos.</label><br>
+        <label><input type="radio" name="q1" value="c"> (c) Um meio exclusivo de comunicação falada.</label><br>
+        <label><input type="radio" name="q1" value="d"> (d) Uma forma de comunicação apenas visual.</label><br>
+        <label><input type="radio" name="q1" value="e"> (e) Um conjunto de leis linguísticas.</label><br>
+        <button onclick="checkAnswer('q1', 'b', 'A alternativa CORRETA é: Qualquer sistema de signos simbólicos utilizado na intercomunicação social para expressar ideias e sentimentos.')">Enviar</button>
+        <div class="explanation" id="explanation-q1"></div>
+    </div>
+    
+    <div class="question" id="question2">
+        <p><strong>2. Qual das alternativas descreve corretamente a função referencial ou denotativa da linguagem?</strong></p>
+        <label><input type="radio" name="q2" value="a"> (a) Transmitir os sentimentos pessoais do emissor.</label><br>
+        <label><input type="radio" name="q2" value="b"> (b) Comunicar de forma persuasiva, com foco no receptor.</label><br>
+        <label><input type="radio" name="q2" value="c"> (c) Transmitir informações sobre a realidade, focada no contexto.</label><br>
+        <label><input type="radio" name="q2" value="d"> (d) Expressar ordens e comandos com clareza.</label><br>
+        <label><input type="radio" name="q2" value="e"> (e) Comunicar através de gestos e sinais.</label><br>
+        <button onclick="checkAnswer('q2', 'c', 'A alternativa CORRETA é: Transmitir informações sobre a realidade, focada no contexto.')">Enviar</button>
+        <div class="explanation" id="explanation-q2"></div>
+    </div>
+    
+    <div class="question" id="question3">
+        <p><strong>3. A função da linguagem que tem como objetivo principal expressar os sentimentos e emoções do emissor é chamada de:</strong></p>
+        <label><input type="radio" name="q3" value="a"> (a) Conativa.</label><br>
+        <label><input type="radio" name="q3" value="b"> (b) Fática.</label><br>
+        <label><input type="radio" name="q3" value="c"> (c) Metalinguística.</label><br>
+        <label><input type="radio" name="q3" value="d"> (d) Emotiva.</label><br>
+        <label><input type="radio" name="q3" value="e"> (e) Referencial.</label><br>
+        <button onclick="checkAnswer('q3', 'd', 'A alternativa CORRETA é: Emotiva.')">Enviar</button>
+        <div class="explanation" id="explanation-q3"></div>
+    </div>
+    
+    <div class="question" id="question4">
+        <p><strong>4. Quando a comunicação enfatiza a participação do destinatário e busca persuadi-lo, estamos nos referindo a qual função da linguagem?</strong></p>
+        <label><input type="radio" name="q4" value="a"> (a) Emotiva.</label><br>
+        <label><input type="radio" name="q4" value="b"> (b) Metalinguística.</label><br>
+        <label><input type="radio" name="q4" value="c"> (c) Referencial.</label><br>
+        <label><input type="radio" name="q4" value="d"> (d) Conativa.</label><br>
+        <label><input type="radio" name="q4" value="e"> (e) Poética.</label><br>
+        <button onclick="checkAnswer('q4', 'd', 'A alternativa CORRETA é: Conativa.')">Enviar</button>
+        <div class="explanation" id="explanation-q4"></div>
+    </div>
+    
+    <div class="question" id="question5">
+        <p><strong>5. Em qual das formas a linguagem é utilizada quando expressa-se por meio de sinais e marcas gráficas?</strong></p>
+        <label><input type="radio" name="q5" value="a"> (a) Falada.</label><br>
+        <label><input type="radio" name="q5" value="b"> (b) Mímica.</label><br>
+        <label><input type="radio" name="q5" value="c"> (c) Escrita.</label><br>
+        <label><input type="radio" name="q5" value="d"> (d) Oral.</label><br>
+        <label><input type="radio" name="q5" value="e"> (e) Gestual.</label><br>
+        <button onclick="checkAnswer('q5', 'c', 'A alternativa CORRETA é: Escrita.')">Enviar</button>
+        <div class="explanation" id="explanation-q5"></div>
+    </div>
+    <div class="question" id="question6">
+        <p><strong>1. Qual é a função da linguagem que coloca em evidência o próprio código de comunicação?</strong></p>
+        <label><input type="radio" name="q6" value="a"> (a) Emotiva.</label><br>
+        <label><input type="radio" name="q6" value="b"> (b) Conativa.</label><br>
+        <label><input type="radio" name="q6" value="c"> (c) Metalinguística.</label><br>
+        <label><input type="radio" name="q6" value="d"> (d) Fática.</label><br>
+        <label><input type="radio" name="q6" value="e"> (e) Poética.</label><br>
+        <button onclick="checkAnswer('q6', 'c', 'A alternativa CORRETA é: Metalinguística.')">Enviar</button>
+        <div class="explanation" id="explanation-q6"></div>
+    </div>
+    
+    <div class="question" id="question7">
+        <p><strong>2. A função fática da linguagem é caracterizada por:</strong></p>
+        <label><input type="radio" name="q7" value="a"> (a) Focar no conteúdo emocional da mensagem.</label><br>
+        <label><input type="radio" name="q7" value="b"> (b) Enfatizar o meio de contato entre os interlocutores.</label><br>
+        <label><input type="radio" name="q7" value="c"> (c) Explorar figuras de linguagem para atrair a atenção.</label><br>
+        <label><input type="radio" name="q7" value="d"> (d) Colocar o código de comunicação em destaque.</label><br>
+        <label><input type="radio" name="q7" value="e"> (e) Transmitir informações sobre a realidade.</label><br>
+        <button onclick="checkAnswer('q7', 'b', 'A alternativa CORRETA é: Enfatizar o meio de contato entre os interlocutores.')">Enviar</button>
+        <div class="explanation" id="explanation-q7"></div>
+    </div>
+    
+    <div class="question" id="question8">
+        <p><strong>3. A função poética da linguagem é reconhecida principalmente por:</strong></p>
+        <label><input type="radio" name="q8" value="a"> (a) Utilizar o código para explicar a própria linguagem.</label><br>
+        <label><input type="radio" name="q8" value="b"> (b) Explorar o sentido literal das palavras.</label><br>
+        <label><input type="radio" name="q8" value="c"> (c) Realçar a forma e o estilo para captar a atenção do receptor.</label><br>
+        <label><input type="radio" name="q8" value="d"> (d) Focar no contexto da mensagem para transmitir informações.</label><br>
+        <label><input type="radio" name="q8" value="e"> (e) Enfatizar o destinatário da comunicação.</label><br>
+        <button onclick="checkAnswer('q8', 'c', 'A alternativa CORRETA é: Realçar a forma e o estilo para captar a atenção do receptor.')">Enviar</button>
+        <div class="explanation" id="explanation-q8"></div>
+    </div>
+    
+    <div class="question" id="question9">
+        <p><strong>4. No discurso direto, o narrador:</strong></p>
+        <label><input type="radio" name="q9" value="a"> (a) Reproduz as palavras da personagem em terceira pessoa.</label><br>
+        <label><input type="radio" name="q9" value="b"> (b) Apresenta as falas da personagem diretamente, geralmente em primeira pessoa.</label><br>
+        <label><input type="radio" name="q9" value="c"> (c) Mistura os pensamentos do narrador com os da personagem.</label><br>
+        <label><input type="radio" name="q9" value="d"> (d) Reproduz o discurso do personagem de forma indireta.</label><br>
+        <label><input type="radio" name="q9" value="e"> (e) Interrompe a narrativa para apresentar reflexões das personagens.</label><br>
+        <button onclick="checkAnswer('q9', 'b', 'A alternativa CORRETA é: Apresenta as falas da personagem diretamente, geralmente em primeira pessoa.')">Enviar</button>
+        <div class="explanation" id="explanation-q9"></div>
+    </div>
+    
+    <div class="question" id="question10">
+        <p><strong>5. O discurso indireto livre caracteriza-se por:</strong></p>
+        <label><input type="radio" name="q10" value="a"> (a) Colocar o código de comunicação em evidência.</label><br>
+        <label><input type="radio" name="q10" value="b"> (b) Representar o discurso da personagem em terceira pessoa, sem intervenção do narrador.</label><br>
+        <label><input type="radio" name="q10" value="c"> (c) Unir a fala do narrador com os pensamentos ou falas das personagens.</label><br>
+        <label><input type="radio" name="q10" value="d"> (d) Utilizar apenas verbos como "dizer" e "afirmar".</label><br>
+        <label><input type="radio" name="q10" value="e"> (e) Transmitir exclusivamente as reflexões do narrador sobre os fatos.</label><br>
+        <button onclick="checkAnswer('q10', 'c', 'A alternativa CORRETA é: Unir a fala do narrador com os pensamentos ou falas das personagens.')">Enviar</button>
+        <div class="explanation" id="explanation-q10"></div>
+    </div>
+    
+    <div class="question" id="question11">
+        <p><strong>1. Na passagem do discurso direto para o discurso indireto, uma das mudanças ocorre:</strong></p>
+        <label><input type="radio" name="q11" value="a"> (a) Nos verbos de elocução e no tópico frasal.</label><br>
+        <label><input type="radio" name="q11" value="b"> (b) Apenas na pontuação das frases.</label><br>
+        <label><input type="radio" name="q11" value="c"> (c) Nas pessoas do discurso, tempos verbais, pontuação e advérbios.</label><br>
+        <label><input type="radio" name="q11" value="d"> (d) No parágrafo introdutório.</label><br>
+        <label><input type="radio" name="q11" value="e"> (e) Somente nas conjunções.</label><br>
+        <button onclick="checkAnswer('q11', 'c', 'A alternativa CORRETA é: Nas pessoas do discurso, tempos verbais, pontuação e advérbios.')">Enviar</button>
+        <div class="explanation" id="explanation-q11"></div>
+    </div>
+    
+    <div class="question" id="question12">
+        <p><strong>2. Qual é a estrutura básica do discurso indireto?</strong></p>
+        <label><input type="radio" name="q12" value="a"> (a) Tópico frasal + fala da personagem + verbo de elocução.</label><br>
+        <label><input type="radio" name="q12" value="b"> (b) Fala da personagem + conjunção + fala do narrador.</label><br>
+        <label><input type="radio" name="q12" value="c"> (c) Fala do narrador + verbo de elocução + conjunção + fala da personagem.</label><br>
+        <label><input type="radio" name="q12" value="d"> (d) Verbo de elocução + fala do narrador + fala da personagem.</label><br>
+        <label><input type="radio" name="q12" value="e"> (e) Narrador + parágrafo de introdução + fala do personagem.</label><br>
+        <button onclick="checkAnswer('q12', 'c', 'A alternativa CORRETA é: Fala do narrador + verbo de elocução + conjunção + fala da personagem.')">Enviar</button>
+        <div class="explanation" id="explanation-q12"></div>
+    </div>
+    
+    <div class="question" id="question13">
+        <p><strong>3. A área da linguística que se dedica ao estudo do significado das palavras e sons é chamada de:</strong></p>
+        <label><input type="radio" name="q13" value="a"> (a) Sintaxe.</label><br>
+        <label><input type="radio" name="q13" value="b"> (b) Semântica.</label><br>
+        <label><input type="radio" name="q13" value="c"> (c) Fonologia.</label><br>
+        <label><input type="radio" name="q13" value="d"> (d) Morfologia.</label><br>
+        <label><input type="radio" name="q13" value="e"> (e) Pragmática.</label><br>
+        <button onclick="checkAnswer('q13', 'b', 'A alternativa CORRETA é: Semântica.')">Enviar</button>
+        <div class="explanation" id="explanation-q13"></div>
+    </div>
+    
+    <div class="question" id="question14">
+        <p><strong>4. O campo semântico refere-se a:</strong></p>
+        <label><input type="radio" name="q14" value="a"> (a) A estrutura das frases e parágrafos em um texto.</label><br>
+        <label><input type="radio" name="q14" value="b"> (b) A relação de sons e fonemas dentro das palavras.</label><br>
+        <label><input type="radio" name="q14" value="c"> (c) O estudo do significado de cada vocábulo em uma língua.</label><br>
+        <label><input type="radio" name="q14" value="d"> (d) A organização das palavras em tópicos frasais.</label><br>
+        <label><input type="radio" name="q14" value="e"> (e) A combinação de palavras para formar expressões idiomáticas.</label><br>
+        <button onclick="checkAnswer('q14', 'c', 'A alternativa CORRETA é: O estudo do significado de cada vocábulo em uma língua.')">Enviar</button>
+        <div class="explanation" id="explanation-q14"></div>
+    </div>
+    
+    <div class="question" id="question15">
+        <p><strong>5. Uma frase é definida como:</strong></p>
+        <label><input type="radio" name="q15" value="a"> (a) Uma estrutura textual que contém apenas um verbo.</label><br>
+        <label><input type="radio" name="q15" value="b"> (b) Uma divisão textual que sempre possui verbo.</label><br>
+        <label><input type="radio" name="q15" value="c"> (c) Um enunciado de sentido completo que pode ou não incluir verbo.</label><br>
+        <label><input type="radio" name="q15" value="d"> (d) Um elemento que divide o texto em parágrafos de desenvolvimento.</label><br>
+        <label><input type="radio" name="q15" value="e"> (e) Um trecho de texto com recuo na margem esquerda.</label><br>
+        <button onclick="checkAnswer('q15', 'c', 'A alternativa CORRETA é: Um enunciado de sentido completo que pode ou não incluir verbo.')">Enviar</button>
+        <div class="explanation" id="explanation-q15"></div>
+    </div>
+
+    <div class="question" id="question21">
+        <p><strong>1. Qual tipo de texto é caracterizado por possuir enredo, narrador, personagens, tempo e espaço?</strong></p>
+        <label><input type="radio" name="q21" value="a"> (a) Descritivo.</label><br>
+        <label><input type="radio" name="q21" value="b"> (b) Dissertativo.</label><br>
+        <label><input type="radio" name="q21" value="c"> (c) Narrativo.</label><br>
+        <label><input type="radio" name="q21" value="d"> (d) Expositivo.</label><br>
+        <label><input type="radio" name="q21" value="e"> (e) Argumentativo.</label><br>
+        <button onclick="checkAnswer('q21', 'c', 'A alternativa CORRETA é: Narrativo.')">Enviar</button>
+        <div class="explanation" id="explanation-q21"></div>
+    </div>
+    
+    <div class="question" id="question22">
+        <p><strong>2. O objetivo principal de um texto dissertativo é:</strong></p>
+        <label><input type="radio" name="q22" value="a"> (a) Contar uma história de forma fictícia.</label><br>
+        <label><input type="radio" name="q22" value="b"> (b) Explicar um fenômeno natural.</label><br>
+        <label><input type="radio" name="q22" value="c"> (c) Argumentar sobre um ponto de vista.</label><br>
+        <label><input type="radio" name="q22" value="d"> (d) Descrever um lugar ou objeto.</label><br>
+        <label><input type="radio" name="q22" value="e"> (e) Narrar um fato histórico.</label><br>
+        <button onclick="checkAnswer('q22', 'c', 'A alternativa CORRETA é: Argumentar sobre um ponto de vista.')">Enviar</button>
+        <div class="explanation" id="explanation-q22"></div>
+    </div>
+    
+    <div class="question" id="question23">
+        <p><strong>3. Um texto que apresenta uma ideia principal e argumentos para sustentá-la é classificado como:</strong></p>
+        <label><input type="radio" name="q23" value="a"> (a) Informativo.</label><br>
+        <label><input type="radio" name="q23" value="b"> (b) Narrativo.</label><br>
+        <label><input type="radio" name="q23" value="c"> (c) Argumentativo.</label><br>
+        <label><input type="radio" name="q23" value="d"> (d) Descritivo.</label><br>
+        <label><input type="radio" name="q23" value="e"> (e) Expositivo.</label><br>
+        <button onclick="checkAnswer('q23', 'c', 'A alternativa CORRETA é: Argumentativo.')">Enviar</button>
+        <div class="explanation" id="explanation-q23"></div>
+    </div>
+    
+    <div class="question" id="question24">
+        <p><strong>4. O que é um parágrafo de desenvolvimento?</strong></p>
+        <label><input type="radio" name="q24" value="a"> (a) Um parágrafo que introduz o tema principal do texto.</label><br>
+        <label><input type="radio" name="q24" value="b"> (b) Um parágrafo que encerra o texto e apresenta conclusões.</label><br>
+        <label><input type="radio" name="q24" value="c"> (c) Um parágrafo que apresenta informações e argumentos que sustentam a ideia principal.</label><br>
+        <label><input type="radio" name="q24" value="d"> (d) Um parágrafo que apresenta exemplos e ilustrações.</label><br>
+        <label><input type="radio" name="q24" value="e"> (e) Um parágrafo que contém apenas citações de autores.</label><br>
+        <button onclick="checkAnswer('q24', 'c', 'A alternativa CORRETA é: Um parágrafo que apresenta informações e argumentos que sustentam a ideia principal.')">Enviar</button>
+        <div class="explanation" id="explanation-q24"></div>
+    </div>
+    
+    <div class="question" id="question25">
+        <p><strong>5. O que é a coesão textual?</strong></p>
+        <label><input type="radio" name="q25" value="a"> (a) A relação lógica entre os parágrafos do texto.</label><br>
+        <label><input type="radio" name="q25" value="b"> (b) A repetição de ideias em diferentes partes do texto.</label><br>
+        <label><input type="radio" name="q25" value="c"> (c) A conexão entre frases e parágrafos que permite ao texto ser compreensível.</label><br>
+        <label><input type="radio" name="q25" value="d"> (d) A estrutura gramatical correta de um texto.</label><br>
+        <label><input type="radio" name="q25" value="e"> (e) A variedade de palavras utilizadas no texto.</label><br>
+        <button onclick="checkAnswer('q25', 'c', 'A alternativa CORRETA é: A conexão entre frases e parágrafos que permite ao texto ser compreensível.')">Enviar</button>
+        <div class="explanation" id="explanation-q25"></div>
+    </div>
+
+    <div class="question" id="question31">
+        <p><strong>1. A coesão se refere a:</strong></p>
+        <label><input type="radio" name="q31" value="a"> (a) O significado de um texto.</label><br>
+        <label><input type="radio" name="q31" value="b"> (b) Mecanismos gramaticais ou lexicais que ligam elementos de um texto.</label><br>
+        <label><input type="radio" name="q31" value="c"> (c) Elementos extralinguísticos que ajudam na interpretação do texto.</label><br>
+        <label><input type="radio" name="q31" value="d"> (d) A clareza e lógica das ideias apresentadas.</label><br>
+        <label><input type="radio" name="q31" value="e"> (e) O estilo e a forma de expressão do autor.</label><br>
+        <button onclick="checkAnswer('q31', 'b', 'A alternativa CORRETA é: Mecanismos gramaticais ou lexicais que ligam elementos de um texto.')">Enviar</button>
+        <div class="explanation" id="explanation-q31"></div>
+    </div>
+    
+    <div class="question" id="question32">
+        <p><strong>2. A coerência depende de:</strong></p>
+        <label><input type="radio" name="q32" value="a"> (a) Apenas da estrutura linguística do texto.</label><br>
+        <label><input type="radio" name="q32" value="b"> (b) Elementos extralinguísticos e aspectos cognitivos.</label><br>
+        <label><input type="radio" name="q32" value="c"> (c) Regras gramaticais rigorosas.</label><br>
+        <label><input type="radio" name="q32" value="d"> (d) Apenas da pontuação utilizada.</label><br>
+        <label><input type="radio" name="q32" value="e"> (e) Da extensão do texto.</label><br>
+        <button onclick="checkAnswer('q32', 'b', 'A alternativa CORRETA é: Elementos extralinguísticos e aspectos cognitivos.')">Enviar</button>
+        <div class="explanation" id="explanation-q32"></div>
+    </div>
+    
+    <div class="question" id="question33">
+        <p><strong>3. A ambiguidade ocorre quando:</strong></p>
+        <label><input type="radio" name="q33" value="a"> (a) Um texto é muito longo e complicado.</label><br>
+        <label><input type="radio" name="q33" value="b"> (b) Uma frase apresenta mais de um sentido devido à má construção.</label><br>
+        <label><input type="radio" name="q33" value="c"> (c) O autor utiliza uma linguagem excessivamente rebuscada.</label><br>
+        <label><input type="radio" name="q33" value="d"> (d) Há desvios intencionais da norma gramatical.</label><br>
+        <label><input type="radio" name="q33" value="e"> (e) A mensagem é apresentada de forma clara e objetiva.</label><br>
+        <button onclick="checkAnswer('q33', 'b', 'A alternativa CORRETA é: Uma frase apresenta mais de um sentido devido à má construção.')">Enviar</button>
+        <div class="explanation" id="explanation-q33"></div>
+    </div>
+    
+    <div class="question" id="question34">
+        <p><strong>4. A obscuridade em um texto se refere a:</strong></p>
+        <label><input type="radio" name="q34" value="a"> (a) Clareza e lógica na apresentação das ideias.</label><br>
+        <label><input type="radio" name="q34" value="b"> (b) Um excesso de informações sem relação.</label><br>
+        <label><input type="radio" name="q34" value="c"> (c) Falta de clareza, transparência e lógica na comunicação.</label><br>
+        <label><input type="radio" name="q34" value="d"> (d) Uso de metáforas e figuras de linguagem.</label><br>
+        <label><input type="radio" name="q34" value="e"> (e) A quantidade de vícios de linguagem presentes.</label><br>
+        <button onclick="checkAnswer('q34', 'c', 'A alternativa CORRETA é: Falta de clareza, transparência e lógica na comunicação.')">Enviar</button>
+        <div class="explanation" id="explanation-q34"></div>
+    </div>
+    
+    <div class="question" id="question35">
+        <p><strong>5. Vícios de linguagem são definidos como:</strong></p>
+        <label><input type="radio" name="q35" value="a"> (a) Elementos que enriquecem a comunicação verbal.</label><br>
+        <label><input type="radio" name="q35" value="b"> (b) Desvios intencionais da norma gramatical.</label><br>
+        <label><input type="radio" name="q35" value="c"> (c) Erros não intencionais que causam problemas na comunicação.</label><br>
+        <label><input type="radio" name="q35" value="d"> (d) Estruturas de frases que seguem rigorosamente a norma-padrão.</label><br>
+        <label><input type="radio" name="q35" value="e"> (e) Figuras de linguagem utilizadas para efeito estético.</label><br>
+        <button onclick="checkAnswer('q35', 'b', 'A alternativa CORRETA é: Desvios intencionais da norma gramatical.')">Enviar</button>
+        <div class="explanation" id="explanation-q35"></div>
+    </div>
+    
+    <div class="question" id="question1">
+        <p><strong>1. Sobre as FUNÇÕES DE LINGUAGEM, assinale a alternativa incorreta:</strong></p>
+        <label><input type="radio" name="q1" value="a"> (a) A função referencial ou denotativa é aquela centrada no contexto, manifestando-se quando a intencionalidade do discurso é a transmissão de informações acerca da realidade.</label><br>
+        <label><input type="radio" name="q1" value="b"> (b) A função emotiva dá vazão aos sentimentos e singularidades afetivas do emissor, como por exemplo a linguagem utilizada na música, literatura, entre outros.</label><br>
+        <label><input type="radio" name="q1" value="c"> (c) A função conotativa é aquela que realça a interlocução, explicitando a participação do destinatário, ênfase no receptor da mensagem, ou seja, tem o objetivo de persuadir o destinatário/interlocutor e influenciar o seu comportamento, exemplo: textos publicitários.</label><br>
+        <label><input type="radio" name="q1" value="d"> (d) A função metalinguística é a que coloca em evidência o código de comunicação, exemplo: linguagem utilizada nos filmes quando tem por próprio tema o cinema; no teatro que tem por tema o próprio teatro.</label><br>
+        <label><input type="radio" name="q1" value="e"> (e) A função fática é aquela que utiliza a língua para produzir mensagens que se impõem à atenção do interlocutor pela forma como estão construídas. O autor faz uso de combinação de palavras, figuras de linguagem (metáfora, antítese, hipérbole, aliteração, etc.), exploração dos sentidos e sentimentos, expressão do chamado eu lírico, dentre outros.</label><br>
+        <button onclick="checkAnswer('q1', 'e', 'A alternativa CORRETA é: A função fática é aquela que utiliza a língua para produzir mensagens que se impõem à atenção do interlocutor.')">Enviar</button>
+        <div class="explanation" id="explanation-q1"></div>
+    </div>
+    
+    <div class="question" id="question2">
+        <p><strong>2. Quando num discurso o personagem é chamado a apresentar suas próprias palavras, é marcado pela presença de verbos: dizer, afirmar, sugerir, é também quando o narrador relata fatos ocorridos em sua presença, emitindo opiniões sobre estes, e a sua utilização é feita em geral na primeira pessoa do discurso, essas são características de qual tipo de discurso?</strong></p>
+        <label><input type="radio" name="q2" value="a"> (a) Indireto</label><br>
+        <label><input type="radio" name="q2" value="b"> (b) Indireto Livre</label><br>
+        <label><input type="radio" name="q2" value="c"> (c) Direto Livre</label><br>
+        <label><input type="radio" name="q2" value="d"> (d) Direto</label><br>
+        <label><input type="radio" name="q2" value="e"> (e) Inverso</label><br>
+        <button onclick="checkAnswer('q2', 'd', 'A alternativa CORRETA é: Direto.')">Enviar</button>
+        <div class="explanation" id="explanation-q2"></div>
+    </div>
+    
+    <div class="question" id="question3">
+        <p><strong>3. Ao se referir à PARÁFRASE, marque a alternativa correta:</strong></p>
+        <label><input type="radio" name="q3" value="a"> (a) É a repetição exata de uma ideia.</label><br>
+        <label><input type="radio" name="q3" value="b"> (b) É uma reescrita de um texto mantendo as ideias principais.</label><br>
+        <label><input type="radio" name="q3" value="c"> (c) É um tipo de resumo que omite as informações menos relevantes.</label><br>
+        <label><input type="radio" name="q3" value="d"> (d) É uma forma de interpretação que distorce o sentido original.</label><br>
+        <label><input type="radio" name="q3" value="e"> (e) É a simplificação de um texto sem alterar o conteúdo.</label><br>
+        <button onclick="checkAnswer('q3', 'b', 'A alternativa CORRETA é: É uma reescrita de um texto mantendo as ideias principais.')">Enviar</button>
+        <div class="explanation" id="explanation-q3"></div>
+    </div>
+    
+    <div class="question" id="question4">
+        <p><strong>4. Sobre a RESUMO, assinale a alternativa INCORRETA:</strong></p>
+        <label><input type="radio" name="q4" value="a"> (a) O resumo é uma versão abreviada de um texto.</label><br>
+        <label><input type="radio" name="q4" value="b"> (b) Um resumo deve incluir apenas as ideias principais do texto original.</label><br>
+        <label><input type="radio" name="q4" value="c"> (c) O resumo deve apresentar a opinião do autor original.</label><br>
+        <label><input type="radio" name="q4" value="d"> (d) Um resumo deve ser escrito com as palavras do autor.</label><br>
+        <label><input type="radio" name="q4" value="e"> (e) O resumo deve ser conciso e objetivo.</label><br>
+        <button onclick="checkAnswer('q4', 'c', 'A alternativa CORRETA é: O resumo deve apresentar a opinião do autor original.')">Enviar</button>
+        <div class="explanation" id="explanation-q4"></div>
+    </div>
+    
+    <div class="question" id="question5">
+        <p><strong>5. Assinale a alternativa que apresenta uma característica do GÊNERO TEXTUAL:</strong></p>
+        <label><input type="radio" name="q5" value="a"> (a) Gêneros textuais são categorias rígidas e imutáveis.</label><br>
+        <label><input type="radio" name="q5" value="b"> (b) Gêneros textuais se referem apenas a textos literários.</label><br>
+        <label><input type="radio" name="q5" value="c"> (c) Gêneros textuais variam conforme o contexto e a intenção do emissor.</label><br>
+        <label><input type="radio" name="q5" value="d"> (d) Gêneros textuais não possuem regras e estruturas próprias.</label><br>
+        <label><input type="radio" name="q5" value="e"> (e) Gêneros textuais são sempre longos e complexos.</label><br>
+        <button onclick="checkAnswer('q5', 'c', 'A alternativa CORRETA é: Gêneros textuais variam conforme o contexto e a intenção do emissor.')">Enviar</button>
+        <div class="explanation" id="explanation-q5"></div>
+    </div>
+    
+    
+    
+    <div class="question" id="question6">
+        <p><strong>6. Elemento textual com unidade de sentido, que serve para dividir e organizar o texto.</strong></p>
+        <label><input type="radio" name="q6" value="a"> (a) Parágrafo</label><br>
+        <label><input type="radio" name="q6" value="b"> (b) Frase</label><br>
+        <label><input type="radio" name="q6" value="c"> (c) Verbo</label><br>
+        <label><input type="radio" name="q6" value="d"> (d) Substantivo</label><br>
+        <label><input type="radio" name="q6" value="e"> (e) Ponto Final</label><br>
+        <button onclick="checkAnswer('q6', 'a', 'A alternativa CORRETA é: Parágrafo.')">Enviar</button>
+        <div class="explanation" id="explanation-q6"></div>
+    </div>
+    
+    <div class="question" id="question7">
+        <p><strong>7. A linguagem verbal e não verbal faz parte do cotidiano do Policial Militar, nas mais variadas situações que se apresentam no decorrer do serviço. Em relação aos tipos de linguagem, é correto afirmar:</strong></p>
+        <label><input type="radio" name="q7" value="a"> (a) A linguagem verbal é sempre culta, seguindo padrões de norma.</label><br>
+        <label><input type="radio" name="q7" value="b"> (b) A mímica compreende uma das variáveis da linguagem verbal.</label><br>
+        <label><input type="radio" name="q7" value="c"> (c) A escrita, por palavras ou sinais, compreende a linguagem verbal.</label><br>
+        <label><input type="radio" name="q7" value="d"> (d) A linguagem verbal e não verbal não podem ser aplicadas juntas.</label><br>
+        <label><input type="radio" name="q7" value="e"> (e) Nenhuma das alternativas está correta.</label><br>
+        <button onclick="checkAnswer('q7', 'c', 'A alternativa CORRETA é: A escrita, por palavras ou sinais, compreende a linguagem verbal.')">Enviar</button>
+        <div class="explanation" id="explanation-q7"></div>
+    </div>
+    
+    <div class="question" id="question8">
+        <p><strong>8. No trecho: “O que o senhor fará para resolver o problema da falta de viaturas nas ruas?”, a frase caracteriza-se pelo emprego do discurso direto. Ao transformar o excerto em discurso indireto temos:</strong></p>
+        <label><input type="radio" name="q8" value="a"> (a) “O que eu farei para resolver o problema da falta de viaturas nas ruas?”</label><br>
+        <label><input type="radio" name="q8" value="b"> (b) “O que faremos nós para resolver o problema da falta de viaturas nas ruas?”</label><br>
+        <label><input type="radio" name="q8" value="c"> (c) “Perguntou-me o que faria para resolver o problema da falta de viaturas nas ruas?”</label><br>
+        <label><input type="radio" name="q8" value="d"> (d) “Ele disse que não teria problema algum na falta de viaturas nas ruas.”</label><br>
+        <label><input type="radio" name="q8" value="e"> (e) “O que o senhor faria para resolver o problema da falta de viaturas nas ruas?”</label><br>
+        <button onclick="checkAnswer('q8', 'c', 'A alternativa CORRETA é: Perguntou-me o que faria para resolver o problema da falta de viaturas nas ruas.')">Enviar</button>
+        <div class="explanation" id="explanation-q8"></div>
+    </div>
+    
+    <div class="question" id="question9">
+        <p><strong>9. Sobre o TEMA e a TÍTULO de um texto, considere as alternativas:</strong></p>
+        <label><input type="radio" name="q9" value="a"> (a) O tema é a ideia central do texto, enquanto o título se refere à denominação do texto.</label><br>
+        <label><input type="radio" name="q9" value="b"> (b) O tema é o título, o título é o tema.</label><br>
+        <label><input type="radio" name="q9" value="c"> (c) O título é a ideia central do texto, enquanto o tema é o que o texto trata.</label><br>
+        <label><input type="radio" name="q9" value="d"> (d) O tema não tem relação com o título do texto.</label><br>
+        <label><input type="radio" name="q9" value="e"> (e) O tema e o título são independentes entre si.</label><br>
+        <button onclick="checkAnswer('q9', 'a', 'A alternativa CORRETA é: O tema é a ideia central do texto, enquanto o título se refere à denominação do texto.')">Enviar</button>
+        <div class="explanation" id="explanation-q9"></div>
+    </div>
+    
+    <div class="question" id="question10">
+        <p><strong>10. Qual a função do PARÁGRAFO em um texto?</strong></p>
+        <label><input type="radio" name="q10" value="a"> (a) Separar ideias e organizá-las.</label><br>
+        <label><input type="radio" name="q10" value="b"> (b) O parágrafo tem a função de encadear as ideias da introdução ao desenvolvimento do texto.</label><br>
+        <label><input type="radio" name="q10" value="c"> (c) Parágrafo é o conjunto de frases que se referem a uma única ideia.</label><br>
+        <label><input type="radio" name="q10" value="d"> (d) Todas as alternativas estão corretas.</label><br>
+        <label><input type="radio" name="q10" value="e"> (e) O parágrafo é uma parte do texto que não tem importância para o leitor.</label><br>
+        <button onclick="checkAnswer('q10', 'd', 'A alternativa CORRETA é: Todas as alternativas estão corretas.')">Enviar</button>
+        <div class="explanation" id="explanation-q10"></div>
+    </div>
+    
+    <div class="question" id="question21">
+        <p><strong>11. Qual das opções abaixo é um exemplo de oração subordinada adjetiva?</strong></p>
+        <label><input type="radio" name="q21" value="a"> (a) Ele saiu porque estava cansado.</label><br>
+        <label><input type="radio" name="q21" value="b"> (b) O livro que você me deu é interessante.</label><br>
+        <label><input type="radio" name="q21" value="c"> (c) Ele estuda todos os dias e faz exercícios.</label><br>
+        <label><input type="radio" name="q21" value="d"> (d) O cachorro correu atrás da bola.</label><br>
+        <label><input type="radio" name="q21" value="e"> (e) Maria gosta de estudar matemática e física.</label><br>
+        <button onclick="checkAnswer('q21', 'b', 'A alternativa CORRETA é: O livro que você me deu é interessante.')">Enviar</button>
+        <div class="explanation" id="explanation-q21"></div>
+    </div>
+    
+    <div class="question" id="question22">
+        <p><strong>12. Assinale a alternativa que apresenta um período simples:</strong></p>
+        <label><input type="radio" name="q22" value="a"> (a) Eu fui ao mercado, mas não comprei nada.</label><br>
+        <label><input type="radio" name="q22" value="b"> (b) Ele estuda muito para passar no concurso.</label><br>
+        <label><input type="radio" name="q22" value="c"> (c) Se você quiser, podemos ir ao cinema.</label><br>
+        <label><input type="radio" name="q22" value="d"> (d) Eu e você podemos fazer o trabalho juntos.</label><br>
+        <label><input type="radio" name="q22" value="e"> (e) Ela gosta de ler, escrever e desenhar.</label><br>
+        <button onclick="checkAnswer('q22', 'b', 'A alternativa CORRETA é: Ele estuda muito para passar no concurso.')">Enviar</button>
+        <div class="explanation" id="explanation-q22"></div>
+    </div>
+    
+    <div class="question" id="question23">
+        <p><strong>13. A expressão "não só... mas também" indica:</strong></p>
+        <label><input type="radio" name="q23" value="a"> (a) Adição.</label><br>
+        <label><input type="radio" name="q23" value="b"> (b) Exclusão.</label><br>
+        <label><input type="radio" name="q23" value="c"> (c) Conclusão.</label><br>
+        <label><input type="radio" name="q23" value="d"> (d) Comparação.</label><br>
+        <label><input type="radio" name="q23" value="e"> (e) Alternativa.</label><br>
+        <button onclick="checkAnswer('q23', 'a', 'A alternativa CORRETA é: Adição.')">Enviar</button>
+        <div class="explanation" id="explanation-q23"></div>
+    </div>
+    
+    <div class="question" id="question24">
+        <p><strong>14. Qual a função do ADVÉRBIO em uma frase?</strong></p>
+        <label><input type="radio" name="q24" value="a"> (a) Modificar o verbo, o adjetivo ou outro advérbio.</label><br>
+        <label><input type="radio" name="q24" value="b"> (b) Indicar uma ação.</label><br>
+        <label><input type="radio" name="q24" value="c"> (c) Realizar uma comparação.</label><br>
+        <label><input type="radio" name="q24" value="d"> (d) Descrever um substantivo.</label><br>
+        <label><input type="radio" name="q24" value="e"> (e) Nenhuma das alternativas está correta.</label><br>
+        <button onclick="checkAnswer('q24', 'a', 'A alternativa CORRETA é: Modificar o verbo, o adjetivo ou outro advérbio.')">Enviar</button>
+        <div class="explanation" id="explanation-q24"></div>
+    </div>
+    
+    <div class="question" id="question25">
+        <p><strong>15. "Ela disse que não iria ao cinema." A frase contém:</strong></p>
+        <label><input type="radio" name="q25" value="a"> (a) Um período simples.</label><br>
+        <label><input type="radio" name="q25" value="b"> (b) Um período composto.</label><br>
+        <label><input type="radio" name="q25" value="c"> (c) Uma oração coordenada.</label><br>
+        <label><input type="radio" name="q25" value="d"> (d) Uma oração subordinada.</label><br>
+        <label><input type="radio" name="q25" value="e"> (e) Nenhuma das alternativas está correta.</label><br>
+        <button onclick="checkAnswer('q25', 'b', 'A alternativa CORRETA é: Um período composto.')">Enviar</button>
+        <div class="explanation" id="explanation-q25"></div>
+    </div>
+    
+    
+    <div class="question" id="question29">
+        <p><strong>19. Qual das seguintes opções é um exemplo de texto narrativo?</strong></p>
+        <label><input type="radio" name="q29" value="a"> (a) Uma receita de bolo.</label><br>
+        <label><input type="radio" name="q29" value="b"> (b) Um artigo científico.</label><br>
+        <label><input type="radio" name="q29" value="c"> (c) Um conto sobre uma aventura.</label><br>
+        <label><input type="radio" name="q29" value="d"> (d) Um ensaio sobre filosofia.</label><br>
+        <label><input type="radio" name="q29" value="e"> (e) Uma análise de poema.</label><br>
+    </div>
+    
+    <div class="question" id="question30">
+        <p><strong>20. Assinale a alternativa que apresenta um exemplo de antítese:</strong></p>
+        <label><input type="radio" name="q30" value="a"> (a) Ele é pobre, mas feliz.</label><br>
+        <label><input type="radio" name="q30" value="b"> (b) O frio era intenso, mas o sol brilhava.</label><br>
+        <label><input type="radio" name="q30" value="c"> (c) Ela é uma beleza em pessoa.</label><br>
+        <label><input type="radio" name="q30" value="d"> (d) A vida é um sonho.</label><br>
+        <label><input type="radio" name="q30" value="e"> (e) Ele não era um homem comum.</label><br>
+    </div>
+
+    
+    <div class="question" id="question31">
+        <p><strong>1. São desvios não intencionais da norma gramatical, ou seja, quando um falante se expressa de maneira não aceita pela norma-padrão de sua língua, o que acaba gerando problemas na comunicação. Esses problemas podem estar relacionados à:</strong></p>
+        <label><input type="radio" name="q31" value="a"> (a) verbo, substantivo e advérbio</label><br>
+        <label><input type="radio" name="q31" value="b"> (b) ruído, falta de comunicação e sintaxe</label><br>
+        <label><input type="radio" name="q31" value="c"> (c) semântica, fonética e sintaxe</label><br>
+        <label><input type="radio" name="q31" value="d"> (d) oxítonas, paroxítonas e proparoxítonas</label><br>
+        <label><input type="radio" name="q31" value="e"> (e) fonética, verbo e ruído</label><br>
+        <p><strong>Resposta correta:</strong> semântica, fonética e sintaxe</p>
+    </div>
+    
+    <div class="question" id="question32">
+        <p><strong>2. Identifique a alternativa que contém cinco gêneros textuais:</strong></p>
+        <label><input type="radio" name="q32" value="a"> (a) dissertativo, conjuntivo, expositivo, injuntivo, e-mail.</label><br>
+        <label><input type="radio" name="q32" value="b"> (b) jornalístico, e-mail, dissertativo, positivo, injuntivo.</label><br>
+        <label><input type="radio" name="q32" value="c"> (c) descritivo, dissertativo, positivo, conjuntivo, objetivo.</label><br>
+        <label><input type="radio" name="q32" value="d"> (d) jornalístico, e-mail, positivo, conjuntivo, objetivo.</label><br>
+        <label><input type="radio" name="q32" value="e"> (e) narrativo, descritivo, dissertativo, expositivo, injuntivo.</label><br>
+        <p><strong>Resposta correta:</strong> narrativo, descritivo, dissertativo, expositivo, injuntivo.</p>
+    </div>
+    
+    <div class="question" id="question33">
+        <p><strong>3. Assinale a alternativa correta:</strong></p>
+        <label><input type="radio" name="q33" value="a"> (a) Ambiguidade é a falta de clareza, de transparência, nexo, lógica, simplicidade.</label><br>
+        <label><input type="radio" name="q33" value="b"> (b) Obscuridade ocorre quando a frase apresenta mais de um sentido, em consequência da má pontuação ou da má colocação das palavras.</label><br>
+        <label><input type="radio" name="q33" value="c"> (c) Prolixidade é a característica do texto conciso.</label><br>
+        <label><input type="radio" name="q33" value="d"> (d) Obscuridade é a falta de clareza, de transparência, nexo, lógica, simplicidade.</label><br>
+        <label><input type="radio" name="q33" value="e"> (e) Ambiguidade ocorre quando a frase apresenta apenas um sentido.</label><br>
+        <p><strong>Resposta correta:</strong> Obscuridade é a falta de clareza, de transparência, nexo, lógica, simplicidade.</p>
+    </div>
+    
+    <div class="question" id="question34">
+        <p><strong>4. Quanto aos tipos de discursos utilizados na comunicação escrita, qual das opções refere-se ao discurso indireto livre?</strong></p>
+        <label><input type="radio" name="q34" value="a"> (a) Junção do discurso direto e indireto, aproximando narrador e entrevistado. No discurso direto livre, o narrador interrompe sua narrativa ou pensamentos das personagens, assumindo o discurso entre delas.</label><br>
+        <label><input type="radio" name="q34" value="b"> (b) Junção do discurso direto e indireto, aproximando narrador e personagem. No discurso indireto livre, o narrador interrompe sua narrativa para registrar e inserir reflexões ou pensamentos das personagens, assumindo o discurso delas.</label><br>
+        <label><input type="radio" name="q34" value="c"> (c) O discurso direto livre aproxima narrador e personagem. O narrador interrompe sua narrativa para registrar e inserir reflexões ou pensamentos das personagens, assumindo o discurso delas.</label><br>
+        <label><input type="radio" name="q34" value="d"> (d) O discurso indireto livre é utilizado quando o narrador dos fatos dá voz às personagens. Sua utilização é feita, em geral, na 3ª pessoa do discurso.</label><br>
+        <label><input type="radio" name="q34" value="e"> (e) O discurso indireto livre é quando o narrador relata fatos ocorridos em sua presença, emitindo opiniões e impressões sobre estes.</label><br>
+        <p><strong>Resposta correta:</strong> Junção do discurso direto e indireto, aproximando narrador e personagem. No discurso indireto livre, o narrador interrompe sua narrativa para registrar e inserir reflexões ou pensamentos das personagens, assumindo o discurso delas.</p>
+    </div>
+    
+    <div class="question" id="question35">
+        <p><strong>5. Processo de Comunicação que ocorre entre as instituições públicas e a sociedade e que tem por objetivo promover a troca de ou compartilhamento das informações de interesse público.</strong></p>
+        <label><input type="radio" name="q35" value="a"> (a) Comunicação Social</label><br>
+        <label><input type="radio" name="q35" value="b"> (b) Comunicação Pública</label><br>
+        <label><input type="radio" name="q35" value="c"> (c) Comunicação Privada</label><br>
+        <label><input type="radio" name="q35" value="d"> (d) Comunicação Organizacional</label><br>
+        <label><input type="radio" name="q35" value="e"> (e) Comunicação Empresarial</label><br>
+        <p><strong>Resposta correta:</strong> Comunicação Pública</p>
+    </div>
+    
+    <div class="question" id="question36">
+        <p><strong>6. Os princípios da coerência textual são:</strong></p>
+        <label><input type="radio" name="q36" value="a"> (a) Contradição, não tautologia e relevância.</label><br>
+        <label><input type="radio" name="q36" value="b"> (b) Não contradição, tautologia e relevância.</label><br>
+        <label><input type="radio" name="q36" value="c"> (c) Contradição, não tautologia e irrelevância.</label><br>
+        <label><input type="radio" name="q36" value="d"> (d) Não contradição, não tautologia e relevância.</label><br>
+        <label><input type="radio" name="q36" value="e"> (e) Não contradição, não tautologia e irrelevância.</label><br>
+        <p><strong>Resposta correta:</strong> Não contradição, não tautologia e relevância.</p>
+    </div>
+    
+    <div class="question" id="question37">
+        <p><strong>7. Qual é o tipo textual em que há o posicionamento do autor em defesa de um tema ou assunto, e para buscar persuadir o leitor depende da apresentação de argumentos, justificativas, conceitos, etc., e são divididos em introdução, desenvolvimento e conclusão.</strong></p>
+        <label><input type="radio" name="q37" value="a"> (a) Narrativo</label><br>
+        <label><input type="radio" name="q37" value="b"> (b) Expositivo</label><br>
+        <label><input type="radio" name="q37" value="c"> (c) Justificativo</label><br>
+        <label><input type="radio" name="q37" value="d"> (d) Dissertativo</label><br>
+        <label><input type="radio" name="q37" value="e"> (e) Descritivo</label><br>
+        <p><strong>Resposta correta:</strong> Dissertativo</p>
+    </div>
+    
+    <div class="question" id="question38">
+        <p><strong>8. Qual a estrutura básica do discurso indireto?</strong></p>
+        <label><input type="radio" name="q38" value="a"> (a) Fala do narrador + verbo de elocução + conjunção/preposição + fala da personagem pelas palavras do narrador.</label><br>
+        <label><input type="radio" name="q38" value="b"> (b) Fala do personagem + verbo de interrogação + conjunção/preposição + fala da personagem pelas palavras do narrador.</label><br>
+        <label><input type="radio" name="q38" value="c"> (c) Fala do personagem + verbo de elocução + conjunção/preposição + fala da personagem pelas palavras do narrador.</label><br>
+        <label><input type="radio" name="q38" value="d"> (d) Fala do narrador + verbo de interrogação + conjunção/preposição + fala da personagem pelas palavras do narrador.</label><br>
+        <label><input type="radio" name="q38" value="e"> (e) Fala do narrador + verbo de elocução + conjunção/preposição + fala do narrador nas palavras do personagem.</label><br>
+        <p><strong>Resposta correta:</strong> Fala do narrador + verbo de elocução + conjunção/preposição + fala da personagem pelas palavras do narrador.</p>
+    </div>
+    
+    <div class="question" id="question39">
+        <p><strong>9. Em relação aos tipos de Discurso marque a Alternativa correta:</strong></p>
+        <label><input type="radio" name="q39" value="a"> (a) No discurso Direto: o personagem é chamado a apresentar suas próprias palavras, é marcado pela presença de verbos: dizer, afirmar, sugerir. O discurso direto é quando o narrador relata fatos ocorridos em sua presença, emitindo opiniões e impressões sobre estes. Sua utilização é feita, em geral, na primeira pessoa do discurso.</label><br>
+        <label><input type="radio" name="q39" value="b"> (b) No discurso Indireto: o personagem é chamado a apresentar suas próprias palavras, é marcado pela presença de verbos: dizer, afirmar, sugerir. O discurso direto é quando o narrador relata fatos ocorridos em sua presença, emitindo opiniões e impressões sobre estes. Sua utilização é feita, em geral, na primeira pessoa do discurso.</label><br>
+        <label><input type="radio" name="q39" value="c"> (c) No Discurso Direto: processo de reproduzir enunciados, marcados por um verbo declarativo em uma oração subordinada substantiva. O discurso indireto é utilizado quando o narrador dos fatos dá voz às personagens. Sua utilização é feita, em geral, na 3ª pessoa do discurso.</label><br>
+        <label><input type="radio" name="q39" value="d"> (d) No Discurso Indireto Livre: processo de reproduzir enunciados, marcados por um verbo declarativo em uma oração subordinada substantiva. O discurso indireto é utilizado quando o narrador dos fatos dá voz às personagens. Sua utilização é feita, em geral, na 3ª pessoa do discurso.</label><br>
+        <label><input type="radio" name="q39" value="e"> (e) No Discurso Direto: junção do discurso direto e indireto, aproximando narrador e personagem. No discurso indireto livre, o narrador interrompe sua narrativa para registrar e inserir reflexões ou pensamentos das personagens, assumindo o discurso delas. As exclamações e interrogações que denotam as emoções e sentimentos destas personagens são mantidas no relato escrito.</label><br>
+        <p><strong>Resposta correta:</strong> No discurso Direto: o personagem é chamado a apresentar suas próprias palavras, é marcado pela presença de verbos: dizer, afirmar, sugerir. O discurso direto é quando o narrador relata fatos ocorridos em sua presença, emitindo opiniões e impressões sobre estes. Sua utilização é feita, em geral, na primeira pessoa do discurso.</p>
+    </div>
+    <div class="question" id="questionA">
+        <p><strong>1. Em relação às técnicas de expansão do vocabulário, como o uso de sinônimos, antônimos e campos semânticos, assinale a alternativa INCORRETA:</strong></p>
+        <label><input type="radio" name="q1" value="a"> (a) Antinonímia se refere às palavras diferentes com significados opostos.</label><br>
+        <label><input type="radio" name="q1" value="b"> (b) Antinonímia trata de palavras cujo significados estabelecem relação e oposição ou contradição entre si</label><br>
+        <label><input type="radio" name="q1" value="c"> (c) Campo semântico: é o estudo do significado de cada vocábulo que existe em uma língua</label><br>
+        <label><input type="radio" name="q1" value="d"> (d) Sinonímia se refere às palavras diferentes com significados parecidos</label><br>
+        <label><input type="radio" name="q1" value="e"> (e) Semântica é uma área da linguística focada no significado das palavras e dos sons, bem como na relação entre o sentido e a estrutura desses elementos dentro do enunciado. É por meio da semântica que se desenvolvem conceitos como o de palavras sinônimas, antônimas ou parônimas, de conotação e denotação, de ambiguidade e polissemia, entre outros.</label><br>
+        <p><strong>Resposta correta:</strong> Antinonímia se refere às palavras diferentes com significados parecidos</p>
+    </div>
+    
+    <div class="question" id="questionB">
+        <p><strong>2. Ao produzir um BA (documento operacional obrigatório em toda e qualquer intervenção PM), o ME está, quanto à tipologia textual, seguindo as estruturas específicas de um texto:</strong></p>
+        <label><input type="radio" name="q2" value="a"> (a) Policial</label><br>
+        <label><input type="radio" name="q2" value="b"> (b) Narrativo</label><br>
+        <label><input type="radio" name="q2" value="c"> (c) Descritivo</label><br>
+        <label><input type="radio" name="q2" value="d"> (d) Descritivo</label><br>
+        <label><input type="radio" name="q2" value="e"> (e) Subjetivo</label><br>
+        <p><strong>Resposta correta:</strong> Narrativo</p>
+    </div>
+    
+    <div class="question" id="questionC">
+        <p><strong>3. Quando num discurso o personagem é chamado a apresentar suas próprias palavras, é marcado pela presença de verbos: dizer, afirmar, sugerir, é também quando o narrador relata fatos ocorridos em sua presença, emitindo opiniões sobre estes, e a sua utilização é feita em geral na primeira pessoa do discurso, essas são características de qual tipo de discurso?</strong></p>
+        <label><input type="radio" name="q3" value="a"> (a) Direto</label><br>
+        <label><input type="radio" name="q3" value="b"> (b) Indireto Livre</label><br>
+        <label><input type="radio" name="q3" value="c"> (c) Indireto</label><br>
+        <label><input type="radio" name="q3" value="d"> (d) Direto Livre</label><br>
+        <label><input type="radio" name="q3" value="e"> (e) Semi Direto</label><br>
+        <p><strong>Resposta correta:</strong> Direto</p>
+    </div>
+    
+    <div class="question" id="questionD">
+        <p><strong>4. Em relação às técnicas de expansão do vocabulário, como o uso de sinônimos, antônimos e campos semânticos, bem como a Estrutura do texto: Frase e parágrafo. Assinale a alternativa INCORRETA:</strong></p>
+        <label><input type="radio" name="q4" value="a"> (a) Parágrafo: elemento textual com unidade de sentido que serve para dividir e organizar o texto. Para identificá-lo, basta procurar os trechos que iniciam com recuo na margem esquerda e encerram com ponto final. Eles podem se dividir em parágrafos de introdução, desenvolvimento e conclusão. Todos estruturam-se na ordem: tópico frasal, desenvolvimento e conclusão.</label><br>
+        <label><input type="radio" name="q4" value="b"> (b) Semântica é uma área da linguística focada no significado das palavras e dos sons, bem como na relação entre o sentido e a estrutura desses elementos dentro do enunciado. É por meio da semântica que se desenvolvem conceitos como o de palavras sinônimas, antônimas ou parônimas, de conotação e denotação, de ambiguidade e polissemia, entre outros.</label><br>
+        <label><input type="radio" name="q4" value="c"> (c) Campo semântico: é o estudo do significado de cada vocábulo que existe em uma língua</label><br>
+        <label><input type="radio" name="q4" value="d"> (d) Frase: não é enunciado de sentido completo, nem pode ser constituída de uma só palavra, tem que possuir no mínimo centenas de palavras para ser considerada uma frase</label><br>
+        <label><input type="radio" name="q4" value="e"> (e) Frase: enunciado de sentido completo, pode ser constituída de uma só palavra, de várias palavras e pode ou não incluir verbo: “fogo!” “atenção!”, “Alguns anos vivi em Itabira.”, “Que inocência! Que aurora! Que alegria.”</label><br>
+        <p><strong>Resposta correta:</strong> Frase: não é enunciado de sentido completo, nem pode ser constituída de uma só palavra, tem que possuir no mínimo centenas de palavras para ser considerada uma frase</p>
+    </div>
+    
+    <div class="question" id="questionE">
+        <p><strong>5. Identifique a alternativa que contém cinco gêneros textuais:</strong></p>
+        <label><input type="radio" name="q5" value="a"> (a) dissertativo, conjuntivo, expositivo, injuntivo, e-mail</label><br>
+        <label><input type="radio" name="q5" value="b"> (b) narrativo, descritivo, dissertativo, expositivo, injuntivo</label><br>
+        <label><input type="radio" name="q5" value="c"> (c) descritivo, dissertativo, positivo, conjuntivo, objetivo</label><br>
+        <label><input type="radio" name="q5" value="d"> (d) jornalístico, e-mail, positivo, conjuntivo, objetivo</label><br>
+        <label><input type="radio" name="q5" value="e"> (e) jornalístico, e-mail, dissertativo, positivo, injuntivo</label><br>
+        <p><strong>Resposta correta:</strong> narrativo, descritivo, dissertativo, expositivo, injuntivo</p>
+    </div>
+    
+    <div class="question" id="questionF">
+        <p><strong>6. No trecho do Hino da Brigada Militar a seguir, evidencia-se o uso de uma função da linguagem, muito comum nas canções:</strong></p>
+        <p>Paira acima a altivez e a renúncia<br>
+        Vibra a honra de bons policiais!<br>
+        A firmeza na fé consciente<br>
+        Fortalece os ideais!</p>
+        <label><input type="radio" name="q6" value="a"> (a) Metalinguística, pois seu foco é no código em si</label><br>
+        <label><input type="radio" name="q6" value="b"> (b) Referencial, com intenção de informar a finalidade da instituição</label><br>
+        <label><input type="radio" name="q6" value="c"> (c) Fática, evidenciando a preocupação em manter o canal de comunicação</label><br>
+        <label><input type="radio" name="q6" value="d"> (d) Poética, com preocupação na forma da mensagem e no prazer estético</label><br>
+        <label><input type="radio" name="q6" value="e"> (e) Conativa, pois tem intenção de convencer o receptor</label><br>
+        <p><strong>Resposta correta:</strong> Poética, com preocupação na forma da mensagem e no prazer estético</p>
+    </div>
+    
+    <div class="question" id="questionG">
+        <p><strong>7. Processo de Comunicação que ocorre entre as instituições públicas e a sociedade e que tem por objetivo promover a troca de ou compartilhamento das informações de interesse público:</strong></p>
+        <label><input type="radio" name="q7" value="a"> (a) Ação Comunicativa</label><br>
+        <label><input type="radio" name="q7" value="b"> (b) Comunicação social</label><br>
+        <label><input type="radio" name="q7" value="c"> (c) Comunicação pública</label><br>
+        <label><input type="radio" name="q7" value="d"> (d) Comunicação Interpessoal</label><br>
+        <label><input type="radio" name="q7" value="e"> (e) Comunicação mediada</label><br>
+        <p><strong>Resposta correta:</strong> Comunicação pública</p>
+    </div>
+    
+    <div class="question" id="questionH">
+        <p><strong>8. São princípios da Lei de Acesso à Informação que visam garantir o direito à informação e acesso aos documentos públicos:</strong></p>
+        <label><input type="radio" name="q8" value="a"> (a) Transparência, responsabilização, proteção à privacidade, informação de qualidade e não discriminação.</label><br>
+        <label><input type="radio" name="q8" value="b"> (b) Publicidade, eficiência, responsabilização, proteção à privacidade, informação de qualidade e não discriminação.</label><br>
+        <label><input type="radio" name="q8" value="c"> (c) Publicidade, eficiência, responsabilidade, proteção à privacidade, não discriminação e informação de qualidade.</label><br>
+        <label><input type="radio" name="q8" value="d"> (d) Publicidade, eficiência, responsabilidade, proteção à privacidade, informação de qualidade e liberdade de expressão.</label><br>
+        <label><input type="radio" name="q8" value="e"> (e) Publicidade, eficiência, responsabilidade, proteção à privacidade, informação de qualidade e igualdade.</label><br>
+        <p><strong>Resposta correta:</strong> Publicidade, eficiência, responsabilidade, proteção à privacidade, informação de qualidade e igualdade.</p>
+    </div>
+<div class="question" id="questionI">
+    <p><strong>NI 1.38/EMBM/2018 – A divulgação de dados e fotos a terceiros, relativos a fato policial atendido pela BM, revestir-se-á de cautela, preservando-se o direito da imagem das partes envolvidas e priorizando a(s)/o(s)______[...].</strong></p>
+    <label><input type="radio" name="q1" value="a"> (a) Pessoa presas Imagem da ação policial</label><br>
+    <label><input type="radio" name="q1" value="b"> (b) Policiais envolvidos</label><br>
+    <label><input type="radio" name="q1" value="c"> (c) Ação brigadiana</label><br>
+    <label><input type="radio" name="q1" value="d"> (d) Imagem da ação policial</label><br>
+    <label><input type="radio" name="q1" value="e"> (e) OPM da ocorrência</label><br>
+    <p><strong>Resposta correta:</strong> Imagem da ação policial</p>
+</div>
+
+<div class="question" id="questionJ">
+    <p><strong>“Vamos encarar esses meliantes frente a frente!” Dizia um Al Sd PM a outro, no início do primeiro serviço do estágio operacional. Eis um exemplo de:</strong></p>
+    <label><input type="radio" name="q2" value="a"> (a) Anfibologia</label><br>
+    <label><input type="radio" name="q2" value="b"> (b) Cacofonia</label><br>
+    <label><input type="radio" name="q2" value="c"> (c) Pleonasmo</label><br>
+    <label><input type="radio" name="q2" value="d"> (d) Solecismo</label><br>
+    <label><input type="radio" name="q2" value="e"> (e) Barbarismo</label><br>
+    <p><strong>Resposta correta:</strong> Pleonasmo</p>
+</div>
+
+<div class="question" id="questionK">
+    <p><strong>No contexto de Língua Portuguesa aplicada à função PM, a disciplina LINGUAGEM e COMUNICAÇÃO tem se tornado cada vez mais importante àqueles que compõem os quadros da Segurança Pública, porque o desempenho da atividade policial exige o uso de uma linguagem _______e_______, a fim de se prestar um melhor serviço à sociedade.</strong></p>
+    <label><input type="radio" name="q3" value="a"> (a) Codificada e técnica</label><br>
+    <label><input type="radio" name="q3" value="b"> (b) Prolixa e rebuscada</label><br>
+    <label><input type="radio" name="q3" value="c"> (c) Clara e subjetiva</label><br>
+    <label><input type="radio" name="q3" value="d"> (d) Coloquial e dialetal</label><br>
+    <label><input type="radio" name="q3" value="e"> (e) Objetiva e clara</label><br>
+    <p><strong>Resposta correta:</strong> Objetiva e clara</p>
+</div>
+
+<div class="question" id="questionL">
+    <p><strong>Analise as frases abaixo e marque a alternativa correta:</strong></p>
+    <p>“Ao digitar a última palavra da ocorrência, o policial comemorou - Enfim, terminei o trabalho!”</p>
+    <p>“Ao digitar a última palavra da ocorrência, Mo policial comemorou o término do trabalho.”</p>
+    <label><input type="radio" name="q4" value="a"> (a) discurso indireto, discurso indireto</label><br>
+    <label><input type="radio" name="q4" value="b"> (b) discurso direto, discurso indireto</label><br>
+    <label><input type="radio" name="q4" value="c"> (c) discurso indireto, discurso direto</label><br>
+    <label><input type="radio" name="q4" value="d"> (d) discurso discreto, discurso indireto</label><br>
+    <label><input type="radio" name="q4" value="e"> (e) discurso direto, discurso direto</label><br>
+    <p><strong>Resposta correta:</strong> discurso direto, discurso indireto</p>
+</div>
+
+<div class="question" id="questionM">
+    <p><strong>________ é aquele que fala, que transmite a ideia,__________ é o que é dito, __________________ é aquele que recebe a informação e ____________ é a falha na comunicação. Assinale a alternativa que preencha corretamente as lacunas do enunciado:</strong></p>
+    <label><input type="radio" name="q5" value="a"> (a) transmissor, mensagem, receptor, ruído</label><br>
+    <label><input type="radio" name="q5" value="b"> (b) Receptor, Transmissor, mensagem, ruído</label><br>
+    <label><input type="radio" name="q5" value="c"> (c) ativo, passivo, texto, QRM</label><br>
+    <label><input type="radio" name="q5" value="d"> (d) Direto, mensagem, indireto, ruído</label><br>
+    <label><input type="radio" name="q5" value="e"> (e) falante, receptor, texto, ruído</label><br>
+    <p><strong>Resposta correta:</strong> transmissor, mensagem, receptor, ruído</p>
+</div>
+
+<div class="question" id="questionN">
+    <p><strong>Observe a comunicação a seguir e identifique a função da linguagem que predomina no exemplo:</strong></p>
+    <p>Alo...<br>
+    Bom dia!<br>
+    Sim.<br>
+    Como está o serviço?<br>
+    Ok.<br>
+    Preciso falar com o Sargento pessoalmente!<br>
+    Ok.<br>
+    Amanhã às 14 horas na minha sala!<br>
+    Ahan.</p>
+    <label><input type="radio" name="q6" value="a"> (a) Poética, em razão da preocupação com a sonoridade na comunicação</label><br>
+    <label><input type="radio" name="q6" value="b"> (b) Conativa, pelo apelo em convencer o receptor</label><br>
+    <label><input type="radio" name="q6" value="c"> (c) Nenhuma das alternativas anteriores</label><br>
+    <label><input type="radio" name="q6" value="d"> (d) Referencial, pois tem seu foco na mensagem</label><br>
+    <label><input type="radio" name="q6" value="e"> (e) Fática, onde a manutenção do diálogo é o foco</label><br>
+    <p><strong>Resposta correta:</strong> Fática, onde a manutenção do diálogo é o foco</p>
+</div>
+
+<div class="question" id="questionO">
+    <p><strong>A linguagem verbal e não verbal faz parte do cotidiano do Policial Militar, nas mais variadas situações que se apresentam no decorrer do serviço. Em relação aos tipos de linguagem, é correto afirmar:</strong></p>
+    <label><input type="radio" name="q7" value="a"> (a) A escrita, por palavras ou sinais, compreende a linguagem verbal</label><br>
+    <label><input type="radio" name="q7" value="b"> (b) A linguagem verbal é sempre culta, seguindo padrões de norma</label><br>
+    <label><input type="radio" name="q7" value="c"> (c) A mímica compreende uma das variáveis da linguagem verbal</label><br>
+    <label><input type="radio" name="q7" value="d"> (d) Nenhuma das alternativas está correta</label><br>
+    <label><input type="radio" name="q7" value="e"> (e) A linguagem verbal e não verbal não podem ser aplicadas juntas</label><br>
+    <p><strong>Resposta correta:</strong> A escrita, por palavras ou sinais, compreende a linguagem verbal</p>
+</div>
+
+<div class="question" id="questionP">
+    <p><strong>Enunciado de sentido completo, pode ser constituída de uma só palavra, de várias palavras e pode ou não incluir verbo. Conceitua:</strong></p>
+    <label><input type="radio" name="q8" value="a"> (a) Tópico frasal</label><br>
+    <label><input type="radio" name="q8" value="b"> (b) Dissertação</label><br>
+    <label><input type="radio" name="q8" value="c"> (c) Poesia</label><br>
+    <label><input type="radio" name="q8" value="d"> (d) Texto dissertativo</label><br>
+    <label><input type="radio" name="q8" value="e"> (e) Frase</label><br>
+    <p><strong>Resposta correta:</strong> Frase</p>
+</div>
+        
+    
+    
+    
+        
+
+    
+    
+    </body>
+    </html>
+
+    
+
+
+
+
+    
+ 
+    
+    
+    
+        
+    
+
+</div>
+<img id="lossImage" class="loss-image" src="img/loss.png" alt="Erro" style="display:none;">
+<script>
+
+
+    function checkAnswer(questionId, correctAnswer, explanation) {
+        const selectedOption = document.querySelector(`input[name="${questionId}"]:checked`);
+        const explanationDiv = document.getElementById(`explanation-${questionId}`);
+        const lossImage = document.getElementById('lossImage'); // Obter a imagem de erro
+
+        if (!selectedOption) {
+            explanationDiv.innerHTML = "Por favor, selecione uma opção.";
+            explanationDiv.className = "explanation";
+            return;
+        }
+
+        const userAnswer = selectedOption.value;
+        if (userAnswer === correctAnswer) {
+            explanationDiv.innerHTML = `<span class="result correct">Resposta correta!</span> ${explanation}`;
+            lossImage.style.display = "none"; // Esconder a imagem de erro
+        } else {
+            lossImage.style.display = "inline"; // Mostrar a imagem de erro
+            explanationDiv.innerHTML = `<span class="result wrong">Resposta incorreta.</span> ${explanation} ${lossImage.outerHTML}`;
+        }
+        explanationDiv.className = "explanation";
+    }
+</script>
+
+</body>
+</html>

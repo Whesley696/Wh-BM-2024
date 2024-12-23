@@ -1,0 +1,2367 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulado Abordagem Policial</title>
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace; /* Fonte monoespaçada para um visual mais tecnológico */
+      background: linear-gradient(to bottom, #1a1a1a, #333); /* Fundo escuro */
+      color: #f5f5f5; /* Cor do texto mais clara */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px; /* Espaçamento interno */
+    }
+    .container {
+      width: 100%;
+      max-width: 900px;
+      padding: 20px;
+      background: #2c2c2c; /* Cor de fundo da caixa */
+      border: 1px solid #555; /* Borda mais escura */
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Sombra mais intensa */
+      transition: transform 0.2s;
+    }
+
+    h1 {
+      text-align: center;
+      color: #e67e22; /* Laranja vibrante */
+      text-transform: uppercase; /* Letras maiúsculas */
+      letter-spacing: 2px; /* Espaçamento entre letras */
+    }
+    .question {
+      margin-bottom: 20px;
+      padding: 10px; /* Espaçamento interno das questões */
+      border: 1px solid #555; /* Borda das perguntas */
+      border-radius: 5px;
+      background-color: #3a3a3a; /* Fundo das perguntas */
+    }
+    .options label {
+      display: block;
+      margin: 5px 0;
+      padding: 5px; /* Espaçamento interno nos rótulos */
+      border-radius: 4px; /* Bordas arredondadas */
+      transition: background 0.3s; /* Transição de fundo */
+    }
+    .options input[type="radio"] {
+      margin-right: 10px;
+    }
+    .options label:hover {
+      background-color: #444; /* Fundo ao passar o mouse */
+    }
+    #submitBtn {
+      display: block;
+      width: 100%;
+      padding: 15px; /* Aumentar o espaçamento */
+      margin-top: 20px;
+      background-color: #2980b9; /* Azul padrão */
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px; /* Aumentar o tamanho da fonte */
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s;
+    }
+    #submitBtn:hover {
+      background-color: #3498db; /* Azul claro */
+      transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    }
+    #result {
+      margin-top: 20px;
+      padding: 15px;
+      text-align: center;
+      font-size: 20px; /* Aumentar o tamanho da fonte do resultado */
+      background-color: #ecf0f1;
+      border-radius: 5px;
+      display: none;
+      color: #333; /* Cor do texto do resultado */
+    }
+
+    .correct {
+        background-color: lightgreen;
+        color: black;
+        
+    }
+    .incorrect {
+        background-color: lightcoral;
+        color: black;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>História BM</h1>
+    <form id="quizForm">
+        <div class="question" id="question01">
+            <p>1. Qual era o principal interesse de Portugal em manter o Brasil sob seu domínio?</p>
+            <div class="options">
+                <label><input type="radio" name="question01" value="a"> A. Explorar as terras brasileiras para desenvolvimento industrial.</label>
+                <label><input type="radio" name="question01" value="b"> B. Garantir o controle da rota atlântica que levava às Índias.</label>
+                <label><input type="radio" name="question01" value="c"> C. Propagar a cultura indígena para outras partes da colônia.</label>
+                <label><input type="radio" name="question01" value="d"> D. Estabelecer um sistema de instituições independentes da metrópole.</label>
+                <label><input type="radio" name="question01" value="e"> E. Criar um governo autônomo que não dependesse de Portugal.</label>
+            </div>
+          </div>
+          <div class="question" id="question02">
+            <p>2. Quem foi Martim Afonso de Souza e qual foi seu papel na colonização do Brasil?</p>
+            <div class="options">
+                <label><input type="radio" name="question02" value="a"> A. Um comerciante português que negociava produtos brasileiros com a Europa.</label>
+                <label><input type="radio" name="question02" value="b"> B. Um explorador enviado por Portugal para fundar as primeiras vilas e consolidar núcleos de povoamento no litoral brasileiro.</label>
+                <label><input type="radio" name="question02" value="c"> C. Um missionário responsável pela catequização dos indígenas brasileiros.</label>
+                <label><input type="radio" name="question02" value="d"> D. Um militar que liderou a defesa do Brasil contra invasões estrangeiras durante o século XVI.</label>
+                <label><input type="radio" name="question02" value="e"> E. Um administrador colonial encarregado de governar todo o território brasileiro de forma autônoma.</label>
+            </div>
+          </div>
+          <div class="question" id="question03">
+            <p>3. Qual foi o papel de Tomé de Souza ao chegar ao Brasil em 1549?</p>
+            <div class="options">
+                <label><input type="radio" name="question03" value="a"> A. Criar um sistema de governo independente do rei de Portugal.</label>
+                <label><input type="radio" name="question03" value="b"> B. Estabelecer as primeiras instituições oficiais para administrar a colônia, incluindo a criação de estruturas de segurança como pelourinhos e cadeias.</label>
+                <label><input type="radio" name="question03" value="c"> C. Fundar colégios e escolas voltados exclusivamente para a educação dos colonos.</label>
+                <label><input type="radio" name="question03" value="d"> D. Iniciar a exploração intensiva de ouro e prata na colônia brasileira.</label>
+                <label><input type="radio" name="question03" value="e"> E. Recrutar indígenas para servirem como soldados nas forças de defesa colonial.</label>
+            </div>
+          </div>
+          <div class="question" id="question04">
+            <p>4. Qual foi uma das contribuições de Tomé de Souza para a estrutura de defesa do Brasil colonial?</p>
+            <div class="options">
+                <label><input type="radio" name="question04" value="a"> A. Implementar uma política de defesa costeira baseada em alianças com tribos locais.</label>
+                <label><input type="radio" name="question04" value="b"> B. Constituir o primeiro Corpo Militar do Brasil, reforçando a segurança da colônia.</label>
+                <label><input type="radio" name="question04" value="c"> C. Enviar tropas diretamente de Portugal para proteger as minas de ouro e prata.</label>
+                <label><input type="radio" name="question04" value="d"> D. Proibir o uso de artilharia em áreas próximas à população civil.</label>
+                <label><input type="radio" name="question04" value="e"> E. Estabelecer um sistema de segurança apenas nas principais vilas costeiras.</label>
+            </div>
+          </div>
+          <div class="question" id="question05">
+            <p>5. Qual das opções descreve corretamente a estrutura militar lusitana transferida para o Brasil colonial?</p>
+            <div class="options">
+                <label><input type="radio" name="question05" value="a"> A. As forças militares eram compostas apenas por milícias civis remuneradas chamadas Ordenanças.</label>
+                <label><input type="radio" name="question05" value="b"> B. A estrutura militar era dividida em Corpos Regulares (Tropa Paga), Milícias ou Corpos de Auxiliares, e Corpos de Ordenanças, cada um com funções e níveis de remuneração distintos.</label>
+                <label><input type="radio" name="question05" value="c"> C. A única força militar existente no Brasil era o exército português, organizado exclusivamente em tropas de Cavalaria.</label>
+                <label><input type="radio" name="question05" value="d"> D. As Ordenanças eram uma força fixa e remunerada, responsável pela defesa constante das vilas costeiras.</label>
+                <label><input type="radio" name="question05" value="e"> E. Todas as forças militares eram formadas por civis não remunerados, sem qualquer distinção entre os tipos de serviço.</label>
+            </div>
+          </div>
+          <div class="question" id="question06">
+            <p>6. Como foram reorganizadas as tropas existentes no Brasil em 1824?</p>
+            <div class="options">
+                <label><input type="radio" name="question06" value="a"> A. Foram todas unificadas em uma única linha chamada Exército Nacional.</label>
+                <label><input type="radio" name="question06" value="b"> B. As tropas foram divididas em: 1ª Linha - Exército; 2ª Linha - 2ª Linha do Exército (depois de 1831, Guarda Nacional); e 3ª Linha - Ordenanças (depois de 1831, Guarda Municipal Permanente).</label>
+                <label><input type="radio" name="question06" value="c"> C. As Milícias foram eliminadas, restando apenas Tropas Regulares e Ordenanças.</label>
+                <label><input type="radio" name="question06" value="d"> D. A organização das tropas não sofreu nenhuma alteração significativa após o século XVIII.</label>
+                <label><input type="radio" name="question06" value="e"> E. As Ordenanças foram promovidas à 1ª Linha, enquanto as Tropas Pagas se tornaram auxiliares.</label>
+            </div>
+          </div>
+          <div class="question" id="question07">
+            <p>7. Qual foi uma das consequências da instalação da Corte no Rio de Janeiro em 1808 para a administração pública?</p>
+            <div class="options">
+                <label><input type="radio" name="question07" value="a"> A. A transferência da capital brasileira para São Paulo.</label>
+                <label><input type="radio" name="question07" value="b"> B. A necessidade de criar uma nova estrutura de segurança pública para reorganizar o Estado.</label>
+                <label><input type="radio" name="question07" value="c"> C. A abolição das instituições militares existentes.</label>
+                <label><input type="radio" name="question07" value="d"> D. A redução do número de tropas e forças de segurança no Brasil.</label>
+                <label><input type="radio" name="question07" value="e"> E. A fundação da primeira força policial exclusivamente civil e independente do Estado.</label>
+            </div>
+          </div>
+          <div class="question" id="question08">
+            <p>8. Qual das alternativas apresenta corretamente algumas das causas da Guerra dos Farrapos?</p>
+            <div class="options">
+                <label><input type="radio" name="question08" value="a"> A. Conflito entre monarquistas e republicanos e apoio estrangeiro aos farroupilhas.</label>
+                <label><input type="radio" name="question08" value="b"> B. Ideias liberais influenciadas pela Revolução Francesa, rivalidade política entre conservadores e liberais, exploração econômica da província, e altas taxas de importação sobre o sal.</label>
+                <label><input type="radio" name="question08" value="c"> C. Revolta contra a independência do Brasil e a descentralização da gestão pública.</label>
+                <label><input type="radio" name="question08" value="d"> D. Insatisfação com a industrialização acelerada da província e forte apoio ao governo central.</label>
+                <label><input type="radio" name="question08" value="e"> E. Apoio militar da Inglaterra aos farroupilhas e oposição ao uso de charque como principal produto da economia.</label>
+            </div>
+          </div>
+          <div class="question" id="question09">
+            <p>9. O que os farroupilhas exigiam no início da Guerra dos Farrapos, que começou em 19 de setembro de 1835?</p>
+            <div class="options">
+                <label><input type="radio" name="question09" value="a"> A. A completa independência do Brasil em relação a Portugal.</label>
+                <label><input type="radio" name="question09" value="b"> B. A substituição do presidente da Província, independência política em relação ao centro, e o fornecimento de charque para o restante do país.</label>
+                <label><input type="radio" name="question09" value="c"> C. A distribuição de terras para todos os cidadãos da Província.</label>
+                <label><input type="radio" name="question09" value="d"> D. A construção de estradas e a reforma educacional na Província.</label>
+                <label><input type="radio" name="question09" value="e"> E. A eliminação das taxas sobre a produção de charque e a criação de uma nova Constituição.</label>
+            </div>
+          </div>
+          <div class="question" id="question10">
+            <p>10. O que Antônio Elzeário de Miranda e Britto fez dois anos após o início da Guerra dos Farrapos?</p>
+            <div class="options">
+                <label><input type="radio" name="question10" value="a"> A. Ele renunciou ao cargo de presidente da Província em protesto contra os farroupilhas.</label>
+                <label><input type="radio" name="question10" value="b"> B. Ele criou uma Força Policial, pela Lei Provincial nº 07, de 18 de novembro de 1837, que se tornou o embrião da Brigada Militar.</label>
+                <label><input type="radio" name="question10" value="c"> C. Ele estabeleceu um tratado de paz com os farroupilhas, buscando uma solução pacífica para o conflito.</label>
+                <label><input type="radio" name="question10" value="d"> D. Ele enviou tropas para apoiar o governo central na luta contra os farroupilhas.</label>
+                <label><input type="radio" name="question10" value="e"> E. Ele implementou uma reforma agrária para atender às demandas dos colonos.</label>
+            </div>
+          </div>
+          <div class="question" id="question11">
+            <p>11. Quando foi regulamentado o Corpo Policial criado por Antônio Elzeário de Miranda e Britto?</p>
+            <div class="options">
+                <label><input type="radio" name="question11" value="a"> A. Em 18 de novembro de 1837, na mesma data de sua criação.</label>
+                <label><input type="radio" name="question11" value="b"> B. Em 05 de maio de 1841, quando entrou em vigor o Regulamento do Corpo Policial.</label>
+                <label><input type="radio" name="question11" value="c"> C. Em 01 de janeiro de 1840, após a primeira assembleia da Província.</label>
+                <label><input type="radio" name="question11" value="d"> D. Em 25 de dezembro de 1839, durante uma crise de segurança pública.</label>
+                <label><input type="radio" name="question11" value="e"> E. Em 15 de agosto de 1842, como parte de um plano de reforma militar.</label>
+            </div>
+          </div>
+          <div class="question" id="question12">
+            <p>12. Quem foi o primeiro comandante do Corpo Policial criado em 1837 e quando esse corpo iniciou suas atividades?</p>
+            <div class="options">
+                <label><input type="radio" name="question12" value="a"> A. O tenente-coronel Quintiliano José de Moura, que iniciou suas atividades em setembro de 1841.</label>
+                <label><input type="radio" name="question12" value="b"> B. O capitão Francisco de Souza, que começou suas atividades em julho de 1841.</label>
+                <label><input type="radio" name="question12" value="c"> C. O tenente-coronel Quintiliano José de Moura, que iniciou suas atividades em julho de 1841.</label>
+                <label><input type="radio" name="question12" value="d"> D. O major Pedro Alves, que começou suas atividades em agosto de 1840.</label>
+                <label><input type="radio" name="question12" value="e"> E. O coronel Manuel da Silva, que iniciou suas atividades em janeiro de 1842.</label>
+            </div>
+          </div>
+          <div class="question" id="question13">
+            <p>13. O que foi a Paz de Ponche Verde, assinada em 1845?</p>
+            <div class="options">
+                <label><input type="radio" name="question13" value="a"> A. Um tratado que estabeleceu a divisão do Brasil entre farroupilhas e leais.</label>
+                <label><input type="radio" name="question13" value="b"> B. Um acordo que resultou na dissolução do Corpo Policial e na reintegração dos farroupilhas ao governo provincial.</label>
+                <label><input type="radio" name="question13" value="c"> C. Um tratado de paz que foi assinado após vários conflitos militares, onde os farroupilhas aceitaram o acordo proposto.</label>
+                <label><input type="radio" name="question13" value="d"> D. Um acordo que concedeu autonomia total à Província do Rio Grande do Sul.</label>
+                <label><input type="radio" name="question13" value="e"> E. Um pacto entre os farroupilhas e os portugueses para a troca de terras e recursos naturais.</label>
+            </div>
+          </div>
+          <div class="question" id="question14">
+            <p>14. Qual foi o objetivo do envio do Corpo Policial a Vacaria e São Francisco de Paula entre 1851 e 1852?</p>
+            <div class="options">
+                <label><input type="radio" name="question14" value="a"> A. Proteger as fronteiras da Província contra invasões estrangeiras.</label>
+                <label><input type="radio" name="question14" value="b"> B. Conter a ação dos índios que estavam saqueando e depredando fazendas, e cometendo homicídios.</label>
+                <label><input type="radio" name="question14" value="c"> C. Realizar uma campanha de recrutamento para novas tropas militares.</label>
+                <label><input type="radio" name="question14" value="d"> D. Estabelecer colônias de imigrantes nas áreas em conflito.</label>
+                <label><input type="radio" name="question14" value="e"> E. Investigar atividades de contrabando e comércio ilegal na região.</label>
+            </div>
+          </div>
+          <div class="question" id="question15">
+            <p>15. O que ocorreu no Brasil em 15 de novembro de 1889?</p>
+            <div class="options">
+                <label><input type="radio" name="question15" value="a"> A. A declaração de independência do Brasil em relação a Portugal.</label>
+                <label><input type="radio" name="question15" value="b"> B. A assinatura da Constituição da República do Brasil.</label>
+                <label><input type="radio" name="question15" value="c"> C. A Proclamação da República, marcando o fim da monarquia e o início de um regime republicano.</label>
+                <label><input type="radio" name="question15" value="d"> D. A primeira eleição direta para presidente da República.</label>
+                <label><input type="radio" name="question15" value="e"> E. A implementação de reformas sociais abrangentes em todo o país.</label>
+            </div>
+          </div>
+          <div class="question" id="question16">
+            <p>16. O que ocorreu em 26 de dezembro de 1889 em relação à Força Policial no Brasil?</p>
+            <div class="options">
+                <label><input type="radio" name="question16" value="a"> A. A Força Policial foi extinta e substituída por um novo exército regular.</label>
+                <label><input type="radio" name="question16" value="b"> B. A Força Policial passou a ser chamada de Guarda Cívica.</label>
+                <label><input type="radio" name="question16" value="c"> C. A Força Policial foi reorganizada sob o comando do Exército Brasileiro.</label>
+                <label><input type="radio" name="question16" value="d"> D. A Força Policial se tornou uma força de segurança privada para a elite.</label>
+                <label><input type="radio" name="question16" value="e"> E. A Força Policial mudou seu foco para a proteção das fronteiras nacionais.</label>
+            </div>
+          </div>
+          <div class="question" id="question17">
+            <p>17. O que ocorreu em fevereiro de 1891 em relação ao novo regime republicano no Brasil?</p>
+            <div class="options">
+                <label><input type="radio" name="question17" value="a"> A. O novo regime instaurou uma monarquia constitucional.</label>
+                <label><input type="radio" name="question17" value="b"> B. A primeira Constituição do Brasil republicano foi promulgada.</label>
+                <label><input type="radio" name="question17" value="c"> C. O novo regime cancelou todas as eleições até nova ordem.</label>
+                <label><input type="radio" name="question17" value="d"> D. Foi realizada a primeira eleição direta para presidente da República.</label>
+                <label><input type="radio" name="question17" value="e"> E. O novo regime estabeleceu a centralização do poder nas mãos do presidente.</label>
+            </div>
+          </div>
+          <div class="question" id="question18">
+            <p>18. O que aconteceu em 24 de fevereiro de 1891 no Brasil?</p>
+            <div class="options">
+                <label><input type="radio" name="question18" value="a"> A. Foi realizada a primeira eleição direta para o presidente da República.</label>
+                <label><input type="radio" name="question18" value="b"> B. A primeira Constituição do Brasil republicano foi promulgada.</label>
+                <label><input type="radio" name="question18" value="c"> C. O novo governo decretou estado de sítio em todo o país.</label>
+                <label><input type="radio" name="question18" value="d"> D. A capital do Brasil foi transferida de Rio de Janeiro para Brasília.</label>
+                <label><input type="radio" name="question18" value="e"> E. O Brasil se tornou uma república socialista.</label>
+            </div>
+          </div>
+          <div class="question" id="question19">
+            <p>19. Após a Proclamação da República, quem foram escolhidos pela Assembleia, transformada em Congresso Nacional, para os cargos de presidente e vice-presidente do Brasil?</p>
+            <div class="options">
+                <label><input type="radio" name="question19" value="a"> A. Getúlio Vargas como presidente e João Goulart como vice.</label>
+                <label><input type="radio" name="question19" value="b"> B. Floriano Peixoto como presidente e Deodoro da Fonseca como vice.</label>
+                <label><input type="radio" name="question19" value="c"> C. Deodoro da Fonseca como presidente e Floriano Peixoto como vice.</label>
+                <label><input type="radio" name="question19" value="d"> D. Marechal Rondon como presidente e Campos Sales como vice.</label>
+                <label><input type="radio" name="question19" value="e"> E. Washington Luís como presidente e Nilo Peçanha como vice.</label>
+            </div>
+          </div>
+          <div class="question" id="question20">
+            <p>20. O que caracteriza o período de instabilidade política no Rio Grande do Sul, conhecido como "governicho", entre 1891 e 1892?</p>
+            <div class="options">
+                <label><input type="radio" name="question20" value="a"> A. A estabilidade e continuidade de um único governo sob a liderança de Júlio de Castilhos.</label>
+                <label><input type="radio" name="question20" value="b"> B. A sucessão de dezoito governos em um curto espaço de tempo, após a queda de Deodoro da Fonseca.</label>
+                <label><input type="radio" name="question20" value="c"> C. A consolidação do poder do Exército na política estadual.</label>
+                <label><input type="radio" name="question20" value="d"> D. A primeira eleição direta para a presidência da República.</label>
+                <label><input type="radio" name="question20" value="e"> E. O fortalecimento das instituições republicanas no Estado.</label>
+            </div>
+          </div>
+          <div class="question" id="question21">
+            <p>21. Durante o período conhecido como "governicho", quais foram as mudanças de nomenclatura da Guarda Cívica entre 1892?</p>
+            <div class="options">
+                <label><input type="radio" name="question21" value="a"> A. A Guarda Cívica foi extinta e não teve mais denominações.</label>
+                <label><input type="radio" name="question21" value="b"> B. A Guarda Cívica foi chamada de Corpo Policial, depois Brigada Policial, e finalmente retornou ao nome de Guarda Cívica.</label>
+                <label><input type="radio" name="question21" value="c"> C. A Guarda Cívica foi dividida em três unidades: Corpo Policial, Brigada Militar e Guarda Municipal.</label>
+                <label><input type="radio" name="question21" value="d"> D. A Guarda Cívica manteve o mesmo nome durante todo o período de "governicho".</label>
+                <label><input type="radio" name="question21" value="e"> E. A Guarda Cívica se transformou em uma força militar independente.</label>
+            </div>
+          </div>
+          <div class="question" id="question22">
+            <p>22. O que ocorreu em 15 de outubro de 1892 em relação à segurança pública no Rio Grande do Sul?</p>
+            <div class="options">
+                <label><input type="radio" name="question22" value="a"> A. A extinção da Guarda Cívica e sua substituição por uma força militar federal.</label>
+                <label><input type="radio" name="question22" value="b"> B. A criação da Brigada Militar pelo Ato nº 357, durante a presidência interina de Fernando Abbott.</label>
+                <label><input type="radio" name="question22" value="c"> C. A implementação de novas políticas de segurança pública que aboliram a necessidade de forças policiais.</label>
+                <label><input type="radio" name="question22" value="d"> D. A unificação das forças policiais sob um único comando militar federal.</label>
+                <label><input type="radio" name="question22" value="e"> E. A transformação da Brigada Militar em uma força de intervenção internacional.</label>
+            </div>
+          </div>
+        <div class="question">
+            <p>23. Para enfrentar o Paraguai, D. Pedro II criou os Corpos de Voluntários da Pátria. Qual era o objetivo dessa formação militar?</p>
+            <div class="options">
+              <label><input type="radio" name="question1" value="a"> Garantir o comércio de produtos brasileiros com outros países.</label>
+              <label><input type="radio" name="question1" value="b"> Promover a expansão territorial do Império Brasileiro.</label>
+              <label><input type="radio" name="question1" value="c"> Sustentar a honra e integridade do Império.</label>
+              <label><input type="radio" name="question1" value="d"> Fortalecer a influência do Brasil na América Latina.</label>
+            </div>
+          </div>
+          <div class="question">
+            <p>30. A Revolução Federalista, ocorrida em 9 de fevereiro de 1893 no Rio Grande do Sul, envolveu um conflito entre quais grupos com objetivos políticos distintos?</p>
+            <div class="options">
+              <label><input type="radio" name="question30" value="a"> Maragatos (federalistas) e pica-paus ou chimangos, aliados a Júlio de Castilhos.</label>
+              <label><input type="radio" name="question30" value="b"> Monarquistas e republicanos que apoiavam a permanência da Constituição Estadual.</label>
+              <label><input type="radio" name="question30" value="c"> Independentes e unionistas que buscavam a centralização do poder no governo federal.</label>
+              <label><input type="radio" name="question30" value="d"> Federalistas e autonomistas que defendiam a manutenção do presidente estadual.</label>
+            </div>
+          </div>
+          <div class="question">
+            <p>31. Qual foi o principal motivo da Revolução Assisista, também conhecida como Movimento Libertador, ocorrida no Rio Grande do Sul em 1923?</p>
+            <div class="options">
+              <label><input type="radio" name="question31" value="a"> A tentativa de Borges de Medeiros de reformar a Constituição Federal.</label>
+              <label><input type="radio" name="question31" value="b"> A oposição ao quinto mandato consecutivo de Borges de Medeiros e as acusações de fraude eleitoral.</label>
+              <label><input type="radio" name="question31" value="c"> A luta pela independência do Rio Grande do Sul em relação ao governo federal.</label>
+              <label><input type="radio" name="question31" value="d"> A implementação de reformas econômicas que afetaram a economia local.</label>
+            </div>
+          </div>
+          
+          <div class="question">
+            <p>32. Na Revolução Assisista, quem eram os grupos em conflito no Rio Grande do Sul?</p>
+            <div class="options">
+              <label><input type="radio" name="question32" value="a"> Partidários de Borges de Medeiros (chimangos ou pica-paus) e partidários de Assis Brasil (maragatos).</label>
+              <label><input type="radio" name="question32" value="b"> Republicanos e monarquistas que apoiavam reformas sociais no sul do Brasil.</label>
+              <label><input type="radio" name="question32" value="c"> Os federalistas que defendiam a autonomia do Estado contra os centralistas do governo federal.</label>
+              <label><input type="radio" name="question32" value="d"> Conservadores que apoiavam Arthur Bernardes e progressistas que defendiam reformas democráticas.</label>
+            </div>
+          </div>
+          <div class="question">
+            <p>33. Quem foi Olmira Leal de Oliveira, conhecida como Cabo Toco, durante a Revolução Assisista?</p>
+            <div class="options">
+              <label><input type="radio" name="question33" value="a"> A primeira mulher a ocupar um cargo de comando na Brigada Militar.</label>
+              <label><input type="radio" name="question33" value="b"> Enfermeira que se alistou no 2º Corpo Auxiliar da Brigada Militar e foi a primeira mulher a usar a farda da Corporação.</label>
+              <label><input type="radio" name="question33" value="c"> Líder da oposição ao governo de Borges de Medeiros, apoiando a candidatura de Assis Brasil.</label>
+              <label><input type="radio" name="question33" value="d"> Representante das mulheres sulistas na política do período revolucionário.</label>
+            </div>
+          </div>
+          <div class="question">
+            <p>34. Qual foi a ação da Brigada Militar em relação à Coluna Prestes em 1925?</p>
+            <div class="options">
+              <label><input type="radio" name="question34" value="a"> Realizou combates intensos, capturando vários integrantes da Coluna Prestes.</label>
+              <label><input type="radio" name="question34" value="b"> Enviou destacamentos para apoiar diretamente a Coluna Prestes em sua causa.</label>
+              <label><input type="radio" name="question34" value="c"> Limitou-se a perseguir a Coluna Prestes sem realizar combates significativos.</label>
+              <label><input type="radio" name="question34" value="d"> Recusou-se a participar da perseguição por divergências políticas.</label>
+            </div>
+          </div>
+          <div class="question">
+            <p>35. A Revolução Constitucionalista de 1932 foi caracterizada como:</p>
+            <div class="options">
+              <label><input type="radio" name="question35" value="a"> Uma revolução promovida pelo governo de Getúlio Vargas para modernizar o país.</label>
+              <label><input type="radio" name="question35" value="b"> Um confronto armado entre paulistas e o governo de Getúlio Vargas, conhecido também como contrarrevolução.</label>
+              <label><input type="radio" name="question35" value="c"> Um movimento para impedir a eleição de Getúlio Vargas como presidente.</label>
+              <label><input type="radio" name="question35" value="d"> Uma revolução para promover a independência de São Paulo do restante do Brasil.</label>
+            </div>
+          </div>
+          <div class="question">
+            <p>36. Qual foi a medida tomada pelo interventor Flores da Cunha para desarticular os revolucionários durante o período de apoio ao Governo de Getúlio Vargas?</p>
+            <div class="options">
+              <label><input type="radio" name="question36" value="a"> Convocou uma assembleia para debater com os líderes revolucionários.</label>
+              <label><input type="radio" name="question36" value="b"> Ordenou a prisão de todos os líderes revolucionários.</label>
+              <label><input type="radio" name="question36" value="c"> Enviou uma carta ao Governo federal solicitando reforços militares.</label>
+              <label><input type="radio" name="question36" value="d"> Organizou uma resistência armada com apoio popular.</label>
+            </div>
+          </div>
+          <div class="question">
+            <p>37. O que ocorreu em 26 de julho de 1932, durante um grande confronto registrado em Itararé, SP?</p>
+            <div class="options">
+              <label><input type="radio" name="question37" value="a"> O comandante, tenente-coronel Aparício Borges, sobreviveu ao confronto e foi promovido.</label>
+              <label><input type="radio" name="question37" value="b"> Houve um confronto com centenas de mortos, incluindo o corneteiro Timóteo Alves da Rosa.</label>
+              <label><input type="radio" name="question37" value="c"> O corneteiro Timóteo Alves da Rosa foi capturado e feito prisioneiro pelos paulistas.</label>
+              <label><input type="radio" name="question37" value="d"> O tenente-coronel Aparício Borges foi hospitalizado, mas recuperou-se rapidamente.</label>
+            </div>
+          </div>
+          <div class="question">
+            <p>38. Qual foi o principal objetivo da Campanha da Legalidade, mobilização civil e militar ocorrida em 1961?</p>
+            <div class="options">
+              <label><input type="radio" name="question38" value="a"> Garantir a posse de Jânio Quadros como Presidente do Brasil.</label>
+              <label><input type="radio" name="question38" value="b"> Impedir a posse de João Goulart como Presidente do Brasil.</label>
+              <label><input type="radio" name="question38" value="c"> Garantir a posse de João Goulart como Presidente do Brasil.</label>
+              <label><input type="radio" name="question38" value="d"> Promover um movimento militar contra o governo de Jânio Quadros.</label>
+            </div>
+          </div>
+          <div class="question">
+            <p>39. Em que ano foi inaugurado o Cemitério da Brigada Militar, localizado no Morro do Osso, em Porto Alegre?</p>
+            <div class="options">
+              <label><input type="radio" name="question39" value="a"> 1912</label>
+              <label><input type="radio" name="question39" value="b"> 1914</label>
+              <label><input type="radio" name="question39" value="c"> 1916</label>
+              <label><input type="radio" name="question39" value="d"> 1918</label>
+            </div>
+          </div><div class="question">
+            <p>41. Durante a Revolução de 1923, qual foi a primeira missão do campo de aviação sediado na várzea do Gravataí?</p>
+            <div class="options">
+              <label><input type="radio" name="question41" value="a"> Realizar ataques aéreos contra tropas inimigas.</label>
+              <label><input type="radio" name="question41" value="b"> Transportar suprimentos para os soldados.</label>
+              <label><input type="radio" name="question41" value="c"> Observar a movimentação das tropas, fazer reconhecimento do terreno e prestar informações.</label>
+              <label><input type="radio" name="question41" value="d"> Resgatar feridos durante os combates.</label>
+            </div>
+          </div>
+          <div class="question">
+            <p>42. Em qual cidade foi criada a 1ª Companhia Rodoviária em 1934?</p>
+            <div class="options">
+              <label><input type="radio" name="question42" value="a"> Porto Alegre</label>
+              <label><input type="radio" name="question42" value="b"> Santa Maria</label>
+              <label><input type="radio" name="question42" value="c"> Santa Cruz do Sul</label>
+              <label><input type="radio" name="question42" value="d"> Pelotas</label>
+            </div>
+          </div>
+          <div class="question">
+            <p>43. Qual foi a unidade criada como embrião do 9º BPM, em homenagem aos padroeiros do Rio Grande do Sul, São Pedro e São Paulo?</p>
+            <div class="options">
+              <label><input type="radio" name="question43" value="a"> Companhia Pedro e Paulo</label>
+              <label><input type="radio" name="question43" value="b"> 1º Batalhão de Caçadores</label>
+              <label><input type="radio" name="question43" value="c"> 2º Batalhão de Polícia Militar</label>
+              <label><input type="radio" name="question43" value="d"> Companhia de São Pedro</label>
+            </div>
+          </div>
+          <div class="question">
+            <p>44. Qual foi o nome atribuído à Companhia de Segurança, criada para fiscalizar o contingente em Porto Alegre e organizar guardas de honra, após se tornar independente?</p>
+            <div class="options">
+              <label><input type="radio" name="question44" value="a"> Companhia de Polícia Especial</label>
+              <label><input type="radio" name="question44" value="b"> Companhia de Policiamento Militar</label>
+              <label><input type="radio" name="question44" value="c"> Companhia de Polícia de Choque</label>
+              <label><input type="radio" name="question44" value="d"> Companhia de Segurança Pública</label>
+            </div>
+          </div>
+          <div class="question">
+            <p>45. O Decreto-Lei nº 317, de 18 de março de 1967, atribuiu qual função às polícias militares?</p>
+            <div class="options">
+              <label><input type="radio" name="question45" value="a"> Realizar operações de inteligência no combate ao crime organizado</label>
+              <label><input type="radio" name="question45" value="b"> Executar o policiamento ostensivo, fardado</label>
+              <label><input type="radio" name="question45" value="c"> Coordenar as atividades de segurança privada</label>
+              <label><input type="radio" name="question45" value="d"> Implementar programas de segurança comunitária</label>
+            </div>
+          </div>
+          <div class="question">
+            <p>46. Durante os governos militares, em março de 1967, foi criada a Inspetoria-Geral das Polícias Militares (IGPM). Qual era a principal função dessa instituição?</p>
+            <div class="options">
+              <label><input type="radio" name="question46" value="a"> Supervisionar a formação de policiais militares em escolas especializadas</label>
+              <label><input type="radio" name="question46" value="b"> Controlar e fiscalizar as polícias militares e corpos de bombeiros dos Estados, seus efetivos e material bélico, além de definir suas atribuições</label>
+              <label><input type="radio" name="question46" value="c"> Coordenar a integração das forças policiais estaduais com o Exército</label>
+              <label><input type="radio" name="question46" value="d"> Organizar programas de treinamento tático e de combate ao crime</label>
+            </div>
+          </div>
+          <div class="question">
+            <p>47. Em 8 de janeiro de 1985, foi criada uma companhia específica na Polícia Militar com um efetivo inicial de 135 policiais. Qual era o foco dessa nova unidade?</p>
+            <div class="options">
+              <label><input type="radio" name="question47" value="a"> Unidade de policiamento ambiental</label>
+              <label><input type="radio" name="question47" value="b"> Companhia de Polícia Militar de Trânsito</label>
+              <label><input type="radio" name="question47" value="c"> Companhia de Polícia Militar Feminina (Cia PM Fem)</label>
+              <label><input type="radio" name="question47" value="d"> Companhia de Polícia de Choque</label>
+            </div>
+          </div>
+          <div class="question">
+            <p>48. O Museu da Brigada Militar foi criado em 14 de outubro de 1985 e, dois anos depois, foi instalado em um prédio específico. Qual era a localização desse prédio, que também é considerado patrimônio histórico do Estado?</p>
+            <div class="options">
+              <label><input type="radio" name="question48" value="a"> Prédio da Linha de Tiro, na Chácara das Bananeiras</label>
+              <label><input type="radio" name="question48" value="b"> Antigo Quartel da Brigada Militar</label>
+              <label><input type="radio" name="question48" value="c"> Palácio Piratini</label>
+              <label><input type="radio" name="question48" value="d"> Museu Histórico Farroupilha</label>
+            </div>
+          </div>
+          <div class="question">
+            <p>49. Quem é considerado o patrono das polícias militares e civis do Brasil?</p>
+            <div class="options">
+              <label><input type="radio" name="question49" value="a"> Getúlio Vargas</label>
+              <label><input type="radio" name="question49" value="b"> Joaquim José da Silva Xavier (Tiradentes)</label>
+              <label><input type="radio" name="question49" value="c"> Duque de Caxias</label>
+              <label><input type="radio" name="question49" value="d"> Barão de Mauá</label>
+            </div>
+          </div>
+          <div class="question">
+            <p>50. Quem foi instituído patrono da Brigada Militar pelo Decreto nº 4.221 em 20 de outubro de 1953?</p>
+            <div class="options">
+              <label><input type="radio" name="question50" value="a"> General João Carlos de Andrade</label>
+              <label><input type="radio" name="question50" value="b"> Coronel Affonso Emílio Massot</label>
+              <label><input type="radio" name="question50" value="c"> Tenente-Coronel João Gomes</label>
+              <label><input type="radio" name="question50" value="d"> Marechal Floriano Peixoto</label>
+            </div>
+          </div>
+          <div class="question">
+              <p>51. Qual é a designação da Brigada Militar utilizada entre 1837 e 1841?</p>
+              <div class="options">
+                  <label><input type="radio" name="question51" value="a"> Corpo Policial</label>
+                  <label><input type="radio" name="question51" value="b"> Força Policial</label>
+                  <label><input type="radio" name="question51" value="c"> Guarda Cívica</label>
+                  <label><input type="radio" name="question51" value="d"> Brigada Militar</label>
+                  <label><input type="radio" name="question51" value="e"> Força Policial</label>
+              </div>
+          </div>
+          
+          <div class="question">
+              <p>52. Quais cores estão associadas à Brigada Militar e representam força e bravura?</p>
+              <div class="options">
+                  <label><input type="radio" name="question52" value="a"> Azul e Branco</label>
+                  <label><input type="radio" name="question52" value="b"> Verde e Amarelo</label>
+                  <label><input type="radio" name="question52" value="c"> Vermelho e Dourado</label>
+                  <label><input type="radio" name="question52" value="d"> Preto e Prata</label>
+                  <label><input type="radio" name="question52" value="e"> Verde e Azul</label>
+              </div>
+          </div>
+          
+          <div class="question">
+              <p>53. Qual é o simbolismo das Estrelas de Ouro na Brigada Militar?</p>
+              <div class="options">
+                  <label><input type="radio" name="question53" value="a"> Reconhecimento por ações de bravura</label>
+                  <label><input type="radio" name="question53" value="b"> Atribuição de novos comandos</label>
+                  <label><input type="radio" name="question53" value="c"> Condecorações por tempo de serviço</label>
+                  <label><input type="radio" name="question53" value="d"> Representação da História Militar</label>
+                  <label><input type="radio" name="question53" value="e"> Honra ao patrono da Brigada</label>
+              </div>
+          </div>
+          
+          <div class="question">
+              <p>54. O que representam os Ramos de Carvalho no símbolo da Brigada Militar?</p>
+              <div class="options">
+                  <label><input type="radio" name="question54" value="a"> Poder e autoridade</label>
+                  <label><input type="radio" name="question54" value="b"> Sabedoria e proteção</label>
+                  <label><input type="radio" name="question54" value="c"> Longividade e tradição</label>
+                  <label><input type="radio" name="question54" value="d"> Justiça e disciplina</label>
+                  <label><input type="radio" name="question54" value="e"> Fumo e riqueza</label>
+              </div>
+          </div>
+          
+          <div class="question">
+              <p>55. Quais campanhas estão simbolicamente representadas nas Estrelas de Prata da Brigada Militar?</p>
+              <div class="options">
+                  <label><input type="radio" name="question55" value="a"> Revolução Federalista e Coluna Prestes</label>
+                  <label><input type="radio" name="question55" value="b"> Guerra do Paraguai e Revolução Constitucionalista</label>
+                  <label><input type="radio" name="question55" value="c"> Revolução Assisista e Guerra do Paraguai</label>
+                  <label><input type="radio" name="question55" value="d"> Revolução Paulista e Revolução de 1930</label>
+                  <label><input type="radio" name="question55" value="e"> Campanha contra Mucker e Revolução Paulista</label>
+              </div>
+          </div>
+          
+          <div class="question">
+              <p>56. O que significa a frase "Justiça e Disciplina" associada ao símbolo da Brigada Militar?</p>
+              <div class="options">
+                  <label><input type="radio" name="question56" value="a"> O compromisso com a ética e a lei</label>
+                  <label><input type="radio" name="question56" value="b"> A força militar na repressão ao crime</label>
+                  <label><input type="radio" name="question56" value="c"> A proteção ao cidadão e ao patrimônio</label>
+                  <label><input type="radio" name="question56" value="d"> O dever de obedecer às ordens superiores</label>
+                  <label><input type="radio" name="question56" value="e"> A tradição de bravura na defesa do Estado</label>
+              </div>
+          </div>
+          
+          <div class="question">
+              <p>57. Quais foram as principais designações da Brigada Militar antes de sua denominação atual?</p>
+              <div class="options">
+                  <label><input type="radio" name="question57" value="a"> Força Policial e Corpo Policial</label>
+                  <label><input type="radio" name="question57" value="b"> Guarda Cívica e Brigada Policial</label>
+                  <label><input type="radio" name="question57" value="c"> Força Policial e Guarda Cívica</label>
+                  <label><input type="radio" name="question57" value="d"> Corpo Policial e Brigada Militar</label>
+                  <label><input type="radio" name="question57" value="e"> Guarda Cívica e Corpo Policial</label>
+              </div>
+          </div>
+          
+          <div class="question">
+              <p>58. Qual é a relação entre o símbolo da Brigada Militar e o Rio Grande do Sul?</p>
+              <div class="options">
+                  <label><input type="radio" name="question58" value="a"> Representa a cultura e a identidade gaúcha</label>
+                  <label><input type="radio" name="question58" value="b"> Simboliza a força militar do Brasil</label>
+                  <label><input type="radio" name="question58" value="c"> É um símbolo da luta pela liberdade</label>
+                  <label><input type="radio" name="question58" value="d"> Relaciona-se com a história da colonização</label>
+                  <label><input type="radio" name="question58" value="e"> Demonstra a importância do comércio do Estado</label>
+              </div>
+          </div>
+          
+          <div class="question">
+              <p>59. Quais são os elementos principais do escudo da Brigada Militar?</p>
+              <div class="options">
+                  <label><input type="radio" name="question59" value="a"> Cores, estrelas e ramos</label>
+                  <label><input type="radio" name="question59" value="b"> Estrelas, espadas e fitas</label>
+                  <label><input type="radio" name="question59" value="c"> Ramos, flores e escudos</label>
+                  <label><input type="radio" name="question59" value="d"> Símbolos, armas e cores</label>
+                  <label><input type="radio" name="question59" value="e"> Cores, símbolos e emblemas</label>
+              </div>
+          </div>
+          
+          <div class="question">
+              <p>60. Como as estrelas no símbolo da Brigada Militar são interpretadas?</p>
+              <div class="options">
+                  <label><input type="radio" name="question60" value="a"> Como uma representação de heroísmo</label>
+                  <label><input type="radio" name="question60" value="b"> Como um símbolo de união entre os soldados</label>
+                  <label><input type="radio" name="question60" value="c"> Como uma homenagem aos que morreram em combate</label>
+                  <label><input type="radio" name="question60" value="d"> Como uma marca de conquistas militares</label>
+                  <label><input type="radio" name="question60" value="e"> Como uma referência à luta pela independência</label>
+              </div>
+          </div>
+          <div class="question">
+            <p>61. Qual era o principal papel dos Corpos Regulares na estrutura militar lusitana transferida para o Brasil?</p>
+            <div class="options">
+                <label><input type="radio" name="question61" value="a"> Proteger exclusivamente a família real</label>
+                <label><input type="radio" name="question61" value="b"> Servir como força deslocável de apoio às Milícias</label>
+                <label><input type="radio" name="question61" value="c"> Compor o exército português e ser a única força paga</label>
+                <label><input type="radio" name="question61" value="d"> Realizar apenas atividades de defesa interna</label>
+                <label><input type="radio" name="question61" value="e"> Funcionar como milícia civil em caso de emergência</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>62. Qual característica distintiva das Milícias ou Corpos de Auxiliares em comparação com os Corpos Regulares?</p>
+            <div class="options">
+                <label><input type="radio" name="question62" value="a"> Eram forças remuneradas e permanentes</label>
+                <label><input type="radio" name="question62" value="b"> Eram compostas apenas por civis e prestavam serviço obrigatório</label>
+                <label><input type="radio" name="question62" value="c"> Operavam fora do território sem qualquer remuneração</label>
+                <label><input type="radio" name="question62" value="d"> Recebiam treinamento apenas em períodos de guerra</label>
+                <label><input type="radio" name="question62" value="e"> Atuam exclusivamente na função policial</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>63. Qual era o sistema de recrutamento dos Corpos de Ordenanças, e quem era convocado para integrar essa força?</p>
+            <div class="options">
+                <label><input type="radio" name="question63" value="a"> Apenas voluntários civis, entre 18 e 50 anos</label>
+                <label><input type="radio" name="question63" value="b"> Toda a população masculina entre 18 e 60 anos que não estivesse nas outras forças</label>
+                <label><input type="radio" name="question63" value="c"> Apenas membros das Milícias e Corpos Regulares</label>
+                <label><input type="radio" name="question63" value="d"> Mulheres e homens entre 20 e 55 anos</label>
+                <label><input type="radio" name="question63" value="e"> Jovens entre 15 e 18 anos</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>64. Em que situação os Corpos de Ordenanças eram reunidos para atuar?</p>
+            <div class="options">
+                <label><input type="radio" name="question64" value="a"> Em atividades rotineiras de patrulha das cidades</label>
+                <label><input type="radio" name="question64" value="b"> Apenas em cerimônias militares</label>
+                <label><input type="radio" name="question64" value="c"> Em caso de grave perturbação da ordem pública</label>
+                <label><input type="radio" name="question64" value="d"> Para auxiliar as Tropas Regulares em combates externos</label>
+                <label><input type="radio" name="question64" value="e"> Para fazer vigilância contínua de fronteiras</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>65. Qual dos grupos abaixo era conhecido como Tropa Paga na estrutura militar lusitana?</p>
+            <div class="options">
+                <label><input type="radio" name="question65" value="a"> Corpos de Ordenanças</label>
+                <label><input type="radio" name="question65" value="b"> Milícias ou Corpos de Auxiliares</label>
+                <label><input type="radio" name="question65" value="c"> Corpos Regulares</label>
+                <label><input type="radio" name="question65" value="d"> Forças Civis de Defesa</label>
+                <label><input type="radio" name="question65" value="e"> Tropas de Reserva Real</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>66. O que os raios no símbolo representam?</p>
+            <div class="options">
+                <label><input type="radio" name="question66" value="a"> Autoridade e bravura</label>
+                <label><input type="radio" name="question66" value="b"> Cinco designações policiais</label>
+                <label><input type="radio" name="question66" value="c"> Longevidade e tradição</label>
+                <label><input type="radio" name="question66" value="d"> Comando e disciplina</label>
+                <label><input type="radio" name="question66" value="e"> Justiça e proteção</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>67. Qual é o significado do Centauro no símbolo?</p>
+            <div class="options">
+                <label><input type="radio" name="question67" value="a"> Força e longevidade</label>
+                <label><input type="radio" name="question67" value="b"> Autoridade, bravura e proteção</label>
+                <label><input type="radio" name="question67" value="c"> Tradição e riqueza regional</label>
+                <label><input type="radio" name="question67" value="d"> Unidade e comando militar</label>
+                <label><input type="radio" name="question67" value="e"> Justiça e disciplina</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>68. Os Ramos de Carvalho simbolizam qual conceito?</p>
+            <div class="options">
+                <label><input type="radio" name="question68" value="a"> Vigilância e sabedoria</label>
+                <label><input type="radio" name="question68" value="b"> Riqueza tradicional do Rio Grande do Sul</label>
+                <label><input type="radio" name="question68" value="c"> Força e longevidade</label>
+                <label><input type="radio" name="question68" value="d"> Bravura e proteção</label>
+                <label><input type="radio" name="question68" value="e"> Unidade e comando</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>69. O que representa o ramo de fumo no símbolo?</p>
+            <div class="options">
+                <label><input type="radio" name="question69" value="a"> Tradição militar</label>
+                <label><input type="radio" name="question69" value="b"> Riqueza tradicional do Rio Grande do Sul</label>
+                <label><input type="radio" name="question69" value="c"> Força e disciplina</label>
+                <label><input type="radio" name="question69" value="d"> Bravura e proteção</label>
+                <label><input type="radio" name="question69" value="e"> Unidade e comando</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>70. As estrelas de prata no símbolo representam o quê?</p>
+            <div class="options">
+                <label><input type="radio" name="question70" value="a"> Tradições do estado do Rio Grande do Sul</label>
+                <label><input type="radio" name="question70" value="b"> As principais campanhas históricas</label>
+                <label><input type="radio" name="question70" value="c"> Comando e companhias militares</label>
+                <label><input type="radio" name="question70" value="d"> Unidade e disciplina</label>
+                <label><input type="radio" name="question70" value="e"> Justiça e proteção</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>71. Quantas estrelas de ouro representam as principais campanhas históricas no símbolo?</p>
+            <div class="options">
+                <label><input type="radio" name="question71" value="a"> 5</label>
+                <label><input type="radio" name="question71" value="b"> 10</label>
+                <label><input type="radio" name="question71" value="c"> 3</label>
+                <label><input type="radio" name="question71" value="d"> 8</label>
+                <label><input type="radio" name="question71" value="e"> 7</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>72. O que a estrela vermelha de cinco pontas representa?</p>
+            <div class="options">
+                <label><input type="radio" name="question72" value="a"> A força e longevidade da Brigada Militar</label>
+                <label><input type="radio" name="question72" value="b"> O estado do Rio Grande do Sul</label>
+                <label><input type="radio" name="question72" value="c"> A bravura dos soldados da Brigada</label>
+                <label><input type="radio" name="question72" value="d"> Os comandantes históricos da Brigada Militar</label>
+                <label><input type="radio" name="question72" value="e"> A proteção e vigilância</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>73. O sabre no símbolo da Brigada Militar representa qual conceito?</p>
+            <div class="options">
+                <label><input type="radio" name="question73" value="a"> Justiça e disciplina</label>
+                <label><input type="radio" name="question73" value="b"> Riqueza e prosperidade</label>
+                <label><input type="radio" name="question73" value="c"> Força e longevidade</label>
+                <label><input type="radio" name="question73" value="d"> Proteção e comando</label>
+                <label><input type="radio" name="question73" value="e"> Unidade e lealdade</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>74. As barras de ouro no símbolo homenageiam quem?</p>
+            <div class="options">
+                <label><input type="radio" name="question74" value="a"> Os primeiros combatentes da Brigada Militar</label>
+                <label><input type="radio" name="question74" value="b"> Os comandantes históricos da Brigada Militar</label>
+                <label><input type="radio" name="question74" value="c"> As principais campanhas militares</label>
+                <label><input type="radio" name="question74" value="d"> A proteção da sociedade civil</label>
+                <label><input type="radio" name="question74" value="e"> Os heróis da Revolução Farroupilha</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>75. Qual é o objetivo principal do Objetivo Institucional 1 da Brigada Militar?</p>
+            <div class="options">
+                <label><input type="radio" name="question75" value="a"> Promover e preservar a segurança pública</label>
+                <label><input type="radio" name="question75" value="b"> Reprimir a violência e criminalidade apenas em casos de urgência</label>
+                <label><input type="radio" name="question75" value="c"> Aplicar medidas estritas de segurança em áreas urbanas</label>
+                <label><input type="radio" name="question75" value="d"> Aumentar a vigilância sobre os direitos civis</label>
+                <label><input type="radio" name="question75" value="e"> Implementar o policiamento repressivo como prioridade</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>76. De acordo com o Artigo 5º, todos são iguais perante a lei. Qual dos direitos abaixo NÃO está entre os garantidos pela Constituição neste artigo?</p>
+            <div class="options">
+                <label><input type="radio" name="question76" value="a"> Direito à vida</label>
+                <label><input type="radio" name="question76" value="b"> Direito à segurança</label>
+                <label><input type="radio" name="question76" value="c"> Direito ao lazer</label>
+                <label><input type="radio" name="question76" value="d"> Direito à igualdade</label>
+                <label><input type="radio" name="question76" value="e"> Direito à liberdade</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>77. Qual princípio é assegurado pelo inciso II do Artigo 5º da Constituição Federal?</p>
+            <div class="options">
+                <label><input type="radio" name="question77" value="a"> Igualdade entre homens e mulheres</label>
+                <label><input type="radio" name="question77" value="b"> Liberdade de expressão</label>
+                <label><input type="radio" name="question77" value="c"> Proibição de tortura</label>
+                <label><input type="radio" name="question77" value="d"> Obrigação somente em virtude de lei</label>
+                <label><input type="radio" name="question77" value="e"> Direito à reunião pacífica</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>78. Conforme o Artigo 5º, inciso X, qual é garantido como inviolável?</p>
+            <div class="options">
+                <label><input type="radio" name="question78" value="a"> A liberdade de locomoção</label>
+                <label><input type="radio" name="question78" value="b"> O sigilo das comunicações telefônicas</label>
+                <label><input type="radio" name="question78" value="c"> A privacidade e a honra das pessoas</label>
+                <label><input type="radio" name="question78" value="d"> A liberdade religiosa</label>
+                <label><input type="radio" name="question78" value="e"> A segurança pública</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>79. De acordo com o Artigo 5º, inciso XVI, o que é necessário para que as pessoas possam reunir-se pacificamente em locais abertos ao público?</p>
+            <div class="options">
+                <label><input type="radio" name="question79" value="a"> Autorização judicial</label>
+                <label><input type="radio" name="question79" value="b"> Permissão das autoridades de segurança</label>
+                <label><input type="radio" name="question79" value="c"> Prévio aviso à autoridade competente</label>
+                <label><input type="radio" name="question79" value="d"> Convocação de outra reunião no mesmo local</label>
+                <label><input type="radio" name="question79" value="e"> Confirmação da lista de participantes</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>80. Qual direito é assegurado pelo inciso LXIII do Artigo 5º ao preso?</p>
+            <div class="options">
+                <label><input type="radio" name="question80" value="a"> Direito de ser informado sobre o motivo de sua prisão</label>
+                <label><input type="radio" name="question80" value="b"> Direito de permanecer calado</label>
+                <label><input type="radio" name="question80" value="c"> Direito de identificar os responsáveis pela prisão</label>
+                <label><input type="radio" name="question80" value="d"> Direito à liberdade provisória</label>
+                <label><input type="radio" name="question80" value="e"> Direito à indenização por dano moral</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>81. De acordo com a Constituição Federal, qual é o objetivo principal da segurança pública?</p>
+            <div class="options">
+                <label><input type="radio" name="question81" value="a"> Garantir a soberania nacional</label>
+                <label><input type="radio" name="question81" value="b"> Preservar a ordem pública e a incolumidade das pessoas e do patrimônio</label>
+                <label><input type="radio" name="question81" value="c"> Fiscalizar atividades econômicas</label>
+                <label><input type="radio" name="question81" value="d"> Administrar as polícias estaduais</label>
+                <label><input type="radio" name="question81" value="e"> Coordenar os órgãos de defesa civil</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>82. Conforme o Artigo 124, qual é o principal objetivo da segurança pública?</p>
+            <div class="options">
+                <label><input type="radio" name="question82" value="a"> Promover a assistência social</label>
+                <label><input type="radio" name="question82" value="b"> Preservar a ordem pública, as prerrogativas da cidadania, a incolumidade das pessoas e o patrimônio</label>
+                <label><input type="radio" name="question82" value="c"> Organizar atividades esportivas em segurança</label>
+                <label><input type="radio" name="question82" value="d"> Administrar as forças armadas</label>
+                <label><input type="radio" name="question82" value="e"> Fiscalizar as polícias estaduais</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>83. Quais são os órgãos responsáveis pela segurança pública segundo o Artigo 124?</p>
+            <div class="options">
+                <label><input type="radio" name="question83" value="a"> Polícia Militar, Polícia Civil, Polícia Federal, e Corpo de Bombeiros</label>
+                <label><input type="radio" name="question83" value="b"> Brigada Militar, Polícia Civil, Coordenadoria-Geral de Perícias, Corpo de Bombeiros Militar e Polícia Penal</label>
+                <label><input type="radio" name="question83" value="c"> Polícia Rodoviária Federal, Polícia Civil, Polícia Penal e Corpo de Bombeiros</label>
+                <label><input type="radio" name="question83" value="d"> Polícia Penal, Polícia Federal, Polícia Civil e Brigada Militar</label>
+                <label><input type="radio" name="question83" value="e"> Guarda Municipal, Polícia Civil, Brigada Militar e Polícia Penal</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>84. De acordo com o Artigo 127, quais direitos são assegurados aos policiais civis e militares, bombeiros militares e servidores do Instituto-Geral de Perícias e da Polícia Penal quando são feridos em serviço?</p>
+            <div class="options">
+                <label><input type="radio" name="question84" value="a"> Direito a uma indenização única</label>
+                <label><input type="radio" name="question84" value="b"> Direito ao custeio integral das despesas médicas, hospitalares e de reabilitação pelo Estado</label>
+                <label><input type="radio" name="question84" value="c"> Direito a uma aposentadoria compulsória</label>
+                <label><input type="radio" name="question84" value="d"> Direito a um aumento salarial</label>
+                <label><input type="radio" name="question84" value="e"> Direito à escolha de instituição para tratamento médico</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>85. Qual é a principal responsabilidade da Brigada Militar, conforme o Artigo 129?</p>
+            <div class="options">
+                <label><input type="radio" name="question85" value="a"> Realizar investigações criminais</label>
+                <label><input type="radio" name="question85" value="b"> Exercer a polícia ostensiva e preservar a ordem pública</label>
+                <label><input type="radio" name="question85" value="c"> Coordenar operações de defesa civil</label>
+                <label><input type="radio" name="question85" value="d"> Administrar os recursos financeiros da corporação</label>
+                <label><input type="radio" name="question85" value="e"> Regular o efetivo da Polícia Civil</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>86. O que estabelece a Lei Complementar 10.991/97?</p>
+            <div class="options">
+                <label><input type="radio" name="question86" value="a"> Estabelece normas para a organização básica da Polícia Civil</label>
+                <label><input type="radio" name="question86" value="b"> Dispõe sobre a organização básica da Brigada Militar do Estado e dá outras providências</label>
+                <label><input type="radio" name="question86" value="c"> Define as atribuições dos servidores do Corpo de Bombeiros Militar</label>
+                <label><input type="radio" name="question86" value="d"> Regula a mobilização das Forças Armadas no Estado</label>
+                <label><input type="radio" name="question86" value="e"> Cria o sistema de segurança pública estadual</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>87. De acordo com o Art. 3º, qual é a principal competência da Brigada Militar no que se refere à polícia ostensiva?</p>
+            <div class="options">
+                <label><input type="radio" name="question87" value="a"> Executar a polícia ostensiva, com exclusividade, ressalvada a competência das Forças Armadas</label>
+                <label><input type="radio" name="question87" value="b"> Realizar investigações criminais</label>
+                <label><input type="radio" name="question87" value="c"> Gerenciar prisões de alto risco</label>
+                <label><input type="radio" name="question87" value="d"> Coordenar a segurança em eventos internacionais</label>
+                <label><input type="radio" name="question87" value="e"> Administrar recursos financeiros para a segurança pública</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>88. Qual é a função da Brigada Militar em relação à prevenção da ordem pública, conforme o Art. 3º?</p>
+            <div class="options">
+                <label><input type="radio" name="question88" value="a"> Atuar como força de dissuasão em locais ou áreas específicas</label>
+                <label><input type="radio" name="question88" value="b"> Realizar atividades de investigação criminal</label>
+                <label><input type="radio" name="question88" value="c"> Reprimir crimes já ocorridos</label>
+                <label><input type="radio" name="question88" value="d"> Planejar operações de segurança em áreas rurais</label>
+                <label><input type="radio" name="question88" value="e"> Organizar forças de combate ao tráfico de drogas</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>89. Qual é a competência da Brigada Militar no caso de perturbação da ordem pública, conforme o Art. 3º?</p>
+            <div class="options">
+                <label><input type="radio" name="question89" value="a"> Atuar repressivamente no gerenciamento de situações de alto risco</label>
+                <label><input type="radio" name="question89" value="b"> Impor multas para infrações de trânsito</label>
+                <label><input type="radio" name="question89" value="c"> Criar leis de segurança pública</label>
+                <label><input type="radio" name="question89" value="d"> Coordenar ações de segurança nas eleições</label>
+                <label><input type="radio" name="question89" value="e"> Realizar a fiscalização de estabelecimentos comerciais</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>90. O Art. 3º menciona que a Brigada Militar tem a competência de realizar atividades de investigação criminal em qual área?</p>
+            <div class="options">
+                <label><input type="radio" name="question90" value="a"> Atividades de investigação criminal militar</label>
+                <label><input type="radio" name="question90" value="b"> Investigações relacionadas a crimes ambientais</label>
+                <label><input type="radio" name="question90" value="c"> Investigações de delitos em trânsito</label>
+                <label><input type="radio" name="question90" value="d"> Investigações sobre crimes cibernéticos</label>
+                <label><input type="radio" name="question90" value="e"> Investigação de crimes ocorridos fora do Estado</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>91. Quais serviços a Brigada Militar é responsável por executar em relação aos incêndios, conforme o Art. 3º?</p>
+            <div class="options">
+                <label><input type="radio" name="question91" value="a"> Prevenção e combate a incêndios</label>
+                <label><input type="radio" name="question91" value="b"> Investigação de causas de incêndios</label>
+                <label><input type="radio" name="question91" value="c"> Análise de impacto ambiental pós-incêndio</label>
+                <label><input type="radio" name="question91" value="d"> Organizar equipes de resgate internacional</label>
+                <label><input type="radio" name="question91" value="e"> Capacitação de outras corporações para combate a incêndios</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>92. Qual a função da Brigada Militar em relação à fiscalização e controle dos serviços civis auxiliares de combate a incêndio?</p>
+            <div class="options">
+                <label><input type="radio" name="question92" value="a"> Fiscalizar, controlar, coordenar, apoiar e reconhecer o funcionamento desses serviços</label>
+                <label><input type="radio" name="question92" value="b"> Coordenar a distribuição de equipamentos de combate a incêndio</label>
+                <label><input type="radio" name="question92" value="c"> Treinar civis para operações militares</label>
+                <label><input type="radio" name="question92" value="d"> Controlar as licenças de funcionamento de serviços civis</label>
+                <label><input type="radio" name="question92" value="e"> Criar normas para as operações de combate a incêndio</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>93. Quais tipos de serviços a Brigada Militar realiza em relação ao resgate, conforme o Art. 3º?</p>
+            <div class="options">
+                <label><input type="radio" name="question93" value="a"> Resgates aéreo, aquático e terrestre</label>
+                <label><input type="radio" name="question93" value="b"> Resgates de animais em situações de risco</label>
+                <label><input type="radio" name="question93" value="c"> Resgates de vítimas em desastres ambientais</label>
+                <label><input type="radio" name="question93" value="d"> Realização de operações de resgates no exterior</label>
+                <label><input type="radio" name="question93" value="e"> Coordenação de missões de resgate em outros estados</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>94. Quais atividades a Brigada Militar desempenha em relação à defesa civil no Estado?</p>
+            <div class="options">
+                <label><input type="radio" name="question94" value="a"> Executar as atividades de defesa civil</label>
+                <label><input type="radio" name="question94" value="b"> Prevenir crimes de guerra</label>
+                <label><input type="radio" name="question94" value="c"> Controlar a segurança nas fronteiras</label>
+                <label><input type="radio" name="question94" value="d"> Organizar ações para a proteção do meio ambiente</label>
+                <label><input type="radio" name="question94" value="e"> Fiscalizar os serviços prestados pela Força Nacional</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>95. Qual é a competência da Brigada Militar em relação à segurança contra incêndios e desastres, conforme o Art. 3º?</p>
+            <div class="options">
+                <label><input type="radio" name="question95" value="a"> Planejar, fiscalizar, aprovar e interditar atividades, equipamentos e planos de proteção contra incêndios e desastres</label>
+                <label><input type="radio" name="question95" value="b"> Garantir a segurança das fronteiras contra ataques inimigos</label>
+                <label><input type="radio" name="question95" value="c"> Definir normas para a proteção de patrimônios privados</label>
+                <label><input type="radio" name="question95" value="d"> Organizar campanhas educativas sobre segurança</label>
+                <label><input type="radio" name="question95" value="e"> Fiscalizar e controlar as operações de resgate de vítimas em grandes catástrofes</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>96. De acordo com o Art. 4º, como a Brigada Militar se estrutura?</p>
+            <div class="options">
+                <label><input type="radio" name="question96" value="a"> Em órgãos de Direção, de Apoio e de Execução</label>
+                <label><input type="radio" name="question96" value="b"> Em batalhões e esquadrões de combate</label>
+                <label><input type="radio" name="question96" value="c"> Em unidades de combate e de operações especiais</label>
+                <label><input type="radio" name="question96" value="d"> Em unidades de patrulhamento e de investigação</label>
+                <label><input type="radio" name="question96" value="e"> Em setores de vigilância e de apoio logístico</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>97. De acordo com o Art. 3º, a Brigada Militar se estrutura em três níveis de gerenciamento. Quais são esses níveis?</p>
+            <div class="options">
+                <label><input type="radio" name="question97" value="a"> Nível Institucional, Nível Departamental e Nível Operacional</label>
+                <label><input type="radio" name="question97" value="b"> Nível Estratégico, Nível Operacional e Nível Administrativo</label>
+                <label><input type="radio" name="question97" value="c"> Nível Executivo, Nível Tático e Nível Administrativo</label>
+                <label><input type="radio" name="question97" value="d"> Nível Organizacional, Nível de Apoio e Nível de Controle</label>
+                <label><input type="radio" name="question97" value="e"> Nível Operacional, Nível de Controle e Nível Institucional</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>98. Qual a principal função do Nível Departamental na estrutura da Brigada Militar, conforme o Art. 3º?</p>
+            <div class="options">
+                <label><input type="radio" name="question98" value="a"> Desenvolver ações táticas de planejamento, direção, organização e controle do apoio e da execução de serviços à comunidade</label>
+                <label><input type="radio" name="question98" value="b"> Estabelecer as ações estratégicas de planejamento, direção, organização e controle da Brigada Militar</label>
+                <label><input type="radio" name="question98" value="c"> Executar ações técnicas de apoio e de execução de serviços à comunidade</label>
+                <label><input type="radio" name="question98" value="d"> Realizar a supervisão de todos os serviços operacionais da Brigada Militar</label>
+                <label><input type="radio" name="question98" value="e"> Organizar as ações de inteligência e segurança pública para a comunidade</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>99. Quais dos seguintes valores estão relacionados à missão e à atuação da Brigada Militar?</p>
+            <div class="options">
+                <label><input type="radio" name="question99" value="a"> Hierarquia, Disciplina, Ética, Comprometimento e Lealdade</label>
+                <label><input type="radio" name="question99" value="b"> Proatividade, Confiança, Excelência e Transparência</label>
+                <label><input type="radio" name="question99" value="c"> Legalidade, Comprometimento, Responsabilidade Social e Ética</label>
+                <label><input type="radio" name="question99" value="d"> Hierarquia, Disciplina, Proatividade, Profissionalismo e Excelência</label>
+                <label><input type="radio" name="question99" value="e"> Legalidade, Transparência, Lealdade e Responsabilidade Social</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>100. Quais das seguintes manifestações são essenciais ao valor policial-militar conforme o Art. 24?</p>
+            <div class="options">
+                <label><input type="radio" name="question100" value="a"> Dedicação ao serviço policial, zelo ao patrimônio público, fé na missão da Brigada Militar, espírito de corpo, e aprimoramento técnico profissional</label>
+                <label><input type="radio" name="question100" value="b"> Fé na missão da Brigada Militar, amor à profissão e zelo pelo patrimônio público</label>
+                <label><input type="radio" name="question100" value="c"> Orgulho pelo servidor militar, espírito de corpo, e aprimoramento técnico profissional</label>
+                <label><input type="radio" name="question100" value="d"> Dedicação ao serviço policial, zelo ao patrimônio público, fé na missão da Brigada Militar, espírito de corpo e amor à profissão</label>
+                <label><input type="radio" name="question100" value="e"> Fé na missão da Brigada Militar, zelo ao patrimônio público e aprimoramento técnico profissional</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>101. Quais são os preceitos de ética relacionados ao sentimento do dever e à dignidade militar, conforme o Art. 25?</p>
+            <div class="options">
+                <label><input type="radio" name="question101" value="a"> Amar a verdade e a responsabilidade, respeitar a dignidade da pessoa humana, cumprir as leis e ser justo e imparcial.</label>
+                <label><input type="radio" name="question101" value="b"> Exercer funções com autoridade, respeitar as autoridades civis, e zelar pelo preparo moral dos subordinados.</label>
+                <label><input type="radio" name="question101" value="c"> Empregar energias em benefício do serviço, ser discreto nas atitudes e praticar a camaradagem.</label>
+                <label><input type="radio" name="question101" value="d"> Cumprir as leis e regulamentos, ser justo e imparcial, praticar a camaradagem e desenvolver espírito de cooperação.</label>
+                <label><input type="radio" name="question101" value="e"> Ser discreto em atitudes, abster-se de tratar matéria sigilosa e observar normas de boa educação.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>102. Qual preceito ético exige que o servidor militar exerça suas funções com autoridade, eficiência e probidade?</p>
+            <div class="options">
+                <label><input type="radio" name="question102" value="a"> Cumprir as leis e regulamentos.</label>
+                <label><input type="radio" name="question102" value="b"> Exercer com autoridade, eficiência e probidade as funções.</label>
+                <label><input type="radio" name="question102" value="c"> Ser justo e imparcial.</label>
+                <label><input type="radio" name="question102" value="d"> Praticar a camaradagem.</label>
+                <label><input type="radio" name="question102" value="e"> Zelar pelo bom nome da Brigada Militar.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>103. De acordo com o Art. 25, qual o preceito ético que exige do servidor militar respeito à dignidade da pessoa humana?</p>
+            <div class="options">
+                <label><input type="radio" name="question103" value="a"> Exercer a função com autoridade e eficiência.</label>
+                <label><input type="radio" name="question103" value="b"> Respeitar a dignidade da pessoa humana.</label>
+                <label><input type="radio" name="question103" value="c"> Cumprir e fazer cumprir as leis.</label>
+                <label><input type="radio" name="question103" value="d"> Empregar as energias em benefício do serviço.</label>
+                <label><input type="radio" name="question103" value="e"> Ser discreto nas atitudes e linguagem.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>104. Qual preceito ético exige que o servidor militar seja justo e imparcial no julgamento dos atos e na apreciação do mérito dos subordinados?</p>
+            <div class="options">
+                <label><input type="radio" name="question104" value="a"> Ser justo e imparcial no julgamento dos atos.</label>
+                <label><input type="radio" name="question104" value="b"> Cumprir seus deveres de cidadão.</label>
+                <label><input type="radio" name="question104" value="c"> Proceder de maneira ilibada na vida pública e particular.</label>
+                <label><input type="radio" name="question104" value="d"> Zelar pelo bom nome da Brigada Militar.</label>
+                <label><input type="radio" name="question104" value="e"> Respeitar a dignidade da pessoa humana.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>105. Qual preceito ético exige que o servidor militar seja discreto em suas atitudes, maneiras e linguagem?</p>
+            <div class="options">
+                <label><input type="radio" name="question105" value="a"> Ser discreto em atitudes, maneiras e linguagem.</label>
+                <label><input type="radio" name="question105" value="b"> Ser proativo no serviço.</label>
+                <label><input type="radio" name="question105" value="c"> Empregar as energias em benefício do serviço.</label>
+                <label><input type="radio" name="question105" value="d"> Cumprir e fazer cumprir as leis e regulamentos.</label>
+                <label><input type="radio" name="question105" value="e"> Zelar pelo bom nome da Brigada Militar.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>106. O que estabelece a Lei Complementar nº 10.990, de 18 de agosto de 1997?</p>
+            <div class="options">
+                <label><input type="radio" name="question106" value="a"> Define a organização e os direitos dos servidores públicos civis do Estado.</label>
+                <label><input type="radio" name="question106" value="b"> Estabelece o Estatuto dos Militares Estaduais, regulamentando os direitos e deveres dos integrantes da Brigada Militar.</label>
+                <label><input type="radio" name="question106" value="c"> Regula a criação e organização das Forças Armadas no Brasil.</label>
+                <label><input type="radio" name="question106" value="d"> Define as diretrizes para a atuação das polícias civis e militares no Estado.</label>
+                <label><input type="radio" name="question106" value="e"> Estabelece normas gerais para os direitos dos servidores públicos estaduais em todas as esferas.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>107. Qual dos seguintes deveres é imposto ao policial-militar em relação à sua corporação e à comunidade?</p>
+            <div class="options">
+                <label><input type="radio" name="question107" value="a"> Dedicação ao serviço e fidelidade à Pátria e à comunidade, defendendo a honra, segurança e integridade, até com o sacrifício da própria vida.</label>
+                <label><input type="radio" name="question107" value="b"> Exclusivamente a promoção pessoal e o avanço de carreira dentro da corporação.</label>
+                <label><input type="radio" name="question107" value="c"> A defesa da comunidade apenas no momento de crise, não sendo necessária a dedicação contínua ao serviço.</label>
+                <label><input type="radio" name="question107" value="d"> O apoio irrestrito à segurança pública em todas as suas formas, sem a necessidade de sacrifícios pessoais.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>108. O que é exigido ao policial-militar no que se refere aos símbolos nacionais e estaduais?</p>
+            <div class="options">
+                <label><input type="radio" name="question108" value="a"> O culto aos símbolos nacionais e estaduais.</label>
+                <label><input type="radio" name="question108" value="b"> A criação de novos símbolos nacionais e estaduais.</label>
+                <label><input type="radio" name="question108" value="c"> A aprovação de símbolos nacionais e estaduais pela corporação.</label>
+                <label><input type="radio" name="question108" value="d"> Nenhuma referência aos símbolos nacionais e estaduais.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>109. Qual é a atitude esperada do policial-militar em relação à probidade e lealdade?</p>
+            <div class="options">
+                <label><input type="radio" name="question109" value="a"> Demonstrar probidade e lealdade em todas as circunstâncias.</label>
+                <label><input type="radio" name="question109" value="b"> Agir com probidade apenas quando necessário para manter a ordem pública.</label>
+                <label><input type="radio" name="question109" value="c"> Apenas ser leal em situações de crise e emergência.</label>
+                <label><input type="radio" name="question109" value="d"> Exigir lealdade sem a necessidade de probidade.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>110. O que deve ser respeitado pelo policial-militar em relação à hierarquia e disciplina?</p>
+            <div class="options">
+                <label><input type="radio" name="question110" value="a"> A disciplina e o respeito à hierarquia.</label>
+                <label><input type="radio" name="question110" value="b"> A hierarquia, mas com flexibilidade de acordo com a situação.</label>
+                <label><input type="radio" name="question110" value="c"> Apenas a hierarquia, sem necessidade de disciplina.</label>
+                <label><input type="radio" name="question110" value="d"> O respeito à hierarquia sem a necessidade de disciplina.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>111. Qual é a obrigação do policial-militar em relação ao cumprimento de ordens?</p>
+            <div class="options">
+                <label><input type="radio" name="question111" value="a"> Cumprir rigorosamente as obrigações e as ordens.</label>
+                <label><input type="radio" name="question111" value="b"> Cumprir as ordens apenas quando considerar que são justas.</label>
+                <label><input type="radio" name="question111" value="c"> Ignorar ordens quando achar que são desnecessárias.</label>
+                <label><input type="radio" name="question111" value="d"> Apenas cumprir ordens dadas por superiores diretos.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>112. O que é esperado do policial-militar em relação ao tratamento de subordinados?</p>
+            <div class="options">
+                <label><input type="radio" name="question112" value="a"> Tratar os subordinados dignamente e com urbanidade.</label>
+                <label><input type="radio" name="question112" value="b"> Ignorar o tratamento digno quando as ordens são claras.</label>
+                <label><input type="radio" name="question112" value="c"> Tratar os subordinados apenas de acordo com a posição hierárquica.</label>
+                <label><input type="radio" name="question112" value="d"> Tratamento impessoal, sem necessidade de urbanidade.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>113. Qual direito é garantido ao servidor militar em relação à sua patente?</p>
+            <div class="options">
+                <label><input type="radio" name="question113" value="a"> A garantia da patente, com as vantagens, prerrogativas e deveres a ela inerentes, quando Oficial.</label>
+                <label><input type="radio" name="question113" value="b"> A garantia de uma patente honorária, sem as vantagens e deveres.</label>
+                <label><input type="radio" name="question113" value="c"> A patente sem prerrogativas ou deveres definidos.</label>
+                <label><input type="radio" name="question113" value="d"> A patente apenas durante o período de serviço ativo.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>114. O que está garantido ao servidor militar em relação ao uso de designações hierárquicas?</p>
+            <div class="options">
+                <label><input type="radio" name="question114" value="a"> O uso das designações hierárquicas.</label>
+                <label><input type="radio" name="question114" value="b"> A restrição ao uso das designações hierárquicas apenas em situações formais.</label>
+                <label><input type="radio" name="question114" value="c"> O uso das designações hierárquicas é opcional, dependendo da situação.</label>
+                <label><input type="radio" name="question114" value="d"> O uso das designações hierárquicas é restrito ao serviço interno.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>115. Quais direitos são garantidos ao servidor militar no que se refere ao desempenho de cargos e funções?</p>
+            <div class="options">
+                <label><input type="radio" name="question115" value="a"> O desempenho de cargos e funções correspondentes ao posto e à graduação.</label>
+                <label><input type="radio" name="question115" value="b"> O desempenho de funções exclusivamente administrativas, sem relação com o posto.</label>
+                <label><input type="radio" name="question115" value="c"> O desempenho de funções em qualquer área da corporação, sem vínculo com o posto.</label>
+                <label><input type="radio" name="question115" value="d"> O desempenho de cargos que não correspondem ao posto ou à graduação, conforme a necessidade.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>116. Quais benefícios pecuniários os servidores militares têm direito de acordo com a legislação?</p>
+            <div class="options">
+                <label><input type="radio" name="question116" value="a"> A percepção de vencimentos, proventos e outras vantagens pecuniárias, conforme o Código de Vencimentos e Vantagens.</label>
+                <label><input type="radio" name="question116" value="b"> O recebimento de uma bonificação anual, sem vínculo com o Código de Vencimentos e Vantagens.</label>
+                <label><input type="radio" name="question116" value="c"> O pagamento de prêmios por desempenho, além dos vencimentos e proventos.</label>
+                <label><input type="radio" name="question116" value="d"> O recebimento de benefícios apenas durante o período de serviço ativo.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>117. Quais são os direitos do servidor militar no que se refere ao porte de arma?</p>
+            <div class="options">
+                <label><input type="radio" name="question117" value="a"> O porte de arma, tanto em serviço ativo quanto inativo, salvo em caso de inatividade por alienação mental ou condenação penal.</label>
+                <label><input type="radio" name="question117" value="b"> O porte de arma apenas em serviço ativo, com restrições para servidores inativos.</label>
+                <label><input type="radio" name="question117" value="c"> O porte de arma é restrito a servidores de alto escalão, independentemente do serviço ativo ou inativo.</label>
+                <label><input type="radio" name="question117" value="d"> O porte de arma é permitido apenas para servidores com cargo de comando.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>118. O que é o recurso de "pedido de reconsideração" mencionado no Art. 47?</p>
+            <div class="options">
+                <label><input type="radio" name="question118" value="a"> Um recurso formal para revisão de decisão administrativa, que deve ser interposto pelo servidor militar que se julgar prejudicado.</label>
+                <label><input type="radio" name="question118" value="b"> Um pedido informal para revisão de ato judicial, sendo permitido apenas em casos de punição grave.</label>
+                <label><input type="radio" name="question118" value="c"> Um recurso utilizado apenas em processos judiciais, sem vínculo com a administração militar.</label>
+                <label><input type="radio" name="question118" value="d"> Um pedido coletivo de revisão de decisão, aplicável a todos os servidores militares afetados.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>119. Qual é o prazo para interposição do recurso de "queixa" ou "representação" nos casos administrativos?</p>
+            <div class="options">
+                <label><input type="radio" name="question119" value="a"> O prazo é de 10 dias corridos, a partir do recebimento da comunicação oficial sobre o ato.</label>
+                <label><input type="radio" name="question119" value="b"> O prazo é de 60 dias corridos, a contar da data do ato administrativo.</label>
+                <label><input type="radio" name="question119" value="c"> O prazo é de 8 dias corridos, com exceção para processos disciplinares.</label>
+                <label><input type="radio" name="question119" value="d"> O prazo é de 30 dias, contados da publicação do ato administrativo.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>120. Em qual dos casos o servidor militar pode interpor recurso de "pedido de reconsideração"?</p>
+            <div class="options">
+                <label><input type="radio" name="question120" value="a"> Quando o servidor se julgar prejudicado por ato administrativo decorrente da composição de Quadro de Acesso.</label>
+                <label><input type="radio" name="question120" value="b"> Quando o servidor desejar modificar o conteúdo de uma sentença judicial.</label>
+                <label><input type="radio" name="question120" value="c"> Quando o servidor se sentir ofendido por qualquer ato de natureza administrativa.</label>
+                <label><input type="radio" name="question120" value="d"> Quando o servidor se julgar prejudicado em um processo disciplinar.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>121. Qual é o prazo máximo para a decisão sobre qualquer recurso interposto, conforme o Art. 47?</p>
+            <div class="options">
+                <label><input type="radio" name="question121" value="a"> O prazo máximo para a decisão é de 60 dias corridos.</label>
+                <label><input type="radio" name="question121" value="b"> O prazo máximo para a decisão é de 8 dias, exceto em matéria disciplinar.</label>
+                <label><input type="radio" name="question121" value="c"> O prazo máximo para a decisão é de 120 dias.</label>
+                <label><input type="radio" name="question121" value="d"> O prazo máximo para a decisão é de 30 dias, dependendo do tipo de recurso.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>122. O que regula, principalmente, o Direito Administrativo Disciplinar Militar no âmbito da Brigada Militar?</p>
+            <div class="options">
+                <label><input type="radio" name="question122" value="a"> O Decreto nº 43.245, de 19 de julho de 2004 - REGULAMENTO DISCIPLINAR DA BRIGADA MILITAR - RDBM.</label>
+                <label><input type="radio" name="question122" value="b"> A Lei Complementar nº 10.990, de 18 de agosto de 1997, sobre a organização da Brigada Militar.</label>
+                <label><input type="radio" name="question122" value="c"> O Código Penal Militar, que trata dos crimes militares no âmbito estadual.</label>
+                <label><input type="radio" name="question122" value="d"> O Código de Vencimentos e Vantagens da Brigada Militar, que regula as remunerações dos militares.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>123. Qual é a finalidade principal do Regulamento Disciplinar da Brigada Militar do Estado do Rio Grande do Sul?</p>
+            <div class="options">
+                <label><input type="radio" name="question123" value="a"> Especificar e classificar as transgressões disciplinares e estabelecer normas relativas às punições disciplinares, recursos, comportamento policial-militar das Praças e recompensas policiais-militares.</label>
+                <label><input type="radio" name="question123" value="b"> Regular as condições de trabalho e salário dos servidores militares da Brigada Militar.</label>
+                <label><input type="radio" name="question123" value="c"> Estabelecer os requisitos para a promoção de oficiais da Brigada Militar.</label>
+                <label><input type="radio" name="question123" value="d"> Definir os direitos e deveres dos civis que colaboram com a Brigada Militar.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>124. O Regulamento Disciplinar da Brigada Militar do Estado do Rio Grande do Sul também estabelece normas sobre:</p>
+            <div class="options">
+                <label><input type="radio" name="question124" value="a"> O comportamento policial-militar das Praças e as recompensas policiais-militares.</label>
+                <label><input type="radio" name="question124" value="b"> A regulamentação do uso de armamentos pesados pela Brigada Militar.</label>
+                <label><input type="radio" name="question124" value="c"> A criação de unidades de combate a incêndios e desastres naturais.</label>
+                <label><input type="radio" name="question124" value="d"> O treinamento de policiais militares em atividades civis de emergência.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>125. De acordo com o Regulamento Disciplinar da Brigada Militar, quais disposições não se aplicam aos Militares Estaduais na inatividade?</p>
+            <div class="options">
+                <label><input type="radio" name="question125" value="a"> As disposições gerais do Regulamento Disciplinar, exceto no que se refere à divulgação de segredos militares e à manifestação pública sobre ética policial-militar.</label>
+                <label><input type="radio" name="question125" value="b"> As disposições sobre o comportamento em serviço ativo, mas aplicáveis às licenças e afastamentos temporários.</label>
+                <label><input type="radio" name="question125" value="c"> As regras sobre promoções e transferências para a reserva, pois são direitos exclusivos de militares em serviço ativo.</label>
+                <label><input type="radio" name="question125" value="d"> As regras relacionadas ao uso de armamento e fardamento, já que os militares inativos não têm mais essas permissões.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>126. De acordo com o Regulamento Disciplinar da Brigada Militar, os alunos de órgãos de formação de Militares Estaduais estão sujeitos a quê?</p>
+            <div class="options">
+                <label><input type="radio" name="question126" value="a"> Apenas às normas do regulamento disciplinar da Brigada Militar.</label>
+                <label><input type="radio" name="question126" value="b"> Aos Regimentos Internos, Regulamentos, Normas e Ordens específicas dos OPM em que estejam matriculados e/ou frequentando o Curso.</label>
+                <label><input type="radio" name="question126" value="c"> Somente às normas relacionadas ao comportamento e disciplina durante o curso de formação.</label>
+                <label><input type="radio" name="question126" value="d"> Somente às normas e ordens dos órgãos de formação, sem a necessidade de seguir os regulamentos específicos do OPM.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>127. Qual é a principal manifestação da disciplina e hierarquia policial-militar relacionada à obediência às ordens superiores?</p>
+            <div class="options">
+                <label><input type="radio" name="question127" value="a"> A correção de atitudes.</label>
+                <label><input type="radio" name="question127" value="b"> A pronta obediência às ordens dos superiores hierárquicos.</label>
+                <label><input type="radio" name="question127" value="c"> A dedicação integral ao serviço.</label>
+                <label><input type="radio" name="question127" value="d"> A colaboração espontânea para a disciplina coletiva.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>128. Qual manifestação da disciplina policial-militar envolve a colaboração para a eficiência da instituição?</p>
+            <div class="options">
+                <label><input type="radio" name="question128" value="a"> A correção de atitudes.</label>
+                <label><input type="radio" name="question128" value="b"> A pronta obediência às ordens.</label>
+                <label><input type="radio" name="question128" value="c"> A colaboração espontânea para a disciplina coletiva e a eficiência da instituição.</label>
+                <label><input type="radio" name="question128" value="d"> O respeito à hierarquia entre servidores militares.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>129. Qual é a atitude que demonstra a responsabilidade no contexto policial-militar?</p>
+            <div class="options">
+                <label><input type="radio" name="question129" value="a"> A dedicação integral ao serviço.</label>
+                <label><input type="radio" name="question129" value="b"> A colaboração espontânea para a disciplina.</label>
+                <label><input type="radio" name="question129" value="c"> A consciência das responsabilidades.</label>
+                <label><input type="radio" name="question129" value="d"> O respeito à hierarquia entre servidores militares ativos e inativos.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>130. O que implica o respeito à hierarquia entre servidores militares ativos e inativos, de acordo com o Art. 4º?</p>
+            <div class="options">
+                <label><input type="radio" name="question130" value="a"> O reconhecimento das diferenças de poder entre eles.</label>
+                <label><input type="radio" name="question130" value="b"> A prática de obediência às ordens dadas por superiores hierárquicos, independentemente da posição na corporação.</label>
+                <label><input type="radio" name="question130" value="c"> O respeito às prescrições legais e regulamentares que regem a corporação.</label>
+                <label><input type="radio" name="question130" value="d"> O respeito à hierarquia apenas entre os militares ativos.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>131. Qual dos itens abaixo representa a rigorosa observância das prescrições legais e regulamentares no contexto da disciplina policial-militar?</p>
+            <div class="options">
+                <label><input type="radio" name="question131" value="a"> A pronta obediência às ordens dos superiores hierárquicos.</label>
+                <label><input type="radio" name="question131" value="b"> A correção de atitudes.</label>
+                <label><input type="radio" name="question131" value="c"> A rigorosa observância das prescrições legais e regulamentares.</label>
+                <label><input type="radio" name="question131" value="d"> A dedicação integral ao serviço.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>132. De acordo com o Art. 5º, o que deve acontecer caso uma ordem seja contrária a um preceito legal?</p>
+            <div class="options">
+                <label><input type="radio" name="question132" value="a"> O executor deve cumprir a ordem sem questionar, mesmo que contrária à lei.</label>
+                <label><input type="radio" name="question132" value="b"> O executor pode solicitar a confirmação por escrito da ordem, e a autoridade deve atender à solicitação.</label>
+                <label><input type="radio" name="question132" value="c"> O executor deve recusar o cumprimento da ordem sem explicações.</label>
+                <label><input type="radio" name="question132" value="d"> O executor deve, imediatamente, denunciar a autoridade que emitiu a ordem sem solicitar esclarecimentos.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>133. O que deve fazer um Militar Estadual caso se depare com um ato contrário à disciplina militar, conforme o Art. 6º?</p>
+            <div class="options">
+                <label><input type="radio" name="question133" value="a"> O militar deve adotar medidas preventivas para evitar novos atos disciplinares.</label>
+                <label><input type="radio" name="question133" value="b"> O militar deve adotar medidas saneadoras de acordo com sua precedência hierárquica ou comunicar ao comandante imediato se for subordinado.</label>
+                <label><input type="radio" name="question133" value="c"> O militar deve informar ao superior hierárquico somente em casos de transgressão grave, sem necessidade de ação imediata.</label>
+                <label><input type="radio" name="question133" value="d"> O militar deve ignorar atos disciplinares cometidos por subordinados, desde que não comprometam a hierarquia.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>134. O que estabelece o Princípio da Independência das Instâncias no contexto jurídico?</p>
+            <div class="options">
+                <label><input type="radio" name="question134" value="a"> Uma conduta ilícita pode ser julgada apenas em uma esfera (penal, civil ou administrativa), sendo as outras esferas irrelevantes.</label>
+                <label><input type="radio" name="question134" value="b"> O princípio permite que uma conduta seja classificada como ilícita em diferentes esferas (penal, civil e administrativa) e que o acusado possa ser condenado em todas essas esferas.</label>
+                <label><input type="radio" name="question134" value="c"> O princípio determina que uma conduta ilícita só pode ser julgada na esfera penal, sem que haja possibilidade de julgamento em esferas civil ou administrativa.</label>
+                <label><input type="radio" name="question134" value="d"> O princípio impede que uma pessoa seja condenada em mais de uma esfera jurídica, mesmo que a conduta envolva diferentes tipos de ilícitos.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>135. Conforme o Art. 8º, as transgressões policiais-militares podem ser classificadas de acordo com sua natureza. Quais são as classificações estabelecidas?</p>
+            <div class="options">
+                <label><input type="radio" name="question135" value="a"> Leves, médias e graves.</label>
+                <label><input type="radio" name="question135" value="b"> Leves, moderadas e graves.</label>
+                <label><input type="radio" name="question135" value="c"> Leves, médias e severas.</label>
+                <label><input type="radio" name="question135" value="d"> Leves, médias e altas.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>136. Quais são as sanções disciplinares aplicáveis aos Militares Estaduais, conforme o Art. 9º?</p>
+            <div class="options">
+                <label><input type="radio" name="question136" value="a"> Advertência, repreensão, detenção, prisão, licenciamento a bem da disciplina e exclusão a bem da disciplina.</label>
+                <label><input type="radio" name="question136" value="b"> Advertência, repreensão, suspensão, prisão, licenciamento a bem da disciplina e exclusão a bem da disciplina.</label>
+                <label><input type="radio" name="question136" value="c"> Advertência, repreensão, detenção, prisão, transferência e exclusão a bem da disciplina.</label>
+                <label><input type="radio" name="question136" value="d"> Advertência, repreensão, detenção, prisão, remoção a bem da disciplina e exclusão a bem da disciplina.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>137. De acordo com o § 1º do Art. 9º, qual é a principal função das sanções disciplinares?</p>
+            <div class="options">
+                <label><input type="radio" name="question137" value="a"> Garantir a eficiência na prestação dos serviços e a preservação da disciplina, visando ao benefício do punido e da coletividade.</label>
+                <label><input type="radio" name="question137" value="b"> Impor punições severas para prevenir futuras transgressões dentro da instituição.</label>
+                <label><input type="radio" name="question137" value="c"> Reforçar o poder hierárquico e autoritário dentro da corporação.</label>
+                <label><input type="radio" name="question137" value="d"> Controlar os membros da Brigada Militar, assegurando a disciplina sem levar em consideração o impacto sobre a coletividade.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>138. Qual é a principal característica da advertência, conforme o Art. 10?</p>
+            <div class="options">
+                <label><input type="radio" name="question138" value="a"> A advertência é aplicada de forma branda e registrada nos assentamentos individuais do transgressor.</label>
+                <label><input type="radio" name="question138" value="b"> A advertência resulta em confinamento do transgressor em um local determinado.</label>
+                <label><input type="radio" name="question138" value="c"> A advertência é uma sanção que exige a publicação em Boletim, mas não é registrada nos assentamentos individuais.</label>
+                <label><input type="radio" name="question138" value="d"> A advertência é uma sanção mais severa que implica na suspensão do serviço.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>139. Qual a principal diferença entre a advertência e a repreensão, conforme os Artigos 10 e 11?</p>
+            <div class="options">
+                <label><input type="radio" name="question139" value="a"> Ambas são publicadas em Boletim, mas a repreensão é aplicada em situações de maior gravidade e sempre registrada nos assentamentos.</label>
+                <label><input type="radio" name="question139" value="b"> A advertência é mais grave que a repreensão e não é registrada nos assentamentos individuais.</label>
+                <label><input type="radio" name="question139" value="c"> A repreensão não é publicada em Boletim, enquanto a advertência é registrada nos assentamentos do transgressor.</label>
+                <label><input type="radio" name="question139" value="d"> A repreensão é aplicada de forma privada e não requer publicação em Boletim.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>140. De acordo com o Art. 12, qual é a principal característica da detenção como sanção?</p>
+            <div class="options">
+                <label><input type="radio" name="question140" value="a"> A detenção implica em cerceamento de liberdade, mas sem confinamento, e o cumprimento pode afetar as escalas operacionais.</label>
+                <label><input type="radio" name="question140" value="b"> A detenção é uma forma de punição menos severa que a repreensão, com registro nos assentamentos.</label>
+                <label><input type="radio" name="question140" value="c"> A detenção não envolve qualquer tipo de cerceamento de liberdade, sendo uma sanção exclusivamente educativa.</label>
+                <label><input type="radio" name="question140" value="d"> A detenção é uma sanção aplicada sem qualquer publicação em Boletim e sem prejuízo de escalas operacionais.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>141. Qual é o procedimento previsto para a detenção em relação ao cumprimento das escalas operacionais?</p>
+            <div class="options">
+                <label><input type="radio" name="question141" value="a"> O ato administrativo que decide pela detenção deve esclarecer se o cumprimento afetará ou não as escalas operacionais de serviço externo.</label>
+                <label><input type="radio" name="question141" value="b"> A detenção sempre interfere nas escalas operacionais e o transgressor deve ser afastado imediatamente de todas as funções externas.</label>
+                <label><input type="radio" name="question141" value="c"> A detenção nunca afeta as escalas operacionais, sendo uma punição isolada e sem maiores consequências para o serviço.</label>
+                <label><input type="radio" name="question141" value="d"> O cumprimento da detenção ocorre sem qualquer consideração sobre as escalas operacionais do serviço.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>142. Em qual das sanções a publicação em Boletim é obrigatória e ocorre de forma ostensiva?</p>
+            <div class="options">
+                <label><input type="radio" name="question142" value="a"> Tanto a advertência quanto a repreensão exigem publicação em Boletim, de forma ostensiva.</label>
+                <label><input type="radio" name="question142" value="b"> Apenas a detenção exige publicação em Boletim de forma ostensiva.</label>
+                <label><input type="radio" name="question142" value="c"> A advertência é a única sanção que exige publicação em Boletim.</label>
+                <label><input type="radio" name="question142" value="d"> Nenhuma sanção exige publicação em Boletim de forma ostensiva.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>143. Qual é a principal diferença entre a detenção com e sem prejuízo do serviço externo, conforme os §§ 2° e 3°?</p>
+            <div class="options">
+                <label><input type="radio" name="question143" value="a"> A detenção com prejuízo do serviço externo impede a participação nas escalas operacionais e serviços internos, enquanto a detenção sem prejuízo permite a participação nas escalas.</label>
+                <label><input type="radio" name="question143" value="b"> A detenção com prejuízo do serviço externo é mais leve, pois permite a participação nas atividades operacionais externas.</label>
+                <label><input type="radio" name="question143" value="c"> A detenção sem prejuízo do serviço externo impede que o punido compareça aos atos de instrução e serviços internos.</label>
+                <label><input type="radio" name="question143" value="d"> Não há diferença entre detenção com e sem prejuízo do serviço externo, ambas são aplicadas da mesma forma.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>144. De acordo com o § 4° do Art. 12, como se conta o tempo de cumprimento da detenção?</p>
+            <div class="options">
+                <label><input type="radio" name="question144" value="a"> O tempo de cumprimento da punição começa a contar quando o punido for recolhido até ser posto em liberdade.</label>
+                <label><input type="radio" name="question144" value="b"> O tempo de cumprimento começa a contar apenas a partir do momento em que o punido for colocado em liberdade.</label>
+                <label><input type="radio" name="question144" value="c"> O tempo de detenção conta-se do momento da aplicação da sanção até o início da execução dos serviços internos.</label>
+                <label><input type="radio" name="question144" value="d"> O tempo de cumprimento conta-se a partir do momento em que a autoridade superior comunica a decisão administrativa ao transgressor.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>145. O que o § 5° do Art. 12 determina em relação ao cumprimento de sanções disciplinares de detenção e prisão?</p>
+            <div class="options">
+                <label><input type="radio" name="question145" value="a"> Os Militares Estaduais dos diferentes círculos de oficiais e praças devem cumprir suas sanções disciplinares juntos no mesmo compartimento.</label>
+                <label><input type="radio" name="question145" value="b"> Os Militares Estaduais devem ser separados daqueles presos à disposição da Justiça durante o cumprimento das sanções disciplinares.</label>
+                <label><input type="radio" name="question145" value="c"> O cumprimento das sanções disciplinares será feito em qualquer compartimento, independentemente da categoria do militar.</label>
+                <label><input type="radio" name="question145" value="d"> Não há restrições quanto ao local de cumprimento das sanções para oficiais e praças.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>146. Qual a exigência descrita no Anexo II, nº 18, para o cumprimento das sanções de detenção e prisão?</p>
+            <div class="options">
+                <label><input type="radio" name="question146" value="a"> O Militar Estadual punido deverá permanecer fardado durante o cumprimento das sanções disciplinares de detenção e prisão.</label>
+                <label><input type="radio" name="question146" value="b"> O Militar Estadual punido deve permanecer em trajes civis durante o cumprimento das sanções.</label>
+                <label><input type="radio" name="question146" value="c"> O Militar Estadual deve ser retirado da farda para cumprir a sanção de detenção ou prisão.</label>
+                <label><input type="radio" name="question146" value="d"> A farda é opcional durante o cumprimento das sanções de detenção e prisão.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>147. O que deve ser esclarecido no ato administrativo que decide pela detenção com prejuízo do serviço externo?</p>
+            <div class="options">
+                <label><input type="radio" name="question147" value="a"> O ato deve esclarecer se a detenção será cumprida com ou sem prejuízo das escalas operacionais externas.</label>
+                <label><input type="radio" name="question147" value="b"> O ato deve definir o tempo de detenção e se o transgressor pode se ausentar do local de cumprimento.</label>
+                <label><input type="radio" name="question147" value="c"> O ato deve especificar a condição do militar para participar das atividades externas, independentemente de sua sanção.</label>
+                <label><input type="radio" name="question147" value="d"> O ato administrativo não necessita esclarecer nada sobre as escalas operacionais de serviço externo.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>148. De acordo com o Art. 15, qual das situações descritas pode levar ao licenciamento a bem da disciplina de um praça sem estabilidade?</p>
+            <div class="options">
+                <label><input type="radio" name="question148" value="a"> A prática de ato que afete a honra pessoal, o pundonor militar ou o decoro da classe.</label>
+                <label><input type="radio" name="question148" value="b"> A condenação por crime de natureza dolosa com pena privativa de liberdade superior a dois anos.</label>
+                <label><input type="radio" name="question148" value="c"> A permanência em comportamento irrepreensível por mais de dois anos.</label>
+                <label><input type="radio" name="question148" value="d"> A incapacidade para o exercício das funções militares por mais de seis meses.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>149. O licenciamento a bem da disciplina, conforme o Art. 15, pode ser aplicado a um praça com estabilidade?</p>
+            <div class="options">
+                <label><input type="radio" name="question149" value="a"> Não, o licenciamento a bem da disciplina só se aplica a praças sem estabilidade.</label>
+                <label><input type="radio" name="question149" value="b"> Sim, mas somente após o cumprimento de uma pena disciplinar.</label>
+                <label><input type="radio" name="question149" value="c"> Sim, se a pessoa demonstrar incapacidade nas funções que lhe são atribuídas.</label>
+                <label><input type="radio" name="question149" value="d"> Não, em qualquer situação, pois a exclusão é o único meio aplicável a praças com estabilidade.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>150. Quais as condições que levam à exclusão a bem da disciplina, conforme o Art. 16?</p>
+            <div class="options">
+                <label><input type="radio" name="question150" value="a"> Quando o praça com estabilidade for condenado por crime de natureza dolosa, com pena privativa de liberdade superior a dois anos.</label>
+                <label><input type="radio" name="question150" value="b"> Quando o praça com estabilidade for acusado de ter procedido incorretamente no exercício do cargo.</label>
+                <label><input type="radio" name="question150" value="c"> Quando o praça com estabilidade for afastado do cargo devido a incompatibilidade ou incapacidade no exercício das funções.</label>
+                <label><input type="radio" name="question150" value="d"> Todas as opções acima são corretas para a exclusão a bem da disciplina.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>151. A exclusão a bem da disciplina, conforme o Art. 16, é aplicada a praças com estabilidade por qual motivo?</p>
+            <div class="options">
+                <label><input type="radio" name="question151" value="a"> Pelo cometimento de uma transgressão disciplinar que afete a honra ou dignidade da classe.</label>
+                <label><input type="radio" name="question151" value="b"> Pelo desempenho insatisfatório das funções e falta de dedicação ao serviço.</label>
+                <label><input type="radio" name="question151" value="c"> Quando o praça demonstrar incapacidade total para exercer as funções atribuídas.</label>
+                <label><input type="radio" name="question151" value="d"> Nenhuma das alternativas acima.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>152. De acordo com o Art. 15, qual o prazo mínimo de mau comportamento para que um praça possa ser licenciado a bem da disciplina?</p>
+            <div class="options">
+                <label><input type="radio" name="question152" value="a"> 6 meses de comportamento irregular.</label>
+                <label><input type="radio" name="question152" value="b"> 1 ano de comportamento irrepreensível.</label>
+                <label><input type="radio" name="question152" value="c"> 2 anos de comportamento mau.</label>
+                <label><input type="radio" name="question152" value="d"> Não há prazo mínimo para licenciamento a bem da disciplina.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>153. O que é o Processo Administrativo Disciplinar Militar Demissionário, conforme a Lei Complementar nº 10.990/97?</p>
+            <div class="options">
+                <label><input type="radio" name="question153" value="a"> Trata-se de um processo disciplinar que pode resultar na aplicação da sanção de exclusão a bem da disciplina para praças com estabilidade.</label>
+                <label><input type="radio" name="question153" value="b"> Trata-se de um processo disciplinar que pode levar ao licenciamento a bem da disciplina de uma Praça sem estabilidade, quando a conduta imputada não for justificada.</label>
+                <label><input type="radio" name="question153" value="c"> Trata-se de um processo que resulta na aplicação de repreensão a um praça com estabilidade por conduta inadequada.</label>
+                <label><input type="radio" name="question153" value="d"> Trata-se de um processo administrativo aplicado apenas em casos de condenação penal de um praça, independentemente de sua estabilidade.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>154. Em face de quais faltas é possível a instauração do Processo Administrativo Disciplinar Militar Demissionário (PADM)?</p>
+            <div class="options">
+                <label><input type="radio" name="question154" value="a"> Quando o acusado cometer faltas leves que não comprometem a disciplina da corporação.</label>
+                <label><input type="radio" name="question154" value="b"> Quando a conduta do acusado for incompatível ou incapaz de mantê-lo nas fileiras da Brigada Militar, devido à gravidade das faltas cometidas.</label>
+                <label><input type="radio" name="question154" value="c"> Quando o acusado praticar uma falta de menor gravidade, que não comprometa a hierarquia, mas afete o bom andamento dos serviços.</label>
+                <label><input type="radio" name="question154" value="d"> Quando o acusado tiver uma conduta regular, mas desobedecer ordens operacionais.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>155. Em quais das seguintes situações o processo administrativo disciplinar será arquivado, de acordo com o Art. 32?</p>
+            <div class="options">
+                <label><input type="radio" name="question155" value="a"> Quando o fato não for reconhecido como infração disciplinar e não houver provas suficientes.</label>
+                <label><input type="radio" name="question155" value="b"> Quando for provado que o acusado cometeu a infração disciplinar, mas a punição não for aplicada.</label>
+                <label><input type="radio" name="question155" value="c"> Quando o fato for comprovado e constituir uma infração disciplinar, mas a defesa for baseada em coação irresistível ou estado de necessidade.</label>
+                <label><input type="radio" name="question155" value="d"> Quando o acusado for considerado culpado, mas não houver provas de que ele tenha concorrido para a infração disciplinar.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>157. O que caracteriza o licenciamento a bem da disciplina, conforme o RDBM?</p>
+            <div class="options">
+                <label><input type="radio" name="question157" value="a"> É um processo disciplinar para oficiais da ativa e reserva que tenha ocorrido em razão de infrações graves.</label>
+                <label><input type="radio" name="question157" value="b"> Aplica-se a praças sem estabilidade, sendo uma medida para afastamento do serviço ativo, quando se provar a incompatibilidade com o cargo.</label>
+                <label><input type="radio" name="question157" value="c"> É uma sanção aplicada a oficiais, reservistas e reformados com base em infrações de natureza administrativa.</label>
+                <label><input type="radio" name="question157" value="d"> Está relacionado com o processo de exclusão de militares da Brigada Militar, independentemente da estabilidade.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>156. Qual é a principal diferença entre o Conselho de Justificação e o Conselho de Disciplina, conforme as legislações aplicáveis?</p>
+            <div class="options">
+                <label><input type="radio" name="question156" value="a"> O Conselho de Justificação aplica-se a praças com estabilidade, enquanto o Conselho de Disciplina aplica-se a oficiais da ativa e reserva.</label>
+                <label><input type="radio" name="question156" value="b"> O Conselho de Justificação aplica-se a oficiais da ativa, reserva remunerada ou reformados, enquanto o Conselho de Disciplina aplica-se a praças com estabilidade assegurada.</label>
+                <label><input type="radio" name="question156" value="c"> O Conselho de Disciplina aplica-se tanto a oficiais quanto a praças com estabilidade, enquanto o Conselho de Justificação aplica-se apenas a oficiais.</label>
+                <label><input type="radio" name="question156" value="d"> O Conselho de Disciplina é usado para situações que envolvem licenciamento, enquanto o Conselho de Justificação trata da reforma de praças.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>159. Quais são as circunstâncias atenuantes na aplicação de uma sanção disciplinar, conforme o Art. 35?</p>
+            <div class="options">
+                <label><input type="radio" name="question159" value="a"> Apenas o comportamento exemplar do infrator e a gravidade do crime cometido.</label>
+                <label><input type="radio" name="question159" value="b"> A relevância dos serviços prestados, a admissão da transgressão e a situação de emergência pública.</label>
+                <label><input type="radio" name="question159" value="c"> O comportamento bom, os serviços prestados, o cometimento da transgressão para preservar a ordem e a admissão do fato com eficácia.</label>
+                <label><input type="radio" name="question159" value="d"> Apenas o fato de o infrator ter agido sob coação irresistível ou em legítima defesa.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>158. O que deve ser considerado na aplicação de uma sanção disciplinar, conforme o Art. 34 do regulamento?</p>
+            <div class="options">
+                <label><input type="radio" name="question158" value="a"> Apenas a natureza da infração cometida e a quantidade de danos causados.</label>
+                <label><input type="radio" name="question158" value="b"> Os antecedentes, personalidade do infrator, motivos, circunstâncias e consequências da transgressão, bem como o grau de dolo ou culpa.</label>
+                <label><input type="radio" name="question158" value="c"> Apenas os antecedentes e a gravidade da infração cometida.</label>
+                <label><input type="radio" name="question158" value="d"> Apenas as circunstâncias do fato e as consequências diretas para a instituição.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>160. Quais são as circunstâncias agravantes consideradas na aplicação de sanção disciplinar, conforme o Art. 36?</p>
+            <div class="options">
+                <label><input type="radio" name="question160" value="a"> Cometer a transgressão sem premeditação e com boa-fé.</label>
+                <label><input type="radio" name="question160" value="b"> Estar classificado no comportamento insuficiente ou mau, reincidência, e prática simultânea de transgressões.</label>
+                <label><input type="radio" name="question160" value="c"> Ser classificado como bom, ter praticado a infração em serviço e sem abuso de autoridade.</label>
+                <label><input type="radio" name="question160" value="d"> Prática isolada de uma transgressão sem conexão com outras infrações.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>161. Qual das seguintes situações é considerada uma circunstância agravante, conforme o Art. 36?</p>
+            <div class="options">
+                <label><input type="radio" name="question161" value="a"> Cometer a transgressão em presença de um subordinado, durante a execução do serviço, com premeditação ou em presença de público.</label>
+                <label><input type="radio" name="question161" value="b"> A transgressão ser cometida em segredo e sem testemunhas.</label>
+                <label><input type="radio" name="question161" value="c"> Prática de infração isolada sem qualquer conexão com outros atos.</label>
+                <label><input type="radio" name="question161" value="d"> Não ter existido reincidência na infração.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>162. De acordo com os artigos 44 e 45, qual é o comportamento inicial classificado para o Praça ao ser incluído na Brigada Militar?</p>
+            <div class="options">
+                <label><input type="radio" name="question162" value="a"> Comportamento insuficiente.</label>
+                <label><input type="radio" name="question162" value="b"> Comportamento bom.</label>
+                <label><input type="radio" name="question162" value="c"> Comportamento mau.</label>
+                <label><input type="radio" name="question162" value="d"> Comportamento exemplar.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>163. De acordo com o Art. 46, qual é o critério para que o comportamento policial-militar de um Praça seja considerado excepcional?</p>
+            <div class="options">
+                <label><input type="radio" name="question163" value="a"> Quando, no período de 72 meses de efetivo serviço, o Praça tenha sofrido até no máximo uma advertência.</label>
+                <label><input type="radio" name="question163" value="b"> Quando, no período de 48 meses, o Praça tenha sofrido até no máximo uma repreensão.</label>
+                <label><input type="radio" name="question163" value="c"> Quando, no período de 24 meses, o Praça tenha sofrido até no máximo uma punição de detenção.</label>
+                <label><input type="radio" name="question163" value="d"> Quando, no período de 12 meses, o Praça tenha sofrido até duas punições de detenção com prejuízo do serviço.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>167. De acordo com o Art. 46, qual é o critério para que o comportamento policial-militar de um Praça seja considerado mau?</p>
+            <div class="options">
+                <label><input type="radio" name="question167" value="a"> Quando, no período de 72 meses, o Praça tenha sofrido até no máximo uma advertência.</label>
+                <label><input type="radio" name="question167" value="b"> Quando, no período de 48 meses, o Praça tenha sofrido até no máximo uma repreensão.</label>
+                <label><input type="radio" name="question167" value="c"> Quando, no período de 24 meses, o Praça tenha sofrido até no máximo uma punição de detenção.</label>
+                <label><input type="radio" name="question167" value="d"> Quando, no período de 12 meses, o Praça tenha sofrido até duas punições de detenção com prejuízo do serviço e mais uma punição qualquer.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>166. De acordo com o Art. 46, qual é o critério para que o comportamento policial-militar de um Praça seja considerado insuficiente?</p>
+            <div class="options">
+                <label><input type="radio" name="question166" value="a"> Quando, no período de 72 meses, o Praça tenha sofrido até no máximo uma advertência.</label>
+                <label><input type="radio" name="question166" value="b"> Quando, no período de 48 meses, o Praça tenha sofrido até no máximo uma repreensão.</label>
+                <label><input type="radio" name="question166" value="c"> Quando, no período de 24 meses, o Praça tenha sofrido até no máximo uma punição de detenção.</label>
+                <label><input type="radio" name="question166" value="d"> Quando, no período de 12 meses, o Praça tenha sofrido até no máximo uma punição de detenção com prejuízo do serviço.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>165. De acordo com o Art. 46, qual é o critério para que o comportamento policial-militar de um Praça seja considerado bom?</p>
+            <div class="options">
+                <label><input type="radio" name="question165" value="a"> Quando, no período de 72 meses, o Praça tenha sofrido até no máximo uma advertência.</label>
+                <label><input type="radio" name="question165" value="b"> Quando, no período de 48 meses, o Praça tenha sofrido até no máximo uma repreensão.</label>
+                <label><input type="radio" name="question165" value="c"> Quando, no período de 24 meses, o Praça tenha sofrido até no máximo uma punição de detenção.</label>
+                <label><input type="radio" name="question165" value="d"> Quando, no período de 12 meses, o Praça tenha sofrido até duas punições de detenção com prejuízo do serviço.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>164. De acordo com o Art. 46, qual é o critério para que o comportamento policial-militar de um Praça seja considerado ótimo?</p>
+            <div class="options">
+                <label><input type="radio" name="question164" value="a"> Quando, no período de 72 meses, o Praça tenha sofrido até no máximo uma advertência.</label>
+                <label><input type="radio" name="question164" value="b"> Quando, no período de 48 meses, o Praça tenha sofrido até no máximo uma repreensão.</label>
+                <label><input type="radio" name="question164" value="c"> Quando, no período de 24 meses, o Praça tenha sofrido até no máximo uma punição de detenção.</label>
+                <label><input type="radio" name="question164" value="d"> Quando, no período de 12 meses, o Praça tenha sofrido até duas punições de detenção com prejuízo do serviço.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>168. De acordo com o Art. 47, quais são os recursos que todo Militar Estadual tem direito de interpor, caso se considere prejudicado, ofendido ou injustiçado por ato de superior hierárquico na esfera disciplinar?</p>
+            <div class="options">
+                <label><input type="radio" name="question168" value="a"> Reconsideração de Ato, Queixa e Representação.</label>
+                <label><input type="radio" name="question168" value="b"> Apelação, Queixa e Representação.</label>
+                <label><input type="radio" name="question168" value="c"> Reconsideração de Ato, Apelação e Repreensão.</label>
+                <label><input type="radio" name="question168" value="d"> Apelação, Representação e Repreensão.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>169. O que caracteriza a Reconsideração de Ato, conforme o Art. 52?</p>
+            <div class="options">
+                <label><input type="radio" name="question169" value="a"> É um recurso interposto à autoridade que praticou ou aprovou o ato disciplinar que se considera irregular, ofensivo, injusto ou ilegal, para que o reexamine.</label>
+                <label><input type="radio" name="question169" value="b"> É um recurso interposto à autoridade imediatamente superior para reexaminar o ato disciplinar.</label>
+                <label><input type="radio" name="question169" value="c"> É um recurso interposto somente no caso de punições de detenção.</label>
+                <label><input type="radio" name="question169" value="d"> É um recurso que deve ser interposto diretamente ao Comandante-Geral da Brigada Militar.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>170. Quando um Militar Estadual pode interpor a Queixa, conforme o Art. 53?</p>
+            <div class="options">
+                <label><input type="radio" name="question170" value="a"> Quando se julgar prejudicado em virtude de decisão denegatória do recurso de Reconsideração de Ato.</label>
+                <label><input type="radio" name="question170" value="b"> Quando for punido com detenção por um superior imediato.</label>
+                <label><input type="radio" name="question170" value="c"> Quando não concordar com o tipo de punição aplicada.</label>
+                <label><input type="radio" name="question170" value="d"> Quando for promovido sem merecimento.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>171. O que caracteriza a Representação, conforme o Art. 54?</p>
+            <div class="options">
+                <label><input type="radio" name="question171" value="a"> É um recurso interposto por autoridade que julgue ser vítima de injustiça, ilegalidade, arbitrariedade, abuso de autoridade ou prejudicado em seus direitos por ato de autoridade superior hierárquico.</label>
+                <label><input type="radio" name="question171" value="b"> É um recurso interposto por subordinado que contesta uma punição disciplinar aplicada.</label>
+                <label><input type="radio" name="question171" value="c"> É um recurso que deve ser interposto no prazo de 15 dias a contar da publicação do ato.</label>
+                <label><input type="radio" name="question171" value="d"> É um recurso feito por qualquer servidor da Brigada Militar contra uma punição disciplinar.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>172. O que é necessário para que o Militar Estadual tenha uma punição cancelada, conforme o Art. 61?</p>
+            <div class="options">
+                <label><input type="radio" name="question172" value="a"> O requerente deve ter completado, sem qualquer outra punição superveniente, o tempo de serviço exigido e ter um parecer favorável de seu Comandante.</label>
+                <label><input type="radio" name="question172" value="b"> O requerente deve comprovar que a transgressão foi de natureza leve e que o serviço prestado foi irrelevante.</label>
+                <label><input type="radio" name="question172" value="c"> O cancelamento será concedido automaticamente após o cumprimento do tempo de serviço exigido, sem a necessidade de parecer do Comandante.</label>
+                <label><input type="radio" name="question172" value="d"> O cancelamento será concedido independentemente de tempo de serviço ou parecer favorável.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>173. Quais são as recompensas policiais-militares previstas no Art. 71, além das outras previstas em lei e regulamentos especiais?</p>
+            <div class="options">
+                <label><input type="radio" name="question173" value="a"> Elogio e dispensa do serviço.</label>
+                <label><input type="radio" name="question173" value="b"> Elogio e promoção.</label>
+                <label><input type="radio" name="question173" value="c"> Dispensa do serviço e licença prêmio.</label>
+                <label><input type="radio" name="question173" value="d"> Licenciamento e aposentadoria.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>174. Qual transgressão é considerada de natureza leve quando o militar deixa de comunicar ao superior, tão logo possível, a execução de ordem legal recebida?</p>
+            <div class="options">
+                <label><input type="radio" name="question174" value="a"> Deixar de cumprir missão atribuída.</label>
+                <label><input type="radio" name="question174" value="b"> Deixar de dar o “pronto” da missão ao superior.</label>
+                <label><input type="radio" name="question174" value="c"> Deixar de prestar homenagens ao superior.</label>
+                <label><input type="radio" name="question174" value="d"> Deixar de realizar o toque regulamentar.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>175. Qual transgressão é considerada de natureza leve quando o militar deixa de cumprimentar um superior, uniformizado ou não?</p>
+            <div class="options">
+                <label><input type="radio" name="question175" value="a"> Deixar de cumprimentar superior em situações de formalidade.</label>
+                <label><input type="radio" name="question175" value="b"> Deixar de cumprimentar superior em qualquer circunstância.</label>
+                <label><input type="radio" name="question175" value="c"> Deixar de respeitar ordens hierárquicas.</label>
+                <label><input type="radio" name="question175" value="d"> Deixar de responder a cumprimentos de subordinados.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>176. De acordo com as transgressões de natureza leve, o que caracteriza a falta de chegada de um militar ao expediente ou ao serviço na hora certa?</p>
+            <div class="options">
+                <label><input type="radio" name="question176" value="a"> Chegar no horário, mas sem uniforme adequado.</label>
+                <label><input type="radio" name="question176" value="b"> Chegar atrasado ao expediente, serviço ou ato no qual deva tomar parte.</label>
+                <label><input type="radio" name="question176" value="c"> Chegar no expediente e não cumprir as atividades designadas.</label>
+                <label><input type="radio" name="question176" value="d"> Chegar no expediente e atrasar outras atividades.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>177. Qual transgressão de natureza leve é cometida ao participar de jogos proibidos ou jogar a dinheiro?</p>
+            <div class="options">
+                <label><input type="radio" name="question177" value="a"> Participar de jogos de azar proibidos.</label>
+                <label><input type="radio" name="question177" value="b"> Participar de jogos com apostas em qualquer circunstância.</label>
+                <label><input type="radio" name="question177" value="c"> Participar de jogos sem autorização superior.</label>
+                <label><input type="radio" name="question177" value="d"> Participar de jogos de azar com outros militares.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>178. O que caracteriza a transgressão de natureza leve ao içar ou arriar bandeira ou insígnia de autoridade sem ordem?</p>
+            <div class="options">
+                <label><input type="radio" name="question178" value="a"> Executar a tarefa sem aprovação de um superior imediato.</label>
+                <label><input type="radio" name="question178" value="b"> Içar ou arriar bandeira sem ordem, sem justificar necessidade.</label>
+                <label><input type="radio" name="question178" value="c"> Alterar a posição da bandeira fora do horário estabelecido.</label>
+                <label><input type="radio" name="question178" value="d"> Içar bandeira fora do protocolo de cerimônias.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>179. O que caracteriza a transgressão de natureza leve quando o militar executa toques ou faz sinais regulamentares sem ordem?</p>
+            <div class="options">
+                <label><input type="radio" name="question179" value="a"> Realizar toques ou sinais em evento social.</label>
+                <label><input type="radio" name="question179" value="b"> Executar toques e sinais sem ordens superiores para tal.</label>
+                <label><input type="radio" name="question179" value="c"> Executar toques de forma irregular, sem conhecimento.</label>
+                <label><input type="radio" name="question179" value="d"> Realizar toques em cerimônias externas sem permissão.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>180. O que caracteriza a transgressão de natureza leve quando o militar conversa ou faz ruídos em ocasião, lugar ou hora imprópria?</p>
+            <div class="options">
+                <label><input type="radio" name="question180" value="a"> Conversar em momentos de descanso.</label>
+                <label><input type="radio" name="question180" value="b"> Conversar ou fazer ruídos em momentos e lugares inadequados.</label>
+                <label><input type="radio" name="question180" value="c"> Conversar durante o expediente, mas com autorização.</label>
+                <label><input type="radio" name="question180" value="d"> Conversar em locais permitidos, mas em tom elevado.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>181. De acordo com as transgressões leves, o que caracteriza fumar em lugar vedado ou ao se dirigir a superior?</p>
+            <div class="options">
+                <label><input type="radio" name="question181" value="a"> Fumar em locais onde não é permitido ou ao se dirigir a superior.</label>
+                <label><input type="radio" name="question181" value="b"> Fumar em qualquer momento sem restrições.</label>
+                <label><input type="radio" name="question181" value="c"> Fumar sem pedido de autorização formal.</label>
+                <label><input type="radio" name="question181" value="d"> Fumar em locais permitidos, mas em horários proibidos.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>182. Qual transgressão de natureza leve é cometida quando o militar usa uniforme de forma inadequada ou descurar do asseio pessoal?</p>
+            <div class="options">
+                <label><input type="radio" name="question182" value="a"> Usar uniforme inadequado e negligenciar o asseio pessoal.</label>
+                <label><input type="radio" name="question182" value="b"> Usar uniforme fora das normas de vestimenta.</label>
+                <label><input type="radio" name="question182" value="c"> Usar uniforme, mas sem os acessórios regulamentares.</label>
+                <label><input type="radio" name="question182" value="d"> Descurar do asseio pessoal em momentos de lazer.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>183. O que caracteriza a transgressão de natureza leve ao negar-se a receber alimentação, uniforme ou outros objetos destinados ao militar?</p>
+            <div class="options">
+                <label><input type="radio" name="question183" value="a"> Recusar-se a aceitar materiais sem justificativa plausível.</label>
+                <label><input type="radio" name="question183" value="b"> Negar-se a receber objetos ou equipamentos destinados ao serviço.</label>
+                <label><input type="radio" name="question183" value="c"> Negar-se a receber objetos pessoais, sem vínculo com o serviço.</label>
+                <label><input type="radio" name="question183" value="d"> Negar-se a aceitar uniformes que estejam danificados.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>184. Qual transgressão de natureza média é cometida quando o militar deixa de comunicar ato ou fato irregular que presenciar ou de que tenha conhecimento, quando não lhe couber intervir?</p>
+            <div class="options">
+                <label><input type="radio" name="question184" value="a"> Deixar de comunicar fato irregular presenciado ou conhecido.</label>
+                <label><input type="radio" name="question184" value="b"> Deixar de reportar ocorrência de menor gravidade.</label>
+                <label><input type="radio" name="question184" value="c"> Deixar de intervir em situação de risco imediato.</label>
+                <label><input type="radio" name="question184" value="d"> Deixar de alertar sobre perturbação da ordem pública.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>185. O que caracteriza a transgressão de natureza média quando o militar deixa de comunicar ao superior imediato ou a outro, na ausência daquele, sobre iminente perturbação da ordem pública ou grave alteração do serviço?</p>
+            <div class="options">
+                <label><input type="radio" name="question185" value="a"> Deixar de comunicar qualquer alteração no serviço.</label>
+                <label><input type="radio" name="question185" value="b"> Deixar de comunicar perturbação da ordem pública.</label>
+                <label><input type="radio" name="question185" value="c"> Deixar de avisar sobre atividades ilegais sendo realizadas.</label>
+                <label><input type="radio" name="question185" value="d"> Deixar de alertar sobre problemas administrativos.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>186. Qual transgressão de natureza média é cometida ao deixar de dar informações em processos quando for de responsabilidade do militar?</p>
+            <div class="options">
+                <label><input type="radio" name="question186" value="a"> Deixar de fornecer informações em processos judiciais.</label>
+                <label><input type="radio" name="question186" value="b"> Deixar de dar informações sobre o andamento do processo.</label>
+                <label><input type="radio" name="question186" value="c"> Deixar de fornecer informações necessárias ao processo administrativo.</label>
+                <label><input type="radio" name="question186" value="d"> Deixar de apresentar evidências durante processos investigativos.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>187. O que caracteriza a transgressão de natureza média quando o militar deixa de encaminhar documentos dentro do prazo legal?</p>
+            <div class="options">
+                <label><input type="radio" name="question187" value="a"> Não encaminhar documentos sem justificativa plausível.</label>
+                <label><input type="radio" name="question187" value="b"> Atrasar o envio de documentos fora do prazo legal.</label>
+                <label><input type="radio" name="question187" value="c"> Não enviar documentos no prazo estabelecido para relatórios.</label>
+                <label><input type="radio" name="question187" value="d"> Enviar documentos incompletos dentro do prazo.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>188. Qual transgressão de natureza média é cometida ao retardar o cumprimento de ordem legal?</p>
+            <div class="options">
+                <label><input type="radio" name="question188" value="a"> Adiar a execução de ordem legal sem justificativa.</label>
+                <label><input type="radio" name="question188" value="b"> Cumprir ordens fora de ordem de prioridade.</label>
+                <label><input type="radio" name="question188" value="c"> Retardar a execução da ordem por problemas internos.</label>
+                <label><input type="radio" name="question188" value="d"> Deixar de cumprir ordem no tempo adequado.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>189. O que caracteriza a transgressão de natureza média quando o militar deixa de se apresentar, nos prazos regulamentares, nos locais onde deva comparecer, sem motivo justificado?</p>
+            <div class="options">
+                <label><input type="radio" name="question189" value="a"> Deixar de comparecer a compromissos sem justificativa válida.</label>
+                <label><input type="radio" name="question189" value="b"> Faltar a compromissos sem aviso prévio e sem justificativa.</label>
+                <label><input type="radio" name="question189" value="c"> Deixar de se apresentar em horários de expediente.</label>
+                <label><input type="radio" name="question189" value="d"> Deixar de comparecer a reuniões internas ou externas.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>190. O que caracteriza a transgressão de natureza média quando o militar trabalha mal, por falta de atenção?</p>
+            <div class="options">
+                <label><input type="radio" name="question190" value="a"> Executar serviços com falhas devido à falta de foco.</label>
+                <label><input type="radio" name="question190" value="b"> Não realizar as tarefas conforme a expectativa.</label>
+                <label><input type="radio" name="question190" value="c"> Faltar ao trabalho sem dar satisfação.</label>
+                <label><input type="radio" name="question190" value="d"> Deixar de concluir atividades devido a distração.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>191. Qual transgressão de natureza média é cometida quando o militar se afasta do local em que deva encontrar-se por força de ordens ou disposições legais?</p>
+            <div class="options">
+                <label><input type="radio" name="question191" value="a"> Afastar-se de seu posto sem autorização.</label>
+                <label><input type="radio" name="question191" value="b"> Deixar o local de serviço sem permissão de superior.</label>
+                <label><input type="radio" name="question191" value="c"> Afastar-se sem motivo justificado durante o expediente.</label>
+                <label><input type="radio" name="question191" value="d"> Retirar-se do local de trabalho durante horário de serviço.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>192. O que caracteriza a transgressão de natureza média quando o militar falta a qualquer ato em que deva tomar parte ou assistir, ou se retira antes do encerramento, sem a devida autorização?</p>
+            <div class="options">
+                <label><input type="radio" name="question192" value="a"> Faltar a eventos importantes sem dar explicação.</label>
+                <label><input type="radio" name="question192" value="b"> Deixar de comparecer a cerimônias obrigatórias sem justificativa.</label>
+                <label><input type="radio" name="question192" value="c"> Retirar-se de eventos antes do término sem permissão.</label>
+                <label><input type="radio" name="question192" value="d"> Deixar de participar de atividades internas de grupo.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>193. O que caracteriza a transgressão de natureza média quando o militar espalha boato ou notícia tendenciosa sobre outro militar ou sobre a atividade policial-militar?</p>
+            <div class="options">
+                <label><input type="radio" name="question193" value="a"> Espalhar informações falsas sobre colegas ou sobre o trabalho.</label>
+                <label><input type="radio" name="question193" value="b"> Espalhar boatos que possam prejudicar a imagem da corporação.</label>
+                <label><input type="radio" name="question193" value="c"> Fazer comentários negativos sobre superiores.</label>
+                <label><input type="radio" name="question193" value="d"> Discutir sobre a atividade policial de forma irresponsável.</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>194. O que caracteriza uma transgressão de natureza grave, referente à conduta dolosa tipificada como crime, atentatória ao sentimento do dever ou à dignidade policial-militar?</p>
+            <div class="options">
+                <label><input type="radio" name="question194" value="a"> Cometer atos criminosos durante a execução do serviço.</label>
+                <label><input type="radio" name="question194" value="b"> Cometer um erro de conduta em serviço sem intenção criminosa.</label>
+                <label><input type="radio" name="question194" value="c"> Praticar qualquer crime sem relação com o serviço policial-militar.</label>
+                <label><input type="radio" name="question194" value="d"> Atentar contra a dignidade policial de maneira intencional.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>195. O que caracteriza a transgressão de natureza grave quando o militar falta com a verdade?</p>
+            <div class="options">
+                <label><input type="radio" name="question195" value="a"> Mentir sobre fatos importantes para a corporação.</label>
+                <label><input type="radio" name="question195" value="b"> Prestar informações erradas em relatórios.</label>
+                <label><input type="radio" name="question195" value="c"> Omitir detalhes relevantes durante investigações.</label>
+                <label><input type="radio" name="question195" value="d"> Criar informações falsas para encobrir erros de outros militares.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>196. Qual transgressão de natureza grave ocorre quando o militar trabalha mal intencionalmente?</p>
+            <div class="options">
+                <label><input type="radio" name="question196" value="a"> Executar tarefas de forma inadequada por falta de atenção.</label>
+                <label><input type="radio" name="question196" value="b"> Deixar de realizar tarefas de forma eficiente de maneira intencional.</label>
+                <label><input type="radio" name="question196" value="c"> Trabalhar de forma ruim devido a distração.</label>
+                <label><input type="radio" name="question196" value="d"> Causar danos aos bens públicos durante o serviço.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>197. O que caracteriza a transgressão de natureza grave quando o militar abandona o serviço para o qual foi designado?</p>
+            <div class="options">
+                <label><input type="radio" name="question197" value="a"> Abandonar seu posto sem autorização superior.</label>
+                <label><input type="radio" name="question197" value="b"> Sair do local de trabalho sem justificativa válida.</label>
+                <label><input type="radio" name="question197" value="c"> Deixar de comparecer ao serviço para o qual foi escalado.</label>
+                <label><input type="radio" name="question197" value="d"> Abandonar o serviço para fugir de tarefas desconfortáveis.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>198. Qual transgressão de natureza grave ocorre quando o militar dispara a arma por imprudência, negligência, imperícia ou desnecessariamente?</p>
+            <div class="options">
+                <label><input type="radio" name="question198" value="a"> Disparar a arma sem ter a intenção de causar dano.</label>
+                <label><input type="radio" name="question198" value="b"> Disparar a arma sem necessidade, em desacordo com os procedimentos estabelecidos.</label>
+                <label><input type="radio" name="question198" value="c"> Utilizar a arma de fogo em situações de risco para terceiros.</label>
+                <label><input type="radio" name="question198" value="d"> Disparar a arma sem treinamento ou preparação adequada.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>199. O que caracteriza a transgressão de natureza grave quando o militar maltrata preso sob sua guarda?</p>
+            <div class="options">
+                <label><input type="radio" name="question199" value="a"> Desrespeitar os direitos de um preso sob custódia.</label>
+                <label><input type="radio" name="question199" value="b"> Aplicar tratamento cruel a prisioneiros durante o cumprimento de sua pena.</label>
+                <label><input type="radio" name="question199" value="c"> Usar de força excessiva ao controlar a situação de um preso.</label>
+                <label><input type="radio" name="question199" value="d"> Praticar atos abusivos contra a dignidade de prisioneiros.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>200. Qual transgressão de natureza grave ocorre quando o militar ofende, provoca ou desafia seu superior, igual ou subordinado, com palavras, gestos ou ações?</p>
+            <div class="options">
+                <label><input type="radio" name="question200" value="a"> Desrespeitar superior hierárquico de qualquer forma.</label>
+                <label><input type="radio" name="question200" value="b"> Ofender outro militar em momentos de tensão.</label>
+                <label><input type="radio" name="question200" value="c"> Provocar discussões desnecessárias com superiores ou subordinados.</label>
+                <label><input type="radio" name="question200" value="d"> Agressão verbal ou física contra qualquer colega de corporação.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>201. O que caracteriza a transgressão de natureza grave quando o militar trava luta corporal com seu superior, igual ou subordinado?</p>
+            <div class="options">
+                <label><input type="radio" name="question201" value="a"> Disputar uma luta física durante um confronto.</label>
+                <label><input type="radio" name="question201" value="b"> Iniciar uma luta corporal com qualquer membro da corporação.</label>
+                <label><input type="radio" name="question201" value="c"> Participar de conflito físico com outro militar durante o expediente.</label>
+                <label><input type="radio" name="question201" value="d"> Engajar-se em luta física com um superior ou subordinado.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>202. O que caracteriza a transgressão de natureza grave quando o militar tem em seu poder, introduz ou distribui, sem a devida autorização, bebidas alcoólicas, tóxicos ou entorpecentes em OPM?</p>
+            <div class="options">
+                <label><input type="radio" name="question202" value="a"> Transportar substâncias ilegais em viaturas da corporação.</label>
+                <label><input type="radio" name="question202" value="b"> Introduzir bebidas alcoólicas ou substâncias proibidas em unidade policial-militar.</label>
+                <label><input type="radio" name="question202" value="c"> Distribuir substâncias ilícitas ou drogas dentro de instalações militares.</label>
+                <label><input type="radio" name="question202" value="d"> Manter em posse de bens proibidos sem permissão para sua posse.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>203. Qual transgressão de natureza grave ocorre quando o militar extravia ou danifica documentos e bens pertencentes à Fazenda Pública?</p>
+            <div class="options">
+                <label><input type="radio" name="question203" value="a"> Extraviar documentos importantes para o funcionamento da corporação.</label>
+                <label><input type="radio" name="question203" value="b"> Danificar ou perder bens públicos essenciais para o serviço policial.</label>
+                <label><input type="radio" name="question203" value="c"> Perder documentos ou materiais usados em atividades oficiais.</label>
+                <label><input type="radio" name="question203" value="d"> Danificar bens materiais pertencentes ao governo sem justificativa.</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>204. O que caracteriza a transgressão de natureza grave quando o militar faz uso do posto ou da graduação para obter ou permitir que terceiros obtenham vantagens pecuniárias indevidas?</p>
+            <div class="options">
+                <label><input type="radio" name="question204" value="a"> Usar o cargo para obter favores pessoais ou materiais.</label>
+                <label><input type="radio" name="question204" value="b"> Utilizar a posição hierárquica para obter vantagens ilícitas.</label>
+                <label><input type="radio" name="question204" value="c"> Permitir que terceiros se beneficiem de cargos em troca de favores financeiros.</label>
+                <label><input type="radio" name="question204" value="d"> Fazer uso de sua posição para receber
+                </div>
+            </div>
+            
+<div class="question">
+    <p>205. Qual a diferença entre "chegar atrasado" e "faltar ao expediente" no contexto das transgressões disciplinares?</p>
+    <div class="options">
+        <label><input type="radio" name="question205" value="a"> "Chegar atrasado" refere-se ao não comparecimento ao serviço, enquanto "faltar ao expediente" é simplesmente um atraso.</label>
+        <label><input type="radio" name="question205" value="b"> "Chegar atrasado" é uma falta leve, enquanto "faltar ao expediente" é uma falta grave.</label>
+        <label><input type="radio" name="question205" value="c"> "Chegar atrasado" é quando o militar chega fora do horário, mas ainda comparece, enquanto "faltar ao expediente" é não comparecer de forma alguma.</label>
+        <label><input type="radio" name="question205" value="d"> "Chegar atrasado" e "faltar ao expediente" são ambos considerados faltas graves.</label>
+    </div>
+</div>
+
+<div class="question">
+    <p>206. Qual a transgressão disciplinar aplicada quando o militar deixa de se apresentar no local de serviço dentro do prazo regulamentar, sem justificativa?</p>
+    <div class="options">
+        <label><input type="radio" name="question206" value="a"> Falta leve, por não ter comparecido no local de serviço.</label>
+        <label><input type="radio" name="question206" value="b"> Falta média, por deixar de comunicar a impossibilidade de comparecimento ao serviço.</label>
+        <label><input type="radio" name="question206" value="c"> Falta grave, por não apresentar justificativa para o não comparecimento.</label>
+        <label><input type="radio" name="question206" value="d"> Falta média, por atrasar a apresentação no local de serviço.</label>
+    </div>
+</div>
+<div class="question">
+    <p>207. Qual a diferença entre "chegar atrasado" e "faltar ao expediente" no contexto das transgressões disciplinares?</p>
+    <div class="options">
+        <label><input type="radio" name="question207" value="a"> "Chegar atrasado" refere-se ao não comparecimento ao serviço, enquanto "faltar ao expediente" é simplesmente um atraso.</label>
+        <label><input type="radio" name="question207" value="b"> "Chegar atrasado" é uma falta leve, enquanto "faltar ao expediente" é uma falta grave.</label>
+        <label><input type="radio" name="question207" value="c"> "Chegar atrasado" é quando o militar chega fora do horário, mas ainda comparece, enquanto "faltar ao expediente" é não comparecer de forma alguma.</label>
+        <label><input type="radio" name="question207" value="d"> "Chegar atrasado" e "faltar ao expediente" são ambos considerados faltas graves.</label>
+    </div>
+</div>
+
+<div class="question">
+    <p>208. Qual a transgressão disciplinar aplicada quando o militar deixa de se apresentar no local de serviço dentro do prazo regulamentar, sem justificativa?</p>
+    <div class="options">
+        <label><input type="radio" name="question208" value="a"> Falta leve, por não ter comparecido no local de serviço.</label>
+        <label><input type="radio" name="question208" value="b"> Falta média, por deixar de comunicar a impossibilidade de comparecimento ao serviço.</label>
+        <label><input type="radio" name="question208" value="c"> Falta grave, por não apresentar justificativa para o não comparecimento.</label>
+        <label><input type="radio" name="question208" value="d"> Falta média, por atrasar a apresentação no local de serviço.</label>
+    </div>
+</div>
+
+
+<div class="question">
+    <p>209. Como a admissão do acusado sobre o cometimento de uma transgressão disciplinar deve ser considerada no momento da aplicação da sanção?</p>
+    <div class="options">
+        <label><input type="radio" name="question209" value="a"> Como uma circunstância agravante, aumentando a sanção.</label>
+        <label><input type="radio" name="question209" value="b"> Como uma circunstância atenuante, diminuindo a sanção.</label>
+        <label><input type="radio" name="question209" value="c"> Como uma justificativa para o não cumprimento da sanção.</label>
+        <label><input type="radio" name="question209" value="d"> Como irrelevante para a aplicação da sanção disciplinar.</label>
+    </div>
+</div>
+
+<div class="question">
+    <p>210. Qual é a exigência relacionada ao cumprimento das sanções de detenção e prisão no que diz respeito ao uniforme do Militar Estadual punido?</p>
+    <div class="options">
+        <label><input type="radio" name="question210" value="a"> O militar deve permanecer sem uniforme durante o cumprimento da punição.</label>
+        <label><input type="radio" name="question210" value="b"> O militar deve permanecer fardado durante o cumprimento da sanção de detenção ou prisão.</label>
+        <label><input type="radio" name="question210" value="c"> O militar deve mudar de uniforme para outro específico durante a punição.</label>
+        <label><input type="radio" name="question210" value="d"> O militar deve permanecer com seu uniforme apenas durante as visitas.</label>
+    </div>
+</div>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+          
+      
+      <button type="button" id="submitBtn" onclick="calculateScore()">Enviar</button>
+    </form>
+    
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const correctAnswers = {
+        
+  question01: "b",
+  question02: "b",
+  question03: "b",
+  question04: "b",
+  question05: "b",
+  question06: "b",
+  question07: "b",
+  question08: "b",
+  question09: "b",
+  question10: "b",
+  question11: "b",
+  question12: "c",
+  question13: "c",
+  question14: "b",
+  question15: "c",
+  question16: "b",
+  question17: "b",
+  question18: "b",
+  question19: "c",
+  question20: "b",
+  question21: "b",
+  question22: "b",
+  question23: "c",
+  question30: "a",
+  question31: "b",
+  question32: "a",
+  question33: "b",
+  question34: "c",
+  question35: "b",
+  question36: "b",
+  question37: "b",
+  question38: "c",
+  question39: "a",
+  question41: "c",
+  question42: "b",
+  question43: "a",
+  question44: "a",
+  question45: "b",
+  question46: "b",
+  question47: "b",
+  question48: "a",
+  question49: "b",
+  question50: "b",
+  question51: "c",
+  question52: "c",
+  question53: "a",
+  question54: "c",
+  question55: "a",
+  question56: "a",
+  question57: "c",
+  question58: "a",
+  question59: "a",
+  question60: "c",
+  question61: "c",
+  question62: "b",
+  question63: "b",
+  question64: "c",
+  question65: "c",
+  question66: "a",
+  question67: "b",
+  question68: "c",
+  question69: "b",
+  question70: "a",
+  question71: "c",
+  question72: "a",
+  question73: "a",
+  question74: "b",
+  question75: "a",
+  question76: "c",
+  question77: "c",
+  question78: "c",
+  question79: "c",
+  question80: "a",
+  question81: "b",
+  question82: "b",
+  question83: "b",
+  question84: "b",
+  question85: "b",
+  question86: "b",
+  question87: "a",
+  question88: "a",
+  question89: "a",
+  question90: "a",
+  question91: "a",
+  question92: "a",
+  question93: "a",
+  question94: "a",
+  question95: "a",
+  question96: "a",
+  question97: "a",
+  question98: "a",
+  question99: "a",
+  question100: "a",
+  question101: "a",
+  question102: "b",
+  question103: "b",
+  question104: "a",
+  question105: "a",
+  question106: "b",
+  question107: "a",
+  question108: "a",
+  question109: "a",
+  question110: "a",
+  question111: "a",
+  question112: "a",
+  question113: "a",
+  question114: "a",
+  question115: "a",
+  question116: "a",
+  question117: "a",
+  question118: "a",
+  question119: "a",
+  question120: "a",
+  question121: "a",
+  question122: "a",
+  question123: "a",
+  question124: "a",
+  question125: "a",
+  question126: "b",
+  question127: "b",
+  question128: "c",
+  question129: "c",
+  question130: "b",
+  question131: "c",
+  question132: "b",
+  question133: "b",
+  question134: "b",
+  question135: "a",
+  question136: "a",
+  question137: "a",
+  question138: "a",
+  question139: "a",
+  question140: "a",
+  question141: "a",
+  question142: "a",
+  question143: "a",
+  question144: "a",
+  question145: "b",
+  question146: "a",
+  question147: "a",
+  question148: "a",
+  question149: "a",
+  question150: "d",
+  question151: "a",
+  question152: "a",
+  question153: "b",
+  question154: "b",
+  question155: "a",
+  question157: "b",
+  question156: "b",
+  question159: "c",
+  question158: "b",
+  question160: "b",
+  question161: "a",
+  question162: "b",
+  question163: "a",
+  question167: "d",
+  question166: "d",
+  question165: "a",
+  question164: "a",
+  question168: "a",
+  question169: "a",
+  question170: "a",
+  question171: "a",
+  question172: "a",
+  question173: "a",
+  question174: "b",
+  question175: "b",
+  question176: "b",
+  question177: "a",
+  question178: "b",
+  question179: "b",
+  question180: "b",
+  question181: "a",
+  question182: "a",
+  question183: "b",
+  question184: "a",
+  question185: "b",
+  question186: "c",
+  question187: "b",
+  question188: "a",
+  question189: "b",
+  question190: "a",
+  question191: "b",
+  question192: "c",
+  question193: "a",
+  question194: "d",
+  question195: "a",
+  question196: "b",
+  question197: "a",
+  question198: "b",
+  question199: "d",
+  question200: "a",
+  question201: "d",
+  question202: "b",
+  question203: "b",
+  question204: "b",
+  question205: "c",
+  question206: "c",
+  question207: "c",
+  question208: "c",
+  question209: "b",
+  question210: "b"
+
+
+    };
+
+    function calculateScore() {
+        const form = document.getElementById('quizForm');
+        let score = 0;
+        const totalQuestions = Object.keys(correctAnswers).length; // Total de perguntas
+
+        for (let question in correctAnswers) {
+            const userAnswer = form[question] ? form[question].value : null;
+            const options = document.querySelectorAll(`input[name="${question}"]`);
+
+            options.forEach(option => {
+                // Remove classes anteriores
+                option.parentElement.classList.remove('correct', 'incorrect');
+                
+                // Aplica classe correta
+                if (option.value === correctAnswers[question]) {
+                    option.parentElement.classList.add('correct');
+                } 
+                // Aplica classe incorreta se for a resposta escolhida
+                else if (userAnswer === option.value) {
+                    option.parentElement.classList.add('incorrect');
+                }
+            });
+
+            // Contagem de respostas corretas
+            if (userAnswer === correctAnswers[question]) {
+                score++;
+            }
+        }
+
+        // Exibição do resultado
+        const resultDiv = document.getElementById('result');
+        resultDiv.style.display = 'block';
+        resultDiv.innerHTML = `Você acertou <strong>${score}</strong> de <strong>${totalQuestions}</strong> questões.<br>Sua nota final é <strong>${(score / totalQuestions * 10).toFixed(1)}</strong>`;
+    }
+</script>
+
+
+</body>
+</html>

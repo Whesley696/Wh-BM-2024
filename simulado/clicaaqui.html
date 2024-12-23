@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página para Você 😘</title>
+    <style>
+        body {
+            background-color: #ffcccb;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 20px;
+            font-size: 2rem;
+        }
+        .heart {
+            position: absolute;
+            color: red;
+            font-size: 1.5rem;
+            animation: float 5s infinite ease-in-out;
+            -webkit-animation: float 5s infinite ease-in-out;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+        @-webkit-keyframes float {
+            0% { -webkit-transform: translateY(0); }
+            50% { -webkit-transform: translateY(-20px); }
+            100% { -webkit-transform: translateY(0); }
+        }
+        #runaway-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: pink;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s, top 0.2s, left 0.2s;
+        }
+        #runaway-button:hover {
+            background-color: red;
+            color: white;
+        }
+        #flashing-text {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 0, 0, 0.7);
+            z-index: 10;
+            color: white;
+            font-size: 1.5rem;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #image-container img {
+            max-width: 90%;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
+        }
+        .squirrel {
+            position: absolute;
+            width: 80px;
+            animation: bounce 2s infinite;
+            -webkit-animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        @-webkit-keyframes bounce {
+            0%, 100% { -webkit-transform: translateY(0); }
+            50% { -webkit-transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body>
+    <h1>BOM DIA LINDONA <span id="name"></span>! ❤️</h1>
+    <button id="runaway-button">Clique aqui!</button>
+    <div id="flashing-text">
+        <p>GOSTOSA DO CARALHOOOOOOOOOO!!! 💕</p>
+        <div id="image-container">
+            <img src="https://i.ibb.co/D8nRGcX/Captura-de-tela-2024-12-04-072154.png" alt="Mensagem especial">
+        </div>
+        <button onclick="stopFlash()">Parar</button>
+    </div>
+    <script>
+        const hearts = Array.from({ length: 30 });
+        hearts.forEach(() => {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '❤️';
+            heart.style.top = Math.random() * 100 + 'vh';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.fontSize = Math.random() * 2 + 1 + 'rem';
+            document.body.appendChild(heart);
+        });
+
+        const button = document.getElementById('runaway-button');
+        let clickCount = 0;
+
+        button.addEventListener('click', () => {
+            clickCount++;
+            if (clickCount >= 5) {
+                showFlash();
+            } else {
+                moveButton();
+            }
+        });
+
+        function moveButton() {
+            button.style.top = Math.random() * 90 + '%';
+            button.style.left = Math.random() * 90 + '%';
+        }
+
+        function showFlash() {
+            document.getElementById('flashing-text').style.display = 'flex';
+            addSquirrels();
+        }
+
+        function stopFlash() {
+            document.getElementById('flashing-text').style.display = 'none';
+        }
+
+        function addSquirrels() {
+            for (let i = 0; i < 10; i++) {
+                const squirrel = document.createElement('img');
+                squirrel.src = "https://i.pinimg.com/originals/63/39/a5/6339a53166999b6a28561809cc70ef3e.gif";
+                squirrel.className = 'squirrel';
+                squirrel.style.top = Math.random() * 90 + '%';
+                squirrel.style.left = Math.random() * 90 + '%';
+                document.body.appendChild(squirrel);
+            }
+        }
+
+        document.getElementById("name").innerText = "gostosa"; // Customize com o nome dela!
+    </script>
+</body>
+</html>

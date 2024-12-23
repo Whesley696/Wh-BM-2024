@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questões de Estado e Sociedade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #000000;
+            color:white;
+        }
+        .question {
+            background-color: #070907;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #28a745;
+            color: rgb(214, 0, 0);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .explanation {
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+        .result {
+            font-weight: bold;
+        }
+        .correct {
+            color: green;
+        }
+        .wrong {
+            color: red;
+        }
+        .loss-image {
+    display: none;
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    margin-left: 10px;
+}
+
+    </style>
+</head>
+<body>
+
+<h1>subereck é gay</h1>
+<a href="https://prnt.sc/V-LCQU0e753R">https://prnt.sc/V-LCQU0e753R</a>
+
+<div class="questions">
+
+    <div class="question" id="question1">
+        <p><strong>1. O que é comunicação operacional?</strong></p>
+        <label><input type="radio" name="q1" value="a"> (a) Transmissão de dados apenas por telefonia móvel.</label><br>
+        <label><input type="radio" name="q1" value="b"> (b) Designação dada à transmissão, emissão ou recepção de símbolos, caracteres, sinais, escritos, imagens, sons ou informações de qualquer natureza por processos eletromagnéticos.</label><br>
+        <label><input type="radio" name="q1" value="c"> (c) Comunicação realizada apenas por meios ópticos.</label><br>
+        <label><input type="radio" name="q1" value="d"> (d) Interação verbal entre policiais durante operações.</label><br>
+        <label><input type="radio" name="q1" value="e"> (e) Transmissão de informações somente por rádio.</label><br>
+        <button onclick="checkAnswer('q1', 'b', 'A alternativa CORRETA é: Designação dada à transmissão, emissão ou recepção de símbolos, caracteres, sinais, escritos, imagens, sons ou informações de qualquer natureza por processos eletromagnéticos.')">Enviar</button>
+        <div class="explanation" id="explanation-q-q1"></div>
+    </div>
+    
+    <div class="question" id="question2">
+        <p><strong>2. Como a radiocomunicação é definida?</strong></p>
+        <label><input type="radio" name="q2" value="a"> (a) Transmissão de informações apenas por fio.</label><br>
+        <label><input type="radio" name="q2" value="b"> (b) Transmissão de voz e dados por ondas eletromagnéticas usando equipamentos programados para operar em frequências específicas.</label><br>
+        <label><input type="radio" name="q2" value="c"> (c) Comunicação que não utiliza canais de rádio.</label><br>
+        <label><input type="radio" name="q2" value="d"> (d) Sistema de telefonia fixa.</label><br>
+        <label><input type="radio" name="q2" value="e"> (e) Transmissão de imagens via satélite.</label><br>
+        <button onclick="checkAnswer('q2', 'b', 'A alternativa CORRETA é: Transmissão de voz e dados por ondas eletromagnéticas usando equipamentos programados para operar em frequências específicas.')">Enviar</button>
+        <div class="explanation" id="explanation-q2"></div>
+    </div>
+    
+    <div class="question" id="question3">
+        <p><strong>3. Qual é o princípio fundamental da telefonia fixa?</strong></p>
+        <label><input type="radio" name="q3" value="a"> (a) A comunicação é realizada sem a necessidade de fios.</label><br>
+        <label><input type="radio" name="q3" value="b"> (b) Ondas sonoras são convertidas em ondas elétricas que percorrem o fio ou ar.</label><br>
+        <label><input type="radio" name="q3" value="c"> (c) Utiliza exclusivamente ondas eletromagnéticas para comunicação.</label><br>
+        <label><input type="radio" name="q3" value="d"> (d) Não é necessário um aparelho para realizar chamadas.</label><br>
+        <label><input type="radio" name="q3" value="e"> (e) A comunicação é feita apenas em redes de radiocomunicação.</label><br>
+        <button onclick="checkAnswer('q3', 'b', 'A alternativa CORRETA é: Ondas sonoras são convertidas em ondas elétricas que percorrem o fio ou ar.')">Enviar</button>
+        <div class="explanation" id="explanation-q3"></div>
+    </div>
+    
+    <div class="question" id="question4">
+        <p><strong>4. Quais são os três componentes do sistema celular na telefonia móvel?</strong></p>
+        <label><input type="radio" name="q4" value="a"> (a) Estação móvel, central de comutação e controle (CCC), rede de fibra óptica.</label><br>
+        <label><input type="radio" name="q4" value="b"> (b) Estação rádio base (ERB), estação móvel e central de comutação e controle (CCC).</label><br>
+        <label><input type="radio" name="q4" value="c"> (c) Apenas a estação móvel e a ERB.</label><br>
+        <label><input type="radio" name="q4" value="d"> (d) Central de comutação e controle (CCC), telefone fixo, e estação rádio base.</label><br>
+        <label><input type="radio" name="q4" value="e"> (e) Estação móvel, aplicativo de mensagens, e estação rádio base.</label><br>
+        <button onclick="checkAnswer('q4', 'b', 'A alternativa CORRETA é: Estação rádio base (ERB), estação móvel e central de comutação e controle (CCC).')">Enviar</button>
+        <div class="explanation" id="explanation-q4"></div>
+    </div>
+    
+    <div class="question" id="question5">
+        <p><strong>5. Quais cuidados devem ser tomados ao usar aplicativos de comunicação instantânea na telefonia móvel?</strong></p>
+        <label><input type="radio" name="q5" value="a"> (a) Não utilizar aplicativos como Instagram e Facebook.</label><br>
+        <label><input type="radio" name="q5" value="b"> (b) Publicar informações pessoais sem restrições.</label><br>
+        <label><input type="radio" name="q5" value="c"> (c) Cuidado com postagens que podem comprometer a imagem do policial e da Instituição.</label><br>
+        <label><input type="radio" name="q5" value="d"> (d) Evitar o uso de aplicativos de conversação instantânea.</label><br>
+        <label><input type="radio" name="q5" value="e"> (e) Usar aplicativos somente em áreas seguras.</label><br>
+        <button onclick="checkAnswer('q5', 'c', 'A alternativa CORRETA é: Cuidado com postagens que podem comprometer a imagem do policial e da Instituição.')">Enviar</button>
+        <div class="explanation" id="explanation-q5"></div>
+    </div>
+    <div class="question" id="question8">
+        <p><strong>1. Qual é a função principal do circuito fechado de televisão (CFTV) na segurança?</strong></p>
+        <label><input type="radio" name="q8" value="a"> (a) Comunicar-se com outras redes de rádio.</label><br>
+        <label><input type="radio" name="q8" value="b"> (b) Aumentar a velocidade de tráfego de informações.</label><br>
+        <label><input type="radio" name="q8" value="c"> (c) Prevenir e controlar a segurança patrimonial e pessoal por meio de imagens gravadas.</label><br>
+        <label><input type="radio" name="q8" value="d"> (d) Substituir completamente o uso de alarmes.</label><br>
+        <label><input type="radio" name="q8" value="e"> (e) Servir apenas como ferramenta de entretenimento.</label><br>
+        <button onclick="checkAnswer('q8', 'c', 'A alternativa CORRETA é: Prevenir e controlar a segurança patrimonial e pessoal por meio de imagens gravadas.')">Enviar</button>
+        <div class="explanation" id="explanation-q8"></div>
+    </div>
+    
+    <div class="question" id="question9">
+        <p><strong>2. Qual recurso das novas tecnologias no CFTV permite que as câmeras gravem apenas em situações específicas?</strong></p>
+        <label><input type="radio" name="q9" value="a"> (a) Câmeras de alta definição.</label><br>
+        <label><input type="radio" name="q9" value="b"> (b) Detectores especiais que gravam somente com movimento na cena.</label><br>
+        <label><input type="radio" name="q9" value="c"> (c) Sistemas de armazenamento em nuvem.</label><br>
+        <label><input type="radio" name="q9" value="d"> (d) Conexões de fibra óptica.</label><br>
+        <label><input type="radio" name="q9" value="e"> (e) Microfones acoplados.</label><br>
+        <button onclick="checkAnswer('q9', 'b', 'A alternativa CORRETA é: Detectores especiais que gravam somente com movimento na cena.')">Enviar</button>
+        <div class="explanation" id="explanation-q9"></div>
+    </div>
+    
+    <div class="question" id="question10">
+        <p><strong>3. O que é um Posto Diretor de Rede (PDR)?</strong></p>
+        <label><input type="radio" name="q10" value="a"> (a) Um espaço de lazer para a equipe policial.</label><br>
+        <label><input type="radio" name="q10" value="b"> (b) Um posto de rádio responsável pela disciplina de tráfego e controle técnico de uma rede.</label><br>
+        <label><input type="radio" name="q10" value="c"> (c) Um centro de treinamento para novos policiais.</label><br>
+        <label><input type="radio" name="q10" value="d"> (d) Um local dedicado exclusivamente à comunicação por telefone.</label><br>
+        <label><input type="radio" name="q10" value="e"> (e) Um espaço de convivência para os membros da fração.</label><br>
+        <button onclick="checkAnswer('q10', 'b', 'A alternativa CORRETA é: Um posto de rádio responsável pela disciplina de tráfego e controle técnico de uma rede.')">Enviar</button>
+        <div class="explanation" id="explanation-q10"></div>
+    </div>
+    
+    <div class="question" id="question11">
+        <p><strong>4. Quais são as características do PDR em relação à organização e controle tático?</strong></p>
+        <label><input type="radio" name="q11" value="a"> (a) Tem total autoridade sobre a organização e controle tático.</label><br>
+        <label><input type="radio" name="q11" value="b"> (b) Possui plena autoridade quanto ao controle técnico e disciplinar, mas nenhuma quanto à organização e controle tático.</label><br>
+        <label><input type="radio" name="q11" value="c"> (c) É responsável pela organização e planejamento de operações táticas.</label><br>
+        <label><input type="radio" name="q11" value="d"> (d) Funciona como o comando geral da polícia em todo o estado.</label><br>
+        <label><input type="radio" name="q11" value="e"> (e) É a principal autoridade na segurança pública.</label><br>
+        <button onclick="checkAnswer('q11', 'b', 'A alternativa CORRETA é: Possui plena autoridade quanto ao controle técnico e disciplinar, mas nenhuma quanto à organização e controle tático.')">Enviar</button>
+        <div class="explanation" id="explanation-q11"></div>
+    </div>
+    
+    <div class="question" id="question12">
+        <p><strong>5. Em quais situações um PDR alternativo pode ser estabelecido?</strong></p>
+        <label><input type="radio" name="q12" value="a"> (a) Somente durante eventos sociais.</label><br>
+        <label><input type="radio" name="q12" value="b"> (b) Quando houver problemas técnicos ou situações peculiares, como ações ou operações policiais.</label><br>
+        <label><input type="radio" name="q12" value="c"> (c) Durante as reuniões de equipe.</label><br>
+        <label><input type="radio" name="q12" value="d"> (d) Quando o tráfego de informações estiver baixo.</label><br>
+        <label><input type="radio" name="q12" value="e"> (e) Em qualquer momento que o comando julgar necessário.</label><br>
+        <button onclick="checkAnswer('q12', 'b', 'A alternativa CORRETA é: Quando houver problemas técnicos ou situações peculiares, como ações ou operações policiais.')">Enviar</button>
+        <div class="explanation" id="explanation-q12"></div>
+    </div>
+    <div class="question" id="question13">
+        <p><strong>1. O que caracteriza a prioridade de rede em radiocomunicação?</strong></p>
+        <label><input type="radio" name="q13" value="a"> (a) Aumento do número de policiais em uma operação.</label><br>
+        <label><input type="radio" name="q13" value="b"> (b) Necessidade de um ou mais policiais transmitirem e receberem informações com grau superior de prioridade em situações específicas.</label><br>
+        <label><input type="radio" name="q13" value="c"> (c) Exclusão de outros agentes da comunicação.</label><br>
+        <label><input type="radio" name="q13" value="d"> (d) Uso de equipamentos de comunicação de última geração.</label><br>
+        <label><input type="radio" name="q13" value="e"> (e) Proibição do uso de redes móveis.</label><br>
+        <button onclick="checkAnswer('q13', 'b', 'A alternativa CORRETA é: Necessidade de um ou mais policiais transmitirem e receberem informações com grau superior de prioridade em situações específicas.')">Enviar</button>
+        <div class="explanation" id="explanation-q13"></div>
+    </div>
+    
+    <div class="question" id="question14">
+        <p><strong>2. Em quais situações um policial pode solicitar prioridade de rede?</strong></p>
+        <label><input type="radio" name="q14" value="a"> (a) Durante uma reunião de equipe.</label><br>
+        <label><input type="radio" name="q14" value="b"> (b) Ao acompanhar um veículo suspeito ou em situação de crime.</label><br>
+        <label><input type="radio" name="q14" value="c"> (c) Quando o rádio não está funcionando.</label><br>
+        <label><input type="radio" name="q14" value="d"> (d) Em qualquer momento sem necessidade de justificativa.</label><br>
+        <label><input type="radio" name="q14" value="e"> (e) Apenas durante eventos públicos.</label><br>
+        <button onclick="checkAnswer('q14', 'b', 'A alternativa CORRETA é: Ao acompanhar um veículo suspeito ou em situação de crime.')">Enviar</button>
+        <div class="explanation" id="explanation-q14"></div>
+    </div>
+    
+    <div class="question" id="question15">
+        <p><strong>3. Qual é a função do operador de rádio?</strong></p>
+        <label><input type="radio" name="q15" value="a"> (a) Gerenciar a segurança patrimonial.</label><br>
+        <label><input type="radio" name="q15" value="b"> (b) Trabalhar junto à estação fixa de rádio de uma fração policial, especialmente no PDR.</label><br>
+        <label><input type="radio" name="q15" value="c"> (c) Realizar patrulhas em veículos.</label><br>
+        <label><input type="radio" name="q15" value="d"> (d) Supervisar o uso de câmeras de segurança.</label><br>
+        <label><input type="radio" name="q15" value="e"> (e) Organizar eventos de treinamento.</label><br>
+        <button onclick="checkAnswer('q15', 'b', 'A alternativa CORRETA é: Trabalhar junto à estação fixa de rádio de uma fração policial, especialmente no PDR.')">Enviar</button>
+        <div class="explanation" id="explanation-q15"></div>
+    </div>
+    
+    <div class="question" id="question16">
+        <p><strong>4. Onde o operador de rádio geralmente realiza sua função em frações policiais de médio e grande porte?</strong></p>
+        <label><input type="radio" name="q16" value="a"> (a) No campo, durante operações.</label><br>
+        <label><input type="radio" name="q16" value="b"> (b) Na sala de operações, junto ao atendente dos telefones de emergência.</label><br>
+        <label><input type="radio" name="q16" value="c"> (c) Em um escritório separado.</label><br>
+        <label><input type="radio" name="q16" value="d"> (d) Em qualquer lugar fora da estação de rádio.</label><br>
+        <label><input type="radio" name="q16" value="e"> (e) Em veículos de patrulha.</label><br>
+        <button onclick="checkAnswer('q16', 'b', 'A alternativa CORRETA é: Na sala de operações, junto ao atendente dos telefones de emergência.')">Enviar</button>
+        <div class="explanation" id="explanation-q16"></div>
+    </div>
+    
+    <div class="question" id="question17">
+        <p><strong>5. Como as comunicações são estabelecidas na Brigada Militar (BM)?</strong></p>
+        <label><input type="radio" name="q17" value="a"> (a) Somente por meio de telefonia fixa.</label><br>
+        <label><input type="radio" name="q17" value="b"> (b) Por meio de redes de radiocomunicação, telefonia fixa, telefonia móvel, internet, intranet e videoconferência.</label><br>
+        <label><input type="radio" name="q17" value="c"> (c) Exclusivamente por rádio.</label><br>
+        <label><input type="radio" name="q17" value="d"> (d) Apenas por e-mail.</label><br>
+        <label><input type="radio" name="q17" value="e"> (e) Somente em situações de emergência.</label><br>
+        <button onclick="checkAnswer('q17', 'b', 'A alternativa CORRETA é: Por meio de redes de radiocomunicação, telefonia fixa, telefonia móvel, internet, intranet e videoconferência.')">Enviar</button>
+        <div class="explanation" id="explanation-q17"></div>
+    </div>
+    <div class="question" id="question18">
+        <p><strong>1. O que caracteriza a comunicação de dados?</strong></p>
+        <label><input type="radio" name="q18" value="a"> (a) A comunicação é realizada apenas entre dispositivos móveis.</label><br>
+        <label><input type="radio" name="q18" value="b"> (b) É a comunicação entre terminais de computadores que envolve, no mínimo, uma rede de computador e dois dispositivos capazes de trocar informações.</label><br>
+        <label><input type="radio" name="q18" value="c"> (c) A comunicação é restrita a distâncias curtas, como no Bluetooth.</label><br>
+        <label><input type="radio" name="q18" value="d"> (d) É apenas a troca de informações entre computadores de uma mesma empresa.</label><br>
+        <label><input type="radio" name="q18" value="e"> (e) Não é possível trocar informações em distâncias ilimitadas.</label><br>
+        <button onclick="checkAnswer('q18', 'b', 'A alternativa CORRETA é: É a comunicação entre terminais de computadores que envolve, no mínimo, uma rede de computador e dois dispositivos capazes de trocar informações.')">Enviar</button>
+        <div class="explanation" id="explanation-q18"></div>
+    </div>
+    
+    <div class="question" id="question19">
+        <p><strong>2. Qual dos seguintes é um tipo de transceptor de rádio?</strong></p>
+        <label><input type="radio" name="q19" value="a"> (a) Apenas fixo.</label><br>
+        <label><input type="radio" name="q19" value="b"> (b) Portátil, móvel e fixo.</label><br>
+        <label><input type="radio" name="q19" value="c"> (c) Apenas portátil e fixo.</label><br>
+        <label><input type="radio" name="q19" value="d"> (d) Apenas móvel.</label><br>
+        <label><input type="radio" name="q19" value="e"> (e) Transceptores não são usados em radiocomunicação.</label><br>
+        <button onclick="checkAnswer('q19', 'b', 'A alternativa CORRETA é: Portátil, móvel e fixo.')">Enviar</button>
+        <div class="explanation" id="explanation-q19"></div>
+    </div>
+    
+    <div class="question" id="question20">
+        <p><strong>3. O que é um Terminal Portátil HT?</strong></p>
+        <label><input type="radio" name="q20" value="a"> (a) Um dispositivo que não pode ser usado em campo.</label><br>
+        <label><input type="radio" name="q20" value="b"> (b) Equipamento de radiocomunicação projetado para uso portátil, com recursos similares aos equipamentos móveis e fixos.</label><br>
+        <label><input type="radio" name="q20" value="c"> (c) Um transceptor que só pode ser utilizado em ambientes internos.</label><br>
+        <label><input type="radio" name="q20" value="d"> (d) Equipamento que possui maior potência de transmissão que os dispositivos fixos.</label><br>
+        <label><input type="radio" name="q20" value="e"> (e) Um dispositivo que não possui bateria.</label><br>
+        <button onclick="checkAnswer('q20', 'b', 'A alternativa CORRETA é: Equipamento de radiocomunicação projetado para uso portátil, com recursos similares aos equipamentos móveis e fixos.')">Enviar</button>
+        <div class="explanation" id="explanation-q20"></div>
+    </div>
+    
+    <div class="question" id="question21">
+        <p><strong>4. Qual é a principal diferença entre um transceptor portátil e um fixo?</strong></p>
+        <label><input type="radio" name="q21" value="a"> (a) O transceptor fixo possui mais recursos de comunicação.</label><br>
+        <label><input type="radio" name="q21" value="b"> (b) O transceptor portátil possui total mobilidade, enquanto o fixo não.</label><br>
+        <label><input type="radio" name="q21" value="c"> (c) O transceptor portátil não pode ser utilizado em campo.</label><br>
+        <label><input type="radio" name="q21" value="d"> (d) Ambos são iguais em termos de potência de transmissão.</label><br>
+        <label><input type="radio" name="q21" value="e"> (e) O transceptor fixo é usado exclusivamente para comunicação de longa distância.</label><br>
+        <button onclick="checkAnswer('q21', 'b', 'A alternativa CORRETA é: O transceptor portátil possui total mobilidade, enquanto o fixo não.')">Enviar</button>
+        <div class="explanation" id="explanation-q21"></div>
+    </div>
+    
+    <div class="question" id="question22">
+        <p><strong>5. Como a potência de transmissão dos terminais portáteis HT é geralmente medida?</strong></p>
+        <label><input type="radio" name="q22" value="a"> (a) Em watts.</label><br>
+        <label><input type="radio" name="q22" value="b"> (b) Em quilômetros.</label><br>
+        <label><input type="radio" name="q22" value="c"> (c) Em milivolts.</label><br>
+        <label><input type="radio" name="q22" value="d"> (d) Em unidades de energia solar.</label><br>
+        <label><input type="radio" name="q22" value="e"> (e) Em relação à autonomia da bateria.</label><br>
+        <button onclick="checkAnswer('q22', 'a', 'A alternativa CORRETA é: Em watts.')">Enviar</button>
+        <div class="explanation" id="explanation-q22"></div>
+    </div>
+    <div class="question" id="question23">
+        <p><strong>1. O que caracteriza um terminal móvel de radiocomunicação?</strong></p>
+        <label><input type="radio" name="q23" value="a"> (a) É utilizado exclusivamente em salas de operações.</label><br>
+        <label><input type="radio" name="q23" value="b"> (b) É instalado no painel do veículo e depende da bateria do veículo para funcionamento.</label><br>
+        <label><input type="radio" name="q23" value="c"> (c) Funciona apenas com conexão à internet.</label><br>
+        <label><input type="radio" name="q23" value="d"> (d) Tem a mesma potência que um terminal fixo.</label><br>
+        <label><input type="radio" name="q23" value="e"> (e) Não possui antena externa.</label><br>
+        <button onclick="checkAnswer('q23', 'b', 'A alternativa CORRETA é: É instalado no painel do veículo e depende da bateria do veículo para funcionamento.')">Enviar</button>
+        <div class="explanation" id="explanation-q23"></div>
+    </div>
+    
+    <div class="question" id="question24">
+        <p><strong>2. Como um terminal fixo se diferencia de um terminal móvel?</strong></p>
+        <label><input type="radio" name="q24" value="a"> (a) Ele é utilizado em viaturas.</label><br>
+        <label><input type="radio" name="q24" value="b"> (b) Possui acessórios específicos, como antena e microfone, e utiliza fonte de energia para funcionamento.</label><br>
+        <label><input type="radio" name="q24" value="c"> (c) É sempre mais potente que um terminal móvel.</label><br>
+        <label><input type="radio" name="q24" value="d"> (d) Não é necessário conectar à eletricidade.</label><br>
+        <label><input type="radio" name="q24" value="e"> (e) Sempre possui uma bateria interna.</label><br>
+        <button onclick="checkAnswer('q24', 'b', 'A alternativa CORRETA é: Possui acessórios específicos, como antena e microfone, e utiliza fonte de energia para funcionamento.')">Enviar</button>
+        <div class="explanation" id="explanation-q24"></div>
+    </div>
+    
+    <div class="question" id="question25">
+        <p><strong>3. O que são repetidores em radiocomunicação?</strong></p>
+        <label><input type="radio" name="q25" value="a"> (a) Dispositivos que aumentam o alcance das ondas de rádio, retransmitindo sinais em frequências diferentes.</label><br>
+        <label><input type="radio" name="q25" value="b"> (b) Equipamentos que funcionam somente em modo manual.</label><br>
+        <label><input type="radio" name="q25" value="c"> (c) Antenas que apenas captam sinais de rádio.</label><br>
+        <label><input type="radio" name="q25" value="d"> (d) Terminais que são usados em viaturas.</label><br>
+        <label><input type="radio" name="q25" value="e"> (e) Equipamentos que não possuem antenas externas.</label><br>
+        <button onclick="checkAnswer('q25', 'a', 'A alternativa CORRETA é: Dispositivos que aumentam o alcance das ondas de rádio, retransmitindo sinais em frequências diferentes.')">Enviar</button>
+        <div class="explanation" id="explanation-q25"></div>
+    </div>
+    
+    <div class="question" id="question26">
+        <p><strong>4. Quais critérios devem ser observados na instalação de uma estação de rádio fixa?</strong></p>
+        <label><input type="radio" name="q26" value="a"> (a) Apenas a distância em relação a outros equipamentos eletrônicos.</label><br>
+        <label><input type="radio" name="q26" value="b"> (b) Temperatura interna do local, incidência de raios solares e condução dos cabos.</label><br>
+        <label><input type="radio" name="q26" value="c"> (c) Somente a presença de uma fonte de energia elétrica.</label><br>
+        <label><input type="radio" name="q26" value="d"> (d) O espaço deve ser muito amplo.</label><br>
+        <label><input type="radio" name="q26" value="e"> (e) Não é necessário considerar as condições do local.</label><br>
+        <button onclick="checkAnswer('q26', 'b', 'A alternativa CORRETA é: Temperatura interna do local, incidência de raios solares e condução dos cabos.')">Enviar</button>
+        <div class="explanation" id="explanation-q26"></div>
+    </div>
+    
+    <div class="question" id="question27">
+        <p><strong>5. Como as repetidoras funcionam em termos de transmissão de sinal?</strong></p>
+        <label><input type="radio" name="q27" value="a"> (a) Elas transmitem o mesmo sinal na mesma frequência.</label><br>
+        <label><input type="radio" name="q27" value="b"> (b) Recebem o sinal em uma frequência e retransmitem em outra frequência, funcionando em modo automático.</label><br>
+        <label><input type="radio" name="q27" value="c"> (c) Necessitam de operação manual para cada retransmissão.</label><br>
+        <label><input type="radio" name="q27" value="d"> (d) Não são usadas em sistemas semiduplex.</label><br>
+        <label><input type="radio" name="q27" value="e"> (e) São utilizados apenas para comunicações internas.</label><br>
+        <button onclick="checkAnswer('q27', 'b', 'A alternativa CORRETA é: Recebem o sinal em uma frequência e retransmitem em outra frequência, funcionando em modo automático.')">Enviar</button>
+        <div class="explanation" id="explanation-q27"></div>
+    </div>
+    <div class="question" id="question28">
+        <p><strong>1. O que é um Posto de Comunicação?</strong></p>
+        <label><input type="radio" name="q28" value="a"> (a) Um espaço dedicado apenas ao descanso dos policiais.</label><br>
+        <label><input type="radio" name="q28" value="b"> (b) Um conjunto de pessoal, equipamentos e instalações para receber, transmitir e processar mensagens.</label><br>
+        <label><input type="radio" name="q28" value="c"> (c) Um local de treinamento para novos policiais.</label><br>
+        <label><input type="radio" name="q28" value="d"> (d) Um equipamento usado exclusivamente para ligações telefônicas.</label><br>
+        <label><input type="radio" name="q28" value="e"> (e) Uma central de controle de viaturas.</label><br>
+        <button onclick="checkAnswer('q28', 'b', 'A alternativa CORRETA é: Um conjunto de pessoal, equipamentos e instalações para receber, transmitir e processar mensagens.')">Enviar</button>
+        <div class="explanation" id="explanation-q28"></div>
+    </div>
+    
+    <div class="question" id="question29">
+        <p><strong>2. O que caracteriza uma Rede de Rádio?</strong></p>
+        <label><input type="radio" name="q29" value="a"> (a) É um sistema de comunicação que opera em diferentes frequências sem coordenação.</label><br>
+        <label><input type="radio" name="q29" value="b"> (b) É um conjunto de postos de rádio operando em uma mesma frequência e tipo de modulação, coordenados por um PDR.</label><br>
+        <label><input type="radio" name="q29" value="c"> (c) É uma comunicação restrita a ligações telefônicas.</label><br>
+        <label><input type="radio" name="q29" value="d"> (d) É usada apenas em operações especiais.</label><br>
+        <label><input type="radio" name="q29" value="e"> (e) Funciona somente em áreas urbanas.</label><br>
+        <button onclick="checkAnswer('q29', 'b', 'A alternativa CORRETA é: É um conjunto de postos de rádio operando em uma mesma frequência e tipo de modulação, coordenados por um PDR.')">Enviar</button>
+        <div class="explanation" id="explanation-q29"></div>
+    </div>
+    
+    <div class="question" id="question30">
+        <p><strong>3. Como são classificadas as ligações telefônicas regulares?</strong></p>
+        <label><input type="radio" name="q30" value="a"> (a) São chamadas que não precisam de justificativa.</label><br>
+        <label><input type="radio" name="q30" value="b"> (b) São chamadas regulares geradas em objeto de serviço e necessárias à atividade policial-militar.</label><br>
+        <label><input type="radio" name="q30" value="c"> (c) Apenas chamadas de emergência.</label><br>
+        <label><input type="radio" name="q30" value="d"> (d) Ligação pessoal entre policiais.</label><br>
+        <label><input type="radio" name="q30" value="e"> (e) Todas as ligações que não têm relação com a atividade policial.</label><br>
+        <button onclick="checkAnswer('q30', 'b', 'A alternativa CORRETA é: São chamadas regulares geradas em objeto de serviço e necessárias à atividade policial-militar.')">Enviar</button>
+        <div class="explanation" id="explanation-q30"></div>
+    </div>
+    
+    <div class="question" id="question31">
+        <p><strong>4. O que caracteriza uma Ligação Telefônica Especial?</strong></p>
+        <label><input type="radio" name="q31" value="a"> (a) Chamadas que são geradas somente em situações de emergência e não precisam de autorização.</label><br>
+        <label><input type="radio" name="q31" value="b"> (b) Chamadas que são realizadas fora do padrão do serviço e devem ser justificadas.</label><br>
+        <label><input type="radio" name="q31" value="c"> (c) Ligações que não precisam de justificativa e podem ser feitas a qualquer momento.</label><br>
+        <label><input type="radio" name="q31" value="d"> (d) Apenas chamadas de longa duração para a central de operações.</label><br>
+        <label><input type="radio" name="q31" value="e"> (e) Ligação para amigos e familiares.</label><br>
+        <button onclick="checkAnswer('q31', 'b', 'A alternativa CORRETA é: Chamadas que são realizadas fora do padrão do serviço e devem ser justificadas.')">Enviar</button>
+        <div class="explanation" id="explanation-q31"></div>
+    </div>
+    
+    <div class="question" id="question32">
+        <p><strong>5. Quais são as condições para ligações telefônicas consideradas especiais?</strong></p>
+        <label><input type="radio" name="q32" value="a"> (a) Apenas as ligações feitas para números de emergência.</label><br>
+        <label><input type="radio" name="q32" value="b"> (b) Ligações de breve duração, de emergência e ligações de longa duração, que devem ser justificadas.</label><br>
+        <label><input type="radio" name="q32" value="c"> (c) Todas as ligações feitas a qualquer momento.</label><br>
+        <label><input type="radio" name="q32" value="d"> (d) Somente ligações que não envolvem serviço policial.</label><br>
+        <label><input type="radio" name="q32" value="e"> (e) Ligações pessoais entre policiais.</label><br>
+        <button onclick="checkAnswer('q32', 'b', 'A alternativa CORRETA é: Ligações de breve duração, de emergência e ligações de longa duração, que devem ser justificadas.')">Enviar</button>
+        <div class="explanation" id="explanation-q32"></div>
+    </div>
+
+    <div class="question" id="question33">
+        <p><strong>1. O que caracteriza uma Ligação Telefônica Irregular?</strong></p>
+        <label><input type="radio" name="q33" value="a"> (a) Chamadas feitas somente durante operações policiais.</label><br>
+        <label><input type="radio" name="q33" value="b"> (b) Chamadas não definidas como regulares ou especiais que devem ser apuradas e ressarcidas.</label><br>
+        <label><input type="radio" name="q33" value="c"> (c) Apenas ligações de emergência.</label><br>
+        <label><input type="radio" name="q33" value="d"> (d) Chamadas realizadas entre policiais durante treinamento.</label><br>
+        <label><input type="radio" name="q33" value="e"> (e) Ligações feitas exclusivamente para números de emergência.</label><br>
+        <button onclick="checkAnswer('q33', 'b', 'A alternativa CORRETA é: Chamadas não definidas como regulares ou especiais que devem ser apuradas e ressarcidas.')">Enviar</button>
+        <div class="explanation" id="explanation-q33"></div>
+    </div>
+    
+    <div class="question" id="question34">
+        <p><strong>2. O que é o sistema Brigada Militar (BMMob)?</strong></p>
+        <label><input type="radio" name="q34" value="a"> (a) Um sistema de rádio para comunicação em viaturas.</label><br>
+        <label><input type="radio" name="q34" value="b"> (b) Sistema de registro de Boletins de Atendimentos, Termos Circunstanciados e Comunicação de Ocorrência Policial de forma digital.</label><br>
+        <label><input type="radio" name="q34" value="c"> (c) Um aplicativo de mensagens para policiais.</label><br>
+        <label><input type="radio" name="q34" value="d"> (d) Um sistema de patrulhamento virtual.</label><br>
+        <label><input type="radio" name="q34" value="e"> (e) Uma rede social para a Brigada Militar.</label><br>
+        <button onclick="checkAnswer('q34', 'b', 'A alternativa CORRETA é: Sistema de registro de Boletins de Atendimentos, Termos Circunstanciados e Comunicação de Ocorrência Policial de forma digital.')">Enviar</button>
+        <div class="explanation" id="explanation-q34"></div>
+    </div>
+    
+    <div class="question" id="question35">
+        <p><strong>3. Qual é a função do Sistema de Informações Operacionais (SIOPE)?</strong></p>
+        <label><input type="radio" name="q35" value="a"> (a) Gerenciar os recursos financeiros da Brigada Militar.</label><br>
+        <label><input type="radio" name="q35" value="b"> (b) Registrar e gerenciar Boletins de Atendimentos, Termos Circunstanciados e Comunicação de Ocorrência Policial.</label><br>
+        <label><input type="radio" name="q35" value="c"> (c) Supervisionar as operações policiais em tempo real.</label><br>
+        <label><input type="radio" name="q35" value="d"> (d) Treinar novos policiais em procedimentos operacionais.</label><br>
+        <label><input type="radio" name="q35" value="e"> (e) Organizar eventos sociais da Brigada Militar.</label><br>
+        <button onclick="checkAnswer('q35', 'b', 'A alternativa CORRETA é: Registrar e gerenciar Boletins de Atendimentos, Termos Circunstanciados e Comunicação de Ocorrência Policial.')">Enviar</button>
+        <div class="explanation" id="explanation-q35"></div>
+    </div>
+    
+    <div class="question" id="question36">
+        <p><strong>4. O que é o SINESP/CAD?</strong></p>
+        <label><input type="radio" name="q36" value="a"> (a) Um sistema de monitoramento de viaturas policiais.</label><br>
+        <label><input type="radio" name="q36" value="b"> (b) Uma plataforma de informações integradas sobre segurança pública, possibilitando consultas operacionais, investigativas e estratégicas.</label><br>
+        <label><input type="radio" name="q36" value="c"> (c) Um software para gerenciamento de recursos financeiros da polícia.</label><br>
+        <label><input type="radio" name="q36" value="d"> (d) Um aplicativo para comunicação entre policiais.</label><br>
+        <label><input type="radio" name="q36" value="e"> (e) Um sistema de agendamento de atividades policiais.</label><br>
+        <button onclick="checkAnswer('q36', 'b', 'A alternativa CORRETA é: Uma plataforma de informações integradas sobre segurança pública, possibilitando consultas operacionais, investigativas e estratégicas.')">Enviar</button>
+        <div class="explanation" id="explanation-q36"></div>
+    </div>
+    
+    <div class="question" id="question37">
+        <p><strong>5. Qual é a importância do SINESP na segurança pública?</strong></p>
+        <label><input type="radio" name="q37" value="a"> (a) Reduzir o número de policiais nas ruas.</label><br>
+        <label><input type="radio" name="q37" value="b"> (b) Implementar a Política Nacional de Segurança Pública e Defesa Social (PNSPDS).</label><br>
+        <label><input type="radio" name="q37" value="c"> (c) Facilitar o acesso a informações de segurança apenas para policiais.</label><br>
+        <label><input type="radio" name="q37" value="d"> (d) Criar um novo modelo de polícia.</label><br>
+        <label><input type="radio" name="q37" value="e"> (e) Proporcionar entretenimento para os policiais.</label><br>
+        <button onclick="checkAnswer('q37', 'b', 'A alternativa CORRETA é: Implementar a Política Nacional de Segurança Pública e Defesa Social (PNSPDS).')">Enviar</button>
+        <div class="explanation" id="explanation-q37"></div>
+    </div>
+    <div class="question" id="question38">
+        <p><strong>1. O que é o SINESP – CAD (Central de Atendimento e Despacho)?</strong></p>
+        <label><input type="radio" name="q38" value="a"> (a) Uma plataforma de comunicação exclusiva para a Polícia Militar.</label><br>
+        <label><input type="radio" name="q38" value="b"> (b) Uma ferramenta multiagências destinada a atender as necessidades dos Centros Integrados de Comando e Controle.</label><br>
+        <label><input type="radio" name="q38" value="c"> (c) Um sistema de monitoramento de viaturas policiais.</label><br>
+        <label><input type="radio" name="q38" value="d"> (d) Um aplicativo para comunicação entre policiais.</label><br>
+        <label><input type="radio" name="q38" value="e"> (e) Um sistema de treinamento para novos policiais.</label><br>
+        <button onclick="checkAnswer('q38', 'b', 'A alternativa CORRETA é: Uma ferramenta multiagências destinada a atender as necessidades dos Centros Integrados de Comando e Controle.')">Enviar</button>
+        <div class="explanation" id="explanation-q38"></div>
+    </div>
+    
+    <div class="question" id="question39">
+        <p><strong>2. Qual é a principal função do SINESP – CAD?</strong></p>
+        <label><input type="radio" name="q39" value="a"> (a) Aumentar a quantidade de policiais nas ruas.</label><br>
+        <label><input type="radio" name="q39" value="b"> (b) Facilitar a comunicação integrada entre diversas agências em resposta a incidentes.</label><br>
+        <label><input type="radio" name="q39" value="c"> (c) Gerenciar os recursos financeiros da Brigada Militar.</label><br>
+        <label><input type="radio" name="q39" value="d"> (d) Controlar as operações policiais em tempo real.</label><br>
+        <label><input type="radio" name="q39" value="e"> (e) Oferecer suporte psicológico aos policiais.</label><br>
+        <button onclick="checkAnswer('q39', 'b', 'A alternativa CORRETA é: Facilitar a comunicação integrada entre diversas agências em resposta a incidentes.')">Enviar</button>
+        <div class="explanation" id="explanation-q39"></div>
+    </div>
+    
+    <div class="question" id="question40">
+        <p><strong>3. Quais são os módulos em que a aplicação SINESP/CAD está dividida?</strong></p>
+        <label><input type="radio" name="q40" value="a"> (a) CAD Móvel, CAD Fixo e CAD Desktop.</label><br>
+        <label><input type="radio" name="q40" value="b"> (b) CAD Desktop, CAD Gerenciador e CAD Recursos.</label><br>
+        <label><input type="radio" name="q40" value="c"> (c) CAD Gerenciador, CAD Telefone e CAD Recursos.</label><br>
+        <label><input type="radio" name="q40" value="d"> (d) CAD Telefone, CAD Internet e CAD Recursos.</label><br>
+        <label><input type="radio" name="q40" value="e"> (e) CAD Móvel, CAD Online e CAD Recursos.</label><br>
+        <button onclick="checkAnswer('q40', 'b', 'A alternativa CORRETA é: CAD Desktop, CAD Gerenciador e CAD Recursos.')">Enviar</button>
+        <div class="explanation" id="explanation-q40"></div>
+    </div>
+    
+    <div class="question" id="question41">
+        <p><strong>4. O que pode fazer um atendente no SINESP – CAD?</strong></p>
+        <label><input type="radio" name="q41" value="a"> (a) Supervisionar a atuação de todas as viaturas policiais.</label><br>
+        <label><input type="radio" name="q41" value="b"> (b) Visualizar regiões de captação de ocorrência, registrar dados do incidente e encaminhar para o despachante.</label><br>
+        <label><input type="radio" name="q41" value="c"> (c) Gerar relatórios financeiros das operações policiais.</label><br>
+        <label><input type="radio" name="q41" value="d"> (d) Treinar novos policiais no atendimento ao público.</label><br>
+        <label><input type="radio" name="q41" value="e"> (e) Realizar investigações de crimes em andamento.</label><br>
+        <button onclick="checkAnswer('q41', 'b', 'A alternativa CORRETA é: Visualizar regiões de captação de ocorrência, registrar dados do incidente e encaminhar para o despachante.')">Enviar</button>
+        <div class="explanation" id="explanation-q41"></div>
+    </div>
+    
+    <div class="question" id="question42">
+        <p><strong>5. Como o SINESP – CAD facilita o atendimento ao cidadão?</strong></p>
+        <label><input type="radio" name="q42" value="a"> (a) Proporciona uma resposta rápida apenas da Polícia Militar.</label><br>
+        <label><input type="radio" name="q42" value="b"> (b) Permite o atendimento por uma ou mais agências de forma integrada conforme a natureza do incidente.</label><br>
+        <label><input type="radio" name="q42" value="c"> (c) Garante que todas as chamadas sejam tratadas como emergências.</label><br>
+        <label><input type="radio" name="q42" value="d"> (d) Impede a comunicação entre diferentes agências.</label><br>
+        <label><input type="radio" name="q42" value="e"> (e) Oferece serviços de emergência apenas para os bombeiros.</label><br>
+        <button onclick="checkAnswer('q42', 'b', 'A alternativa CORRETA é: Permite o atendimento por uma ou mais agências de forma integrada conforme a natureza do incidente.')">Enviar</button>
+        <div class="explanation" id="explanation-q42"></div>
+    </div>
+    <div class="question" id="question43">
+        <p><strong>1. O que o atendente deve inserir ao abrir a página do Desktop?</strong></p>
+        <label><input type="radio" name="q43" value="a"> (a) Apenas seu nome e senha.</label><br>
+        <label><input type="radio" name="q43" value="b"> (b) Seu CPF e senha cadastrada.</label><br>
+        <label><input type="radio" name="q43" value="c"> (c) Seu número de telefone e CPF.</label><br>
+        <label><input type="radio" name="q43" value="d"> (d) Seu nome e e-mail.</label><br>
+        <label><input type="radio" name="q43" value="e"> (e) Seu nome, CPF e número de registro.</label><br>
+        <button onclick="checkAnswer('q43', 'b', 'A alternativa CORRETA é: Seu CPF e senha cadastrada.')">Enviar</button>
+        <div class="explanation" id="explanation-q43"></div>
+    </div>
+    
+    <div class="question" id="question44">
+        <p><strong>2. Quais informações o atendente deve solicitar do solicitante durante o atendimento?</strong></p>
+        <label><input type="radio" name="q44" value="a"> (a) Nome e endereço do solicitante.</label><br>
+        <label><input type="radio" name="q44" value="b"> (b) Nome, se é envolvido no incidente e número do telefone.</label><br>
+        <label><input type="radio" name="q44" value="c"> (c) Apenas o número do telefone.</label><br>
+        <label><input type="radio" name="q44" value="d"> (d) Nome e o motivo da ligação.</label><br>
+        <label><input type="radio" name="q44" value="e"> (e) Nome e detalhes sobre o incidente.</label><br>
+        <button onclick="checkAnswer('q44', 'b', 'A alternativa CORRETA é: Nome, se é envolvido no incidente e número do telefone.')">Enviar</button>
+        <div class="explanation" id="explanation-q44"></div>
+    </div>
+    
+    <div class="question" id="question45">
+        <p><strong>3. Quais classificações de chamada permitem que o atendente transfira o incidente para o operador?</strong></p>
+        <label><input type="radio" name="q45" value="a"> (a) Qualquer classificação de chamada.</label><br>
+        <label><input type="radio" name="q45" value="b"> (b) Apenas INCIDENTE ou QUEDA DE LIGAÇÃO.</label><br>
+        <label><input type="radio" name="q45" value="c"> (c) Apenas chamadas de emergência.</label><br>
+        <label><input type="radio" name="q45" value="d"> (d) Chamadas que envolvem crimes.</label><br>
+        <label><input type="radio" name="q45" value="e"> (e) Chamadas de informações gerais.</label><br>
+        <button onclick="checkAnswer('q45', 'b', 'A alternativa CORRETA é: Apenas INCIDENTE ou QUEDA DE LIGAÇÃO.')">Enviar</button>
+        <div class="explanation" id="explanation-q45"></div>
+    </div>
+    
+    <div class="question" id="question46">
+        <p><strong>4. O que deve ser preenchido na localização da ocorrência no sistema?</strong></p>
+        <label><input type="radio" name="q46" value="a"> (a) Apenas o nome da rua e o município.</label><br>
+        <label><input type="radio" name="q46" value="b"> (b) O tipo, UF e município, além de detalhes adicionais se necessário.</label><br>
+        <label><input type="radio" name="q46" value="c"> (c) Apenas o tipo de ocorrência.</label><br>
+        <label><input type="radio" name="q46" value="d"> (d) O município e um ponto de referência.</label><br>
+        <label><input type="radio" name="q46" value="e"> (e) O nome do solicitante e a localização.</label><br>
+        <button onclick="checkAnswer('q46', 'b', 'A alternativa CORRETA é: O tipo, UF e município, além de detalhes adicionais se necessário.')">Enviar</button>
+        <div class="explanation" id="explanation-q46"></div>
+    </div>
+    
+    <div class="question" id="question47">
+        <p><strong>5. O que ocorre se os campos indispensáveis para o atendimento do incidente não forem preenchidos?</strong></p>
+        <label><input type="radio" name="q47" value="a"> (a) O atendimento será cancelado.</label><br>
+        <label><input type="radio" name="q47" value="b"> (b) O atendimento será enviado para o Despachante.</label><br>
+        <label><input type="radio" name="q47" value="c"> (c) O atendente deve preencher os campos obrigatórios para prosseguir.</label><br>
+        <label><input type="radio" name="q47" value="d"> (d) O sistema não permitirá o registro da ocorrência.</label><br>
+        <label><input type="radio" name="q47" value="e"> (e) O atendente pode registrar a ocorrência sem problemas.</label><br>
+        <button onclick="checkAnswer('q47', 'b', 'A alternativa CORRETA é: O atendimento será enviado para o Despachante.')">Enviar</button>
+        <div class="explanation" id="explanation-q47"></div>
+    </div>
+    <div class="question" id="question48">
+        <p><strong>1. O que o atendente deve usar para informar a natureza que caracteriza o incidente?</strong></p>
+        <label><input type="radio" name="q48" value="a"> (a) Um campo de texto livre.</label><br>
+        <label><input type="radio" name="q48" value="b"> (b) O campo de pesquisa para informar uma palavra-chave.</label><br>
+        <label><input type="radio" name="q48" value="c"> (c) Um formulário impresso.</label><br>
+        <label><input type="radio" name="q48" value="d"> (d) Um código de incidente específico.</label><br>
+        <label><input type="radio" name="q48" value="e"> (e) A lista de ocorrências anteriores.</label><br>
+        <button onclick="checkAnswer('q48', 'b', 'A alternativa CORRETA é: O campo de pesquisa para informar uma palavra-chave.')">Enviar</button>
+        <div class="explanation" id="explanation-q48"></div>
+    </div>
+    
+    <div class="question" id="question49">
+        <p><strong>2. O que a seção narrativa permite registrar?</strong></p>
+        <label><input type="radio" name="q49" value="a"> (a) Informações específicas de cada ocorrência.</label><br>
+        <label><input type="radio" name="q49" value="b"> (b) Informações que não puderam ser registradas nos outros campos.</label><br>
+        <label><input type="radio" name="q49" value="c"> (c) Apenas a descrição do incidente.</label><br>
+        <label><input type="radio" name="q49" value="d"> (d) Dados pessoais do solicitante.</label><br>
+        <label><input type="radio" name="q49" value="e"> (e) Apenas a localização da ocorrência.</label><br>
+        <button onclick="checkAnswer('q49', 'b', 'A alternativa CORRETA é: Informações que não puderam ser registradas nos outros campos.')">Enviar</button>
+        <div class="explanation" id="explanation-q49"></div>
+    </div>
+    
+    <div class="question" id="question50">
+        <p><strong>3. O que a seção Ocorrências Semelhantes exibe?</strong></p>
+        <label><input type="radio" name="q50" value="a"> (a) Apenas as ocorrências mais antigas registradas.</label><br>
+        <label><input type="radio" name="q50" value="b"> (b) A listagem das ocorrências semelhantes e a possibilidade de definir a nova ocorrência como complementar.</label><br>
+        <label><input type="radio" name="q50" value="c"> (c) Somente as ocorrências do mesmo tipo.</label><br>
+        <label><input type="radio" name="q50" value="d"> (d) Informações sobre as ocorrências anteriores.</label><br>
+        <label><input type="radio" name="q50" value="e"> (e) Um histórico de todas as ocorrências na área.</label><br>
+        <button onclick="checkAnswer('q50', 'b', 'A alternativa CORRETA é: A listagem das ocorrências semelhantes e a possibilidade de definir a nova ocorrência como complementar.')">Enviar</button>
+        <div class="explanation" id="explanation-q50"></div>
+    </div>
+    
+    <div class="question" id="question51">
+        <p><strong>4. Quais registros o sistema avalia como potencialmente semelhantes?</strong></p>
+        <label><input type="radio" name="q51" value="a"> (a) Apenas registros classificados como emergenciais.</label><br>
+        <label><input type="radio" name="q51" value="b"> (b) Registros classificados como Incidente ou Queda de Ligação que estejam abertos e aqueles finalizados até 60 minutos atrás.</label><br>
+        <label><input type="radio" name="q51" value="c"> (c) Todos os registros anteriores à nova ocorrência.</label><br>
+        <label><input type="radio" name="q51" value="d"> (d) Somente registros que não possuem status definido.</label><br>
+        <label><input type="radio" name="q51" value="e"> (e) Registros de qualquer natureza.</label><br>
+        <button onclick="checkAnswer('q51', 'b', 'A alternativa CORRETA é: Registros classificados como Incidente ou Queda de Ligação que estejam abertos e aqueles finalizados até 60 minutos atrás.')">Enviar</button>
+        <div class="explanation" id="explanation-q51"></div>
+    </div>
+    
+    <div class="question" id="question52">
+        <p><strong>5. O que a lista de sugestões de ocorrências potencialmente semelhantes deve apresentar?</strong></p>
+        <label><input type="radio" name="q52" value="a"> (a) Apenas o número do telefone do solicitante.</label><br>
+        <label><input type="radio" name="q52" value="b"> (b) Protocolo, Status, Data/Hora, Telefone, Naturezas, Localização e Semelhante por.</label><br>
+        <label><input type="radio" name="q52" value="c"> (c) Apenas o Protocolo e o Status.</label><br>
+        <label><input type="radio" name="q52" value="d"> (d) Informações pessoais do solicitante.</label><br>
+        <label><input type="radio" name="q52" value="e"> (e) Somente a localização das ocorrências.</label><br>
+        <button onclick="checkAnswer('q52', 'b', 'A alternativa CORRETA é: Protocolo, Status, Data/Hora, Telefone, Naturezas, Localização e Semelhante por.')">Enviar</button>
+        <div class="explanation" id="explanation-q52"></div>
+    </div>
+    <div class="question" id="question53">
+        <p><strong>1. Qual é a função do Operador no contexto de tratamento de incidentes?</strong></p>
+        <label><input type="radio" name="q53" value="a"> (a) Coletar dados das ocorrências apenas.</label><br>
+        <label><input type="radio" name="q53" value="b"> (b) Gerenciar as ocorrências em sua região de atuação e distribuí-las.</label><br>
+        <label><input type="radio" name="q53" value="c"> (c) Criar novos incidentes sem supervisão.</label><br>
+        <label><input type="radio" name="q53" value="d"> (d) Somente finalizar incidentes.</label><br>
+        <label><input type="radio" name="q53" value="e"> (e) Monitorar apenas as ligações recebidas.</label><br>
+        <button onclick="checkAnswer('q53', 'b', 'A alternativa CORRETA é: Gerenciar as ocorrências em sua região de atuação e distribuí-las.')">Enviar</button>
+        <div class="explanation" id="explanation-q53"></div>
+    </div>
+    
+    <div class="question" id="question54">
+        <p><strong>2. Quais dados são exigidos para o acesso à aplicação pelo operador?</strong></p>
+        <label><input type="radio" name="q54" value="a"> (a) CPF e uma senha com caracteres alfanuméricos.</label><br>
+        <label><input type="radio" name="q54" value="b"> (b) Nome e sobrenome.</label><br>
+        <label><input type="radio" name="q54" value="c"> (c) CPF e uma pergunta secreta.</label><br>
+        <label><input type="radio" name="q54" value="d"> (d) E-mail e telefone.</label><br>
+        <label><input type="radio" name="q54" value="e"> (e) Identidade e número de matrícula.</label><br>
+        <button onclick="checkAnswer('q54', 'a', 'A alternativa CORRETA é: CPF e uma senha com caracteres alfanuméricos.')">Enviar</button>
+        <div class="explanation" id="explanation-q54"></div>
+    </div>
+    
+    <div class="question" id="question55">
+        <p><strong>3. Como o painel de incidentes é atualizado no sistema?</strong></p>
+        <label><input type="radio" name="q55" value="a"> (a) Apenas manualmente pelo operador.</label><br>
+        <label><input type="radio" name="q55" value="b"> (b) Automaticamente a cada minuto ou manualmente, quando solicitado.</label><br>
+        <label><input type="radio" name="q55" value="c"> (c) Automaticamente a cada 5 minutos.</label><br>
+        <label><input type="radio" name="q55" value="d"> (d) Somente ao final do dia.</label><br>
+        <label><input type="radio" name="q55" value="e"> (e) Quando o sistema é reiniciado.</label><br>
+        <button onclick="checkAnswer('q55', 'b', 'A alternativa CORRETA é: Automaticamente a cada minuto ou manualmente, quando solicitado.')">Enviar</button>
+        <div class="explanation" id="explanation-q55"></div>
+    </div>
+    
+    <div class="question" id="question56">
+        <p><strong>4. O que acontece com um incidente após ser finalizado pelo operador?</strong></p>
+        <label><input type="radio" name="q56" value="a"> (a) Ele fica disponível para edição.</label><br>
+        <label><input type="radio" name="q56" value="b"> (b) Ele não poderá mais ser visualizado no painel, mas poderá ser pesquisado.</label><br>
+        <label><input type="radio" name="q56" value="c"> (c) Ele é excluído do sistema.</label><br>
+        <label><input type="radio" name="q56" value="d"> (d) Ele se transforma em um alerta geral.</label><br>
+        <label><input type="radio" name="q56" value="e"> (e) Ele permanece disponível para todos os operadores.</label><br>
+        <button onclick="checkAnswer('q56', 'b', 'A alternativa CORRETA é: Ele não poderá mais ser visualizado no painel, mas poderá ser pesquisado.')">Enviar</button>
+        <div class="explanation" id="explanation-q56"></div>
+    </div>
+    
+    <div class="question" id="question57">
+        <p><strong>5. Qual funcionalidade permite ao operador editar um incidente existente?</strong></p>
+        <label><input type="radio" name="q57" value="a"> (a) Visualizar.</label><br>
+        <label><input type="radio" name="q57" value="b"> (b) Redefinir.</label><br>
+        <label><input type="radio" name="q57" value="c"> (c) Editar.</label><br>
+        <label><input type="radio" name="q57" value="d"> (d) Pesquisar.</label><br>
+        <label><input type="radio" name="q57" value="e"> (e) Transferir.</label><br>
+        <button onclick="checkAnswer('q57', 'c', 'A alternativa CORRETA é: Editar.')">Enviar</button>
+        <div class="explanation" id="explanation-q57"></div>
+    </div>
+    <div class="question" id="question58">
+        <p><strong>1. Como os incidentes são categorizados no painel de incidentes?</strong></p>
+        <label><input type="radio" name="q58" value="a"> (a) Apenas despachados e finalizados.</label><br>
+        <label><input type="radio" name="q58" value="b"> (b) Despachados e não despachados.</label><br>
+        <label><input type="radio" name="q58" value="c"> (c) Somente incidentes críticos.</label><br>
+        <label><input type="radio" name="q58" value="d"> (d) Apenas incidentes abertos.</label><br>
+        <label><input type="radio" name="q58" value="e"> (e) Incidentes registrados e não registrados.</label><br>
+        <button onclick="checkAnswer('q58', 'b', 'A alternativa CORRETA é: Despachados e não despachados.')">Enviar</button>
+        <div class="explanation" id="explanation-q58"></div>
+    </div>
+    
+    <div class="question" id="question59">
+        <p><strong>2. O que caracteriza um incidente como abandonado?</strong></p>
+        <label><input type="radio" name="q59" value="a"> (a) Quando o operador não registra a ocorrência.</label><br>
+        <label><input type="radio" name="q59" value="b"> (b) Quando o operador entra em parada administrativa, sai da aplicação ou fica offline.</label><br>
+        <label><input type="radio" name="q59" value="c"> (c) Quando o incidente é finalizado sem tratamento.</label><br>
+        <label><input type="radio" name="q59" value="d"> (d) Quando não há recursos disponíveis.</label><br>
+        <label><input type="radio" name="q59" value="e"> (e) Quando o incidente é transferido para outro operador.</label><br>
+        <button onclick="checkAnswer('q59', 'b', 'A alternativa CORRETA é: Quando o operador entra em parada administrativa, sai da aplicação ou fica offline.')">Enviar</button>
+        <div class="explanation" id="explanation-q59"></div>
+    </div>
+    
+    <div class="question" id="question60">
+        <p><strong>3. O que deve fazer um operador para assumir um incidente abandonado?</strong></p>
+        <label><input type="radio" name="q60" value="a"> (a) Clicar em "Finalizar".</label><br>
+        <label><input type="radio" name="q60" value="b"> (b) Selecionar o incidente e clicar em "Editar".</label><br>
+        <label><input type="radio" name="q60" value="c"> (c) Pedir ao supervisor para assumir.</label><br>
+        <label><input type="radio" name="q60" value="d"> (d) Criar um novo incidente.</label><br>
+        <label><input type="radio" name="q60" value="e"> (e) Ignorar o incidente.</label><br>
+        <button onclick="checkAnswer('q60', 'b', 'A alternativa CORRETA é: Selecionar o incidente e clicar em Editar.')">Enviar</button>
+        <div class="explanation" id="explanation-q60"></div>
+    </div>
+    
+    <div class="question" id="question61">
+        <p><strong>4. Quais são os pré-requisitos para o empenho de recursos em um incidente?</strong></p>
+        <label><input type="radio" name="q61" value="a"> (a) Ter recursos disponíveis apenas.</label><br>
+        <label><input type="radio" name="q61" value="b"> (b) Estar designado a pelo menos uma região de atuação e ter um incidente sob sua responsabilidade.</label><br>
+        <label><input type="radio" name="q61" value="c"> (c) Ser o operador mais experiente.</label><br>
+        <label><input type="radio" name="q61" value="d"> (d) Ter finalizado todos os incidentes anteriores.</label><br>
+        <label><input type="radio" name="q61" value="e"> (e) Estar presente fisicamente na sala de controle.</label><br>
+        <button onclick="checkAnswer('q61', 'b', 'A alternativa CORRETA é: Estar designado a pelo menos uma região de atuação e ter um incidente sob sua responsabilidade.')">Enviar</button>
+        <div class="explanation" id="explanation-q61"></div>
+    </div>
+    
+    <div class="question" id="question62">
+        <p><strong>5. Qual é o primeiro passo para realizar o empenho de um recurso?</strong></p>
+        <label><input type="radio" name="q62" value="a"> (a) Selecionar o recurso a ser empenhado.</label><br>
+        <label><input type="radio" name="q62" value="b"> (b) Selecionar o registro de incidente para o qual será empenhado o recurso.</label><br>
+        <label><input type="radio" name="q62" value="c"> (c) Finalizar o incidente.</label><br>
+        <label><input type="radio" name="q62" value="d"> (d) Criar um novo incidente.</label><br>
+        <label><input type="radio" name="q62" value="e"> (e) Pedir autorização ao supervisor.</label><br>
+        <button onclick="checkAnswer('q62', 'b', 'A alternativa CORRETA é: Selecionar o registro de incidente para o qual será empenhado o recurso.')">Enviar</button>
+        <div class="explanation" id="explanation-q62"></div>
+    </div>
+    <div class="question" id="question63">
+        <p><strong>1. Qual é o objetivo da funcionalidade "Sincronizar Dados"?</strong></p>
+        <label><input type="radio" name="q63" value="a"> (a) Atualizar apenas os dados da estação de trabalho.</label><br>
+        <label><input type="radio" name="q63" value="b"> (b) Atualizar o servidor da aplicação e a estação de trabalho.</label><br>
+        <label><input type="radio" name="q63" value="c"> (c) Apenas restabelecer a conectividade.</label><br>
+        <label><input type="radio" name="q63" value="d"> (d) Fazer backup dos dados do servidor.</label><br>
+        <label><input type="radio" name="q63" value="e"> (e) Encerrar a aplicação.</label><br>
+        <button onclick="checkAnswer('q63', 'b', 'A alternativa CORRETA é: Atualizar o servidor da aplicação e a estação de trabalho.')">Enviar</button>
+        <div class="explanation" id="explanation-q63"></div>
+    </div>
+    
+    <div class="question" id="question64">
+        <p><strong>2. Quais são algumas das funcionalidades disponíveis no Sinesp Agente de Campo?</strong></p>
+        <label><input type="radio" name="q64" value="a"> (a) Registro e finalização de ocorrências.</label><br>
+        <label><input type="radio" name="q64" value="b"> (b) Visualização de eventos climáticos.</label><br>
+        <label><input type="radio" name="q64" value="c"> (c) Gerenciamento financeiro de ocorrências.</label><br>
+        <label><input type="radio" name="q64" value="d"> (d) Consulta de notícias locais.</label><br>
+        <label><input type="radio" name="q64" value="e"> (e) Edição de documentos jurídicos.</label><br>
+        <button onclick="checkAnswer('q64', 'a', 'A alternativa CORRETA é: Registro e finalização de ocorrências.')">Enviar</button>
+        <div class="explanation" id="explanation-q64"></div>
+    </div>
+    
+    <div class="question" id="question65">
+        <p><strong>3. O que deve ser feito para ter acesso ao aplicativo Sinesp Agente de Campo?</strong></p>
+        <label><input type="radio" name="q65" value="a"> (a) Apenas baixar o aplicativo na loja.</label><br>
+        <label><input type="radio" name="q65" value="b"> (b) Preencher o termo disponível na Intranet BM e anexá-lo ao sistema.</label><br>
+        <label><input type="radio" name="q65" value="c"> (c) Aguardar a instalação automática no celular.</label><br>
+        <label><input type="radio" name="q65" value="d"> (d) Não é necessário realizar nenhum procedimento.</label><br>
+        <label><input type="radio" name="q65" value="e"> (e) Solicitar autorização ao chefe da unidade.</label><br>
+        <button onclick="checkAnswer('q65', 'b', 'A alternativa CORRETA é: Preencher o termo disponível na Intranet BM e anexá-lo ao sistema.')">Enviar</button>
+        <div class="explanation" id="explanation-q65"></div>
+    </div>
+    
+    <div class="question" id="question66">
+        <p><strong>4. O que é possível consultar no Sinesp Agente de Campo ao buscar por veículos?</strong></p>
+        <label><input type="radio" name="q66" value="a"> (a) Apenas informações do proprietário.</label><br>
+        <label><input type="radio" name="q66" value="b"> (b) Informações do DENATRAN, CAD e cercamento eletrônico.</label><br>
+        <label><input type="radio" name="q66" value="c"> (c) Dados históricos de acidentes.</label><br>
+        <label><input type="radio" name="q66" value="d"> (d) Informações sobre restrições de trânsito.</label><br>
+        <label><input type="radio" name="q66" value="e"> (e) Apenas registros de manutenção.</label><br>
+        <button onclick="checkAnswer('q66', 'b', 'A alternativa CORRETA é: Informações do DENATRAN, CAD e cercamento eletrônico.')">Enviar</button>
+        <div class="explanation" id="explanation-q66"></div>
+    </div>
+    
+    <div class="question" id="question67">
+        <p><strong>5. Qual é uma das funcionalidades do Sistema de Controle e Monitoramento de Veículos (CMV)?</strong></p>
+        <label><input type="radio" name="q67" value="a"> (a) Registro de ocorrências administrativas.</label><br>
+        <label><input type="radio" name="q67" value="b"> (b) Painel de Ocorrências com eventos constatados nos pontos de cercamento.</label><br>
+        <label><input type="radio" name="q67" value="c"> (c) Controle de inventário de veículos.</label><br>
+        <label><input type="radio" name="q67" value="d"> (d) Treinamento de agentes de campo.</label><br>
+        <label><input type="radio" name="q67" value="e"> (e) Planejamento de rotas de transporte.</label><br>
+        <button onclick="checkAnswer('q67', 'b', 'A alternativa CORRETA é: Painel de Ocorrências com eventos constatados nos pontos de cercamento.')">Enviar</button>
+        <div class="explanation" id="explanation-q67"></div>
+    </div>
+    <div class="question" id="question68">
+        <p><strong>1. Qual é o primeiro passo para operar o sistema de rádio?</strong></p>
+        <label><input type="radio" name="q68" value="a"> (a) Ajustar o volume.</label><br>
+        <label><input type="radio" name="q68" value="b"> (b) Selecionar a zona, canal ou grupo de conversação.</label><br>
+        <label><input type="radio" name="q68" value="c"> (c) Ligar o equipamento.</label><br>
+        <label><input type="radio" name="q68" value="d"> (d) Verificar a carga da bateria.</label><br>
+        <label><input type="radio" name="q68" value="e"> (e) Ajustar a sensibilidade do squelch.</label><br>
+        <button onclick="checkAnswer('q68', 'c', 'A alternativa CORRETA é: Ligar o equipamento.')">Enviar</button>
+        <div class="explanation" id="explanation-q68"></div>
+    </div>
+    
+    <div class="question" id="question69">
+        <p><strong>2. Para realizar uma chamada ao PDR, qual tecla deve ser pressionada?</strong></p>
+        <label><input type="radio" name="q69" value="a"> (a) Tecla de sensibilidade.</label><br>
+        <label><input type="radio" name="q69" value="b"> (b) Tecla de transmissão (PTT).</label><br>
+        <label><input type="radio" name="q69" value="c"> (c) Tecla de volume.</label><br>
+        <label><input type="radio" name="q69" value="d"> (d) Tecla de escaneamento.</label><br>
+        <label><input type="radio" name="q69" value="e"> (e) Tecla de ajuste de canal.</label><br>
+        <button onclick="checkAnswer('q69', 'b', 'A alternativa CORRETA é: Tecla de transmissão (PTT).')">Enviar</button>
+        <div class="explanation" id="explanation-q69"></div>
+    </div>
+    
+    <div class="question" id="question70">
+        <p><strong>3. Qual é a função do modo SCAN no sistema de rádio?</strong></p>
+        <label><input type="radio" name="q70" value="a"> (a) Aumentar o volume do áudio.</label><br>
+        <label><input type="radio" name="q70" value="b"> (b) Monitorar apenas uma rede de rádio.</label><br>
+        <label><input type="radio" name="q70" value="c"> (c) Permitir comunicação simultânea em várias redes de rádio.</label><br>
+        <label><input type="radio" name="q70" value="d"> (d) Ajustar a sensibilidade do microfone.</label><br>
+        <label><input type="radio" name="q70" value="e"> (e) Verificar a carga da bateria.</label><br>
+        <button onclick="checkAnswer('q70', 'c', 'A alternativa CORRETA é: Permitir comunicação simultânea em várias redes de rádio.')">Enviar</button>
+        <div class="explanation" id="explanation-q70"></div>
+    </div>
+    
+    <div class="question" id="question71">
+        <p><strong>4. O que deve ser feito após pressionar a tecla de transmissão e dirigir uma mensagem ao PDR?</strong></p>
+        <label><input type="radio" name="q71" value="a"> (a) Ajustar o volume do rádio.</label><br>
+        <label><input type="radio" name="q71" value="b"> (b) Soltar a tecla de transmissão.</label><br>
+        <label><input type="radio" name="q71" value="c"> (c) Verificar a carga da bateria.</label><br>
+        <label><input type="radio" name="q71" value="d"> (d) Ligar o equipamento novamente.</label><br>
+        <label><input type="radio" name="q71" value="e"> (e) Ajustar a sensibilidade do squelch.</label><br>
+        <button onclick="checkAnswer('q71', 'b', 'A alternativa CORRETA é: Soltar a tecla de transmissão.')">Enviar</button>
+        <div class="explanation" id="explanation-q71"></div>
+    </div>
+    
+    <div class="question" id="question72">
+        <p><strong>5. A que distância deve-se posicionar o microfone ao fazer uma chamada ao PDR?</strong></p>
+        <label><input type="radio" name="q72" value="a"> (a) 5 cm.</label><br>
+        <label><input type="radio" name="q72" value="b"> (b) 10 cm.</label><br>
+        <label><input type="radio" name="q72" value="c"> (c) 15 cm.</label><br>
+        <label><input type="radio" name="q72" value="d"> (d) 20 cm.</label><br>
+        <label><input type="radio" name="q72" value="e"> (e) 25 cm.</label><br>
+        <button onclick="checkAnswer('q72', 'b', 'A alternativa CORRETA é: 10 cm.')">Enviar</button>
+        <div class="explanation" id="explanation-q72"></div>
+    </div>
+    <div class="question" id="question73">
+        <p><strong>1. O que caracteriza a Ocorrência Oc 09?</strong></p>
+        <label><input type="radio" name="q73" value="a"> (a) Acidente com lesões corporais.</label><br>
+        <label><input type="radio" name="q73" value="b"> (b) Congestionamento de trânsito.</label><br>
+        <label><input type="radio" name="q73" value="c"> (c) Acidente com danos materiais.</label><br>
+        <label><input type="radio" name="q73" value="d"> (d) Atropelamento de pessoa.</label><br>
+        <label><input type="radio" name="q73" value="e"> (e) Morte de pessoa em acidente.</label><br>
+        <button onclick="checkAnswer('q73', 'c', 'A alternativa CORRETA é: Acidente com danos materiais.')">Enviar</button>
+        <div class="explanation" id="explanation-q73"></div>
+    </div>
+    
+    <div class="question" id="question74">
+        <p><strong>2. Qual é a classificação da Ocorrência Oc 10?</strong></p>
+        <label><input type="radio" name="q74" value="a"> (a) Acidente sem lesões.</label><br>
+        <label><input type="radio" name="q74" value="b"> (b) Acidente com lesões corporais.</label><br>
+        <label><input type="radio" name="q74" value="c"> (c) Conflito de circulação.</label><br>
+        <label><input type="radio" name="q74" value="d"> (d) Atropelamento.</label><br>
+        <label><input type="radio" name="q74" value="e"> (e) Acidente com morte.</label><br>
+        <button onclick="checkAnswer('q74', 'b', 'A alternativa CORRETA é: Acidente com lesões corporais.')">Enviar</button>
+        <div class="explanation" id="explanation-q74"></div>
+    </div>
+    
+    <div class="question" id="question75">
+        <p><strong>3. O que define a Ocorrência Oc 22?</strong></p>
+        <label><input type="radio" name="q75" value="a"> (a) Acidente com danos materiais.</label><br>
+        <label><input type="radio" name="q75" value="b"> (b) Congestionamento na via pública.</label><br>
+        <label><input type="radio" name="q75" value="c"> (c) Acidente com morte de pessoa.</label><br>
+        <label><input type="radio" name="q75" value="d"> (d) Atropelamento com lesões.</label><br>
+        <label><input type="radio" name="q75" value="e"> (e) Acidente sem vítimas.</label><br>
+        <button onclick="checkAnswer('q75', 'c', 'A alternativa CORRETA é: Acidente com morte de pessoa.')">Enviar</button>
+        <div class="explanation" id="explanation-q75"></div>
+    </div>
+    
+    <div class="question" id="question76">
+        <p><strong>4. O que caracteriza a Ocorrência Oc 64?</strong></p>
+        <label><input type="radio" name="q76" value="a"> (a) Congestionamento por obras.</label><br>
+        <label><input type="radio" name="q76" value="b"> (b) Congestionamento causado por pessoas ou obstáculos.</label><br>
+        <label><input type="radio" name="q76" value="c"> (c) Acidente com morte.</label><br>
+        <label><input type="radio" name="q76" value="d"> (d) Atropelamento de pessoa.</label><br>
+        <label><input type="radio" name="q76" value="e"> (e) Acidente com lesões.</label><br>
+        <button onclick="checkAnswer('q76', 'b', 'A alternativa CORRETA é: Congestionamento causado por pessoas ou obstáculos.')">Enviar</button>
+        <div class="explanation" id="explanation-q76"></div>
+    </div>
+    
+    <div class="question" id="question77">
+        <p><strong>5. Quando um atropelamento deve ser registrado como Oc 79?</strong></p>
+        <label><input type="radio" name="q77" value="a"> (a) Apenas se resultar em danos materiais.</label><br>
+        <label><input type="radio" name="q77" value="b"> (b) Sempre que envolver veículo e pedestre.</label><br>
+        <label><input type="radio" name="q77" value="c"> (c) Somente se houver lesões corporais ou morte.</label><br>
+        <label><input type="radio" name="q77" value="d"> (d) Quando não houver vítimas.</label><br>
+        <label><input type="radio" name="q77" value="e"> (e) Se ocorrer em área rural.</label><br>
+        <button onclick="checkAnswer('q77', 'c', 'A alternativa CORRETA é: Somente se houver lesões corporais ou morte.')">Enviar</button>
+        <div class="explanation" id="explanation-q77"></div>
+    </div>
+    <div class="question" id="question78">
+        <p><strong>1. O que caracteriza a Ocorrência Oc 04?</strong></p>
+        <label><input type="radio" name="q78" value="a"> (a) Embriaguez em público.</label><br>
+        <label><input type="radio" name="q78" value="b"> (b) Ato obsceno em lugar público.</label><br>
+        <label><input type="radio" name="q78" value="c"> (c) Desordem em evento público.</label><br>
+        <label><input type="radio" name="q78" value="d"> (d) Perturbação do sossego.</label><br>
+        <label><input type="radio" name="q78" value="e"> (e) Briga entre pessoas.</label><br>
+        <button onclick="checkAnswer('q78', 'b', 'A alternativa CORRETA é: Ato obsceno em lugar público.')">Enviar</button>
+        <div class="explanation" id="explanation-q78"></div>
+    </div>
+    
+    <div class="question" id="question79">
+        <p><strong>2. Qual é a classificação da Ocorrência Oc 11?</strong></p>
+        <label><input type="radio" name="q79" value="a"> (a) Embriaguez sem escândalo.</label><br>
+        <label><input type="radio" name="q79" value="b"> (b) Embriaguez causando escândalo ou risco.</label><br>
+        <label><input type="radio" name="q79" value="c"> (c) Ato obsceno.</label><br>
+        <label><input type="radio" name="q79" value="d"> (d) Perturbação do sossego.</label><br>
+        <label><input type="radio" name="q79" value="e"> (e) Desordem sem embriaguez.</label><br>
+        <button onclick="checkAnswer('q79', 'b', 'A alternativa CORRETA é: Embriaguez causando escândalo ou risco.')">Enviar</button>
+        <div class="explanation" id="explanation-q79"></div>
+    </div>
+    
+    <div class="question" id="question80">
+        <p><strong>3. O que caracteriza a Ocorrência Oc 12?</strong></p>
+        <label><input type="radio" name="q80" value="a"> (a) Molestar alguém ou provocar pânico.</label><br>
+        <label><input type="radio" name="q80" value="b"> (b) Ato obsceno.</label><br>
+        <label><input type="radio" name="q80" value="c"> (c) Embriaguez pública.</label><br>
+        <label><input type="radio" name="q80" value="d"> (d) Briga sem lesões.</label><br>
+        <label><input type="radio" name="q80" value="e"> (e) Perturbação do sossego alheio.</label><br>
+        <button onclick="checkAnswer('q80', 'a', 'A alternativa CORRETA é: Molestar alguém ou provocar pânico.')">Enviar</button>
+        <div class="explanation" id="explanation-q80"></div>
+    </div>
+    
+    <div class="question" id="question81">
+        <p><strong>4. Qual é a definição da Ocorrência Oc 78?</strong></p>
+        <label><input type="radio" name="q81" value="a"> (a) Perturbar o trabalho ou sossego alheio.</label><br>
+        <label><input type="radio" name="q81" value="b"> (b) Briga entre pessoas.</label><br>
+        <label><input type="radio" name="q81" value="c"> (c) Ato obsceno em público.</label><br>
+        <label><input type="radio" name="q81" value="d"> (d) Embriaguez pública.</label><br>
+        <label><input type="radio" name="q81" value="e"> (e) Molestar alguém sem motivo.</label><br>
+        <button onclick="checkAnswer('q81', 'a', 'A alternativa CORRETA é: Perturbar o trabalho ou sossego alheio.')">Enviar</button>
+        <div class="explanation" id="explanation-q81"></div>
+    </div>
+    
+    <div class="question" id="question82">
+        <p><strong>5. Quando a Ocorrência Oc 12 deve ser registrada?</strong></p>
+        <label><input type="radio" name="q82" value="a"> (a) Somente em casos de embriaguez.</label><br>
+        <label><input type="radio" name="q82" value="b"> (b) Sempre que houver tumulto ou desordem.</label><br>
+        <label><input type="radio" name="q82" value="c"> (c) Quando envolver briga com lesões.</label><br>
+        <label><input type="radio" name="q82" value="d"> (d) Apenas em solenidades públicas.</label><br>
+        <label><input type="radio" name="q82" value="e"> (e) Somente em casos de atos obscenos.</label><br>
+        <button onclick="checkAnswer('q82', 'b', 'A alternativa CORRETA é: Sempre que houver tumulto ou desordem.')">Enviar</button>
+        <div class="explanation" id="explanation-q82"></div>
+    </div>
+
+    <div class="question" id="question83">
+        <p><strong>1. O que caracteriza a Ocorrência Oc 17?</strong></p>
+        <label><input type="radio" name="q83" value="a"> (a) Subtrair veículo automotor.</label><br>
+        <label><input type="radio" name="q83" value="b"> (b) Destruir ou danificar coisa alheia.</label><br>
+        <label><input type="radio" name="q83" value="c"> (c) Furtar gado.</label><br>
+        <label><input type="radio" name="q83" value="d"> (d) Furto qualificado.</label><br>
+        <label><input type="radio" name="q83" value="e"> (e) Furto simples.</label><br>
+        <button onclick="checkAnswer('q83', 'b', 'A alternativa CORRETA é: Destruir ou danificar coisa alheia.')">Enviar</button>
+        <div class="explanation" id="explanation-q83"></div>
+    </div>
+    
+    <div class="question" id="question84">
+        <p><strong>2. Qual é a definição da Ocorrência Oc 27?</strong></p>
+        <label><input type="radio" name="q84" value="a"> (a) Apoderar-se de gado.</label><br>
+        <label><input type="radio" name="q84" value="b"> (b) Apoderar-se ilicitamente de veículo automotor.</label><br>
+        <label><input type="radio" name="q84" value="c"> (c) Furto de objetos pequenos.</label><br>
+        <label><input type="radio" name="q84" value="d"> (d) Furto de bicicletas.</label><br>
+        <label><input type="radio" name="q84" value="e"> (e) Furto de objetos de valor.</label><br>
+        <button onclick="checkAnswer('q84', 'b', 'A alternativa CORRETA é: Apoderar-se ilicitamente de veículo automotor.')">Enviar</button>
+        <div class="explanation" id="explanation-q84"></div>
+    </div>
+    
+    <div class="question" id="question85">
+        <p><strong>3. O que caracteriza a Ocorrência Oc 28?</strong></p>
+        <label><input type="radio" name="q85" value="a"> (a) Furtar gado.</label><br>
+        <label><input type="radio" name="q85" value="b"> (b) Subtrair coisa alheia móvel.</label><br>
+        <label><input type="radio" name="q85" value="c"> (c) Dano ao patrimônio alheio.</label><br>
+        <label><input type="radio" name="q85" value="d"> (d) Apoderar-se de veículo automotor.</label><br>
+        <label><input type="radio" name="q85" value="e"> (e) Furto qualificado.</label><br>
+        <button onclick="checkAnswer('q85', 'b', 'A alternativa CORRETA é: Subtrair coisa alheia móvel.')">Enviar</button>
+        <div class="explanation" id="explanation-q85"></div>
+    </div>
+    
+    <div class="question" id="question86">
+        <p><strong>4. O que é caracterizado como abigeato, na Ocorrência Oc 37?</strong></p>
+        <label><input type="radio" name="q86" value="a"> (a) Furtar veículos.</label><br>
+        <label><input type="radio" name="q86" value="b"> (b) Furtar gado domesticado.</label><br>
+        <label><input type="radio" name="q86" value="c"> (c) Dano a propriedade alheia.</label><br>
+        <label><input type="radio" name="q86" value="d"> (d) Furto simples.</label><br>
+        <label><input type="radio" name="q86" value="e"> (e) Perturbação do sossego alheio.</label><br>
+        <button onclick="checkAnswer('q86', 'b', 'A alternativa CORRETA é: Furtar gado domesticado.')">Enviar</button>
+        <div class="explanation" id="explanation-q86"></div>
+    </div>
+    
+    <div class="question" id="question87">
+        <p><strong>5. O que caracteriza a Ocorrência Oc 49?</strong></p>
+        <label><input type="radio" name="q87" value="a"> (a) Furto sem violência.</label><br>
+        <label><input type="radio" name="q87" value="b"> (b) Furto qualificado com destruição de obstáculos.</label><br>
+        <label><input type="radio" name="q87" value="c"> (c) Apoderar-se de gado.</label><br>
+        <label><input type="radio" name="q87" value="d"> (d) Destruir propriedade alheia.</label><br>
+        <label><input type="radio" name="q87" value="e"> (e) Furto simples de objetos.</label><br>
+        <button onclick="checkAnswer('q87', 'b', 'A alternativa CORRETA é: Furto qualificado com destruição de obstáculos.')">Enviar</button>
+        <div class="explanation" id="explanation-q87"></div>
+    </div>
+    <div class="question" id="question88">
+        <p><strong>1. O que caracteriza a Ocorrência Oc 05?</strong></p>
+        <label><input type="radio" name="q88" value="a"> (a) Subtrair algo sem violência.</label><br>
+        <label><input type="radio" name="q88" value="b"> (b) Subtrair coisa móvel mediante grave ameaça ou violência.</label><br>
+        <label><input type="radio" name="q88" value="c"> (c) Homicídio.</label><br>
+        <label><input type="radio" name="q88" value="d"> (d) Agressão sem lesões.</label><br>
+        <label><input type="radio" name="q88" value="e"> (e) Desordem pública.</label><br>
+        <button onclick="checkAnswer('q88', 'b', 'A alternativa CORRETA é: Subtrair coisa móvel mediante grave ameaça ou violência.')">Enviar</button>
+        <div class="explanation" id="explanation-q88"></div>
+    </div>
+    
+    <div class="question" id="question89">
+        <p><strong>2. O que caracteriza a Ocorrência Oc 23?</strong></p>
+        <label><input type="radio" name="q89" value="a"> (a) Agressão sem lesões visíveis.</label><br>
+        <label><input type="radio" name="q89" value="b"> (b) Agressão física com lesões visíveis.</label><br>
+        <label><input type="radio" name="q89" value="c"> (c) Morte de uma pessoa.</label><br>
+        <label><input type="radio" name="q89" value="d"> (d) Encontro de cadáver.</label><br>
+        <label><input type="radio" name="q89" value="e"> (e) Roubo.</label><br>
+        <button onclick="checkAnswer('q89', 'b', 'A alternativa CORRETA é: Agressão física com lesões visíveis.')">Enviar</button>
+        <div class="explanation" id="explanation-q89"></div>
+    </div>
+    
+    <div class="question" id="question90">
+        <p><strong>3. O que caracteriza a Ocorrência Oc 26?</strong></p>
+        <label><input type="radio" name="q90" value="a"> (a) Homicídio.</label><br>
+        <label><input type="radio" name="q90" value="b"> (b) Lesão corporal.</label><br>
+        <label><input type="radio" name="q90" value="c"> (c) Roubo.</label><br>
+        <label><input type="radio" name="q90" value="d"> (d) Agressão sem lesões.</label><br>
+        <label><input type="radio" name="q90" value="e"> (e) Sequestro.</label><br>
+        <button onclick="checkAnswer('q90', 'a', 'A alternativa CORRETA é: Homicídio.')">Enviar</button>
+        <div class="explanation" id="explanation-q90"></div>
+    </div>
+    
+    <div class="question" id="question91">
+        <p><strong>4. Qual é a definição da Ocorrência Oc 41?</strong></p>
+        <label><input type="radio" name="q91" value="a"> (a) Roubo simples.</label><br>
+        <label><input type="radio" name="q91" value="b"> (b) Roubo a banco com ameaça ou violência.</label><br>
+        <label><input type="radio" name="q91" value="c"> (c) Sequestro de pessoa.</label><br>
+        <label><input type="radio" name="q91" value="d"> (d) Agressão com lesões.</label><br>
+        <label><input type="radio" name="q91" value="e"> (e) Porte ilegal de arma.</label><br>
+        <button onclick="checkAnswer('q91', 'b', 'A alternativa CORRETA é: Roubo a banco com ameaça ou violência.')">Enviar</button>
+        <div class="explanation" id="explanation-q91"></div>
+    </div>
+    
+    <div class="question" id="question92">
+        <p><strong>5. O que caracteriza a Ocorrência Oc 47?</strong></p>
+        <label><input type="radio" name="q92" value="a"> (a) Ato de embriaguez.</label><br>
+        <label><input type="radio" name="q92" value="b"> (b) Privar alguém de liberdade em cárcere privado.</label><br>
+        <label><input type="radio" name="q92" value="c"> (c) Subtrair algo de uma pessoa com violência.</label><br>
+        <label><input type="radio" name="q92" value="d"> (d) Dano ao patrimônio.</label><br>
+        <label><input type="radio" name="q92" value="e"> (e) Resistência a funcionário público.</label><br>
+        <button onclick="checkAnswer('q92', 'b', 'A alternativa CORRETA é: Privar alguém de liberdade em cárcere privado.')">Enviar</button>
+        <div class="explanation" id="explanation-q92"></div>
+    </div>
+    <div class="question" id="question93">
+        <p><strong>1. O que caracteriza a Ocorrência Oc 75?</strong></p>
+        <label><input type="radio" name="q93" value="a"> (a) Contra a flora.</label><br>
+        <label><input type="radio" name="q93" value="b"> (b) Proibição de caça ou pesca sem licença.</label><br>
+        <label><input type="radio" name="q93" value="c"> (c) Poluição da água.</label><br>
+        <label><input type="radio" name="q93" value="d"> (d) Incêndio florestal.</label><br>
+        <label><input type="radio" name="q93" value="e"> (e) Desmatamento ilegal.</label><br>
+        <button onclick="checkAnswer('q93', 'b', 'A alternativa CORRETA é: Proibição de caça ou pesca sem licença.')">Enviar</button>
+        <div class="explanation" id="explanation-q93"></div>
+    </div>
+    
+    <div class="question" id="question94">
+        <p><strong>2. Qual é uma das proibições relacionadas à Ocorrência Oc 76?</strong></p>
+        <label><input type="radio" name="q94" value="a"> (a) Uso de motosserra com licença.</label><br>
+        <label><input type="radio" name="q94" value="b"> (b) Transporte de produtos florestais sem licença.</label><br>
+        <label><input type="radio" name="q94" value="c"> (c) Cultivo de plantas exóticas.</label><br>
+        <label><input type="radio" name="q94" value="d"> (d) Queima controlada de vegetação.</label><br>
+        <label><input type="radio" name="q94" value="e"> (e) Uso de fertilizantes orgânicos.</label><br>
+        <button onclick="checkAnswer('q94', 'b', 'A alternativa CORRETA é: Transporte de produtos florestais sem licença.')">Enviar</button>
+        <div class="explanation" id="explanation-q94"></div>
+    </div>
+    
+    <div class="question" id="question95">
+        <p><strong>3. O que caracteriza a Ocorrência Oc 77?</strong></p>
+        <label><input type="radio" name="q95" value="a"> (a) Captura ilegal de fauna.</label><br>
+        <label><input type="radio" name="q95" value="b"> (b) Poluição que degrada a qualidade ambiental.</label><br>
+        <label><input type="radio" name="q95" value="c"> (c) Queimadas autorizadas.</label><br>
+        <label><input type="radio" name="q95" value="d"> (d) Preservação de áreas verdes.</label><br>
+        <label><input type="radio" name="q95" value="e"> (e) Desmatamento controlado.</label><br>
+        <button onclick="checkAnswer('q95', 'b', 'A alternativa CORRETA é: Poluição que degrada a qualidade ambiental.')">Enviar</button>
+        <div class="explanation" id="explanation-q95"></div>
+    </div>
+    
+    <div class="question" id="question96">
+        <p><strong>4. Qual ocorrência está relacionada a um sinistro com fogo?</strong></p>
+        <label><input type="radio" name="q96" value="a"> (a) Oc 25 - Incêndio.</label><br>
+        <label><input type="radio" name="q96" value="b"> (b) Oc 32 - Risco excepcional.</label><br>
+        <label><input type="radio" name="q96" value="c"> (c) Oc 67 - Inundação.</label><br>
+        <label><input type="radio" name="q96" value="d"> (d) Oc 75 - Contra a fauna.</label><br>
+        <label><input type="radio" name="q96" value="e"> (e) Oc 76 - Contra a flora.</label><br>
+        <button onclick="checkAnswer('q96', 'a', 'A alternativa CORRETA é: Oc 25 - Incêndio.')">Enviar</button>
+        <div class="explanation" id="explanation-q96"></div>
+    </div>
+    
+    <div class="question" id="question97">
+        <p><strong>5. O que caracteriza a Ocorrência Oc 32?</strong></p>
+        <label><input type="radio" name="q97" value="a"> (a) Desmatamento.</label><br>
+        <label><input type="radio" name="q97" value="b"> (b) Risco excepcional à integridade física.</label><br>
+        <label><input type="radio" name="q97" value="c"> (c) Captura ilegal de animais.</label><br>
+        <label><input type="radio" name="q97" value="d"> (d) Poluição do ar.</label><br>
+        <label><input type="radio" name="q97" value="e"> (e) Transporte irregular de flora.</label><br>
+        <button onclick="checkAnswer('q97', 'b', 'A alternativa CORRETA é: Risco excepcional à integridade física.')">Enviar</button>
+        <div class="explanation" id="explanation-q97"></div>
+    </div>
+
+    <div class="question" id="question98">
+        <p><strong>1. O que caracteriza a Ocorrência Oc 05?</strong></p>
+        <label><input type="radio" name="q98" value="a"> (a) Homicídio.</label><br>
+        <label><input type="radio" name="q98" value="b"> (b) Roubo mediante grave ameaça ou violência.</label><br>
+        <label><input type="radio" name="q98" value="c"> (c) Agressão sem lesões.</label><br>
+        <label><input type="radio" name="q98" value="d"> (d) Sequestro.</label><br>
+        <label><input type="radio" name="q98" value="e"> (e) Desordem pública.</label><br>
+        <button onclick="checkAnswer('q98', 'b', 'A alternativa CORRETA é: Roubo mediante grave ameaça ou violência.')">Enviar</button>
+        <div class="explanation" id="explanation-q98"></div>
+    </div>
+    
+    <div class="question" id="question99">
+        <p><strong>2. Qual ocorrência está relacionada à agressão física com lesões visíveis?</strong></p>
+        <label><input type="radio" name="q99" value="a"> (a) Oc 05 - Roubo.</label><br>
+        <label><input type="radio" name="q99" value="b"> (b) Oc 23 - Agressão com lesões.</label><br>
+        <label><input type="radio" name="q99" value="c"> (c) Oc 26 - Homicídio.</label><br>
+        <label><input type="radio" name="q99" value="d"> (d) Oc 30 - Encontro de cadáver.</label><br>
+        <label><input type="radio" name="q99" value="e"> (e) Oc 47 - Sequestro.</label><br>
+        <button onclick="checkAnswer('q99', 'b', 'A alternativa CORRETA é: Oc 23 - Agressão com lesões.')">Enviar</button>
+        <div class="explanation" id="explanation-q99"></div>
+    </div>
+    
+    <div class="question" id="question100">
+        <p><strong>3. O que caracteriza a Ocorrência Oc 26?</strong></p>
+        <label><input type="radio" name="q100" value="a"> (a) Agressão com lesões.</label><br>
+        <label><input type="radio" name="q100" value="b"> (b) Homicídio - matar alguém.</label><br>
+        <label><input type="radio" name="q100" value="c"> (c) Roubo a banco.</label><br>
+        <label><input type="radio" name="q100" value="d"> (d) Sequestro.</label><br>
+        <label><input type="radio" name="q100" value="e"> (e) Incêndio.</label><br>
+        <button onclick="checkAnswer('q100', 'b', 'A alternativa CORRETA é: Homicídio - matar alguém.')">Enviar</button>
+        <div class="explanation" id="explanation-q100"></div>
+    </div>
+    
+    <div class="question" id="question101">
+        <p><strong>4. Qual ocorrência se refere ao encontro de um corpo humano com dúvidas sobre a causa da morte?</strong></p>
+        <label><input type="radio" name="q101" value="a"> (a) Oc 23 - Agressão com lesões.</label><br>
+        <label><input type="radio" name="q101" value="b"> (b) Oc 30 - Encontro de cadáver.</label><br>
+        <label><input type="radio" name="q101" value="c"> (c) Oc 26 - Homicídio.</label><br>
+        <label><input type="radio" name="q101" value="d"> (d) Oc 47 - Sequestro.</label><br>
+        <label><input type="radio" name="q101" value="e"> (e) Oc 05 - Roubo.</label><br>
+        <button onclick="checkAnswer('q101', 'b', 'A alternativa CORRETA é: Oc 30 - Encontro de cadáver.')">Enviar</button>
+        <div class="explanation" id="explanation-q101"></div>
+    </div>
+    
+    <div class="question" id="question102">
+        <p><strong>5. O que caracteriza a Ocorrência Oc 41?</strong></p>
+        <label><input type="radio" name="q102" value="a"> (a) Roubo em estabelecimento comercial.</label><br>
+        <label><input type="radio" name="q102" value="b"> (b) Roubo a banco mediante ameaça ou violência.</label><br>
+        <label><input type="radio" name="q102" value="c"> (c) Sequestro.</label><br>
+        <label><input type="radio" name="q102" value="d"> (d) Homicídio.</label><br>
+        <label><input type="radio" name="q102" value="e"> (e) Agressão com lesões.</label><br>
+        <button onclick="checkAnswer('q102', 'b', 'A alternativa CORRETA é: Roubo a banco mediante ameaça ou violência.')">Enviar</button>
+        <div class="explanation" id="explanation-q102"></div>
+    </div>
+    <div class="question" id="question103">
+        <p><strong>1. O que caracteriza a Ocorrência Oc 69?</strong></p>
+        <label><input type="radio" name="q103" value="a"> (a) Tempestades de ventos que não causam danos.</label><br>
+        <label><input type="radio" name="q103" value="b"> (b) Tempestades de ventos cuja força pode provocar enormes danos materiais.</label><br>
+        <label><input type="radio" name="q103" value="c"> (c) Deslizamento de terra.</label><br>
+        <label><input type="radio" name="q103" value="d"> (d) Inundações leves.</label><br>
+        <label><input type="radio" name="q103" value="e"> (e) Quebra de árvores por vento.</label><br>
+        <button onclick="checkAnswer('q103', 'b', 'A alternativa CORRETA é: Tempestades de ventos cuja força pode provocar enormes danos materiais.')">Enviar</button>
+        <div class="explanation" id="explanation-q103"></div>
+    </div>
+    
+    <div class="question" id="question104">
+        <p><strong>2. O que caracteriza a Ocorrência Oc 70?</strong></p>
+        <label><input type="radio" name="q104" value="a"> (a) Desmoronamento em terrenos agrícolas.</label><br>
+        <label><input type="radio" name="q104" value="b"> (b) Desmoronamentos que ocorrem em prédios, pontes, túneis e escavações.</label><br>
+        <label><input type="radio" name="q104" value="c"> (c) Erosão do solo.</label><br>
+        <label><input type="radio" name="q104" value="d"> (d) Deslizamento de terra em áreas rurais.</label><br>
+        <label><input type="radio" name="q104" value="e"> (e) Inundações em áreas urbanas.</label><br>
+        <button onclick="checkAnswer('q104', 'b', 'A alternativa CORRETA é: Desmoronamentos que ocorrem em prédios, pontes, túneis e escavações.')">Enviar</button>
+        <div class="explanation" id="explanation-q104"></div>
+    </div>
+    
+    <div class="question" id="question105">
+        <p><strong>3. O que caracteriza a Ocorrência Oc 71?</strong></p>
+        <label><input type="radio" name="q105" value="a"> (a) Erosão do solo.</label><br>
+        <label><input type="radio" name="q105" value="b"> (b) Escorregamento de terra ou rocha em terrenos inclinados.</label><br>
+        <label><input type="radio" name="q105" value="c"> (c) Quebra de árvores por vento.</label><br>
+        <label><input type="radio" name="q105" value="d"> (d) Inundações em áreas urbanas.</label><br>
+        <label><input type="radio" name="q105" value="e"> (e) Queda de muros em áreas rurais.</label><br>
+        <button onclick="checkAnswer('q105', 'b', 'A alternativa CORRETA é: Escorregamento de terra ou rocha em terrenos inclinados.')">Enviar</button>
+        <div class="explanation" id="explanation-q105"></div>
+    </div>
+    
+    <div class="question" id="question106">
+        <p><strong>4. O que caracteriza a Ocorrência Oc 74?</strong></p>
+        <label><input type="radio" name="q106" value="a"> (a) Incêndio em embarcações.</label><br>
+        <label><input type="radio" name="q106" value="b"> (b) Afundamento de uma embarcação que sofreu acidente.</label><br>
+        <label><input type="radio" name="q106" value="c"> (c) Tempestade em alto-mar.</label><br>
+        <label><input type="radio" name="q106" value="d"> (d) Colisão entre embarcações.</label><br>
+        <label><input type="radio" name="q106" value="e"> (e) Naufrágio de barcos pesqueiros.</label><br>
+        <button onclick="checkAnswer('q106', 'b', 'A alternativa CORRETA é: Afundamento de uma embarcação que sofreu acidente.')">Enviar</button>
+        <div class="explanation" id="explanation-q106"></div>
+    </div>
+    
+    <div class="question" id="question107">
+        <p><strong>5. O que caracteriza a Ocorrência Oc 01?</strong></p>
+        <label><input type="radio" name="q107" value="a"> (a) Ato de ajudar pessoas em perigo.</label><br>
+        <label><input type="radio" name="q107" value="b"> (b) Ato pelo qual os bombeiros provêm de água potável as instituições necessitadas.</label><br>
+        <label><input type="radio" name="q107" value="c"> (c) Ato de salvar animais.</label><br>
+        <label><input type="radio" name="q107" value="d"> (d) Ato de combater incêndios.</label><br>
+        <label><input type="radio" name="q107" value="e"> (e) Ato de remoção de fontes de perigo.</label><br>
+        <button onclick="checkAnswer('q107', 'b', 'A alternativa CORRETA é: Ato pelo qual os bombeiros provêm de água potável as instituições necessitadas.')">Enviar</button>
+        <div class="explanation" id="explanation-q107"></div>
+    </div>
+    
+    <div class="question" id="question108">
+        <p><strong>6. O que caracteriza a Ocorrência Oc 02?</strong></p>
+        <label><input type="radio" name="q108" value="a"> (a) Ato de acompanhar autoridades em operações.</label><br>
+        <label><input type="radio" name="q108" value="b"> (b) Ato de remover fontes de perigo.</label><br>
+        <label><input type="radio" name="q108" value="c"> (c) Ato de salvar pessoas em desastres.</label><br>
+        <label><input type="radio" name="q108" value="d"> (d) Ato de desobstruir caminhos.</label><br>
+        <label><input type="radio" name="q108" value="e"> (e) Ato de resgatar animais.</label><br>
+        <button onclick="checkAnswer('q108', 'a', 'A alternativa CORRETA é: Ato de acompanhar autoridades em operações.')">Enviar</button>
+        <div class="explanation" id="explanation-q108"></div>
+    </div>
+    
+    <div class="question" id="question109">
+        <p><strong>7. O que caracteriza a Ocorrência Oc 08?</strong></p>
+        <label><input type="radio" name="q109" value="a"> (a) Ação para salvar animais.</label><br>
+        <label><input type="radio" name="q109" value="b"> (b) Ação executada com a finalidade de salvar pessoas.</label><br>
+        <label><input type="radio" name="q109" value="c"> (c) Ação de remoção de fontes de perigo.</label><br>
+        <label><input type="radio" name="q109" value="d"> (d) Ação de combate a incêndios.</label><br>
+        <label><input type="radio" name="q109" value="e"> (e) Ação de desobstrução de caminhos.</label><br>
+        <button onclick="checkAnswer('q109', 'b', 'A alternativa CORRETA é: Ação executada com a finalidade de salvar pessoas.')">Enviar</button>
+        <div class="explanation" id="explanation-q109"></div>
+    </div>
+    
+    <div class="question" id="question110">
+        <p><strong>8. O que caracteriza a Ocorrência Oc 19?</strong></p>
+        <label><input type="radio" name="q110" value="a"> (a) Remoção de pessoas em perigo.</label><br>
+        <label><input type="radio" name="q110" value="b"> (b) Ato para anular ou remover uma fonte de perigo.</label><br>
+        <label><input type="radio" name="q110" value="c"> (c) Ação de resgatar animais.</label><br>
+        <label><input type="radio" name="q110" value="d"> (d) Ação de salvamento de pessoas.</label><br>
+        <label><input type="radio" name="q110" value="e"> (e) Ação de abastecimento de água potável.</label><br>
+        <button onclick="checkAnswer('q110', 'b', 'A alternativa CORRETA é: Ato para anular ou remover uma fonte de perigo.')">Enviar</button>
+        <div class="explanation" id="explanation-q110"></div>
+    </div>
+    
+    <div class="question" id="question111">
+        <p><strong>9. O que caracteriza a Ocorrência Oc 16?</strong></p>
+        <label><input type="radio" name="q111" value="a"> (a) Ato de retirar água de locais secos.</label><br>
+        <label><input type="radio" name="q111" value="b"> (b) Retirada de água que esteja alterando ou pondo em risco o patrimônio ou vida de pessoa.</label><br>
+        <label><input type="radio" name="q111" value="c"> (c) Ação de abastecimento de água potável.</label><br>
+        <label><input type="radio" name="q111" value="d"> (d) Ação de remoção de fontes de perigo.</label><br>
+        <label><input type="radio" name="q111" value="e"> (e) Ação de salvamento de animais.</label><br>
+        <button onclick="checkAnswer('q111', 'b', 'A alternativa CORRETA é: Retirada de água que esteja alterando ou pondo em risco o patrimônio ou vida de pessoa.')">Enviar</button>
+        <div class="explanation" id="explanation-q111"></div>
+    </div>
+    
+    <div class="question" id="question112">
+        <p><strong>10. O que caracteriza a Ocorrência Oc 14?</strong></p>
+        <label><input type="radio" name="q112" value="a"> (a) Ação de resgatar pessoas em perigo.</label><br>
+        <label><input type="radio" name="q112" value="b"> (b) Ação executada com a finalidade de salvar animais.</label><br>
+        <label><input type="radio" name="q112" value="c"> (c) Ação de combate a incêndios.</label><br>
+        <label><input type="radio" name="q112" value="d"> (d) Ação de desobstrução de caminhos.</label><br>
+        <label><input type="radio" name="q112" value="e"> (e) Ação de abastecimento de água potável.</label><br>
+        <button onclick="checkAnswer('q112', 'b', 'A alternativa CORRETA é: Ação executada com a finalidade de salvar animais.')">Enviar</button>
+        <div class="explanation" id="explanation-q112"></div>
+    </div>
+    <div class="question" id="question113">
+        <p><strong>1. O que caracteriza a Ocorrência Oc 24?</strong></p>
+        <label><input type="radio" name="q113" value="a"> (a) Operação de resgate de animais em locais de difícil acesso.</label><br>
+        <label><input type="radio" name="q113" value="b"> (b) Retirada de cadáveres de locais de difícil acesso ou recuperação de bens imóveis.</label><br>
+        <label><input type="radio" name="q113" value="c"> (c) Combate a incêndios em edificações.</label><br>
+        <label><input type="radio" name="q113" value="d"> (d) Busca por pessoas desaparecidas.</label><br>
+        <label><input type="radio" name="q113" value="e"> (e) Limpeza de áreas públicas.</label><br>
+        <button onclick="checkAnswer('q113', 'b', 'A alternativa CORRETA é: Retirada de cadáveres de locais de difícil acesso ou recuperação de bens imóveis.')">Enviar</button>
+        <div class="explanation" id="explanation-q113"></div>
+    </div>
+    
+    <div class="question" id="question114">
+        <p><strong>2. O que caracteriza a Ocorrência Oc 29?</strong></p>
+        <label><input type="radio" name="q114" value="a"> (a) Ação de resgate de pessoas.</label><br>
+        <label><input type="radio" name="q114" value="b"> (b) Procura de pessoas, animais ou coisas, precedendo o resgate ou salvamento.</label><br>
+        <label><input type="radio" name="q114" value="c"> (c) Ação de combate a incêndios.</label><br>
+        <label><input type="radio" name="q114" value="d"> (d) Lavagem de via pública.</label><br>
+        <label><input type="radio" name="q114" value="e"> (e) Ação de patrulhamento em áreas urbanas.</label><br>
+        <button onclick="checkAnswer('q114', 'b', 'A alternativa CORRETA é: Procura de pessoas, animais ou coisas, precedendo o resgate ou salvamento.')">Enviar</button>
+        <div class="explanation" id="explanation-q114"></div>
+    </div>
+    
+    <div class="question" id="question115">
+        <p><strong>3. O que caracteriza a Ocorrência Oc 31?</strong></p>
+        <label><input type="radio" name="q115" value="a"> (a) Ação de limpeza de áreas urbanas.</label><br>
+        <label><input type="radio" name="q115" value="b"> (b) Ação ou operação de lavagem da via pública para a retirada de materiais perigosos.</label><br>
+        <label><input type="radio" name="q115" value="c"> (c) Lavagem de veículos de emergência.</label><br>
+        <label><input type="radio" name="q115" value="d"> (d) Retirada de entulho de obras.</label><br>
+        <label><input type="radio" name="q115" value="e"> (e) Ação de desobstrução de ruas.</label><br>
+        <button onclick="checkAnswer('q115', 'b', 'A alternativa CORRETA é: Ação ou operação de lavagem da via pública para a retirada de materiais perigosos.')">Enviar</button>
+        <div class="explanation" id="explanation-q115"></div>
+    </div>
+    
+    <div class="question" id="question116">
+        <p><strong>4. O que caracteriza a Ocorrência Oc 38?</strong></p>
+        <label><input type="radio" name="q116" value="a"> (a) Ação de extinção de incêndios.</label><br>
+        <label><input type="radio" name="q116" value="b"> (b) Ação ou operação que visa à extinção de um incêndio.</label><br>
+        <label><input type="radio" name="q116" value="c"> (c) Ação de resgate de pessoas em incêndios.</label><br>
+        <label><input type="radio" name="q116" value="d"> (d) Patrulhamento de áreas propensas a incêndios.</label><br>
+        <label><input type="radio" name="q116" value="e"> (e) Limpeza de áreas afetadas por incêndios.</label><br>
+        <button onclick="checkAnswer('q116', 'b', 'A alternativa CORRETA é: Ação ou operação que visa à extinção de um incêndio.')">Enviar</button>
+        <div class="explanation" id="explanation-q116"></div>
+    </div>
+    
+    <div class="question" id="question117">
+        <p><strong>5. O que caracteriza a Ocorrência Oc 40?</strong></p>
+        <label><input type="radio" name="q117" value="a"> (a) Ação de patrulhamento em áreas rurais.</label><br>
+        <label><input type="radio" name="q117" value="b"> (b) Atividade móvel de observação e fiscalização em locais de risco.</label><br>
+        <label><input type="radio" name="q117" value="c"> (c) Inspeção de estabelecimentos comerciais.</label><br>
+        <label><input type="radio" name="q117" value="d"> (d) Ação de resgate de animais.</label><br>
+        <label><input type="radio" name="q117" value="e"> (e) Controle de trânsito em vias públicas.</label><br>
+        <button onclick="checkAnswer('q117', 'b', 'A alternativa CORRETA é: Atividade móvel de observação e fiscalização em locais de risco.')">Enviar</button>
+        <div class="explanation" id="explanation-q117"></div>
+    </div>
+    
+    <div class="question" id="question118">
+        <p><strong>6. O que caracteriza a Ocorrência Oc 43?</strong></p>
+        <label><input type="radio" name="q118" value="a"> (a) Ação de resgate de bens imóveis.</label><br>
+        <label><input type="radio" name="q118" value="b"> (b) Ação em que o policial militar recolhe material oriundo de furto ou roubo.</label><br>
+        <label><input type="radio" name="q118" value="c"> (c) Recuperação de animais abandonados.</label><br>
+        <label><input type="radio" name="q118" value="d"> (d) Lavagem de via pública.</label><br>
+        <label><input type="radio" name="q118" value="e"> (e) Inspeção de estabelecimentos comerciais.</label><br>
+        <button onclick="checkAnswer('q118', 'b', 'A alternativa CORRETA é: Ação em que o policial militar recolhe material oriundo de furto ou roubo.')">Enviar</button>
+        <div class="explanation" id="explanation-q118"></div>
+    </div>
+    
+    <div class="question" id="question119">
+        <p><strong>7. O que caracteriza a Ocorrência Oc 44?</strong></p>
+        <label><input type="radio" name="q119" value="a"> (a) Ação de patrulhamento em áreas urbanas.</label><br>
+        <label><input type="radio" name="q119" value="b"> (b) Todo auxílio essencial ao público, prestado de forma preliminar e não compulsória.</label><br>
+        <label><input type="radio" name="q119" value="c"> (c) Ação de resgate de pessoas em perigo.</label><br>
+        <label><input type="radio" name="q119" value="d"> (d) Combate a incêndios.</label><br>
+        <label><input type="radio" name="q119" value="e"> (e) Controle de trânsito em vias públicas.</label><br>
+        <button onclick="checkAnswer('q119', 'b', 'A alternativa CORRETA é: Todo auxílio essencial ao público, prestado de forma preliminar e não compulsória.')">Enviar</button>
+        <div class="explanation" id="explanation-q119"></div>
+    </div>
+    
+    <div class="question" id="question120">
+        <p><strong>8. O que caracteriza a Ocorrência Oc 48?</strong></p>
+        <label><input type="radio" name="q120" value="a"> (a) Ação de segurança em eventos públicos.</label><br>
+        <label><input type="radio" name="q120" value="b"> (b) Ação que visa à segurança externa de estabelecimentos penais.</label><br>
+        <label><input type="radio" name="q120" value="c"> (c) Ação de resgate de animais em áreas urbanas.</label><br>
+        <label><input type="radio" name="q120" value="d"> (d) Patrulhamento de áreas rurais.</label><br>
+        <label><input type="radio" name="q120" value="e"> (e) Inspeção de estabelecimentos comerciais.</label><br>
+        <button onclick="checkAnswer('q120', 'b', 'A alternativa CORRETA é: Ação que visa à segurança externa de estabelecimentos penais.')">Enviar</button>
+        <div class="explanation" id="explanation-q120"></div>
+    </div>
+    
+    <div class="question" id="question121">
+        <p><strong>9. O que caracteriza a Ocorrência Oc 50?</strong></p>
+        <label><input type="radio" name="q121" value="a"> (a) Ação de controle de trânsito em vias públicas.</label><br>
+        <label><input type="radio" name="q121" value="b"> (b) Inspeção de locais para certificar o estado de segurança.</label><br>
+        <label><input type="radio" name="q121" value="c"> (c) Ação de patrulhamento em áreas urbanas.</label><br>
+        <label><input type="radio" name="q121" value="d"> (d) Ação de resgate de pessoas em perigo.</label><br>
+        <label><input type="radio" name="q121" value="e"> (e) Ação de salvamento de animais.</label><br>
+        <button onclick="checkAnswer('q121', 'b', 'A alternativa CORRETA é: Inspeção de locais para certificar o estado de segurança.')">Enviar</button>
+        <div class="explanation" id="explanation-q121"></div>
+    </div>
+    
+    <div class="question" id="question122">
+        <p><strong>10. O que caracteriza a Ocorrência Oc 52?</strong></p>
+        <label><input type="radio" name="q122" value="a"> (a) Ação de patrulhamento em áreas urbanas.</label><br>
+        <label><input type="radio" name="q122" value="b"> (b) Sinalização realizada para orientar o fluxo de pedestres ou veículos.</label><br>
+        <label><input type="radio" name="q122" value="c"> (c) Ação de combate a incêndios.</label><br>
+        <label><input type="radio" name="q122" value="d"> (d) Ação de salvamento de pessoas em perigo.</label><br>
+        <label><input type="radio" name="q122" value="e"> (e) Lavagem de via pública.</label><br>
+        <button onclick="checkAnswer('q122', 'b', 'A alternativa CORRETA é: Sinalização realizada para orientar o fluxo de pedestres ou veículos.')">Enviar</button>
+        <div class="explanation" id="explanation-q122"></div>
+    </div>
+    <div class="question" id="question123">
+        <p><strong>1. O que caracteriza a Ocorrência Oc 54?</strong></p>
+        <label><input type="radio" name="q123" value="a"> (a) Ação de policiamento em áreas rurais.</label><br>
+        <label><input type="radio" name="q123" value="b"> (b) Ação preventiva realizada em estabelecimentos de ensino para manter a segurança.</label><br>
+        <label><input type="radio" name="q123" value="c"> (c) Policiamento em eventos esportivos.</label><br>
+        <label><input type="radio" name="q123" value="d"> (d) Inspeção de estabelecimentos comerciais.</label><br>
+        <label><input type="radio" name="q123" value="e"> (e) Combate a incêndios em escolas.</label><br>
+        <button onclick="checkAnswer('q123', 'b', 'A alternativa CORRETA é: Ação preventiva realizada em estabelecimentos de ensino para manter a segurança.')">Enviar</button>
+        <div class="explanation" id="explanation-q123"></div>
+    </div>
+    
+    <div class="question" id="question124">
+        <p><strong>2. O que caracteriza a Ocorrência Oc 55?</strong></p>
+        <label><input type="radio" name="q124" value="a"> (a) Ação de policiamento em áreas rurais.</label><br>
+        <label><input type="radio" name="q124" value="b"> (b) Ação preventiva em locais de diversões públicas para manter a ordem pública.</label><br>
+        <label><input type="radio" name="q124" value="c"> (c) Policiamento em eventos esportivos.</label><br>
+        <label><input type="radio" name="q124" value="d"> (d) Ação de patrulhamento em escolas.</label><br>
+        <label><input type="radio" name="q124" value="e"> (e) Inspeção de estabelecimentos comerciais.</label><br>
+        <button onclick="checkAnswer('q124', 'b', 'A alternativa CORRETA é: Ação preventiva em locais de diversões públicas para manter a ordem pública.')">Enviar</button>
+        <div class="explanation" id="explanation-q124"></div>
+    </div>
+    
+    <div class="question" id="question125">
+        <p><strong>3. O que caracteriza a Ocorrência Oc 56?</strong></p>
+        <label><input type="radio" name="q125" value="a"> (a) Ação de policiamento em praças desportivas.</label><br>
+        <label><input type="radio" name="q125" value="b"> (b) Ação preventiva em desfiles, passeatas, solenidades e procissões para manter a ordem pública.</label><br>
+        <label><input type="radio" name="q125" value="c"> (c) Ação de combate a incêndios em eventos públicos.</label><br>
+        <label><input type="radio" name="q125" value="d"> (d) Inspeção de estabelecimentos comerciais.</label><br>
+        <label><input type="radio" name="q125" value="e"> (e) Ação de patrulhamento em escolas.</label><br>
+        <button onclick="checkAnswer('q125', 'b', 'A alternativa CORRETA é: Ação preventiva em desfiles, passeatas, solenidades e procissões para manter a ordem pública.')">Enviar</button>
+        <div class="explanation" id="explanation-q125"></div>
+    </div>
+    
+    <div class="question" id="question126">
+        <p><strong>4. O que caracteriza a Ocorrência Oc 57?</strong></p>
+        <label><input type="radio" name="q126" value="a"> (a) Policiamento em praças desportivas para manter a ordem pública.</label><br>
+        <label><input type="radio" name="q126" value="b"> (b) Ação de patrulhamento em áreas urbanas.</label><br>
+        <label><input type="radio" name="q126" value="c"> (c) Inspeção de estabelecimentos comerciais.</label><br>
+        <label><input type="radio" name="q126" value="d"> (d) Ação de resgate de pessoas em perigo.</label><br>
+        <label><input type="radio" name="q126" value="e"> (e) Combate a incêndios em eventos esportivos.</label><br>
+        <button onclick="checkAnswer('q126', 'a', 'A alternativa CORRETA é: Policiamento em praças desportivas para manter a ordem pública.')">Enviar</button>
+        <div class="explanation" id="explanation-q126"></div>
+    </div>
+    
+    <div class="question" id="question127">
+        <p><strong>5. O que caracteriza a Ocorrência Oc 59?</strong></p>
+        <label><input type="radio" name="q127" value="a"> (a) Ação de policiamento em locais de diversões públicas.</label><br>
+        <label><input type="radio" name="q127" value="b"> (b) Ação preventiva realizada para manter a preservação de locais interditos.</label><br>
+        <label><input type="radio" name="q127" value="c"> (c) Ação de combate a incêndios em áreas rurais.</label><br>
+        <label><input type="radio" name="q127" value="d"> (d) Ação de resgate de pessoas em perigo.</label><br>
+        <label><input type="radio" name="q127" value="e"> (e) Ação de patrulhamento em escolas.</label><br>
+        <button onclick="checkAnswer('q127', 'b', 'A alternativa CORRETA é: Ação preventiva realizada para manter a preservação de locais interditos.')">Enviar</button>
+        <div class="explanation" id="explanation-q127"></div>
+    </div>
+    
+    <div class="question" id="question128">
+        <p><strong>6. O que caracteriza a Ocorrência Oc 60?</strong></p>
+        <label><input type="radio" name="q128" value="a"> (a) Custódia de bens em eventos públicos.</label><br>
+        <label><input type="radio" name="q128" value="b"> (b) Escolta de pessoas ou bens em deslocamento e diligências de busca e apreensão.</label><br>
+        <label><input type="radio" name="q128" value="c"> (c) Ação de policiamento em áreas rurais.</label><br>
+        <label><input type="radio" name="q128" value="d"> (d) Ação de combate a incêndios.</label><br>
+        <label><input type="radio" name="q128" value="e"> (e) Inspeção de estabelecimentos comerciais.</label><br>
+        <button onclick="checkAnswer('q128', 'b', 'A alternativa CORRETA é: Escolta de pessoas ou bens em deslocamento e diligências de busca e apreensão.')">Enviar</button>
+        <div class="explanation" id="explanation-q128"></div>
+    </div>
+    
+    <div class="question" id="question129">
+        <p><strong>7. O que caracteriza a Ocorrência Oc 61?</strong></p>
+        <label><input type="radio" name="q129" value="a"> (a) Ação de resgate de animais.</label><br>
+        <label><input type="radio" name="q129" value="b"> (b) Ações preventivas realizadas por bombeiros.</label><br>
+        <label><input type="radio" name="q129" value="c"> (c) Policiamento em eventos esportivos.</label><br>
+        <label><input type="radio" name="q129" value="d"> (d) Inspeção de estabelecimentos comerciais.</label><br>
+        <label><input type="radio" name="q129" value="e"> (e) Ação de combate a incêndios.</label><br>
+        <button onclick="checkAnswer('q129', 'b', 'A alternativa CORRETA é: Ações preventivas realizadas por bombeiros.')">Enviar</button>
+        <div class="explanation" id="explanation-q129"></div>
+    </div>
+    
+    <div class="question" id="question130">
+        <p><strong>8. O que caracteriza a Ocorrência Oc 63?</strong></p>
+        <label><input type="radio" name="q130" value="a"> (a) Ação de resgate de pessoas em perigo.</label><br>
+        <label><input type="radio" name="q130" value="b"> (b) Conjugação de ações de policiamento ostensivo para cumprir missões específicas.</label><br>
+        <label><input type="radio" name="q130" value="c"> (c) Policiamento em praças desportivas.</label><br>
+        <label><input type="radio" name="q130" value="d"> (d) Ação de combate a incêndios em áreas rurais.</label><br>
+        <label><input type="radio" name="q130" value="e"> (e) Inspeção de estabelecimentos comerciais.</label><br>
+        <button onclick="checkAnswer('q130', 'b', 'A alternativa CORRETA é: Conjugação de ações de policiamento ostensivo para cumprir missões específicas.')">Enviar</button>
+        <div class="explanation" id="explanation-q130"></div>
+    </div>
+    
+    <div class="question" id="question131">
+        <p><strong>9. O que caracteriza a Ocorrência Oc 66?</strong></p>
+        <label><input type="radio" name="q131" value="a"> (a) Ação de resgate de pessoas em perigo.</label><br>
+        <label><input type="radio" name="q131" value="b"> (b) Necessidade de emprego de outros policiais para efetivar a segurança em uma ocorrência.</label><br>
+        <label><input type="radio" name="q131" value="c"> (c) Ação de combate a incêndios.</label><br>
+        <label><input type="radio" name="q131" value="d"> (d) Ação de patrulhamento em escolas.</label><br>
+        <label><input type="radio" name="q131" value="e"> (e) Inspeção de estabelecimentos comerciais.</label><br>
+        <button onclick="checkAnswer('q131', 'b', 'A alternativa CORRETA é: Necessidade de emprego de outros policiais para efetivar a segurança em uma ocorrência.')">Enviar</button>
+        <div class="explanation" id="explanation-q131"></div>
+    </div>
+    <div class="question" id="question132">
+        <p><strong>1. O que caracteriza a Ocorrência Oc 06?</strong></p>
+        <label><input type="radio" name="q132" value="a"> (a) Ação de patrulhamento em áreas urbanas.</label><br>
+        <label><input type="radio" name="q132" value="b"> (b) Retirada de veículos automotores de circulação por infrações ou envolvimento em crimes.</label><br>
+        <label><input type="radio" name="q132" value="c"> (c) Ação de resgate de pessoas em perigo.</label><br>
+        <label><input type="radio" name="q132" value="d"> (d) Inspeção de estabelecimentos comerciais.</label><br>
+        <label><input type="radio" name="q132" value="e"> (e) Ação de combate a incêndios em áreas urbanas.</label><br>
+        <button onclick="checkAnswer('q132', 'b', 'A alternativa CORRETA é: Retirada de veículos automotores de circulação por infrações ou envolvimento em crimes.')">Enviar</button>
+        <div class="explanation" id="explanation-q132"></div>
+    </div>
+    
+    <div class="question" id="question133">
+        <p><strong>2. O que caracteriza a Ocorrência Oc 13?</strong></p>
+        <label><input type="radio" name="q133" value="a"> (a) Ação de policiamento em locais de diversões públicas.</label><br>
+        <label><input type="radio" name="q133" value="b"> (b) Ato de desarmar pessoas que portam armas sem permissão legal.</label><br>
+        <label><input type="radio" name="q133" value="c"> (c) Ação de resgate de animais em perigo.</label><br>
+        <label><input type="radio" name="q133" value="d"> (d) Policiamento em eventos esportivos.</label><br>
+        <label><input type="radio" name="q133" value="e"> (e) Inspeção de estabelecimentos comerciais.</label><br>
+        <button onclick="checkAnswer('q133', 'b', 'A alternativa CORRETA é: Ato de desarmar pessoas que portam armas sem permissão legal.')">Enviar</button>
+        <div class="explanation" id="explanation-q133"></div>
+    </div>
+    
+    <div class="question" id="question134">
+        <p><strong>3. O que caracteriza a Ocorrência Oc 18?</strong></p>
+        <label><input type="radio" name="q134" value="a"> (a) Encaminhamento de doentes a hospitais.</label><br>
+        <label><input type="radio" name="q134" value="b"> (b) Encaminhamento de pessoas incapacitadas para instituições de apoio.</label><br>
+        <label><input type="radio" name="q134" value="c"> (c) Policiamento em locais de diversões públicas.</label><br>
+        <label><input type="radio" name="q134" value="d"> (d) Ação de combate a incêndios em áreas urbanas.</label><br>
+        <label><input type="radio" name="q134" value="e"> (e) Ação de patrulhamento em escolas.</label><br>
+        <button onclick="checkAnswer('q134', 'b', 'A alternativa CORRETA é: Encaminhamento de pessoas incapacitadas para instituições de apoio.')">Enviar</button>
+        <div class="explanation" id="explanation-q134"></div>
+    </div>
+    
+    <div class="question" id="question135">
+        <p><strong>4. O que caracteriza a Ocorrência Oc 20?</strong></p>
+        <label><input type="radio" name="q135" value="a"> (a) Policiamento em áreas rurais.</label><br>
+        <label><input type="radio" name="q135" value="b"> (b) Investigação para apurar a veracidade de informações sobre fatos irregulares.</label><br>
+        <label><input type="radio" name="q135" value="c"> (c) Ação de combate a incêndios em áreas urbanas.</label><br>
+        <label><input type="radio" name="q135" value="d"> (d) Ação de resgate de pessoas em perigo.</label><br>
+        <label><input type="radio" name="q135" value="e"> (e) Inspeção de estabelecimentos comerciais.</label><br>
+        <button onclick="checkAnswer('q135', 'b', 'A alternativa CORRETA é: Investigação para apurar a veracidade de informações sobre fatos irregulares.')">Enviar</button>
+        <div class="explanation" id="explanation-q135"></div>
+    </div>
+    
+    <div class="question" id="question136">
+        <p><strong>5. O que caracteriza a Ocorrência Oc 21?</strong></p>
+        <label><input type="radio" name="q136" value="a"> (a) Policiamento em estabelecimentos de ensino.</label><br>
+        <label><input type="radio" name="q136" value="b"> (b) Policiamento específico em locais que exigem presença policial.</label><br>
+        <label><input type="radio" name="q136" value="c"> (c) Ação de combate a incêndios.</label><br>
+        <label><input type="radio" name="q136" value="d"> (d) Ação de resgate de animais em perigo.</label><br>
+        <label><input type="radio" name="q136" value="e"> (e) Inspeção de estabelecimentos comerciais.</label><br>
+        <button onclick="checkAnswer('q136', 'b', 'A alternativa CORRETA é: Policiamento específico em locais que exigem presença policial.')">Enviar</button>
+        <div class="explanation" id="explanation-q136"></div>
+    </div>
+    
+    <div class="question" id="question137">
+        <p><strong>6. O que caracteriza a Ocorrência Oc 35?</strong></p>
+        <label><input type="radio" name="q137" value="a"> (a) Encaminhamento de menor extraviado.</label><br>
+        <label><input type="radio" name="q137" value="b"> (b) Encaminhamento de menores envolvidos em fatos irregulares.</label><br>
+        <label><input type="radio" name="q137" value="c"> (c) Ação de combate a incêndios.</label><br>
+        <label><input type="radio" name="q137" value="d"> (d) Policiamento em eventos esportivos.</label><br>
+        <label><input type="radio" name="q137" value="e"> (e) Inspeção de estabelecimentos comerciais.</label><br>
+        <button onclick="checkAnswer('q137', 'b', 'A alternativa CORRETA é: Encaminhamento de menores envolvidos em fatos irregulares.')">Enviar</button>
+        <div class="explanation" id="explanation-q137"></div>
+    </div>
+    
+    <div class="question" id="question138">
+        <p><strong>7. O que caracteriza a Ocorrência Oc 42?</strong></p>
+        <label><input type="radio" name="q138" value="a"> (a) Advertência verbal para mudança de conduta.</label><br>
+        <label><input type="radio" name="q138" value="b"> (b) Ação de combate a incêndios.</label><br>
+        <label><input type="radio" name="q138" value="c"> (c) Policiamento em locais de diversões públicas.</label><br>
+        <label><input type="radio" name="q138" value="d"> (d) Inspeção de estabelecimentos comerciais.</label><br>
+        <label><input type="radio" name="q138" value="e"> (e) Ação de resgate de pessoas em perigo.</label><br>
+        <button onclick="checkAnswer('q138', 'a', 'A alternativa CORRETA é: Advertência verbal para mudança de conduta.')">Enviar</button>
+        <div class="explanation" id="explanation-q138"></div>
+    </div>
+    
+    <div class="question" id="question139">
+        <p><strong>8. O que caracteriza a Ocorrência Oc 45?</strong></p>
+        <label><input type="radio" name="q139" value="a"> (a) Reunião de partes para instrução sobre procedimentos legais.</label><br>
+        <label><input type="radio" name="q139" value="b"> (b) Ação de combate a incêndios.</label><br>
+        <label><input type="radio" name="q139" value="c"> (c) Policiamento em eventos esportivos.</label><br>
+        <label><input type="radio" name="q139" value="d"> (d) Inspeção de estabelecimentos comerciais.</label><br>
+        <label><input type="radio" name="q139" value="e"> (e) Ação de resgate de pessoas em perigo.</label><br>
+        <button onclick="checkAnswer('q139', 'a', 'A alternativa CORRETA é: Reunião de partes para instrução sobre procedimentos legais.')">Enviar</button>
+        <div class="explanation" id="explanation-q139"></div>
+    </div>
+                    
+    
+    
+        
+
+    
+    
+    </body>
+    </html>
+
+    
+
+
+
+
+    
+ 
+    
+    
+    
+        
+    
+
+</div>
+<img id="lossImage" class="loss-image" src="img/loss.png" alt="Erro" style="display:none;">
+<script>
+
+
+    function checkAnswer(questionId, correctAnswer, explanation) {
+        const selectedOption = document.querySelector(`input[name="${questionId}"]:checked`);
+        const explanationDiv = document.getElementById(`explanation-${questionId}`);
+        const lossImage = document.getElementById('lossImage'); // Obter a imagem de erro
+
+        if (!selectedOption) {
+            explanationDiv.innerHTML = "Por favor, selecione uma opção.";
+            explanationDiv.className = "explanation";
+            return;
+        }
+
+        const userAnswer = selectedOption.value;
+        if (userAnswer === correctAnswer) {
+            explanationDiv.innerHTML = `<span class="result correct">Resposta correta!</span> ${explanation}`;
+            lossImage.style.display = "none"; // Esconder a imagem de erro
+        } else {
+            lossImage.style.display = "inline"; // Mostrar a imagem de erro
+            explanationDiv.innerHTML = `<span class="result wrong">Resposta incorreta.</span> ${explanation} ${lossImage.outerHTML}`;
+        }
+        explanationDiv.className = "explanation";
+    }
+</script>
+
+</body>
+</html>
