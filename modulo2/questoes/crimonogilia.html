@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Questões</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: white;
+        }
+
+        header {
+            background-color: #6200EA;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            color: #FFFFFF;
+            font-size: 2.5rem;
+        }
+
+        .summary-button {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            background-color: #03DAC5;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .summary-button:hover {
+            background-color: #018786;
+            color: white;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .question-box {
+            background-color: #1E1E1E;
+            border: 2px solid #03DAC5;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        .question-box h2 {
+            color: #03DAC5;
+        }
+
+        .explanation {
+            background-color: #333;
+            border-left: 4px solid #FF0266;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .explanation h3 {
+            color: #FF0266;
+            margin: 0;
+        }
+
+        .button {
+            background-color: #03DAC5;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #018786;
+            color: white;
+        }
+
+        footer {
+            background-color: #6200EA;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            color: white;
+            font-size: 0.9rem;
+        }
+    </style>
+    <script>
+        function verificarResposta() {
+            const explanation = document.querySelector('.explanation');
+            explanation.style.display = 'block';
+        }
+
+        function mostrarResumo() {
+            alert('Esta função exibirá um resumo dos conteúdos abordados.');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Questões Fundamentos da Gestão Pública</h1>
+        <a href="/modulo2/resumos/fundamentosjuridicos2-resumos.html"> <button class="summary-button" >Conteúdo Fundamentos Juridicos</button></a>
+    </header>
+
+    <div class="question-box">
+        <h2>O que a criminologia estuda, conforme o conceito de Antonio García-Pablos de Molina?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q148a1" name="q148" value="a"> Estuda apenas o crime, sem considerar a vítima ou o infrator.</li>
+            <li><input type="radio" id="q148a2" name="q148" value="b"> Estuda o crime, a pessoa do infrator, a vítima e o controle social do comportamento delitivo.</li>
+            <li><input type="radio" id="q148a3" name="q148" value="c"> Estuda unicamente o comportamento da vítima e a resposta social ao crime.</li>
+            <li><input type="radio" id="q148a4" name="q148" value="d"> Estuda a pena e a punição dos criminosos, focando exclusivamente nas técnicas de intervenção.</li>
+        </ul>
+        <div class="explanation" id="explanation-q148">
+            <h3>Explicação:</h3>
+            <p>Segundo Antonio García-Pablos de Molina, a criminologia estuda o crime, o infrator, a vítima e o controle social do comportamento delitivo, sendo uma ciência interdisciplinar e empírica.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q148', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Como a criminologia vê o crime, de acordo com o conceito de Antonio García-Pablos de Molina?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q149a1" name="q149" value="a"> O crime é visto como um problema exclusivamente individual.</li>
+            <li><input type="radio" id="q149a2" name="q149" value="b"> O crime é considerado um fenômeno comunitário, um problema social.</li>
+            <li><input type="radio" id="q149a3" name="q149" value="c"> O crime é visto como uma falha do sistema de justiça apenas.</li>
+            <li><input type="radio" id="q149a4" name="q149" value="d"> O crime é visto como uma consequência inevitável da sociedade moderna.</li>
+        </ul>
+        <div class="explanation" id="explanation-q149">
+            <h3>Explicação:</h3>
+            <p>De acordo com García-Pablos de Molina, a criminologia vê o crime como um problema social, ou seja, um fenômeno comunitário, que deve ser compreendido dentro do contexto social em que ocorre.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q149', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual a principal finalidade da criminologia, conforme a definição de Antonio García-Pablos de Molina?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q150a1" name="q150" value="a"> A criminologia busca exclusivamente a punição do criminoso.</li>
+            <li><input type="radio" id="q150a2" name="q150" value="b"> A criminologia visa combater a criminalidade por meio de métodos preventivos.</li>
+            <li><input type="radio" id="q150a3" name="q150" value="c"> A criminologia é focada em estudar apenas as causas do crime, sem se preocupar com a prevenção.</li>
+            <li><input type="radio" id="q150a4" name="q150" value="d"> A criminologia apenas estuda a relação entre crime e punição, sem se preocupar com a vítima.</li>
+        </ul>
+        <div class="explanation" id="explanation-q150">
+            <h3>Explicação:</h3>
+            <p>A criminologia tem como finalidade combater a criminalidade por meio de métodos preventivos, considerando o crime como um problema social e buscando abordagens interdisciplinares para a prevenção.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q150', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>Qual é o método utilizado pela criminologia, conforme explicado no conteúdo?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q151a1" name="q151" value="a"> A criminologia utiliza um método dedutivo, baseado em premissas corretas para deduzir conclusões.</li>
+            <li><input type="radio" id="q151a2" name="q151" value="b"> A criminologia utiliza um método empírico e indutivo, analisando dados e experiências para chegar a conclusões.</li>
+            <li><input type="radio" id="q151a3" name="q151" value="c"> A criminologia utiliza apenas o método dedutivo, sem a necessidade de dados e observações.</li>
+            <li><input type="radio" id="q151a4" name="q151" value="d"> A criminologia utiliza o método hipotético-dedutivo para suas análises.</li>
+        </ul>
+        <div class="explanation" id="explanation-q151">
+            <h3>Explicação:</h3>
+            <p>A criminologia utiliza um método empírico e indutivo, baseado na análise de dados, experiências e observações sociais para chegar a conclusões, em contraste com o método dedutivo do direito.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q151', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual foi a principal mudança no objeto de estudo da criminologia na fase científica?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q152a1" name="q152" value="a"> O objeto de estudo passou a ser apenas o crime e o criminoso.</li>
+            <li><input type="radio" id="q152a2" name="q152" value="b"> O objeto de estudo passou a incluir quatro vetores: crime, criminoso, vítima e controle social.</li>
+            <li><input type="radio" id="q152a3" name="q152" value="c"> O objeto de estudo passou a ser exclusivamente o controle social.</li>
+            <li><input type="radio" id="q152a4" name="q152" value="d"> O objeto de estudo passou a ser focado apenas na vítima e no criminoso.</li>
+        </ul>
+        <div class="explanation" id="explanation-q152">
+            <h3>Explicação:</h3>
+            <p>Na fase científica, o objeto de estudo da criminologia se expandiu para incluir quatro vetores: crime, criminoso, vítima e controle social, ao contrário da fase pré-científica, que se limitava ao crime e ao criminoso.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q152', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual a principal diferença entre o operador do direito e o criminólogo, conforme o método utilizado?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q153a1" name="q153" value="a"> O operador do direito utiliza o método empírico, enquanto o criminólogo utiliza o método dedutivo.</li>
+            <li><input type="radio" id="q153a2" name="q153" value="b"> O operador do direito utiliza o método dedutivo, enquanto o criminólogo utiliza o método indutivo, baseado em dados e observações.</li>
+            <li><input type="radio" id="q153a3" name="q153" value="c"> O operador do direito e o criminólogo utilizam os mesmos métodos, com as mesmas premissas e conclusões.</li>
+            <li><input type="radio" id="q153a4" name="q153" value="d"> O operador do direito utiliza o método indutivo, enquanto o criminólogo utiliza o método dedutivo.</li>
+        </ul>
+        <div class="explanation" id="explanation-q153">
+            <h3>Explicação:</h3>
+            <p>A principal diferença é que o operador do direito utiliza o método dedutivo, partindo de premissas para deduzir conclusões, enquanto o criminólogo utiliza o método indutivo, baseado na análise de dados e observações.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q153', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>Segundo Platão, o crime é visto como:</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q154a1" name="q154" value="a"> Um comportamento isolado sem relação com as paixões humanas.</li>
+            <li><input type="radio" id="q154a2" name="q154" value="b"> Um sintoma de uma doença causada pelas paixões, a procura do prazer e a ignorância.</li>
+            <li><input type="radio" id="q154a3" name="q154" value="c"> Um fenômeno determinado unicamente pela genética do indivíduo.</li>
+            <li><input type="radio" id="q154a4" name="q154" value="d"> Uma reação natural do ser humano frente às adversidades da vida.</li>
+        </ul>
+        <div class="explanation" id="explanation-q154">
+            <h3>Explicação:</h3>
+            <p>Platão via o crime como um sintoma de uma doença causada por paixões humanas, como inveja, ciúme, ambição e cólera, além da procura do prazer e da ignorância.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q154', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual é a visão da criminologia moderna sobre o fenômeno criminoso?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q155a1" name="q155" value="a"> O fenômeno criminoso é explicado exclusivamente por fatores biológicos, sem considerar o ambiente social ou psicológico.</li>
+            <li><input type="radio" id="q155a2" name="q155" value="b"> O fenômeno criminoso é uma interação biopsicossocial, considerando aspectos biológicos, psicológicos e sociais.</li>
+            <li><input type="radio" id="q155a3" name="q155" value="c"> O fenômeno criminoso é determinado apenas por fatores psicológicos, sem influência biológica ou social.</li>
+            <li><input type="radio" id="q155a4" name="q155" value="d"> O fenômeno criminoso é um fenômeno puramente social, sem qualquer relação com fatores biológicos ou psicológicos.</li>
+        </ul>
+        <div class="explanation" id="explanation-q155">
+            <h3>Explicação:</h3>
+            <p>A criminologia moderna adota uma visão biopsicossocial do crime, considerando a interação entre fatores biológicos, psicológicos e sociais como determinantes do comportamento criminoso.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q155', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>De acordo com Platão, qual seria a função da pena?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q156a1" name="q156" value="a"> A pena tem a função de punir o criminoso e evitar futuros delitos.</li>
+            <li><input type="radio" id="q156a2" name="q156" value="b"> A pena é um remédio destinado a libertar o delinquente do mal, podendo eliminar a causa do crime se o delinquente for receptivo ao tratamento.</li>
+            <li><input type="radio" id="q156a3" name="q156" value="c"> A pena tem como objetivo reintegrar o criminoso à sociedade sem foco no tratamento da causa do crime.</li>
+            <li><input type="radio" id="q156a4" name="q156" value="d"> A pena é um castigo necessário para corrigir o comportamento do delinquente.</li>
+        </ul>
+        <div class="explanation" id="explanation-q156">
+            <h3>Explicação:</h3>
+            <p>Platão via a pena como um remédio destinado a libertar o delinquente do mal, tratando as causas do crime, como paixões e ignorância, e podendo eliminar o crime se o delinquente aceitar o tratamento.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q156', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>Qual é a visão atual do criminoso, segundo o conteúdo?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q157a1" name="q157" value="a"> O criminoso é visto como um animal selvagem, incapaz de seguir as leis.</li>
+            <li><input type="radio" id="q157a2" name="q157" value="b"> O criminoso é visto como um pecador que transgride as leis por motivos morais.</li>
+            <li><input type="radio" id="q157a3" name="q157" value="c"> O criminoso é considerado um homem real, com razões para não cumprir as leis que podem ser difíceis de entender para os outros.</li>
+            <li><input type="radio" id="q157a4" name="q157" value="d"> O criminoso é visto como uma vítima das condições sociais, sem responsabilidade pelos seus atos.</li>
+        </ul>
+        <div class="explanation" id="explanation-q157">
+            <h3>Explicação:</h3>
+            <p>A visão atual do criminoso considera-o um homem real, com razões para não cumprir as leis, e não como um animal selvagem ou um pecador, como era visto nas correntes clássica e positivista.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q157', 'c')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>O que caracteriza uma vítima, conforme a definição apresentada no conteúdo?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q158a1" name="q158" value="a"> A vítima é qualquer pessoa que sofre danos apenas materiais devido a desastres naturais.</li>
+            <li><input type="radio" id="q158a2" name="q158" value="b"> A vítima é qualquer pessoa natural que tenha sofrido danos físicos, emocionais ou materiais, causados diretamente por um crime ou outras situações como desastres naturais.</li>
+            <li><input type="radio" id="q158a3" name="q158" value="c"> A vítima é qualquer pessoa que tenha sido prejudicada apenas por atos infracionais menores, como infrações de trânsito.</li>
+            <li><input type="radio" id="q158a4" name="q158" value="d"> A vítima é apenas a pessoa que sofre danos materiais causados por crimes financeiros.</li>
+        </ul>
+        <div class="explanation" id="explanation-q158">
+            <h3>Explicação:</h3>
+            <p>Conforme a definição apresentada, a vítima é qualquer pessoa que tenha sofrido danos físicos, emocionais ou materiais devido a crimes, atos infracionais, calamidades públicas, desastres naturais ou graves violações de direitos humanos.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q158', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual é a principal diferença na visão do criminoso entre a criminologia moderna e as abordagens clássicas e positivistas?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q159a1" name="q159" value="a"> A criminologia moderna vê o criminoso como um ser insensível à razão, enquanto as abordagens clássicas o viam como um pecador moral.</li>
+            <li><input type="radio" id="q159a2" name="q159" value="b"> A criminologia moderna vê o criminoso como um ser normal, não sendo definido apenas pelas paixões ou por condições sociais extremas, mas um ser com razões e um contexto que precisam ser compreendidos.</li>
+            <li><input type="radio" id="q159a3" name="q159" value="c"> A criminologia moderna vê o criminoso como um coitado, que deve ser tratado com leniência, independentemente do seu comportamento.</li>
+            <li><input type="radio" id="q159a4" name="q159" value="d"> A criminologia moderna vê o criminoso como uma vítima da filosofia marxista, sem qualquer responsabilidade sobre seus atos.</li>
+        </ul>
+        <div class="explanation" id="explanation-q159">
+            <h3>Explicação:</h3>
+            <p>A criminologia moderna vê o criminoso como um ser normal, cujos motivos e contexto devem ser compreendidos, ao contrário das abordagens clássicas e positivistas, que o viam como um pecador ou um ser insensível.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q159', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>De acordo com Sérgio Salomão Sechaira, citando Max Weber, qual é a principal função dos mecanismos disciplinares em uma sociedade?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q160a1" name="q160" value="a"> Garantir a punição de indivíduos que transgridem as normas sociais.</li>
+            <li><input type="radio" id="q160a2" name="q160" value="b"> Assegurar a convivência interna de seus membros e garantir a conformidade com os objetivos sociais.</li>
+            <li><input type="radio" id="q160a3" name="q160" value="c"> Impor regras de comportamento sem considerar os objetivos sociais da sociedade.</li>
+            <li><input type="radio" id="q160a4" name="q160" value="d"> Promover a liberdade individual sem interferir nos modelos de convivência social.</li>
+        </ul>
+        <div class="explanation" id="explanation-q160">
+            <h3>Explicação:</h3>
+            <p>Max Weber, citado por Sérgio Salomão Sechaira, defende que os mecanismos disciplinares em uma sociedade servem para assegurar a convivência interna de seus membros e garantir a conformidade com os objetivos sociais estabelecidos.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q160', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>O que é o controle social, conforme a definição apresentada?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q161a1" name="q161" value="a"> O controle social é um conjunto de normas que visam limitar a liberdade dos indivíduos em sociedade.</li>
+            <li><input type="radio" id="q161a2" name="q161" value="b"> O controle social é um conjunto de instituições, estratégias e sanções sociais que visam promover a submissão dos indivíduos aos modelos e normas de convivência social.</li>
+            <li><input type="radio" id="q161a3" name="q161" value="c"> O controle social é um mecanismo que só existe para punir comportamentos desviantes em uma sociedade.</li>
+            <li><input type="radio" id="q161a4" name="q161" value="d"> O controle social é uma forma de impor o pensamento único entre os membros da sociedade.</li>
+        </ul>
+        <div class="explanation" id="explanation-q161">
+            <h3>Explicação:</h3>
+            <p>O controle social é definido como o conjunto de instituições, estratégias e sanções sociais que buscam promover a submissão dos indivíduos às normas e modelos de convivência social.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q161', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Segundo a definição de controle social, qual é a principal função das instituições e sanções sociais?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q162a1" name="q162" value="a"> Impor severas punições aos membros da sociedade para garantir a disciplina.</li>
+            <li><input type="radio" id="q162a2" name="q162" value="b"> Garantir a submissão dos indivíduos aos modelos e normas de convivência social.</li>
+            <li><input type="radio" id="q162a3" name="q162" value="c"> Estabelecer liberdade total de comportamento, sem impor normas ou sanções.</li>
+            <li><input type="radio" id="q162a4" name="q162" value="d"> Exercer controle absoluto sobre as ações dos indivíduos sem levar em conta as leis sociais.</li>
+        </ul>
+        <div class="explanation" id="explanation-q162">
+            <h3>Explicação:</h3>
+            <p>A principal função das instituições e sanções sociais é garantir a submissão dos indivíduos aos modelos e normas de convivência social, promovendo uma ordem interna dentro da sociedade.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q162', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>Como é interpretada a secularização por alguns autores, de acordo com o texto?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q163a1" name="q163" value="a"> Como um retorno ao poder da religião sobre o Estado e a sociedade.</li>
+            <li><input type="radio" id="q163a2" name="q163" value="b"> Como uma crítica moderna à religião, buscando compreender o mundo pela razão em vez de mitos ou religião.</li>
+            <li><input type="radio" id="q163a3" name="q163" value="c"> Como o fortalecimento da fé religiosa e do mistério transcendente sobre a razão humana.</li>
+            <li><input type="radio" id="q163a4" name="q163" value="d"> Como uma simples substituição da religião pela filosofia, sem impacto sobre as instituições sociais.</li>
+        </ul>
+        <div class="explanation" id="explanation-q163">
+            <h3>Explicação:</h3>
+            <p>A secularização é interpretada como uma crítica moderna à religião, onde a sociedade busca compreender o mundo pela razão, em oposição aos mitos e à religião.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q163', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>O que os contratualistas John Locke, Thomas Hobbes e Jean-Jacques Rousseau defenderam em relação ao Estado e à razão?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q164a1" name="q164" value="a"> Defendiam que o Estado deveria ser governado pela religião e pelos princípios canônicos.</li>
+            <li><input type="radio" id="q164a2" name="q164" value="b"> Sustentavam que o direito do Estado se fundamenta na razão, opunham-se ao direito romano e canônico.</li>
+            <li><input type="radio" id="q164a3" name="q164" value="c"> Propunham a retribuição de pena como um princípio moral divino, em conformidade com a lei natural.</li>
+            <li><input type="radio" id="q164a4" name="q164" value="d"> Acreditavam que o Estado não deveria ter nenhum fundamento lógico, apenas de força.</li>
+        </ul>
+        <div class="explanation" id="explanation-q164">
+            <h3>Explicação:</h3>
+            <p>Os contratualistas defenderam que o direito do Estado se baseia na razão e se opunham ao direito romano e canônico, com foco na utilidade comum da pena.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q164', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual foi o impacto da secularização no conceito de pena, de acordo com os contratualistas?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q165a1" name="q165" value="a"> A pena passou a ser vista como um castigo divino destinado a purificar o indivíduo.</li>
+            <li><input type="radio" id="q165a2" name="q165" value="b"> A pena passou a ter um fim de utilidade comum, não mais sendo retributiva, mas preventiva e corretiva.</li>
+            <li><input type="radio" id="q165a3" name="q165" value="c"> A pena passou a ser tratada como uma questão de moralidade pública, sem foco em utilidade ou prevenção.</li>
+            <li><input type="radio" id="q165a4" name="q165" value="d"> A pena foi abolida como conceito jurídico e passou a ser considerada irrelevante para o Estado.</li>
+        </ul>
+        <div class="explanation" id="explanation-q165">
+            <h3>Explicação:</h3>
+            <p>A secularização e a teoria do contrato social influenciaram a concepção de pena, que passou a ser vista como uma medida de utilidade comum, visando a prevenção e correção, em vez de ser meramente retributiva.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q165', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>O que caracteriza o período do Iluminismo, conforme descrito no texto?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q166a1" name="q166" value="a"> Um movimento que prioriza a tradição e a religião como fontes do conhecimento e da razão.</li>
+            <li><input type="radio" id="q166a2" name="q166" value="b"> Um período marcado pela busca do conhecimento empírico e pelo posicionamento do homem como centro do mundo.</li>
+            <li><input type="radio" id="q166a3" name="q166" value="c"> Um movimento que se opõe ao conhecimento científico e prioriza as descobertas metafísicas.</li>
+            <li><input type="radio" id="q166a4" name="q166" value="d"> Um período onde a filosofia medieval e religiosa ainda dominam o pensamento humano.</li>
+        </ul>
+        <div class="explanation" id="explanation-q166">
+            <h3>Explicação:</h3>
+            <p>O Iluminismo é caracterizado pela ênfase no conhecimento empírico e pela ideia de que o homem, ao possuir conhecimento, detém poder.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q166', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual foi a principal contribuição de Cesare Beccaria para o direito penal, conforme a obra "Dos Delitos e das Penas"?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q167a1" name="q167" value="a"> A defesa da pena de morte como um meio eficaz de prevenção do crime.</li>
+            <li><input type="radio" id="q167a2" name="q167" value="b"> A crítica ao arbítrio legislativo e judicial, propondo leis claras e a abolição da tortura.</li>
+            <li><input type="radio" id="q167a3" name="q167" value="c"> A defesa de punições severas como forma de educação moral para a sociedade.</li>
+            <li><input type="radio" id="q167a4" name="q167" value="d"> A criação de normas penais que permitissem uma interpretação livre pelos juízes.</li>
+        </ul>
+        <div class="explanation" id="explanation-q167">
+            <h3>Explicação:</h3>
+            <p>Beccaria defendeu a limitação do arbítrio legislativo e judicial, a proibição da tortura, e a necessidade de leis claras e precisas, sem margem para interpretações dos juízes.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q167', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>O que significa a crítica de Beccaria às "normas penais em branco"?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q168a1" name="q168" value="a"> A defesa de que as normas penais devem ser vagas e permitir interpretações amplas pelos juízes.</li>
+            <li><input type="radio" id="q168a2" name="q168" value="b"> A crítica ao fato de que as normas penais em branco, que carecem de especificação, ainda prevalecem em nossa legislação atual.</li>
+            <li><input type="radio" id="q168a3" name="q168" value="c"> A proposta de substituir as normas penais em branco por normas mais flexíveis e abertas a interpretações morais.</li>
+            <li><input type="radio" id="q168a4" name="q168" value="d"> A promoção da legalidade máxima nas normas penais, permitindo que o juiz tenha liberdade total para decidir casos criminais.</li>
+        </ul>
+        <div class="explanation" id="explanation-q168">
+            <h3>Explicação:</h3>
+            <p>Beccaria criticava as normas penais em branco, que são aquelas imprecisas e sujeitas à interpretação dos juízes, um problema ainda presente na legislação atual.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q168', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>Como o processo de secularização influencia o contexto criminal, conforme descrito no texto?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q169a1" name="q169" value="a"> A secularização resulta em uma volta ao modelo de justiça religiosa e tradicional, com a reintegração dos deuses e da religião nas decisões criminais.</li>
+            <li><input type="radio" id="q169a2" name="q169" value="b"> A secularização promove a evolução dinâmica dos contextos sociais e criminais, sendo essencial para o desenvolvimento de uma sociedade mais justa e plural.</li>
+            <li><input type="radio" id="q169a3" name="q169" value="c"> O processo de secularização criou uma rígida separação entre os contextos criminais e as questões sociais, tornando a justiça completamente independente das mudanças sociais.</li>
+            <li><input type="radio" id="q169a4" name="q169" value="d"> A secularização levou ao abandono das análises sociais sobre crime, sendo substituída por uma abordagem estritamente religiosa e moralista.</li>
+        </ul>
+        <div class="explanation" id="explanation-q169">
+            <h3>Explicação:</h3>
+            <p>A secularização tem proporcionado a evolução dos contextos sociais e criminais, acompanhando o desenvolvimento dinâmico da sociedade. Isso torna a secularização um processo fundamental para o progresso das questões sociais e criminais.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q169', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>De acordo com o paradigma etiológico de Lombroso e Ferri, como a criminologia é definida?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q170a1" name="q170" value="a"> A criminologia é vista como uma ciência filosófica que busca entender as causas do crime por meio de teorias especulativas e abstratas.</li>
+            <li><input type="radio" id="q170a2" name="q170" value="b"> A criminologia é uma ciência causal-explicativa que investiga as causas naturais do crime por meio de métodos científicos e estatísticas oficiais.</li>
+            <li><input type="radio" id="q170a3" name="q170" value="c"> A criminologia, no paradigma etiológico, busca aplicar punições severas sem investigar as causas do crime.</li>
+            <li><input type="radio" id="q170a4" name="q170" value="d"> A criminologia no paradigma etiológico está mais focada em estudar as motivações psicológicas dos criminosos do que suas causas externas.</li>
+        </ul>
+        <div class="explanation" id="explanation-q170">
+            <h3>Explicação:</h3>
+            <p>No paradigma etiológico, a criminologia é definida como uma ciência causal-explicativa, que busca entender as causas naturais do crime utilizando métodos científicos, como o uso de estatísticas criminais.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q170', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual foi o principal objetivo do paradigma etiológico na criminologia positivista?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q171a1" name="q171" value="a"> O principal objetivo foi desenvolver teorias filosóficas sobre a natureza humana e suas implicações no crime.</li>
+            <li><input type="radio" id="q171a2" name="q171" value="b"> O objetivo principal foi identificar e controlar o comportamento criminoso por meio da punição moral e religiosa.</li>
+            <li><input type="radio" id="q171a3" name="q171" value="c"> O paradigma buscava cientificar a criminologia, identificando as causas do crime e propondo soluções com base em métodos científicos e experimentais.</li>
+            <li><input type="radio" id="q171a4" name="q171" value="d"> O objetivo principal era desconsiderar os aspectos sociais e focar apenas nas características biológicas do criminoso.</li>
+        </ul>
+        <div class="explanation" id="explanation-q171">
+            <h3>Explicação:</h3>
+            <p>O objetivo do paradigma etiológico foi cientificar a criminologia, explicando as causas do crime e propondo soluções baseadas em métodos científicos e experimentais, incluindo o uso de estatísticas criminais.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q171', 'c')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual é a principal característica da criminologia no paradigma etiológico, segundo os autores Lombroso e Ferri?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q172a1" name="q172" value="a"> A criminologia se baseia em análises subjetivas e filosóficas do crime, sem a aplicação de métodos científicos.</li>
+            <li><input type="radio" id="q172a2" name="q172" value="b"> A criminologia no paradigma etiológico adota um enfoque causal-explicativo, explicando o crime como um fenômeno natural e determinista.</li>
+            <li><input type="radio" id="q172a3" name="q172" value="c"> A criminologia no paradigma etiológico é centrada na punição e na repressão do crime, sem se preocupar com suas causas.</li>
+            <li><input type="radio" id="q172a4" name="q172" value="d"> A criminologia é entendida como uma ciência moral, que busca entender as motivações psicológicas dos criminosos sem recorrer a métodos científicos.</li>
+        </ul>
+        <div class="explanation" id="explanation-q172">
+            <h3>Explicação:</h3>
+            <p>A criminologia no paradigma etiológico adota uma abordagem causal-explicativa, entendendo o crime como um fenômeno natural e determinista, que deve ser estudado por meio de métodos científicos.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q172', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>Qual é o papel da criminologia na defesa da sociedade?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q173a1" name="q173" value="a"> A criminologia é responsável apenas por analisar as causas sociais do crime, sem se preocupar com a defesa da sociedade.</li>
+            <li><input type="radio" id="q173a2" name="q173" value="b"> A criminologia tem como papel a defesa da sociedade, buscando entender o crime e propor soluções para garantir a segurança pública.</li>
+            <li><input type="radio" id="q173a3" name="q173" value="c"> A criminologia apenas estuda os criminosos e suas motivações, sem buscar qualquer tipo de defesa social.</li>
+            <li><input type="radio" id="q173a4" name="q173" value="d"> A criminologia no contexto atual não tem nenhuma função relacionada à defesa da sociedade.</li>
+        </ul>
+        <div class="explanation" id="explanation-q173">
+            <h3>Explicação:</h3>
+            <p>A criminologia tem como um dos seus papéis principais a defesa da sociedade, buscando entender o crime e as causas que o geram para promover a segurança pública.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q173', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>O que a Escola Clássica não possuía para combater a criminalidade?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q174a1" name="q174" value="a"> A Escola Clássica não possuía elementos suficientes para desenvolver uma teoria biológica sobre o crime.</li>
+            <li><input type="radio" id="q174a2" name="q174" value="b"> A Escola Clássica não possuía elementos para o combate à criminalidade, necessitando de uma abordagem mais eficaz.</li>
+            <li><input type="radio" id="q174a3" name="q174" value="c"> A Escola Clássica não possuía elementos para explicar a relação entre o crime e as condições sociais do criminoso.</li>
+            <li><input type="radio" id="q174a4" name="q174" value="d"> A Escola Clássica não possuía elementos para compreender a psicologia do criminoso.</li>
+        </ul>
+        <div class="explanation" id="explanation-q174">
+            <h3>Explicação:</h3>
+            <p>A Escola Clássica não possuía os elementos necessários para combater a criminalidade de maneira eficaz, o que levou à busca por abordagens mais robustas, como as da criminologia positivista e biológica.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q174', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>O que a teoria biológica do crime defendia até o final da Segunda Guerra Mundial?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q175a1" name="q175" value="a"> A teoria biológica do crime defendia que a criminalidade era um fenômeno social e não relacionado a aspectos biológicos.</li>
+            <li><input type="radio" id="q175a2" name="q175" value="b"> A teoria biológica do crime defendia a eliminação física dos criminosos como uma forma de prevenir o crime.</li>
+            <li><input type="radio" id="q175a3" name="q175" value="c"> A teoria biológica do crime defendia que os criminosos eram causados exclusivamente por fatores psicológicos e não biológicos.</li>
+            <li><input type="radio" id="q175a4" name="q175" value="d"> A teoria biológica do crime defendia que os criminosos eram vítimas de uma sociedade injusta e desigual.</li>
+        </ul>
+        <div class="explanation" id="explanation-q175">
+            <h3>Explicação:</h3>
+            <p>A teoria biológica do crime, até o final da Segunda Guerra Mundial, defendia que a criminalidade estava relacionada a atavismos hereditários, o que justificava práticas como o isolamento, esterilização ou até eliminação física dos criminosos.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q175', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>O que a teoria psicológica do crime foca na análise do criminoso?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q176a1" name="q176" value="a"> A teoria psicológica foca na análise de fatores biológicos que causam o crime.</li>
+            <li><input type="radio" id="q176a2" name="q176" value="b"> A teoria psicológica do crime foca na personalidade do criminoso, como características impulsivas ou agressivas.</li>
+            <li><input type="radio" id="q176a3" name="q176" value="c"> A teoria psicológica do crime foca exclusivamente na relação do criminoso com a sociedade e a cultura.</li>
+            <li><input type="radio" id="q176a4" name="q176" value="d"> A teoria psicológica do crime não considera a personalidade do criminoso em seus estudos.</li>
+        </ul>
+        <div class="explanation" id="explanation-q176">
+            <h3>Explicação:</h3>
+            <p>A teoria psicológica do crime se concentra na análise da personalidade do criminoso, considerando aspectos como impulsividade, imaturidade e agressividade, buscando compreender como essas características podem contribuir para comportamentos delitivos.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q176', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>De acordo com a teoria da ecologia, qual fator contribui para o aumento da criminalidade nas grandes cidades?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q177a1" name="q177" value="a"> O aumento da criminalidade nas grandes cidades é explicado pela maior presença de forças de segurança.</li>
+            <li><input type="radio" id="q177a2" name="q177" value="b"> A criminalidade nas grandes cidades aumenta devido à desorganização social e à diminuição do controle social nas metrópoles.</li>
+            <li><input type="radio" id="q177a3" name="q177" value="c"> A criminalidade é reduzida nas grandes cidades devido ao controle social elevado.</li>
+            <li><input type="radio" id="q177a4" name="q177" value="d"> A teoria da ecologia defende que a criminalidade nas grandes cidades não está relacionada a fatores sociais, mas a fatores biológicos.</li>
+        </ul>
+        <div class="explanation" id="explanation-q177">
+            <h3>Explicação:</h3>
+            <p>A teoria da ecologia, desenvolvida pela Escola de Chicago, sugere que a criminalidade nas grandes cidades é aumentada pela desorganização social das metrópoles, que resulta na diminuição do controle social e, consequentemente, em maior incidência de comportamentos delitivos.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q177', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual é o foco central da teoria psicológica no tratamento dos criminosos?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q178a1" name="q178" value="a"> O foco central é no tratamento físico e médico dos criminosos.</li>
+            <li><input type="radio" id="q178a2" name="q178" value="b"> A teoria psicológica foca na adaptação da personalidade do delinquente, corrigindo traços como impulsividade e agressividade.</li>
+            <li><input type="radio" id="q178a3" name="q178" value="c"> A teoria psicológica não foca em tratamentos, mas apenas na análise do crime em si.</li>
+            <li><input type="radio" id="q178a4" name="q178" value="d"> O foco da teoria psicológica é em programas de reintegração social sem considerar a personalidade do criminoso.</li>
+        </ul>
+        <div class="explanation" id="explanation-q178">
+            <h3>Explicação:</h3>
+            <p>A teoria psicológica do crime propõe o tratamento da personalidade do criminoso, especialmente em relação a traços como impulsividade, imaturidade e agressividade, com o objetivo de adaptá-lo às exigências da vida em sociedade.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q178', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>O que a teoria das Janelas Quebradas propõe em relação à criminalidade?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q179a1" name="q179" value="a"> A teoria das Janelas Quebradas defende que crimes graves são causados exclusivamente por fatores biológicos e psicológicos.</li>
+            <li><input type="radio" id="q179a2" name="q179" value="b"> A teoria das Janelas Quebradas sugere que pequenas infrações, quando toleradas, podem levar a crimes mais graves, mostrando a relação entre desordem e criminalidade.</li>
+            <li><input type="radio" id="q179a3" name="q179" value="c"> A teoria das Janelas Quebradas acredita que a criminalidade é exclusivamente um fenômeno social sem conexão com pequenos crimes.</li>
+            <li><input type="radio" id="q179a4" name="q179" value="d"> A teoria das Janelas Quebradas defende que apenas crimes violentos são influenciados pela desordem social.</li>
+        </ul>
+        <div class="explanation" id="explanation-q179">
+            <h3>Explicação:</h3>
+            <p>A teoria das Janelas Quebradas afirma que pequenas infrações e a desordem social, quando não controladas, podem levar ao aumento de crimes mais graves. Ela sugere que a tolerância zero pode ser uma solução para prevenir a escalada de crimes.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q179', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual é o conceito central da teoria da Associação Diferencial?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q180a1" name="q180" value="a"> A teoria da Associação Diferencial defende que o crime é aprendido a partir da convivência em ambientes sociais, como gangues, famílias ou escolas.</li>
+            <li><input type="radio" id="q180a2" name="q180" value="b"> A teoria da Associação Diferencial sugere que o crime é causado apenas por fatores genéticos e não por interações sociais.</li>
+            <li><input type="radio" id="q180a3" name="q180" value="c"> A teoria da Associação Diferencial afirma que o crime é um comportamento puramente instintivo e não aprendido.</li>
+            <li><input type="radio" id="q180a4" name="q180" value="d"> A teoria da Associação Diferencial ignora os contextos sociais e culturais na explicação da criminalidade.</li>
+        </ul>
+        <div class="explanation" id="explanation-q180">
+            <h3>Explicação:</h3>
+            <p>A teoria da Associação Diferencial, desenvolvida por Edwin H. Sutherland, afirma que o crime é aprendido através das interações sociais com outros indivíduos em ambientes como gangues, família e escolas. O comportamento criminoso é uma conduta intencional adquirida por meio dessas associações.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q180', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>De acordo com a teoria da Associação Diferencial, como o crime é aprendido?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q181a1" name="q181" value="a"> O crime é aprendido através de fatores biológicos e hereditários.</li>
+            <li><input type="radio" id="q181a2" name="q181" value="b"> O crime é aprendido através da convivência e interação com grupos sociais, como gangues e famílias.</li>
+            <li><input type="radio" id="q181a3" name="q181" value="c"> O crime é aprendido apenas em ambientes escolares e acadêmicos.</li>
+            <li><input type="radio" id="q181a4" name="q181" value="d"> O crime é uma reação instintiva a fatores externos e não envolve aprendizado social.</li>
+        </ul>
+        <div class="explanation" id="explanation-q181">
+            <h3>Explicação:</h3>
+            <p>A teoria da Associação Diferencial postula que o crime é aprendido através da interação e convivência com outros indivíduos em contextos sociais, como gangues, família e escola, onde se adquirem normas e comportamentos criminosos.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q181', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>De acordo com a teoria da Associação Diferencial, o que caracteriza o comportamento criminal?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q182a1" name="q182" value="a"> O comportamento criminal é inato e não pode ser aprendido.</li>
+            <li><input type="radio" id="q182a2" name="q182" value="b"> O comportamento criminal é um comportamento aprendido por meio da interação com outras pessoas em um processo comunicativo.</li>
+            <li><input type="radio" id="q182a3" name="q182" value="c"> O comportamento criminal é resultado de um fator exclusivamente genético.</li>
+            <li><input type="radio" id="q182a4" name="q182" value="d"> O comportamento criminal ocorre apenas em ambientes familiares e nunca fora deles.</li>
+        </ul>
+        <div class="explanation" id="explanation-q182">
+            <h3>Explicação:</h3>
+            <p>A teoria da Associação Diferencial afirma que o comportamento criminal é aprendido por meio da interação social e comunicação com outras pessoas, em um processo contínuo de troca de ideias e influências.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q182', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual é o principal fator que determina o aprendizado de comportamentos criminosos, segundo a teoria da Associação Diferencial?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q183a1" name="q183" value="a"> O aprendizado do crime é determinado exclusivamente pela genética e instintos naturais.</li>
+            <li><input type="radio" id="q183a2" name="q183" value="b"> O aprendizado do crime depende principalmente das relações sociais mais próximas e da interação com pessoas que apresentam comportamentos favoráveis à violação das normas.</li>
+            <li><input type="radio" id="q183a3" name="q183" value="c"> O aprendizado do crime ocorre apenas em instituições formais como escolas e igrejas.</li>
+            <li><input type="radio" id="q183a4" name="q183" value="d"> O aprendizado do crime é condicionado por fatores econômicos e não por relações sociais.</li>
+        </ul>
+        <div class="explanation" id="explanation-q183">
+            <h3>Explicação:</h3>
+            <p>Segundo a teoria da Associação Diferencial, o aprendizado do crime ocorre principalmente em relações sociais próximas, onde as definições favoráveis à violação das normas superam as definições desfavoráveis.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q183', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual é o papel das justificativas do ato criminoso na teoria da Associação Diferencial?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q184a1" name="q184" value="a"> As justificativas do ato criminoso não têm relevância para a teoria da Associação Diferencial.</li>
+            <li><input type="radio" id="q184a2" name="q184" value="b"> As justificativas do ato criminoso são aprendidas, fazendo parte do processo de socialização que leva à adoção de comportamentos delituosos.</li>
+            <li><input type="radio" id="q184a3" name="q184" value="c"> As justificativas do ato criminoso são exclusivas da genética e não envolvem aprendizagem social.</li>
+            <li><input type="radio" id="q184a4" name="q184" value="d"> As justificativas do ato criminoso são irrelevantes para a criminalidade e não influenciam os comportamentos.</li>
+        </ul>
+        <div class="explanation" id="explanation-q184">
+            <h3>Explicação:</h3>
+            <p>Na teoria da Associação Diferencial, as justificativas para a prática de um crime são aprendidas, pois fazem parte do processo de socialização em grupos que ensinam normas e comportamentos favoráveis à violação das leis.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q184', 'b')">Verificar Resposta</button>
+    </div>
+                        #32                                                                                                                                                                                                                            
+    </div>
+    
+    <script>
+        function verificarResposta(questionId, correctAnswer) {
+            var options = document.getElementsByName(questionId);
+            var explanation = document.getElementById("explanation-" + questionId);
+            var isCorrect = false;
+            
+            // Verificando a resposta correta
+            for (var i = 0; i < options.length; i++) {
+                var option = options[i];
+                if (option.checked) {
+                    if (option.value === correctAnswer) {
+                        option.parentElement.style.backgroundColor = "green"; // Verde para resposta correta
+                        explanation.style.color = "green";
+                        isCorrect = true;
+                    } else {
+                        option.parentElement.style.backgroundColor = "red"; // Vermelho para resposta errada
+                        explanation.style.color = "red";
+                    }
+                }
+            }
+    
+            // Exibindo a explicação
+            explanation.style.display = "block";
+        }
+    </script>
+    
+    <footer>
+        <p>© 2024 - Plataforma de Questões</p>
+    </footer>
+</body>
+</html>
