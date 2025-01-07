@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Questões</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: white;
+        }
+
+        header {
+            background-color: #6200EA;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            color: #FFFFFF;
+            font-size: 2.5rem;
+        }
+
+        .summary-button {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            background-color: #03DAC5;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .summary-button:hover {
+            background-color: #018786;
+            color: white;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .question-box {
+            background-color: #1E1E1E;
+            border: 2px solid #03DAC5;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        .question-box h2 {
+            color: #03DAC5;
+        }
+
+        .explanation {
+            background-color: #333;
+            border-left: 4px solid #FF0266;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .explanation h3 {
+            color: #FF0266;
+            margin: 0;
+        }
+
+        .button {
+            background-color: #03DAC5;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #018786;
+            color: white;
+        }
+
+        footer {
+            background-color: #6200EA;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            color: white;
+            font-size: 0.9rem;
+        }
+    </style>
+    <script>
+        function verificarResposta() {
+            const explanation = document.querySelector('.explanation');
+            explanation.style.display = 'block';
+        }
+
+        function mostrarResumo() {
+            alert('Esta função exibirá um resumo dos conteúdos abordados.');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Questões MEDIAÇÃO E
+            RESOLUÇÃO
+            DE CONFLITOS</h1>
+        
+    </header>
+    <div class="question-box">
+        <h2>q1. O que caracteriza um conflito, de acordo com a definição apresentada?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q1a1" name="q1" value="a"> Conflito é um desentendimento sobre um tema de interesse comum, geralmente acompanhado por brigas e violência.</li>
+            <li><input type="radio" id="q1a2" name="q1" value="b"> Conflito é sempre uma briga violenta entre duas ou mais pessoas.</li>
+            <li><input type="radio" id="q1a3" name="q1" value="c"> Conflito é o desentendimento entre duas ou mais pessoas sobre um tema de interesse comum, sem necessariamente envolver violência.</li>
+            <li><input type="radio" id="q1a4" name="q1" value="d"> Conflito é uma discussão amigável sobre um tema de interesse comum.</li>
+        </ul>
+        <div class="explanation" id="explanation-q1">
+            <h3>Explicação:</h3>
+            <p>Conflito é definido como o desentendimento entre duas ou mais pessoas sobre um tema de interesse comum, e não necessariamente envolve violência, embora em alguns casos possa resultar em atos violentos.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q1', 'c')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q2. O que se pode afirmar sobre a visão negativa do conflito?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q2a1" name="q2" value="a"> O conflito é sempre ruim e deve ser evitado a todo custo.</li>
+            <li><input type="radio" id="q2a2" name="q2" value="b"> O conflito é negativo e nunca pode ser construtivo.</li>
+            <li><input type="radio" id="q2a3" name="q2" value="c"> A visão negativa do conflito não é adequada, pois ele pode ser construtivo ou destrutivo, dependendo da maneira como é resolvido.</li>
+            <li><input type="radio" id="q2a4" name="q2" value="d"> O conflito é sempre algo positivo e deve ser buscado como uma forma de crescimento.</li>
+        </ul>
+        <div class="explanation" id="explanation-q2">
+            <h3>Explicação:</h3>
+            <p>A visão negativa do conflito não é adequada, pois ele não é, por si só, negativo ou positivo. Sua resolução, seja por meios violentos ou por diálogo, é que define seu impacto, podendo ser construtivo ou destrutivo.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q2', 'c')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q3. Quais são os três níveis em que os conflitos podem ser organizados, segundo Seidel (2007)?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q3a1" name="q3" value="a"> Conflitos pessoais, familiares e políticos.</li>
+            <li><input type="radio" id="q3a2" name="q3" value="b"> Conflitos pessoais, grupais e internacionais.</li>
+            <li><input type="radio" id="q3a3" name="q3" value="c"> Conflitos entre nações, dentro das empresas e no ambiente escolar.</li>
+            <li><input type="radio" id="q3a4" name="q3" value="d"> Conflitos entre indivíduos, grupos e governamentais.</li>
+        </ul>
+        <div class="explanation" id="explanation-q3">
+            <h3>Explicação:</h3>
+            <p>De acordo com Seidel (2007), os conflitos podem ser organizados em três níveis: pessoais, grupais e entre nações.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q3', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q4. Qual é a principal questão central quando se trata da resolução de um conflito?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q4a1" name="q4" value="a"> A questão central é a forma como o conflito é evitado.</li>
+            <li><input type="radio" id="q4a2" name="q4" value="b"> A questão central é como o conflito é resolvido, seja por meios violentos ou por meio do diálogo.</li>
+            <li><input type="radio" id="q4a3" name="q4" value="c"> A questão central é a rapidez com que o conflito é solucionado.</li>
+            <li><input type="radio" id="q4a4" name="q4" value="d"> A questão central é quem são as partes envolvidas no conflito.</li>
+        </ul>
+        <div class="explanation" id="explanation-q4">
+            <h3>Explicação:</h3>
+            <p>A questão central em qualquer conflito é como ele é resolvido. O conflito pode ser resolvido de maneira construtiva ou destrutiva, dependendo dos meios utilizados, seja por violência ou diálogo.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q4', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q5. Quais são os benefícios do conflito quando tratado de forma não violenta?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q5a1" name="q5" value="a"> O conflito não tem benefícios, pois sempre resulta em violência e danos.</li>
+            <li><input type="radio" id="q5a2" name="q5" value="b"> Quando tratado de forma não violenta, o conflito estimula o pensamento crítico, melhora a capacidade de tomar decisões e promove a auto compreensão.</li>
+            <li><input type="radio" id="q5a3" name="q5" value="c"> Conflitos sempre geram mais problemas e não há benefícios em nenhuma situação.</li>
+            <li><input type="radio" id="q5a4" name="q5" value="d"> Conflitos tratados de forma não violenta apenas ajudam a resolver a situação no momento, sem gerar qualquer benefício a longo prazo.</li>
+        </ul>
+        <div class="explanation" id="explanation-q5">
+            <h3>Explicação:</h3>
+            <p>Quando os conflitos são tratados de forma não violenta, eles podem estimular o pensamento crítico, melhorar a tomada de decisões, reforçar a consciência da possibilidade de opções, promover a auto compreensão e melhorar os relacionamentos.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q5', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q6. O que pode ocorrer quando os conflitos são ignorados ou tratados com violência?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q6a1" name="q6" value="a"> Ignorar ou tratar os conflitos com violência tende a resolver a situação sem gerar mais problemas.</li>
+            <li><input type="radio" id="q6a2" name="q6" value="b"> A ignorância dos conflitos ou o uso da violência pode perpetuar um ciclo vicioso de conflito e violência.</li>
+            <li><input type="radio" id="q6a3" name="q6" value="c"> Ignorar ou usar violência em conflitos geralmente resulta na melhoria das relações e na resolução pacífica dos problemas.</li>
+            <li><input type="radio" id="q6a4" name="q6" value="d"> O uso de violência em conflitos pode levar a um aumento de empatia e compreensão entre as partes envolvidas.</li>
+        </ul>
+        <div class="explanation" id="explanation-q6">
+            <h3>Explicação:</h3>
+            <p>Ignorar os conflitos ou tratá-los com violência tende a perpetuar o ciclo de conflito e violência, sem gerar transformação nas relações ou evitar a reincidência desses problemas.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q6', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q7. O que caracteriza a atuação inadequada de um profissional da polícia em uma situação de conflito?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q7a1" name="q7" value="a"> A atuação inadequada ocorre quando o profissional resolve o conflito sem envolver as partes e sem buscar uma solução pacífica.</li>
+            <li><input type="radio" id="q7a2" name="q7" value="b"> A atuação inadequada ocorre quando o profissional toma partido, se envolvendo emocionalmente no conflito e escalando a violência.</li>
+            <li><input type="radio" id="q7a3" name="q7" value="c"> A atuação inadequada ocorre quando o profissional simplesmente ignora o conflito e não toma nenhuma ação.</li>
+            <li><input type="radio" id="q7a4" name="q7" value="d"> A atuação inadequada ocorre quando o profissional usa seu poder para resolver o conflito sem necessidade de diálogo.</li>
+        </ul>
+        <div class="explanation" id="explanation-q7">
+            <h3>Explicação:</h3>
+            <p>A atuação inadequada de um profissional da polícia ocorre quando ele se envolve emocionalmente no conflito ou adota atitudes que escalem a violência, ao invés de buscar uma solução pacífica e não violenta.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q7', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q8. Qual é a principal ideia da construção de uma cultura de paz, conforme Seidel (2007)?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q8a1" name="q8" value="a"> A paz é alcançada pela eliminação de todos os conflitos.</li>
+            <li><input type="radio" id="q8a2" name="q8" value="b"> A paz envolve mudanças de atitudes, crenças e comportamentos, e reconhece o conflito como uma oportunidade para o desenvolvimento.</li>
+            <li><input type="radio" id="q8a3" name="q8" value="c"> A paz é um estado fixo e imutável que não envolve mudanças na maneira como as pessoas lidam com os conflitos.</li>
+            <li><input type="radio" id="q8a4" name="q8" value="d"> A construção da paz se baseia na eliminação do conflito por meio da força e da repressão.</li>
+        </ul>
+        <div class="explanation" id="explanation-q8">
+            <h3>Explicação:</h3>
+            <p>A construção de uma cultura de paz, segundo Seidel, envolve mudanças de atitudes e comportamentos e reconhece o conflito como uma oportunidade para o desenvolvimento, buscando resoluções criativas e não violentas.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q8', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q9. O que caracteriza a transformação do conflito, conforme Seidel (2007)?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q9a1" name="q9" value="a"> A transformação do conflito é uma abordagem para eliminar o conflito de forma violenta.</li>
+            <li><input type="radio" id="q9a2" name="q9" value="b"> A transformação do conflito busca estratégias para mudança, reconciliação e construção de relações positivas.</li>
+            <li><input type="radio" id="q9a3" name="q9" value="c"> A transformação do conflito não busca mudança nas relações, mas apenas resolver o conflito temporariamente.</li>
+            <li><input type="radio" id="q9a4" name="q9" value="d"> A transformação do conflito ocorre apenas em contextos militares e de guerra.</li>
+        </ul>
+        <div class="explanation" id="explanation-q9">
+            <h3>Explicação:</h3>
+            <p>A transformação do conflito busca estratégias para mudança, reconciliação e construção de relações positivas, com o objetivo de resolver os conflitos de maneira duradoura e construtiva.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q9', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q10. O que é uma crise, conforme o conceito apresentado?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q10a1" name="q10" value="a"> Uma crise é uma fase difícil que representa uma mudança de estado, podendo envolver violência, e exige práticas policiais extraordinárias.</li>
+            <li><input type="radio" id="q10a2" name="q10" value="b"> Uma crise é um momento de crescimento e transformação social, sem implicar grandes mudanças ou rupturas.</li>
+            <li><input type="radio" id="q10a3" name="q10" value="c"> Uma crise é uma fase tranquila e sem grandes desafios para a sociedade.</li>
+            <li><input type="radio" id="q10a4" name="q10" value="d"> A crise ocorre apenas em situações de paz, quando a ordem social está estável.</li>
+        </ul>
+        <div class="explanation" id="explanation-q10">
+            <h3>Explicação:</h3>
+            <p>Uma crise é caracterizada por uma ruptura do equilíbrio e uma fase difícil, podendo envolver violência, sendo um momento perigoso e exigindo práticas policiais extraordinárias para restabelecer a normalidade.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q10', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q11. O que distingue a gestão de conflitos da gestão de crises?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q11a1" name="q11" value="a"> A gestão de conflitos se concentra em resolver disputas de maneira pacífica, enquanto a gestão de crises envolve práticas extraordinárias para restabelecer a ordem em situações de violência.</li>
+            <li><input type="radio" id="q11a2" name="q11" value="b"> A gestão de conflitos e a gestão de crises são a mesma coisa, pois ambas envolvem a mesma abordagem de resolução de problemas.</li>
+            <li><input type="radio" id="q11a3" name="q11" value="c"> A gestão de conflitos é exclusivamente aplicada a situações não violentas, enquanto a gestão de crises ocorre apenas em conflitos internacionais.</li>
+            <li><input type="radio" id="q11a4" name="q11" value="d"> A gestão de crises trata apenas da negociação entre partes em um conflito, enquanto a gestão de conflitos envolve o uso de força para resolver disputas.</li>
+        </ul>
+        <div class="explanation" id="explanation-q11">
+            <h3>Explicação:</h3>
+            <p>A gestão de conflitos se concentra em resolver disputas de maneira pacífica, enquanto a gestão de crises envolve práticas extraordinárias, principalmente em situações de violência ou grande ruptura da ordem social.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q11', 'a')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q12. Qual é a principal mudança no foco da resolução de conflitos entre a 1ª e a 4ª geração, conforme a evolução dos norteadores para a resolução de conflitos?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q12a1" name="q12" value="a"> A 1ª geração foca nas pessoas, enquanto a 4ª geração foca no objeto do conflito.</li>
+            <li><input type="radio" id="q12a2" name="q12" value="b"> A 1ª geração foca no objeto do conflito, enquanto a 4ª geração foca nas relações interpessoais.</li>
+            <li><input type="radio" id="q12a3" name="q12" value="c"> A 1ª geração foca na resolução pacífica, enquanto a 4ª geração foca em impor a solução pela força.</li>
+            <li><input type="radio" id="q12a4" name="q12" value="d"> Não há diferença de foco entre a 1ª e a 4ª geração.</li>
+        </ul>
+        <div class="explanation" id="explanation-q12">
+            <h3>Explicação:</h3>
+            <p>A evolução das gerações de resolução de conflitos mostra que a 1ª geração foca na resolução do conflito por meio da imposição e poder, enquanto a 4ª geração foca nas relações interpessoais e busca atender aos interesses de todos os envolvidos.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q12', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q13. Qual é o foco da 4ª geração de resolução de conflitos, segundo a evolução dos norteadores?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q13a1" name="q13" value="a"> Focar apenas no objeto do conflito, sem considerar as relações interpessoais.</li>
+            <li><input type="radio" id="q13a2" name="q13" value="b"> Identificar os interesses de todas as pessoas envolvidas e a possibilidade de atendê-los, promovendo a auto composição.</li>
+            <li><input type="radio" id="q13a3" name="q13" value="c"> Resolver o conflito por meio da imposição e do poder.</li>
+            <li><input type="radio" id="q13a4" name="q13" value="d"> Focar na imposição de soluções jurídicas através do direito.</li>
+        </ul>
+        <div class="explanation" id="explanation-q13">
+            <h3>Explicação:</h3>
+            <p>A 4ª geração de resolução de conflitos foca em identificar os interesses de todos os envolvidos e buscar a auto composição, que visa atender aos interesses das partes de forma consensual.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q13', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q14. De acordo com Moscovici (1997), qual deve ser o primeiro passo antes de lidar com um conflito?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q14a1" name="q14" value="a"> Imposição de uma solução baseada no poder.</li>
+            <li><input type="radio" id="q14a2" name="q14" value="b"> Compreender a dinâmica do conflito e suas variáveis antes de pensar numa forma de lidar com ele.</li>
+            <li><input type="radio" id="q14a3" name="q14" value="c"> Resolver o conflito imediatamente, sem precisar de diagnóstico prévio.</li>
+            <li><input type="radio" id="q14a4" name="q14" value="d"> Negociar uma solução sem compreender as causas do conflito.</li>
+        </ul>
+        <div class="explanation" id="explanation-q14">
+            <h3>Explicação:</h3>
+            <p>Antes de agir em relação a um conflito, é importante compreender sua dinâmica e variáveis, como os pontos de vista, interesses divergentes e fatores subjacentes, conforme orienta Moscovici.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q14', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q15. Quais são as três variáveis que devem ser observadas ao se fazer um diagnóstico de uma situação de conflito, segundo Schmidt e Tannenbaum (1992)?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q15a1" name="q15" value="a"> A natureza das diferenças, os fatores subjacentes e a evolução do conflito.</li>
+            <li><input type="radio" id="q15a2" name="q15" value="b"> Apenas os fatores emocionais envolvidos no conflito.</li>
+            <li><input type="radio" id="q15a3" name="q15" value="c"> O estágio da mediação, a solução jurídica e a aceitação das partes.</li>
+            <li><input type="radio" id="q15a4" name="q15" value="d"> A presença de mediadores externos, o tempo de conflito e o nível de violência.</li>
+        </ul>
+        <div class="explanation" id="explanation-q15">
+            <h3>Explicação:</h3>
+            <p>Segundo Schmidt e Tannenbaum, ao fazer o diagnóstico de um conflito, é necessário observar a natureza das diferenças, os fatores subjacentes e o estágio de evolução do conflito.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q15', 'a')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q16. O que significa a assertividade em um contexto de resolução de conflitos?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q16a1" name="q16" value="a"> O grau em que o indivíduo nega ou suprime o conflito.</li>
+            <li><input type="radio" id="q16a2" name="q16" value="b"> O grau em que o indivíduo procura defender seus interesses e necessidades com coerência de sentimento, pensamento e ação.</li>
+            <li><input type="radio" id="q16a3" name="q16" value="c"> O grau em que o indivíduo busca seus interesses às custas dos interesses de outras pessoas.</li>
+            <li><input type="radio" id="q16a4" name="q16" value="d"> O grau em que o indivíduo trabalha com o outro para buscar uma solução que atenda os interesses de ambos.</li>
+        </ul>
+        <div class="explanation" id="explanation-q16">
+            <h3>Explicação:</h3>
+            <p>A assertividade é a capacidade de defender os próprios interesses de forma coerente, com equilíbrio entre sentimento, pensamento e ação, sem agredir os direitos dos outros.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q16', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q17. Qual é o objetivo da colaboração no contexto de resolução de conflitos?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q17a1" name="q17" value="a"> Satisfazer apenas o interesse de uma das partes envolvidas no conflito.</li>
+            <li><input type="radio" id="q17a2" name="q17" value="b"> Buscar uma solução mútua que atenda completamente os interesses de ambas as partes envolvidas.</li>
+            <li><input type="radio" id="q17a3" name="q17" value="c"> Impor uma solução que beneficie somente uma parte, ignorando o interesse da outra.</li>
+            <li><input type="radio" id="q17a4" name="q17" value="d"> Evitar a resolução do conflito, buscando supressão ou negação do problema.</li>
+        </ul>
+        <div class="explanation" id="explanation-q17">
+            <h3>Explicação:</h3>
+            <p>A colaboração visa trabalhar com a outra parte na busca de uma solução que atenda de forma plena aos interesses de ambas as partes envolvidas no conflito.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q17', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q18. O que caracteriza a competitividade no manejo de conflitos?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q18a1" name="q18" value="a"> Buscar a satisfação dos interesses de todas as partes envolvidas no conflito.</li>
+            <li><input type="radio" id="q18a2" name="q18" value="b"> Buscar os interesses próprios às custas dos interesses de outras pessoas.</li>
+            <li><input type="radio" id="q18a3" name="q18" value="c"> Buscar uma solução onde todas as partes saem igualmente satisfeitas.</li>
+            <li><input type="radio" id="q18a4" name="q18" value="d"> Supressão ou negação do conflito para evitar que ele evolua.</li>
+        </ul>
+        <div class="explanation" id="explanation-q18">
+            <h3>Explicação:</h3>
+            <p>A competitividade é caracterizada pela busca de satisfazer os próprios interesses em detrimento dos interesses das outras partes envolvidas no conflito.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q18', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q19. Qual é a principal característica da evitação no contexto de manejo de conflitos?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q19a1" name="q19" value="a"> Aceitação plena do conflito, buscando resolver todos os pontos de divergência.</li>
+            <li><input type="radio" id="q19a2" name="q19" value="b"> Supressão ou negação do conflito, evitando que ele seja abordado.</li>
+            <li><input type="radio" id="q19a3" name="q19" value="c"> Trabalho conjunto entre as partes para resolver o conflito de forma colaborativa.</li>
+            <li><input type="radio" id="q19a4" name="q19" value="d"> Imposição de uma solução sem considerar os interesses das partes envolvidas.</li>
+        </ul>
+        <div class="explanation" id="explanation-q19">
+            <h3>Explicação:</h3>
+            <p>A evitação é caracterizada pela negação ou supressão do conflito, em que as partes envolvidas preferem não abordar ou resolver a situação.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q19', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q20. De acordo com Kilmann e Thomas (1975), quais são os processos envolvidos no manejo de conflitos?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q20a1" name="q20" value="a"> Comunicação, percepção, atitudes para com o outro e orientação para o resultado do problema.</li>
+            <li><input type="radio" id="q20a2" name="q20" value="b"> Percepção, emoções, soluções rápidas e atitudes de evitar o conflito.</li>
+            <li><input type="radio" id="q20a3" name="q20" value="c"> Comunicação, solução rápida, desconfiança e foco na competição.</li>
+            <li><input type="radio" id="q20a4" name="q20" value="d"> Atitudes agressivas, comunicação assertiva, percepção negativa e foco em poder.</li>
+        </ul>
+        <div class="explanation" id="explanation-q20">
+            <h3>Explicação:</h3>
+            <p>O manejo de conflitos, segundo Kilmann e Thomas, envolve comunicação, percepção, atitudes para com o outro e orientação para o resultado do problema, determinando os campos de força competição e colaboração.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q20', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q21. Qual é o papel da Polícia Militar na mediação de conflitos de acordo com o conceito de "sensação de segurança"?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q21a1" name="q21" value="a"> A Polícia Militar deve agir apenas na prevenção de crimes graves e não nas situações de conflitos interpessoais.</li>
+            <li><input type="radio" id="q21a2" name="q21" value="b"> A Polícia Militar é vista como o grande responsável por resolver disputas de toda a sociedade, buscando a sensação de segurança.</li>
+            <li><input type="radio" id="q21a3" name="q21" value="c"> A Polícia Militar deve se concentrar em métodos violentos para garantir a segurança da comunidade, sem se envolver em mediações de conflitos.</li>
+            <li><input type="radio" id="q21a4" name="q21" value="d"> A Polícia Militar deve apenas atuar na resolução de questões criminais, sem se preocupar com a sensação de segurança da população.</li>
+        </ul>
+        <div class="explanation" id="explanation-q21">
+            <h3>Explicação:</h3>
+            <p>A Polícia Militar, conforme o conceito de "sensação de segurança", deve se envolver na resolução de conflitos de forma mais ampla, como um mediador, buscando atender às expectativas da sociedade em relação à segurança e à resolução pacífica de disputas.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q21', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q22. Qual é o papel do Estado, representado pelo Judiciário e pela polícia, na solução de conflitos segundo o conceito de mediação de conflitos?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q22a1" name="q22" value="a"> O Estado deve sempre impor soluções rápidas sem consultar as partes envolvidas.</li>
+            <li><input type="radio" id="q22a2" name="q22" value="b"> O Estado, representado pelo Judiciário e pela polícia, é visto como o grande responsável por solucionar os conflitos através de mediação, como um "grande pai".</li>
+            <li><input type="radio" id="q22a3" name="q22" value="c"> O Estado deve evitar intervir diretamente nos conflitos, deixando as partes se resolverem por conta própria.</li>
+            <li><input type="radio" id="q22a4" name="q22" value="d"> O Estado deve buscar apenas a punição dos envolvidos no conflito, sem procurar mediação ou resolução pacífica.</li>
+        </ul>
+        <div class="explanation" id="explanation-q22">
+            <h3>Explicação:</h3>
+            <p>O Estado, por meio do Judiciário e da polícia, é tradicionalmente visto como o grande responsável por solucionar os conflitos sociais, atuando como um mediador para resolver disputas de forma pacífica.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q22', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q23. Qual a principal característica dos Métodos Auto Compositivos de Solução de Conflitos (MASCs)?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q23a1" name="q23" value="a"> São métodos em que o terceiro mediador impõe uma solução às partes envolvidas no conflito.</li>
+            <li><input type="radio" id="q23a2" name="q23" value="b"> São métodos que buscam a colaboração das partes para chegar a uma solução consensual, sem imposição.</li>
+            <li><input type="radio" id="q23a3" name="q23" value="c"> São métodos que não envolvem qualquer mediação ou intervenção de terceiros, sendo totalmente autossuficientes.</li>
+            <li><input type="radio" id="q23a4" name="q23" value="d"> São métodos baseados em soluções jurídicas que impõem obrigações legais às partes em disputa.</li>
+        </ul>
+        <div class="explanation" id="explanation-q23">
+            <h3>Explicação:</h3>
+            <p>Os Métodos Auto Compositivos de Solução de Conflitos (MASCs) buscam que as partes envolvidas cheguem a um acordo consensual, sem a imposição de uma solução por um terceiro mediador.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q23', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q24. Qual a principal diferença entre os métodos auto compositivos e heterocompositivos para a solução de conflitos?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q24a1" name="q24" value="a"> Métodos auto compositivos envolvem a intervenção de um terceiro imparcial com autoridade para decidir, enquanto os heterocompositivos ajudam as partes a encontrar uma solução por conta própria.</li>
+            <li><input type="radio" id="q24a2" name="q24" value="b"> Métodos auto compositivos ajudam as partes a chegar a um acordo, enquanto os heterocompositivos envolvem um terceiro imparcial que impõe uma decisão.</li>
+            <li><input type="radio" id="q24a3" name="q24" value="c"> Métodos auto compositivos são baseados apenas em mediação, enquanto os heterocompositivos envolvem conciliação e arbitragem.</li>
+            <li><input type="radio" id="q24a4" name="q24" value="d"> Métodos auto compositivos e heterocompositivos são igualmente voltados para a imposição de uma solução judicial rápida.</li>
+        </ul>
+        <div class="explanation" id="explanation-q24">
+            <h3>Explicação:</h3>
+            <p>Os métodos auto compositivos auxiliam as partes a chegarem a uma solução por conta própria, enquanto os métodos heterocompositivos envolvem um terceiro imparcial que impõe uma solução.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q24', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q25. Quais são os métodos auto compositivos utilizados para a solução de conflitos, de acordo com a Lei nº 13.140/2015?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q25a1" name="q25" value="a"> Arbitragem, mediação e julgamento judicial.</li>
+            <li><input type="radio" id="q25a2" name="q25" value="b"> Conciliação, mediação e negociação.</li>
+            <li><input type="radio" id="q25a3" name="q25" value="c"> Mediação, negociação e decisão judicial.</li>
+            <li><input type="radio" id="q25a4" name="q25" value="d"> Arbitragem, conciliação e decisão judicial.</li>
+        </ul>
+        <div class="explanation" id="explanation-q25">
+            <h3>Explicação:</h3>
+            <p>Os métodos auto compositivos de solução de conflitos, segundo a Lei nº 13.140/2015, são a conciliação, mediação e negociação.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q25', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q26. Qual é a principal dificuldade mencionada em relação à delegação de resolução de conflitos para terceiros, como a polícia ou o Judiciário?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q26a1" name="q26" value="a"> A solução dos conflitos por terceiros pode ser muito rápida e eficiente, sempre atendendo às necessidades das partes envolvidas.</li>
+            <li><input type="radio" id="q26a2" name="q26" value="b"> A delegação de resolução de conflitos para terceiros pode ser um incômodo, pois a visão do terceiro não é necessariamente a mesma das partes envolvidas.</li>
+            <li><input type="radio" id="q26a3" name="q26" value="c"> O principal problema é que os terceiros envolvidos nos conflitos têm autoridade para decidir e impor soluções sem questionamentos.</li>
+            <li><input type="radio" id="q26a4" name="q26" value="d"> A delegação de resolução de conflitos é eficaz, pois o tempo do processo judicial é o mesmo da vida real.</li>
+        </ul>
+        <div class="explanation" id="explanation-q26">
+            <h3>Explicação:</h3>
+            <p>A dificuldade é que a visão dos terceiros, como a polícia ou o Judiciário, pode não coincidir com a das partes envolvidas no conflito, e o tempo dos processos legais nem sempre corresponde ao ritmo da vida real.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q26', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q27. O que caracteriza a sensação de impunidade no contexto de resolução de conflitos?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q27a1" name="q27" value="a"> A sensação de impunidade é gerada quando a justiça age rapidamente e de forma eficaz, resolvendo os conflitos.</li>
+            <li><input type="radio" id="q27a2" name="q27" value="b"> A sensação de impunidade é gerada quando há reincidência de crimes e o sistema de justiça é percebido como ineficaz na resolução dos conflitos.</li>
+            <li><input type="radio" id="q27a3" name="q27" value="c"> A sensação de impunidade é uma consequência direta do aumento da presença policial nas comunidades.</li>
+            <li><input type="radio" id="q27a4" name="q27" value="d"> A sensação de impunidade é causada pela rápida solução de todos os conflitos, sem necessidade de mediação.</li>
+        </ul>
+        <div class="explanation" id="explanation-q27">
+            <h3>Explicação:</h3>
+            <p>A sensação de impunidade surge devido à reincidência de crimes e à percepção de ineficácia do sistema de justiça na resolução dos conflitos.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q27', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q28. Qual é a principal finalidade dos Métodos Auto compositivos para Solução de Conflitos (MASCs)?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q28a1" name="q28" value="a"> Diminuir o número de processos judiciais e substituir o Judiciário.</li>
+            <li><input type="radio" id="q28a2" name="q28" value="b"> Facilitar a solução de conflitos, sem substituir o Judiciário, e promover a cidadania ativa.</li>
+            <li><input type="radio" id="q28a3" name="q28" value="c"> Resolver conflitos apenas em situações jurídicas, sem envolver questões sociais ou interpessoais.</li>
+            <li><input type="radio" id="q28a4" name="q28" value="d"> Substituir as políticas públicas voltadas para a justiça social e reduzir a atuação policial.</li>
+        </ul>
+        <div class="explanation" id="explanation-q28">
+            <h3>Explicação:</h3>
+            <p>A principal finalidade dos MASCs é facilitar a solução de conflitos sem substituir o Judiciário, além de promover a cidadania ativa e a transformação das relações interpessoais.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q28', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q29. Qual é uma das vantagens dos Métodos Auto compositivos para Solução de Conflitos (MASCs)?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q29a1" name="q29" value="a"> Permitem a resolução de conflitos exclusivamente através do Judiciário.</li>
+            <li><input type="radio" id="q29a2" name="q29" value="b"> Permitem avaliar e adequar os métodos de resolução aos temas específicos que motivam a procura.</li>
+            <li><input type="radio" id="q29a3" name="q29" value="c"> Limitam a atuação preventiva, impedindo qualquer tipo de negociação entre as partes.</li>
+            <li><input type="radio" id="q29a4" name="q29" value="d"> Concentram todos os serviços de resolução de conflitos em um único órgão centralizado.</li>
+        </ul>
+        <div class="explanation" id="explanation-q29">
+            <h3>Explicação:</h3>
+            <p>Uma das vantagens dos MASCs é a possibilidade de avaliar e adequar os métodos de resolução aos temas que motivam a procura, adaptando-os a diferentes situações.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q29', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q30. Quais são as vantagens dos Métodos Auto compositivos para Solução de Conflitos (MASCs) em relação à prevenção de conflitos futuros?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q30a1" name="q30" value="a"> Eles não possuem impacto na prevenção de conflitos futuros, focando apenas na resolução imediata.</li>
+            <li><input type="radio" id="q30a2" name="q30" value="b"> Eles ampliam a atuação preventiva, contribuindo para evitar a eclosão de novos conflitos e episódios de violência.</li>
+            <li><input type="radio" id="q30a3" name="q30" value="c"> Eles focam exclusivamente na resolução de conflitos legais, sem atuar em questões sociais.</li>
+            <li><input type="radio" id="q30a4" name="q30" value="d"> Eles limitam a atuação preventiva, concentrando-se apenas na resolução de disputas legais já estabelecidas.</li>
+        </ul>
+        <div class="explanation" id="explanation-q30">
+            <h3>Explicação:</h3>
+            <p>Os MASCs ampliam a atuação preventiva, ajudando a evitar a eclosão de novos conflitos e episódios de violência ao trabalhar as relações interpessoais desde a origem dos conflitos.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q30', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q31. Como os Métodos Auto compositivos para Solução de Conflitos (MASCs) contribuem para a cidadania ativa?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q31a1" name="q31" value="a"> Eles incentivam a participação passiva da população na resolução de conflitos, sem envolver as partes diretamente.</li>
+            <li><input type="radio" id="q31a2" name="q31" value="b"> Eles proporcionam a cidadania ativa, permitindo que as partes envolvidas transformem suas relações e resolvam conflitos diretamente na comunidade.</li>
+            <li><input type="radio" id="q31a3" name="q31" value="c"> Eles limitam a participação da comunidade, centralizando todas as decisões em órgãos do governo.</li>
+            <li><input type="radio" id="q31a4" name="q31" value="d"> Eles desconsideram a importância da participação das partes envolvidas, priorizando apenas a atuação de mediadores externos.</li>
+        </ul>
+        <div class="explanation" id="explanation-q31">
+            <h3>Explicação:</h3>
+            <p>Os MASCs incentivam a cidadania ativa, permitindo que as partes envolvidas no conflito transformem suas relações e busquem soluções diretamente na comunidade, promovendo a participação de todos.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q31', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q32. Qual é a principal diferença entre conciliação e negociação?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q32a1" name="q32" value="a"> A conciliação é focada em um acordo pontual, enquanto a negociação busca uma mudança nas relações entre as partes.</li>
+            <li><input type="radio" id="q32a2" name="q32" value="b"> A conciliação visa melhorar a qualidade da relação entre as partes, enquanto a negociação não envolve o mediador.</li>
+            <li><input type="radio" id="q32a3" name="q32" value="c"> A conciliação é um processo contínuo, enquanto a negociação é pontual e não envolve a proposta de um acordo.</li>
+            <li><input type="radio" id="q32a4" name="q32" value="d"> A conciliação busca uma solução amigável, enquanto a negociação sempre resulta em uma solução conflitante.</li>
+        </ul>
+        <div class="explanation" id="explanation-q32">
+            <h3>Explicação:</h3>
+            <p>A conciliação é um meio pontual de resolução de conflitos, em que o conciliador sugere um acordo, sem focar na melhoria das relações entre as partes, ao contrário da negociação, que busca alterações nas relações.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q32', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q33. Qual é o papel do conciliador durante o processo de conciliação?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q33a1" name="q33" value="a"> Decidir pela solução do conflito, se as partes não chegarem a um acordo.</li>
+            <li><input type="radio" id="q33a2" name="q33" value="b"> Ser imparcial, sugerir acordos e administrar disputas, mas sem impor decisões durante o processo.</li>
+            <li><input type="radio" id="q33a3" name="q33" value="c"> Focar na transformação das relações entre as partes, visando uma solução duradoura.</li>
+            <li><input type="radio" id="q33a4" name="q33" value="d"> Imposicionar soluções duradouras, sem sugerir acordos ou intervenções durante o processo.</li>
+        </ul>
+        <div class="explanation" id="explanation-q33">
+            <h3>Explicação:</h3>
+            <p>O conciliador deve ser imparcial, sugerir acordos e administrar disputas sem tomar decisões durante a conciliação. Ele visa ajudar as partes a chegarem a um consenso.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q33', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q34. Em que tipo de casos a conciliação é mais indicada?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q34a1" name="q34" value="a"> Casos de disputas complexas e que envolvem relações interpessoais contínuas.</li>
+            <li><input type="radio" id="q34a2" name="q34" value="b"> Quando as partes não se conhecem ou não têm relações continuadas, ou quando a intervenção mais profunda não é necessária.</li>
+            <li><input type="radio" id="q34a3" name="q34" value="c"> Casos onde se deseja a transformação profunda das relações entre as partes envolvidas.</li>
+            <li><input type="radio" id="q34a4" name="q34" value="d"> Quando as partes já têm um acordo prévio e desejam apenas formalizá-lo.</li>
+        </ul>
+        <div class="explanation" id="explanation-q34">
+            <h3>Explicação:</h3>
+            <p>A conciliação é mais indicada em casos onde as partes não se conhecem, não têm relações continuadas ou quando a intervenção mais profunda não é necessária.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q34', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q35. O que o conciliador deve enfatizar durante a conciliação?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q35a1" name="q35" value="a"> A importância de impor uma solução para as partes de forma impositiva.</li>
+            <li><input type="radio" id="q35a2" name="q35" value="b"> Critérios objetivos, buscando sugerir uma solução baseada em vantagens e desvantagens.</li>
+            <li><input type="radio" id="q35a3" name="q35" value="c"> A transformação das relações entre as partes, com foco na melhoria a longo prazo.</li>
+            <li><input type="radio" id="q35a4" name="q35" value="d"> A imposição de regras rígidas que devem ser seguidas pelas partes para a resolução do conflito.</li>
+        </ul>
+        <div class="explanation" id="explanation-q35">
+            <h3>Explicação:</h3>
+            <p>Durante a conciliação, o conciliador deve enfatizar critérios objetivos, sugerindo soluções baseadas em vantagens e desvantagens para que as partes possam avaliar e chegar a um acordo.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q35', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q36. Qual é a principal característica de uma negociação bem-sucedida?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q36a1" name="q36" value="a"> A imposição de soluções por um terceiro imparcial.</li>
+            <li><input type="radio" id="q36a2" name="q36" value="b"> A conduta assertiva das partes, equilibrando emoção e razão, e obtendo o máximo de informações sobre o problema.</li>
+            <li><input type="radio" id="q36a3" name="q36" value="c"> O foco exclusivo nos interesses da parte mais forte.</li>
+            <li><input type="radio" id="q36a4" name="q36" value="d"> A utilização de táticas de pressão e manipulação para conseguir uma vantagem.</li>
+        </ul>
+        <div class="explanation" id="explanation-q36">
+            <h3>Explicação:</h3>
+            <p>Uma negociação bem-sucedida envolve uma conduta assertiva das partes, equilibrando emoção e razão, e obtendo informações detalhadas sobre o problema, o que contribui para a construção de soluções mutuamente benéficas.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q36', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q37. Quais são as etapas recomendadas na negociação?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q37a1" name="q37" value="a"> Exploração, Ação final, e Avaliação.</li>
+            <li><input type="radio" id="q37a2" name="q37" value="b"> Preparação, Exploração, Clarificação, Ação final e Avaliação.</li>
+            <li><input type="radio" id="q37a3" name="q37" value="c"> Ação final, Definição de objetivos e Táticas de manipulação.</li>
+            <li><input type="radio" id="q37a4" name="q37" value="d"> Preparação, Discussão de propostas e Assinatura do acordo.</li>
+        </ul>
+        <div class="explanation" id="explanation-q37">
+            <h3>Explicação:</h3>
+            <p>As etapas recomendadas para uma negociação eficaz são: Preparação, Exploração, Clarificação, Ação final e Avaliação, que ajudam a sistematizar o processo.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q37', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q38. Qual é a estratégia desejável em uma negociação?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q38a1" name="q38" value="a"> Focar na disputa, buscando sempre uma solução vencedora.</li>
+            <li><input type="radio" id="q38a2" name="q38" value="b"> Separar as pessoas do problema e focar nos interesses das partes.</li>
+            <li><input type="radio" id="q38a3" name="q38" value="c"> Concentrar-se apenas nos interesses da parte mais fraca.</li>
+            <li><input type="radio" id="q38a4" name="q38" value="d"> Evitar alternativas de ganhos mútuos e fixar um critério rígido para avaliação.</li>
+        </ul>
+        <div class="explanation" id="explanation-q38">
+            <h3>Explicação:</h3>
+            <p>A estratégia desejável em uma negociação é separar as pessoas do problema, focando nos interesses das partes e explorando alternativas de ganhos mútuos.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q38', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q39. O que o negociador deve fazer para maximizar as chances de sucesso na negociação?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q39a1" name="q39" value="a"> Ignorar os interesses da outra parte e focar apenas em seus próprios interesses.</li>
+            <li><input type="radio" id="q39a2" name="q39" value="b"> Buscar equilibrar emoção e razão, ver o problema pela ótica da outra parte e obter informações completas sobre o tema e o contexto.</li>
+            <li><input type="radio" id="q39a3" name="q39" value="c"> Manter sigilo absoluto sobre as intenções e evitar compartilhar informações com a outra parte.</li>
+            <li><input type="radio" id="q39a4" name="q39" value="d"> Buscar apenas a solução mais rápida, sem se preocupar com o processo.</li>
+        </ul>
+        <div class="explanation" id="explanation-q39">
+            <h3>Explicação:</h3>
+            <p>O negociador deve buscar equilibrar emoção e razão, ver o problema pela ótica da outra parte, obter informações completas sobre o tema e o contexto, o que maximiza as chances de sucesso na negociação.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q39', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q40. O que caracteriza o Sistema Multiportas de Resolução de Conflitos?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q40a1" name="q40" value="a"> A utilização exclusiva de métodos judiciais para resolução de conflitos.</li>
+            <li><input type="radio" id="q40a2" name="q40" value="b"> A oferta de métodos de resolução de conflitos complementares aos serviços do judiciário, com foco na resolução preventiva ou em tempo real.</li>
+            <li><input type="radio" id="q40a3" name="q40" value="c"> A imposição de uma solução judicial para todos os tipos de conflito.</li>
+            <li><input type="radio" id="q40a4" name="q40" value="d"> A exclusão do judiciário das questões sociais e a completa autonomização dos métodos de resolução de conflitos.</li>
+        </ul>
+        <div class="explanation" id="explanation-q40">
+            <h3>Explicação:</h3>
+            <p>O Sistema Multiportas oferece métodos de resolução de conflitos complementares aos serviços judiciais, com foco na resolução preventiva ou em tempo real, com a possibilidade de aplicar diferentes métodos conforme a natureza do conflito.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q40', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q41. Qual é o princípio fundamental da mediação de conflitos?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q41a1" name="q41" value="a"> O mediador tem autoridade para impor soluções às partes envolvidas.</li>
+            <li><input type="radio" id="q41a2" name="q41" value="b"> A mediação busca uma solução consensual, sendo as partes as autoras da solução.</li>
+            <li><input type="radio" id="q41a3" name="q41" value="c"> A mediação ocorre apenas entre partes do mesmo grupo social.</li>
+            <li><input type="radio" id="q41a4" name="q41" value="d"> O mediador toma decisões baseadas em sua opinião pessoal sobre o conflito.</li>
+        </ul>
+        <div class="explanation" id="explanation-q41">
+            <h3>Explicação:</h3>
+            <p>A mediação é baseada na busca por uma solução consensual, com as partes sendo as autoras das soluções. O mediador facilita o processo, mas não impõe decisões.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q41', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q42. Quais são os princípios da mediação de conflitos, conforme a Lei nº 13.140/2015?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q42a1" name="q42" value="a"> Imparcialidade, Confidencialidade, e Boa-fé.</li>
+            <li><input type="radio" id="q42a2" name="q42" value="b"> Imparcialidade, Isonomia, Confidencialidade, e Autonomia da vontade das partes.</li>
+            <li><input type="radio" id="q42a3" name="q42" value="c"> Isonomia, Autonomia das partes, e Busca de consenso apenas.</li>
+            <li><input type="radio" id="q42a4" name="q42" value="d"> Confidencialidade, Imparcialidade, e Oposição das partes.</li>
+        </ul>
+        <div class="explanation" id="explanation-q42">
+            <h3>Explicação:</h3>
+            <p>De acordo com a Lei nº 13.140/2015, os princípios da mediação incluem: imparcialidade do mediador, isonomia entre as partes, confidencialidade, e autonomia da vontade das partes.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q42', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q43. O Sistema Multiportas é particularmente eficaz em qual tipo de conflito?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q43a1" name="q43" value="a"> Conflitos relacionados a disputas territoriais internacionais.</li>
+            <li><input type="radio" id="q43a2" name="q43" value="b"> Conflitos ambientais, que exigem a combinação de diferentes métodos de resolução de conflitos.</li>
+            <li><input type="radio" id="q43a3" name="q43" value="c"> Conflitos judiciais envolvendo litígios comerciais entre grandes corporações.</li>
+            <li><input type="radio" id="q43a4" name="q43" value="d"> Conflitos que envolvem questões familiares complexas e profundas.</li>
+        </ul>
+        <div class="explanation" id="explanation-q43">
+            <h3>Explicação:</h3>
+            <p>O Sistema Multiportas é eficaz especialmente em conflitos ambientais, onde diferentes métodos de resolução podem ser combinados para tratar de questões complexas e preventivas.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q43', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q44. Segundo Seidel (2007), quem deve controlar o conteúdo da mediação e definir a natureza do acordo?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q44a1" name="q44" value="a"> O mediador, que é quem decide sobre o conteúdo e as condições do acordo.</li>
+            <li><input type="radio" id="q44a2" name="q44" value="b"> As partes envolvidas, que devem controlar o conteúdo da mediação e definir a natureza do acordo.</li>
+            <li><input type="radio" id="q44a3" name="q44" value="c"> O juiz responsável pelo caso, que orienta o mediador nas decisões.</li>
+            <li><input type="radio" id="q44a4" name="q44" value="d"> A terceira parte facilitadora, que decide o conteúdo e as condições do acordo.</li>
+        </ul>
+        <div class="explanation" id="explanation-q44">
+            <h3>Explicação:</h3>
+            <p>Segundo Seidel (2007), as partes são as responsáveis por controlar o conteúdo da mediação e definir a natureza do acordo, mantendo a autonomia na construção da solução.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q44', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q45. Quais direitos podem ser objeto de mediação conforme a Lei nº 13.140/2015?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q45a1" name="q45" value="a"> Apenas direitos indisponíveis, como o direito à vida e à liberdade.</li>
+            <li><input type="radio" id="q45a2" name="q45" value="b"> Apenas direitos disponíveis, como a propriedade de bens móveis e imóveis.</li>
+            <li><input type="radio" id="q45a3" name="q45" value="c"> Direitos disponíveis e direitos indisponíveis que admitem transação, como questões relacionadas à guarda de filhos e alimentos.</li>
+            <li><input type="radio" id="q45a4" name="q45" value="d"> Nenhum direito, pois a mediação não pode envolver direitos civis.</li>
+        </ul>
+        <div class="explanation" id="explanation-q45">
+            <h3>Explicação:</h3>
+            <p>A mediação pode envolver tanto direitos disponíveis quanto direitos indisponíveis que admitam transação, como é o caso das questões de guarda e alimentos no Direito de família.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q45', 'c')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q46. Quais das seguintes circunstâncias favorecem a mediação de conflitos?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q46a1" name="q46" value="a"> Desejo de manter controle sobre a decisão e disponibilidade para rever a postura irredutível.</li>
+            <li><input type="radio" id="q46a2" name="q46" value="b"> Apenas a necessidade de celeridade e sigilo.</li>
+            <li><input type="radio" id="q46a3" name="q46" value="c"> A postura irredutível das partes e a resistência a revisões.</li>
+            <li><input type="radio" id="q46a4" name="q46" value="d"> A necessidade de um julgamento rigoroso sobre a disputa.</li>
+        </ul>
+        <div class="explanation" id="explanation-q46">
+            <h3>Explicação:</h3>
+            <p>As circunstâncias que favorecem a mediação incluem o desejo de manter controle sobre a decisão, a disponibilidade para rever a postura irredutível e a disposição de atender a interesses mútuos.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q46', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q47. Qual das seguintes características define a mediação como um processo?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q47a1" name="q47" value="a"> A mediação é um processo adversarial onde um dos lados vence a disputa.</li>
+            <li><input type="radio" id="q47a2" name="q47" value="b"> A mediação é um processo participativo, flexível, confidencial e sem julgamento de soluções.</li>
+            <li><input type="radio" id="q47a3" name="q47" value="c"> A mediação é um processo formal com regras rígidas e um juiz decide as soluções propostas.</li>
+            <li><input type="radio" id="q47a4" name="q47" value="d"> A mediação é um processo no qual o mediador impõe uma solução aos envolvidos.</li>
+        </ul>
+        <div class="explanation" id="explanation-q47">
+            <h3>Explicação:</h3>
+            <p>A mediação é um processo participativo e flexível, confidencial, onde as soluções são encontradas por consenso entre as partes, sem julgamento do mediador.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q47', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q48. Qual é a principal característica do processo de mediação em relação à comunicação?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q48a1" name="q48" value="a"> A mediação restringe a comunicação entre as partes e não permite interação direta.</li>
+            <li><input type="radio" id="q48a2" name="q48" value="b"> A mediação devolve às partes o controle sobre o conflito, trabalhando a comunicação e o relacionamento entre elas.</li>
+            <li><input type="radio" id="q48a3" name="q48" value="c"> A mediação é um processo no qual a comunicação é negligenciada, pois o foco está em resolver o conflito rapidamente.</li>
+            <li><input type="radio" id="q48a4" name="q48" value="d"> A mediação é uma prática que não se preocupa com a comunicação entre as partes, apenas com o acordo final.</li>
+        </ul>
+        <div class="explanation" id="explanation-q48">
+            <h3>Explicação:</h3>
+            <p>A mediação devolve às partes o controle sobre o conflito e trabalha a comunicação e o relacionamento entre elas, favorecendo o diálogo e a cooperação para uma solução consensual.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q48', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q49. De acordo com o artigo 9º da Lei nº 13.140/2015, quem pode funcionar como mediador extrajudicial?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q49a1" name="q49" value="a"> Somente pessoas inscritas em conselhos ou associações específicas de mediação.</li>
+            <li><input type="radio" id="q49a2" name="q49" value="b"> Qualquer pessoa capaz, que tenha a confiança das partes e seja capacitada para fazer mediação.</li>
+            <li><input type="radio" id="q49a3" name="q49" value="c"> Apenas advogados ou juízes podem atuar como mediadores extrajudiciais.</li>
+            <li><input type="radio" id="q49a4" name="q49" value="d"> Pessoas com mais de 10 anos de experiência em mediação, independentemente de capacitação formal.</li>
+        </ul>
+        <div class="explanation" id="explanation-q49">
+            <h3>Explicação:</h3>
+            <p>De acordo com o artigo 9º da Lei nº 13.140/2015, qualquer pessoa capaz, que tenha a confiança das partes e seja capacitada para fazer mediação, pode atuar como mediador extrajudicial.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q49', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q50. Quais são os tipos de mediação citados por UCB (2009)?</h2>
+        <p>Selecione todas as alternativas corretas:</p>
+        <ul>
+            <li><input type="checkbox" id="q50a1" name="q50" value="a"> Mediação técnica</li>
+            <li><input type="checkbox" id="q50a2" name="q50" value="b"> Mediação comunitária</li>
+            <li><input type="checkbox" id="q50a3" name="q50" value="c"> Mediação judicial</li>
+            <li><input type="checkbox" id="q50a4" name="q50" value="d"> Mediação penal</li>
+            <li><input type="checkbox" id="q50a5" name="q50" value="e"> Mediação familiar</li>
+        </ul>
+        <div class="explanation" id="explanation-q50">
+            <h3>Explicação:</h3>
+            <p>Os tipos de mediação citados por UCB (2009) incluem: mediação técnica, comunitária, forense, penal e familiar.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q50', ['a', 'b', 'd', 'e'])">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q51. Qual é o foco da mediação familiar?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q51a1" name="q51" value="a"> A mediação familiar visa a resolver conflitos no âmbito da empresa familiar.</li>
+            <li><input type="radio" id="q51a2" name="q51" value="b"> A mediação familiar tem o objetivo de oferecer apoio para a resolução de conflitos familiares com o mínimo de comprometimento da estrutura psicoafetiva dos membros.</li>
+            <li><input type="radio" id="q51a3" name="q51" value="c"> A mediação familiar busca resolver questões de propriedade entre os membros da família.</li>
+            <li><input type="radio" id="q51a4" name="q51" value="d"> A mediação familiar é focada exclusivamente em questões financeiras entre os membros da família.</li>
+        </ul>
+        <div class="explanation" id="explanation-q51">
+            <h3>Explicação:</h3>
+            <p>A mediação familiar busca oferecer apoio para a resolução de conflitos familiares, com o mínimo de comprometimento da estrutura psicoafetiva dos membros, focando na restauração do relacionamento e compreensão mútua.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q51', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q52. Quais são as modalidades de mediação previstas pela Lei n° 13.140/2015?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q52a1" name="q52" value="a"> Mediação judicial e mediação extrajudicial.</li>
+            <li><input type="radio" id="q52a2" name="q52" value="b"> Mediação preventiva e mediação corretiva.</li>
+            <li><input type="radio" id="q52a3" name="q52" value="c"> Mediação orientativa e mediação compulsória.</li>
+            <li><input type="radio" id="q52a4" name="q52" value="d"> Mediação jurisdicional e mediação administrativa.</li>
+        </ul>
+        <div class="explanation" id="explanation-q52">
+            <h3>Explicação:</h3>
+            <p>De acordo com a Lei n° 13.140/2015, as modalidades de mediação são a mediação judicial e a mediação extrajudicial.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q52', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q53. O modelo tradicional-linear de mediação tem como foco:</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q53a1" name="q53" value="a"> A transformação das relações entre as partes e o reconhecimento das suas capacidades.</li>
+            <li><input type="radio" id="q53a2" name="q53" value="b"> A construção de um acordo, com foco no passado e nas causas do conflito.</li>
+            <li><input type="radio" id="q53a3" name="q53" value="c"> A análise do futuro e das possibilidades da relação entre as partes.</li>
+            <li><input type="radio" id="q53a4" name="q53" value="d"> A promoção de um processo contínuo de transformação, sem um acordo definitivo.</li>
+        </ul>
+        <div class="explanation" id="explanation-q53">
+            <h3>Explicação:</h3>
+            <p>O modelo tradicional-linear de mediação tem como foco a construção de um acordo, com orientação para o passado, buscando entender as causas do conflito e resolvê-lo.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q53', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q54. Qual é o principal objetivo do modelo transformativo de mediação?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q54a1" name="q54" value="a"> Focar exclusivamente na resolução do conflito, sem se preocupar com as partes envolvidas.</li>
+            <li><input type="radio" id="q54a2" name="q54" value="b"> Ajudar as partes a reconhecem suas necessidades, capacidades de escolha e promover a transformação na relação.</li>
+            <li><input type="radio" id="q54a3" name="q54" value="c"> Buscar soluções rápidas para resolver o problema de forma prática e direta.</li>
+            <li><input type="radio" id="q54a4" name="q54" value="d"> A mediação focada no passado e na análise das causas do conflito para evitar futuros desentendimentos.</li>
+        </ul>
+        <div class="explanation" id="explanation-q54">
+            <h3>Explicação:</h3>
+            <p>No modelo transformativo, o objetivo é ajudar as partes a reconhecerem suas necessidades, capacidades de escolha e promover uma transformação na relação entre elas.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q54', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q55. O modelo circular de mediação busca:</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q55a1" name="q55" value="a"> Separar o conflito das pessoas envolvidas para encontrar uma solução única.</li>
+            <li><input type="radio" id="q55a2" name="q55" value="b"> Integrar as relações entre as pessoas, o contexto e o conflito, buscando tanto o acordo quanto a transformação das relações.</li>
+            <li><input type="radio" id="q55a3" name="q55" value="c"> Resolver rapidamente os conflitos, sem se preocupar com as relações interpessoais.</li>
+            <li><input type="radio" id="q55a4" name="q55" value="d"> Focar exclusivamente na resolução do problema, sem considerar o contexto e as relações entre as partes.</li>
+        </ul>
+        <div class="explanation" id="explanation-q55">
+            <h3>Explicação:</h3>
+            <p>O modelo circular busca integrar as relações entre as pessoas, o contexto e o conflito, promovendo tanto o acordo quanto a transformação das relações, com uma visão sistêmica e inter-relacionada.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q55', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q56. No modelo tradicional-linear, as técnicas de mediação são baseadas nos princípios de negociação de Harvard. Qual dos seguintes princípios NÃO faz parte desses princípios?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q56a1" name="q56" value="a"> Separação das pessoas do problema.</li>
+            <li><input type="radio" id="q56a2" name="q56" value="b"> Focalização nas posições e não nos interesses.</li>
+            <li><input type="radio" id="q56a3" name="q56" value="c"> Criação de opções para o benefício mútuo.</li>
+            <li><input type="radio" id="q56a4" name="q56" value="d"> Utilização de critérios objetivos.</li>
+        </ul>
+        <div class="explanation" id="explanation-q56">
+            <h3>Explicação:</h3>
+            <p>O princípio que não faz parte é "focalização nas posições", já que o modelo tradicional-linear foca nos interesses e não nas posições das partes.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q56', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q57. No modelo transformativo de mediação, qual é o principal objetivo das técnicas utilizadas?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q57a1" name="q57" value="a"> Promover a análise conjunta da situação, permitindo que as partes tomem decisões juntas.</li>
+            <li><input type="radio" id="q57a2" name="q57" value="b"> Focar na criação de um acordo de forma rápida e eficaz.</li>
+            <li><input type="radio" id="q57a3" name="q57" value="c"> Separar os interesses das partes para evitar o confronto direto.</li>
+            <li><input type="radio" id="q57a4" name="q57" value="d"> Forçar um acordo rápido e garantir que todas as partes aceitem a solução proposta.</li>
+        </ul>
+        <div class="explanation" id="explanation-q57">
+            <h3>Explicação:</h3>
+            <p>No modelo transformativo, o objetivo das técnicas é promover a análise conjunta da situação e permitir que as partes tomem decisões juntas, reconhecendo-se como protagonistas do processo.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q57', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q58. Quais são as técnicas mais associadas ao modelo circular de mediação?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q58a1" name="q58" value="a"> Foco exclusivo na criação de um acordo legal.</li>
+            <li><input type="radio" id="q58a2" name="q58" value="b"> Preservação do vínculo entre as partes e reflexão sobre o conflito.</li>
+            <li><input type="radio" id="q58a3" name="q58" value="c"> Separação das partes para evitar conflito direto.</li>
+            <li><input type="radio" id="q58a4" name="q58" value="d"> Focalização apenas nos aspectos técnicos e legais do conflito.</li>
+        </ul>
+        <div class="explanation" id="explanation-q58">
+            <h3>Explicação:</h3>
+            <p>No modelo circular, as técnicas buscam preservar o vínculo entre as partes e estimulam a reflexão sobre o conflito, promovendo a mudança na percepção do significado dos fatos ocorridos.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q58', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q59. Qual é a principal característica do modelo híbrido de mediação?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q59a1" name="q59" value="a"> O mediador atua de forma coercitiva para garantir um acordo.</li>
+            <li><input type="radio" id="q59a2" name="q59" value="b"> O mediador é um facilitador que busca o equilíbrio de poder e o compartilhamento de responsabilidades.</li>
+            <li><input type="radio" id="q59a3" name="q59" value="c"> O mediador se concentra exclusivamente na criação de um acordo jurídico formal.</li>
+            <li><input type="radio" id="q59a4" name="q59" value="d"> O mediador age como um árbitro, tomando as decisões por ambas as partes.</li>
+        </ul>
+        <div class="explanation" id="explanation-q59">
+            <h3>Explicação:</h3>
+            <p>No modelo híbrido, o mediador é um facilitador, guiando as partes e buscando o equilíbrio de poder e o compartilhamento de responsabilidades, por meio de comunicação e cooperação.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q59', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q60. Quem pode atuar como mediador judicial de acordo com a Lei nº 13.140/2015?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q60a1" name="q60" value="a"> Qualquer pessoa capaz, sem necessidade de qualificação específica.</li>
+            <li><input type="radio" id="q60a2" name="q60" value="b"> Apenas advogados com mais de 10 anos de experiência.</li>
+            <li><input type="radio" id="q60a3" name="q60" value="c"> Pessoas graduadas há pelo menos dois anos em um curso de ensino superior e com capacitação reconhecida.</li>
+            <li><input type="radio" id="q60a4" name="q60" value="d"> Apenas juízes que atuam na área de mediação.</li>
+        </ul>
+        <div class="explanation" id="explanation-q60">
+            <h3>Explicação:</h3>
+            <p>De acordo com o art. 11 da Lei nº 13.140/2015, o mediador judicial deve ser graduado em um curso de ensino superior reconhecido e ter capacitação em escola ou instituição de formação de mediadores reconhecida pela ENFAM ou tribunais.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q60', 'c')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q61. O que é confidencialidade no procedimento de mediação, conforme a Lei nº 13.140/2015?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q61a1" name="q61" value="a"> As partes podem compartilhar livremente as informações da mediação com terceiros.</li>
+            <li><input type="radio" id="q61a2" name="q61" value="b"> Toda informação relacionada ao procedimento é confidencial, salvo exceções previstas em lei.</li>
+            <li><input type="radio" id="q61a3" name="q61" value="c"> Apenas o mediador deve manter a confidencialidade, não se aplicando às partes.</li>
+            <li><input type="radio" id="q61a4" name="q61" value="d"> A confidencialidade não se aplica ao conteúdo da mediação, apenas à forma.</li>
+        </ul>
+        <div class="explanation" id="explanation-q61">
+            <h3>Explicação:</h3>
+            <p>Segundo o art. 30 da Lei nº 13.140/2015, todas as informações relativas ao procedimento de mediação são confidenciais, e não podem ser reveladas a terceiros, salvo exceções previstas em lei ou com o consentimento das partes.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q61', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q62. Quais são os tipos de mediação definidos pela Lei nº 13.140/2015?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q62a1" name="q62" value="a"> Apenas a mediação judicial e extrajudicial.</li>
+            <li><input type="radio" id="q62a2" name="q62" value="b"> Mediação técnica, comunitária, forense, penal e familiar.</li>
+            <li><input type="radio" id="q62a3" name="q62" value="c"> Mediação obrigatória em todos os casos judiciais.</li>
+            <li><input type="radio" id="q62a4" name="q62" value="d"> Mediação exclusivamente em casos envolvendo litígios comerciais.</li>
+        </ul>
+        <div class="explanation" id="explanation-q62">
+            <h3>Explicação:</h3>
+            <p>A Lei nº 13.140/2015 define diferentes tipos de mediação, incluindo a técnica, comunitária, forense, penal e familiar, cada uma voltada para contextos e finalidades específicas.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q62', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q63. Qual é a principal diferença na atuação do mediador nas modalidades de mediação extrajudicial e judicial, conforme a Lei nº 13.140/2015?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q63a1" name="q63" value="a"> Na mediação extrajudicial, o mediador é escolhido pelas partes, enquanto na judicial, o mediador é designado pelo tribunal.</li>
+            <li><input type="radio" id="q63a2" name="q63" value="b"> O mediador judicial deve ter formação em direito, enquanto o mediador extrajudicial pode ser qualquer pessoa sem formação específica.</li>
+            <li><input type="radio" id="q63a3" name="q63" value="c"> O mediador judicial pode ser qualquer pessoa capaz, mas deve ser escolhido pelas partes, enquanto o mediador extrajudicial é designado pelo tribunal.</li>
+            <li><input type="radio" id="q63a4" name="q63" value="d"> Não há diferença entre as modalidades; o mediador atua da mesma forma em ambas.</li>
+        </ul>
+        <div class="explanation" id="explanation-q63">
+            <h3>Explicação:</h3>
+            <p>A Lei nº 13.140/2015 estabelece que, na mediação extrajudicial, o mediador é escolhido pelas partes e pode ser qualquer pessoa capaz com capacitação adequada. Já na mediação judicial, o mediador é designado pelo tribunal e deve atender a requisitos específicos de formação e capacitação.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q63', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q64. Quais são as principais habilidades requeridas para um mediador segundo a Lei nº 13.140/2015?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q64a1" name="q64" value="a"> Promover a reflexão e o diálogo, escutar e refletir, gerenciar conflitos, identificar impasses e interesses comuns.</li>
+            <li><input type="radio" id="q64a2" name="q64" value="b"> Saber impor uma solução de forma rápida e eficiente, sem necessidade de escuta ativa.</li>
+            <li><input type="radio" id="q64a3" name="q64" value="c"> Exigir das partes um acordo imediato, sem espaço para reflexão ou negociação.</li>
+            <li><input type="radio" id="q64a4" name="q64" value="d"> Impor uma solução de forma coercitiva e sem escuta ativa das partes envolvidas.</li>
+        </ul>
+        <div class="explanation" id="explanation-q64">
+            <h3>Explicação:</h3>
+            <p>De acordo com a Lei nº 13.140/2015, o mediador deve ter habilidades para promover a reflexão e o diálogo, escutar e refletir, gerenciar conflitos, identificar impasses e interesses comuns, sempre mantendo uma postura imparcial e ética.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q64', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q65. Qual é a função principal do mediador durante o processo de mediação, de acordo com a Lei nº 13.140/2015?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q65a1" name="q65" value="a"> Conduzir o procedimento de comunicação entre as partes, buscando o entendimento e o consenso.</li>
+            <li><input type="radio" id="q65a2" name="q65" value="b"> Imprimir uma solução coercitiva para resolver o conflito de forma rápida.</li>
+            <li><input type="radio" id="q65a3" name="q65" value="c"> Atuar como juiz, decidindo as questões de direito e impondo soluções às partes.</li>
+            <li><input type="radio" id="q65a4" name="q65" value="d"> Evitar o diálogo entre as partes, focando somente na documentação do processo.</li>
+        </ul>
+        <div class="explanation" id="explanation-q65">
+            <h3>Explicação:</h3>
+            <p>A função principal do mediador é conduzir o procedimento de comunicação entre as partes, buscando o entendimento e o consenso, como descrito no art. 4º, §1º da Lei nº 13.140/2015.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q65', 'a')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q66. Qual é o objetivo da escuta ativa no processo de mediação, conforme Seidel (2007)?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q66a1" name="q66" value="a"> Garantir que as partes tenham uma visão do conflito a partir de elementos técnicos, como a paráfrase, facilitando a compreensão mútua da mensagem.</li>
+            <li><input type="radio" id="q66a2" name="q66" value="b"> Impor uma solução rápida e eficaz, sem necessidade de diálogo entre as partes.</li>
+            <li><input type="radio" id="q66a3" name="q66" value="c"> Limitar a comunicação entre as partes, garantindo que apenas uma parte fale de cada vez.</li>
+            <li><input type="radio" id="q66a4" name="q66" value="d"> Evitar qualquer tipo de repetição ou resumo da mensagem das partes durante o processo.</li>
+        </ul>
+        <div class="explanation" id="explanation-q66">
+            <h3>Explicação:</h3>
+            <p>A escuta ativa visa garantir a atenção das partes, ajudando-as a entender o conflito a partir de elementos técnicos como a paráfrase, que facilita a compreensão mútua e fortalece a comunicação.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q66', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q67. O que o mediador deve evitar durante o processo de mediação, conforme o princípio da escuta ativa?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q67a1" name="q67" value="a"> Criar um clima de acusações, para que as partes se concentrem no miolo do conflito e diferenciem posições de interesse.</li>
+            <li><input type="radio" id="q67a2" name="q67" value="b"> Focar apenas nas acusações feitas pelas partes, sem dar espaço para ouvir as alternativas de solução.</li>
+            <li><input type="radio" id="q67a3" name="q67" value="c"> Estimular a busca por culpados, em vez de focar nas soluções para o conflito.</li>
+            <li><input type="radio" id="q67a4" name="q67" value="d"> Repetir constantemente a mensagem das partes, sem buscar compreender a visão do outro.</li>
+        </ul>
+        <div class="explanation" id="explanation-q67">
+            <h3>Explicação:</h3>
+            <p>O mediador deve evitar criar um clima de acusações e, em vez disso, ajudar as partes a se concentrarem no miolo do conflito, distinguindo suas posições de seus reais interesses.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q67', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q68. Qual é a função do questionamento criativo no processo de mediação?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q68a1" name="q68" value="a"> Auxiliar as partes a levantarem alternativas de solução para o conflito.</li>
+            <li><input type="radio" id="q68a2" name="q68" value="b"> Coagir as partes a aceitarem uma solução já predefinida pelo mediador.</li>
+            <li><input type="radio" id="q68a3" name="q68" value="c"> Garantir que as partes não apresentem mais soluções após o primeiro acordo.</li>
+            <li><input type="radio" id="q68a4" name="q68" value="d"> Impedir que as partes discutam alternativas durante o processo.</li>
+        </ul>
+        <div class="explanation" id="explanation-q68">
+            <h3>Explicação:</h3>
+            <p>O questionamento criativo tem como objetivo ajudar as partes a levantar alternativas de solução, incentivando a busca conjunta por soluções para o conflito.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q68', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q69. Qual é o princípio fundamental da mediação, conforme o Art. 2º, §2° da Lei nº 13.140/2015?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q69a1" name="q69" value="a"> A mediação é um processo voluntário e as partes podem desistir a qualquer momento.</li>
+            <li><input type="radio" id="q69a2" name="q69" value="b"> A mediação é obrigatória, não podendo as partes desistir durante o processo.</li>
+            <li><input type="radio" id="q69a3" name="q69" value="c"> As partes devem permanecer na mediação, independentemente de sua vontade.</li>
+            <li><input type="radio" id="q69a4" name="q69" value="d"> O mediador deve obrigar as partes a aceitar um acordo, mesmo contra sua vontade.</li>
+        </ul>
+        <div class="explanation" id="explanation-q69">
+            <h3>Explicação:</h3>
+            <p>A Lei nº 13.140/2015 estabelece que a mediação é um processo voluntário, ou seja, as partes têm a liberdade de optar por participar ou desistir a qualquer momento, desde que informadas sobre o processo.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q69', 'a')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q70. O que deve ser garantido pelo mediador em relação ao sigilo, conforme a ética da mediação?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q70a1" name="q70" value="a"> O mediador deve garantir que todas as informações e dados manuseados durante o processo sejam mantidos em sigilo, inclusive as informações de reuniões privadas.</li>
+            <li><input type="radio" id="q70a2" name="q70" value="b"> O mediador pode compartilhar as informações das partes com terceiros, caso seja necessário para a resolução do conflito.</li>
+            <li><input type="radio" id="q70a3" name="q70" value="c"> O sigilo é opcional, podendo o mediador revelar informações se considerar que ajudará na solução do conflito.</li>
+            <li><input type="radio" id="q70a4" name="q70" value="d"> O sigilo não se aplica às reuniões privadas entre o mediador e as partes, sendo permitido compartilhar os dados com a equipe técnica.</li>
+        </ul>
+        <div class="explanation" id="explanation-q70">
+            <h3>Explicação:</h3>
+            <p>De acordo com a ética da mediação, o mediador deve zelar pelo sigilo de todas as informações e dados manuseados, incluindo aqueles discutidos nas reuniões privadas.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q70', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q71. O que envolve o equilíbrio de poder no processo de mediação?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q71a1" name="q71" value="a"> O mediador deve garantir que o tom de voz, as questões de encaminhamento e a legitimidade sejam equilibrados entre as partes.</li>
+            <li><input type="radio" id="q71a2" name="q71" value="b"> O mediador deve impor uma solução que favoreça a parte mais forte no conflito.</li>
+            <li><input type="radio" id="q71a3" name="q71" value="c"> O mediador deve garantir que uma das partes tenha o controle total sobre o processo.</li>
+            <li><input type="radio" id="q71a4" name="q71" value="d"> O mediador deve agir de forma a ignorar as diferenças de poder entre as partes durante a mediação.</li>
+        </ul>
+        <div class="explanation" id="explanation-q71">
+            <h3>Explicação:</h3>
+            <p>O equilíbrio de poder envolve a garantia de que as partes tenham um tratamento igualitário, considerando o tom de voz, questões de encaminhamento e legitimidade no processo de mediação.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q71', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q72. Como o mediador deve garantir o equilíbrio de informações entre as partes?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q72a1" name="q72" value="a"> O mediador deve orientar as partes a buscarem todas as informações necessárias para tomar uma decisão informada e justa.</li>
+            <li><input type="radio" id="q72a2" name="q72" value="b"> O mediador deve ocultar informações de uma das partes para evitar possíveis conflitos.</li>
+            <li><input type="radio" id="q72a3" name="q72" value="c"> O mediador deve garantir que uma das partes tenha acesso a mais informações que a outra, para equilibrar o poder.</li>
+            <li><input type="radio" id="q72a4" name="q72" value="d"> O mediador deve permitir que as partes compartilhem informações somente quando necessário, para evitar excessos.</li>
+        </ul>
+        <div class="explanation" id="explanation-q72">
+            <h3>Explicação:</h3>
+            <p>O mediador deve garantir o equilíbrio de informações, orientando as partes a buscar todas as informações necessárias para que possam tomar decisões informadas e justas durante o processo de mediação.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q72', 'a')">Verificar Resposta</button>
+    </div>
+                
+                                                            
+
+                                                                                                                                                                                                                                                                                                                                                                  
+    </div>
+    
+    <script>
+        function verificarResposta(questionId, correctAnswer) {
+            var options = document.getElementsByName(questionId);
+            var explanation = document.getElementById("explanation-" + questionId);
+            var isCorrect = false;
+            
+            // Verificando a resposta correta
+            for (var i = 0; i < options.length; i++) {
+                var option = options[i];
+                if (option.checked) {
+                    if (option.value === correctAnswer) {
+                        option.parentElement.style.backgroundColor = "green"; // Verde para resposta correta
+                        explanation.style.color = "green";
+                        isCorrect = true;
+                    } else {
+                        option.parentElement.style.backgroundColor = "red"; // Vermelho para resposta errada
+                        explanation.style.color = "red";
+                    }
+                }
+            }
+    
+            // Exibindo a explicação
+            explanation.style.display = "block";
+        }
+    </script>
+    
+    <footer>
+        <p>© 2024 - Plataforma de Questões</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Questões</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: white;
+        }
+
+        header {
+            background-color: #6200EA;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            color: #FFFFFF;
+            font-size: 2.5rem;
+        }
+
+        .summary-button {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            background-color: #03DAC5;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .summary-button:hover {
+            background-color: #018786;
+            color: white;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .question-box {
+            background-color: #1E1E1E;
+            border: 2px solid #03DAC5;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        .question-box h2 {
+            color: #03DAC5;
+        }
+
+        .explanation {
+            background-color: #333;
+            border-left: 4px solid #FF0266;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .explanation h3 {
+            color: #FF0266;
+            margin: 0;
+        }
+
+        .button {
+            background-color: #03DAC5;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #018786;
+            color: white;
+        }
+
+        footer {
+            background-color: #6200EA;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            color: white;
+            font-size: 0.9rem;
+        }
+    </style>
+    <script>
+        function verificarResposta() {
+            const explanation = document.querySelector('.explanation');
+            explanation.style.display = 'block';
+        }
+
+        function mostrarResumo() {
+            alert('Esta função exibirá um resumo dos conteúdos abordados.');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Questões Análise de Cenários e Riscos e Resolução de Problemas e Tomada de Decisão</h1>
+        
+    </header>
+    <div class="question-box">
+        <h2>O que caracteriza o processo de tomada de decisão, segundo o conceito apresentado?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q1a1" name="q1" value="a"> Tomar uma decisão envolve simplesmente escolher um caminho sem analisar alternativas.</li>
+            <li><input type="radio" id="q1a2" name="q1" value="b"> A tomada de decisão ocorre apenas após identificar o problema e analisá-lo de diferentes perspectivas.</li>
+            <li><input type="radio" id="q1a3" name="q1" value="c"> O processo de decisão é apenas reflexivo, não requerendo a avaliação de alternativas.</li>
+            <li><input type="radio" id="q1a4" name="q1" value="d"> A decisão é tomada sem a necessidade de avaliar as alternativas disponíveis.</li>
+        </ul>
+        <div class="explanation" id="explanation-q1">
+            <h3>Explicação:</h3>
+            <p>A tomada de decisão é um processo complexo e reflexivo, que envolve reconhecer o problema, analisá-lo sob diferentes perspectivas e avaliar alternativas antes de tomar a decisão final.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q1', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual a importância de avaliar as alternativas antes de tomar uma decisão?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q2a1" name="q2" value="a"> Avaliar alternativas permite escolher a solução mais rápida, sem considerar suas implicações.</li>
+            <li><input type="radio" id="q2a2" name="q2" value="b"> Avaliar alternativas é crucial para entender as implicações de cada opção e escolher a melhor solução para o problema.</li>
+            <li><input type="radio" id="q2a3" name="q2" value="c"> A avaliação das alternativas não é necessária se o problema for simples.</li>
+            <li><input type="radio" id="q2a4" name="q2" value="d"> A escolha de uma alternativa pode ser feita sem análise prévia das opções disponíveis.</li>
+        </ul>
+        <div class="explanation" id="explanation-q2">
+            <h3>Explicação:</h3>
+            <p>Avaliar as alternativas é fundamental para compreender as consequências de cada opção e fazer uma escolha bem-informada, levando em conta o contexto e as soluções possíveis.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q2', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Em qual etapa do processo de tomada de decisão se deve considerar todas as opções disponíveis?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q3a1" name="q3" value="a"> Considerar todas as opções deve ocorrer após a decisão ser tomada.</li>
+            <li><input type="radio" id="q3a2" name="q3" value="b"> Deve-se considerar todas as opções durante a análise do problema, antes de tomar a decisão final.</li>
+            <li><input type="radio" id="q3a3" name="q3" value="c"> As opções devem ser consideradas somente após a identificação do problema.</li>
+            <li><input type="radio" id="q3a4" name="q3" value="d"> As alternativas são irrelevantes, e a decisão pode ser tomada sem essa consideração.</li>
+        </ul>
+        <div class="explanation" id="explanation-q3">
+            <h3>Explicação:</h3>
+            <p>Considerar todas as opções deve acontecer durante a análise do problema, permitindo avaliar as alternativas antes de decidir qual é a mais apropriada.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q3', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>Qual é o objetivo da inclusão da disciplina de tomada de decisão no contexto da segurança pública?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q4a1" name="q4" value="a"> Capacitar os profissionais a tomar decisões de forma rápida e sem análise.</li>
+            <li><input type="radio" id="q4a2" name="q4" value="b"> Preparar os profissionais para adotar uma abordagem analítica, com metas claras e estratégias de superação de obstáculos.</li>
+            <li><input type="radio" id="q4a3" name="q4" value="c"> Ensinar os profissionais a tomar decisões sem considerar os obstáculos que podem surgir.</li>
+            <li><input type="radio" id="q4a4" name="q4" value="d"> Ensinar os profissionais a ignorar as metas e focar apenas na ação imediata.</li>
+        </ul>
+        <div class="explanation" id="explanation-q4">
+            <h3>Explicação:</h3>
+            <p>O objetivo é capacitar os profissionais para adotar uma abordagem analítica, com metas claras, identificação de obstáculos e estratégias viáveis para superá-los.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q4', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>O que caracteriza uma situação-problema, no contexto da segurança pública?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q5a1" name="q5" value="a"> É um cenário simples, onde a decisão é óbvia e rápida de tomar.</li>
+            <li><input type="radio" id="q5a2" name="q5" value="b"> É um cenário complexo que exige análise e aplicação de estratégias de resolução para alcançar uma solução satisfatória.</li>
+            <li><input type="radio" id="q5a3" name="q5" value="c"> É um cenário onde não há necessidade de ação, pois o problema se resolve sozinho.</li>
+            <li><input type="radio" id="q5a4" name="q5" value="d"> É um cenário que pode ser resolvido sem qualquer análise ou avaliação de alternativas.</li>
+        </ul>
+        <div class="explanation" id="explanation-q5">
+            <h3>Explicação:</h3>
+            <p>As situações-problema são cenários complexos que requerem uma análise detalhada e a aplicação de estratégias para superar obstáculos e alcançar soluções eficazes.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q5', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Quais são os componentes mais comuns das situações-problema?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q6a1" name="q6" value="a"> Obstáculos simples que podem ser superados rapidamente.</li>
+            <li><input type="radio" id="q6a2" name="q6" value="b"> Componentes que incluem questões ou dilemas que exigem tomada de decisão e ação para superar obstáculos e alcançar objetivos.</li>
+            <li><input type="radio" id="q6a3" name="q6" value="c"> Apenas componentes que envolvem decisões relacionadas a aspectos financeiros.</li>
+            <li><input type="radio" id="q6a4" name="q6" value="d"> Componentes que se limitam a analisar os recursos disponíveis sem considerar os obstáculos.</li>
+        </ul>
+        <div class="explanation" id="explanation-q6">
+            <h3>Explicação:</h3>
+            <p>As situações-problema envolvem componentes como questões e dilemas que exigem uma análise e tomada de decisão para superar obstáculos e alcançar objetivos específicos.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q6', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>O que é considerado o "contexto" em uma situação-problema?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q7a1" name="q7" value="a"> O contexto refere-se aos resultados ou metas que se deseja alcançar.</li>
+            <li><input type="radio" id="q7a2" name="q7" value="b"> O contexto envolve o ambiente onde a situação ocorre, levando em consideração fatores como tempo, espaço, cultura e circunstâncias específicas.</li>
+            <li><input type="radio" id="q7a3" name="q7" value="c"> O contexto diz respeito apenas às informações relevantes sobre a situação-problema.</li>
+            <li><input type="radio" id="q7a4" name="q7" value="d"> O contexto é irrelevante, pois a situação-problema pode ser resolvida sem considerar o ambiente.</li>
+        </ul>
+        <div class="explanation" id="explanation-q7">
+            <h3>Explicação:</h3>
+            <p>O contexto refere-se ao ambiente em que a situação-problema ocorre, considerando fatores como tempo, espaço, cultura e circunstâncias específicas.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q7', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual é a função dos objetivos em uma situação-problema?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q8a1" name="q8" value="a"> Os objetivos são irrelevantes, pois o foco está apenas na análise das informações.</li>
+            <li><input type="radio" id="q8a2" name="q8" value="b"> Os objetivos são os resultados ou metas a serem alcançados ao lidar com a situação-problema, podendo ser claros ou definidos durante o processo.</li>
+            <li><input type="radio" id="q8a3" name="q8" value="c"> Os objetivos devem ser definidos antes de analisar o contexto e as informações.</li>
+            <li><input type="radio" id="q8a4" name="q8" value="d"> Os objetivos são apenas metas financeiras e não influenciam a resolução da situação-problema.</li>
+        </ul>
+        <div class="explanation" id="explanation-q8">
+            <h3>Explicação:</h3>
+            <p>Os objetivos representam os resultados ou metas a serem alcançados durante o processo de resolução da situação-problema e podem ser claros ou precisar ser identificados ao longo do processo.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q8', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>O que são as informações em uma situação-problema?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q9a1" name="q9" value="a"> As informações são os dados financeiros relacionados à situação-problema.</li>
+            <li><input type="radio" id="q9a2" name="q9" value="b"> As informações envolvem os dados e elementos relevantes para compreender e analisar a situação-problema, como fatos, evidências e opiniões de especialistas.</li>
+            <li><input type="radio" id="q9a3" name="q9" value="c"> As informações são irrelevantes, pois o foco deve ser na tomada de decisão.</li>
+            <li><input type="radio" id="q9a4" name="q9" value="d"> As informações são somente dados quantitativos e não envolvem contextos subjetivos.</li>
+        </ul>
+        <div class="explanation" id="explanation-q9">
+            <h3>Explicação:</h3>
+            <p>As informações incluem dados e elementos relevantes como fatos, evidências, relatórios e opiniões de especialistas, que ajudam a compreender e analisar a situação-problema.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q9', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>O que são os "dilemas ou desafios" em uma situação-problema?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q10a1" name="q10" value="a"> São aspectos problemáticos que tornam a situação simples de resolver.</li>
+            <li><input type="radio" id="q10a2" name="q10" value="b"> São obstáculos ou questões que tornam a situação complexa, como restrições, conflitos de interesse ou falta de recursos.</li>
+            <li><input type="radio" id="q10a3" name="q10" value="c"> São os objetivos que precisam ser definidos para resolver a situação.</li>
+            <li><input type="radio" id="q10a4" name="q10" value="d"> São soluções já estabelecidas que devem ser seguidas sem questionamento.</li>
+        </ul>
+        <div class="explanation" id="explanation-q10">
+            <h3>Explicação:</h3>
+            <p>Os dilemas ou desafios são os aspectos problemáticos que tornam a situação complexa, incluindo restrições, conflitos de interesse, falta de recursos, incertezas ou outras questões que precisam ser superadas.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q10', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>O que são as "alternativas" em uma situação-problema?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q11a1" name="q11" value="a"> As alternativas são as possíveis soluções que não precisam ser avaliadas antes da tomada de decisão.</li>
+            <li><input type="radio" id="q11a2" name="q11" value="b"> As alternativas são as possíveis soluções ou caminhos a serem considerados para resolver a situação-problema, e devem ser avaliadas para encontrar a melhor solução.</li>
+            <li><input type="radio" id="q11a3" name="q11" value="c"> As alternativas são soluções definitivas, que não necessitam de análise.</li>
+            <li><input type="radio" id="q11a4" name="q11" value="d"> As alternativas são apenas as opções que são mais simples de implementar, independentemente da sua eficácia.</li>
+        </ul>
+        <div class="explanation" id="explanation-q11">
+            <h3>Explicação:</h3>
+            <p>As alternativas são as possíveis soluções ou abordagens que podem ser consideradas para resolver a situação-problema, sendo essencial avaliar diferentes opções para identificar a melhor solução.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q11', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>O que envolve o processo de "tomada de decisão" em uma situação-problema?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q12a1" name="q12" value="a"> A tomada de decisão envolve simplesmente escolher a solução mais rápida, sem considerar os critérios estabelecidos.</li>
+            <li><input type="radio" id="q12a2" name="q12" value="b"> A tomada de decisão envolve escolher a melhor alternativa com base em uma análise das informações disponíveis, objetivos, restrições e consequências.</li>
+            <li><input type="radio" id="q12a3" name="q12" value="c"> A tomada de decisão não necessita de uma análise profunda, sendo uma escolha intuitiva.</li>
+            <li><input type="radio" id="q12a4" name="q12" value="d"> A tomada de decisão deve ser feita sem levar em consideração os obstáculos e as consequências das escolhas.</li>
+        </ul>
+        <div class="explanation" id="explanation-q12">
+            <h3>Explicação:</h3>
+            <p>A tomada de decisão envolve o processo de escolher a melhor alternativa com base em critérios estabelecidos, levando em consideração as informações, objetivos, restrições e consequências.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q12', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>Como a compreensão do conceito e dos componentes das situações-problema pode ajudar os profissionais?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q13a1" name="q13" value="a"> Ajudando os profissionais a resolverem as situações de forma intuitiva, sem a necessidade de estratégias adequadas.</li>
+            <li><input type="radio" id="q13a2" name="q13" value="b"> Ajudando os profissionais a abordar as situações de forma estruturada e eficiente, aplicando métodos e estratégias adequadas.</li>
+            <li><input type="radio" id="q13a3" name="q13" value="c"> Ajudando os profissionais a resolverem as situações de maneira rápida, sem considerar os componentes das situações-problema.</li>
+            <li><input type="radio" id="q13a4" name="q13" value="d"> Não influenciando a forma como os profissionais resolvem as situações-problema.</li>
+        </ul>
+        <div class="explanation" id="explanation-q13">
+            <h3>Explicação:</h3>
+            <p>Compreender os componentes das situações-problema permite que os profissionais abordem as situações de maneira estruturada e eficiente, utilizando métodos e estratégias adequadas para encontrar soluções satisfatórias.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q13', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual é a primeira etapa do processo de diagnóstico de situações problemáticas?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q14a1" name="q14" value="a"> Coleta de informações sobre o problema.</li>
+            <li><input type="radio" id="q14a2" name="q14" value="b"> Identificação do problema, definindo claramente a situação que requer análise.</li>
+            <li><input type="radio" id="q14a3" name="q14" value="c"> Análise das alternativas disponíveis para resolver o problema.</li>
+            <li><input type="radio" id="q14a4" name="q14" value="d"> Avaliação das consequências de cada possível solução.</li>
+        </ul>
+        <div class="explanation" id="explanation-q14">
+            <h3>Explicação:</h3>
+            <p>A primeira etapa do processo de diagnóstico é a identificação do problema, que envolve reconhecer e definir claramente o problema ou a situação que precisa ser analisada.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q14', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>O que é importante coletar durante a etapa de "coleta de informações" no processo de diagnóstico?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q15a1" name="q15" value="a"> Somente dados financeiros e estatísticas.</li>
+            <li><input type="radio" id="q15a2" name="q15" value="b"> Dados e informações relevantes como relatórios, pesquisas, entrevistas e observações, que forneçam insights sobre a situação.</li>
+            <li><input type="radio" id="q15a3" name="q15" value="c"> Somente opiniões de especialistas, sem dados concretos.</li>
+            <li><input type="radio" id="q15a4" name="q15" value="d"> Informações irrelevantes, que não ajudam na análise da situação-problema.</li>
+        </ul>
+        <div class="explanation" id="explanation-q15">
+            <h3>Explicação:</h3>
+            <p>Na etapa de coleta de informações, é fundamental reunir dados e informações relevantes, como relatórios, pesquisas, entrevistas e observações, que proporcionem uma compreensão mais ampla da situação-problema.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q15', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>Qual é o objetivo da análise das causas no processo de diagnóstico de situações problemáticas?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q16a1" name="q16" value="a"> Identificar os resultados do problema, sem analisar suas origens.</li>
+            <li><input type="radio" id="q16a2" name="q16" value="b"> Identificar os fatores ou elementos que contribuem para a existência do problema, entendendo por que ele surgiu e persiste.</li>
+            <li><input type="radio" id="q16a3" name="q16" value="c"> Buscar soluções rápidas sem entender as causas do problema.</li>
+            <li><input type="radio" id="q16a4" name="q16" value="d"> Definir as alternativas de solução sem necessidade de analisar o problema a fundo.</li>
+        </ul>
+        <div class="explanation" id="explanation-q16">
+            <h3>Explicação:</h3>
+            <p>A análise das causas ajuda a identificar os fatores que contribuem para a existência do problema, permitindo compreendê-lo melhor e abordá-lo de forma mais eficaz.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q16', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual é o propósito da avaliação do impacto no processo de diagnóstico de situações problemáticas?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q17a1" name="q17" value="a"> Analisar a solução mais rápida para resolver o problema.</li>
+            <li><input type="radio" id="q17a2" name="q17" value="b"> Avaliar as consequências e os efeitos negativos do problema em diferentes níveis (indivíduos, grupos, organizações ou comunidades).</li>
+            <li><input type="radio" id="q17a3" name="q17" value="c"> Identificar exclusivamente as causas subjacentes do problema, sem avaliar os impactos.</li>
+            <li><input type="radio" id="q17a4" name="q17" value="d"> Focar apenas nas soluções sem considerar os impactos do problema.</li>
+        </ul>
+        <div class="explanation" id="explanation-q17">
+            <h3>Explicação:</h3>
+            <p>A avaliação do impacto é importante para compreender as consequências do problema em diferentes níveis, ajudando a entender os efeitos negativos gerados pela situação.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q17', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>O que envolve a etapa de diagnóstico e formulação de hipóteses no processo de diagnóstico de situações problemáticas?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q18a1" name="q18" value="a"> Formar um diagnóstico definitivo e começar a implementar soluções imediatas.</li>
+            <li><input type="radio" id="q18a2" name="q18" value="b"> Formular um diagnóstico preliminar, identificando causas subjacentes e criando hipóteses sobre a situação.</li>
+            <li><input type="radio" id="q18a3" name="q18" value="c"> Analisar apenas as alternativas de solução sem formular hipóteses sobre o problema.</li>
+            <li><input type="radio" id="q18a4" name="q18" value="d"> Ignorar as causas subjacentes e se concentrar em soluções diretas para o problema.</li>
+        </ul>
+        <div class="explanation" id="explanation-q18">
+            <h3>Explicação:</h3>
+            <p>O diagnóstico e a formulação de hipóteses envolvem a criação de um diagnóstico preliminar, identificando possíveis causas subjacentes e formulando hipóteses sobre a situação problemática.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q18', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>Qual é o propósito da verificação e validação das hipóteses no processo de diagnóstico de situações problemáticas?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q19a1" name="q19" value="a"> Confirmar as hipóteses iniciais sem considerar a possibilidade de erro.</li>
+            <li><input type="radio" id="q19a2" name="q19" value="b"> Garantir que o diagnóstico seja confiável e preciso, por meio de análise adicional e consulta a especialistas.</li>
+            <li><input type="radio" id="q19a3" name="q19" value="c"> Rejeitar qualquer hipótese que não tenha sido confirmada imediatamente.</li>
+            <li><input type="radio" id="q19a4" name="q19" value="d"> Validar as hipóteses apenas com base nas primeiras impressões do diagnóstico.</li>
+        </ul>
+        <div class="explanation" id="explanation-q19">
+            <h3>Explicação:</h3>
+            <p>A verificação e validação são etapas cruciais para garantir que as hipóteses sejam precisas e confiáveis, sendo possível fazer ajustes com base em informações adicionais ou consultando especialistas.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q19', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual é a principal função da comunicação do diagnóstico no processo de resolução de problemas?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q20a1" name="q20" value="a"> Informar rapidamente os resultados da solução sem detalhar o processo diagnóstico.</li>
+            <li><input type="radio" id="q20a2" name="q20" value="b"> Garantir que todos os envolvidos compreendam a situação, possibilitando uma colaboração eficaz na busca por soluções.</li>
+            <li><input type="radio" id="q20a3" name="q20" value="c"> Redefinir os objetivos para que a situação se torne mais simples de resolver.</li>
+            <li><input type="radio" id="q20a4" name="q20" value="d"> Focar na solução imediata do problema sem envolver as partes interessadas no processo.</li>
+        </ul>
+        <div class="explanation" id="explanation-q20">
+            <h3>Explicação:</h3>
+            <p>A comunicação do diagnóstico é fundamental para garantir que todos os envolvidos tenham uma visão compartilhada da situação, permitindo uma colaboração mais eficaz na busca de soluções.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q20', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual é o objetivo principal da etapa de "Identificação e definição do problema" nas etapas de solução de problemas?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q21a1" name="q21" value="a"> Criar soluções imediatas para o problema sem defini-lo claramente.</li>
+            <li><input type="radio" id="q21a2" name="q21" value="b"> Reconhecer a existência do problema e definir claramente o objetivo a ser alcançado.</li>
+            <li><input type="radio" id="q21a3" name="q21" value="c"> Ignorar a definição do problema e se concentrar apenas na solução.</li>
+            <li><input type="radio" id="q21a4" name="q21" value="d"> Descrever o problema de forma vaga, sem objetivos claros.</li>
+        </ul>
+        <div class="explanation" id="explanation-q21">
+            <h3>Explicação:</h3>
+            <p>Definir claramente o problema é essencial para entender sua natureza e impacto, o que facilita o processo de resolução ao estabelecer objetivos específicos.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q21', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>Qual é o principal objetivo da etapa de "Geração de alternativas" no processo de solução de problemas?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q22a1" name="q22" value="a"> Gerar uma única solução para resolver o problema de forma rápida.</li>
+            <li><input type="radio" id="q22a2" name="q22" value="b"> Criar diversas alternativas ou soluções para resolver o problema, considerando diferentes abordagens.</li>
+            <li><input type="radio" id="q22a3" name="q22" value="c"> Avaliar as alternativas de maneira rápida sem considerar diversas perspectivas.</li>
+            <li><input type="radio" id="q22a4" name="q22" value="d"> Selecionar a melhor alternativa sem considerar outras opções.</li>
+        </ul>
+        <div class="explanation" id="explanation-q22">
+            <h3>Explicação:</h3>
+            <p>A etapa de "Geração de alternativas" tem como objetivo explorar diversas soluções possíveis para o problema, considerando diferentes abordagens criativas e perspectivas.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q22', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Na etapa de "Avaliação das alternativas", qual é a principal consideração ao analisar as opções disponíveis?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q23a1" name="q23" value="a"> Analisar a viabilidade, eficácia, impacto e adequação de cada alternativa ao contexto.</li>
+            <li><input type="radio" id="q23a2" name="q23" value="b"> Escolher rapidamente a alternativa que pareça mais simples de implementar.</li>
+            <li><input type="radio" id="q23a3" name="q23" value="c"> Considerar apenas o custo de implementação de cada alternativa.</li>
+            <li><input type="radio" id="q23a4" name="q23" value="d"> Avaliar as alternativas apenas com base em experiências passadas.</li>
+        </ul>
+        <div class="explanation" id="explanation-q23">
+            <h3>Explicação:</h3>
+            <p>A "Avaliação das alternativas" envolve uma análise profunda de diferentes critérios, como viabilidade, eficácia, impacto e adequação ao contexto, para escolher a solução mais apropriada.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q23', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>O que deve ser considerado ao selecionar a melhor alternativa durante a solução de problemas?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q24a1" name="q24" value="a"> Apenas os recursos financeiros disponíveis para implementar a solução.</li>
+            <li><input type="radio" id="q24a2" name="q24" value="b"> A análise de riscos e benefícios, considerando os critérios estabelecidos e as restrições disponíveis.</li>
+            <li><input type="radio" id="q24a3" name="q24" value="c"> Selecionar a alternativa mais rápida, sem considerar os efeitos a longo prazo.</li>
+            <li><input type="radio" id="q24a4" name="q24" value="d"> Escolher a alternativa que gera menos impacto negativo imediato, sem avaliar os custos a longo prazo.</li>
+        </ul>
+        <div class="explanation" id="explanation-q24">
+            <h3>Explicação:</h3>
+            <p>A seleção da melhor alternativa deve considerar os riscos e benefícios, levando em conta os critérios predefinidos, as restrições e os recursos disponíveis para garantir uma solução eficaz e viável.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q24', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>Qual é o objetivo principal da etapa de "Avaliação e monitoramento dos resultados" após a implementação da solução?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q25a1" name="q25" value="a"> Garantir que o problema tenha sido resolvido de forma satisfatória e realizar ajustes necessários.</li>
+            <li><input type="radio" id="q25a2" name="q25" value="b"> Monitorar a satisfação dos envolvidos, sem avaliar a eficácia da solução implementada.</li>
+            <li><input type="radio" id="q25a3" name="q25" value="c"> Apenas avaliar os resultados sem considerar possíveis melhorias ou ajustes na solução.</li>
+            <li><input type="radio" id="q25a4" name="q25" value="d"> Monitorar as consequências do problema, sem realizar ajustes na solução implementada.</li>
+        </ul>
+        <div class="explanation" id="explanation-q25">
+            <h3>Explicação:</h3>
+            <p>A etapa de "Avaliação e monitoramento dos resultados" visa garantir que o problema tenha sido resolvido e realizar ajustes necessários, conforme as observações e resultados obtidos após a implementação da solução.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q25', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Como deve ser encarado o processo de solução de problemas, de acordo com as etapas descritas?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q26a1" name="q26" value="a"> Como um processo único e linear, onde todas as etapas devem ser seguidas em uma ordem rígida.</li>
+            <li><input type="radio" id="q26a2" name="q26" value="b"> Como um processo iterativo e contínuo, que pode exigir ajustes e abordagens específicas conforme o problema evolui.</li>
+            <li><input type="radio" id="q26a3" name="q26" value="c"> Como um processo fixo, sem necessidade de ajustes para diferentes tipos de problemas.</li>
+            <li><input type="radio" id="q26a4" name="q26" value="d"> Como uma sequência de etapas sem a necessidade de revisão ou adaptação ao contexto específico do problema.</li>
+        </ul>
+        <div class="explanation" id="explanation-q26">
+            <h3>Explicação:</h3>
+            <p>O processo de solução de problemas deve ser encarado como iterativo e contínuo, permitindo ajustes conforme a situação exige e adaptando-se às características do problema em questão.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q26', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual é o papel da comunicação no processo de tomada de decisão?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q27a1" name="q27" value="a"> A comunicação é irrelevante, desde que a decisão tomada seja tecnicamente correta.</li>
+            <li><input type="radio" id="q27a2" name="q27" value="b"> A comunicação é fundamental para transmitir a escolha e os motivos da decisão para as partes envolvidas.</li>
+            <li><input type="radio" id="q27a3" name="q27" value="c"> A comunicação é importante apenas após a decisão ser tomada, para justificar a escolha feita.</li>
+            <li><input type="radio" id="q27a4" name="q27" value="d"> A comunicação deve ser restrita a um pequeno grupo de pessoas, sem envolver os stakeholders diretamente afetados pela decisão.</li>
+        </ul>
+        <div class="explanation" id="explanation-q27">
+            <h3>Explicação:</h3>
+            <p>A comunicação desempenha um papel crucial no processo de tomada de decisão, pois é essencial para transmitir a decisão e os motivos aos envolvidos, garantindo compreensão e alinhamento.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q27', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>Qual é a primeira etapa do processo de diagnóstico de situações problemáticas?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q28a1" name="q28" value="a"> Coleta de informações.</li>
+            <li><input type="radio" id="q28a2" name="q28" value="b"> Identificação do problema.</li>
+            <li><input type="radio" id="q28a3" name="q28" value="c"> Análise das causas.</li>
+            <li><input type="radio" id="q28a4" name="q28" value="d"> Diagnóstico e formulação de hipóteses.</li>
+        </ul>
+        <div class="explanation" id="explanation-q28">
+            <h3>Explicação:</h3>
+            <p>A primeira etapa do processo de diagnóstico é a identificação do problema, que consiste em reconhecer e definir claramente a situação que requer análise.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q28', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Em que etapa do diagnóstico de situações problemáticas são analisadas as causas raiz do problema?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q29a1" name="q29" value="a"> Avaliação do impacto.</li>
+            <li><input type="radio" id="q29a2" name="q29" value="b"> Diagnóstico e formulação de hipóteses.</li>
+            <li><input type="radio" id="q29a3" name="q29" value="c"> Análise das causas.</li>
+            <li><input type="radio" id="q29a4" name="q29" value="d"> Coleta de informações.</li>
+        </ul>
+        <div class="explanation" id="explanation-q29">
+            <h3>Explicação:</h3>
+            <p>A análise das causas é a etapa em que se investigam os fatores que contribuem para o problema, permitindo entender por que ele ocorreu e persiste.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q29', 'c')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual é a etapa final do processo de diagnóstico de situações problemáticas?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q30a1" name="q30" value="a"> Comunicação do diagnóstico.</li>
+            <li><input type="radio" id="q30a2" name="q30" value="b"> Verificação e validação.</li>
+            <li><input type="radio" id="q30a3" name="q30" value="c"> Diagnóstico e formulação de hipóteses.</li>
+            <li><input type="radio" id="q30a4" name="q30" value="d"> Coleta de informações.</li>
+        </ul>
+        <div class="explanation" id="explanation-q30">
+            <h3>Explicação:</h3>
+            <p>A etapa final do processo de diagnóstico é a comunicação do diagnóstico, onde as conclusões são compartilhadas de forma clara com as partes envolvidas.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q30', 'a')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>Qual é a etapa do processo de tomada de decisão em que a decisão tomada deve ser comunicada aos responsáveis pela implementação?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q31a1" name="q31" value="a"> Avaliação e feedback.</li>
+            <li><input type="radio" id="q31a2" name="q31" value="b"> Implementação da decisão.</li>
+            <li><input type="radio" id="q31a3" name="q31" value="c"> Coleta de informações.</li>
+            <li><input type="radio" id="q31a4" name="q31" value="d"> Análise das alternativas.</li>
+        </ul>
+        <div class="explanation" id="explanation-q31">
+            <h3>Explicação:</h3>
+            <p>A etapa de implementação da decisão envolve comunicar claramente as instruções e expectativas aos responsáveis pela execução da solução.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q31', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>O que é fundamental na etapa de avaliação e feedback do processo de tomada de decisão?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q32a1" name="q32" value="a"> Monitorar o progresso e fornecer feedback.</li>
+            <li><input type="radio" id="q32a2" name="q32" value="b"> Identificar os prós e contras de cada alternativa.</li>
+            <li><input type="radio" id="q32a3" name="q32" value="c"> Coletar informações relevantes.</li>
+            <li><input type="radio" id="q32a4" name="q32" value="d"> Definir as metas e objetivos.</li>
+        </ul>
+        <div class="explanation" id="explanation-q32">
+            <h3>Explicação:</h3>
+            <p>A etapa de avaliação e feedback visa monitorar os resultados da implementação, identificando ajustes necessários e fornecendo orientações adicionais.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q32', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual é a importância da comunicação em todas as etapas da tomada de decisão?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q33a1" name="q33" value="a"> Para garantir que as partes envolvidas compreendam as decisões e alinharem expectativas.</li>
+            <li><input type="radio" id="q33a2" name="q33" value="b"> Para evitar a coleta de informações relevantes.</li>
+            <li><input type="radio" id="q33a3" name="q33" value="c"> Para garantir que não haja alternativas a serem analisadas.</li>
+            <li><input type="radio" id="q33a4" name="q33" value="d"> Para acelerar a implementação sem planejamento.</li>
+        </ul>
+        <div class="explanation" id="explanation-q33">
+            <h3>Explicação:</h3>
+            <p>A comunicação eficaz é fundamental para garantir que todos compreendam as decisões tomadas, alinhando expectativas e possibilitando um bom andamento do processo.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q33', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Em qual etapa da tomada de decisão a comunicação clara e aberta é especialmente importante para garantir o entendimento mútuo?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q34a1" name="q34" value="a"> Implementação da decisão.</li>
+            <li><input type="radio" id="q34a2" name="q34" value="b"> Análise das alternativas.</li>
+            <li><input type="radio" id="q34a3" name="q34" value="c"> Coleta de informações.</li>
+            <li><input type="radio" id="q34a4" name="q34" value="d"> Avaliação e feedback.</li>
+        </ul>
+        <div class="explanation" id="explanation-q34">
+            <h3>Explicação:</h3>
+            <p>A comunicação clara e aberta é essencial em todas as etapas, mas é especialmente importante durante a implementação para garantir o alinhamento das expectativas e o sucesso da execução.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q34', 'a')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>Qual ferramenta de apoio à tomada de decisão ajuda a comparar e avaliar diferentes alternativas com base em critérios predefinidos?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q35a1" name="q35" value="a"> Árvore de decisão.</li>
+            <li><input type="radio" id="q35a2" name="q35" value="b"> Análise SWOT.</li>
+            <li><input type="radio" id="q35a3" name="q35" value="c"> Matriz de decisão.</li>
+            <li><input type="radio" id="q35a4" name="q35" value="d"> Análise de custo-benefício.</li>
+        </ul>
+        <div class="explanation" id="explanation-q35">
+            <h3>Explicação:</h3>
+            <p>A matriz de decisão organiza os critérios e atribui pesos a cada um deles, permitindo uma análise mais objetiva e sistemática das opções.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q35', 'c')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual ferramenta de apoio à tomada de decisão ajuda a visualizar as diferentes alternativas, resultados possíveis e probabilidades associadas a cada um?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q36a1" name="q36" value="a"> Análise de custo-benefício.</li>
+            <li><input type="radio" id="q36a2" name="q36" value="b"> Árvore de decisão.</li>
+            <li><input type="radio" id="q36a3" name="q36" value="c"> Análise SWOT.</li>
+            <li><input type="radio" id="q36a4" name="q36" value="d"> Matriz de decisão.</li>
+        </ul>
+        <div class="explanation" id="explanation-q36">
+            <h3>Explicação:</h3>
+            <p>A árvore de decisão ajuda a visualizar as alternativas, resultados possíveis e probabilidades associadas a cada um, facilitando a análise de riscos e incertezas.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q36', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>O que a análise SWOT avalia em uma situação?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q37a1" name="q37" value="a"> Custos e benefícios envolvidos.</li>
+            <li><input type="radio" id="q37a2" name="q37" value="b"> Forças, fraquezas, oportunidades e ameaças.</li>
+            <li><input type="radio" id="q37a3" name="q37" value="c"> A probabilidade de sucesso das alternativas.</li>
+            <li><input type="radio" id="q37a4" name="q37" value="d"> A viabilidade financeira das decisões.</li>
+        </ul>
+        <div class="explanation" id="explanation-q37">
+            <h3>Explicação:</h3>
+            <p>A análise SWOT avalia os pontos fortes, pontos fracos, oportunidades e ameaças, fornecendo uma visão abrangente do contexto e ajudando na formulação de estratégias.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q37', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual ferramenta de apoio à tomada de decisão compara os custos envolvidos em uma decisão com os benefícios esperados?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q38a1" name="q38" value="a"> Análise SWOT.</li>
+            <li><input type="radio" id="q38a2" name="q38" value="b"> Árvore de decisão.</li>
+            <li><input type="radio" id="q38a3" name="q38" value="c"> Análise de custo-benefício.</li>
+            <li><input type="radio" id="q38a4" name="q38" value="d"> Matriz de decisão.</li>
+        </ul>
+        <div class="explanation" id="explanation-q38">
+            <h3>Explicação:</h3>
+            <p>A análise de custo-benefício compara os custos de uma decisão com os benefícios esperados, ajudando a determinar a viabilidade e o retorno da decisão.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q38', 'c')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>Qual técnica de geração de ideias em grupo incentiva os participantes a expressarem livremente suas sugestões e pensamentos?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q39a1" name="q39" value="a"> Análise de risco.</li>
+            <li><input type="radio" id="q39a2" name="q39" value="b"> Benchmarking.</li>
+            <li><input type="radio" id="q39a3" name="q39" value="c"> Modelos de simulação.</li>
+            <li><input type="radio" id="q39a4" name="q39" value="d"> Brainstorming.</li>
+        </ul>
+        <div class="explanation" id="explanation-q39">
+            <h3>Explicação:</h3>
+            <p>O brainstorming é uma técnica de geração de ideias em grupo, onde os participantes são incentivados a expressar livremente suas sugestões, promovendo a criatividade e diversidade de perspectivas.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q39', 'd')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual ferramenta de apoio à tomada de decisão identifica e avalia os riscos associados a cada alternativa?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q40a1" name="q40" value="a"> Benchmarking.</li>
+            <li><input type="radio" id="q40a2" name="q40" value="b"> Brainstorming.</li>
+            <li><input type="radio" id="q40a3" name="q40" value="c"> Modelos de simulação.</li>
+            <li><input type="radio" id="q40a4" name="q40" value="d"> Análise de risco.</li>
+        </ul>
+        <div class="explanation" id="explanation-q40">
+            <h3>Explicação:</h3>
+            <p>A análise de risco identifica e avalia os riscos associados a cada alternativa, ajudando a entender as incertezas envolvidas nas decisões e adotando medidas de mitigação.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q40', 'd')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual ferramenta de apoio à tomada de decisão permite criar cenários virtuais para testar diferentes decisões e seus resultados esperados?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q41a1" name="q41" value="a"> Análise de risco.</li>
+            <li><input type="radio" id="q41a2" name="q41" value="b"> Benchmarking.</li>
+            <li><input type="radio" id="q41a3" name="q41" value="c"> Modelos de simulação.</li>
+            <li><input type="radio" id="q41a4" name="q41" value="d"> Brainstorming.</li>
+        </ul>
+        <div class="explanation" id="explanation-q41">
+            <h3>Explicação:</h3>
+            <p>Modelos de simulação são ferramentas que permitem criar cenários virtuais para testar diferentes decisões e analisar seus resultados esperados.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q41', 'c')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual prática envolve a comparação das práticas, processos ou resultados de uma organização com os de outras organizações de referência?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q42a1" name="q42" value="a"> Modelos de simulação.</li>
+            <li><input type="radio" id="q42a2" name="q42" value="b"> Análise de risco.</li>
+            <li><input type="radio" id="q42a3" name="q42" value="c"> Benchmarking.</li>
+            <li><input type="radio" id="q42a4" name="q42" value="d"> Brainstorming.</li>
+        </ul>
+        <div class="explanation" id="explanation-q42">
+            <h3>Explicação:</h3>
+            <p>O benchmarking é a prática de comparar as práticas, processos ou resultados de uma organização com as de outras de referência, oferecendo insights sobre melhores práticas.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q42', 'c')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>Qual ferramenta de apoio à tomada de decisão organiza os critérios e atribui pesos a cada um deles, permitindo uma análise objetiva?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q43a1" name="q43" value="a"> Árvore de decisão.</li>
+            <li><input type="radio" id="q43a2" name="q43" value="b"> Matriz de decisão.</li>
+            <li><input type="radio" id="q43a3" name="q43" value="c"> Análise SWOT.</li>
+            <li><input type="radio" id="q43a4" name="q43" value="d"> Análise de risco.</li>
+        </ul>
+        <div class="explanation" id="explanation-q43">
+            <h3>Explicação:</h3>
+            <p>A matriz de decisão organiza os critérios e atribui pesos a cada um, permitindo uma análise objetiva das alternativas com base em critérios predefinidos.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q43', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual ferramenta de apoio ajuda a visualizar diferentes alternativas, seus resultados e as probabilidades associadas?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q44a1" name="q44" value="a"> Análise SWOT.</li>
+            <li><input type="radio" id="q44a2" name="q44" value="b"> Benchmarking.</li>
+            <li><input type="radio" id="q44a3" name="q44" value="c"> Árvore de decisão.</li>
+            <li><input type="radio" id="q44a4" name="q44" value="d"> Brainstorming.</li>
+        </ul>
+        <div class="explanation" id="explanation-q44">
+            <h3>Explicação:</h3>
+            <p>A árvore de decisão é uma representação gráfica das decisões a serem tomadas, suas alternativas, resultados e as probabilidades associadas, auxiliando na análise de riscos e incertezas.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q44', 'c')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual ferramenta de apoio analisa os pontos fortes, fracos, oportunidades e ameaças de uma situação?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q45a1" name="q45" value="a"> Análise de risco.</li>
+            <li><input type="radio" id="q45a2" name="q45" value="b"> Benchmarking.</li>
+            <li><input type="radio" id="q45a3" name="q45" value="c"> Análise SWOT.</li>
+            <li><input type="radio" id="q45a4" name="q45" value="d"> Modelos de simulação.</li>
+        </ul>
+        <div class="explanation" id="explanation-q45">
+            <h3>Explicação:</h3>
+            <p>A análise SWOT avalia os pontos fortes, fracos, oportunidades e ameaças de uma situação, proporcionando uma visão abrangente do contexto e identificando estratégias possíveis.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q45', 'c')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual ferramenta de apoio à tomada de decisão compara as práticas de uma organização com as de outras organizações de referência?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q46a1" name="q46" value="a"> Análise SWOT.</li>
+            <li><input type="radio" id="q46a2" name="q46" value="b"> Benchmarking.</li>
+            <li><input type="radio" id="q46a3" name="q46" value="c"> Modelos de simulação.</li>
+            <li><input type="radio" id="q46a4" name="q46" value="d"> Análise de risco.</li>
+        </ul>
+        <div class="explanation" id="explanation-q46">
+            <h3>Explicação:</h3>
+            <p>Benchmarking é a prática de comparar as práticas, processos ou resultados de uma organização com os de outras de referência, proporcionando insights sobre melhores práticas.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q46', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Como a análise de risco contribui para a tomada de decisão?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q47a1" name="q47" value="a"> Identifica e avalia os riscos associados a cada alternativa.</li>
+            <li><input type="radio" id="q47a2" name="q47" value="b"> Compara as práticas organizacionais com as de outras organizações.</li>
+            <li><input type="radio" id="q47a3" name="q47" value="c"> Auxilia na criação de cenários virtuais para testar decisões.</li>
+            <li><input type="radio" id="q47a4" name="q47" value="d"> Identifica os pontos fortes, fracos, oportunidades e ameaças.</li>
+        </ul>
+        <div class="explanation" id="explanation-q47">
+            <h3>Explicação:</h3>
+            <p>A análise de risco identifica e avalia os riscos associados a cada alternativa, permitindo a compreensão das incertezas e adotando medidas de mitigação para reduzir ou lidar com esses riscos.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q47', 'a')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>O que significa analisar o contexto interno de uma organização?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q48a1" name="q48" value="a"> Fazer o levantamento dos recursos materiais, financeiros, tecnológicos e humanos disponíveis internamente e identificar os que precisam ser adquiridos externamente.</li>
+            <li><input type="radio" id="q48a2" name="q48" value="b"> Levantar os aspectos externos que influenciam as atividades internas da organização.</li>
+            <li><input type="radio" id="q48a3" name="q48" value="c"> Identificar apenas as ameaças externas que podem afetar a instituição.</li>
+            <li><input type="radio" id="q48a4" name="q48" value="d"> Analisar apenas os recursos financeiros e tecnológicos disponíveis.</li>
+        </ul>
+        <div class="explanation" id="explanation-q48">
+            <h3>Explicação:</h3>
+            <p>Analisar o contexto interno significa levantar os recursos disponíveis na organização (materiais, financeiros, tecnológicos e humanos) e identificar quais recursos devem ser adquiridos externamente para garantir a qualidade das atividades.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q48', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual é o objetivo da etapa "Análise do Ambiente e dos Objetivos" na gestão de riscos?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q49a1" name="q49" value="a"> Levantar aspectos internos e externos essenciais para alcançar os objetivos institucionais e identificar fatores que podem influenciar a organização.</li>
+            <li><input type="radio" id="q49a2" name="q49" value="b"> Focar apenas nos aspectos financeiros da organização.</li>
+            <li><input type="radio" id="q49a3" name="q49" value="c"> Identificar apenas as forças internas da organização.</li>
+            <li><input type="radio" id="q49a4" name="q49" value="d"> Analisar os impactos dos recursos externos apenas.</li>
+        </ul>
+        <div class="explanation" id="explanation-q49">
+            <h3>Explicação:</h3>
+            <p>A etapa de análise do ambiente e dos objetivos foca em levantar aspectos internos e externos essenciais para alcançar os objetivos institucionais e identificar fatores que podem afetar a capacidade da organização de atingir os resultados desejados.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q49', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual ferramenta é comumente utilizada para identificar forças, fraquezas, oportunidades e ameaças no contexto de gestão de riscos?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q50a1" name="q50" value="a"> Análise de custo-benefício.</li>
+            <li><input type="radio" id="q50a2" name="q50" value="b"> Brainstorming.</li>
+            <li><input type="radio" id="q50a3" name="q50" value="c"> Análise SWOT.</li>
+            <li><input type="radio" id="q50a4" name="q50" value="d"> Árvore de decisão.</li>
+        </ul>
+        <div class="explanation" id="explanation-q50">
+            <h3>Explicação:</h3>
+            <p>A Análise SWOT é uma ferramenta amplamente utilizada para identificar forças, fraquezas, oportunidades e ameaças em um contexto de gestão de riscos.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q50', 'c')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Na metodologia do MDR, qual etapa está relacionada ao levantamento e registro dos aspectos externos e internos que influenciam os objetivos institucionais?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q51a1" name="q51" value="a"> Análise do ambiente e dos objetivos.</li>
+            <li><input type="radio" id="q51a2" name="q51" value="b"> Implementação da decisão.</li>
+            <li><input type="radio" id="q51a3" name="q51" value="c"> Avaliação de riscos.</li>
+            <li><input type="radio" id="q51a4" name="q51" value="d"> Monitoramento de resultados.</li>
+        </ul>
+        <div class="explanation" id="explanation-q51">
+            <h3>Explicação:</h3>
+            <p>A etapa de "Análise do ambiente e dos objetivos" é responsável por levantar e registrar os aspectos essenciais (internos e externos) para o alcance dos objetivos institucionais e para a identificação de fatores que podem influenciar o sucesso da organização.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q51', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual é o principal objetivo do processo de gestão de riscos na metodologia do MDR?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q52a1" name="q52" value="a"> Identificar, avaliar e mitigar riscos que possam comprometer os objetivos institucionais.</li>
+            <li><input type="radio" id="q52a2" name="q52" value="b"> Levantar recursos materiais e financeiros disponíveis na organização.</li>
+            <li><input type="radio" id="q52a3" name="q52" value="c"> Analisar apenas as ameaças externas.</li>
+            <li><input type="radio" id="q52a4" name="q52" value="d"> Definir as oportunidades de crescimento da organização.</li>
+        </ul>
+        <div class="explanation" id="explanation-q52">
+            <h3>Explicação:</h3>
+            <p>O objetivo principal da gestão de riscos é identificar, avaliar e mitigar riscos que possam comprometer o alcance dos objetivos institucionais.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q52', 'a')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>O que é a etapa de identificação dos riscos na gestão de riscos?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q53a1" name="q53" value="a"> Reconhecimento, descrição e registro do evento de risco, com a caracterização de suas causas e consequências.</li>
+            <li><input type="radio" id="q53a2" name="q53" value="b"> Avaliação do impacto dos riscos nos objetivos organizacionais.</li>
+            <li><input type="radio" id="q53a3" name="q53" value="c"> Criação de um plano de mitigação para os riscos identificados.</li>
+            <li><input type="radio" id="q53a4" name="q53" value="d"> Estabelecimento de estratégias para controlar os riscos.</li>
+        </ul>
+        <div class="explanation" id="explanation-q53">
+            <h3>Explicação:</h3>
+            <p>A etapa de identificação dos riscos envolve o reconhecimento, descrição e registro do evento de risco, com a caracterização de suas causas e consequências.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q53', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual é o objetivo da etapa de avaliação dos riscos?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q54a1" name="q54" value="a"> Compreender o nível do risco e estimar sua probabilidade de ocorrência e impacto.</li>
+            <li><input type="radio" id="q54a2" name="q54" value="b"> Identificar todas as causas dos riscos.</li>
+            <li><input type="radio" id="q54a3" name="q54" value="c"> Criar um plano de ação para os riscos identificados.</li>
+            <li><input type="radio" id="q54a4" name="q54" value="d"> Analisar as oportunidades associadas aos riscos.</li>
+        </ul>
+        <div class="explanation" id="explanation-q54">
+            <h3>Explicação:</h3>
+            <p>A etapa de avaliação dos riscos visa promover o entendimento do nível do risco e estimar sua probabilidade de ocorrência e o impacto caso o evento se materialize.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q54', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>O que caracteriza o risco residual na avaliação de riscos?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q55a1" name="q55" value="a"> O risco remanescente após a implementação dos controles.</li>
+            <li><input type="radio" id="q55a2" name="q55" value="b"> O risco inicial sem considerar nenhum controle.</li>
+            <li><input type="radio" id="q55a3" name="q55" value="c"> O risco estimado antes da implementação de controles.</li>
+            <li><input type="radio" id="q55a4" name="q55" value="d"> O risco associado aos controles implementados.</li>
+        </ul>
+        <div class="explanation" id="explanation-q55">
+            <h3>Explicação:</h3>
+            <p>O risco residual é o risco remanescente após a implementação dos controles, considerando a eficácia desses controles na mitigação do risco original.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q55', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Na gestão de riscos, o que deve ser feito inicialmente na avaliação de risco?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q56a1" name="q56" value="a"> Avaliar o risco inerente, ou seja, o risco bruto, sem considerar qualquer controle.</li>
+            <li><input type="radio" id="q56a2" name="q56" value="b"> Identificar os controles já existentes na organização.</li>
+            <li><input type="radio" id="q56a3" name="q56" value="c"> Estabelecer um plano de mitigação de riscos.</li>
+            <li><input type="radio" id="q56a4" name="q56" value="d"> Analisar as causas dos riscos.</li>
+        </ul>
+        <div class="explanation" id="explanation-q56">
+            <h3>Explicação:</h3>
+            <p>Inicialmente, na avaliação de risco, deve-se avaliar o risco inerente (risco bruto), ou seja, o risco sem considerar nenhum controle que já possa estar implementado.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q56', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>O que deve ser feito após a avaliação do risco inerente na gestão de riscos?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q57a1" name="q57" value="a"> Analisar os controles existentes e, em seguida, avaliar o risco residual.</li>
+            <li><input type="radio" id="q57a2" name="q57" value="b"> Identificar todas as oportunidades relacionadas aos riscos.</li>
+            <li><input type="radio" id="q57a3" name="q57" value="c"> Criar novos controles antes de analisar os riscos.</li>
+            <li><input type="radio" id="q57a4" name="q57" value="d"> Estabelecer um plano de ação para mitigar os riscos.</li>
+        </ul>
+        <div class="explanation" id="explanation-q57">
+            <h3>Explicação:</h3>
+            <p>Após avaliar o risco inerente, deve-se analisar os controles existentes para determinar a eficácia dos mesmos e, em seguida, calcular o risco residual.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q57', 'a')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>O que deve ser feito após a análise do risco residual?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q58a1" name="q58" value="a"> Verificar a estratégia a ser adotada para responder ao evento de risco.</li>
+            <li><input type="radio" id="q58a2" name="q58" value="b"> Ignorar o risco identificado e continuar com a atividade.</li>
+            <li><input type="radio" id="q58a3" name="q58" value="c"> Enfrentar o risco sem considerar nenhuma medida de mitigação.</li>
+            <li><input type="radio" id="q58a4" name="q58" value="d"> Reduzir os recursos disponíveis para o controle do risco.</li>
+        </ul>
+        <div class="explanation" id="explanation-q58">
+            <h3>Explicação:</h3>
+            <p>Após a análise do risco residual, é essencial verificar qual estratégia adotar para responder ao evento de risco, considerando o nível de exposição e a avaliação do risco.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q58', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual estratégia deve ser adotada quando o risco não pode ser mitigado?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q59a1" name="q59" value="a"> Distribuir parte do risco para outros atores (terceiros).</li>
+            <li><input type="radio" id="q59a2" name="q59" value="b"> Continuar com a atividade sem adotar nenhuma medida.</li>
+            <li><input type="radio" id="q59a3" name="q59" value="c"> Remover todas as fontes do risco.</li>
+            <li><input type="radio" id="q59a4" name="q59" value="d"> Descontinuar a atividade sem estudar alternativas.</li>
+        </ul>
+        <div class="explanation" id="explanation-q59">
+            <h3>Explicação:</h3>
+            <p>Quando o risco não pode ser mitigado, uma estratégia pode ser distribuir parte do risco para outros atores, como terceiros, para reduzir a exposição da organização.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q59', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual é o objetivo do monitoramento na gestão de riscos?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q60a1" name="q60" value="a"> Garantir a compreensão contínua dos riscos existentes em cada decisão.</li>
+            <li><input type="radio" id="q60a2" name="q60" value="b"> Reduzir o número de riscos durante a implementação de processos.</li>
+            <li><input type="radio" id="q60a3" name="q60" value="c"> Analisar os riscos apenas no início do processo.</li>
+            <li><input type="radio" id="q60a4" name="q60" value="d"> Ignorar a evolução dos riscos após a análise inicial.</li>
+        </ul>
+        <div class="explanation" id="explanation-q60">
+            <h3>Explicação:</h3>
+            <p>O monitoramento na gestão de riscos visa garantir que todos os agentes envolvidos compreendam os riscos existentes em cada decisão, com informações contínuas e atualizadas.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q60', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>O que caracteriza a comunicação eficaz na gestão de riscos?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q61a1" name="q61" value="a"> A disseminação tempestiva e adequada das informações às partes interessadas.</li>
+            <li><input type="radio" id="q61a2" name="q61" value="b"> A comunicação apenas com as equipes de gestão.</li>
+            <li><input type="radio" id="q61a3" name="q61" value="c"> A troca de informações somente após a decisão ser tomada.</li>
+            <li><input type="radio" id="q61a4" name="q61" value="d"> A comunicação focada em resultados financeiros.</li>
+        </ul>
+        <div class="explanation" id="explanation-q61">
+            <h3>Explicação:</h3>
+            <p>A comunicação eficaz na gestão de riscos envolve a disseminação tempestiva e adequada das informações às partes interessadas, para garantir uma boa compreensão e colaboração.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q61', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>Qual é a estratégia recomendada quando o risco pode ser mitigado, mas não eliminado completamente?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q62a1" name="q62" value="a"> Desenvolver ações para mitigar o risco, removendo suas fontes ou reduzindo sua probabilidade e/ou impacto.</li>
+            <li><input type="radio" id="q62a2" name="q62" value="b"> Deixar a atividade como está, sem adotar nenhuma medida.</li>
+            <li><input type="radio" id="q62a3" name="q62" value="c"> Ignorar a análise do risco e continuar com o processo.</li>
+            <li><input type="radio" id="q62a4" name="q62" value="d"> Transferir todo o risco para terceiros.</li>
+        </ul>
+        <div class="explanation" id="explanation-q62">
+            <h3>Explicação:</h3>
+            <p>Quando o risco pode ser mitigado, a melhor estratégia é desenvolver ações para mitigar o risco, reduzindo sua probabilidade e/ou impacto.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q62', 'a')">Verificar Resposta</button>
+    </div>
+                                                                                                                                                                                                                                                                                                                                                                  
+    </div>
+    
+    <script>
+        function verificarResposta(questionId, correctAnswer) {
+            var options = document.getElementsByName(questionId);
+            var explanation = document.getElementById("explanation-" + questionId);
+            var isCorrect = false;
+            
+            // Verificando a resposta correta
+            for (var i = 0; i < options.length; i++) {
+                var option = options[i];
+                if (option.checked) {
+                    if (option.value === correctAnswer) {
+                        option.parentElement.style.backgroundColor = "green"; // Verde para resposta correta
+                        explanation.style.color = "green";
+                        isCorrect = true;
+                    } else {
+                        option.parentElement.style.backgroundColor = "red"; // Vermelho para resposta errada
+                        explanation.style.color = "red";
+                    }
+                }
+            }
+    
+            // Exibindo a explicação
+            explanation.style.display = "block";
+        }
+    </script>
+    
+    <footer>
+        <p>© 2024 - Plataforma de Questões</p>
+    </footer>
+</body>
+</html>
