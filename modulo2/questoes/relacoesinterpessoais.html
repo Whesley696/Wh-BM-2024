@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Questões</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: white;
+        }
+
+        header {
+            background-color: #6200EA;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            color: #FFFFFF;
+            font-size: 2.5rem;
+        }
+
+        .summary-button {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            background-color: #03DAC5;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .summary-button:hover {
+            background-color: #018786;
+            color: white;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .question-box {
+            background-color: #1E1E1E;
+            border: 2px solid #03DAC5;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        .question-box h2 {
+            color: #03DAC5;
+        }
+
+        .explanation {
+            background-color: #333;
+            border-left: 4px solid #FF0266;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .explanation h3 {
+            color: #FF0266;
+            margin: 0;
+        }
+
+        .button {
+            background-color: #03DAC5;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #018786;
+            color: white;
+        }
+
+        footer {
+            background-color: #6200EA;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            color: white;
+            font-size: 0.9rem;
+        }
+    </style>
+    <script>
+        function verificarResposta() {
+            const explanation = document.querySelector('.explanation');
+            explanation.style.display = 'block';
+        }
+
+        function mostrarResumo() {
+            alert('Esta função exibirá um resumo dos conteúdos abordados.');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Questões relações interpessoais</h1>
+        
+    </header>
+    <div class="question-box">
+        <h2>q1. O que é aprendizagem organizacional?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q1a1" name="q1" value="a"> É o processo de adaptação ao ambiente sem aquisição de novas informações.</li>
+            <li><input type="radio" id="q1a2" name="q1" value="b"> É a capacidade de uma organização de adquirir, compartilhar e utilizar conhecimento para melhorar seu desempenho e se adaptar às mudanças.</li>
+            <li><input type="radio" id="q1a3" name="q1" value="c"> É o conjunto de valores e normas que determinam os comportamentos dos funcionários.</li>
+            <li><input type="radio" id="q1a4" name="q1" value="d"> É a aplicação de práticas antigas em novos processos organizacionais.</li>
+        </ul>
+        <div class="explanation" id="explanation-q1">
+            <h3>Explicação:</h3>
+            <p>A aprendizagem organizacional refere-se à capacidade de adquirir, compartilhar e utilizar conhecimento, permitindo que a organização melhore seu desempenho e se adapte às mudanças.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q1', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q2. Qual é uma característica importante da aprendizagem organizacional?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q2a1" name="q2" value="a"> A exclusão de experimentações no ambiente de trabalho.</li>
+            <li><input type="radio" id="q2a2" name="q2" value="b"> A ausência de interação social entre os funcionários.</li>
+            <li><input type="radio" id="q2a3" name="q2" value="c"> A criação de uma cultura de aprendizagem onde funcionários buscam novos conhecimentos.</li>
+            <li><input type="radio" id="q2a4" name="q2" value="d"> A aplicação de conhecimento exclusivamente adquirido fora da organização.</li>
+        </ul>
+        <div class="explanation" id="explanation-q2">
+            <h3>Explicação:</h3>
+            <p>Uma característica essencial da aprendizagem organizacional é a criação de uma cultura onde os funcionários são incentivados a buscar novos conhecimentos e compartilhar ideias.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q2', 'c')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q3. O que são comportamentos organizacionais?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q3a1" name="q3" value="a"> São ações, atitudes e padrões de interação dos indivíduos dentro da organização.</li>
+            <li><input type="radio" id="q3a2" name="q3" value="b"> São exclusivamente as decisões da liderança organizacional.</li>
+            <li><input type="radio" id="q3a3" name="q3" value="c"> São apenas ações realizadas pelos gestores da empresa.</li>
+            <li><input type="radio" id="q3a4" name="q3" value="d"> São comportamentos que ocorrem apenas em situações de crise.</li>
+        </ul>
+        <div class="explanation" id="explanation-q3">
+            <h3>Explicação:</h3>
+            <p>Comportamentos organizacionais incluem ações, atitudes e padrões de interação dos indivíduos, tanto em nível individual quanto coletivo, dentro da organização.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q3', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q4. Qual fator influencia diretamente os comportamentos organizacionais?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q4a1" name="q4" value="a"> O clima organizacional e os sistemas de recompensa.</li>
+            <li><input type="radio" id="q4a2" name="q4" value="b"> Apenas os valores individuais dos funcionários.</li>
+            <li><input type="radio" id="q4a3" name="q4" value="c"> Exclusivamente a estrutura física da organização.</li>
+            <li><input type="radio" id="q4a4" name="q4" value="d"> O tempo de existência da organização.</li>
+        </ul>
+        <div class="explanation" id="explanation-q4">
+            <h3>Explicação:</h3>
+            <p>Os comportamentos organizacionais são influenciados por fatores como clima organizacional, cultura, sistemas de recompensa e liderança.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q4', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q5. Como comportamentos organizacionais positivos impactam a organização?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q5a1" name="q5" value="a"> Aumentam a produtividade e melhoram o clima organizacional.</li>
+            <li><input type="radio" id="q5a2" name="q5" value="b"> Geram apenas impacto nos lucros financeiros.</li>
+            <li><input type="radio" id="q5a3" name="q5" value="c"> Reduzem a colaboração e a iniciativa dos funcionários.</li>
+            <li><input type="radio" id="q5a4" name="q5" value="d"> Aumentam conflitos e insatisfações dentro da equipe.</li>
+        </ul>
+        <div class="explanation" id="explanation-q5">
+            <h3>Explicação:</h3>
+            <p>Comportamentos organizacionais positivos, como colaboração e iniciativa, impactam positivamente a produtividade, a satisfação dos funcionários e o clima organizacional.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q5', 'a')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q6. Como comportamentos negativos podem impactar uma organização?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q6a1" name="q6" value="a"> Eles aumentam a colaboração e a eficácia organizacional.</li>
+            <li><input type="radio" id="q6a2" name="q6" value="b"> Eles promovem uma cultura de aprendizagem mais forte.</li>
+            <li><input type="radio" id="q6a3" name="q6" value="c"> Eles prejudicam o desempenho e a eficácia organizacional.</li>
+            <li><input type="radio" id="q6a4" name="q6" value="d"> Eles não afetam a organização de maneira significativa.</li>
+        </ul>
+        <div class="explanation" id="explanation-q6">
+            <h3>Explicação:</h3>
+            <p>Comportamentos negativos, como conflitos e falta de cooperação, prejudicam o desempenho e a eficácia organizacional, reduzindo a produtividade e o clima positivo.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q6', 'c')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q7. Qual é um dos elementos-chave para o sucesso organizacional?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q7a1" name="q7" value="a"> Promover uma cultura de aprendizagem.</li>
+            <li><input type="radio" id="q7a2" name="q7" value="b"> Ignorar comportamentos negativos.</li>
+            <li><input type="radio" id="q7a3" name="q7" value="c"> Centralizar todas as decisões nos líderes.</li>
+            <li><input type="radio" id="q7a4" name="q7" value="d"> Evitar mudanças no ambiente de trabalho.</li>
+        </ul>
+        <div class="explanation" id="explanation-q7">
+            <h3>Explicação:</h3>
+            <p>Promover uma cultura de aprendizagem e incentivar comportamentos positivos são fundamentais para alcançar o sucesso organizacional.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q7', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q8. Quais são os três componentes do comprometimento organizacional segundo Meyer & Allen?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q8a1" name="q8" value="a"> Normativo, instrumental e afetivo.</li>
+            <li><input type="radio" id="q8a2" name="q8" value="b"> Normativo, emocional e colaborativo.</li>
+            <li><input type="radio" id="q8a3" name="q8" value="c"> Instrumental, estratégico e afetivo.</li>
+            <li><input type="radio" id="q8a4" name="q8" value="d"> Estratégico, colaborativo e normativo.</li>
+        </ul>
+        <div class="explanation" id="explanation-q8">
+            <h3>Explicação:</h3>
+            <p>Os três componentes do comprometimento organizacional são normativo, instrumental e afetivo, segundo Meyer & Allen.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q8', 'a')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q9. O que caracteriza o comprometimento normativo em uma organização?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q9a1" name="q9" value="a"> Sentimento de obrigação do trabalhador em permanecer na organização.</li>
+            <li><input type="radio" id="q9a2" name="q9" value="b"> Disposição do trabalhador em buscar novas oportunidades.</li>
+            <li><input type="radio" id="q9a3" name="q9" value="c"> Necessidade do empregado de obter benefícios imediatos.</li>
+            <li><input type="radio" id="q9a4" name="q9" value="d"> Relação emocional forte com a equipe de trabalho.</li>
+        </ul>
+        <div class="explanation" id="explanation-q9">
+            <h3>Explicação:</h3>
+            <p>O comprometimento normativo expressa o sentimento de obrigação do trabalhador de permanecer na organização, influenciado por controles normativos como missão, normas e regulamentos.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q9', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q10. Qual é uma característica do comprometimento instrumental?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q10a1" name="q10" value="a"> Ligação emocional profunda com os valores da organização.</li>
+            <li><input type="radio" id="q10a2" name="q10" value="b"> Necessidade de continuar na organização para preservar investimentos pessoais.</li>
+            <li><input type="radio" id="q10a3" name="q10" value="c"> Pressão normativa internalizada para atingir os objetivos organizacionais.</li>
+            <li><input type="radio" id="q10a4" name="q10" value="d"> Forte desejo de inovar e buscar novas oportunidades no mercado.</li>
+        </ul>
+        <div class="explanation" id="explanation-q10">
+            <h3>Explicação:</h3>
+            <p>O comprometimento instrumental está relacionado à necessidade do trabalhador de continuar na organização para não perder os investimentos pessoais já realizados.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q10', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q11. Quais fatores influenciam o comprometimento instrumental?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q11a1" name="q11" value="a"> Alternativas de trabalho no mercado e investimentos pessoais realizados.</li>
+            <li><input type="radio" id="q11a2" name="q11" value="b"> Pressões normativas da organização, como missão e regulamentos.</li>
+            <li><input type="radio" id="q11a3" name="q11" value="c"> Vínculo emocional com colegas e superiores.</li>
+            <li><input type="radio" id="q11a4" name="q11" value="d"> Progresso acadêmico e desenvolvimento de habilidades técnicas.</li>
+        </ul>
+        <div class="explanation" id="explanation-q11">
+            <h3>Explicação:</h3>
+            <p>O comprometimento instrumental é influenciado pelas alternativas de trabalho disponíveis no mercado e pelos investimentos pessoais feitos pelo trabalhador na organização.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q11', 'a')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q12. Qual é a principal característica do comprometimento afetivo em uma organização?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q12a1" name="q12" value="a"> Aceitação passiva dos valores organizacionais.</li>
+            <li><input type="radio" id="q12a2" name="q12" value="b"> Disposição de investir esforços e vontade de permanecer na organização.</li>
+            <li><input type="radio" id="q12a3" name="q12" value="c"> Necessidade de permanecer na organização devido a limitações financeiras.</li>
+            <li><input type="radio" id="q12a4" name="q12" value="d"> Relação puramente normativa com a organização.</li>
+        </ul>
+        <div class="explanation" id="explanation-q12">
+            <h3>Explicação:</h3>
+            <p>O comprometimento afetivo envolve uma relação ativa com a organização, onde o empregado aceita os valores organizacionais, investe esforços e tem desejo de permanecer como membro da organização.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q12', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q13. Qual é a diferença entre comprometimento afetivo e instrumental, segundo Meyer, Allen e Gellatly?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q13a1" name="q13" value="a"> O comprometimento afetivo é baseado na necessidade, enquanto o instrumental é baseado na vontade.</li>
+            <li><input type="radio" id="q13a2" name="q13" value="b"> O comprometimento afetivo é baseado no desejo de permanecer, enquanto o instrumental é baseado na necessidade de permanecer.</li>
+            <li><input type="radio" id="q13a3" name="q13" value="c"> Ambos os comprometimentos estão relacionados apenas a incentivos financeiros.</li>
+            <li><input type="radio" id="q13a4" name="q13" value="d"> O comprometimento afetivo reflete conformidade normativa, enquanto o instrumental reflete valores culturais.</li>
+        </ul>
+        <div class="explanation" id="explanation-q13">
+            <h3>Explicação:</h3>
+            <p>Empregados com forte comprometimento afetivo permanecem na organização porque desejam, enquanto aqueles com forte comprometimento instrumental permanecem porque necessitam.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q13', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q14. O que o comprometimento afetivo representa, além de lealdade passiva?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q14a1" name="q14" value="a"> Uma relação ativa em que o indivíduo contribui para o bem-estar da organização.</li>
+            <li><input type="radio" id="q14a2" name="q14" value="b"> Apenas aceitação das normas organizacionais.</li>
+            <li><input type="radio" id="q14a3" name="q14" value="c"> Disposição de permanecer apenas por razões financeiras.</li>
+            <li><input type="radio" id="q14a4" name="q14" value="d"> Um vínculo estabelecido exclusivamente por normas internas.</li>
+        </ul>
+        <div class="explanation" id="explanation-q14">
+            <h3>Explicação:</h3>
+            <p>O comprometimento afetivo envolve uma relação ativa, onde o indivíduo deseja investir esforços e contribuir para o bem-estar da organização.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q14', 'a')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q15. O que influencia diretamente a qualidade percebida do serviço policial pelo público externo?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q15a1" name="q15" value="a"> Apenas os resultados objetivos do serviço prestado.</li>
+            <li><input type="radio" id="q15a2" name="q15" value="b"> A qualidade funcional, que inclui atributos como cortesia, empatia e confiança.</li>
+            <li><input type="radio" id="q15a3" name="q15" value="c"> A rapidez do atendimento, sem considerar a interação.</li>
+            <li><input type="radio" id="q15a4" name="q15" value="d"> A aparência física da organização e seus representantes.</li>
+        </ul>
+        <div class="explanation" id="explanation-q15">
+            <h3>Explicação:</h3>
+            <p>A qualidade percebida do serviço policial depende da interação policial-cidadão, incluindo a demonstração de atributos como cortesia, empatia e confiança.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q15', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q16. Qual é o impacto de relações interpessoais negativas entre funcionários na qualidade dos serviços?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q16a1" name="q16" value="a"> Aumentam a motivação e a eficiência do trabalho.</li>
+            <li><input type="radio" id="q16a2" name="q16" value="b"> Resultam em erros, má comunicação com clientes e baixa qualidade do serviço.</li>
+            <li><input type="radio" id="q16a3" name="q16" value="c"> Não têm impacto significativo na qualidade dos serviços prestados.</li>
+            <li><input type="radio" id="q16a4" name="q16" value="d"> Melhoram a relação entre os funcionários e os clientes.</li>
+        </ul>
+        <div class="explanation" id="explanation-q16">
+            <h3>Explicação:</h3>
+            <p>Relações interpessoais negativas podem causar conflitos, falta de comunicação e cooperação, prejudicando a qualidade do serviço prestado.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q16', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q17. O que é fundamental para que os funcionários ofereçam um serviço de alta qualidade?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q17a1" name="q17" value="a"> Trabalhar isoladamente para evitar conflitos.</li>
+            <li><input type="radio" id="q17a2" name="q17" value="b"> Compartilhar conhecimentos, colaborar e trabalhar em equipe.</li>
+            <li><input type="radio" id="q17a3" name="q17" value="c"> Priorizar a comunicação com os clientes, ignorando a relação entre colegas.</li>
+            <li><input type="radio" id="q17a4" name="q17" value="d"> Manter foco exclusivo nos procedimentos internos.</li>
+        </ul>
+        <div class="explanation" id="explanation-q17">
+            <h3>Explicação:</h3>
+            <p>Relações interpessoais positivas, colaboração, cooperação e trabalho em equipe são essenciais para fornecer um serviço de alta qualidade.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q17', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q18. Qual é a principal finalidade da estratégia de serviço na Polícia Militar?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q18a1" name="q18" value="a"> Oferecer serviços rápidos sem se preocupar com a qualidade.</li>
+            <li><input type="radio" id="q18a2" name="q18" value="b"> Melhorar a imagem da corporação, com foco em atendimento de qualidade.</li>
+            <li><input type="radio" id="q18a3" name="q18" value="c"> Reduzir o número de serviços prestados, focando apenas em emergências.</li>
+            <li><input type="radio" id="q18a4" name="q18" value="d"> Impor regras rigorosas sem considerar a opinião dos usuários.</li>
+        </ul>
+        <div class="explanation" id="explanation-q18">
+            <h3>Explicação:</h3>
+            <p>A estratégia de serviço da Polícia Militar visa melhorar a imagem da corporação, proporcionando um atendimento de qualidade para os usuários.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q18', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q19. Quais são as três formas pelas quais o tipo de fornecimento de serviços pode ser distinguido?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q19a1" name="q19" value="a"> Pelas pessoas, pela tecnologia e pelo processo.</li>
+            <li><input type="radio" id="q19a2" name="q19" value="b"> Pelas pessoas, pelo ambiente físico e pelo processo.</li>
+            <li><input type="radio" id="q19a3" name="q19" value="c"> Pela tecnologia, pela comunicação e pelo ambiente físico.</li>
+            <li><input type="radio" id="q19a4" name="q19" value="d"> Pelo processo, pela comunicação e pela estratégia.</li>
+        </ul>
+        <div class="explanation" id="explanation-q19">
+            <h3>Explicação:</h3>
+            <p>O tipo de fornecimento de serviços pode ser distinguido pelas pessoas, pelo ambiente físico e pelo processo, conforme descrito no conteúdo.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q19', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q20. O que caracteriza a mudança do caráter reativo para preventivo na função policial?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q20a1" name="q20" value="a"> Focar exclusivamente no combate à criminalidade, sem se preocupar com prevenção.</li>
+            <li><input type="radio" id="q20a2" name="q20" value="b"> Expandir o papel da polícia para prevenir incidentes e lidar com uma variedade de problemas.</li>
+            <li><input type="radio" id="q20a3" name="q20" value="c"> Manter a mesma abordagem reativa, mas com mais recursos para a ação.</li>
+            <li><input type="radio" id="q20a4" name="q20" value="d"> Ignorar a prevenção e focar apenas na resolução de incidentes após sua ocorrência.</li>
+        </ul>
+        <div class="explanation" id="explanation-q20">
+            <h3>Explicação:</h3>
+            <p>A mudança do caráter reativo para preventivo envolve expandir o papel da polícia para prevenir incidentes e lidar com uma diversidade de problemas.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q20', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q21. O que é fundamental para garantir um bom relacionamento entre policiais militares e a comunidade?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q21a1" name="q21" value="a"> Manter distância da comunidade para evitar conflitos.</li>
+            <li><input type="radio" id="q21a2" name="q21" value="b"> Estar integrado à comunidade, sendo reconhecido e confiável.</li>
+            <li><input type="radio" id="q21a3" name="q21" value="c"> Focar apenas nas abordagens e operações ostensivas.</li>
+            <li><input type="radio" id="q21a4" name="q21" value="d"> Evitar interações pessoais, limitando-se ao trabalho operacional.</li>
+        </ul>
+        <div class="explanation" id="explanation-q21">
+            <h3>Explicação:</h3>
+            <p>Para um bom relacionamento com a comunidade, é essencial que o policial esteja integrado, seja reconhecido e inspire confiança.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q21', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q22. O que caracteriza um bom processo de formação e desenvolvimento de equipes?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q22a1" name="q22" value="a"> Apenas a distribuição de tarefas de forma hierárquica.</li>
+            <li><input type="radio" id="q22a2" name="q22" value="b"> A combinação de talentos, habilidades e competências complementares entre os membros.</li>
+            <li><input type="radio" id="q22a3" name="q22" value="c"> A divisão do grupo em equipes isoladas sem troca de experiências.</li>
+            <li><input type="radio" id="q22a4" name="q22" value="d"> A busca por unanimidade em todas as decisões tomadas pela equipe.</li>
+        </ul>
+        <div class="explanation" id="explanation-q22">
+            <h3>Explicação:</h3>
+            <p>Uma boa equipe é formada por membros com habilidades e competências complementares, o que favorece a colaboração e a inovação.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q22', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q23. Por que a diversidade de habilidades e perspectivas é importante em uma equipe?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q23a1" name="q23" value="a"> Para garantir que todos pensem da mesma forma e evitem conflitos.</li>
+            <li><input type="radio" id="q23a2" name="q23" value="b"> Para estimular a criatividade e a inovação dentro da equipe.</li>
+            <li><input type="radio" id="q23a3" name="q23" value="c"> Para manter a equipe focada apenas nos aspectos técnicos do trabalho.</li>
+            <li><input type="radio" id="q23a4" name="q23" value="d"> Para evitar a introdução de novas ideias que possam gerar mudanças.</li>
+        </ul>
+        <div class="explanation" id="explanation-q23">
+            <h3>Explicação:</h3>
+            <p>A diversidade de habilidades e perspectivas é fundamental para estimular a criatividade e promover a inovação dentro da equipe.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q23', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q24. O que é essencial para garantir que todos os membros de uma equipe tenham clareza sobre suas responsabilidades?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q24a1" name="q24" value="a"> Definir metas vagas e deixar os membros decidirem suas responsabilidades.</li>
+            <li><input type="radio" id="q24a2" name="q24" value="b"> Estabelecer metas e papéis claros, com responsabilidades e tarefas específicas.</li>
+            <li><input type="radio" id="q24a3" name="q24" value="c"> Permitir que as responsabilidades sejam atribuídas com base em preferências pessoais.</li>
+            <li><input type="radio" id="q24a4" name="q24" value="d"> Fazer com que todos os membros compartilhem as mesmas tarefas, sem divisão clara de responsabilidades.</li>
+        </ul>
+        <div class="explanation" id="explanation-q24">
+            <h3>Explicação:</h3>
+            <p>Estabelecer metas e papéis claros, com responsabilidades bem definidas, ajuda a evitar ambiguidade e conflitos na equipe.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q24', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q25. O que caracteriza uma comunicação eficaz dentro de uma equipe?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q25a1" name="q25" value="a"> Comunicação unidirecional, onde apenas o líder transmite as informações.</li>
+            <li><input type="radio" id="q25a2" name="q25" value="b"> Comunicação aberta e bidirecional, com espaço para feedback construtivo.</li>
+            <li><input type="radio" id="q25a3" name="q25" value="c"> Comunicação restrita ao envio de relatórios escritos para a liderança.</li>
+            <li><input type="radio" id="q25a4" name="q25" value="d"> Comunicação apenas entre os membros de uma equipe, sem envolvimento do líder.</li>
+        </ul>
+        <div class="explanation" id="explanation-q25">
+            <h3>Explicação:</h3>
+            <p>A comunicação eficaz é aberta e bidirecional, permitindo espaço para feedback construtivo e troca de informações entre todos os membros da equipe.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q25', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q26. Qual é a importância da confiança mútua em uma equipe?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q26a1" name="q26" value="a"> A confiança mútua não é relevante, desde que as tarefas sejam cumpridas.</li>
+            <li><input type="radio" id="q26a2" name="q26" value="b"> A confiança mútua é essencial para que os membros se sintam à vontade para colaborar e assumir riscos.</li>
+            <li><input type="radio" id="q26a3" name="q26" value="c"> A confiança deve ser imposta pela liderança, sem envolver os membros da equipe.</li>
+            <li><input type="radio" id="q26a4" name="q26" value="d"> A confiança não deve ser compartilhada, pois pode gerar conflitos dentro da equipe.</li>
+        </ul>
+        <div class="explanation" id="explanation-q26">
+            <h3>Explicação:</h3>
+            <p>A confiança mútua é fundamental para que os membros da equipe possam colaborar, compartilhar ideias e trabalhar de forma eficiente.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q26', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q27. Qual é o papel de uma liderança eficaz no desenvolvimento da equipe?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q27a1" name="q27" value="a"> Estabelecer direção, fornecer orientação e criar um ambiente de inovação.</li>
+            <li><input type="radio" id="q27a2" name="q27" value="b"> Controlar todas as decisões e garantir que as regras sejam seguidas à risca.</li>
+            <li><input type="radio" id="q27a3" name="q27" value="c"> Delegar as responsabilidades aos membros sem acompanhar o progresso.</li>
+            <li><input type="radio" id="q27a4" name="q27" value="d"> Permitir que a equipe tome decisões sozinha sem fornecimento de qualquer orientação.</li>
+        </ul>
+        <div class="explanation" id="explanation-q27">
+            <h3>Explicação:</h3>
+            <p>Uma liderança eficaz estabelece direção, oferece orientação e facilita a colaboração, criando um ambiente que promove a inovação e a participação.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q27', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q28. Por que a avaliação periódica do desempenho é importante para a equipe?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q28a1" name="q28" value="a"> Para avaliar apenas os aspectos negativos do desempenho dos membros.</li>
+            <li><input type="radio" id="q28a2" name="q28" value="b"> Para identificar pontos fortes, áreas de melhoria e oportunidades de desenvolvimento.</li>
+            <li><input type="radio" id="q28a3" name="q28" value="c"> Para evitar a necessidade de discussões sobre o progresso da equipe.</li>
+            <li><input type="radio" id="q28a4" name="q28" value="d"> Para destacar apenas os pontos fracos, sem foco nos aspectos positivos.</li>
+        </ul>
+        <div class="explanation" id="explanation-q28">
+            <h3>Explicação:</h3>
+            <p>A avaliação periódica ajuda a identificar pontos fortes, áreas para melhorar e oportunidades de desenvolvimento dentro da equipe.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q28', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q29. Qual é a importância de estabelecer uma visão compartilhada em uma equipe?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q29a1" name="q29" value="a"> Para garantir que todos sigam a mesma direção e metas, alcançando resultados coletivos.</li>
+            <li><input type="radio" id="q29a2" name="q29" value="b"> Para criar competição interna e alcançar mais reconhecimento individual.</li>
+            <li><input type="radio" id="q29a3" name="q29" value="c"> Para evitar que os membros da equipe se envolvam em discussões sobre o propósito do trabalho.</li>
+            <li><input type="radio" id="q29a4" name="q29" value="d"> Para que cada membro da equipe tenha suas próprias metas e direções distintas.</li>
+        </ul>
+        <div class="explanation" id="explanation-q29">
+            <h3>Explicação:</h3>
+            <p>Uma visão compartilhada é essencial para garantir que todos os membros da equipe sigam a mesma direção e trabalhem em conjunto para alcançar objetivos coletivos.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q29', 'a')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q30. Por que é importante estabelecer papéis e responsabilidades claras em uma equipe?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q30a1" name="q30" value="a"> Para garantir que cada membro entenda suas tarefas, contribuições e áreas de responsabilidade.</li>
+            <li><input type="radio" id="q30a2" name="q30" value="b"> Para permitir que os membros da equipe deleguem todas as tarefas uns aos outros sem limites.</li>
+            <li><input type="radio" id="q30a3" name="q30" value="c"> Para evitar que qualquer membro tenha liberdade de atuar em diferentes áreas da equipe.</li>
+            <li><input type="radio" id="q30a4" name="q30" value="d"> Para tornar as responsabilidades mais flexíveis, sem necessidades de divisão de tarefas.</li>
+        </ul>
+        <div class="explanation" id="explanation-q30">
+            <h3>Explicação:</h3>
+            <p>Estabelecer papéis claros ajuda cada membro da equipe a entender suas responsabilidades e como suas contribuições impactam o sucesso coletivo.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q30', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q31. Como a promoção da colaboração e da comunicação aberta impacta a eficácia de uma equipe?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q31a1" name="q31" value="a"> Cria um ambiente onde ideias, informações e opiniões podem ser compartilhadas de forma eficaz, promovendo um trabalho conjunto mais produtivo.</li>
+            <li><input type="radio" id="q31a2" name="q31" value="b"> Torna a equipe mais dependente de um único líder para tomar todas as decisões.</li>
+            <li><input type="radio" id="q31a3" name="q31" value="c"> Incentiva a competição entre os membros da equipe, dificultando a colaboração.</li>
+            <li><input type="radio" id="q31a4" name="q31" value="d"> Evita que os membros compartilhem ideias e feedbacks, o que leva a resultados mais rápidos.</li>
+        </ul>
+        <div class="explanation" id="explanation-q31">
+            <h3>Explicação:</h3>
+            <p>A colaboração e comunicação aberta permitem um ambiente em que todos compartilham ideias e opiniões, facilitando a troca de informações e a resolução conjunta de problemas.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q31', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q32. Qual é a importância de promover a responsabilidade compartilhada dentro de uma equipe?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q32a1" name="q32" value="a"> Ela garante que todos os membros se sintam responsáveis pelos resultados coletivos e contribuam igualmente para o sucesso da equipe.</li>
+            <li><input type="radio" id="q32a2" name="q32" value="b"> Ela permite que apenas os líderes da equipe assumam a responsabilidade pelos resultados.</li>
+            <li><input type="radio" id="q32a3" name="q32" value="c"> Ela cria um ambiente onde os membros podem delegar responsabilidades uns aos outros, sem comprometimento.</li>
+            <li><input type="radio" id="q32a4" name="q32" value="d"> Ela ajuda a isolar os membros da equipe para que possam trabalhar individualmente, sem colaboração.</li>
+        </ul>
+        <div class="explanation" id="explanation-q32">
+            <h3>Explicação:</h3>
+            <p>A responsabilidade compartilhada assegura que todos os membros se sintam comprometidos com os resultados da equipe e contribuem para o sucesso coletivo.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q32', 'a')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q33. Como a promoção de uma cultura de aprendizagem contínua impacta o desempenho da equipe?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q33a1" name="q33" value="a"> Ela incentiva a experimentação, reflexão e aprendizado com os erros, promovendo o crescimento contínuo dos membros.</li>
+            <li><input type="radio" id="q33a2" name="q33" value="b"> Ela cria um ambiente de trabalho rígido, onde os membros não podem cometer erros.</li>
+            <li><input type="radio" id="q33a3" name="q33" value="c"> Ela desmotiva os membros a buscar feedback ou se desenvolver profissionalmente.</li>
+            <li><input type="radio" id="q33a4" name="q33" value="d"> Ela impede que os membros compartilhem ideias e busquem novas formas de melhorar.</li>
+        </ul>
+        <div class="explanation" id="explanation-q33">
+            <h3>Explicação:</h3>
+            <p>Promover uma cultura de aprendizagem contínua motiva os membros a se desenvolverem, permitindo que aprendam com os erros e busquem o crescimento contínuo.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q33', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q34. Qual o papel da liderança na transformação de grupos em equipes eficazes?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q34a1" name="q34" value="a"> Fornecer orientação, apoio e inspiração, facilitando a integração e o desenvolvimento da equipe.</li>
+            <li><input type="radio" id="q34a2" name="q34" value="b"> Apenas coordenar as tarefas diárias sem se envolver com o bem-estar da equipe.</li>
+            <li><input type="radio" id="q34a3" name="q34" value="c"> Ser uma figura autoritária que toma todas as decisões sem considerar a opinião dos membros da equipe.</li>
+            <li><input type="radio" id="q34a4" name="q34" value="d"> Delegar todas as responsabilidades aos membros da equipe, sem se envolver nas decisões.</li>
+        </ul>
+        <div class="explanation" id="explanation-q34">
+            <h3>Explicação:</h3>
+            <p>A liderança eficaz deve proporcionar orientação e apoio contínuos, além de inspirar os membros para o desenvolvimento da equipe como um todo.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q34', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q35. Quais são as diferenças entre competição e cooperação no contexto de equipes?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q35a1" name="q35" value="a"> A competição envolve buscar superioridade em relação aos outros, enquanto a cooperação busca alcançar objetivos comuns e ajudar uns aos outros.</li>
+            <li><input type="radio" id="q35a2" name="q35" value="b"> A competição é focada em alcançar objetivos sem considerar o impacto no grupo, enquanto a cooperação evita qualquer tipo de desafio.</li>
+            <li><input type="radio" id="q35a3" name="q35" value="c"> A competição cria um ambiente de apoio, enquanto a cooperação promove rivalidade.</li>
+            <li><input type="radio" id="q35a4" name="q35" value="d"> A competição é sempre mais eficaz do que a cooperação em um ambiente de equipe.</li>
+        </ul>
+        <div class="explanation" id="explanation-q35">
+            <h3>Explicação:</h3>
+            <p>A competição é focada na superação dos outros, enquanto a cooperação busca o alcance de objetivos comuns e o apoio mútuo entre os membros da equipe.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q35', 'a')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q36. Como a cooperação impacta o desempenho e os resultados de uma equipe?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q36a1" name="q36" value="a"> A cooperação promove a colaboração e o trabalho conjunto, visando alcançar resultados satisfatórios e benefícios mútuos para todos.</li>
+            <li><input type="radio" id="q36a2" name="q36" value="b"> A cooperação resulta em competição entre os membros e prejudica a eficácia do grupo.</li>
+            <li><input type="radio" id="q36a3" name="q36" value="c"> A cooperação só é eficaz quando não envolve a confiança ou o respeito mútuo.</li>
+            <li><input type="radio" id="q36a4" name="q36" value="d"> A cooperação impede o desenvolvimento de relacionamentos saudáveis dentro de uma equipe.</li>
+        </ul>
+        <div class="explanation" id="explanation-q36">
+            <h3>Explicação:</h3>
+            <p>A cooperação, que se baseia na confiança e no respeito mútuo, ajuda a alcançar objetivos comuns e contribui para resultados sustentáveis e satisfatórios a longo prazo.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q36', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q37. Qual é o papel da socialização no processo de individuação e interação entre os indivíduos?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q37a1" name="q37" value="a"> A socialização é o conjunto dos processos que ocorre quando o indivíduo interage com outros, influenciando seu desenvolvimento pessoal e social.</li>
+            <li><input type="radio" id="q37a2" name="q37" value="b"> A socialização impede o processo de individuação, criando uma pessoa completamente dependente da sociedade.</li>
+            <li><input type="radio" id="q37a3" name="q37" value="c"> A socialização ocorre apenas na infância e não tem impacto na formação do indivíduo ao longo da vida.</li>
+            <li><input type="radio" id="q37a4" name="q37" value="d"> A socialização é um processo que cria divisões entre os indivíduos e a sociedade, impedindo o crescimento pessoal.</li>
+        </ul>
+        <div class="explanation" id="explanation-q37">
+            <h3>Explicação:</h3>
+            <p>A socialização é essencial para o processo de individuação, ajudando a formar a identidade pessoal e social do indivíduo, permitindo uma interação positiva com os outros.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q37', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q38. Como a combinação de competição e cooperação pode beneficiar uma equipe?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q38a1" name="q38" value="a"> A combinação de competição e cooperação pode criar um ambiente equilibrado, onde os membros se esforçam para alcançar metas pessoais e coletivas ao mesmo tempo.</li>
+            <li><input type="radio" id="q38a2" name="q38" value="b"> A combinação de ambos os conceitos leva a um conflito constante, prejudicando o desempenho da equipe.</li>
+            <li><input type="radio" id="q38a3" name="q38" value="c"> A cooperação elimina a necessidade de competição dentro da equipe.</li>
+            <li><input type="radio" id="q38a4" name="q38" value="d"> A competição deve ser sempre priorizada em relação à cooperação para obter melhores resultados em equipes.</li>
+        </ul>
+        <div class="explanation" id="explanation-q38">
+            <h3>Explicação:</h3>
+            <p>Combinar a competição com a cooperação permite que os membros da equipe se desafiem e, ao mesmo tempo, trabalhem juntos para alcançar objetivos compartilhados, promovendo um ambiente equilibrado e produtivo.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q38', 'a')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q39. Segundo Meneghetti, como a relação entre a lei e o operador maduro pode garantir a multiplicidade existencial?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q39a1" name="q39" value="a"> A lei é preservada na medida em que é aplicada por um operador maduro, autêntico, garantindo a multiplicidade existencial e a preservação da sociedade.</li>
+            <li><input type="radio" id="q39a2" name="q39" value="b"> A lei perde sua eficácia quando é aplicada por um operador maduro, pois ele tende a ser excessivamente flexível e liberal.</li>
+            <li><input type="radio" id="q39a3" name="q39" value="c"> A lei deve ser rigidamente aplicada, sem considerar a maturidade do operador, para garantir a estabilidade da sociedade.</li>
+            <li><input type="radio" id="q39a4" name="q39" value="d"> A conciliação entre a lei e o operador maduro é uma utopia, não sendo possível garantir a multiplicidade existencial de forma prática.</li>
+        </ul>
+        <div class="explanation" id="explanation-q39">
+            <h3>Explicação:</h3>
+            <p>A conciliação entre a lei e a maturidade do operador é fundamental para garantir que a aplicação da lei respeite a autenticidade do ser humano, promovendo uma sociedade plural e equilibrada.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q39', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q40. De acordo com Meneghetti, qual é o papel da delinquência na sociedade e no sistema de segurança?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q40a1" name="q40" value="a"> A delinquência é um ponto de força para o sistema, pois a presença de personagens delinquentes justifica a existência de sistemas de segurança, como a polícia e a justiça.</li>
+            <li><input type="radio" id="q40a2" name="q40" value="b"> A delinquência não tem impacto significativo no sistema de segurança, já que a sociedade pode se organizar sem a necessidade de segurança contra criminosos.</li>
+            <li><input type="radio" id="q40a3" name="q40" value="c"> A delinquência enfraquece o sistema de segurança, tornando-o obsoleto e desnecessário.</li>
+            <li><input type="radio" id="q40a4" name="q40" value="d"> A delinquência é combatida pelo sistema, mas não justifica a existência de instituições de segurança como a polícia e a justiça.</li>
+        </ul>
+        <div class="explanation" id="explanation-q40">
+            <h3>Explicação:</h3>
+            <p>Segundo Meneghetti, a delinquência desempenha um papel importante ao motivar a criação e manutenção de sistemas de segurança, como a polícia e a justiça, que existem para proteger a sociedade.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q40', 'a')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q41. De acordo com o texto, qual é a principal dificuldade enfrentada pelas equipes no ambiente de trabalho?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q41a1" name="q41" value="a"> A falta de habilidades técnicas dos colaboradores, que impede a realização dos objetivos comuns.</li>
+            <li><input type="radio" id="q41a2" name="q41" value="b"> A ausência de conflitos no ambiente de trabalho, o que reduz a credibilidade da empresa e de seus funcionários.</li>
+            <li><input type="radio" id="q41a3" name="q41" value="c"> A falta de boa comunicação e paciência entre os membros da equipe, dificultando a colaboração efetiva.</li>
+            <li><input type="radio" id="q41a4" name="q41" value="d"> A superexposição de problemas pessoais dos colaboradores, afetando a dinâmica do grupo.</li>
+        </ul>
+        <div class="explanation" id="explanation-q41">
+            <h3>Explicação:</h3>
+            <p>A falta de boa comunicação e paciência entre os membros da equipe é uma das dificuldades mais comuns enfrentadas em ambientes de trabalho, dificultando a colaboração e o alcance dos objetivos coletivos.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q41', 'c')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q42. O que é pressuposto para o funcionamento efetivo de uma equipe, conforme o texto?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q42a1" name="q42" value="a"> Os membros da equipe devem agir de forma independente, sem interagir entre si.</li>
+            <li><input type="radio" id="q42a2" name="q42" value="b"> A equipe deve trabalhar de forma colaborativa, com boa comunicação e disposição para substituir as atribuições de colegas quando necessário.</li>
+            <li><input type="radio" id="q42a3" name="q42" value="c"> A equipe deve se concentrar apenas nas tarefas individuais de cada membro, sem necessidade de interação entre os colaboradores.</li>
+            <li><input type="radio" id="q42a4" name="q42" value="d"> O foco deve ser exclusivamente nas metas da organização, sem considerar o bem-estar dos colaboradores.</li>
+        </ul>
+        <div class="explanation" id="explanation-q42">
+            <h3>Explicação:</h3>
+            <p>O trabalho em equipe pressupõe a colaboração entre os membros, com boa comunicação e disposição para se apoiar mutuamente, incluindo a capacidade de substituir atribuições quando necessário.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q42', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q43. Qual é a implicação de um bom gestor em uma equipe, segundo o texto?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q43a1" name="q43" value="a"> O gestor é responsável por eliminar todos os conflitos entre os membros da equipe, independentemente das circunstâncias.</li>
+            <li><input type="radio" id="q43a2" name="q43" value="b"> O gestor deve manter a harmonia na equipe, mas pode passar por alto algumas situações que podem afetar a dinâmica do grupo.</li>
+            <li><input type="radio" id="q43a3" name="q43" value="c"> O gestor precisa ser incapaz de identificar qualquer problema na equipe, pois isso garantiria um ambiente de trabalho perfeito.</li>
+            <li><input type="radio" id="q43a4" name="q43" value="d"> O gestor não tem nenhum papel significativo na dinâmica da equipe, deixando os membros resolverem tudo sozinhos.</li>
+        </ul>
+        <div class="explanation" id="explanation-q43">
+            <h3>Explicação:</h3>
+            <p>Embora um bom gestor consiga manter a harmonia, é importante que ele também esteja atento às situações que possam ser tratadas de forma incorreta, impactando a dinâmica da equipe.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q43', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q44. Qual é a principal consequência da falta de confiança em uma equipe, conforme o texto?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q44a1" name="q44" value="a"> Aumento na motivação e no desempenho dos membros da equipe.</li>
+            <li><input type="radio" id="q44a2" name="q44" value="b"> Melhora na comunicação e colaboração entre os membros da equipe.</li>
+            <li><input type="radio" id="q44a3" name="q44" value="c"> Perda de confiança entre os membros, dificultando a colaboração e a transparência.</li>
+            <li><input type="radio" id="q44a4" name="q44" value="d"> Fortalecimento das relações interpessoais e aumento da produtividade.</li>
+        </ul>
+        <div class="explanation" id="explanation-q44">
+            <h3>Explicação:</h3>
+            <p>A falta de confiança entre os membros de uma equipe resulta em dificuldades de colaboração, com perda de transparência e comprometimento.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q44', 'c')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q45. O que acontece quando os membros de uma equipe têm medo de conflitos, de acordo com o texto?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q45a1" name="q45" value="a"> Os conflitos são resolvidos rapidamente, promovendo a harmonia entre os membros.</li>
+            <li><input type="radio" id="q45a2" name="q45" value="b"> A falta de disposição para lidar com os conflitos pode prejudicar o desempenho da equipe, evitando discussões construtivas.</li>
+            <li><input type="radio" id="q45a3" name="q45" value="c"> O medo de conflitos melhora a interação e o entendimento mútuo entre os membros.</li>
+            <li><input type="radio" id="q45a4" name="q45" value="d"> Os conflitos são incentivados, fortalecendo as relações interpessoais.</li>
+        </ul>
+        <div class="explanation" id="explanation-q45">
+            <h3>Explicação:</h3>
+            <p>O medo de conflitos pode impedir que questões importantes sejam discutidas de forma construtiva, prejudicando o desempenho da equipe.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q45', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q46. O que caracteriza a falta de comprometimento em uma equipe?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q46a1" name="q46" value="a"> Os membros da equipe demonstram total dedicação e comprometimento com os resultados.</li>
+            <li><input type="radio" id="q46a2" name="q46" value="b"> A falta de comprometimento é caracterizada por uma dedicação superficial e ausência de responsabilidade pelos resultados.</li>
+            <li><input type="radio" id="q46a3" name="q46" value="c"> Todos os membros da equipe se dedicam igualmente, resultando em alta produtividade.</li>
+            <li><input type="radio" id="q46a4" name="q46" value="d"> A equipe se mantém focada e responsável por todas as suas tarefas e resultados.</li>
+        </ul>
+        <div class="explanation" id="explanation-q46">
+            <h3>Explicação:</h3>
+            <p>A falta de comprometimento em uma equipe se reflete na dedicação superficial dos membros e na ausência de responsabilidade pelos resultados coletivos.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q46', 'b')">Verificar Resposta</button>
+    </div>
+    Aqui estão mais três questões com base no conteúdo fornecido:
+
+    ```html
+    <div class="question-box">
+        <h2>q47. Qual é a consequência de manter uma "falsa paz" em uma equipe, conforme o texto?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q47a1" name="q47" value="a"> Aumenta a harmonia e o trabalho em equipe.</li>
+            <li><input type="radio" id="q47a2" name="q47" value="b"> Pode ocasionar um clima desagradável e diminuir o rendimento da equipe.</li>
+            <li><input type="radio" id="q47a3" name="q47" value="c"> Facilita a comunicação aberta e o desenvolvimento de novas ideias.</li>
+            <li><input type="radio" id="q47a4" name="q47" value="d"> Melhora a colaboração e a confiança entre os membros da equipe.</li>
+        </ul>
+        <div class="explanation" id="explanation-q47">
+            <h3>Explicação:</h3>
+            <p>Manter uma "falsa paz" ao evitar discussões pode prejudicar a comunicação, criando um clima desagradável e comprometendo o rendimento da equipe.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q47', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q48. O que pode causar a falta de comprometimento em uma equipe?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q48a1" name="q48" value="a"> Discussões abertas e construtivas sobre as ideias.</li>
+            <li><input type="radio" id="q48a2" name="q48" value="b"> A omissão das discussões e a falta de decisões determinadas em conjunto.</li>
+            <li><input type="radio" id="q48a3" name="q48" value="c"> O desenvolvimento de uma cultura de confiança mútua e responsabilidade.</li>
+            <li><input type="radio" id="q48a4" name="q48" value="d"> Comprometimento dos membros com as decisões coletivas.</li>
+        </ul>
+        <div class="explanation" id="explanation-q48">
+            <h3>Explicação:</h3>
+            <p>A falta de comprometimento ocorre quando as decisões não são discutidas em conjunto, resultando em ausência de empenho por parte dos membros da equipe.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q48', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q49. Quando os conflitos podem ser benéficos para uma equipe?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q49a1" name="q49" value="a"> Quando são constantes e geram tensão entre os membros.</li>
+            <li><input type="radio" id="q49a2" name="q49" value="b"> Quando são evitados a todo custo para manter a harmonia.</li>
+            <li><input type="radio" id="q49a3" name="q49" value="c"> Quando são necessários para a evolução do trabalho e da equipe.</li>
+            <li><input type="radio" id="q49a4" name="q49" value="d"> Quando resultam em uma divisão clara entre os membros da equipe.</li>
+        </ul>
+        <div class="explanation" id="explanation-q49">
+            <h3>Explicação:</h3>
+            <p>Embora conflitos constantes não sejam ideais, algumas discussões construtivas são necessárias para promover a evolução do trabalho e o aprimoramento das ideias na equipe.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q49', 'c')">Verificar Resposta</button>
+    </div>
+    ```
+    
+    Essas questões abordam as dificuldades relacionadas ao medo de conflitos, a falta de comprometimento e a importância das discussões para a evolução do trabalho na equipe.<div class="question-box">
+        <h2>q50. O que pode causar a dificuldade em assumir responsabilidades dentro de uma equipe?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q50a1" name="q50" value="a"> O alto nível de comprometimento de todos os membros.</li>
+            <li><input type="radio" id="q50a2" name="q50" value="b"> A falta de comprometimento, que dificulta a cobrança de responsabilidades entre os membros.</li>
+            <li><input type="radio" id="q50a3" name="q50" value="c"> A definição clara de metas e objetivos para cada membro.</li>
+            <li><input type="radio" id="q50a4" name="q50" value="d"> A promoção de um ambiente competitivo e de alto desempenho.</li>
+        </ul>
+        <div class="explanation" id="explanation-q50">
+            <h3>Explicação:</h3>
+            <p>A falta de comprometimento pode resultar em dificuldades em cobrar responsabilidades, com até mesmo os colaboradores mais empenhados se sentindo desconfortáveis em exigir mais dos colegas.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q50', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q51. Como a falta de atenção aos resultados afeta a equipe?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q51a1" name="q51" value="a"> Aumenta o foco nos interesses pessoais e diminui o comprometimento com os resultados coletivos.</li>
+            <li><input type="radio" id="q51a2" name="q51" value="b"> Melhora a eficiência e o foco na produção de resultados.</li>
+            <li><input type="radio" id="q51a3" name="q51" value="c"> Facilita a obtenção de resultados com menos esforço e colaboração.</li>
+            <li><input type="radio" id="q51a4" name="q51" value="d"> Aumenta o compromisso da equipe com a empresa e seus objetivos.</li>
+        </ul>
+        <div class="explanation" id="explanation-q51">
+            <h3>Explicação:</h3>
+            <p>Quando a equipe foca mais nos interesses individuais ou nos interesses da própria equipe em vez dos objetivos da empresa, o comprometimento com a produção de resultados diminui.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q51', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q52. Qual é o impacto de um propósito coletivo enfraquecido em uma equipe?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q52a1" name="q52" value="a"> Aumenta o comprometimento dos membros com os resultados da equipe.</li>
+            <li><input type="radio" id="q52a2" name="q52" value="b"> Diminui o compromisso com a produção de resultados e afeta o desempenho da equipe.</li>
+            <li><input type="radio" id="q52a3" name="q52" value="c"> Melhora a eficiência, pois os membros da equipe se tornam mais focados.</li>
+            <li><input type="radio" id="q52a4" name="q52" value="d"> Estimula os membros a se concentrarem mais nas necessidades da empresa.</li>
+        </ul>
+        <div class="explanation" id="explanation-q52">
+            <h3>Explicação:</h3>
+            <p>Quando o propósito coletivo da equipe se enfraquece, o comprometimento com a produção de resultados diminui, impactando negativamente o desempenho da equipe.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q52', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q53. O que caracteriza uma equipe eficaz além das habilidades técnicas dos membros?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q53a1" name="q53" value="a"> A presença de um ambiente organizacional harmonioso e ferramentas adequadas.</li>
+            <li><input type="radio" id="q53a2" name="q53" value="b"> A individualidade dos membros e a falta de colaboração entre eles.</li>
+            <li><input type="radio" id="q53a3" name="q53" value="c"> A motivação interna dos membros sem o apoio do líder.</li>
+            <li><input type="radio" id="q53a4" name="q53" value="d"> A ênfase apenas nas habilidades técnicas e conhecimentos especializados de cada membro.</li>
+        </ul>
+        <div class="explanation" id="explanation-q53">
+            <h3>Explicação:</h3>
+            <p>Uma equipe eficaz vai além das habilidades técnicas, necessitando de um ambiente harmonioso, ferramentas adequadas e motivação, além de ser capaz de trabalhar colaborativamente para alcançar os objetivos.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q53', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q54. O que é o mapa mental utilizado no trabalho em grupo?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q54a1" name="q54" value="a"> Um diagrama visual que organiza informações e pode ser usado para estudos ou planejamento.</li>
+            <li><input type="radio" id="q54a2" name="q54" value="b"> Um documento escrito que descreve detalhadamente os objetivos do grupo.</li>
+            <li><input type="radio" id="q54a3" name="q54" value="c"> Uma ferramenta digital utilizada exclusivamente para apresentações de trabalho.</li>
+            <li><input type="radio" id="q54a4" name="q54" value="d"> Uma tabela usada para analisar dados quantitativos de desempenho de cada membro.</li>
+        </ul>
+        <div class="explanation" id="explanation-q54">
+            <h3>Explicação:</h3>
+            <p>O mapa mental é um diagrama que organiza informações visualmente, sendo utilizado para estudos, organização de tarefas ou planejamento, e é especialmente útil para facilitar a compreensão coletiva.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q54', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q55. Qual é o papel do gestor na formação de equipes eficazes?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q55a1" name="q55" value="a"> Ajudar os membros a desenvolverem características essenciais para o trabalho colaborativo e aumentar a produtividade.</li>
+            <li><input type="radio" id="q55a2" name="q55" value="b"> Garantir que os membros trabalhem individualmente para alcançar o sucesso pessoal de cada um.</li>
+            <li><input type="radio" id="q55a3" name="q55" value="c"> Focar unicamente na avaliação do desempenho técnico dos membros da equipe.</li>
+            <li><input type="radio" id="q55a4" name="q55" value="d"> Impor rígidas regras e processos sem considerar as necessidades dos membros.</li>
+        </ul>
+        <div class="explanation" id="explanation-q55">
+            <h3>Explicação:</h3>
+            <p>O gestor tem o papel de ajudar os membros a desenvolverem as características necessárias para um trabalho colaborativo eficaz, o que inclui aumentar a produtividade e a capacidade de trabalhar como uma unidade.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q55', 'a')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q56. Qual das características a seguir é fundamental para equipes eficazes?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q56a1" name="q56" value="a"> Boa comunicabilidade.</li>
+            <li><input type="radio" id="q56a2" name="q56" value="b"> Evitar inovações.</li>
+            <li><input type="radio" id="q56a3" name="q56" value="c"> Resistência à mudança.</li>
+            <li><input type="radio" id="q56a4" name="q56" value="d"> Falta de respeito entre os membros.</li>
+        </ul>
+        <div class="explanation" id="explanation-q56">
+            <h3>Explicação:</h3>
+            <p>A boa comunicabilidade é essencial para equipes eficazes, pois facilita a troca de ideias, o entendimento mútuo e a colaboração entre os membros.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q56', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q57. O que caracteriza o "senso de inovação" em equipes eficazes?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q57a1" name="q57" value="a"> Buscar constantemente novas formas de resolver problemas e melhorar os processos.</li>
+            <li><input type="radio" id="q57a2" name="q57" value="b"> Manter os processos antigos e evitar mudanças.</li>
+            <li><input type="radio" id="q57a3" name="q57" value="c"> Focar exclusivamente em soluções de curto prazo.</li>
+            <li><input type="radio" id="q57a4" name="q57" value="d"> Desconsiderar as novas tecnologias e ferramentas disponíveis.</li>
+        </ul>
+        <div class="explanation" id="explanation-q57">
+            <h3>Explicação:</h3>
+            <p>O senso de inovação em equipes eficazes envolve a busca contínua por novas formas de resolver problemas, melhorando constantemente os processos e adotando novas soluções e ferramentas.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q57', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q58. Qual é a importância da "unicidade" em equipes eficazes?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q58a1" name="q58" value="a"> A unicidade fortalece o sentimento de pertencimento e compromisso com o objetivo comum da equipe.</li>
+            <li><input type="radio" id="q58a2" name="q58" value="b"> A unicidade promove a competição interna, prejudicando a colaboração entre os membros.</li>
+            <li><input type="radio" id="q58a3" name="q58" value="c"> A unicidade diminui a importância da comunicação e do respeito dentro da equipe.</li>
+            <li><input type="radio" id="q58a4" name="q58" value="d"> A unicidade impede a adaptação às mudanças externas à equipe.</li>
+        </ul>
+        <div class="explanation" id="explanation-q58">
+            <h3>Explicação:</h3>
+            <p>A unicidade em equipes eficazes promove um forte sentimento de pertencimento e compromisso com o objetivo comum, essencial para a colaboração e o alcance de metas coletivas.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q58', 'a')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q59. Qual é a importância da boa comunicabilidade em equipes eficazes?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q59a1" name="q59" value="a"> A boa comunicabilidade facilita a troca de informações, assegurando que todos os membros da equipe estejam alinhados e atualizados.</li>
+            <li><input type="radio" id="q59a2" name="q59" value="b"> A boa comunicabilidade não tem impacto nas interações da equipe.</li>
+            <li><input type="radio" id="q59a3" name="q59" value="c"> A boa comunicabilidade impede que a equipe se concentre em suas tarefas principais.</li>
+            <li><input type="radio" id="q59a4" name="q59" value="d"> A boa comunicabilidade deve ser evitada para não atrapalhar o foco da equipe.</li>
+        </ul>
+        <div class="explanation" id="explanation-q59">
+            <h3>Explicação:</h3>
+            <p>A boa comunicabilidade é essencial em equipes eficazes, pois facilita a troca de informações e garante que todos os membros estejam alinhados e cientes das atualizações e processos da equipe.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q59', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q60. O que caracteriza o respeito em equipes eficazes?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q60a1" name="q60" value="a"> O respeito envolve a valorização das diferenças entre os membros, sem estigmatizar, e reconhecendo que essas diferenças enriquecem a equipe.</li>
+            <li><input type="radio" id="q60a2" name="q60" value="b"> O respeito é importante apenas entre líderes e membros da equipe.</li>
+            <li><input type="radio" id="q60a3" name="q60" value="c"> O respeito pode ser ignorado em ambientes de alta competitividade.</li>
+            <li><input type="radio" id="q60a4" name="q60" value="d"> O respeito é irrelevante quando os membros têm opiniões semelhantes.</li>
+        </ul>
+        <div class="explanation" id="explanation-q60">
+            <h3>Explicação:</h3>
+            <p>O respeito é fundamental em equipes eficazes, pois garante que as diferenças entre os membros sejam valorizadas e que as interações sejam respeitosas, promovendo um ambiente de colaboração e enriquecimento mútuo.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q60', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q61. Como a comunicação interpessoal contribui para a eficácia das equipes?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q61a1" name="q61" value="a"> A comunicação interpessoal eficaz garante que todos os membros compartilhem informações de maneira clara e direta, melhorando a produtividade.</li>
+            <li><input type="radio" id="q61a2" name="q61" value="b"> A comunicação interpessoal não é relevante, pois as tarefas são mais importantes do que o diálogo.</li>
+            <li><input type="radio" id="q61a3" name="q61" value="c"> A comunicação interpessoal gera conflitos constantes, o que diminui a produtividade.</li>
+            <li><input type="radio" id="q61a4" name="q61" value="d"> A comunicação interpessoal deve ser evitada, pois pode gerar confusão entre os membros.</li>
+        </ul>
+        <div class="explanation" id="explanation-q61">
+            <h3>Explicação:</h3>
+            <p>A comunicação interpessoal eficaz é crucial para garantir que as informações sejam compartilhadas de maneira clara e direta, ajudando a aumentar a produtividade e a colaboração dentro da equipe.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q61', 'a')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q62. Qual é o papel da adaptabilidade em equipes eficazes?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q62a1" name="q62" value="a"> A adaptabilidade permite que os membros da equipe se ajustem rapidamente a novas situações, mudanças de cargo e novas tecnologias.</li>
+            <li><input type="radio" id="q62a2" name="q62" value="b"> A adaptabilidade não tem importância em equipes eficazes, pois o trabalho deve seguir um processo fixo.</li>
+            <li><input type="radio" id="q62a3" name="q62" value="c"> A adaptabilidade é importante apenas para os líderes da equipe, não para os membros.</li>
+            <li><input type="radio" id="q62a4" name="q62" value="d"> A adaptabilidade é uma característica negativa que pode prejudicar o foco da equipe.</li>
+        </ul>
+        <div class="explanation" id="explanation-q62">
+            <h3>Explicação:</h3>
+            <p>A adaptabilidade é crucial em equipes eficazes, pois permite que seus membros se ajustem rapidamente a mudanças e novos desafios, mantendo a produtividade e a coesão do grupo.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q62', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q63. O que significa unicidade em uma equipe eficaz?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q63a1" name="q63" value="a"> A unicidade significa que os membros da equipe se sentem responsáveis não apenas pelo seu próprio trabalho, mas também pelo trabalho dos outros, buscando sempre o objetivo comum.</li>
+            <li><input type="radio" id="q63a2" name="q63" value="b"> A unicidade significa que os membros da equipe devem realizar suas tarefas de forma isolada, sem se preocupar com o trabalho dos outros.</li>
+            <li><input type="radio" id="q63a3" name="q63" value="c"> A unicidade significa que a equipe deve ignorar o trabalho dos outros e se concentrar apenas em seus próprios objetivos.</li>
+            <li><input type="radio" id="q63a4" name="q63" value="d"> A unicidade não é uma característica importante em equipes eficazes.</li>
+        </ul>
+        <div class="explanation" id="explanation-q63">
+            <h3>Explicação:</h3>
+            <p>A unicidade nas equipes eficazes é fundamental, pois significa que todos os membros se sentem responsáveis pelo trabalho coletivo, buscando o sucesso do grupo e colaborando para atingir os objetivos comuns.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q63', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q64. Por que a adaptabilidade é essencial para as equipes eficazes?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q64a1" name="q64" value="a"> A adaptabilidade é essencial porque permite que os membros da equipe se ajustem rapidamente às mudanças e novos desafios, garantindo flexibilidade e eficácia.</li>
+            <li><input type="radio" id="q64a2" name="q64" value="b"> A adaptabilidade não é importante, pois a equipe deve seguir rigidamente os métodos estabelecidos.</li>
+            <li><input type="radio" id="q64a3" name="q64" value="c"> A adaptabilidade só é relevante para os líderes da equipe, e não para os membros.</li>
+            <li><input type="radio" id="q64a4" name="q64" value="d"> A adaptabilidade prejudica a harmonia da equipe, pois causa incertezas e confusão.</li>
+        </ul>
+        <div class="explanation" id="explanation-q64">
+            <h3>Explicação:</h3>
+            <p>A adaptabilidade é importante para equipes eficazes porque permite que os membros se ajustem a novas situações e mudanças, como alterações de cargo, tecnologia e demandas, mantendo a produtividade e a coesão do grupo.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q64', 'a')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q65. Qual é a principal função das ferramentas de trabalho em equipe no contexto das relações interpessoais?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q65a1" name="q65" value="a"> Permitir o compartilhamento de ideias, o armazenamento de informações e manter a comunicação constante entre empresas e colaboradores.</li>
+            <li><input type="radio" id="q65a2" name="q65" value="b"> Substituir completamente o contato humano, evitando reuniões presenciais.</li>
+            <li><input type="radio" id="q65a3" name="q65" value="c"> Tornar as equipes independentes, eliminando a necessidade de colaboração.</li>
+            <li><input type="radio" id="q65a4" name="q65" value="d"> Focar exclusivamente no armazenamento de dados, sem integrar comunicação.</li>
+        </ul>
+        <div class="explanation" id="explanation-q65">
+            <h3>Explicação:</h3>
+            <p>As ferramentas de trabalho em equipe facilitam o compartilhamento de ideias, o armazenamento de informações e a comunicação constante, essenciais para o dinamismo e a produtividade no ambiente profissional.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q65', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q66. Como as ferramentas de trabalho em equipe atendem às demandas das mudanças nas relações profissionais?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q66a1" name="q66" value="a"> Facilitando a troca rápida de informações e a colaboração entre profissionais de maneira dinâmica.</li>
+            <li><input type="radio" id="q66a2" name="q66" value="b"> Reduzindo a necessidade de comunicação entre colaboradores.</li>
+            <li><input type="radio" id="q66a3" name="q66" value="c"> Eliminando a necessidade de adaptação às novas tecnologias.</li>
+            <li><input type="radio" id="q66a4" name="q66" value="d"> Focando apenas em inovações tecnológicas sem envolver o aspecto humano.</li>
+        </ul>
+        <div class="explanation" id="explanation-q66">
+            <h3>Explicação:</h3>
+            <p>Com o avanço tecnológico, essas ferramentas promovem uma troca rápida de informações e maior colaboração, atendendo às exigências de um mercado dinâmico e em constante mudança.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q66', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q67. Por que o mercado investe em ferramentas de trabalho em equipe?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q67a1" name="q67" value="a"> Para acompanhar as necessidades de troca de informações rápidas e pessoas dinâmicas no mercado atual.</li>
+            <li><input type="radio" id="q67a2" name="q67" value="b"> Para substituir o trabalho humano por completo.</li>
+            <li><input type="radio" id="q67a3" name="q67" value="c"> Para reduzir os custos operacionais eliminando a necessidade de equipes.</li>
+            <li><input type="radio" id="q67a4" name="q67" value="d"> Para evitar o uso de tecnologias avançadas nas relações profissionais.</li>
+        </ul>
+        <div class="explanation" id="explanation-q67">
+            <h3>Explicação:</h3>
+            <p>O mercado investe nessas ferramentas para lidar com as demandas de troca de informações rápidas e dinâmicas, alinhando-se às mudanças nas relações profissionais.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q67', 'a')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q68. Qual é a principal funcionalidade do Evernote no contexto do trabalho em equipe?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q68a1" name="q68" value="a"> Organização da informação pessoal mediante um arquivo de notas.</li>
+            <li><input type="radio" id="q68a2" name="q68" value="b"> Comunicação em tempo real entre equipes de diferentes locais.</li>
+            <li><input type="radio" id="q68a3" name="q68" value="c"> Criação de planilhas colaborativas para análise de dados.</li>
+            <li><input type="radio" id="q68a4" name="q68" value="d"> Realização de reuniões por vídeo com até 50 participantes.</li>
+        </ul>
+        <div class="explanation" id="explanation-q68">
+            <h3>Explicação:</h3>
+            <p>O Evernote é projetado para organizar informações pessoais por meio de um arquivo de notas, o que facilita a organização de reuniões e a gestão de conteúdos.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q68', 'a')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q69. Qual das ferramentas listadas é ideal para organizar reuniões em um arquivo virtual?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q69a1" name="q69" value="a"> Slack</li>
+            <li><input type="radio" id="q69a2" name="q69" value="b"> Google Forms</li>
+            <li><input type="radio" id="q69a3" name="q69" value="c"> Evernote</li>
+            <li><input type="radio" id="q69a4" name="q69" value="d"> Teams</li>
+        </ul>
+        <div class="explanation" id="explanation-q69">
+            <h3>Explicação:</h3>
+            <p>O Evernote permite organizar reuniões em um arquivo virtual, tornando-o ideal para armazenar e gerenciar informações relacionadas a encontros de trabalho.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q69', 'c')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q70. Qual é o limite mensal de upload de dados na versão Premium do Evernote?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q70a1" name="q70" value="a"> 5 GB</li>
+            <li><input type="radio" id="q70a2" name="q70" value="b"> 10 GB</li>
+            <li><input type="radio" id="q70a3" name="q70" value="c"> 15 GB</li>
+            <li><input type="radio" id="q70a4" name="q70" value="d"> 20 GB</li>
+        </ul>
+        <div class="explanation" id="explanation-q70">
+            <h3>Explicação:</h3>
+            <p>Na versão Premium do Evernote, os usuários podem fazer upload de até 10 GB de dados por mês, ideal para quem trabalha com grande volume de informações.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q70', 'b')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q71. Qual é a principal funcionalidade do Slack no contexto do trabalho em equipe?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q71a1" name="q71" value="a"> Compartilhamento de arquivos grandes em nuvem.</li>
+            <li><input type="radio" id="q71a2" name="q71" value="b"> Organização da comunicação em canais específicos por projetos ou equipes.</li>
+            <li><input type="radio" id="q71a3" name="q71" value="c"> Criação de gráficos e apresentações diretamente no aplicativo.</li>
+            <li><input type="radio" id="q71a4" name="q71" value="d"> Gerenciamento de banco de dados off-line com sincronização posterior.</li>
+        </ul>
+        <div class="explanation" id="explanation-q71">
+            <h3>Explicação:</h3>
+            <p>O Slack organiza a comunicação em canais temáticos, garantindo que as informações sejam direcionadas às pessoas corretas de forma eficiente.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q71', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q72. Quais funcionalidades o Google Docs oferece para trabalho em equipe?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q72a1" name="q72" value="a"> Apenas um processador de texto e um editor de planilhas.</li>
+            <li><input type="radio" id="q72a2" name="q72" value="b"> Um processador de texto, editor de apresentações, editor de planilhas e editor de formulários.</li>
+            <li><input type="radio" id="q72a3" name="q72" value="c"> Editor de apresentações e gráficos em tempo real.</li>
+            <li><input type="radio" id="q72a4" name="q72" value="d"> Apenas ferramentas de edição compatíveis com LibreOffice.</li>
+        </ul>
+        <div class="explanation" id="explanation-q72">
+            <h3>Explicação:</h3>
+            <p>O Google Docs oferece um conjunto de ferramentas, incluindo processador de texto, editor de apresentações, editor de planilhas e editor de formulários, permitindo colaboração eficaz em equipe.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q72', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q73. O que diferencia o Google Docs de outras ferramentas similares?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q73a1" name="q73" value="a"> Permite edição on-line e off-line com sincronização automática quando conectado à internet.</li>
+            <li><input type="radio" id="q73a2" name="q73" value="b"> Suporte exclusivo a dispositivos móveis Android.</li>
+            <li><input type="radio" id="q73a3" name="q73" value="c"> Capacidade de gerenciar canais de comunicação organizados.</li>
+            <li><input type="radio" id="q73a4" name="q73" value="d"> Sincronização apenas manual entre dispositivos.</li>
+        </ul>
+        <div class="explanation" id="explanation-q73">
+            <h3>Explicação:</h3>
+            <p>O Google Docs permite edição on-line e off-line, com sincronização automática ao reconectar à internet, o que o torna uma ferramenta versátil para equipes.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q73', 'a')">Verificar Resposta</button>
+    </div>
+    <div class="question-box">
+        <h2>q74. Qual é a principal característica do Google Hangouts como ferramenta de trabalho em equipe?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q74a1" name="q74" value="a"> Permite apenas mensagens instantâneas e SMS.</li>
+            <li><input type="radio" id="q74a2" name="q74" value="b"> Inclui mensagens instantâneas, chat de vídeo, SMS e VOIP.</li>
+            <li><input type="radio" id="q74a3" name="q74" value="c"> Exclusivamente uma plataforma de videoconferência.</li>
+            <li><input type="radio" id="q74a4" name="q74" value="d"> Utiliza inteligência artificial para organizar tarefas.</li>
+        </ul>
+        <div class="explanation" id="explanation-q74">
+            <h3>Explicação:</h3>
+            <p>O Google Hangouts é uma plataforma versátil que combina mensagens instantâneas, chat de vídeo, SMS e VOIP para comunicação eficiente.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q74', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q75. Para que o Google Forms é mais frequentemente utilizado?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q75a1" name="q75" value="a"> Gerenciar arquivos em nuvem.</li>
+            <li><input type="radio" id="q75a2" name="q75" value="b"> Criar questionários, pesquisas e formulários de registro.</li>
+            <li><input type="radio" id="q75a3" name="q75" value="c"> Editar documentos em tempo real.</li>
+            <li><input type="radio" id="q75a4" name="q75" value="d"> Desenvolver plataformas de comunicação unificada.</li>
+        </ul>
+        <div class="explanation" id="explanation-q75">
+            <h3>Explicação:</h3>
+            <p>O Google Forms é usado para criar pesquisas, questionários e formulários de registro, com recursos de colaboração e compartilhamento.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q75', 'b')">Verificar Resposta</button>
+    </div>
+    
+    <div class="question-box">
+        <h2>q76. O Microsoft Teams é uma ferramenta que combina quais funcionalidades principais?</h2>
+        <p>Selecione a alternativa correta:</p>
+        <ul>
+            <li><input type="radio" id="q76a1" name="q76" value="a"> Mensagens instantâneas e SMS apenas.</li>
+            <li><input type="radio" id="q76a2" name="q76" value="b"> Videoconferências, bate-papo, armazenamento de arquivos e integração de aplicativos.</li>
+            <li><input type="radio" id="q76a3" name="q76" value="c"> Gerenciamento de pesquisas e formulários.</li>
+            <li><input type="radio" id="q76a4" name="q76" value="d"> Exclusivamente criação de apresentações e documentos colaborativos.</li>
+        </ul>
+        <div class="explanation" id="explanation-q76">
+            <h3>Explicação:</h3>
+            <p>O Microsoft Teams combina bate-papo, videoconferências, armazenamento de arquivos e integração com outros aplicativos para facilitar o trabalho em equipe.</p>
+        </div>
+        <button class="button" onclick="verificarResposta('q76', 'b')">Verificar Resposta</button>
+    </div>
+                                                                                                                               
+
+                                                                                                                                                                                                                                                                                                                                                                  
+    </div>
+    
+    <script>
+        function verificarResposta(questionId, correctAnswer) {
+            var options = document.getElementsByName(questionId);
+            var explanation = document.getElementById("explanation-" + questionId);
+            var isCorrect = false;
+            
+            // Verificando a resposta correta
+            for (var i = 0; i < options.length; i++) {
+                var option = options[i];
+                if (option.checked) {
+                    if (option.value === correctAnswer) {
+                        option.parentElement.style.backgroundColor = "green"; // Verde para resposta correta
+                        explanation.style.color = "green";
+                        isCorrect = true;
+                    } else {
+                        option.parentElement.style.backgroundColor = "red"; // Vermelho para resposta errada
+                        explanation.style.color = "red";
+                    }
+                }
+            }
+    
+            // Exibindo a explicação
+            explanation.style.display = "block";
+        }
+    </script>
+    
+    <footer>
+        <p>© 2024 - Plataforma de Questões</p>
+    </footer>
+</body>
+</html>
