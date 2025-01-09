@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Questões</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: white;
+        }
+
+        header {
+            background-color: #6200EA;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            color: #FFFFFF;
+            font-size: 2.5rem;
+        }
+
+        .summary-button {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            background-color: #03DAC5;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .summary-button:hover {
+            background-color: #018786;
+            color: white;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .question-box {
+            background-color: #1E1E1E;
+            border: 2px solid #03DAC5;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        .question-box h2 {
+            color: #03DAC5;
+        }
+
+        .explanation {
+            background-color: #333;
+            border-left: 4px solid #FF0266;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .explanation h3 {
+            color: #FF0266;
+            margin: 0;
+        }
+
+        .button {
+            background-color: #03DAC5;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #018786;
+            color: white;
+        }
+
+        footer {
+            background-color: #6200EA;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            color: white;
+            font-size: 0.9rem;
+        }
+    </style>
+    <script>
+        function verificarResposta() {
+            const explanation = document.querySelector('.explanation');
+            explanation.style.display = 'block';
+        }
+
+        function mostrarResumo() {
+            alert('Esta função exibirá um resumo dos conteúdos abordados.');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Questões Documentação Técnica</h1>
+
+        
+    </header>
+        <div class="question-box">
+    <h2>Quais são características essenciais na elaboração de documentos oficiais pela Brigada Militar?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q1a1" name="q1" value="a"> Subjetividade, informalidade e repetição de ideias.</li>
+        <li><input type="radio" id="q1a2" name="q1" value="b"> Clareza, concisão, objetividade e impessoalidade.</li>
+        <li><input type="radio" id="q1a3" name="q1" value="c"> Uso da linguagem coloquial e frases longas.</li>
+        <li><input type="radio" id="q1a4" name="q1" value="d"> Formalidade excessiva e pontuação complexa.</li>
+    </ul>
+    <div class="explanation" id="explanation-q1">
+        <h3>Explicação:</h3>
+        <p>Documentos oficiais da Brigada Militar devem ser claros, concisos, objetivos e impessoais, conforme o regulamento e manual de redação.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>O que se deve evitar na redação de documentos oficiais para garantir clareza e concisão?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q2a1" name="q2" value="a"> Uso da ordem direta: Sujeito + Verbo + Predicado.</li>
+        <li><input type="radio" id="q2a2" name="q2" value="b"> Repetição de ideias e frases longas.</li>
+        <li><input type="radio" id="q2a3" name="q2" value="c"> Conhecimento do público-alvo.</li>
+        <li><input type="radio" id="q2a4" name="q2" value="d"> Pontuação adequada.</li>
+    </ul>
+    <div class="explanation" id="explanation-q2">
+        <h3>Explicação:</h3>
+        <p>Para garantir clareza e concisão, é fundamental evitar a repetição de ideias e o uso de frases longas.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>Qual é a finalidade principal dos atos oficiais?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q3a1" name="q3" value="a"> Estabelecer procedimentos pessoais para os servidores.</li>
+        <li><input type="radio" id="q3a2" name="q3" value="b"> Informar, estabelecer regras ou regular o funcionamento de órgãos.</li>
+        <li><input type="radio" id="q3a3" name="q3" value="c"> Garantir subjetividade e flexibilidade nas ações.</li>
+        <li><input type="radio" id="q3a4" name="q3" value="d"> Promover informalidade na comunicação oficial.</li>
+    </ul>
+    <div class="explanation" id="explanation-q3">
+        <h3>Explicação:</h3>
+        <p>A finalidade principal dos atos oficiais é informar, estabelecer regras e regular o funcionamento dos órgãos.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>Qual é uma diretriz recomendada para garantir um texto claro e conciso em documentos oficiais?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q4a1" name="q4" value="a"> Utilizar frases curtas e evitar repetir ideias.</li>
+        <li><input type="radio" id="q4a2" name="q4" value="b"> Priorizar a ordem indireta na construção de frases.</li>
+        <li><input type="radio" id="q4a3" name="q4" value="c"> Usar linguagem coloquial para facilitar a leitura.</li>
+        <li><input type="radio" id="q4a4" name="q4" value="d"> Ignorar o conhecimento do público-alvo.</li>
+    </ul>
+    <div class="explanation" id="explanation-q4">
+        <h3>Explicação:</h3>
+        <p>Uma diretriz essencial é utilizar frases curtas e evitar a repetição de ideias, contribuindo para a clareza e concisão.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>Por que é importante conhecer o público-alvo ao elaborar documentos oficiais?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q5a1" name="q5" value="a"> Para ajustar o tom e a formalidade do texto de acordo com a audiência.</li>
+        <li><input type="radio" id="q5a2" name="q5" value="b"> Para evitar o uso de linguagem clara e objetiva.</li>
+        <li><input type="radio" id="q5a3" name="q5" value="c"> Para garantir subjetividade no conteúdo.</li>
+        <li><input type="radio" id="q5a4" name="q5" value="d"> Para dificultar a compreensão e manter formalidade excessiva.</li>
+    </ul>
+    <div class="explanation" id="explanation-q5">
+        <h3>Explicação:</h3>
+        <p>Conhecer o público-alvo é essencial para ajustar o tom e a formalidade do texto, garantindo clareza e adequação à audiência.</p>
+    </div>
+</div>
+<div class="question-box">
+    <h2>Qual é a principal característica dos documentos oficiais quanto ao uso da linguagem?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q6a1" name="q6" value="a"> Uso de gírias para facilitar a comunicação.</li>
+        <li><input type="radio" id="q6a2" name="q6" value="b"> Emprego do padrão culto de linguagem, seguindo regras gramaticais.</li>
+        <li><input type="radio" id="q6a3" name="q6" value="c"> Utilização de expressões regionais e jargões técnicos.</li>
+        <li><input type="radio" id="q6a4" name="q6" value="d"> Vocabulário restrito para públicos específicos.</li>
+    </ul>
+    <div class="explanation" id="explanation-q6">
+        <h3>Explicação:</h3>
+        <p>Os documentos oficiais utilizam o padrão culto de linguagem, observando regras gramaticais e evitando gírias ou jargões.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>Por que é importante que as comunicações oficiais permitam uma única interpretação?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q7a1" name="q7" value="a"> Para garantir clareza e evitar ambiguidade nas mensagens.</li>
+        <li><input type="radio" id="q7a2" name="q7" value="b"> Para incluir termos técnicos que dificultem o entendimento.</li>
+        <li><input type="radio" id="q7a3" name="q7" value="c"> Para refletir subjetividade e opiniões pessoais.</li>
+        <li><input type="radio" id="q7a4" name="q7" value="d"> Para favorecer a comunicação regionalizada.</li>
+    </ul>
+    <div class="explanation" id="explanation-q7">
+        <h3>Explicação:</h3>
+        <p>Permitir uma única interpretação nas comunicações oficiais é essencial para garantir clareza e evitar ambiguidades no entendimento.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>Quais tipos de documentos seguem a formalística da redação oficial?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q8a1" name="q8" value="a"> Apenas correspondências informais e pessoais.</li>
+        <li><input type="radio" id="q8a2" name="q8" value="b"> Somente portarias e memorandos confidenciais.</li>
+        <li><input type="radio" id="q8a3" name="q8" value="c"> Todos os documentos administrativos, como ofícios e memorandos.</li>
+        <li><input type="radio" id="q8a4" name="q8" value="d"> Exclusivamente atas e declarações públicas.</li>
+    </ul>
+    <div class="explanation" id="explanation-q8">
+        <h3>Explicação:</h3>
+        <p>Todos os documentos administrativos, como ofícios, memorandos, atas e portarias, seguem a formalística da redação oficial.</p>
+    </div>
+</div>
+<div class="question-box">
+    <h2>Qual é o conceito de documento segundo o regulamento?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q9a1" name="q9" value="a"> Qualquer informação oral ou escrita que seja utilizada como prova.</li>
+        <li><input type="radio" id="q9a2" name="q9" value="b"> Veículo de comunicação escrita formado por informação e suporte material.</li>
+        <li><input type="radio" id="q9a3" name="q9" value="c"> Apenas informações digitais armazenadas em formato eletrônico.</li>
+        <li><input type="radio" id="q9a4" name="q9" value="d"> Conjunto de informações exclusivamente destinadas à pesquisa científica.</li>
+    </ul>
+    <div class="explanation" id="explanation-q9">
+        <h3>Explicação:</h3>
+        <p>Documento é definido como um veículo de comunicação escrita constituído por informação e seu suporte material, suscetível de consulta, estudo e prova.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>Como são classificados os documentos quanto à prioridade?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q10a1" name="q10" value="a"> Externos, internos e confidenciais.</li>
+        <li><input type="radio" id="q10a2" name="q10" value="b"> Normais, urgentes e urgentíssimos.</li>
+        <li><input type="radio" id="q10a3" name="q10" value="c"> Digitais e físicos.</li>
+        <li><input type="radio" id="q10a4" name="q10" value="d"> Administrativos e operacionais.</li>
+    </ul>
+    <div class="explanation" id="explanation-q10">
+        <h3>Explicação:</h3>
+        <p>Quanto à prioridade, os documentos são classificados como normais, urgentes e urgentíssimos, dependendo do prazo de tramitação.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>O que caracteriza um documento como "urgentíssimo" (UU)?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q11a1" name="q11" value="a"> Deve ser solucionado em até oito dias úteis.</li>
+        <li><input type="radio" id="q11a2" name="q11" value="b"> Deve ser solucionado em até quarenta e oito horas.</li>
+        <li><input type="radio" id="q11a3" name="q11" value="c"> Deve ser solucionado imediatamente.</li>
+        <li><input type="radio" id="q11a4" name="q11" value="d"> Não possui prazo para solução.</li>
+    </ul>
+    <div class="explanation" id="explanation-q11">
+        <h3>Explicação:</h3>
+        <p>Documentos classificados como "urgentíssimos" devem ser solucionados de forma imediata.</p>
+    </div>
+</div>
+<div class="question-box">
+    <h2>Como são classificados os documentos quanto ao sigilo?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q12a1" name="q12" value="a"> Externos e internos.</li>
+        <li><input type="radio" id="q12a2" name="q12" value="b"> Ostensivos e sigilosos.</li>
+        <li><input type="radio" id="q12a3" name="q12" value="c"> Públicos e confidenciais.</li>
+        <li><input type="radio" id="q12a4" name="q12" value="d"> Normais e urgentes.</li>
+    </ul>
+    <div class="explanation" id="explanation-q12">
+        <h3>Explicação:</h3>
+        <p>Os documentos são classificados quanto ao sigilo em ostensivos, que não apresentam inconvenientes ao serem conhecidos, e sigilosos, que requerem medidas especiais de salvaguarda.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>Qual é a principal característica dos documentos classificados como sigilosos?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q13a1" name="q13" value="a"> Podem ser amplamente divulgados sem restrições.</li>
+        <li><input type="radio" id="q13a2" name="q13" value="b"> Requerem medidas especiais para custódia e divulgação.</li>
+        <li><input type="radio" id="q13a3" name="q13" value="c"> Necessitam de autorização para divulgação pela mídia.</li>
+        <li><input type="radio" id="q13a4" name="q13" value="d"> São de circulação irrestrita dentro da organização.</li>
+    </ul>
+    <div class="explanation" id="explanation-q13">
+        <h3>Explicação:</h3>
+        <p>Documentos sigilosos tratam de assuntos restritos e requerem medidas especiais de custódia e divulgação devido à sua natureza sensível.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>O que caracteriza a objetividade na linguagem usada na redação oficial?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q14a1" name="q14" value="a"> Uso de impressões pessoais e adjetivos qualificativos.</li>
+        <li><input type="radio" id="q14a2" name="q14" value="b"> Hierarquização das informações e eliminação de termos supérfluos.</li>
+        <li><input type="radio" id="q14a3" name="q14" value="c"> Preferência por vocábulos técnicos e complexos.</li>
+        <li><input type="radio" id="q14a4" name="q14" value="d"> Comunicação de ideias de forma subjetiva e artística.</li>
+    </ul>
+    <div class="explanation" id="explanation-q14">
+        <h3>Explicação:</h3>
+        <p>A objetividade consiste no uso de palavras adequadas para expressar o pensamento de forma clara, eliminando termos supérfluos e hierarquizando as informações.</p>
+    </div>
+</div>
+<div class="question-box">
+    <h2>O que caracteriza a concisão na redação oficial?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q15a1" name="q15" value="a"> Utilização de palavras complexas para enriquecer o texto.</li>
+        <li><input type="radio" id="q15a2" name="q15" value="b"> Transmitir o máximo de informações com o mínimo de palavras.</li>
+        <li><input type="radio" id="q15a3" name="q15" value="c"> Uso de expressões regionais para melhor entendimento.</li>
+        <li><input type="radio" id="q15a4" name="q15" value="d"> Emprego de linguagem artística e subjetiva.</li>
+    </ul>
+    <div class="explanation" id="explanation-q15">
+        <h3>Explicação:</h3>
+        <p>A concisão na redação oficial é alcançada ao transmitir o máximo de informações com o mínimo de palavras, focando na essência da mensagem.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>Qual é o objetivo da precisão na redação oficial?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q16a1" name="q16" value="a"> Garantir harmonia entre frases e períodos.</li>
+        <li><input type="radio" id="q16a2" name="q16" value="b"> Empregar a palavra exata para expressar a ideia desejada.</li>
+        <li><input type="radio" id="q16a3" name="q16" value="c"> Facilitar o uso de gírias e expressões informais.</li>
+        <li><input type="radio" id="q16a4" name="q16" value="d"> Elaborar textos com linguagem coloquial e acessível.</li>
+    </ul>
+    <div class="explanation" id="explanation-q16">
+        <h3>Explicação:</h3>
+        <p>A precisão consiste em empregar a palavra exata que melhor se ajuste à ideia desejada, garantindo clareza e eficácia na comunicação.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>Por que a polidez é importante na redação oficial?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q17a1" name="q17" value="a"> Evita mal-entendidos e promove respeito no trato administrativo.</li>
+        <li><input type="radio" id="q17a2" name="q17" value="b"> Permite o uso de expressões vulgares e tratamentos irreverentes.</li>
+        <li><input type="radio" id="q17a3" name="q17" value="c"> Autoriza intimidade e informalidade nas comunicações oficiais.</li>
+        <li><input type="radio" id="q17a4" name="q17" value="d"> Estimula a criatividade e o uso de expressões artísticas.</li>
+    </ul>
+    <div class="explanation" id="explanation-q17">
+        <h3>Explicação:</h3>
+        <p>A polidez consiste no uso de expressões respeitosas e tratamento adequado, evitando vulgaridades e promovendo um ambiente respeitoso e profissional.</p>
+    </div>
+</div>
+<div class="question-box">
+    <h2>Qual pronome de tratamento deve ser utilizado em correspondência policial-militar interna?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q18a1" name="q18" value="a"> Vossa Excelência</li>
+        <li><input type="radio" id="q18a2" name="q18" value="b"> Vossa Magnificência</li>
+        <li><input type="radio" id="q18a3" name="q18" value="c"> Vossa Senhoria</li>
+        <li><input type="radio" id="q18a4" name="q18" value="d"> Vossa Alteza</li>
+    </ul>
+    <div class="explanation" id="explanation-q18">
+        <h3>Explicação:</h3>
+        <p>Na correspondência policial-militar interna, utiliza-se o pronome de tratamento Vossa Senhoria (V. S.ª).</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>Quando o vocativo "Excelentíssimo Senhor" deve ser utilizado?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q19a1" name="q19" value="a"> Em comunicações dirigidas aos chefes de Poder.</li>
+        <li><input type="radio" id="q19a2" name="q19" value="b"> Em correspondências internas.</li>
+        <li><input type="radio" id="q19a3" name="q19" value="c"> Apenas em documentos sigilosos.</li>
+        <li><input type="radio" id="q19a4" name="q19" value="d"> Para qualquer autoridade de hierarquia superior.</li>
+    </ul>
+    <div class="explanation" id="explanation-q19">
+        <h3>Explicação:</h3>
+        <p>O vocativo "Excelentíssimo Senhor" é utilizado em comunicações dirigidas aos chefes de Poder, como Presidentes da República, do Congresso Nacional e do Supremo Tribunal Federal.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>Qual vocativo deve ser empregado ao se dirigir a um Juiz em correspondência oficial?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q20a1" name="q20" value="a"> Excelentíssimo Senhor Juiz</li>
+        <li><input type="radio" id="q20a2" name="q20" value="b"> Senhor Juiz</li>
+        <li><input type="radio" id="q20a3" name="q20" value="c"> Meritíssimo Senhor Juiz</li>
+        <li><input type="radio" id="q20a4" name="q20" value="d"> Vossa Excelência, Juiz</li>
+    </ul>
+    <div class="explanation" id="explanation-q20">
+        <h3>Explicação:</h3>
+        <p>O vocativo correto a ser utilizado ao se dirigir a um Juiz em correspondência oficial é "Senhor Juiz".</p>
+    </div>
+</div>
+<div class="question-box">
+    <h2>Qual é a regra sobre o uso de abreviaturas na correspondência externa?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q21a1" name="q21" value="a"> As abreviaturas podem ser utilizadas livremente.</li>
+        <li><input type="radio" id="q21a2" name="q21" value="b"> É vedado o uso de abreviaturas, mas as siglas podem ser utilizadas desde que venham precedidas de seu significado por extenso na primeira ocorrência.</li>
+        <li><input type="radio" id="q21a3" name="q21" value="c"> É permitido o uso de abreviaturas militares, mas não de siglas.</li>
+        <li><input type="radio" id="q21a4" name="q21" value="d"> As abreviaturas devem sempre ser precedidas de uma explicação sobre seu significado.</li>
+    </ul>
+    <div class="explanation" id="explanation-q21">
+        <h3>Explicação:</h3>
+        <p>Na correspondência externa, o uso de abreviaturas é vedado, mas as siglas podem ser empregadas desde que, na primeira ocorrência, venham precedidas de seu significado por extenso.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>Como os meses podem ser representados em documentos oficiais?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q22a1" name="q22" value="a"> Sempre em algarismos arábicos.</li>
+        <li><input type="radio" id="q22a2" name="q22" value="b"> Apenas por extenso.</li>
+        <li><input type="radio" id="q22a3" name="q22" value="c"> Por extenso, em algarismos arábicos ou abreviados pelas três primeiras letras, exceto o mês de maio, que é escrito sempre por extenso.</li>
+        <li><input type="radio" id="q22a4" name="q22" value="d"> Apenas abreviados pelas três primeiras letras.</li>
+    </ul>
+    <div class="explanation" id="explanation-q22">
+        <h3>Explicação:</h3>
+        <p>Os meses podem ser representados por extenso, em algarismos arábicos ou abreviados pelas três primeiras letras, sendo que o mês de maio é sempre escrito por extenso.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>Qual é o padrão de indicação de hora em documentos oficiais?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q23a1" name="q23" value="a"> Sempre no padrão de 12 horas.</li>
+        <li><input type="radio" id="q23a2" name="q23" value="b"> No padrão de 24 horas, seguido de minutos e segundos, quando necessário.</li>
+        <li><input type="radio" id="q23a3" name="q23" value="c"> Apenas indicando a hora, sem referência aos minutos.</li>
+        <li><input type="radio" id="q23a4" name="q23" value="d"> Utilizando abreviaturas como AM e PM.</li>
+    </ul>
+    <div class="explanation" id="explanation-q23">
+        <h3>Explicação:</h3>
+        <p>A hora em documentos oficiais segue o padrão de 24 horas, sendo indicada com minutos e segundos quando necessário.</p>
+    </div>
+</div>
+<div class="question-box">
+    <h2>Como o grupo data-hora deve ser escrito em documentos internos?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q24a1" name="q24" value="a"> Apenas indicando o dia e o ano.</li>
+        <li><input type="radio" id="q24a2" name="q24" value="b"> No formato: dia, horas e minutos, mês abreviado em letras maiúsculas, ano.</li>
+        <li><input type="radio" id="q24a3" name="q24" value="c"> Apenas com os meses indicados por extenso e o ano em algarismos arábicos.</li>
+        <li><input type="radio" id="q24a4" name="q24" value="d"> Exclusivamente no padrão de 24 horas sem referência ao ano.</li>
+    </ul>
+    <div class="explanation" id="explanation-q24">
+        <h3>Explicação:</h3>
+        <p>O grupo data-hora em documentos internos deve ser escrito no formato: dia, horas e minutos, seguido pelo mês abreviado em letras maiúsculas e o ano. Exemplo: 070940 NOV 18.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>Qual é a forma correta de indicar datas na documentação externa?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q25a1" name="q25" value="a"> Sempre pelo grupo data-hora.</li>
+        <li><input type="radio" id="q25a2" name="q25" value="b"> Utilizando exclusivamente números separados por barras.</li>
+        <li><input type="radio" id="q25a3" name="q25" value="c"> Escrevendo a data por extenso.</li>
+        <li><input type="radio" id="q25a4" name="q25" value="d"> Apenas com o mês abreviado e o ano.</li>
+    </ul>
+    <div class="explanation" id="explanation-q25">
+        <h3>Explicação:</h3>
+        <p>Na documentação externa, as datas devem ser indicadas por extenso para maior clareza e formalidade.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>O que caracteriza um ofício na Brigada Militar?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q26a1" name="q26" value="a"> Documento de circulação interna, utilizado para solicitações informais.</li>
+        <li><input type="radio" id="q26a2" name="q26" value="b"> Documento de circulação externa, utilizado para correspondências entre autoridades e particulares sobre assuntos oficiais e técnicos.</li>
+        <li><input type="radio" id="q26a3" name="q26" value="c"> Documento exclusivamente interno, utilizado para comunicação rápida e urgente.</li>
+        <li><input type="radio" id="q26a4" name="q26" value="d"> Documento de caráter pessoal entre superiores e subordinados.</li>
+    </ul>
+    <div class="explanation" id="explanation-q26">
+        <h3>Explicação:</h3>
+        <p>O ofício na Brigada Militar é um documento de circulação externa utilizado para correspondências com particulares ou autoridades sobre assuntos técnicos ou administrativos, de caráter exclusivamente oficial.</p>
+    </div>
+</div>
+<div class="question-box">
+    <h2>Qual é a principal finalidade de uma ata no contexto militar?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q27a1" name="q27" value="a"> Comunicar ordens administrativas em caráter urgente.</li>
+        <li><input type="radio" id="q27a2" name="q27" value="b"> Registrar, resumidamente, as ocorrências de um evento de interesse militar.</li>
+        <li><input type="radio" id="q27a3" name="q27" value="c"> Validar informações técnicas para circulação externa.</li>
+        <li><input type="radio" id="q27a4" name="q27" value="d"> Autorizar a movimentação de tropas em ações especiais.</li>
+    </ul>
+    <div class="explanation" id="explanation-q27">
+        <h3>Explicação:</h3>
+        <p>Uma ata é um documento utilizado para registrar, de forma resumida, as ocorrências de eventos de interesse militar, podendo ser arquivada ou enviada por meios eletrônicos ou físicos.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>O que caracteriza uma declaração ou atestado emitido por autoridade policial-militar?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q28a1" name="q28" value="a"> Documento que registra eventos históricos da corporação.</li>
+        <li><input type="radio" id="q28a2" name="q28" value="b"> Documento que afirma a veracidade de um ato ou fato de que a autoridade tenha conhecimento.</li>
+        <li><input type="radio" id="q28a3" name="q28" value="c"> Documento destinado exclusivamente à comprovação de movimentações financeiras.</li>
+        <li><input type="radio" id="q28a4" name="q28" value="d"> Documento utilizado para autorizar operações táticas especiais.</li>
+    </ul>
+    <div class="explanation" id="explanation-q28">
+        <h3>Explicação:</h3>
+        <p>A declaração ou atestado é firmado por autoridade policial-militar e serve para afirmar a veracidade de um ato ou fato que esteja dentro de suas atribuições.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>Qual é o objetivo de uma certidão emitida por autoridade policial-militar?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q29a1" name="q29" value="a"> Informar sobre movimentações administrativas internas.</li>
+        <li><input type="radio" id="q29a2" name="q29" value="b"> Registrar, resumidamente, os eventos de uma reunião militar.</li>
+        <li><input type="radio" id="q29a3" name="q29" value="c"> Fornecer um documento que descreve fatos consignados em registros oficiais, com formalidades legais.</li>
+        <li><input type="radio" id="q29a4" name="q29" value="d"> Aprovar a utilização de recursos financeiros para operações.</li>
+    </ul>
+    <div class="explanation" id="explanation-q29">
+        <h3>Explicação:</h3>
+        <p>A certidão é um documento revestido de formalidades legais que descreve de maneira clara e precisa os fatos consignados em registros oficiais, emitido por autoridade competente.</p>
+    </div>
+</div>
+<div class="question-box">
+    <h2>Qual é a principal característica de um "Parte" na Brigada Militar?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q30a1" name="q30" value="a"> Documento utilizado para relatar atos administrativos e solicitações de providências.</li>
+        <li><input type="radio" id="q30a2" name="q30" value="b"> Documento utilizado exclusivamente para registrar faltas de militares.</li>
+        <li><input type="radio" id="q30a3" name="q30" value="c"> Documento substituído por memorandos administrativos.</li>
+        <li><input type="radio" id="q30a4" name="q30" value="d"> Documento usado para comunicar eventos de interesse externo à Brigada Militar.</li>
+    </ul>
+    <div class="explanation" id="explanation-q30">
+        <h3>Explicação:</h3>
+        <p>O "Parte" é um documento utilizado para relatar atos ou fatos ou solicitar providências à autoridade policial-militar a que o policial militar estiver subordinado.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>Qual é a função principal de uma Portaria na Brigada Militar?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q31a1" name="q31" value="a"> Regulamentar a organização e funcionamento de serviços, além de outros atos administrativos.</li>
+        <li><input type="radio" id="q31a2" name="q31" value="b"> Registrar e formalizar a convocação de reuniões internas.</li>
+        <li><input type="radio" id="q31a3" name="q31" value="c"> Estabelecer diretrizes para a comunicação externa com outras entidades.</li>
+        <li><input type="radio" id="q31a4" name="q31" value="d"> Validar transações financeiras e orçamentárias.</li>
+    </ul>
+    <div class="explanation" id="explanation-q31">
+        <h3>Explicação:</h3>
+        <p>A Portaria é o instrumento utilizado por Ministros ou outras autoridades para expedir instruções sobre organização de serviços, questões de pessoal e outros atos administrativos.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>Qual é a estrutura básica de um Relatório na Brigada Militar?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q32a1" name="q32" value="a"> Introdução, desenvolvimento e conclusões, com espaço para recomendações.</li>
+        <li><input type="radio" id="q32a2" name="q32" value="b"> Cabeçalho, parte expositiva e conclusão, com sugestões a serem evidenciadas.</li>
+        <li><input type="radio" id="q32a3" name="q32" value="c"> Cabeçalho, seção de depoimentos e histórico do fato.</li>
+        <li><input type="radio" id="q32a4" name="q32" value="d"> Sumário, descrição do problema e planejamento de ações futuras.</li>
+    </ul>
+    <div class="explanation" id="explanation-q32">
+        <h3>Explicação:</h3>
+        <p>O Relatório possui três partes principais: cabeçalho, parte expositiva (que descreve o assunto), e a conclusão, que contém os principais resultados e sugestões.</p>
+    </div>
+</div>
+<div class="question-box">
+    <h2>O que é o Boletim de Ocorrência na Brigada Militar?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q33a1" name="q33" value="a"> Documento destinado ao registro dos Termos Circunstanciados e Comunicações de Ocorrências Policiais.</li>
+        <li><input type="radio" id="q33a2" name="q33" value="b"> Documento utilizado apenas para registrar ocorrências de menor importância.</li>
+        <li><input type="radio" id="q33a3" name="q33" value="c"> Documento utilizado exclusivamente para relatar crimes militares.</li>
+        <li><input type="radio" id="q33a4" name="q33" value="d"> Documento destinado ao registro de correspondências oficiais entre unidades militares.</li>
+    </ul>
+    <div class="explanation" id="explanation-q33">
+        <h3>Explicação:</h3>
+        <p>O Boletim de Ocorrência é destinado ao registro dos Termos Circunstanciados e das Comunicações de Ocorrências Policiais, sendo essencial para a documentação operacional.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>Qual é a pena prevista no Código Penal para quem comete falsidade ideológica em documento público?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q34a1" name="q34" value="a"> Reclusão de um a cinco anos, além de multa.</li>
+        <li><input type="radio" id="q34a2" name="q34" value="b"> Reclusão de dois a três anos, sem multa.</li>
+        <li><input type="radio" id="q34a3" name="q34" value="c"> Reclusão de um a três anos, sem multa.</li>
+        <li><input type="radio" id="q34a4" name="q34" value="d"> Reclusão de três a sete anos, além de multa.</li>
+    </ul>
+    <div class="explanation" id="explanation-q34">
+        <h3>Explicação:</h3>
+        <p>No Código Penal, a pena para quem comete falsidade ideológica em documento público é de reclusão de um a cinco anos, e multa.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>Qual é a penalidade prevista no Código Penal Militar para quem comete falsidade ideológica em documento público?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q35a1" name="q35" value="a"> Reclusão, até cinco anos.</li>
+        <li><input type="radio" id="q35a2" name="q35" value="b"> Reclusão, até três anos.</li>
+        <li><input type="radio" id="q35a3" name="q35" value="c"> Detenção, até três anos.</li>
+        <li><input type="radio" id="q35a4" name="q35" value="d"> Reclusão, até sete anos.</li>
+    </ul>
+    <div class="explanation" id="explanation-q35">
+        <h3>Explicação:</h3>
+        <p>No Código Penal Militar, a pena para quem comete falsidade ideológica em documento público é de reclusão, até cinco anos, desde que o fato atente contra a administração ou o serviço militar.</p>
+    </div>
+</div>
+<div class="question-box">
+    <h2>O que é o Termo Circunstanciado / BO-TC?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q36a1" name="q36" value="a"> Boletim lavrado pelo policial militar no atendimento às ocorrências de infrações penais de menor potencial ofensivo.</li>
+        <li><input type="radio" id="q36a2" name="q36" value="b"> Boletim utilizado para registrar apenas infrações de maior potencial ofensivo.</li>
+        <li><input type="radio" id="q36a3" name="q36" value="c"> Boletim destinado a ocorrências em que não há flagrante delito.</li>
+        <li><input type="radio" id="q36a4" name="q36" value="d"> Documento utilizado exclusivamente para formalizar prisões em flagrante delito.</li>
+    </ul>
+    <div class="explanation" id="explanation-q36">
+        <h3>Explicação:</h3>
+        <p>O Termo Circunstanciado / BO-TC é lavrado pelo policial militar no atendimento às ocorrências de infrações penais de menor potencial ofensivo, onde o autor do fato assume o compromisso de comparecer ao Juizado Especial Criminal.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>O que caracteriza a Comunicação de Ocorrência Policial / BO-COP?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q37a1" name="q37" value="a"> Boletim lavrado pelo Policial Militar que atende a uma ocorrência onde não há flagrante delito.</li>
+        <li><input type="radio" id="q37a2" name="q37" value="b"> Boletim utilizado apenas em ocorrências de prisões em flagrante.</li>
+        <li><input type="radio" id="q37a3" name="q37" value="c"> Documento utilizado para registrar ocorrências de infrações penais de menor potencial ofensivo.</li>
+        <li><input type="radio" id="q37a4" name="q37" value="d"> Documento utilizado para registrar todos os tipos de ocorrências sem a necessidade de detalhamento de informações.</li>
+    </ul>
+    <div class="explanation" id="explanation-q37">
+        <h3>Explicação:</h3>
+        <p>A Comunicação de Ocorrência Policial / BO-COP é lavrado pelo policial militar para registrar ocorrências cujas características não permitam a lavratura do Auto de Prisão em Flagrante Delito.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>Qual a principal finalidade do Boletim de Atendimento (BA) segundo a Nota de Instrução 1.32/EMBM/2023?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q38a1" name="q38" value="a"> Subsidiar o nível gerencial da Instituição com informações para controle administrativo e operacional dos recursos.</li>
+        <li><input type="radio" id="q38a2" name="q38" value="b"> Registra apenas as ocorrências de maior impacto para a comunidade.</li>
+        <li><input type="radio" id="q38a3" name="q38" value="c"> Apresentar uma avaliação sobre a atuação de cada policial militar.</li>
+        <li><input type="radio" id="q38a4" name="q38" value="d"> Documentar exclusivamente os crimes de maior gravidade em cada operação policial.</li>
+    </ul>
+    <div class="explanation" id="explanation-q38">
+        <h3>Explicação:</h3>
+        <p>O Boletim de Atendimento (BA) visa subsidiar o nível gerencial da Instituição com informações para o controle administrativo e operacional dos recursos, além de registrar as ações executadas no cumprimento da missão policial-militar.</p>
+    </div>
+</div>
+<div class="question-box">
+    <h2>1) De acordo com a Nota de Instrução nº 2.22/EMBM/2023, qual é a função principal do Boletim de Ocorrência (BO)?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q41a1" name="q41" value="a"> Registrar Termos Circunstanciados e Comunicações de Ocorrências Policiais.</li>
+        <li><input type="radio" id="q41a2" name="q41" value="b"> Relatar exclusivamente os atos administrativos da Brigada Militar.</li>
+        <li><input type="radio" id="q41a3" name="q41" value="c"> Substituir o Boletim de Atendimento em ocorrências de menor potencial ofensivo.</li>
+        <li><input type="radio" id="q41a4" name="q41" value="d"> Apresentar apenas as providências administrativas tomadas pelos policiais militares.</li>
+    </ul>
+    <div class="explanation" id="explanation-q41">
+        <h3>Explicação:</h3>
+        <p>O Boletim de Ocorrência tem como função principal o registro dos Termos Circunstanciados e das Comunicações de Ocorrências Policiais, conforme a Nota de Instrução nº 2.22/EMBM/2023.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>2) No sistema Brigada Militar Mobile (BMMob), quais são os benefícios principais da utilização da plataforma Android nos tablets e smartphones?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q42a1" name="q42" value="a"> Agiliza o processamento das ocorrências e permite anexação de conteúdo probatório.</li>
+        <li><input type="radio" id="q42a2" name="q42" value="b"> Substitui totalmente a redação de documentos oficiais em formato físico.</li>
+        <li><input type="radio" id="q42a3" name="q42" value="c"> Limita o número de documentos a ser registrado, dificultando o processo de coleta de informações.</li>
+        <li><input type="radio" id="q42a4" name="q42" value="d"> Permite apenas a criação de Boletins de Ocorrência, sem possibilitar o envio de anexos.</li>
+    </ul>
+    <div class="explanation" id="explanation-q42">
+        <h3>Explicação:</h3>
+        <p>O sistema Brigada Militar Mobile proporciona agilidade no processamento das ocorrências e permite a anexação de conteúdo probatório, como imagens, áudios e documentos.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>3) No Boletim de Atendimento (BA), o que deve ser registrado em relação às ações e providências adotadas pelos policiais militares?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q43a1" name="q43" value="a"> Deve registrar apenas as ações preventivas realizadas durante o atendimento.</li>
+        <li><input type="radio" id="q43a2" name="q43" value="b"> Deve descrever todas as ações preventivas, repressivas e de interferência realizadas pela Brigada Militar.</li>
+        <li><input type="radio" id="q43a3" name="q43" value="c"> Deve ser limitado ao registro das providências tomadas pelos supervisores do policiamento.</li>
+        <li><input type="radio" id="q43a4" name="q43" value="d"> Deve incluir apenas os resultados das ações de repressão ao crime organizado.</li>
+    </ul>
+    <div class="explanation" id="explanation-q43">
+        <h3>Explicação:</h3>
+        <p>O Boletim de Atendimento deve registrar todas as ações preventivas, repressivas e de interferência realizadas pelos policiais militares, conforme as orientações da Nota de Instrução nº 1.32/EMBM/2023.</p>
+    </div>
+</div>
+<div class="question-box">
+    <h2>7) De acordo com a Nota de Instrução nº 2.22/EMBM/2023, o responsável pela lavratura do Boletim de Ocorrência deve constar como participante da ocorrência?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q44a1" name="q44" value="a"> Sim, ele deve ser identificado como participante no campo apropriado.</li>
+        <li><input type="radio" id="q44a2" name="q44" value="b"> Não, os dados do responsável serão lançados junto ao campo destinado à sua assinatura.</li>
+        <li><input type="radio" id="q44a3" name="q44" value="c"> Sim, é necessário registrar todos os envolvidos, incluindo o responsável pela lavratura.</li>
+        <li><input type="radio" id="q44a4" name="q44" value="d"> Não, o responsável não precisa ser identificado em nenhuma parte do Boletim de Ocorrência.</li>
+    </ul>
+    <div class="explanation" id="explanation-q44">
+        <h3>Explicação:</h3>
+        <p>O responsável pela lavratura do Boletim de Ocorrência não deve constar como "participante", pois seus dados identificativos são lançados no campo destinado à assinatura no Boletim, conforme a Nota de Instrução nº 2.22/EMBM/2023.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>8) De acordo com a Nota de Instrução nº 2.22/EMBM/2023, as testemunhas no Boletim de Ocorrência lavrado na forma de Termo Circunstanciado (TC) são intimadas para a primeira audiência no JECrim?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q45a1" name="q45" value="a"> Sim, todas as testemunhas são intimadas para comparecer à primeira audiência no JECrim.</li>
+        <li><input type="radio" id="q45a2" name="q45" value="b"> Não, as testemunhas não são intimadas, pois a audiência se destina à conciliação entre a(s) vítima(s) e o(s) autor(es).</li>
+        <li><input type="radio" id="q45a3" name="q45" value="c"> Sim, mas as testemunhas são intimadas somente quando se trata de crimes de maior potencial ofensivo.</li>
+        <li><input type="radio" id="q45a4" name="q45" value="d"> Não, as testemunhas são intimadas apenas em casos de crime organizado.</li>
+    </ul>
+    <div class="explanation" id="explanation-q45">
+        <h3>Explicação:</h3>
+        <p>As testemunhas, quando da lavratura do Boletim de Ocorrência na forma de TC, não são intimadas, pois a primeira audiência no JECrim se destina à conciliação entre a(s) vítima(s) e o(s) autor(es) da infração penal, conforme a Nota de Instrução nº 2.22/EMBM/2023.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>9) Qual é a principal recomendação para o relato de delitos formais ou de mera conduta no Boletim de Ocorrência?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q46a1" name="q46" value="a"> O policial deve descrever apenas o resultado material do delito.</li>
+        <li><input type="radio" id="q46a2" name="q46" value="b"> O policial deve descrever detalhadamente a conduta praticada, incluindo gestos, palavras e ações.</li>
+        <li><input type="radio" id="q46a3" name="q46" value="c"> O policial deve relatar os fatos com base em suposições, sem necessidade de detalhamento.</li>
+        <li><input type="radio" id="q46a4" name="q46" value="d"> O policial deve omitir informações sobre a conduta do autor, registrando apenas o crime consumado.</li>
+    </ul>
+    <div class="explanation" id="explanation-q46">
+        <h3>Explicação:</h3>
+        <p>Nos delitos formais ou de mera conduta, o policial deve descrever pormenorizadamente a conduta praticada, incluindo gestos, palavras, sinais e ações realizadas, pois a essência do delito é a ação do autor, conforme a Nota de Instrução nº 2.22/EMBM/2023.</p>
+    </div>
+</div>
+<div class="question-box">
+    <h2>10) De acordo com a Nota de Instrução nº 2.22/EMBM/2023, o atendente da ocorrência deve destinar a primeira linha do Relatório da Ocorrência para qual finalidade?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q47a1" name="q47" value="a"> Para registrar o nome da vítima e do autor do fato.</li>
+        <li><input type="radio" id="q47a2" name="q47" value="b"> Para especificar a infração penal ou fato que entende ter ocorrido, utilizando uma frase padrão como "Trata-se de ocorrência de furto simples, furto qualificado, ameaça, etc.".</li>
+        <li><input type="radio" id="q47a3" name="q47" value="c"> Para informar a identificação do local onde ocorreu a infração penal.</li>
+        <li><input type="radio" id="q47a4" name="q47" value="d"> Para descrever detalhadamente a ação do policial no atendimento.</li>
+    </ul>
+    <div class="explanation" id="explanation-q47">
+        <h3>Explicação:</h3>
+        <p>A primeira linha do Relatório da Ocorrência deve ser destinada à especificação da infração penal ou fato que o atendente entende ter ocorrido, com um texto padrão que descreva o tipo de ocorrência, conforme a Nota de Instrução nº 2.22/EMBM/2023.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>11) De acordo com a Nota de Instrução nº 2.22/EMBM/2023, como deve ser registrada a versão dos participantes do fato no Relatório da Ocorrência?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q48a1" name="q48" value="a"> A versão deve ser registrada em apenas um parágrafo, sem a divisão das partes envolvidas.</li>
+        <li><input type="radio" id="q48a2" name="q48" value="b"> A versão deve ser registrada em parágrafos separados, indicando claramente quem é cada participante: vítima, testemunha e autor.</li>
+        <li><input type="radio" id="q48a3" name="q48" value="c"> A versão de cada participante deve ser registrada sem qualquer indicação de quem é a parte envolvida.</li>
+        <li><input type="radio" id="q48a4" name="q48" value="d"> As versões devem ser resumidas e não identificadas por parte envolvida.</li>
+    </ul>
+    <div class="explanation" id="explanation-q48">
+        <h3>Explicação:</h3>
+        <p>No Relatório da Ocorrência, a versão de cada participante deve ser registrada de forma separada em parágrafos distintos, indicando claramente quem é a vítima, testemunha e autor, conforme a Nota de Instrução nº 2.22/EMBM/2023.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>12) Segundo a Nota de Instrução nº 2.22/EMBM/2023, o Relatório da Ocorrência pode ser complementado em documento anexo. O que é necessário para que essa complementação seja válida?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q49a1" name="q49" value="a"> O anexo não precisa ser identificado no formulário principal, nem o número da NGO deve constar nele.</li>
+        <li><input type="radio" id="q49a2" name="q49" value="b"> O anexo deve ser identificado no formulário principal, e o número da NGO deve ser incluído no anexo.</li>
+        <li><input type="radio" id="q49a3" name="q49" value="c"> O anexo pode ser enviado sem qualquer referência no relatório principal.</li>
+        <li><input type="radio" id="q49a4" name="q49" value="d"> Não é permitido anexar documentos complementares ao Relatório da Ocorrência.</li>
+    </ul>
+    <div class="explanation" id="explanation-q49">
+        <h3>Explicação:</h3>
+        <p>O Relatório da Ocorrência pode ser complementado em documento anexo ou no verso do formulário, desde que indicado no formulário principal, com a inclusão do número da NGO no anexo, conforme a Nota de Instrução nº 2.22/EMBM/2023.</p>
+    </div>
+</div>
+<div class="question-box">
+    <h2>13) De acordo com a Nota de Instrução nº 6.1 da Brigada Militar, qual a principal razão para o acesso periódico às contas de e-mail?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q50a1" name="q50" value="a"> Para garantir que as contas de e-mail sejam protegidas contra vírus.</li>
+        <li><input type="radio" id="q50a2" name="q50" value="b"> Para evitar a exclusão da conta por falta de acesso no período de 20 a 40 dias.</li>
+        <li><input type="radio" id="q50a3" name="q50" value="c"> Para manter a conta ativa e evitar mudanças no formato do endereço eletrônico.</li>
+        <li><input type="radio" id="q50a4" name="q50" value="d"> Para garantir que o e-mail seja utilizado para envio de documentos oficiais.</li>
+    </ul>
+    <div class="explanation" id="explanation-q50">
+        <h3>Explicação:</h3>
+        <p>As contas de e-mail devem ser acessadas periodicamente para evitar a exclusão por falta de acesso dentro dos períodos estabelecidos: 20 dias para contas acessórias e 40 dias para contas particulares, conforme a Nota de Instrução nº 6.1 da Brigada Militar.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>14) Qual é a expressão de fecho utilizada para correspondências externas dirigidas a autoridades superiores, incluindo o Presidente da República, segundo as Instruções Gerais para a Correspondência do Exército?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q51a1" name="q51" value="a"> "Atenciosamente"</li>
+        <li><input type="radio" id="q51a2" name="q51" value="b"> "Cordialmente"</li>
+        <li><input type="radio" id="q51a3" name="q51" value="c"> "Com consideração"</li>
+        <li><input type="radio" id="q51a4" name="q51" value="d"> "Respeitosamente"</li>
+    </ul>
+    <div class="explanation" id="explanation-q51">
+        <h3>Explicação:</h3>
+        <p>Para correspondências externas dirigidas a autoridades superiores, incluindo o Presidente da República, deve-se utilizar a expressão "Respeitosamente", conforme o Art. 56 das Instruções Gerais para a Correspondência do Exército (EB10-IG 01.001).</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>15) Qual é o formato de endereço de e-mail utilizado pela Brigada Militar para suas contas institucionais?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q52a1" name="q52" value="a"> @bm.rs.gov.br e @brigadamilitar.rs.gov.br</li>
+        <li><input type="radio" id="q52a2" name="q52" value="b"> @rs.bm.gov.br e @brigada.rs.gov.br</li>
+        <li><input type="radio" id="q52a3" name="q52" value="c"> @bm.br e @brigadamilitar.br</li>
+        <li><input type="radio" id="q52a4" name="q52" value="d"> @brigadamilitar.com.br e @bm.com.br</li>
+    </ul>
+    <div class="explanation" id="explanation-q52">
+        <h3>Explicação:</h3>
+        <p>As contas de e-mail da Brigada Militar são compostas pelos domínios @bm.rs.gov.br e @brigadamilitar.rs.gov.br, conforme a Nota de Instrução nº 6.1.</p>
+    </div>
+</div>
+<div class="question-box">
+    <h2>16) De acordo com o Art. 22 da Instrução Normativa nº 02-COR-G-2018-SGC, qual é a finalidade principal do Boletim de Ocorrência Policial Militar (BOPM)?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q53a1" name="q53" value="a"> Registrar informações sobre crimes militares ou comuns envolvendo civis.</li>
+        <li><input type="radio" id="q53a2" name="q53" value="b"> Registrar qualquer informação sobre possível envolvimento de Militares Estaduais em crimes ou transgressões disciplinares.</li>
+        <li><input type="radio" id="q53a3" name="q53" value="c"> Registrar apenas ocorrências relacionadas a transgressões disciplinares de civis.</li>
+        <li><input type="radio" id="q53a4" name="q53" value="d"> Registrar crimes comuns e transgressões disciplinares envolvendo membros do Judiciário.</li>
+    </ul>
+    <div class="explanation" id="explanation-q53">
+        <h3>Explicação:</h3>
+        <p>O Boletim de Ocorrência Policial Militar (BOPM) é destinado a registrar informações sobre o possível envolvimento de Militares Estaduais em crimes militares ou comuns, bem como em transgressões disciplinares.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>17) Qual é o prazo para a confecção do Boletim de Ocorrência Policial Militar (BOPM), conforme o §1º do Art. 22 da Instrução Normativa nº 02-COR-G-2018-SGC?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q54a1" name="q54" value="a"> Até 1 dia útil.</li>
+        <li><input type="radio" id="q54a2" name="q54" value="b"> Até 2 dias úteis, com exceção de algumas situações específicas.</li>
+        <li><input type="radio" id="q54a3" name="q54" value="c"> Até 3 dias úteis.</li>
+        <li><input type="radio" id="q54a4" name="q54" value="d"> Imediatamente, em todos os casos.</li>
+    </ul>
+    <div class="explanation" id="explanation-q54">
+        <h3>Explicação:</h3>
+        <p>O Boletim de Ocorrência Policial Militar (BOPM) deve ser confeccionado no prazo de até 2 dias úteis, contados a partir da constatação ou conhecimento do fato, salvo em situações específicas, como prisão em flagrante delito, deserção ou medidas cautelares, quando deverá ser feito imediatamente.</p>
+    </div>
+</div>
+
+<div class="question-box">
+    <h2>18) Em qual situação o Boletim de Ocorrência Policial Militar (BOPM) deve ser feito imediatamente, segundo a Instrução Normativa nº 02-COR-G-2018-SGC?</h2>
+    <p>Selecione a alternativa correta:</p>
+    <ul>
+        <li><input type="radio" id="q55a1" name="q55" value="a"> Quando houver prisão em flagrante delito.</li>
+        <li><input type="radio" id="q55a2" name="q55" value="b"> Quando houver ocorrência de crimes comuns cometidos por civis.</li>
+        <li><input type="radio" id="q55a3" name="q55" value="c"> Quando a transgressão disciplinar não envolver militares.</li>
+        <li><input type="radio" id="q55a4" name="q55" value="d"> Quando o fato envolver apenas pessoas fora da Brigada Militar.</li>
+    </ul>
+    <div class="explanation" id="explanation-q55">
+        <h3>Explicação:</h3>
+        <p>O Boletim de Ocorrência Policial Militar (BOPM) deve ser feito imediatamente nos casos de prisão em flagrante delito, deserção ou das medidas cautelares previstas no Regulamento Disciplinar da Brigada Militar (RDBM).</p>
+    </div>
+</div>
+                                                                                                                                                                                                                                                                                                                                         
+    </div>
+    
+    <script>
+        function verificarResposta(questionId, correctAnswer) {
+            var options = document.getElementsByName(questionId);
+            var explanation = document.getElementById("explanation-" + questionId);
+            var isCorrect = false;
+            
+            // Verificando a resposta correta
+            for (var i = 0; i < options.length; i++) {
+                var option = options[i];
+                if (option.checked) {
+                    if (option.value === correctAnswer) {
+                        option.parentElement.style.backgroundColor = "green"; // Verde para resposta correta
+                        explanation.style.color = "green";
+                        isCorrect = true;
+                    } else {
+                        option.parentElement.style.backgroundColor = "red"; // Vermelho para resposta errada
+                        explanation.style.color = "red";
+                    }
+                }
+            }
+    
+            // Exibindo a explicação
+            explanation.style.display = "block";
+        }
+    </script>
+    
+    <footer>
+        <p>© 2024 - Plataforma de Questões</p>
+    </footer>
+</body>
+</html>
