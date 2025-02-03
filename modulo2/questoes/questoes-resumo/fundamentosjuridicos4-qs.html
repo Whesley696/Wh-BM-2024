@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Direito Penal Militar</title>
+    <style>
+        * {
+            box-sizing: border-box; /* Garante que padding e bordas não aumentem o tamanho do elemento */
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #141e30, #243b55);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            overflow: auto; /* Permite rolar a página caso o conteúdo exceda a altura */
+        }
+        .quiz-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 600px;
+            text-align: left; /* Alinha o texto à esquerda dentro do contêiner */
+        }
+        .question-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .correct {
+            background-color: #28a745 !important;
+        }
+        .incorrect {
+            background-color: #dc3545 !important;
+        }
+        .button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+        .button:hover {
+            background-color: #218838;
+        }
+        .explanation {
+            display: none;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h2>Questões FUNDAMENTOS JURIDICOS 4</h2>
+        <div class="question-box" data-answer="b">
+            <h3>1) O princípio que estabelece que a punição deve ser proporcional ao crime e à pessoa que o executou é:</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q1" value="a"> Princípio da Retroatividade</li>
+                <li><input type="radio" name="q1" value="b"> Princípio da Personalidade</li>
+                <li><input type="radio" name="q1" value="c"> Princípio da Legalidade</li>
+                <li><input type="radio" name="q1" value="d"> Princípio da Anterioridade</li>
+                <li><input type="radio" name="q1" value="e"> Princípio da Individualização</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Princípio da Personalidade estabelece que a punição não deve ultrapassar a pessoa do delinquente, sendo proporcional ao crime e ao autor.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d">
+            <h3>2) Qual princípio determina que a lei penal só pode ser aplicada a fatos ocorridos após sua vigência?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q2" value="a"> Princípio da Retroatividade</li>
+                <li><input type="radio" name="q2" value="b"> Princípio da Legalidade</li>
+                <li><input type="radio" name="q2" value="c"> Princípio da Anterioridade</li>
+                <li><input type="radio" name="q2" value="d"> Princípio da Individualização</li>
+                <li><input type="radio" name="q2" value="e"> Princípio da Personalidade</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Princípio da Anterioridade afirma que a lei que pune só pode ser aplicada a fatos ocorridos após sua vigência.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c">
+            <h3>3) O princípio que afirma que a lei não retroagirá para prejudicar o réu é:</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q3" value="a"> Princípio da Individualização</li>
+                <li><input type="radio" name="q3" value="b"> Princípio da Personalidade</li>
+                <li><input type="radio" name="q3" value="c"> Princípio da Retroatividade</li>
+                <li><input type="radio" name="q3" value="d"> Princípio da Legalidade</li>
+                <li><input type="radio" name="q3" value="e"> Princípio da Anterioridade</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Princípio da Retroatividade determina que a lei não retroagirá para prejudicar o réu, mas pode retroagir para beneficiá-lo.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e">
+            <h3>4) Qual princípio estabelece que a punição deve ser proporcional ao crime e ao acusado, levando em conta as circunstâncias do delito?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q4" value="a"> Princípio da Retroatividade</li>
+                <li><input type="radio" name="q4" value="b"> Princípio da Anterioridade</li>
+                <li><input type="radio" name="q4" value="c"> Princípio da Personalidade</li>
+                <li><input type="radio" name="q4" value="d"> Princípio da Legalidade</li>
+                <li><input type="radio" name="q4" value="e"> Princípio da Individualização</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Princípio da Individualização defende que a pena não deve ser padronizada, sendo proporcional ao crime e ao autor.</div>
+        </div>
+        
+        <div class="question-box" data-answer="a">
+            <h3>5) O princípio que diz "Tudo conforme a lei, nada fora dela; tudo prescrito" é:</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q5" value="a"> Princípio da Legalidade</li>
+                <li><input type="radio" name="q5" value="b"> Princípio da Retroatividade</li>
+                <li><input type="radio" name="q5" value="c"> Princípio da Personalidade</li>
+                <li><input type="radio" name="q5" value="d"> Princípio da Anterioridade</li>
+                <li><input type="radio" name="q5" value="e"> Princípio da Individualização</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Princípio da Legalidade estabelece que a norma penal deve ser claramente fixada pela lei, não podendo ser aplicada de forma retroativa nem fora do que foi estabelecido.</div>
+        </div>
+        <div class="question-box" data-answer="c">
+            <h3>6) Qual princípio determina que a pena deve ser proporcional ao crime cometido e às circunstâncias do acusado?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q6" value="a"> Princípio da Culpabilidade</li>
+                <li><input type="radio" name="q6" value="b"> Princípio da Retroatividade</li>
+                <li><input type="radio" name="q6" value="c"> Princípio da Individualização</li>
+                <li><input type="radio" name="q6" value="d"> Princípio da Intervenção Mínima</li>
+                <li><input type="radio" name="q6" value="e"> Princípio da Anterioridade</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Princípio da Individualização determina que a pena deve ser aplicada proporcionalmente ao crime e às circunstâncias do acusado.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e">
+            <h3>7) O princípio que orienta o direito penal a agir com benevolência e foco no bem-estar da coletividade é:</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q7" value="a"> Princípio da Intervenção Mínima</li>
+                <li><input type="radio" name="q7" value="b"> Princípio da Anterioridade</li>
+                <li><input type="radio" name="q7" value="c"> Princípio da Retroatividade</li>
+                <li><input type="radio" name="q7" value="d"> Princípio da Culpabilidade</li>
+                <li><input type="radio" name="q7" value="e"> Princípio da Humanidade</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Princípio da Humanidade estabelece que o direito penal deve atuar com benevolência, priorizando o bem-estar da coletividade e dos acusados.</div>
+        </div>
+        
+        <div class="question-box" data-answer="a">
+            <h3>8) Qual princípio defende que o direito penal não deve interferir excessivamente na vida do indivíduo?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q8" value="a"> Princípio da Intervenção Mínima</li>
+                <li><input type="radio" name="q8" value="b"> Princípio da Legalidade</li>
+                <li><input type="radio" name="q8" value="c"> Princípio da Retroatividade</li>
+                <li><input type="radio" name="q8" value="d"> Princípio da Anterioridade</li>
+                <li><input type="radio" name="q8" value="e"> Princípio da Humanidade</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Princípio da Intervenção Mínima estabelece que o direito penal deve evitar interferências excessivas na vida do indivíduo.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d">
+            <h3>9) O princípio que determina que ninguém deve ser punido se não agiu com dolo ou culpa é:</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q9" value="a"> Princípio da Legalidade</li>
+                <li><input type="radio" name="q9" value="b"> Princípio da Retroatividade</li>
+                <li><input type="radio" name="q9" value="c"> Princípio da Humanidade</li>
+                <li><input type="radio" name="q9" value="d"> Princípio da Culpabilidade</li>
+                <li><input type="radio" name="q9" value="e"> Princípio da Anterioridade</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Princípio da Culpabilidade estabelece que ninguém deve ser punido se não houver dolo ou culpa em sua conduta.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b">
+            <h3>10) Quando um motorista dirige em alta velocidade em uma área movimentada e acaba atropelando alguém, ele age com:</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q10" value="a"> Dolo Direto</li>
+                <li><input type="radio" name="q10" value="b"> Dolo Eventual</li>
+                <li><input type="radio" name="q10" value="c"> Culpa Inconsciente</li>
+                <li><input type="radio" name="q10" value="d"> Princípio da Intervenção Mínima</li>
+                <li><input type="radio" name="q10" value="e"> Princípio da Humanidade</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">No dolo eventual, o agente não deseja diretamente o resultado, mas assume o risco de produzi-lo, como ao dirigir em alta velocidade e atropelar alguém.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e">
+            <h3>11) Qual princípio exige que a lei penal defina crimes de forma clara e precisa, evitando dúvidas?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q11" value="a"> Princípio da Culpabilidade</li>
+                <li><input type="radio" name="q11" value="b"> Princípio da Humanidade</li>
+                <li><input type="radio" name="q11" value="c"> Princípio da Retroatividade</li>
+                <li><input type="radio" name="q11" value="d"> Princípio da Intervenção Mínima</li>
+                <li><input type="radio" name="q11" value="e"> Princípio da Taxatividade</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Princípio da Taxatividade exige que a lei penal defina crimes de forma clara e precisa para evitar dúvidas na sua aplicação.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c">
+            <h3>12) O princípio que garante que a pena deve ser justa e proporcional à gravidade do crime é:</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q12" value="a"> Princípio da Hierarquia e Disciplina</li>
+                <li><input type="radio" name="q12" value="b"> Princípio da Taxatividade</li>
+                <li><input type="radio" name="q12" value="c"> Princípio da Proporcionalidade</li>
+                <li><input type="radio" name="q12" value="d"> Princípio da Anterioridade</li>
+                <li><input type="radio" name="q12" value="e"> Princípio da Legalidade</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Princípio da Proporcionalidade garante que a pena deve ser equilibrada e justa conforme a gravidade do crime cometido.</div>
+        </div>
+        
+        <div class="question-box" data-answer="a">
+            <h3>13) O princípio que regula a organização das Forças Armadas com base em níveis de autoridade é:</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q13" value="a"> Princípio da Hierarquia e Disciplina</li>
+                <li><input type="radio" name="q13" value="b"> Princípio da Legalidade</li>
+                <li><input type="radio" name="q13" value="c"> Princípio da Intervenção Mínima</li>
+                <li><input type="radio" name="q13" value="d"> Princípio da Retroatividade</li>
+                <li><input type="radio" name="q13" value="e"> Princípio da Proporcionalidade</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Princípio da Hierarquia e Disciplina estabelece a ordenação da autoridade nas Forças Armadas e a rigorosa observância das normas militares.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d">
+            <h3>14) A disciplina militar pode ser definida como:</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q14" value="a"> O respeito apenas aos superiores hierárquicos</li>
+                <li><input type="radio" name="q14" value="b"> A autonomia dos militares em relação às normas</li>
+                <li><input type="radio" name="q14" value="c"> A organização da sociedade civil em relação ao exército</li>
+                <li><input type="radio" name="q14" value="d"> A rigorosa observância e acatamento das leis, regulamentos e normas militares</li>
+                <li><input type="radio" name="q14" value="e"> A liberdade de atuação dos soldados conforme sua vontade</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A disciplina militar consiste na rigorosa observância e acatamento das leis, regulamentos e normas que coordenam o funcionamento das Forças Armadas.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b">
+            <h3>15) Qual alternativa melhor define um crime militar?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q15" value="a"> Todo crime cometido por um militar</li>
+                <li><input type="radio" name="q15" value="b"> Qualquer conduta, praticada por civil ou militar, que atente contra as instituições militares e seus bens jurídicos</li>
+                <li><input type="radio" name="q15" value="c"> Apenas crimes cometidos dentro de bases militares</li>
+                <li><input type="radio" name="q15" value="d"> Apenas crimes cometidos em tempo de guerra</li>
+                <li><input type="radio" name="q15" value="e"> Infrações administrativas praticadas por militares</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Crime militar é qualquer conduta, praticada por civil ou militar, que atente contra as instituições militares, atingindo seus bens jurídicos e interesses.</div>
+        </div>
+        <div class="question-box" data-answer="c">
+            <h3>16) Qual órgão é responsável por julgar os militares da União e também civis em casos de crimes militares?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q16" value="a"> Tribunal do Júri</li>
+                <li><input type="radio" name="q16" value="b"> Tribunal de Justiça</li>
+                <li><input type="radio" name="q16" value="c"> Justiça Militar da União</li>
+                <li><input type="radio" name="q16" value="d"> Justiça Comum</li>
+                <li><input type="radio" name="q16" value="e"> Conselho Nacional de Justiça</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A Justiça Militar da União julga os militares das Forças Armadas e também civis envolvidos em crimes militares.</div>
+        </div>
+        
+        <div class="question-box" data-answer="a">
+            <h3>17) Quando um militar comete um crime doloso contra a vida de um civil, qual tribunal deve julgar o caso?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q17" value="a"> Tribunal do Júri</li>
+                <li><input type="radio" name="q17" value="b"> Conselho de Justiça Militar</li>
+                <li><input type="radio" name="q17" value="c"> Superior Tribunal Militar</li>
+                <li><input type="radio" name="q17" value="d"> Tribunal Regional Federal</li>
+                <li><input type="radio" name="q17" value="e"> Supremo Tribunal Federal</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Os crimes dolosos contra a vida de civis cometidos por militares são julgados pelo Tribunal do Júri, conforme previsão constitucional.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e">
+            <h3>18) De acordo com o Art. 125 da Constituição Federal, o que os Estados podem organizar em relação à Justiça Militar?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q18" value="a"> Apenas a criação de Conselhos de Justiça Militar</li>
+                <li><input type="radio" name="q18" value="b"> Apenas a organização da Justiça Militar da União</li>
+                <li><input type="radio" name="q18" value="c"> A estrutura da Justiça Militar apenas para estados com mais de 50 mil militares</li>
+                <li><input type="radio" name="q18" value="d"> A nomeação de juízes militares sem a necessidade de concurso</li>
+                <li><input type="radio" name="q18" value="e"> A criação da Justiça Militar estadual, composta por juízes de direito e Conselhos de Justiça</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Os Estados podem organizar sua Justiça Militar, composta por juízes de direito e Conselhos de Justiça, conforme previsto no Art. 125 da Constituição Federal.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b">
+            <h3>19) No âmbito da Justiça Militar Estadual, quem julga os oficiais?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q19" value="a"> Conselhos Permanentes</li>
+                <li><input type="radio" name="q19" value="b"> Conselhos Especiais</li>
+                <li><input type="radio" name="q19" value="c"> Tribunais de Pequenas Causas</li>
+                <li><input type="radio" name="q19" value="d"> Supremo Tribunal Militar</li>
+                <li><input type="radio" name="q19" value="e"> Auditorias de Justiça Militar</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Os Conselhos Especiais são responsáveis pelo julgamento dos oficiais dentro da Justiça Militar Estadual.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d">
+            <h3>20) Qual a principal competência dos juízes de direito do Juízo Militar?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q20" value="a"> Apenas processar e julgar crimes comuns cometidos por militares</li>
+                <li><input type="radio" name="q20" value="b"> Julgar apenas infrações disciplinares de militares</li>
+                <li><input type="radio" name="q20" value="c"> Processar e julgar todos os crimes militares sem exceção</li>
+                <li><input type="radio" name="q20" value="d"> Processar e julgar, individualmente, crimes militares contra civis e ações disciplinares</li>
+                <li><input type="radio" name="q20" value="e"> Analisar apenas recursos em processos de crimes militares</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Os juízes de direito do Juízo Militar têm competência para processar e julgar, individualmente, crimes militares cometidos contra civis e ações contra atos disciplinares militares.</div>
+        </div>
+        <div class="question-box" data-answer="e">
+            <h3>21) Qual órgão é responsável por julgar os demais crimes militares, sendo presidido por um juiz de direito?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q21" value="a"> Supremo Tribunal Militar</li>
+                <li><input type="radio" name="q21" value="b"> Tribunal do Júri</li>
+                <li><input type="radio" name="q21" value="c"> Tribunal de Justiça</li>
+                <li><input type="radio" name="q21" value="d"> Juiz de Direito do Juízo Militar</li>
+                <li><input type="radio" name="q21" value="e"> Conselho de Justiça</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Conselho de Justiça, presidido por um juiz de direito, é responsável pelo julgamento dos demais crimes militares.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b">
+            <h3>22) De acordo com o Art. 9 do Código Penal Militar, crimes dolosos contra a vida cometidos por militares contra civis são julgados por:</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q22" value="a"> Justiça Militar da União</li>
+                <li><input type="radio" name="q22" value="b"> Tribunal do Júri</li>
+                <li><input type="radio" name="q22" value="c"> Supremo Tribunal Federal</li>
+                <li><input type="radio" name="q22" value="d"> Conselho Especial de Justiça</li>
+                <li><input type="radio" name="q22" value="e"> Tribunal Militar Estadual</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Art. 9 do Código Penal Militar determina que crimes dolosos contra a vida cometidos por militares contra civis são julgados pelo Tribunal do Júri.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c">
+            <h3>23) O critério "RATIONE PERSONAE" está relacionado a:</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q23" value="a"> O local onde ocorreu o crime</li>
+                <li><input type="radio" name="q23" value="b"> O momento histórico em que ocorreu o crime</li>
+                <li><input type="radio" name="q23" value="c"> A qualidade do militar envolvido no crime</li>
+                <li><input type="radio" name="q23" value="d"> O tipo de legislação aplicável ao crime</li>
+                <li><input type="radio" name="q23" value="e"> A jurisdição da Justiça Comum</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O critério "RATIONE PERSONAE" está relacionado à qualidade do militar envolvido no crime.</div>
+        </div>
+        
+        <div class="question-box" data-answer="a">
+            <h3>24) O critério que determina a competência da Justiça Militar com base no local onde ocorreu o crime é chamado de:</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q24" value="a"> RATIONE LOCI</li>
+                <li><input type="radio" name="q24" value="b"> RATIONE PERSONAE</li>
+                <li><input type="radio" name="q24" value="c"> RATIONE TEMPORIS</li>
+                <li><input type="radio" name="q24" value="d"> RATIONE LEGIS</li>
+                <li><input type="radio" name="q24" value="e"> RATIONE MATERIAE</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O critério "RATIONE LOCI" define a competência da Justiça Militar com base no local onde ocorreu o crime.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d">
+            <h3>25) Qual critério define a competência da Justiça Militar com base na legislação aplicável ao crime?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q25" value="a"> RATIONE LOCI</li>
+                <li><input type="radio" name="q25" value="b"> RATIONE TEMPORIS</li>
+                <li><input type="radio" name="q25" value="c"> RATIONE PERSONAE</li>
+                <li><input type="radio" name="q25" value="d"> RATIONE LEGIS</li>
+                <li><input type="radio" name="q25" value="e"> RATIONE DISCIPLINAR</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O critério "RATIONE LEGIS" determina a competência da Justiça Militar com base na legislação aplicável ao crime.</div>
+        </div>
+        <div class="question-box" data-answer="c">
+            <h3>26) O tempo de guerra tem início e término determinados por qual procedimento?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q26" value="a"> Quando um país vizinho é invadido</li>
+                <li><input type="radio" name="q26" value="b"> Com o início de um conflito armado sem necessidade de decreto</li>
+                <li><input type="radio" name="q26" value="c"> Com a declaração de guerra ou decreto de mobilização e termina com a cessação das hostilidades</li>
+                <li><input type="radio" name="q26" value="d"> Somente quando há invasão do território nacional</li>
+                <li><input type="radio" name="q26" value="e"> Pelo tempo que durar a convocação de militares da reserva</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O tempo de guerra começa com a declaração de guerra ou decreto de mobilização e termina com a ordem de cessação das hostilidades.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e">
+            <h3>27) Qual dos crimes a seguir é considerado propriamente militar?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q27" value="a"> Estelionato</li>
+                <li><input type="radio" name="q27" value="b"> Homicídio</li>
+                <li><input type="radio" name="q27" value="c"> Furto</li>
+                <li><input type="radio" name="q27" value="d"> Lesão corporal</li>
+                <li><input type="radio" name="q27" value="e"> Deserção</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A deserção é um crime propriamente militar, pois só pode ser cometido por militares e está previsto apenas no Código Penal Militar.</div>
+        </div>
+        
+        <div class="question-box" data-answer="a">
+            <h3>28) Qual das alternativas caracteriza um crime impropriamente militar?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q28" value="a"> Roubo cometido por um militar em serviço</li>
+                <li><input type="radio" name="q28" value="b"> Dormir em serviço</li>
+                <li><input type="radio" name="q28" value="c"> Cobardia</li>
+                <li><input type="radio" name="q28" value="d"> Motim</li>
+                <li><input type="radio" name="q28" value="e"> Insubordinação</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O roubo cometido por um militar em serviço é um crime impropriamente militar, pois é um crime comum que pode ser praticado por qualquer pessoa, mas que também pode ser julgado pela Justiça Militar.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d">
+            <h3>29) Sobre os crimes propriamente militares, é correto afirmar que:</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q29" value="a"> Podem ser cometidos por qualquer pessoa, militar ou civil</li>
+                <li><input type="radio" name="q29" value="b"> Estão previstos tanto no Código Penal Militar quanto no Código Penal Comum</li>
+                <li><input type="radio" name="q29" value="c"> São crimes considerados de menor potencial ofensivo</li>
+                <li><input type="radio" name="q29" value="d"> São crimes que só podem ser cometidos por militares</li>
+                <li><input type="radio" name="q29" value="e"> São crimes que sempre resultam em penas administrativas</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Os crimes propriamente militares são aqueles que só podem ser cometidos por militares e estão previstos exclusivamente no Código Penal Militar.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b">
+            <h3>30) Qual das alternativas abaixo apresenta um crime impropriamente militar?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q30" value="a"> Deserção</li>
+                <li><input type="radio" name="q30" value="b"> Homicídio cometido por um militar contra outro militar em serviço</li>
+                <li><input type="radio" name="q30" value="c"> Dormir em serviço</li>
+                <li><input type="radio" name="q30" value="d"> Insurreição</li>
+                <li><input type="radio" name="q30" value="e"> Recusa de obediência</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O homicídio cometido por um militar contra outro em serviço é considerado um crime impropriamente militar, pois é um crime comum que pode ser julgado pela Justiça Militar dependendo do contexto.</div>
+        </div>
+        <div class="question-box" data-answer="d">
+            <h3>31) No concurso de agentes, como é definida a punibilidade dos envolvidos em um crime militar?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q31" value="a"> Todos recebem a mesma pena, independentemente do nível de participação</li>
+                <li><input type="radio" name="q31" value="b"> Apenas o autor principal é responsabilizado, os demais são isentos</li>
+                <li><input type="radio" name="q31" value="c"> A pena é atribuída conforme a hierarquia do envolvido na instituição militar</li>
+                <li><input type="radio" name="q31" value="d"> A punibilidade é individual, conforme a culpabilidade de cada envolvido</li>
+                <li><input type="radio" name="q31" value="e"> Todos os envolvidos respondem pelo crime da mesma forma, sem exceções</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">No concurso de agentes, a punibilidade de cada envolvido é individual e baseada em sua própria culpabilidade, sem comunicação de condições pessoais, exceto se forem elementares do crime.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b">
+            <h3>32) Qual teoria é adotada para definir o tempo do crime militar?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q32" value="a"> Teoria do Resultado</li>
+                <li><input type="radio" name="q32" value="b"> Teoria da Atividade</li>
+                <li><input type="radio" name="q32" value="c"> Teoria da Causalidade</li>
+                <li><input type="radio" name="q32" value="d"> Teoria da Imputação Objetiva</li>
+                <li><input type="radio" name="q32" value="e"> Teoria da Legalidade</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A Teoria da Atividade é adotada no Direito Penal Militar para definir o tempo do crime, considerando que ele ocorre no momento da ação ou omissão, independentemente do resultado.</div>
+        </div>
+        
+        <div class="question-box" data-answer="a">
+            <h3>33) De acordo com a Teoria da Atividade, quando se considera praticado um crime militar?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q33" value="a"> No momento da ação ou omissão, mesmo que o resultado ocorra depois</li>
+                <li><input type="radio" name="q33" value="b"> Somente quando o resultado do crime ocorre</li>
+                <li><input type="radio" name="q33" value="c"> No momento em que a vítima percebe o dano causado</li>
+                <li><input type="radio" name="q33" value="d"> Quando o crime é oficialmente registrado pela Justiça Militar</li>
+                <li><input type="radio" name="q33" value="e"> Somente após o julgamento do autor do crime</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Segundo a Teoria da Atividade, o crime é considerado praticado no momento da ação ou omissão, independentemente de quando o resultado ocorra.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e">
+            <h3>34) Qual das teorias abaixo considera que o crime pode ser praticado tanto no momento da ação quanto no momento da consumação do resultado?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q34" value="a"> Teoria da Atividade</li>
+                <li><input type="radio" name="q34" value="b"> Teoria do Resultado</li>
+                <li><input type="radio" name="q34" value="c"> Teoria da Culpabilidade</li>
+                <li><input type="radio" name="q34" value="d"> Teoria da Legalidade</li>
+                <li><input type="radio" name="q34" value="e"> Teoria da Ubiquidade</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A Teoria da Ubiquidade considera que o crime pode ser praticado tanto no momento da ação quanto no momento da consumação do resultado.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c">
+            <h3>35) A Teoria do Resultado define o tempo do crime como:</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q35" value="a"> O momento da ação ou omissão</li>
+                <li><input type="radio" name="q35" value="b"> O momento do planejamento do crime</li>
+                <li><input type="radio" name="q35" value="c"> O momento em que o resultado do crime é consumado</li>
+                <li><input type="radio" name="q35" value="d"> O momento em que a vítima percebe o dano</li>
+                <li><input type="radio" name="q35" value="e"> O momento em que o crime é registrado oficialmente</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A Teoria do Resultado considera o crime praticado no momento em que o resultado é consumado.</div>
+        </div>
+        <div class="question-box" data-answer="b">
+            <h3>36) O que estabelece a Súmula 711 do STF sobre a aplicação da lei penal mais grave?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q36" value="a"> A lei penal mais grave nunca pode ser aplicada a crimes continuados ou permanentes</li>
+                <li><input type="radio" name="q36" value="b"> A lei penal mais grave pode ser aplicada se entrar em vigor antes da cessação da continuidade ou permanência do crime</li>
+                <li><input type="radio" name="q36" value="c"> A lei penal mais grave só pode retroagir se for benéfica ao réu</li>
+                <li><input type="radio" name="q36" value="d"> A aplicação da lei penal mais grave depende exclusivamente do juiz</li>
+                <li><input type="radio" name="q36" value="e"> A Súmula 711 determina que a lei mais branda se aplica a crimes permanentes</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A Súmula 711 do STF estabelece que a lei penal mais grave pode ser aplicada a crimes continuados ou permanentes, caso tenha entrado em vigor antes da cessação da continuidade ou permanência do crime.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e">
+            <h3>37) O que caracteriza um crime permanente?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q37" value="a"> O crime é cometido de forma instantânea e finalizado no mesmo momento</li>
+                <li><input type="radio" name="q37" value="b"> O autor pratica o crime sem intenção de continuidade</li>
+                <li><input type="radio" name="q37" value="c"> O crime ocorre várias vezes, mas sem um padrão claro</li>
+                <li><input type="radio" name="q37" value="d"> O crime envolve apenas a participação de múltiplos agentes</li>
+                <li><input type="radio" name="q37" value="e"> A consumação do crime se prolonga no tempo até que a situação ilícita cesse</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">No crime permanente, a consumação se prolonga no tempo até que a situação ilícita cesse, como no caso de um sequestro, que só termina quando a vítima é libertada.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c">
+            <h3>38) Qual exemplo abaixo representa um crime permanente?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q38" value="a"> Roubo de um celular em um ponto de ônibus</li>
+                <li><input type="radio" name="q38" value="b"> Assassinato ocorrido em um único momento</li>
+                <li><input type="radio" name="q38" value="c"> Sequestro, em que a vítima permanece em cativeiro</li>
+                <li><input type="radio" name="q38" value="d"> Estelionato cometido por um único golpe financeiro</li>
+                <li><input type="radio" name="q38" value="e"> Tráfico de drogas realizado em um evento isolado</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O sequestro é um crime permanente porque sua consumação se prolonga no tempo até que a vítima seja libertada.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d">
+            <h3>39) O que caracteriza um crime continuado?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q39" value="a"> Um crime cometido apenas uma única vez</li>
+                <li><input type="radio" name="q39" value="b"> Um crime cometido por várias pessoas em conjunto</li>
+                <li><input type="radio" name="q39" value="c"> Um crime que depende exclusivamente de um resultado consumado</li>
+                <li><input type="radio" name="q39" value="d"> O autor comete vários crimes semelhantes, com as mesmas condições, aparentando ser uma única infração</li>
+                <li><input type="radio" name="q39" value="e"> O crime se estende no tempo até que a vítima denuncie</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O crime continuado ocorre quando o autor pratica vários crimes semelhantes, sob as mesmas condições, dando a aparência de uma única infração.</div>
+        </div>
+        
+        <div class="question-box" data-answer="a">
+            <h3>40) Qual exemplo abaixo representa um crime continuado?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q40" value="a"> Um indivíduo pratica furtos repetidos, sempre no mesmo local e com o mesmo método</li>
+                <li><input type="radio" name="q40" value="b"> Uma pessoa sequestra outra e a mantém em cativeiro por dias</li>
+                <li><input type="radio" name="q40" value="c"> Um suspeito comete um homicídio em legítima defesa</li>
+                <li><input type="radio" name="q40" value="d"> Um crime de estelionato cometido de forma isolada</li>
+                <li><input type="radio" name="q40" value="e"> Um furto realizado em uma única oportunidade</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">No crime continuado, o agente comete vários crimes semelhantes em continuidade, como furtos repetidos no mesmo local e sob as mesmas condições.</div>
+        </div>
+        <div class="question-box" data-answer="c">
+            <h3>41) De acordo com a Teoria da Ubiquidade, onde um crime é considerado praticado?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q41" value="a"> Apenas no local onde ocorreu o resultado</li>
+                <li><input type="radio" name="q41" value="b"> Somente no local onde a ação foi iniciada</li>
+                <li><input type="radio" name="q41" value="c"> No local da ação ou omissão, total ou parcial, e onde ocorreu ou deveria ocorrer o resultado</li>
+                <li><input type="radio" name="q41" value="d"> Apenas no local onde a vítima sofreu o dano</li>
+                <li><input type="radio" name="q41" value="e"> No local onde a denúncia foi formalizada</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Segundo a Teoria da Ubiquidade, o crime é considerado praticado tanto no local da ação ou omissão quanto onde ocorreu ou deveria ocorrer o resultado.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e">
+            <h3>42) O que caracteriza um crime consumado?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q42" value="a"> O agente apenas cogita cometer o crime, sem agir</li>
+                <li><input type="radio" name="q42" value="b"> O crime é preparado, mas não chega à fase de execução</li>
+                <li><input type="radio" name="q42" value="c"> A execução do crime é iniciada, mas não finalizada por circunstâncias alheias à vontade do agente</li>
+                <li><input type="radio" name="q42" value="d"> O crime se prolonga no tempo, sem um ato conclusivo</li>
+                <li><input type="radio" name="q42" value="e"> O crime se consuma quando todos os seus elementos foram realizados</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O crime é considerado consumado quando todos os seus elementos foram efetivamente realizados.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b">
+            <h3>43) Na tentativa de crime, a pena é reduzida de:</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q43" value="a"> Um a três quartos</li>
+                <li><input type="radio" name="q43" value="b"> Um a dois terços</li>
+                <li><input type="radio" name="q43" value="c"> Dois a cinco anos</li>
+                <li><input type="radio" name="q43" value="d"> Apenas metade da pena original</li>
+                <li><input type="radio" name="q43" value="e"> A pena total, sem reduções</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Na tentativa de crime, a pena é reduzida de um a dois terços, conforme previsto no Código Penal Militar.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d">
+            <h3>44) Qual das fases abaixo faz parte do Iter Criminis?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q44" value="a"> Conclusão</li>
+                <li><input type="radio" name="q44" value="b"> Divulgação</li>
+                <li><input type="radio" name="q44" value="c"> Julgamento</li>
+                <li><input type="radio" name="q44" value="d"> Execução</li>
+                <li><input type="radio" name="q44" value="e"> Revisão</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A fase de execução do Iter Criminis é quando o bem jurídico começa a ser lesado e o crime se torna punível.</div>
+        </div>
+        
+        <div class="question-box" data-answer="a">
+            <h3>45) Qual das alternativas representa corretamente a fase de cogitação do Iter Criminis?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q45" value="a"> O agente apenas imagina cometer o crime, sem agir</li>
+                <li><input type="radio" name="q45" value="b"> O agente já deu início à execução do crime</li>
+                <li><input type="radio" name="q45" value="c"> O agente comprou uma arma e planejou um furto</li>
+                <li><input type="radio" name="q45" value="d"> O crime já foi consumado</li>
+                <li><input type="radio" name="q45" value="e"> O bem jurídico começou a ser violado</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Na fase de cogitação, o agente apenas imagina cometer o crime, sem realizar qualquer ação física para executá-lo.</div>
+        </div>
+        <div class="question-box" data-answer="b">
+            <h3>46) O que é a tipicidade no Direito Penal Militar?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q46" value="a"> A possibilidade de qualquer ato ser considerado crime</li>
+                <li><input type="radio" name="q46" value="b"> A adequação do fato real ao tipo penal previsto em lei</li>
+                <li><input type="radio" name="q46" value="c"> A interpretação livre do juiz sobre a conduta do agente</li>
+                <li><input type="radio" name="q46" value="d"> O enquadramento de uma infração administrativa como crime militar</li>
+                <li><input type="radio" name="q46" value="e"> O processo de punição sem necessidade de previsão legal</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A tipicidade é a adequação do fato real ao tipo penal previsto em lei, garantindo que apenas condutas previamente descritas como crime sejam puníveis.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c">
+            <h3>47) O conceito analítico de crime é composto por quais elementos?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q47" value="a"> Apenas fato típico e culpabilidade</li>
+                <li><input type="radio" name="q47" value="b"> Apenas conduta dolosa</li>
+                <li><input type="radio" name="q47" value="c"> Fato típico, ilicitude e culpabilidade</li>
+                <li><input type="radio" name="q47" value="d"> Qualquer ação que cause dano a outra pessoa</li>
+                <li><input type="radio" name="q47" value="e"> Apenas a conduta criminosa intencional</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O conceito analítico de crime é composto por três elementos: fato típico, ilicitude e culpabilidade.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d">
+            <h3>48) Qual das alternativas NÃO é um elemento do fato típico?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q48" value="a"> Conduta</li>
+                <li><input type="radio" name="q48" value="b"> Nexo causal</li>
+                <li><input type="radio" name="q48" value="c"> Resultado</li>
+                <li><input type="radio" name="q48" value="d"> Potencial consciência da ilicitude</li>
+                <li><input type="radio" name="q48" value="e"> Tipicidade</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A potencial consciência da ilicitude faz parte da culpabilidade, e não do fato típico.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e">
+            <h3>49) O que caracteriza a culpabilidade no crime militar?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q49" value="a"> A mera intenção de cometer um crime</li>
+                <li><input type="radio" name="q49" value="b"> A previsão legal do crime</li>
+                <li><input type="radio" name="q49" value="c"> A ilegalidade do ato, independentemente da intenção</li>
+                <li><input type="radio" name="q49" value="d"> O enquadramento do crime no Código Penal Militar</li>
+                <li><input type="radio" name="q49" value="e"> Imputabilidade, potencial consciência da ilicitude e exigibilidade de conduta diversa</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A culpabilidade envolve três elementos: imputabilidade, potencial consciência da ilicitude e exigibilidade de conduta diversa.</div>
+        </div>
+        
+        <div class="question-box" data-answer="a">
+            <h3>50) Quando um fato pode ser punido como crime doloso?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q50" value="a"> Apenas quando há dolo na conduta</li>
+                <li><input type="radio" name="q50" value="b"> Sempre que houver uma infração disciplinar</li>
+                <li><input type="radio" name="q50" value="c"> Apenas quando o crime resulta em lesão corporal</li>
+                <li><input type="radio" name="q50" value="d"> Sempre que houver um resultado negativo</li>
+                <li><input type="radio" name="q50" value="e"> Em qualquer tipo de conduta ilegal</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Um fato só pode ser punido como crime doloso quando há dolo na conduta, ou seja, intenção ou aceitação do risco.</div>
+        </div>
+        <div class="question-box" data-answer="c">
+            <h3>51) Quem comete um crime sob coação irresistível é considerado culpado?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q51" value="a"> Sim, sempre, pois a pessoa teve a intenção de cometer o crime.</li>
+                <li><input type="radio" name="q51" value="b"> Não, a coação irresistível elimina a culpabilidade.</li>
+                <li><input type="radio" name="q51" value="c"> Não, pois a coação irresistível impede a pessoa de agir conforme sua vontade.</li>
+                <li><input type="radio" name="q51" value="d"> Sim, a coação não afeta a responsabilidade criminal.</li>
+                <li><input type="radio" name="q51" value="e"> Não, mas a pessoa pode ser punida com uma pena reduzida.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A coação irresistível elimina a culpabilidade, pois impede a pessoa de agir de acordo com sua vontade, tornando-a não culpada pelo crime cometido.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d">
+            <h3>52) O que caracteriza o estado de necessidade no Direito Penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q52" value="a"> Cometer um crime em defesa do patrimônio próprio.</li>
+                <li><input type="radio" name="q52" value="b"> Agir de forma legal para evitar um dano.</li>
+                <li><input type="radio" name="q52" value="c"> A defesa contra uma ameaça de morte imediata.</li>
+                <li><input type="radio" name="q52" value="d"> Sacrificar um direito alheio para proteger a si mesmo ou a outra pessoa de perigo inevitável.</li>
+                <li><input type="radio" name="q52" value="e"> Atuar em legítima defesa de um bem jurídico superior.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O estado de necessidade ocorre quando alguém, para proteger a si ou a outra pessoa de um perigo inevitável, sacrifica um direito alheio, mesmo que esse direito seja superior, desde que não haja outra conduta possível.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e">
+            <h3>53) Qual das alternativas NÃO constitui uma exclusão de crime no Direito Penal Militar?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q53" value="a"> Estado de necessidade</li>
+                <li><input type="radio" name="q53" value="b"> Legítima defesa</li>
+                <li><input type="radio" name="q53" value="c"> Exercício regular de direito</li>
+                <li><input type="radio" name="q53" value="d"> Cumprimento do dever legal</li>
+                <li><input type="radio" name="q53" value="e"> Homicídio culposo</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O homicídio culposo não é uma causa de exclusão de crime. As exclusões de crime incluem estado de necessidade, legítima defesa, cumprimento do dever legal e exercício regular de direito.</div>
+        </div>
+        
+        <div class="question-box" data-answer="a">
+            <h3>54) A legítima defesa no Direito Penal Militar permite a utilização de meios necessários para:</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q54" value="a"> Repelir uma agressão injusta, atual ou iminente, utilizando meios proporcionais.</li>
+                <li><input type="radio" name="q54" value="b"> Agir de maneira preventiva contra uma possível agressão futura.</li>
+                <li><input type="radio" name="q54" value="c"> Defender a propriedade, independentemente da proporcionalidade do meio utilizado.</li>
+                <li><input type="radio" name="q54" value="d"> Agir para evitar um dano a si ou a outros, independentemente da existência de agressão.</li>
+                <li><input type="radio" name="q54" value="e"> Prevenir uma agressão com a mesma intensidade do ataque sofrido.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A legítima defesa permite o uso de meios proporcionais para repelir uma agressão injusta, atual ou iminente, contra direitos próprios ou de outrem.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b">
+            <h3>55) No caso de obediência hierárquica, a pessoa que executa uma ordem pode ser punida quando:</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q55" value="a"> Sempre que a ordem for ilegal.</li>
+                <li><input type="radio" name="q55" value="b"> Quando houver excesso nos atos ou for manifestamente criminosa.</li>
+                <li><input type="radio" name="q55" value="c"> Quando não houver um superior hierárquico no comando.</li>
+                <li><input type="radio" name="q55" value="d"> Quando a ordem for dada de maneira verbal e não formalizada.</li>
+                <li><input type="radio" name="q55" value="e"> Quando a ordem for dada sem a presença de testemunhas.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Na obediência hierárquica, o executor da ordem pode ser punido se houver excesso nos atos ou se a ordem for manifestamente criminosa.</div>
+        </div>
+        <div class="question-box" data-answer="d">
+            <h3>56) No caso de excesso culposo, o agente:</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q56" value="a"> Excede os limites da necessidade com intenção de prejudicar.</li>
+                <li><input type="radio" name="q56" value="b"> Excede os limites da necessidade de forma intencional, mas sem culpa.</li>
+                <li><input type="radio" name="q56" value="c"> Não comete crime, pois a ação é justificada pela necessidade.</li>
+                <li><input type="radio" name="q56" value="d"> Responde pelo fato a título de culpa, pois ultrapassa os limites sem intenção.</li>
+                <li><input type="radio" name="q56" value="e"> Não será punido, pois o excesso é considerado escusável.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">No excesso culposo, o agente excede os limites da necessidade de forma não intencional, e responde pelo fato a título de culpa.</div>
+        </div>
+        
+        <div class="question-box" data-answer="a">
+            <h3>57) O que caracteriza o excesso escusável no Direito Penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q57" value="a"> O excesso resulta de uma surpresa ou perturbação de ânimo, e não é punível.</li>
+                <li><input type="radio" name="q57" value="b"> O agente age de forma intencional, mas o excesso é justificado pelas circunstâncias.</li>
+                <li><input type="radio" name="q57" value="c"> O agente age de forma consciente e com intenção de ultrapassar os limites.</li>
+                <li><input type="radio" name="q57" value="d"> O excesso é cometido quando há uma reação desproporcional a uma agressão.</li>
+                <li><input type="radio" name="q57" value="e"> O excesso é irrelevante para a punição, não sendo necessário justificar a ação.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">No excesso escusável, o agente não é punido quando o excesso resulta de surpresa ou perturbação de ânimo, tornando-o escusável.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c">
+            <h3>58) O juiz pode atenuar a pena no caso de excesso doloso quando:</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q58" value="a"> O excesso é justificado por necessidade de defesa própria.</li>
+                <li><input type="radio" name="q58" value="b"> A pena é fixada de acordo com a gravidade do crime cometido.</li>
+                <li><input type="radio" name="q58" value="c"> O juiz pode atenuar a pena, mesmo sendo punível o fato por excesso doloso.</li>
+                <li><input type="radio" name="q58" value="d"> O juiz não pode atenuar a pena, pois o excesso doloso é sempre punido integralmente.</li>
+                <li><input type="radio" name="q58" value="e"> O juiz pode atenuar a pena, mas apenas nos casos de crime culposo.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Mesmo no caso de excesso doloso, o juiz pode atenuar a pena, levando em consideração a natureza do fato e a culpabilidade do agente.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b">
+            <h3>59) Qual das alternativas descreve corretamente a inimputabilidade penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q59" value="a"> A inimputabilidade ocorre quando o agente está sob coação irresistível.</li>
+                <li><input type="radio" name="q59" value="b"> A inimputabilidade ocorre quando o agente não tem capacidade de entender o ato ilícito ou agir conforme esse entendimento, devido a doença mental ou desenvolvimento incompleto.</li>
+                <li><input type="radio" name="q59" value="c"> A inimputabilidade ocorre quando o agente é menor de 16 anos, mas com a capacidade de entender a gravidade do ato.</li>
+                <li><input type="radio" name="q59" value="d"> A inimputabilidade se aplica a todas as pessoas com menos de 18 anos.</li>
+                <li><input type="radio" name="q59" value="e"> A inimputabilidade é irrelevante para a responsabilidade penal, pois a lei trata todos de igual forma.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A inimputabilidade ocorre quando o agente, devido a doença mental ou desenvolvimento mental incompleto, não consegue entender o ato ilícito ou agir conforme esse entendimento.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c">
+            <h3>60) A quem se aplica a inimputabilidade penal por idade no Brasil?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q60" value="a"> A todos os menores de 16 anos, independentemente da sua compreensão sobre o ato.</li>
+                <li><input type="radio" name="q60" value="b"> A todos os menores de 18 anos, sem exceção.</li>
+                <li><input type="radio" name="q60" value="c"> A todos os menores de 18 anos, sendo a partir dos 16 anos considerados imputáveis, salvo exceções.</li>
+                <li><input type="radio" name="q60" value="d"> Somente aos menores de 14 anos que cometem crimes com violência.</li>
+                <li><input type="radio" name="q60" value="e"> Somente aos menores de 12 anos, quando envolvidos em crimes graves.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">No Brasil, a inimputabilidade penal se aplica a menores de 18 anos, sendo que os menores de 16 anos são sempre inimputáveis, e entre 16 e 18 anos, podem ser considerados imputáveis, dependendo das circunstâncias.</div>
+        </div>
+        <div class="question-box" data-answer="a">
+            <h3>61) Qual é a consequência da embriaguez completa, causada por caso fortuito ou força maior, no direito penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q61" value="a"> A pessoa não é imputável, pois não tinha capacidade de entender o crime ou agir conforme esse entendimento.</li>
+                <li><input type="radio" name="q61" value="b"> A pessoa é totalmente imputável, mesmo que sua capacidade de entender o crime esteja comprometida.</li>
+                <li><input type="radio" name="q61" value="c"> A pena é automaticamente aumentada devido à embriaguez.</li>
+                <li><input type="radio" name="q61" value="d"> A pena não é alterada, pois a embriaguez não é considerada como fator atenuante.</li>
+                <li><input type="radio" name="q61" value="e"> A embriaguez não interfere na imputabilidade penal.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Em caso de embriaguez completa causada por caso fortuito ou força maior, a pessoa não é imputável, pois não tinha capacidade de entender o crime ou agir conforme esse entendimento. Se a embriaguez for parcial, a pena pode ser reduzida de 1 a 2 terços.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c">
+            <h3>62) No concurso de agentes, qual é a definição mais correta?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q62" value="a"> É quando uma pessoa comete um crime sozinha.</li>
+                <li><input type="radio" name="q62" value="b"> O concurso de agentes ocorre quando uma única pessoa pratica múltiplos crimes de forma sucessiva.</li>
+                <li><input type="radio" name="q62" value="c"> É a cooperação de várias pessoas para cometer uma infração penal, podendo envolver coautoria, participação, cumplicidade, entre outros.</li>
+                <li><input type="radio" name="q62" value="d"> O concurso de agentes se refere à situação em que uma pessoa comete um crime e outras auxiliam na fuga.</li>
+                <li><input type="radio" name="q62" value="e"> O concurso de agentes ocorre apenas quando duas ou mais pessoas cometem crimes simultaneamente.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O concurso de agentes envolve a cooperação de várias pessoas para cometer um crime, seja como coautores, partícipes ou cúmplices, sendo uma infração penal praticada por mais de uma pessoa.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b">
+            <h3>63) O que caracteriza o concurso de crimes?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q63" value="a"> O concurso de crimes ocorre quando um agente pratica várias ações ilícitas ao mesmo tempo.</li>
+                <li><input type="radio" name="q63" value="b"> O concurso de crimes ocorre quando o agente pratica múltiplos crimes, seja por ação ou omissão, com penas somadas ou majoradas conforme a gravidade.</li>
+                <li><input type="radio" name="q63" value="c"> O concurso de crimes se aplica somente a crimes continuados.</li>
+                <li><input type="radio" name="q63" value="d"> O concurso de crimes é uma situação em que a pessoa responde por um único crime, mesmo tendo cometido vários.</li>
+                <li><input type="radio" name="q63" value="e"> O concurso de crimes resulta na anulação da pena para o agente.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O concurso de crimes ocorre quando um agente pratica mais de um crime, seja por ação ou omissão, e as penas podem ser somadas ou, se de espécies diferentes, considerada a pena mais grave.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d">
+            <h3>64) O que caracteriza o crime continuado no direito penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q64" value="a"> O crime continuado ocorre quando o agente pratica múltiplos crimes, mas são considerados crimes distintos.</li>
+                <li><input type="radio" name="q64" value="b"> O crime continuado é caracterizado pela prática de crimes sem conexão entre si, sem qualquer repetição.</li>
+                <li><input type="radio" name="q64" value="c"> O crime continuado ocorre quando o agente comete vários crimes de natureza diferente.</li>
+                <li><input type="radio" name="q64" value="d"> O crime continuado ocorre quando o agente comete crimes da mesma espécie, em condições que os caracterizam como continuidade, geralmente contra a mesma vítima.</li>
+                <li><input type="radio" name="q64" value="e"> O crime continuado aplica-se exclusivamente a crimes contra o patrimônio.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O crime continuado ocorre quando o agente pratica várias infrações da mesma espécie, em condições que os caracterizam como continuidade, geralmente repetindo os crimes contra a mesma vítima.</div>
+        </div>
+        
+        <div class="question-box" data-answer="a">
+            <h3>65) Qual é a regra da ação penal em crimes militares?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q65" value="a"> A ação penal em crimes militares é de iniciativa pública incondicionada.</li>
+                <li><input type="radio" name="q65" value="b"> A ação penal é exclusivamente de iniciativa privada.</li>
+                <li><input type="radio" name="q65" value="c"> A ação penal em crimes militares é condicional à representação da vítima.</li>
+                <li><input type="radio" name="q65" value="d"> A ação penal só pode ser iniciada por ordem superior.</li>
+                <li><input type="radio" name="q65" value="e"> A ação penal é privada e depende da queixa do ofendido.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A regra é que a ação penal em crimes militares seja de iniciativa pública incondicionada, ou seja, o Ministério Público pode atuar independentemente de manifestação da vítima.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b">
+            <h3>66) O que caracteriza o crime de motim no contexto militar?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q66" value="a"> O crime de motim ocorre quando militares se recusam a seguir ordens superiores sem violência.</li>
+                <li><input type="radio" name="q66" value="b"> O motim é caracterizado pela ação conjunta de militares que agem contra ordens superiores, recusam obediência, praticam violência ou ocupam instalações militares para desobediência.</li>
+                <li><input type="radio" name="q66" value="c"> O crime de motim ocorre quando militares desobedecem apenas em situações de guerra.</li>
+                <li><input type="radio" name="q66" value="d"> O motim envolve apenas a ocupação de instalações militares sem qualquer violência.</li>
+                <li><input type="radio" name="q66" value="e"> O motim é uma forma de insubordinação individual, sem participação de outros militares.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O crime de motim envolve militares que, em conjunto, recusam ordens superiores, praticam violência ou ocupam instalações militares, prejudicando a disciplina militar.</div>
+        </div>
+        
+        <div class="question-box" data-answer="a">
+            <h3>67) Qual é a pena prevista para o crime de motim no contexto militar?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q67" value="a"> A pena é reclusão de 4 a 8 anos, com aumento de 1/3 para os líderes.</li>
+                <li><input type="radio" name="q67" value="b"> A pena é reclusão de 1 a 3 anos, com aumento de 1/3 para os líderes.</li>
+                <li><input type="radio" name="q67" value="c"> A pena é reclusão de 10 a 15 anos, sem aumento para os líderes.</li>
+                <li><input type="radio" name="q67" value="d"> A pena é prisão simples de 2 a 5 anos.</li>
+                <li><input type="radio" name="q67" value="e"> A pena é reclusão de 8 a 20 anos, com aumento de 1/2 para os líderes.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A pena para o crime de motim é reclusão de 4 a 8 anos, com aumento de 1/3 para os líderes.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b">
+            <h3>68) O que caracteriza o crime de revolta no contexto militar?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q68" value="a"> O crime de revolta ocorre quando militares se recusam a seguir ordens sem praticar violência.</li>
+                <li><input type="radio" name="q68" value="b"> A revolta é caracterizada por militares armados que agem contra a ordem superior, com pena de 8 a 20 anos de reclusão, com aumento de 1/3 para os líderes.</li>
+                <li><input type="radio" name="q68" value="c"> A revolta é um crime contra a disciplina, mas não envolve violência ou uso de armas.</li>
+                <li><input type="radio" name="q68" value="d"> A revolta se aplica apenas a militares da reserva.</li>
+                <li><input type="radio" name="q68" value="e"> O crime de revolta tem pena de prisão simples de 2 a 5 anos, sem aumento para líderes.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A revolta envolve militares armados que se opõem à ordem superior, com pena de 8 a 20 anos de reclusão, com aumento de 1/3 para os líderes.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c">
+            <h3>69) O que é a conspiração no contexto militar?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q69" value="a"> A conspiração ocorre quando um militar age sozinho para planejar um motim.</li>
+                <li><input type="radio" name="q69" value="b"> A conspiração é o ato de militares que se unem para planejar a revolta, com pena de 3 a 5 anos de reclusão.</li>
+                <li><input type="radio" name="q69" value="c"> A conspiração é uma forma de resistência individual sem a participação de outros militares.</li>
+                <li><input type="radio" name="q69" value="d"> A conspiração ocorre apenas em tempos de guerra.</li>
+                <li><input type="radio" name="q69" value="e"> A conspiração se refere ao planejamento de crimes fora do contexto militar.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A conspiração é quando militares se unem para planejar um motim, com pena de 3 a 5 anos de reclusão.</div>
+        </div>
+        <div class="question-box" data-answer="a">
+            <h3>70) Qual é a pena prevista para quem incita à desobediência, indisciplina ou crime militar?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q70" value="a"> A pena é de reclusão de 2 a 4 anos.</li>
+                <li><input type="radio" name="q70" value="b"> A pena é de detenção de 1 a 3 anos.</li>
+                <li><input type="radio" name="q70" value="c"> A pena é de prisão simples de 6 meses a 1 ano.</li>
+                <li><input type="radio" name="q70" value="d"> A pena é de reclusão de 5 a 10 anos.</li>
+                <li><input type="radio" name="q70" value="e"> A pena é de reclusão de 10 a 15 anos.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A pena para quem incita à desobediência, indisciplina ou crime militar é de reclusão de 2 a 4 anos.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b">
+            <h3>71) Qual é a pena para a violência contra um superior no contexto militar, quando há uso de arma?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q71" value="a"> A pena é detenção de 3 meses a 2 anos.</li>
+                <li><input type="radio" name="q71" value="b"> A pena é reclusão de 3 a 9 anos, com aumento de 1/3 se houver uso de arma.</li>
+                <li><input type="radio" name="q71" value="c"> A pena é prisão simples de 1 a 3 anos.</li>
+                <li><input type="radio" name="q71" value="d"> A pena é reclusão de 12 a 30 anos.</li>
+                <li><input type="radio" name="q71" value="e"> A pena é reclusão de 5 a 10 anos.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Quando há violência contra um superior com o uso de arma, a pena é reclusão de 3 a 9 anos, com aumento de 1/3.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c">
+            <h3>72) Quando a violência contra um superior resulta em lesão corporal, como é tratada a pena?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q72" value="a"> A pena será reduzida pela metade.</li>
+                <li><input type="radio" name="q72" value="b"> A pena é a mesma da violência contra o superior sem lesão corporal.</li>
+                <li><input type="radio" name="q72" value="c"> A pena inclui a pena pelo crime contra a pessoa, além da pena pela violência contra o superior.</li>
+                <li><input type="radio" name="q72" value="d"> A pena será aumentada em 1/6.</li>
+                <li><input type="radio" name="q72" value="e"> A pena será anulada se a lesão não for grave.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Quando a violência contra um superior resulta em lesão corporal, aplica-se a pena pelo crime contra a pessoa, além da pena pela violência contra o superior.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d">
+            <h3>73) Qual é a pena para a violência contra um superior com resultado morte?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q73" value="a"> A pena é reclusão de 4 a 8 anos.</li>
+                <li><input type="radio" name="q73" value="b"> A pena é reclusão de 3 a 9 anos, com aumento de 1/3.</li>
+                <li><input type="radio" name="q73" value="c"> A pena é reclusão de 12 a 30 anos.</li>
+                <li><input type="radio" name="q73" value="d"> A pena é reclusão de 12 a 30 anos, com aumento de 1/6 se durante o serviço.</li>
+                <li><input type="radio" name="q73" value="e"> A pena é prisão simples de 1 a 3 anos.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Quando a violência contra um superior resulta em morte, a pena é reclusão de 12 a 30 anos.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b">
+            <h3>74) Qual é a pena base para a violência contra militar de serviço?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q74" value="a"> A pena base é reclusão de 1 a 3 anos.</li>
+                <li><input type="radio" name="q74" value="b"> A pena base é reclusão de 3 a 8 anos.</li>
+                <li><input type="radio" name="q74" value="c"> A pena base é prisão simples de 2 a 5 anos.</li>
+                <li><input type="radio" name="q74" value="d"> A pena base é reclusão de 8 a 12 anos.</li>
+                <li><input type="radio" name="q74" value="e"> A pena base é detenção de 6 meses a 1 ano.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A pena base para a violência contra militar de serviço é reclusão de 3 a 8 anos.</div>
+        </div>
+        <div class="question-box" data-answer="a">
+            <h3>75) Qual é a pena base para o crime de desrespeito a superior?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q75" value="a"> A pena base é detenção de 3 meses a 1 ano.</li>
+                <li><input type="radio" name="q75" value="b"> A pena base é reclusão de 2 a 5 anos.</li>
+                <li><input type="radio" name="q75" value="c"> A pena base é prisão simples de 6 meses a 1 ano.</li>
+                <li><input type="radio" name="q75" value="d"> A pena base é reclusão de 1 a 3 anos.</li>
+                <li><input type="radio" name="q75" value="e"> A pena base é detenção de 1 a 2 anos.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A pena base para o crime de desrespeito a superior é detenção de 3 meses a 1 ano.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b">
+            <h3>76) Quando o desrespeito a um superior é praticado contra o comandante da unidade, oficial general ou oficial de serviço, como é tratada a pena?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q76" value="a"> A pena será aumentada em 1/3.</li>
+                <li><input type="radio" name="q76" value="b"> A pena será aumentada pela metade.</li>
+                <li><input type="radio" name="q76" value="c"> A pena será reduzida pela metade.</li>
+                <li><input type="radio" name="q76" value="d"> A pena será dobrada.</li>
+                <li><input type="radio" name="q76" value="e"> A pena será a mesma, independentemente do superior.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Quando o desrespeito é contra o comandante da unidade, oficial general ou oficial de serviço, a pena é aumentada pela metade.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c">
+            <h3>77) Qual é a pena para o crime de ultraje ao Símbolo Nacional (Art. 161 do CPM)?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q77" value="a"> A pena é detenção de 1 a 3 anos.</li>
+                <li><input type="radio" name="q77" value="b"> A pena é prisão simples de 6 meses a 1 ano.</li>
+                <li><input type="radio" name="q77" value="c"> A pena é detenção de 1 a 2 anos.</li>
+                <li><input type="radio" name="q77" value="d"> A pena é reclusão de 3 a 5 anos.</li>
+                <li><input type="radio" name="q77" value="e"> A pena é detenção de 6 meses a 1 ano.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A pena para ultraje ao Símbolo Nacional é detenção de 1 a 2 anos.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d">
+            <h3>78) Qual é a pena para o crime de despojar-se de insígnias militares, de acordo com o Art. 162 do CPM?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q78" value="a"> A pena base é prisão simples de 6 meses a 1 ano.</li>
+                <li><input type="radio" name="q78" value="b"> A pena é reclusão de 3 a 5 anos.</li>
+                <li><input type="radio" name="q78" value="c"> A pena é detenção de 1 a 2 anos.</li>
+                <li><input type="radio" name="q78" value="d"> A pena base é detenção de 6 meses a 1 ano, aumentada pela metade se praticada diante da tropa ou em público.</li>
+                <li><input type="radio" name="q78" value="e"> A pena é reclusão de 5 a 10 anos.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A pena base para o crime de despojar-se de insígnias militares é detenção de 6 meses a 1 ano, com aumento pela metade se praticada diante da tropa ou em público.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e">
+            <h3>79) O que caracteriza o crime de recusa de obediência no contexto militar?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q79" value="a"> Recusar-se a cumprir ordens de qualquer superior.</li>
+                <li><input type="radio" name="q79" value="b"> Recusar-se a obedecer ordem não relacionada a serviço ou dever.</li>
+                <li><input type="radio" name="q79" value="c"> Recusar-se a obedecer ordem superior relacionada a um ato administrativo.</li>
+                <li><input type="radio" name="q79" value="d"> Recusar-se a obedecer ordem superior relacionada a serviço ou dever, prevista em lei, regulamento ou instrução.</li>
+                <li><input type="radio" name="q79" value="e"> Recusar-se a cumprir qualquer ordem, independentemente de seu contexto.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Recusar-se a obedecer ordem superior relacionada a serviço ou dever, prevista em lei, regulamento ou instrução, configura o crime de recusa de obediência, com pena de detenção de 1 a 2 anos, salvo se for crime mais grave.</div>
+        </div>
+        <div class="question-box" data-answer="a">
+            <h3>80) Qual é a pena para a oposição às ordens da sentinela, conforme o Art. 164 do CPM?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q80" value="a"> A pena é detenção de 6 meses a 1 ano, salvo se configurado crime mais grave.</li>
+                <li><input type="radio" name="q80" value="b"> A pena é reclusão de 2 a 5 anos.</li>
+                <li><input type="radio" name="q80" value="c"> A pena é detenção de 1 a 3 anos.</li>
+                <li><input type="radio" name="q80" value="d"> A pena é prisão simples de 6 meses a 1 ano.</li>
+                <li><input type="radio" name="q80" value="e"> A pena é reclusão de 3 a 6 anos.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A pena para a oposição às ordens da sentinela é detenção de 6 meses a 1 ano, salvo se configurado crime mais grave.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b">
+            <h3>81) Qual é a pena para quem promove uma reunião para a disciplina militar, conforme o Art. 165 do CPM?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q81" value="a"> A pena é detenção de 2 a 6 meses.</li>
+                <li><input type="radio" name="q81" value="b"> A pena é detenção de 6 meses a 1 ano.</li>
+                <li><input type="radio" name="q81" value="c"> A pena é prisão simples de 6 meses a 1 ano.</li>
+                <li><input type="radio" name="q81" value="d"> A pena é reclusão de 1 a 2 anos.</li>
+                <li><input type="radio" name="q81" value="e"> A pena é detenção de 1 a 3 anos.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Quem promove a reunião para a disciplina militar terá pena de detenção de 6 meses a 1 ano, conforme o Art. 165 do CPM.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c">
+            <h3>82) Qual é a pena para quem participa de uma reunião para a disciplina militar, conforme o Art. 165 do CPM?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q82" value="a"> A pena é detenção de 2 a 6 meses.</li>
+                <li><input type="radio" name="q82" value="b"> A pena é reclusão de 6 meses a 1 ano.</li>
+                <li><input type="radio" name="q82" value="c"> A pena é detenção de 1 a 3 anos.</li>
+                <li><input type="radio" name="q82" value="d"> A pena é detenção de 6 meses a 1 ano, salvo se configurado crime mais grave.</li>
+                <li><input type="radio" name="q82" value="e"> A pena é detenção de 3 meses a 1 ano.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Quem participa de reunião para a disciplina militar terá pena de detenção de 2 a 6 meses, salvo se configurado crime mais grave.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d">
+            <h3>83) Qual é a pena para quem publica ou critica indevidamente ato oficial ou assunto de disciplina militar, conforme o Código Penal Militar?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q83" value="a"> A pena é detenção de 6 meses a 1 ano.</li>
+                <li><input type="radio" name="q83" value="b"> A pena é detenção de 2 meses a 1 ano, salvo se configurado crime mais grave.</li>
+                <li><input type="radio" name="q83" value="c"> A pena é reclusão de 3 a 5 anos.</li>
+                <li><input type="radio" name="q83" value="d"> A pena é detenção de 1 a 2 anos.</li>
+                <li><input type="radio" name="q83" value="e"> A pena é prisão simples de 6 meses a 1 ano.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A pena para quem publica ou critica indevidamente ato ou documento oficial é detenção de 2 meses a 1 ano, salvo se configurado crime mais grave.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e">
+            <h3>84) Qual é a pena para um militar que usa indevidamente uniforme, distintivo ou insígnia de posto superior, conforme o Código Penal Militar?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q84" value="a"> A pena é reclusão de 5 a 10 anos.</li>
+                <li><input type="radio" name="q84" value="b"> A pena é detenção de 1 a 2 anos.</li>
+                <li><input type="radio" name="q84" value="c"> A pena é detenção de 6 meses a 1 ano.</li>
+                <li><input type="radio" name="q84" value="d"> A pena é detenção de 2 a 3 anos.</li>
+                <li><input type="radio" name="q84" value="e"> A pena é detenção de 6 meses a 1 ano, salvo se configurado crime mais grave.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A pena para o uso indevido de uniforme, distintivo ou insígnia de posto superior é detenção de 6 meses a 1 ano, se o fato não constituir crime mais grave.</div>
+        </div>
+        <div class="question-box" data-answer="a">
+            <h3>85) Qual é a pena base para quem comete violência contra um inferior, conforme o Art. 159 do CPM?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q85" value="a"> A pena base é detenção de 3 meses a 1 ano.</li>
+                <li><input type="radio" name="q85" value="b"> A pena base é detenção de 6 meses a 2 anos.</li>
+                <li><input type="radio" name="q85" value="c"> A pena base é reclusão de 1 a 3 anos.</li>
+                <li><input type="radio" name="q85" value="d"> A pena base é prisão simples de 1 a 2 anos.</li>
+                <li><input type="radio" name="q85" value="e"> A pena base é detenção de 1 a 2 anos.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A pena base para quem comete violência contra um inferior é detenção de 3 meses a 1 ano, conforme o Art. 159 do CPM.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b">
+            <h3>86) Quando ocorre agravante na pena de deserção, conforme o Código Penal Militar?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q86" value="a"> Se o autor for soldado.</li>
+                <li><input type="radio" name="q86" value="b"> Se o autor for oficial.</li>
+                <li><input type="radio" name="q86" value="c"> Se o autor for sargento.</li>
+                <li><input type="radio" name="q86" value="d"> Se o autor for cabo.</li>
+                <li><input type="radio" name="q86" value="e"> Se o autor for recruta.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A pena de deserção é agravada se o autor for oficial, conforme o Código Penal Militar.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c">
+            <h3>87) Qual é a pena para o crime de deserção, conforme o Art. 188 do CPM?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q87" value="a"> Detenção de 3 meses a 1 ano.</li>
+                <li><input type="radio" name="q87" value="b"> Detenção de 6 meses a 2 anos.</li>
+                <li><input type="radio" name="q87" value="c"> Detenção de 1 a 3 anos.</li>
+                <li><input type="radio" name="q87" value="d"> Reclusão de 5 a 10 anos.</li>
+                <li><input type="radio" name="q87" value="e"> Detenção de 6 meses a 1 ano.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A pena para deserção é detenção de 6 meses a 2 anos, conforme o Art. 188 do CPM.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d">
+            <h3>88) Qual a principal diferença entre o Art. 188 e o Art. 187 do CPM no que se refere à deserção?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q88" value="a"> O Art. 188 trata de deserção quando o prazo é inferior a 8 dias, enquanto o Art. 187 trata de ausências superiores a 8 dias.</li>
+                <li><input type="radio" name="q88" value="b"> O Art. 188 trata de deserção após mais de 8 dias, enquanto o Art. 187 fala sobre ausências não autorizadas por mais de 8 dias.</li>
+                <li><input type="radio" name="q88" value="c"> O Art. 188 trata de ausência não autorizada por mais de 8 dias, enquanto o Art. 187 é sobre deserção apenas após 15 dias.</li>
+                <li><input type="radio" name="q88" value="d"> O Art. 188 trata de deserção após mais de 8 dias, enquanto o Art. 187 fala sobre ausências não autorizadas por mais de 5 dias.</li>
+                <li><input type="radio" name="q88" value="e"> O Art. 188 trata de deserção apenas se ocorrer durante o serviço militar, enquanto o Art. 187 aplica-se a qualquer ausência não autorizada.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A principal diferença é que o Art. 188 trata de deserção após mais de 8 dias, enquanto o Art. 187 trata da ausência não autorizada por mais de 8 dias, com prazos e tipos de ausência distintos.</div>
+        </div>
+        <div class="question-box" data-answer="a">
+            <h3>89) Qual é a pena para o crime de abandono de posto, conforme o Art. 204 do CPM?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q89" value="a"> Detenção de 3 meses a 1 ano.</li>
+                <li><input type="radio" name="q89" value="b"> Detenção de 6 meses a 2 anos.</li>
+                <li><input type="radio" name="q89" value="c"> Reclusão de 3 a 5 anos.</li>
+                <li><input type="radio" name="q89" value="d"> Detenção de 1 a 3 anos.</li>
+                <li><input type="radio" name="q89" value="e"> Reclusão de 2 a 4 anos.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A pena para abandono de posto é detenção de 3 meses a 1 ano, conforme o Art. 204 do CPM.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b">
+            <h3>90) O que acontece quando um militar dorme em serviço, de acordo com o Art. 203 do CPM?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q90" value="a"> Pena de reclusão de 3 a 5 anos.</li>
+                <li><input type="radio" name="q90" value="b"> Pena de detenção de 3 meses a 1 ano.</li>
+                <li><input type="radio" name="q90" value="c"> Pena de reclusão de 6 a 10 anos.</li>
+                <li><input type="radio" name="q90" value="d"> Pena de detenção de 6 meses a 2 anos.</li>
+                <li><input type="radio" name="q90" value="e"> Pena de detenção de 1 a 2 anos.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A pena para dormir em serviço é detenção de 3 meses a 1 ano, conforme o Art. 203 do CPM.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c">
+            <h3>91) Qual é a pena para homicídio simples, conforme o Código Penal Militar?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q91" value="a"> Reclusão de 3 a 8 anos.</li>
+                <li><input type="radio" name="q91" value="b"> Detenção de 1 a 3 anos.</li>
+                <li><input type="radio" name="q91" value="c"> Reclusão de 6 a 20 anos.</li>
+                <li><input type="radio" name="q91" value="d"> Reclusão de 10 a 25 anos.</li>
+                <li><input type="radio" name="q91" value="e"> Reclusão de 2 a 5 anos.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A pena para homicídio simples é reclusão de 6 a 20 anos, conforme o Código Penal Militar.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d">
+            <h3>92) Qual é a possível minoração da pena para homicídio simples se o crime for cometido sob o domínio de violenta emoção, conforme o § 1º do Art. 121 do CPM?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q92" value="a"> O juiz pode reduzir a pena de um sexto a um terço.</li>
+                <li><input type="radio" name="q92" value="b"> O juiz pode reduzir a pena de dois terços a três quartos.</li>
+                <li><input type="radio" name="q92" value="c"> A pena não pode ser reduzida.</li>
+                <li><input type="radio" name="q92" value="d"> O juiz pode reduzir a pena de 10 a 15 anos.</li>
+                <li><input type="radio" name="q92" value="e"> A pena pode ser reduzida apenas no caso de defesa legítima.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O juiz pode reduzir a pena de homicídio simples de um sexto a um terço, conforme o § 1º do Art. 121 do CPM, quando o crime é cometido sob o domínio de violenta emoção.</div>
+        </div>
+        <div class="question-box" data-answer="a">
+            <h3>93) Qual é a pena para homicídio culposo, conforme o Art. 206 do Código Penal Militar?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q93" value="a"> Detenção de 1 a 4 anos.</li>
+                <li><input type="radio" name="q93" value="b"> Reclusão de 6 a 12 anos.</li>
+                <li><input type="radio" name="q93" value="c"> Reclusão de 3 a 8 anos.</li>
+                <li><input type="radio" name="q93" value="d"> Detenção de 6 meses a 2 anos.</li>
+                <li><input type="radio" name="q93" value="e"> Reclusão de 10 a 20 anos.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A pena para homicídio culposo é detenção de 1 a 4 anos, conforme o Art. 206 do CPM.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b">
+            <h3>94) O que ocorre se o homicídio culposo resultar da inobservância de regra técnica de profissão, arte ou ofício?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q94" value="a"> A pena será aumentada de um sexto a um terço.</li>
+                <li><input type="radio" name="q94" value="b"> A pena pode ser agravada conforme o §1º do Art. 206 do CPM.</li>
+                <li><input type="radio" name="q94" value="c"> A pena será reduzida em até um terço.</li>
+                <li><input type="radio" name="q94" value="d"> Não haverá alteração da pena.</li>
+                <li><input type="radio" name="q94" value="e"> A pena será de reclusão de 5 a 10 anos.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A pena para homicídio culposo pode ser agravada se o crime resultar da inobservância de regra técnica de profissão, arte ou ofício, conforme o §1º do Art. 206 do CPM.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c">
+            <h3>95) Qual é a pena para a lesão leve, conforme o Art. 209 do Código Penal Militar?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q95" value="a"> Detenção de 6 meses a 2 anos.</li>
+                <li><input type="radio" name="q95" value="b"> Reclusão de 3 a 5 anos.</li>
+                <li><input type="radio" name="q95" value="c"> Detenção de 3 meses a 1 ano.</li>
+                <li><input type="radio" name="q95" value="d"> Reclusão de 5 a 10 anos.</li>
+                <li><input type="radio" name="q95" value="e"> Pena de multa.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A pena para lesão leve é detenção de 3 meses a 1 ano, conforme o Art. 209 do CPM.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d">
+            <h3>96) O que caracteriza o crime de calúnia, conforme o Código Penal Militar?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q96" value="a"> Imputar falsamente a alguém um fato ofensivo à sua reputação.</li>
+                <li><input type="radio" name="q96" value="b"> Imputar falsamente a alguém fato definido como crime.</li>
+                <li><input type="radio" name="q96" value="c"> Ofender a dignidade de alguém, sem imputar-lhe fato criminoso.</li>
+                <li><input type="radio" name="q96" value="d"> Difamar alguém com base em documentos falsificados.</li>
+                <li><input type="radio" name="q96" value="e"> Ofender alguém sem provas, mas sem intenção de causar prejuízo à sua honra.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A calúnia é caracterizada por imputar falsamente a alguém um fato definido como crime, conforme o Código Penal Militar.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e">
+            <h3>97) O que constitui o crime de difamação, conforme o Código Penal Militar?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q97" value="a"> Ofender a honra de alguém sem provas.</li>
+                <li><input type="radio" name="q97" value="b"> Imputar a alguém fato criminoso.</li>
+                <li><input type="radio" name="q97" value="c"> Imputar a alguém fato ofensivo à sua reputação.</li>
+                <li><input type="radio" name="q97" value="d"> Ofender a dignidade de alguém sem contexto.</li>
+                <li><input type="radio" name="q97" value="e"> Nenhuma das anteriores.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A difamação ocorre quando alguém imputa a outro fato ofensivo à sua reputação, conforme o Código Penal Militar.</div>
+        </div>
+        <div class="question-box" data-answer="a">
+            <h3>98) O que caracteriza o crime de calúnia?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q98" value="a"> Imputar falsamente a alguém fato definido como crime.</li>
+                <li><input type="radio" name="q98" value="b"> Ofender a honra de alguém sem provas.</li>
+                <li><input type="radio" name="q98" value="c"> Imputar a alguém fato ofensivo à sua reputação.</li>
+                <li><input type="radio" name="q98" value="d"> Ofender alguém com palavras de baixo calão.</li>
+                <li><input type="radio" name="q98" value="e"> Ofender alguém sem intenção de prejudicar.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A calúnia ocorre quando se imputa falsamente a alguém fato definido como crime.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b">
+            <h3>99) O que caracteriza o crime de difamação?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q99" value="a"> Ofender a honra de alguém.</li>
+                <li><input type="radio" name="q99" value="b"> Imputar a alguém fato ofensivo à sua reputação.</li>
+                <li><input type="radio" name="q99" value="c"> Imputar a alguém fato criminoso.</li>
+                <li><input type="radio" name="q99" value="d"> Ofender alguém com palavras de baixo calão.</li>
+                <li><input type="radio" name="q99" value="e"> Nenhuma das anteriores.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A difamação é caracterizada por imputar a alguém fato ofensivo à sua reputação.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c">
+            <h3>100) O que constitui o crime de injúria?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q100" value="a"> Ofender a honra de alguém com palavras de baixo calão.</li>
+                <li><input type="radio" name="q100" value="b"> Imputar a alguém fato criminoso.</li>
+                <li><input type="radio" name="q100" value="c"> Ofender a dignidade ou o decoro de alguém.</li>
+                <li><input type="radio" name="q100" value="d"> Ofender a reputação de alguém.</li>
+                <li><input type="radio" name="q100" value="e"> Nenhuma das anteriores.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A injúria ocorre quando alguém ofende a dignidade ou o decoro de outra pessoa.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d">
+            <h3>101) Qual das alternativas abaixo descreve corretamente a diferença entre calúnia e difamação?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q101" value="a"> A calúnia envolve imputação falsa de um crime, enquanto a difamação envolve a imputação de fato que afeta a reputação.</li>
+                <li><input type="radio" name="q101" value="b"> A calúnia é um insulto verbal, enquanto a difamação é sempre escrita.</li>
+                <li><input type="radio" name="q101" value="c"> A calúnia envolve ofensa à dignidade, enquanto a difamação é apenas verbal.</li>
+                <li><input type="radio" name="q101" value="d"> A calúnia é mais grave que a difamação e é sempre punida com pena maior.</li>
+                <li><input type="radio" name="q101" value="e"> A difamação é caracterizada apenas por ataques morais, e a calúnia é sempre física.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A calúnia envolve imputação falsa de crime, enquanto a difamação envolve a imputação de fato ofensivo à reputação da vítima.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e">
+            <h3>102) Qual é a principal diferença entre injúria e difamação?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q102" value="a"> A injúria atinge a reputação, enquanto a difamação atinge a honra pessoal.</li>
+                <li><input type="radio" name="q102" value="b"> A difamação é sempre mais grave que a injúria.</li>
+                <li><input type="radio" name="q102" value="c"> A injúria ofende a honra pessoal, enquanto a difamação atinge a reputação.</li>
+                <li><input type="radio" name="q102" value="d"> A injúria é punida apenas quando é pública.</li>
+                <li><input type="radio" name="q102" value="e"> Não há diferença entre injúria e difamação.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A injúria ofende a honra pessoal, enquanto a difamação atinge a reputação da pessoa.</div>
+        </div>
+        
+        <div class="question-box" data-answer="a">
+            <h3>103) Se alguém caluniar outra pessoa, imputando-lhe falsamente a prática de um crime, qual é o crime cometido?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q103" value="a"> Calúnia.</li>
+                <li><input type="radio" name="q103" value="b"> Difamação.</li>
+                <li><input type="radio" name="q103" value="c"> Injúria.</li>
+                <li><input type="radio" name="q103" value="d"> Ameaça.</li>
+                <li><input type="radio" name="q103" value="e"> Desacato.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Quando alguém imputar falsamente a prática de um crime, comete o crime de calúnia.</div>
+        </div>
+        <div class="question-box" data-answer="a">
+            <h3>104) O que caracteriza a prisão provisória?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q104" value="a"> A prisão que ocorre durante o inquérito ou no curso do processo, antes da condenação definitiva.</li>
+                <li><input type="radio" name="q104" value="b"> A prisão que ocorre após a condenação definitiva.</li>
+                <li><input type="radio" name="q104" value="c"> A prisão aplicada ao acusado de um crime militar.</li>
+                <li><input type="radio" name="q104" value="d"> A prisão de caráter disciplinar, sem relação com o processo penal.</li>
+                <li><input type="radio" name="q104" value="e"> A prisão aplicada após o flagrante de crime.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A prisão provisória é a que ocorre durante o inquérito ou no curso do processo, antes da condenação definitiva.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b">
+            <h3>105) Quem deve realizar a prisão de um militar?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q105" value="a"> Qualquer autoridade civil.</li>
+                <li><input type="radio" name="q105" value="b"> Outro militar de posto ou graduação superior, ou, se igual, mais antigo.</li>
+                <li><input type="radio" name="q105" value="c"> Um juiz de direito.</li>
+                <li><input type="radio" name="q105" value="d"> Um policial militar.</li>
+                <li><input type="radio" name="q105" value="e"> Qualquer pessoa, desde que tenha presenciado o crime.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A prisão de um militar deve ser realizada por outro militar de posto ou graduação superior, ou, se igual, mais antigo.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c">
+            <h3>106) O que caracteriza o flagrante próprio ou real?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q106" value="a"> Quando o agente é preso no momento em que está cometendo o crime.</li>
+                <li><input type="radio" name="q106" value="b"> Quando a pessoa é flagrada após ter cometido um crime.</li>
+                <li><input type="radio" name="q106" value="c"> Quando o agente é preso em uma situação que faz acreditar que ele cometeu o crime.</li>
+                <li><input type="radio" name="q106" value="d"> Quando o criminoso é capturado sem provas.</li>
+                <li><input type="radio" name="q106" value="e"> Quando o flagrante é realizado por um policial civil.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O flagrante próprio ou real ocorre quando o agente está sendo preso no momento em que está cometendo o crime.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d">
+            <h3>107) O que caracteriza o flagrante impróprio ou quase-flagrante?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q107" value="a"> Quando o agente é capturado depois de uma perseguição, sem evidências de que cometeu o crime.</li>
+                <li><input type="radio" name="q107" value="b"> Quando o agente é preso após cometer um crime, mas antes de ser identificado.</li>
+                <li><input type="radio" name="q107" value="c"> Quando o agente é capturado imediatamente após cometer o crime.</li>
+                <li><input type="radio" name="q107" value="d"> Quando o agente é perseguido logo após o fato delituoso, em situação que faça acreditar ser ele o autor do crime.</li>
+                <li><input type="radio" name="q107" value="e"> Quando o agente é preso durante o inquérito policial.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O flagrante impróprio ou quase-flagrante ocorre quando o agente é perseguido logo após o fato delituoso, em uma situação que faça acreditar ser ele o autor do crime.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e">
+            <h3>108) Qual é a diferença entre prisão de militar e prisão de civil?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q108" value="a"> A prisão de militar pode ser realizada por qualquer autoridade civil.</li>
+                <li><input type="radio" name="q108" value="b"> A prisão de militar deve ser realizada apenas por juízes militares.</li>
+                <li><input type="radio" name="q108" value="c"> A prisão de civil pode ser realizada apenas por outro civil com maior posto.</li>
+                <li><input type="radio" name="q108" value="d"> Não há diferença; ambos podem ser presos da mesma forma.</li>
+                <li><input type="radio" name="q108" value="e"> A prisão de militar deve ser feita por outro militar de posto ou graduação superior ou, se igual, mais antigo.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A prisão de militar deve ser realizada por outro militar de posto ou graduação superior, ou, se igual, mais antigo.</div>
+        </div>
+        <div class="question-box" data-answer="a">
+            <h3>109) O que caracteriza a prisão provisória?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q109" value="a"> A prisão que ocorre durante o inquérito ou no curso do processo, antes da condenação definitiva.</li>
+                <li><input type="radio" name="q109" value="b"> A prisão que ocorre após a condenação definitiva.</li>
+                <li><input type="radio" name="q109" value="c"> A prisão aplicada a um militar em flagrante delito.</li>
+                <li><input type="radio" name="q109" value="d"> A prisão aplicada a uma pessoa em flagrante após o término do processo.</li>
+                <li><input type="radio" name="q109" value="e"> A prisão que acontece por ordem de um juiz, independentemente da investigação.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A prisão provisória é a que ocorre durante o inquérito ou no curso do processo, antes da condenação definitiva.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b">
+            <h3>110) Quem deve realizar a prisão de um militar?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q110" value="a"> Qualquer autoridade civil.</li>
+                <li><input type="radio" name="q110" value="b"> Outro militar de posto ou graduação superior, ou, se igual, mais antigo.</li>
+                <li><input type="radio" name="q110" value="c"> Um juiz de direito.</li>
+                <li><input type="radio" name="q110" value="d"> Um policial militar.</li>
+                <li><input type="radio" name="q110" value="e"> Qualquer pessoa, desde que tenha presenciado o crime.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A prisão de um militar deve ser realizada por outro militar de posto ou graduação superior, ou, se igual, mais antigo.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c">
+            <h3>111) O que caracteriza o flagrante próprio ou real?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q111" value="a"> Quando o agente é preso no momento em que está cometendo o crime.</li>
+                <li><input type="radio" name="q111" value="b"> Quando a pessoa é flagrada após ter cometido um crime.</li>
+                <li><input type="radio" name="q111" value="c"> Quando o agente é preso em uma situação que faz acreditar que ele cometeu o crime.</li>
+                <li><input type="radio" name="q111" value="d"> Quando o criminoso é capturado sem provas.</li>
+                <li><input type="radio" name="q111" value="e"> Quando o flagrante é realizado por um policial civil.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O flagrante próprio ou real ocorre quando o agente está sendo preso no momento em que está cometendo o crime.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d">
+            <h3>112) O que caracteriza o flagrante presumido?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q112" value="a"> Quando o agente é encontrado logo após o crime, com evidências que provam sua participação no fato delituoso.</li>
+                <li><input type="radio" name="q112" value="b"> Quando o agente é encontrado com documentos falsificados.</li>
+                <li><input type="radio" name="q112" value="c"> Quando o agente é preso no momento em que está cometendo o crime.</li>
+                <li><input type="radio" name="q112" value="d"> Quando o agente é preso após o fato delituoso, mas antes de ser identificado.</li>
+                <li><input type="radio" name="q112" value="e"> Quando o agente é flagrado em uma situação suspeita.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O flagrante presumido ocorre quando o agente é encontrado logo após o crime, com instrumentos, objetos, material ou papéis que façam presumir sua participação no fato delituoso.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e">
+            <h3>113) O que caracteriza o flagrante preparado?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q113" value="a"> Quando o flagrante é realizado após o crime, mas com a ajuda de uma denúncia.</li>
+                <li><input type="radio" name="q113" value="b"> Quando a preparação do flagrante pela polícia torna impossível a sua consumação.</li>
+                <li><input type="radio" name="q113" value="c"> Quando o agente é preso enquanto estava prestes a cometer o crime.</li>
+                <li><input type="radio" name="q113" value="d"> Quando a polícia aguarda o momento exato para prender o criminoso.</li>
+                <li><input type="radio" name="q113" value="e"> Quando o agente é flagrado com a vítima após cometer o crime.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O flagrante preparado ocorre quando a preparação do flagrante pela polícia torna impossível a consumação do crime.</div>
+        </div>
+                                                                                                                                                                        
+    </div>
+
+    <script>
+        function verificarResposta(botao) {
+            let questionBox = botao.parentElement;
+            let respostaSelecionada = questionBox.querySelector('input[type=radio]:checked');
+            if (respostaSelecionada) {
+                let respostaCorreta = questionBox.getAttribute('data-answer');
+                questionBox.querySelectorAll('li').forEach(li => li.classList.remove('correct', 'incorrect'));
+                let resposta = respostaSelecionada.value;
+                let itemSelecionado = respostaSelecionada.parentElement;
+                if (resposta === respostaCorreta) {
+                    itemSelecionado.classList.add('correct');
+                } else {
+                    itemSelecionado.classList.add('incorrect');
+                    questionBox.querySelector('.explanation').style.display = 'block';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
