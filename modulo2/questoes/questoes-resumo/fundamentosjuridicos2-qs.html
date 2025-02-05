@@ -1,0 +1,1937 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Direito Penal Militar</title>
+    <style>
+        * {
+            box-sizing: border-box; /* Garante que padding e bordas não aumentem o tamanho do elemento */
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #141e30, #243b55);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            overflow: auto; /* Permite rolar a página caso o conteúdo exceda a altura */
+        }
+        .quiz-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 600px;
+            text-align: left; /* Alinha o texto à esquerda dentro do contêiner */
+        }
+        .question-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .correct {
+            background-color: #28a745 !important;
+        }
+        .incorrect {
+            background-color: #dc3545 !important;
+        }
+        .button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+        .button:hover {
+            background-color: #218838;
+        }
+        .explanation {
+            display: none;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h2>Quiz - Fundamentos Júridicos 3</h2>          
+        <div class="question-box" data-answer="b">
+            <h3>1) O que afirma o Princípio da Legalidade no contexto do direito penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q1" value="a"> Não há crime sem lei que o defina, mas a pena pode ser aplicada sem uma previsão legal.</li>
+                <li><input type="radio" name="q1" value="b"> Não há crime sem lei anterior que o defina, nem pena sem prévia cominação legal.</li>
+                <li><input type="radio" name="q1" value="c"> A pena pode ser imposta independentemente da existência de uma lei anterior que defina o crime.</li>
+                <li><input type="radio" name="q1" value="d"> Crimes podem ser punidos de acordo com a moral vigente, independentemente da legislação.</li>
+                <li><input type="radio" name="q1" value="e"> A existência de uma lei anterior é dispensável para a definição de crimes e penas.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Princípio da Legalidade estabelece que não pode haver crime sem uma lei anterior que o defina, nem pena sem prévia cominação legal.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c">
+            <h3>2) Qual é a principal diferença entre crime e contravenção penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q2" value="a"> Crimes são punidos apenas com prisão simples, enquanto contravenções são punidas com reclusão.</li>
+                <li><input type="radio" name="q2" value="b"> Crimes envolvem penas mais graves e podem incluir reclusão ou detenção com ou sem multa, enquanto contravenções são punidas com prisão simples ou multa.</li>
+                <li><input type="radio" name="q2" value="c"> Crimes envolvem penas mais graves, incluindo reclusão ou detenção, enquanto contravenções podem ser punidas apenas com prisão simples ou multa.</li>
+                <li><input type="radio" name="q2" value="d"> A principal diferença entre crime e contravenção penal é que as contravenções não envolvem qualquer tipo de punição.</li>
+                <li><input type="radio" name="q2" value="e"> Crimes e contravenções têm as mesmas penas, sendo ambas punidas com reclusão ou detenção.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A principal diferença é que crimes envolvem penas mais graves, como reclusão ou detenção, enquanto contravenções são punidas com prisão simples ou multa.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b">
+            <h3>3) O que caracteriza o Princípio da Irretroatividade no direito penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q3" value="a"> A lei penal retroage, podendo beneficiar réus e condenados com a aplicação de novas penas mais severas.</li>
+                <li><input type="radio" name="q3" value="b"> A lei penal não retroage, salvo quando for para beneficiar o réu, acusado ou condenado.</li>
+                <li><input type="radio" name="q3" value="c"> A lei penal pode retroagir apenas quando criada para punir infrações de menor potencial ofensivo.</li>
+                <li><input type="radio" name="q3" value="d"> A retroatividade é permitida apenas para extinguir crimes já cometidos.</li>
+                <li><input type="radio" name="q3" value="e"> A lei penal pode retroagir independentemente do benefício ao réu, desde que a infração seja considerada grave.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Princípio da Irretroatividade estabelece que a lei penal não retroage, salvo quando for para beneficiar o réu, acusado ou condenado.</div>
+        </div>
+        
+        <div class="question-box" data-answer="a">
+            <h3>4) O que ocorre em relação à aplicação do princípio da Abolitio Criminis?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q4" value="a"> A lei nova que extingue a infração penal beneficia os acusados, réus e condenados, que não poderão mais ser punidos.</li>
+                <li><input type="radio" name="q4" value="b"> A lei nova que extingue a infração penal não altera a situação dos réus ou condenados, que continuam respondendo pelo ato.</li>
+                <li><input type="radio" name="q4" value="c"> A Abolitio Criminis ocorre apenas para crimes em que a pena seja superior a cinco anos de prisão.</li>
+                <li><input type="radio" name="q4" value="d"> O princípio da Abolitio Criminis não afeta acusados ou condenados em processos ainda em andamento.</li>
+                <li><input type="radio" name="q4" value="e"> A Abolitio Criminis permite que crimes ainda em andamento possam ser considerados em processo de reintegração social.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A Abolitio Criminis extingue a infração penal e beneficia os acusados, réus e condenados, que não poderão mais ser punidos pela infração.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c">
+            <h3>5) Como se aplica a figura da Novatio Legis in Mellius no direito penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q5" value="a"> A nova lei que aumenta a pena de um crime se aplica imediatamente, independentemente de quando o ato foi cometido.</li>
+                <li><input type="radio" name="q5" value="b"> A nova lei que melhora a situação do réu, reduzindo a pena ou oferecendo um regime mais benéfico, aplica-se aos réus, acusados e condenados.</li>
+                <li><input type="radio" name="q5" value="c"> A nova lei que traz uma pena mais benéfica para o réu, como redução de pena ou regime mais favorável, beneficia os réus, acusados e condenados.</li>
+                <li><input type="radio" name="q5" value="d"> A Novatio Legis in Mellius se aplica apenas a casos de crimes violentos, excluindo aqueles de menor potencial ofensivo.</li>
+                <li><input type="radio" name="q5" value="e"> A Novatio Legis in Mellius implica que uma lei mais severa seja aplicada apenas a crimes cometidos após sua promulgação.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A Novatio Legis in Mellius beneficia os réus, acusados e condenados quando uma nova lei traz uma pena mais benéfica, como redução da pena ou aplicação de regime mais favorável.</div>
+        </div>
+                                                                                                                        
+        <div class="question-box" data-answer="b" id="7">
+            <h3>7) O que estabelece o Princípio da Inocência no direito penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q7" value="a"> Ninguém será considerado culpado até a conclusão do julgamento do recurso.</li>
+                <li><input type="radio" name="q7" value="b"> Ninguém será considerado culpado até o trânsito em julgado de sentença penal condenatória.</li>
+                <li><input type="radio" name="q7" value="c"> Ninguém será considerado culpado antes de ser ouvido pelo juiz.</li>
+                <li><input type="radio" name="q7" value="d"> Ninguém será considerado culpado até que o Ministério Público denuncie formalmente o acusado.</li>
+                <li><input type="radio" name="q7" value="e"> A culpabilidade de um indivíduo pode ser definida antes do julgamento final.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Princípio da Inocência afirma que ninguém será culpado até que a sentença penal condenatória transite em julgado, ou seja, após o julgamento final sem possibilidade de recurso.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c" id="8">
+            <h3>8) O que caracteriza um indivíduo como "investigado" no processo penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q8" value="a"> Indivíduo que foi denunciado pelo Ministério Público após análise do procedimento policial.</li>
+                <li><input type="radio" name="q8" value="b"> Indivíduo que está sendo processado judicialmente por um juiz.</li>
+                <li><input type="radio" name="q8" value="c"> Indivíduo que está respondendo a Inquérito Policial ou a Termo Circunstanciado perante à Autoridade Policial.</li>
+                <li><input type="radio" name="q8" value="d"> Indivíduo que, após ser processado, aguarda julgamento em tribunal.</li>
+                <li><input type="radio" name="q8" value="e"> Indivíduo que foi preso e está aguardando sentença.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O "investigado" é o indivíduo que está sendo investigado no Inquérito Policial ou no Termo Circunstanciado perante a Autoridade Policial.</div>
+        </div>
+        
+        <div class="question-box" data-answer="a" id="9">
+            <h3>9) O que significa o Princípio da Ampla Defesa no direito processual?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q9" value="a"> Aos litigantes e acusados são assegurados o contraditório e a ampla defesa, com todos os meios e recursos legais a ela inerentes.</li>
+                <li><input type="radio" name="q9" value="b"> Apenas os acusados têm direito à ampla defesa, enquanto os litigantes podem ser limitados em suas ações.</li>
+                <li><input type="radio" name="q9" value="c"> A ampla defesa é limitada a recursos de apelação.</li>
+                <li><input type="radio" name="q9" value="d"> O direito à ampla defesa é garantido apenas em casos de acusação formal por parte do Ministério Público.</li>
+                <li><input type="radio" name="q9" value="e"> O direito à defesa pode ser negado caso o réu não compareça ao tribunal.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Princípio da Ampla Defesa assegura aos litigantes e acusados o direito ao contraditório e à defesa, com todos os meios e recursos legais disponíveis.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c" id="10">
+            <h3>10) Qual é o principal aspecto do Princípio do Contraditório?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q10" value="a"> O contraditório garante o direito apenas de contestar a decisão final do juiz.</li>
+                <li><input type="radio" name="q10" value="b"> O contraditório assegura o direito de intervir apenas no momento da sentença.</li>
+                <li><input type="radio" name="q10" value="c"> O contraditório é composto por três direitos: o direito à informação, o direito à reação e o direito à influência.</li>
+                <li><input type="radio" name="q10" value="d"> O contraditório só se aplica no julgamento de penas mais graves.</li>
+                <li><input type="radio" name="q10" value="e"> O contraditório se limita ao direito de ser informado sobre o andamento do processo.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Princípio do Contraditório divide-se em três direitos: direito à informação, direito à reação e direito à influência, assegurando uma participação efetiva no processo.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b" id="11">
+            <h3>11) Qual é o fundamento do Princípio da Dignidade Humana no direito penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q11" value="a"> A dignidade humana é garantida apenas aos cidadãos que possuem direitos políticos.</li>
+                <li><input type="radio" name="q11" value="b"> O princípio assegura a proteção do indivíduo contra atos degradantes e garante condições mínimas para uma vida digna.</li>
+                <li><input type="radio" name="q11" value="c"> A dignidade humana é um direito exclusivo dos réus em processos penais, sem relação com os demais indivíduos.</li>
+                <li><input type="radio" name="q11" value="d"> O princípio da dignidade humana apenas se aplica em situações de pena de prisão.</li>
+                <li><input type="radio" name="q11" value="e"> O princípio da dignidade humana visa permitir punições mais severas a quem violar direitos fundamentais.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Princípio da Dignidade Humana garante o respeito e proteção ao indivíduo, assegurando direitos fundamentais e evitando atos degradantes, além de garantir condições mínimas para uma vida digna.</div>
+        </div>
+        <div class="question-box" data-answer="a" id="12">
+            <h3>12) O que caracteriza o Princípio da Lesividade no Direito Penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q12" value="a"> Não há crime sem possibilidade de ofensa ou dano a bens jurídicos.</li>
+                <li><input type="radio" name="q12" value="b"> Lesividade ocorre apenas quando há um dano psicológico à vítima.</li>
+                <li><input type="radio" name="q12" value="c"> O Princípio da Lesividade se aplica apenas a crimes patrimoniais.</li>
+                <li><input type="radio" name="q12" value="d"> Lesividade ocorre quando há uma ofensa moral sem a presença de dano material.</li>
+                <li><input type="radio" name="q12" value="e"> Não há crime sem lesão direta à vida humana.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Princípio da Lesividade afirma que não há crime sem a possibilidade de ofensa ou dano real a bens jurídicos, ou seja, a conduta só é punível se causar um dano ou perigo a outro bem protegido.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b" id="13">
+            <h3>13) O que significa o Princípio da Alteridade no Direito Penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q13" value="a"> A ofensa pode ser contra a própria pessoa que comete o ato.</li>
+                <li><input type="radio" name="q13" value="b"> A ofensa deve recair sobre outra pessoa que não seja o próprio agente.</li>
+                <li><input type="radio" name="q13" value="c"> O Princípio da Alteridade se aplica apenas a infrações de pequena gravidade.</li>
+                <li><input type="radio" name="q13" value="d"> O agente pode ser punido se prejudicar a si mesmo com sua conduta.</li>
+                <li><input type="radio" name="q13" value="e"> Alteridade se refere apenas a crimes contra a vida.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Princípio da Alteridade afirma que a conduta penalmente punível deve afetar outra pessoa, e não o próprio agente. Se o ato prejudica apenas quem o pratica, não pode ser punido pelo Direito Penal.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c" id="14">
+            <h3>14) O que estabelece o Princípio da Proporcionalidade no Direito Penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q14" value="a"> A punição deve ser superior à gravidade do crime cometido.</li>
+                <li><input type="radio" name="q14" value="b"> A punição deve ser a mesma para qualquer tipo de crime.</li>
+                <li><input type="radio" name="q14" value="c"> Ninguém pode ser punido além ou aquém da gravidade do ato praticado.</li>
+                <li><input type="radio" name="q14" value="d"> A proporcionalidade é apenas aplicável em penas alternativas.</li>
+                <li><input type="radio" name="q14" value="e"> A proporcionalidade permite punições arbitrárias, desde que justificadas por autoridade competente.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Princípio da Proporcionalidade estabelece que ninguém pode ser punido além ou aquém da gravidade do ato praticado, garantindo penas justas e equilibradas de acordo com o crime cometido.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b" id="15">
+            <h3>15) O que define a Fonte Material do Direito Penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q15" value="a"> A fonte material se refere à maneira como as normas penais são aplicadas em cada caso concreto.</li>
+                <li><input type="radio" name="q15" value="b"> A fonte material se refere a quem pode criar as normas penais, sendo que apenas a União pode legislar sobre o direito penal.</li>
+                <li><input type="radio" name="q15" value="c"> A fonte material abrange apenas as normas internas dos tribunais que julgam crimes penais.</li>
+                <li><input type="radio" name="q15" value="d"> A fonte material se refere a como as leis devem ser interpretadas pelos juízes no contexto de cada caso.</li>
+                <li><input type="radio" name="q15" value="e"> A fonte material refere-se ao custo de implementação das normas penais.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A Fonte Material do Direito Penal refere-se a quem tem o poder de criar as normas penais. Apenas a União pode legislar sobre o direito penal, salvo exceções específicas para os Estados.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e" id="16">
+            <h3>16) O que caracteriza o Costume Penal Brasileiro como "interpretativo"?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q16" value="a"> O costume penal é usado para criar novas infrações penais.</li>
+                <li><input type="radio" name="q16" value="b"> O costume penal abrange a revogação de leis penais existentes.</li>
+                <li><input type="radio" name="q16" value="c"> O costume penal não pode ser utilizado em nenhum caso no direito penal brasileiro.</li>
+                <li><input type="radio" name="q16" value="d"> O costume penal é utilizado apenas para revogar normas do direito penal.</li>
+                <li><input type="radio" name="q16" value="e"> O costume penal interpretativo auxilia na interpretação de normas penais, como a definição de períodos como o "noturno".</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Costume Penal Interpretativo é permitido no direito penal brasileiro, sendo utilizado para auxiliar na interpretação de normas, como, por exemplo, a definição de "período noturno".</div>
+        </div>
+        <div class="question-box" data-answer="b" id="17">
+            <h3>17) O que caracteriza uma Norma Penal Incriminadora?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q17" value="a"> Define permissões e justificativas para condutas.</li>
+                <li><input type="radio" name="q17" value="b"> Define crimes e as respectivas penas.</li>
+                <li><input type="radio" name="q17" value="c"> Esclarece conceitos legais e penais.</li>
+                <li><input type="radio" name="q17" value="d"> Estabelece orientações sobre a aplicação da norma.</li>
+                <li><input type="radio" name="q17" value="e"> Estabelece normas explicativas para condutas específicas.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A Norma Penal Incriminadora define os crimes e as penas aplicáveis, como a descrição de condutas proibidas e suas respectivas sanções.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c" id="18">
+            <h3>18) Qual é a função do Preceito Secundário nas normas penais?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q18" value="a"> Descreve a conduta proibida de forma detalhada.</li>
+                <li><input type="radio" name="q18" value="b"> Estabelece a justificativa ou exculpa de uma conduta.</li>
+                <li><input type="radio" name="q18" value="c"> Estabelece a pena a ser aplicada para a infração cometida.</li>
+                <li><input type="radio" name="q18" value="d"> Explica conceitos legais relacionados à infração.</li>
+                <li><input type="radio" name="q18" value="e"> Orienta a aplicação de normas de forma geral.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Preceito Secundário nas normas penais estabelece a pena a ser aplicada à conduta descrita no Preceito Primário.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d" id="19">
+            <h3>19) Qual é a definição de Norma Penal em Branco?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q19" value="a"> Norma que estabelece diretamente o crime e a pena correspondente.</li>
+                <li><input type="radio" name="q19" value="b"> Norma que não tem aplicação sem a complementação de outras normas.</li>
+                <li><input type="radio" name="q19" value="c"> Norma que descreve apenas a conduta proibida, mas não a penaliza.</li>
+                <li><input type="radio" name="q19" value="d"> Norma cujo Preceito Primário está incompleto e depende de outra norma para sua definição.</li>
+                <li><input type="radio" name="q19" value="e"> Norma que esclarece e orienta a aplicação da pena, sem descrever a conduta em si.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A Norma Penal em Branco tem o Preceito Primário incompleto, dependendo de outra norma para definir completamente o crime ou a pena.</div>
+        </div>
+        
+        <div class="question-box" data-answer="a" id="20">
+            <h3>20) O que a Teoria da Ubiquidade ou Mista estabelece sobre o Lugar do Crime?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q20" value="a"> O crime é considerado praticado tanto no lugar da conduta quanto no lugar onde se produziu ou deveria produzir-se o resultado.</li>
+                <li><input type="radio" name="q20" value="b"> O crime é sempre considerado praticado no local onde a conduta foi realizada.</li>
+                <li><input type="radio" name="q20" value="c"> O crime é considerado praticado apenas no lugar onde ocorreu o resultado.</li>
+                <li><input type="radio" name="q20" value="d"> O lugar do crime é irrelevante para determinar a competência territorial.</li>
+                <li><input type="radio" name="q20" value="e"> O crime é praticado no local onde o autor reside ou exerce suas atividades.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A Teoria da Ubiquidade ou Mista considera que o crime é praticado no lugar da conduta, bem como no lugar onde se produziu ou deveria produzir-se o resultado.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b" id="21">
+            <h3>21) De acordo com a Teoria da Atividade, quando é considerado praticado o crime em relação ao Tempo do Crime?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q21" value="a"> O crime é considerado praticado quando ocorre o resultado, independentemente da ação ou omissão.</li>
+                <li><input type="radio" name="q21" value="b"> O crime é considerado praticado no momento da ação ou omissão, mesmo que o resultado ocorra posteriormente.</li>
+                <li><input type="radio" name="q21" value="c"> O crime é considerado praticado quando o agente é notificado pelo juiz.</li>
+                <li><input type="radio" name="q21" value="d"> O tempo do crime é determinado exclusivamente pela data do julgamento final.</li>
+                <li><input type="radio" name="q21" value="e"> O crime é considerado praticado no momento em que o agente é preso.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">De acordo com a Teoria da Atividade, o crime é considerado praticado no momento da ação ou omissão, mesmo que o resultado ocorra depois.</div>
+        </div>
+        <div class="question-box" data-answer="b" id="22">
+            <h3>22) Quem é considerado o Sujeito Ativo de um crime?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q22" value="a"> A pessoa que sofre a infração penal.</li>
+                <li><input type="radio" name="q22" value="b"> A pessoa que pratica a conduta criminosa.</li>
+                <li><input type="radio" name="q22" value="c"> O Estado, que tem o poder de punir.</li>
+                <li><input type="radio" name="q22" value="d"> O Ministério Público, que faz a denúncia.</li>
+                <li><input type="radio" name="q22" value="e"> A vítima, que teve o bem jurídico violado.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Sujeito Ativo é a pessoa que pratica a conduta criminosa, podendo ser uma pessoa física ou jurídica (nos casos de crimes ambientais).</div>
+        </div>
+        
+        <div class="question-box" data-answer="d" id="23">
+            <h3>23) Quem é o Sujeito Passivo Imediato de um crime?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q23" value="a"> A pessoa que realiza a conduta criminosa.</li>
+                <li><input type="radio" name="q23" value="b"> O Estado, que exerce o poder de punir.</li>
+                <li><input type="radio" name="q23" value="c"> O juiz, que aplica a pena.</li>
+                <li><input type="radio" name="q23" value="d"> O titular do bem jurídico protegido.</li>
+                <li><input type="radio" name="q23" value="e"> A vítima que sofreu danos materiais.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Sujeito Passivo Imediato é a pessoa titular do bem jurídico protegido, ou seja, a vítima direta da infração.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c" id="24">
+            <h3>24) Qual é o conceito de crime Material?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q24" value="a"> Infração penal definida em lei, com pena de reclusão, detenção ou multa.</li>
+                <li><input type="radio" name="q24" value="b"> Crime baseado na violação de bens jurídicos que são irrelevantes para a sociedade.</li>
+                <li><input type="radio" name="q24" value="c"> Crime que viola bens jurídicos relevantes para a sociedade.</li>
+                <li><input type="radio" name="q24" value="d"> Crime em que há apenas a tipificação de conduta, sem necessidade de resultado.</li>
+                <li><input type="radio" name="q24" value="e"> Crime que ocorre quando a conduta é socialmente aceitável.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O crime material é aquele que viola bens jurídicos relevantes para a sociedade, afetando diretamente o interesse coletivo.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e" id="25">
+            <h3>25) O que descreve a Teoria Tripartite do crime?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q25" value="a"> O crime é composto apenas pelo fato típico e ilícito.</li>
+                <li><input type="radio" name="q25" value="b"> O crime é composto pelo fato típico e a culpabilidade, sem necessidade de resultado.</li>
+                <li><input type="radio" name="q25" value="c"> O crime é composto pela conduta e o nexo causal entre a ação e o resultado.</li>
+                <li><input type="radio" name="q25" value="d"> O crime é composto apenas pelo fato ilícito e a culpabilidade.</li>
+                <li><input type="radio" name="q25" value="e"> O crime é composto por Fato Típico, Ilícito e Culpabilidade.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A Teoria Tripartite do crime afirma que ele é composto por três elementos essenciais: Fato Típico, Ilícito e Culpabilidade.</div>
+        </div>
+        
+        <div class="question-box" data-answer="a" id="26">
+            <h3>26) O que significa Tipicidade, segundo a Teoria Tripartite do crime?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q26" value="a"> A correspondência entre a conduta realizada e o tipo penal previsto em lei.</li>
+                <li><input type="radio" name="q26" value="b"> A comprovação da ilicitude da conduta do agente.</li>
+                <li><input type="radio" name="q26" value="c"> A análise da punição de condutas que são permitidas pela lei.</li>
+                <li><input type="radio" name="q26" value="d"> A avaliação de se a conduta é socialmente aceitável.</li>
+                <li><input type="radio" name="q26" value="e"> A identificação do sujeito passivo no crime cometido.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Tipicidade é a correspondência entre a conduta do agente e o tipo penal definido em lei, caracterizando a infração.</div>
+        </div>
+        <div class="question-box" data-answer="e" id="27">
+            <h3>27) Quais são os três elementos que compõem a Tipicidade no Direito Penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q27" value="a"> Conduta, Resultado e Reprovabilidade.</li>
+                <li><input type="radio" name="q27" value="b"> Dolo, Culpa e Resultado.</li>
+                <li><input type="radio" name="q27" value="c"> Ação, Resultado e Intenção.</li>
+                <li><input type="radio" name="q27" value="d"> Conduta, Nexo Causal e Tipificação.</li>
+                <li><input type="radio" name="q27" value="e"> Elementos Objetivos, Subjetivos e Normativos.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A Tipicidade é composta por três elementos: Objetivos (aspectos concretos da conduta), Subjetivos (intenção do agente) e Normativos (contexto social e jurídico).</div>
+        </div>
+        <div class="question-box" data-answer="c" id="28">
+            <h3>28) Qual a principal diferença entre a Omissão Própria e a Omissão Imprópria (Comissivo por Omissão)?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q28" value="a"> A Omissão Própria ocorre quando o agente não tem dever de agir, enquanto a Omissão Imprópria ocorre quando o agente tem um dever de evitar um resultado.</li>
+                <li><input type="radio" name="q28" value="b"> A Omissão Imprópria é quando a ação direta do agente causa um resultado, enquanto a Omissão Própria é quando o agente age para evitar o resultado.</li>
+                <li><input type="radio" name="q28" value="c"> A Omissão Imprópria ocorre quando o agente tem um dever de impedir o resultado, mas se omite, sendo equiparada a uma ação criminosa.</li>
+                <li><input type="radio" name="q28" value="d"> A Omissão Própria é considerada mais grave, pois envolve um comportamento ativo do agente em descumprir a norma.</li>
+                <li><input type="radio" name="q28" value="e"> A Omissão Imprópria só se configura quando o agente tem a intenção de causar o resultado, mas se omite.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A Omissão Imprópria (Comissivo por Omissão) ocorre quando o agente, tendo o dever legal de agir, se omite, sendo responsabilizado como se tivesse causado o resultado.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b" id="29">
+            <h3>29) Quais são os requisitos para a configuração da Omissão Imprópria?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q29" value="a"> O agente deve ter agido de forma negativa, impedindo o resultado.</li>
+                <li><input type="radio" name="q29" value="b"> O agente deve ter poder concreto de agir, obrigação legal de agir e posição de garantidor.</li>
+                <li><input type="radio" name="q29" value="c"> O agente deve agir diretamente para evitar o dano, sem necessidade de relação com a vítima.</li>
+                <li><input type="radio" name="q29" value="d"> O agente deve ter a intenção de causar o resultado, mas se omite.</li>
+                <li><input type="radio" name="q29" value="e"> O agente deve ser legalmente proibido de agir e, ainda assim, não agir para evitar o resultado.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A Omissão Imprópria ocorre quando o agente tem o poder de agir, a obrigação de agir e uma posição de responsabilidade sobre a vítima, mas se omite, sendo responsabilizado como se tivesse praticado a ação.</div>
+        </div>
+        <div class="question-box" data-answer="e" id="30">
+            <h3>30) Em que situação a conduta não é considerada penalmente relevante, excluindo a tipicidade do crime?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q30" value="a"> Quando há dolo do agente em praticar a ação.</li>
+                <li><input type="radio" name="q30" value="b"> Quando o agente age sob a influência de uma emoção intensa, mas com controle da vontade.</li>
+                <li><input type="radio" name="q30" value="c"> Quando o agente comete o crime em legítima defesa.</li>
+                <li><input type="radio" name="q30" value="d"> Quando há uma intenção maliciosa, mas o ato é praticado em situações extremas.</li>
+                <li><input type="radio" name="q30" value="e"> Quando não há conduta penalmente relevante, como no ato reflexo ou força maior.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A conduta pode ser excluída quando não é penalmente relevante, como no caso de ato reflexo ou força maior, onde o agente não tem controle voluntário sobre a ação.</div>
+        </div>
+        
+        <div class="question-box" data-answer="a" id="31">
+            <h3>31) O que caracteriza um Ato Reflexo no Direito Penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q31" value="a"> É uma resposta biológica involuntária, sem controle da vontade do agente.</li>
+                <li><input type="radio" name="q31" value="b"> É uma ação tomada sob intenso estado emocional, mas com controle da vontade.</li>
+                <li><input type="radio" name="q31" value="c"> O ato reflexo é considerado sempre uma ação criminosa, pois o agente tem controle sobre a sua vontade.</li>
+                <li><input type="radio" name="q31" value="d"> Ato reflexo ocorre em situações de coação moral irresistível.</li>
+                <li><input type="radio" name="q31" value="e"> Ato reflexo pode ser um ato premeditado, mas ocorre sem controle emocional.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Ato Reflexo é uma resposta involuntária do corpo, sem controle da vontade, como reações biológicas, que excluem a tipicidade do crime.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d" id="32">
+            <h3>32) Em que situação ocorre a exclusão da conduta no Direito Penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q32" value="a"> Quando o agente comete o crime sem dolo, mas com intenção de prejudicar.</li>
+                <li><input type="radio" name="q32" value="b"> Quando o agente age sob forte impulso emocional, mas ainda com controle da vontade.</li>
+                <li><input type="radio" name="q32" value="c"> Quando o agente age em legítima defesa, mas com excesso.</li>
+                <li><input type="radio" name="q32" value="d"> Quando o agente age sob coação física irresistível, excluindo a conduta voluntária.</li>
+                <li><input type="radio" name="q32" value="e"> Quando o agente age em erro de tipo, mas com intenção criminosa.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A coação física irresistível exclui a conduta, pois o agente não tem controle sobre a ação, não havendo ação voluntária.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b" id="33">
+            <h3>33) Qual a diferença entre Coação Física Irresistível e Coação Moral Irresistível no Direito Penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q33" value="a"> A Coação Física Irresistível exclui a conduta, enquanto a Coação Moral Irresistível exclui a culpabilidade.</li>
+                <li><input type="radio" name="q33" value="b"> A Coação Moral Irresistível exclui a conduta, enquanto a Coação Física Irresistível exclui a culpabilidade.</li>
+                <li><input type="radio" name="q33" value="c"> Ambas excluem a conduta, mas não afetam a culpabilidade do agente.</li>
+                <li><input type="radio" name="q33" value="d"> Ambas excluem a culpabilidade do agente, mas não afetam a conduta.</li>
+                <li><input type="radio" name="q33" value="e"> Ambas excluem tanto a conduta quanto a culpabilidade do agente.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A Coação Física Irresistível exclui a conduta, pois não há ação voluntária do agente, enquanto a Coação Moral Irresistível exclui a culpabilidade, mas a conduta ainda é praticada.</div>
+        </div>
+        <div class="question-box" data-answer="a" id="34">
+            <h3>34) O que caracteriza um Crime Material no Direito Penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q34" value="a"> Exige um resultado naturalístico, como a morte de uma vítima no homicídio.</li>
+                <li><input type="radio" name="q34" value="b"> Não exige resultado material, sendo suficiente o simples ato praticado.</li>
+                <li><input type="radio" name="q34" value="c"> O crime se consuma independentemente do resultado, como no porte ilegal de arma.</li>
+                <li><input type="radio" name="q34" value="d"> A consumação ocorre com a violação de normas, sem que haja qualquer consequência concreta.</li>
+                <li><input type="radio" name="q34" value="e"> Exige apenas a violação da norma penal, sem necessidade de um resultado concreto.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Crime Material exige um resultado concreto, como a morte de uma vítima no homicídio, para que o crime seja consumado.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b" id="35">
+            <h3>35) Qual a principal característica de um Crime Formal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q35" value="a"> Exige a ocorrência de um resultado material para que o crime seja consumado.</li>
+                <li><input type="radio" name="q35" value="b"> Dispensa a ocorrência de um resultado material, sendo consumado apenas com o ato praticado.</li>
+                <li><input type="radio" name="q35" value="c"> O crime só é consumado com a violação de uma norma penal específica.</li>
+                <li><input type="radio" name="q35" value="d"> O crime exige a intenção de causar um resultado material, como no homicídio.</li>
+                <li><input type="radio" name="q35" value="e"> A consumação ocorre quando a vítima sofre danos irreversíveis.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Crime Formal é consumado com o ato praticado, mesmo que o resultado esperado não ocorra, como no caso da extorsão mediante sequestro.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c" id="36">
+            <h3>36) O que define um Crime de Mera Conduta?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q36" value="a"> Exige a ocorrência de um resultado material para ser consumado.</li>
+                <li><input type="radio" name="q36" value="b"> Exige a prática de um ato físico específico, com a violação de uma norma penal.</li>
+                <li><input type="radio" name="q36" value="c"> Não há resultado material; a violação da norma penal por si só configura o crime.</li>
+                <li><input type="radio" name="q36" value="d"> O crime se consuma apenas quando há danos reais à vítima.</li>
+                <li><input type="radio" name="q36" value="e"> O crime se consuma apenas quando há um impacto direto no bem jurídico protegido.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">No Crime de Mera Conduta, não há necessidade de um resultado material. O simples fato de violar a norma penal é suficiente para a consumação do crime.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d" id="37">
+            <h3>37) O que é o Nexo de Causalidade no Direito Penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q37" value="a"> A relação direta entre o crime e a punição do agente.</li>
+                <li><input type="radio" name="q37" value="b"> A ligação entre a conduta do agente e a consequência do crime.</li>
+                <li><input type="radio" name="q37" value="c"> A relação entre a vítima e o agente no momento da execução do crime.</li>
+                <li><input type="radio" name="q37" value="d"> A conexão entre a ação do agente e o resultado do crime, sem o qual não há imputação penal.</li>
+                <li><input type="radio" name="q37" value="e"> A relação entre os antecedentes do agente e a tipificação do crime.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Nexo de Causalidade é a ligação entre a conduta do agente e o resultado do crime. Sem essa relação, o agente não pode ser responsabilizado pelo resultado.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e" id="38">
+            <h3>38) O que ocorre quando há uma Causa Superveniente Relativamente Independente no Direito Penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q38" value="a"> O agente é responsável pelo resultado final, pois ele originou a situação.</li>
+                <li><input type="radio" name="q38" value="b"> O agente responde pela consequência, mesmo que uma nova causa tenha surgido depois de sua conduta.</li>
+                <li><input type="radio" name="q38" value="c"> O resultado final não é atribuído ao agente, já que um fator externo e independente causou a consequência.</li>
+                <li><input type="radio" name="q38" value="d"> A causa superveniente não afeta a imputação penal, já que o agente deve ser responsabilizado pelo crime.</li>
+                <li><input type="radio" name="q38" value="e"> Se uma causa superveniente ocorre após a conduta, o agente não pode ser responsabilizado pelo resultado final.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Quando uma Causa Superveniente Relativamente Independente ocorre após a conduta do agente e sozinha causa o resultado, o agente não é responsabilizado pelo resultado final.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c" id="39">
+            <h3>39) Qual a diferença entre Crime Material e Crime Formal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q39" value="a"> O Crime Formal exige um resultado material para ser consumado.</li>
+                <li><input type="radio" name="q39" value="b"> O Crime Material se consuma apenas com a ocorrência de um resultado formal.</li>
+                <li><input type="radio" name="q39" value="c"> O Crime Material exige um resultado naturalístico, enquanto o Crime Formal não exige o resultado material para sua consumação.</li>
+                <li><input type="radio" name="q39" value="d"> O Crime Formal exige apenas a violação de uma norma penal, sem a necessidade de ato praticado.</li>
+                <li><input type="radio" name="q39" value="e"> O Crime de Mera Conduta é um tipo de Crime Formal.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Crime Material exige um resultado naturalístico (como a morte em homicídio), enquanto o Crime Formal se consuma com o ato praticado, independentemente do resultado.</div>
+        </div>
+        <div class="question-box" data-answer="a" id="40">
+            <h3>40) O que ocorre quando a causa superveniente é a única responsável pelo resultado do crime?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q40" value="a"> O agente não responde pelo resultado, pois a causa superveniente foi a única responsável.</li>
+                <li><input type="radio" name="q40" value="b"> O agente responde integralmente pelo resultado, pois a causa superveniente não afeta a imputação penal.</li>
+                <li><input type="radio" name="q40" value="c"> O agente responde pelo resultado apenas se a causa superveniente não tiver qualquer relação com o crime original.</li>
+                <li><input type="radio" name="q40" value="d"> O agente é responsabilizado apenas pela lesão inicial, não pela consequência final.</li>
+                <li><input type="radio" name="q40" value="e"> O agente responde pelo resultado mesmo que a causa superveniente tenha sido a única responsável pela consequência final.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Se a causa superveniente for a única responsável pelo resultado, o agente não responde pelo resultado final. Porém, se ela apenas contribui para o resultado, o agente ainda pode ser responsabilizado.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b" id="41">
+            <h3>41) Qual é a principal característica do Elemento Subjetivo do Tipo no Direito Penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q41" value="a"> Refere-se à forma como o agente executa fisicamente a conduta, sem considerar a intenção.</li>
+                <li><input type="radio" name="q41" value="b"> Refere-se à intenção do agente, composta pelos elementos cognitivo e volitivo.</li>
+                <li><input type="radio" name="q41" value="c"> Refere-se à legalidade da conduta, sem considerar a intenção do agente.</li>
+                <li><input type="radio" name="q41" value="d"> Refere-se apenas à vontade do agente, desconsiderando a consciência do que está acontecendo.</li>
+                <li><input type="radio" name="q41" value="e"> Refere-se exclusivamente ao resultado desejado pelo agente, sem incluir a sua vontade.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Elemento Subjetivo do Tipo refere-se à intenção do agente, composta pelo Elemento Cognitivo (consciência da conduta e resultado) e o Elemento Volitivo (vontade de realizar a conduta).</div>
+        </div>
+        
+        <div class="question-box" data-answer="c" id="42">
+            <h3>42) Qual é a diferença entre Dolo e Culpa no Direito Penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q42" value="a"> O dolo ocorre quando o agente causa o resultado sem querer, enquanto a culpa ocorre quando o agente tem a intenção de causar o resultado.</li>
+                <li><input type="radio" name="q42" value="b"> O dolo é sempre caracterizado pela intenção direta de causar o resultado, enquanto a culpa ocorre por imprudência, negligência ou imperícia.</li>
+                <li><input type="radio" name="q42" value="c"> O dolo ocorre quando o agente não tem intenção, mas causa o resultado por imprudência ou negligência, enquanto a culpa é uma forma de intenção.</li>
+                <li><input type="radio" name="q42" value="d"> A culpa ocorre apenas quando o agente age sem qualquer controle sobre a sua conduta, enquanto o dolo é caracterizado pela execução consciente do crime.</li>
+                <li><input type="radio" name="q42" value="e"> A culpa é caracterizada pela intenção de produzir um resultado, enquanto o dolo não envolve qualquer intenção do agente.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O dolo ocorre quando o agente tem a intenção de causar o resultado ou assume o risco de produzi-lo. A culpa ocorre quando o agente não deseja o resultado, mas o causa por imprudência, negligência ou imperícia.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d" id="43">
+            <h3>43) Qual é a característica do Dolo Direto no Direito Penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q43" value="a"> O agente tem a vontade consciente de produzir um resultado, mas não o deseja diretamente.</li>
+                <li><input type="radio" name="q43" value="b"> O agente deseja causar o resultado, mas de maneira indireta.</li>
+                <li><input type="radio" name="q43" value="c"> O agente age com dolo, mas sem a intenção de produzir o resultado diretamente.</li>
+                <li><input type="radio" name="q43" value="d"> O agente tem a vontade consciente de produzir o resultado criminoso, como no caso de atirar em alguém com a intenção de matá-lo.</li>
+                <li><input type="radio" name="q43" value="e"> O agente deseja o resultado, mas acredita que não será alcançado devido a circunstâncias externas.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Dolo Direto ocorre quando o agente tem a vontade consciente de produzir diretamente o resultado criminoso, como no exemplo de atirar em alguém com a intenção de matá-lo.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e" id="44">
+            <h3>44) Qual das alternativas descreve corretamente um exemplo de Dolo?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q44" value="a"> Um agente que atropela alguém sem querer enquanto dirige em alta velocidade.</li>
+                <li><input type="radio" name="q44" value="b"> Um agente que comete um homicídio por negligência, sem intenção de matar.</li>
+                <li><input type="radio" name="q44" value="c"> Um agente que causa um dano a outra pessoa por acidente, sem qualquer intenção de prejudicar.</li>
+                <li><input type="radio" name="q44" value="d"> Um agente que furta algo sem perceber que está cometendo um crime.</li>
+                <li><input type="radio" name="q44" value="e"> Um agente que atira em alguém com a intenção de matá-lo.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Dolo ocorre quando o agente deseja diretamente o resultado ou assume o risco de produzi-lo. No exemplo, o agente atira em alguém com a intenção de matá-lo, caracterizando dolo.</div>
+        </div>
+        <div class="question-box" data-answer="a" id="45">
+            <h3>45) O que caracteriza o Dolo Eventual no Direito Penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q45" value="a"> O agente prevê o resultado, mas aceita o risco de que ele aconteça, sem querer diretamente o resultado.</li>
+                <li><input type="radio" name="q45" value="b"> O agente tem a intenção direta de causar o resultado, mas não assume o risco de sua ocorrência.</li>
+                <li><input type="radio" name="q45" value="c"> O agente não tem consciência do risco, mas o aceita por acidente.</li>
+                <li><input type="radio" name="q45" value="d"> O agente não tem previsão do resultado, mas acredita que ele pode ocorrer de forma acidental.</li>
+                <li><input type="radio" name="q45" value="e"> O agente deseja que o resultado ocorra de forma inevitável.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">No Dolo Eventual, o agente prevê o resultado, mas assume o risco de que ele aconteça, sem querer diretamente o resultado.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b" id="46">
+            <h3>46) Em relação ao Crime Culposo, qual das alternativas está correta?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q46" value="a"> O crime culposo ocorre quando o agente age com intenção de causar o resultado, mas o causa por imprudência, negligência ou imperícia.</li>
+                <li><input type="radio" name="q46" value="b"> O crime culposo ocorre quando o agente não tem a intenção de cometer o crime, mas causa o resultado por imprudência, negligência ou imperícia.</li>
+                <li><input type="radio" name="q46" value="c"> O crime culposo ocorre apenas quando o agente comete um erro, sem qualquer forma de imprudência.</li>
+                <li><input type="radio" name="q46" value="d"> O crime culposo só ocorre quando o agente tem a intenção, mas age sem cautela.</li>
+                <li><input type="radio" name="q46" value="e"> O crime culposo ocorre exclusivamente em situações de negligência.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">No crime culposo, o agente não tem intenção de cometer o crime, mas causa o resultado por imprudência, negligência ou imperícia.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c" id="47">
+            <h3>47) Por que a tentativa não é possível em crimes culposos?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q47" value="a"> A tentativa não é possível porque o agente tem intenção de causar o resultado e o impede acidentalmente.</li>
+                <li><input type="radio" name="q47" value="b"> A tentativa não é possível porque o agente não sabe que está cometendo um crime.</li>
+                <li><input type="radio" name="q47" value="c"> A tentativa não é possível porque, no crime culposo, o agente não tem a intenção de cometer o crime, logo não há como falar em tentativa.</li>
+                <li><input type="radio" name="q47" value="d"> A tentativa não é possível porque o agente age com dolo eventual e não com culpa.</li>
+                <li><input type="radio" name="q47" value="e"> A tentativa não é possível em crimes culposos porque o agente sempre age com imprudência ou negligência.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A tentativa não é possível em crimes culposos porque o agente não tem intenção de cometer o crime, logo não há como iniciar um iter criminis.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d" id="48">
+            <h3>48) O que caracteriza a Culpa Consciente no Direito Penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q48" value="a"> O agente prevê o resultado e acredita sinceramente que não pode evitá-lo.</li>
+                <li><input type="radio" name="q48" value="b"> O agente não tem consciência do risco, mas acredita que pode evitá-lo.</li>
+                <li><input type="radio" name="q48" value="c"> O agente não prevê o resultado e age sem cautela.</li>
+                <li><input type="radio" name="q48" value="d"> O agente prevê o resultado, mas acredita sinceramente que pode evitá-lo, o que caracteriza culpa consciente.</li>
+                <li><input type="radio" name="q48" value="e"> O agente não tem a intenção de causar o resultado, mas aceita a possibilidade de que ele aconteça.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A Culpa Consciente ocorre quando o agente prevê o resultado, mas acredita sinceramente que pode evitá-lo, o que caracteriza o elemento subjetivo de culpa consciente.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e" id="49">
+            <h3>49) Em que situação a tentativa é possível em crimes dolosos?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q49" value="a"> Quando o agente age com culpa e não com dolo.</li>
+                <li><input type="radio" name="q49" value="b"> Quando o agente não sabe que está cometendo um crime.</li>
+                <li><input type="radio" name="q49" value="c"> Quando o agente tem intenção de causar o resultado, mas não consegue completá-lo por circunstâncias alheias à sua vontade.</li>
+                <li><input type="radio" name="q49" value="d"> Quando o crime não é consumado por erro do agente sobre a tipificação penal.</li>
+                <li><input type="radio" name="q49" value="e"> Quando o agente causa o resultado, mas não o desejava.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A tentativa é possível em crimes dolosos quando o agente tem a intenção de causar o resultado, mas não consegue completá-lo por circunstâncias alheias à sua vontade.</div>
+        </div>
+        
+        <div class="question-box" data-answer="a" id="50">
+            <h3>50) O que caracteriza o crime culposo por imperícia?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q50" value="a"> A imperícia ocorre quando o agente não tem habilidade técnica necessária para evitar o resultado.</li>
+                <li><input type="radio" name="q50" value="b"> A imperícia ocorre quando o agente age de forma imprudente, sem cuidado, para evitar o resultado.</li>
+                <li><input type="radio" name="q50" value="c"> A imperícia ocorre quando o agente age com intenção direta de causar o resultado.</li>
+                <li><input type="radio" name="q50" value="d"> A imperícia ocorre quando o agente é negligente em relação ao risco do resultado.</li>
+                <li><input type="radio" name="q50" value="e"> A imperícia ocorre quando o agente não reconhece a existência do risco no resultado.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A imperícia ocorre quando o agente não tem a habilidade técnica necessária para evitar o resultado, como no exemplo de um médico que comete um erro durante uma cirurgia.</div>
+        </div>
+        <div class="question-box" data-answer="b" id="51">
+            <h3>51) O que caracteriza o Dolo Eventual?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q51" value="a"> O agente não prevê o resultado e age sem cuidado.</li>
+                <li><input type="radio" name="q51" value="b"> O agente prevê o resultado, mas assume o risco de que ele aconteça.</li>
+                <li><input type="radio" name="q51" value="c"> O agente age com intenção de evitar o resultado, mas ele ocorre por descuido.</li>
+                <li><input type="radio" name="q51" value="d"> O agente não tem previsão do risco, mas acredita que ele pode ser evitado.</li>
+                <li><input type="radio" name="q51" value="e"> O agente age conscientemente para produzir o resultado desejado.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">No Dolo Eventual, o agente prevê o resultado, mas assume o risco de que ele aconteça, como no exemplo do motorista que dirige em alta velocidade, ciente do risco de atropelar alguém.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c" id="52">
+            <h3>52) O que é o Resultado Jurídico no Direito Penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q52" value="a"> O resultado jurídico ocorre apenas nos crimes formais, onde não há necessidade de alteração no mundo exterior.</li>
+                <li><input type="radio" name="q52" value="b"> O resultado jurídico ocorre quando há lesão ou perigo de lesão ao bem jurídico protegido, mesmo sem modificação no mundo exterior.</li>
+                <li><input type="radio" name="q52" value="c"> O resultado jurídico só ocorre quando o agente provoca uma mudança concreta no mundo exterior.</li>
+                <li><input type="radio" name="q52" value="d"> O resultado jurídico não se aplica aos crimes de mera conduta, como o porte ilegal de arma.</li>
+                <li><input type="radio" name="q52" value="e"> O resultado jurídico é irrelevante em crimes materiais, pois estes se baseiam em danos concretos.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Resultado Jurídico ocorre quando há violação da norma penal, seja por lesão ou perigo de lesão ao bem jurídico protegido, mesmo sem modificação no mundo exterior.</div>
+        </div>
+        
+        <div class="question-box" data-answer="a" id="53">
+            <h3>53) O que caracteriza um Resultado Naturalístico no crime?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q53" value="a"> O Resultado Naturalístico representa uma modificação perceptível no mundo exterior causada pela conduta do agente.</li>
+                <li><input type="radio" name="q53" value="b"> O Resultado Naturalístico ocorre apenas em crimes formais, sem a necessidade de qualquer alteração no mundo real.</li>
+                <li><input type="radio" name="q53" value="c"> O Resultado Naturalístico é irrelevante para a caracterização do crime de porte ilegal de arma de fogo.</li>
+                <li><input type="radio" name="q53" value="d"> O Resultado Naturalístico ocorre apenas em crimes de mera conduta, como o porte de armas.</li>
+                <li><input type="radio" name="q53" value="e"> O Resultado Naturalístico é uma categoria específica dos crimes culposos.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Resultado Naturalístico ocorre quando há uma mudança concreta no mundo exterior provocada pela conduta do agente, como no homicídio, onde a morte da vítima é o resultado naturalístico.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d" id="54">
+            <h3>54) O que caracteriza a fase de Cogitação no Iter Criminis?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q54" value="a"> A fase de Cogitação ocorre quando o agente começa a praticar o crime, já com a intenção de causar o resultado.</li>
+                <li><input type="radio" name="q54" value="b"> A fase de Cogitação é a fase onde o agente, já em execução, pensa sobre o crime que está praticando.</li>
+                <li><input type="radio" name="q54" value="c"> A fase de Cogitação é a preparação do agente para cometer o crime, sem qualquer intenção de agir.</li>
+                <li><input type="radio" name="q54" value="d"> A fase de Cogitação é subjetiva, onde o agente apenas pensa no crime, sem ser punido por isso.</li>
+                <li><input type="radio" name="q54" value="e"> A fase de Cogitação envolve o momento em que o agente já começou a praticar o crime e tenta concluir sua ação.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A fase de Cogitação ocorre quando o agente apenas pensa no crime, sem ser punido, pois ainda não há conduta punível.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b" id="55">
+            <h3>55) O que é a Premeditação no Iter Criminis?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q55" value="a"> Premeditação ocorre quando o agente age impulsivamente, sem pensar antes de cometer o crime.</li>
+                <li><input type="radio" name="q55" value="b"> Premeditação ocorre quando o agente planeja o crime antes de executá-lo.</li>
+                <li><input type="radio" name="q55" value="c"> Premeditação ocorre quando o agente começa a cometer o crime, mas muda de ideia e o abandona.</li>
+                <li><input type="radio" name="q55" value="d"> Premeditação é quando o agente comete o crime de forma espontânea, sem planejamento.</li>
+                <li><input type="radio" name="q55" value="e"> Premeditação é a fase em que o agente começa a praticar o crime, sem qualquer intenção de conclusão.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Premeditação ocorre quando o agente planeja o crime antes de executá-lo, uma fase preparatória consciente e planejada.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c" id="56">
+            <h3>56) Qual é a principal diferença entre o Dolo Eventual e a Culpa Consciente?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q56" value="a"> O Dolo Eventual ocorre quando o agente não prevê o risco, enquanto a Culpa Consciente ocorre quando o agente prevê o risco, mas não acredita que o resultado ocorrerá.</li>
+                <li><input type="radio" name="q56" value="b"> O Dolo Eventual e a Culpa Consciente são indistinguíveis no Direito Penal, pois ambos envolvem o risco de resultado.</li>
+                <li><input type="radio" name="q56" value="c"> O Dolo Eventual ocorre quando o agente assume o risco de que o resultado aconteça, enquanto a Culpa Consciente ocorre quando o agente acredita que pode evitar o resultado, mas não o faz.</li>
+                <li><input type="radio" name="q56" value="d"> A Culpa Consciente ocorre apenas quando o agente não tem conhecimento do risco e o Dolo Eventual ocorre quando o agente age de forma imprudente.</li>
+                <li><input type="radio" name="q56" value="e"> O Dolo Eventual e a Culpa Consciente não possuem diferença no contexto de um crime material.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A principal diferença é que o Dolo Eventual ocorre quando o agente prevê o risco e aceita, enquanto a Culpa Consciente ocorre quando o agente acredita sinceramente que pode evitar o risco, mas não o faz.</div>
+        </div>
+        <div class="question-box" data-answer="c" id="57">
+            <h3>57) O que caracteriza os Atos Preparatórios no Direito Penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q57" value="a"> Os Atos Preparatórios são sempre puníveis, pois indicam a intenção de cometer o crime.</li>
+                <li><input type="radio" name="q57" value="b"> Atos Preparatórios são puníveis apenas quando o agente já executa a infração penal.</li>
+                <li><input type="radio" name="q57" value="c"> Atos Preparatórios, em regra, não são puníveis, exceto se o ato for um crime autônomo, como o porte ilegal de arma.</li>
+                <li><input type="radio" name="q57" value="d"> Atos Preparatórios são puníveis quando o crime não é consumado, mesmo que o agente ainda não tenha iniciado a execução.</li>
+                <li><input type="radio" name="q57" value="e"> Atos Preparatórios se referem a ações realizadas após o crime ter sido consumado.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Os Atos Preparatórios, em regra, não são puníveis, mas se constituírem crime autônomo, como o porte ilegal de arma, são puníveis.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b" id="58">
+            <h3>58) O que caracteriza a fase de Execução no crime?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q58" value="a"> A fase de Execução ocorre quando o agente já consumou o crime e as consequências estão em andamento.</li>
+                <li><input type="radio" name="q58" value="b"> A fase de Execução é quando o agente inicia a prática da infração penal, sendo já punível, ainda que o resultado não tenha ocorrido.</li>
+                <li><input type="radio" name="q58" value="c"> A fase de Execução é quando o agente apenas planeja o crime, sem ainda tomar nenhuma atitude.</li>
+                <li><input type="radio" name="q58" value="d"> A fase de Execução é o momento em que o crime já está completamente concluído, sem a possibilidade de tentativa.</li>
+                <li><input type="radio" name="q58" value="e"> A fase de Execução ocorre apenas quando o resultado final do crime é concretizado.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A fase de Execução ocorre quando o agente começa a praticar a infração penal, sendo punível mesmo que o resultado ainda não tenha sido atingido.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d" id="59">
+            <h3>59) Quando ocorre a Consumação de um crime?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q59" value="a"> A Consumação do crime ocorre no momento em que o agente apenas inicia a ação, sem completar a infração.</li>
+                <li><input type="radio" name="q59" value="b"> A Consumação do crime ocorre quando o agente faz os preparativos necessários para a prática do crime, mas não executa a ação.</li>
+                <li><input type="radio" name="q59" value="c"> A Consumação do crime ocorre quando o agente não tem mais chance de evitar o crime e o resultado já está consumado.</li>
+                <li><input type="radio" name="q59" value="d"> A Consumação do crime ocorre quando o agente atinge o objetivo do crime, realizando a ação prevista pela norma penal.</li>
+                <li><input type="radio" name="q59" value="e"> A Consumação do crime ocorre quando o agente inicia a execução do crime, mas não obtém sucesso na conclusão do ato.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A Consumação do crime ocorre quando o agente atinge o objetivo do crime, realizando a ação prevista pela norma penal, como no roubo, em que a posse do bem mediante grave ameaça consuma o crime.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c" id="60">
+            <h3>60) O que caracteriza o Exaurimento no contexto de um crime?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q60" value="a"> O Exaurimento ocorre antes da consumação do crime e implica na punição do agente pelos atos preparatórios.</li>
+                <li><input type="radio" name="q60" value="b"> O Exaurimento ocorre quando o crime é consumado e, após isso, o agente não sofre mais punições.</li>
+                <li><input type="radio" name="q60" value="c"> O Exaurimento refere-se às consequências pós-consumação do crime, sendo, em regra, não punível, exceto se previsto pela lei.</li>
+                <li><input type="radio" name="q60" value="d"> O Exaurimento ocorre apenas nos crimes de mera conduta, onde não há alteração concreta no mundo exterior.</li>
+                <li><input type="radio" name="q60" value="e"> O Exaurimento é quando o crime ainda não foi consumado, mas a punição começa a ser aplicada.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Exaurimento refere-se às consequências pós-consumação do crime, sendo, em regra, não punível, mas pode ser punível se assim estiver previsto pela lei.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b" id="61">
+            <h3>61) O que caracteriza um Crime Permanente?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q61" value="a"> O Crime Permanente é aquele que ocorre uma única vez e a infração não se prolonga no tempo.</li>
+                <li><input type="radio" name="q61" value="b"> O Crime Permanente é aquele em que a consumação perdura no tempo até que o agente cesse a infração ou a situação ilícita.</li>
+                <li><input type="radio" name="q61" value="c"> O Crime Permanente é sempre punido mais severamente do que os outros tipos de crime.</li>
+                <li><input type="radio" name="q61" value="d"> O Crime Permanente ocorre apenas quando o agente realiza uma ação contínua que só é considerada crime depois de completada.</li>
+                <li><input type="radio" name="q61" value="e"> O Crime Permanente ocorre apenas quando o crime é consumado em um curto espaço de tempo.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Crime Permanente é aquele cuja consumação perdura no tempo, como o crime de sequestro, que continua até a libertação da vítima.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d" id="62">
+            <h3>62) Qual é a principal característica dos crimes autônomos nos Atos Preparatórios?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q62" value="a"> Crimes autônomos nos Atos Preparatórios não são puníveis, independentemente de sua natureza.</li>
+                <li><input type="radio" name="q62" value="b"> Crimes autônomos nos Atos Preparatórios são puníveis apenas quando o agente já iniciou a execução do crime.</li>
+                <li><input type="radio" name="q62" value="c"> Crimes autônomos nos Atos Preparatórios sempre resultam em punições severas, mesmo que o crime não tenha sido consumado.</li>
+                <li><input type="radio" name="q62" value="d"> Crimes autônomos nos Atos Preparatórios são puníveis, como o porte ilegal de arma de fogo, por serem considerados infrações próprias.</li>
+                <li><input type="radio" name="q62" value="e"> Crimes autônomos nos Atos Preparatórios não geram punição, pois são considerados apenas preparatórios e não infracionais.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Crimes autônomos nos Atos Preparatórios são puníveis, como o porte ilegal de arma de fogo, por serem considerados infrações próprias e independentes.</div>
+        </div>
+        <div class="question-box" data-answer="c" id="63">
+            <h3>63) O que caracteriza o Crime Continuado?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q63" value="a"> O Crime Continuado ocorre quando o agente comete diversos crimes de forma autônoma, sem qualquer relação entre eles.</li>
+                <li><input type="radio" name="q63" value="b"> O Crime Continuado ocorre quando o agente comete um crime em um longo período de tempo e é tratado como se fosse um só crime.</li>
+                <li><input type="radio" name="q63" value="c"> O Crime Continuado ocorre quando o agente comete vários crimes de forma autônoma, mas são tratados como um único crime devido à ficção jurídica.</li>
+                <li><input type="radio" name="q63" value="d"> O Crime Continuado ocorre quando o agente comete um único crime que se prolonga ao longo do tempo, sem a interrupção de sua execução.</li>
+                <li><input type="radio" name="q63" value="e"> O Crime Continuado ocorre quando o agente pratica crimes habitualmente e é considerado como um crime permanente.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Crime Continuado ocorre quando o agente comete vários crimes de forma autônoma, mas são tratados como um único crime devido à ficção jurídica, como no caso de furtos consecutivos.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b" id="64">
+            <h3>64) O que caracteriza o Crime Habitual?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q64" value="a"> O Crime Habitual é aquele que ocorre de forma pontual e esporádica, sem gerar um padrão de comportamento criminoso.</li>
+                <li><input type="radio" name="q64" value="b"> O Crime Habitual é aquele em que o agente pratica o crime de forma reiterada, formando um hábito de cometer o ilícito.</li>
+                <li><input type="radio" name="q64" value="c"> O Crime Habitual é caracterizado pela prática de crimes de forma esporádica, sem a intenção de estabelecer uma prática criminosa regular.</li>
+                <li><input type="radio" name="q64" value="d"> O Crime Habitual ocorre quando o agente pratica um crime específico, sem repetir o comportamento.</li>
+                <li><input type="radio" name="q64" value="e"> O Crime Habitual é um crime de natureza permanente, com continuidade no tempo até a sua cessação.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Crime Habitual é aquele em que o agente pratica o crime de forma reiterada, formando um hábito, como no caso da prática contínua de tráfico de drogas.</div>
+        </div>
+        
+        <div class="question-box" data-answer="a" id="65">
+            <h3>65) O que caracteriza o Crime Tentado?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q65" value="a"> O Crime Tentado é caracterizado quando o agente tem a intenção de consumar o crime, começa a execução, mas não o consuma por circunstâncias alheias à sua vontade.</li>
+                <li><input type="radio" name="q65" value="b"> O Crime Tentado é aquele em que o agente nunca começa a execução, mas apenas pensa no crime.</li>
+                <li><input type="radio" name="q65" value="c"> O Crime Tentado ocorre quando o agente executa completamente a ação, mas o resultado não é atingido.</li>
+                <li><input type="radio" name="q65" value="d"> O Crime Tentado ocorre quando o agente inicia o crime, mas desiste de sua execução antes da consumação.</li>
+                <li><input type="radio" name="q65" value="e"> O Crime Tentado é caracterizado por um erro na execução, mas o agente consegue completar o crime.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Crime Tentado é caracterizado quando o agente tem a intenção de consumar o crime, começa a execução, mas não o consuma devido a circunstâncias alheias à sua vontade, como no caso do roubo tentado.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c" id="66">
+            <h3>66) O que caracteriza a Desistência Voluntária?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q66" value="a"> A Desistência Voluntária ocorre quando o agente é impedido de concluir o crime por fatores externos ao seu controle.</li>
+                <li><input type="radio" name="q66" value="b"> A Desistência Voluntária ocorre quando o agente continua o crime, mas se arrepende após a consumação do crime.</li>
+                <li><input type="radio" name="q66" value="c"> A Desistência Voluntária ocorre quando o agente interrompe a execução do crime antes de completá-lo, por vontade própria.</li>
+                <li><input type="radio" name="q66" value="d"> A Desistência Voluntária ocorre quando o agente realiza o crime, mas o resultado não se concretiza devido à falha na execução.</li>
+                <li><input type="radio" name="q66" value="e"> A Desistência Voluntária ocorre quando o agente é preso antes de concluir o crime.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A Desistência Voluntária ocorre quando o agente interrompe a execução do crime antes de completá-lo, por vontade própria, como no exemplo de desistir de matar uma vítima antes de agir.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b" id="67">
+            <h3>67) O que caracteriza o Arrependimento Eficaz?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q67" value="a"> O Arrependimento Eficaz ocorre quando o agente interrompe a execução do crime, mas não impede o resultado final.</li>
+                <li><input type="radio" name="q67" value="b"> O Arrependimento Eficaz ocorre quando o agente age para evitar a consumação do crime, mesmo após iniciar a execução.</li>
+                <li><input type="radio" name="q67" value="c"> O Arrependimento Eficaz ocorre quando o agente se arrepende de sua ação, mas já causou o resultado do crime.</li>
+                <li><input type="radio" name="q67" value="d"> O Arrependimento Eficaz ocorre quando o agente tenta evitar o crime, mas não consegue impedir a consumação.</li>
+                <li><input type="radio" name="q67" value="e"> O Arrependimento Eficaz ocorre quando o agente se arrepende após o crime ter sido completamente consumado, sem qualquer ação corretiva.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Arrependimento Eficaz ocorre quando o agente age para evitar a consumação do crime, mesmo após iniciar a execução, como quando o agente se arrepende de disparar contra a vítima e a leva ao hospital.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d" id="68">
+            <h3>68) O que caracteriza o Crime Tentado no Código Penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q68" value="a"> O Crime Tentado é aquele em que o agente desiste de cometer o crime após iniciar a execução.</li>
+                <li><input type="radio" name="q68" value="b"> O Crime Tentado ocorre quando o agente tenta cometer um crime, mas sem a intenção de consumá-lo.</li>
+                <li><input type="radio" name="q68" value="c"> O Crime Tentado ocorre quando o agente não possui intenção de realizar o crime, mas tenta praticá-lo de qualquer maneira.</li>
+                <li><input type="radio" name="q68" value="d"> O Crime Tentado ocorre quando o agente começa a execução do crime, mas não o consuma por fatores fora de seu controle, como no exemplo do roubo tentado.</li>
+                <li><input type="radio" name="q68" value="e"> O Crime Tentado é caracterizado quando o crime é consumado, mas o agente não é punido.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Crime Tentado ocorre quando o agente começa a execução do crime, mas não o consuma por fatores alheios à sua vontade, como no exemplo de tentativa de roubo.</div>
+        </div>
+        <div class="question-box" data-answer="a" id="69">
+            <h3>69) O que caracteriza o Arrependimento Posterior?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q69" value="a"> O Arrependimento Posterior ocorre quando o agente repara o dano causado antes do recebimento da denúncia, resultando em diminuição de pena.</li>
+                <li><input type="radio" name="q69" value="b"> O Arrependimento Posterior ocorre quando o agente desiste voluntariamente de cometer o crime após já tê-lo consumado.</li>
+                <li><input type="radio" name="q69" value="c"> O Arrependimento Posterior é uma causa de aumento de pena, aplicada quando o agente tenta reparar o dano depois do recebimento da denúncia.</li>
+                <li><input type="radio" name="q69" value="d"> O Arrependimento Posterior ocorre quando o agente é preso e confessa o crime.</li>
+                <li><input type="radio" name="q69" value="e"> O Arrependimento Posterior ocorre quando o agente devolve um bem furtado antes de ser formalmente acusado, mas sem redução de pena.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Arrependimento Posterior ocorre quando o agente repara o dano antes do recebimento da denúncia, resultando em diminuição de pena, como quando devolve o bem furtado.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b" id="70">
+            <h3>70) O que caracteriza o Crime Impossível?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q70" value="a"> O Crime Impossível ocorre quando o agente é incapaz de produzir o resultado ilícito, mas isso se deve a uma falha de percepção do agente.</li>
+                <li><input type="radio" name="q70" value="b"> O Crime Impossível ocorre quando há erro sobre o meio ou objeto utilizado, tornando impossível a consumação do crime.</li>
+                <li><input type="radio" name="q70" value="c"> O Crime Impossível ocorre quando o agente tenta cometer um crime, mas é interrompido por uma circunstância alheia à sua vontade.</li>
+                <li><input type="radio" name="q70" value="d"> O Crime Impossível ocorre quando o agente comete um crime, mas o resultado é diferente do pretendido, sem ser punido por isso.</li>
+                <li><input type="radio" name="q70" value="e"> O Crime Impossível ocorre quando o agente comete um erro, mas ainda assim consuma o crime por meio de um meio efetivo.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Crime Impossível ocorre quando há erro sobre o meio ou objeto utilizado, tornando o crime impossível de ser consumado, como no caso de tentar cometer aborto com aspirina.</div>
+        </div>
+        
+        <div class="question-box" data-answer="a" id="71">
+            <h3>71) O que caracteriza o Concurso de Pessoas?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q71" value="a"> O Concurso de Pessoas ocorre quando duas ou mais pessoas se reúnem para cometer um crime, sendo necessária a adesão de vontade de todos os envolvidos até a consumação do delito.</li>
+                <li><input type="radio" name="q71" value="b"> O Concurso de Pessoas ocorre quando o agente pratica um crime com o auxílio de uma pessoa, sem que esta tenha qualquer intenção criminosa.</li>
+                <li><input type="radio" name="q71" value="c"> O Concurso de Pessoas ocorre quando o agente comete um crime sozinho, mas conta com o auxílio de uma pessoa em outra fase do crime.</li>
+                <li><input type="radio" name="q71" value="d"> O Concurso de Pessoas ocorre quando duas ou mais pessoas cometem um crime sem qualquer vínculo entre elas.</li>
+                <li><input type="radio" name="q71" value="e"> O Concurso de Pessoas ocorre quando o agente executa um crime e outras pessoas colaboram, mas sem vontade conjunta.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Concurso de Pessoas ocorre quando duas ou mais pessoas se reúnem para cometer um crime, sendo necessária a adesão de vontade de todos até a consumação do delito.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b" id="72">
+            <h3>72) O que caracteriza o Crime Unissubjetivo no Concurso de Pessoas?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q72" value="a"> O Crime Unissubjetivo é aquele que só pode ser cometido por uma pessoa, mas permite o auxílio de outras para consumação.</li>
+                <li><input type="radio" name="q72" value="b"> O Crime Unissubjetivo é aquele que pode ser praticado por uma ou várias pessoas associadas, sem necessidade de concurso de pessoas.</li>
+                <li><input type="radio" name="q72" value="c"> O Crime Unissubjetivo é caracterizado por crimes em que o agente não pode agir sozinho, sendo necessário sempre o concurso de pessoas.</li>
+                <li><input type="radio" name="q72" value="d"> O Crime Unissubjetivo ocorre quando o crime é cometido por uma pessoa com o auxílio de outra, mas não existe concurso de pessoas.</li>
+                <li><input type="radio" name="q72" value="e"> O Crime Unissubjetivo ocorre quando o agente comete o crime sem a ajuda de outras pessoas, mesmo que o crime seja classificado como plurissubjetivo.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Crime Unissubjetivo é aquele que pode ser praticado por uma ou várias pessoas associadas, sem necessidade de concurso de pessoas, como no homicídio ou furto.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c" id="73">
+            <h3>73) O que caracteriza o Crime Plurissubjetivo no Concurso de Pessoas?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q73" value="a"> O Crime Plurissubjetivo é aquele que pode ser cometido por uma pessoa, mas é mais eficiente quando várias pessoas participam.</li>
+                <li><input type="radio" name="q73" value="b"> O Crime Plurissubjetivo ocorre quando o crime é praticado por várias pessoas, mas não é necessário o concurso de pessoas.</li>
+                <li><input type="radio" name="q73" value="c"> O Crime Plurissubjetivo é aquele que necessariamente envolve concurso de pessoas, ou seja, não pode ser praticado por apenas uma pessoa.</li>
+                <li><input type="radio" name="q73" value="d"> O Crime Plurissubjetivo ocorre quando várias pessoas cometem crimes autônomos, sem qualquer vínculo entre elas.</li>
+                <li><input type="radio" name="q73" value="e"> O Crime Plurissubjetivo é aquele que só pode ser praticado por uma pessoa, mas envolve várias fases do crime em que outras pessoas colaboram.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Crime Plurissubjetivo é aquele que necessariamente envolve concurso de pessoas, como no caso da associação criminosa.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d" id="74">
+            <h3>74) Qual é a consequência jurídica do Crime Impossível?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q74" value="a"> O Crime Impossível é punido como se fosse um crime consumado, mesmo que o resultado não seja alcançado.</li>
+                <li><input type="radio" name="q74" value="b"> O Crime Impossível resulta em uma pena mais grave devido à tentativa frustrada.</li>
+                <li><input type="radio" name="q74" value="c"> O Crime Impossível resulta em absolvição do agente, pois o crime não pode ser consumado devido a um erro sobre o meio ou objeto.</li>
+                <li><input type="radio" name="q74" value="d"> O Crime Impossível é considerado um crime consumado, mas com uma penalização reduzida.</li>
+                <li><input type="radio" name="q74" value="e"> O Crime Impossível é tratado da mesma forma que o crime tentado, com penalização parcial.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Crime Impossível resulta em absolvição do agente, pois o crime não pode ser consumado devido a um erro sobre o meio ou objeto, como no caso de tentativa de aborto com um meio ineficaz.</div>
+        </div>
+        <div class="question-box" data-answer="a" id="75">
+            <h3>75) O que caracteriza o Concurso de Pessoas Eventual?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q75" value="a"> O Concurso de Pessoas Eventual ocorre quando a cooperação entre os envolvidos é ocasional e não planejada.</li>
+                <li><input type="radio" name="q75" value="b"> O Concurso de Pessoas Eventual ocorre quando a participação de várias pessoas é imprescindível para a prática do crime.</li>
+                <li><input type="radio" name="q75" value="c"> O Concurso de Pessoas Eventual caracteriza-se pela cooperação planejada entre os envolvidos.</li>
+                <li><input type="radio" name="q75" value="d"> O Concurso de Pessoas Eventual ocorre apenas em crimes de grande proporção, como roubos ou homicídios.</li>
+                <li><input type="radio" name="q75" value="e"> O Concurso de Pessoas Eventual ocorre quando o crime é cometido por uma única pessoa e outras apenas ajudam posteriormente.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Concurso de Pessoas Eventual ocorre quando a cooperação entre os envolvidos é ocasional e não planejada, ou seja, a participação pode ser fortuita.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b" id="76">
+            <h3>76) O que caracteriza o Concurso de Pessoas Necessário?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q76" value="a"> O Concurso de Pessoas Necessário ocorre quando a cooperação entre os envolvidos é eventual e não essencial.</li>
+                <li><input type="radio" name="q76" value="b"> O Concurso de Pessoas Necessário ocorre quando a participação de várias pessoas é imprescindível para a prática do crime.</li>
+                <li><input type="radio" name="q76" value="c"> O Concurso de Pessoas Necessário caracteriza-se pela colaboração de várias pessoas, mas sem a necessidade de que todas participem ativamente.</li>
+                <li><input type="radio" name="q76" value="d"> O Concurso de Pessoas Necessário acontece quando um único participante pode cometer o crime sozinho.</li>
+                <li><input type="radio" name="q76" value="e"> O Concurso de Pessoas Necessário ocorre em crimes que dependem de uma execução conjunta para que o delito se consuma.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Concurso de Pessoas Necessário ocorre quando a participação de várias pessoas é imprescindível para a prática do crime, ou seja, o crime não poderia ser consumado sem a colaboração de mais de uma pessoa.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c" id="77">
+            <h3>77) O que dispõe o Art. 29, § 1º do Código Penal sobre a participação no crime?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q77" value="a"> O Art. 29, § 1º do Código Penal afirma que a pena do participante deve ser aumentada de um sexto a um terço, caso sua participação tenha sido de menor importância.</li>
+                <li><input type="radio" name="q77" value="b"> O Art. 29, § 1º do Código Penal estabelece que a pena será diminuída de um sexto a um terço quando a participação do agente for relevante para a consumação do crime.</li>
+                <li><input type="radio" name="q77" value="c"> O Art. 29, § 1º do Código Penal diz que, se a participação foi de menor importância, a pena pode ser diminuída de um sexto a um terço.</li>
+                <li><input type="radio" name="q77" value="d"> O Art. 29, § 1º do Código Penal estabelece que a pena do agente será reduzida pela metade quando sua participação for irrelevante.</li>
+                <li><input type="radio" name="q77" value="e"> O Art. 29, § 1º do Código Penal determina aumento de pena para o agente que contribuiu com uma participação irrelevante no crime.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Art. 29, § 1º do Código Penal determina que, caso a participação do agente tenha sido de menor importância, a pena pode ser diminuída de um sexto a um terço.</div>
+        </div>
+        
+        <div class="question-box" data-answer="a" id="78">
+            <h3>78) Qual teoria o Código Penal Brasileiro adota em relação ao Concurso de Pessoas?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q78" value="a"> O Código Penal adota a teoria monista, onde um único crime é atribuído a todos os participantes, independentemente das diferentes condutas.</li>
+                <li><input type="radio" name="q78" value="b"> O Código Penal adota a teoria pluralista, onde cada participante é responsabilizado por um crime distinto, conforme sua conduta individual.</li>
+                <li><input type="radio" name="q78" value="c"> O Código Penal adota a teoria da participação, onde todos os envolvidos são punidos de forma proporcional ao seu envolvimento.</li>
+                <li><input type="radio" name="q78" value="d"> O Código Penal adota a teoria mista, onde a responsabilidade do agente é determinada por uma combinação das teorias monista e pluralista.</li>
+                <li><input type="radio" name="q78" value="e"> O Código Penal adota a teoria de coautoria, onde apenas os agentes que praticaram o crime em sua totalidade são punidos.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Código Penal adota a teoria monista, onde um único crime é atribuído a todos os participantes, independentemente das diferentes condutas.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b" id="79">
+            <h3>79) O que é considerado a Ilicitude ou Antijuridicidade de um crime, de acordo com a teoria da Ilicitude?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q79" value="a"> A Ilicitude ocorre quando o agente comete o crime com o intuito de causar dano, mas sem justificativa legal.</li>
+                <li><input type="radio" name="q79" value="b"> A Ilicitude ou Antijuridicidade é a contrariedade da conduta à ordem jurídica, sendo presumida a ilicitude da ação, a não ser que haja uma excludente de ilicitude.</li>
+                <li><input type="radio" name="q79" value="c"> A Ilicitude ocorre quando a conduta do agente é considerada ilícita independentemente de qualquer justificativa legal.</li>
+                <li><input type="radio" name="q79" value="d"> A Ilicitude ocorre quando o agente é condenado por um crime sem qualquer defesa ou possibilidade de excludente de ilicitude.</li>
+                <li><input type="radio" name="q79" value="e"> A Ilicitude é considerada apenas quando o crime é cometido sem qualquer intenção ou culpa do agente.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A Ilicitude ou Antijuridicidade é a contrariedade da conduta à ordem jurídica, sendo presumida a ilicitude da ação, a não ser que haja uma excludente de ilicitude, como a legítima defesa.</div>
+        </div>
+        <div class="question-box" data-answer="a" id="80">
+            <h3>80) O que caracteriza a Excludente de Ilicitude Putativa?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q80" value="a"> A Excludente de Ilicitude Putativa ocorre quando o agente acredita estar agindo de maneira lícita, mas na realidade sua conduta não é.</li>
+                <li><input type="radio" name="q80" value="b"> A Excludente de Ilicitude Putativa ocorre quando o agente age de forma ilícita, mas a lei prevê uma justificação para sua conduta.</li>
+                <li><input type="radio" name="q80" value="c"> A Excludente de Ilicitude Putativa ocorre quando o agente erra sobre os limites da excludente de ilicitude.</li>
+                <li><input type="radio" name="q80" value="d"> A Excludente de Ilicitude Putativa ocorre quando o agente comete um erro de fato, acreditando que sua ação é justificada.</li>
+                <li><input type="radio" name="q80" value="e"> A Excludente de Ilicitude Putativa ocorre apenas em situações onde há legítima defesa ou estado de necessidade.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A Excludente de Ilicitude Putativa ocorre quando o agente acredita estar agindo de maneira lícita, mas sua conduta, na realidade, não é lícita.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b" id="81">
+            <h3>81) O que ocorre no erro de tipo permissivo?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q81" value="a"> O agente erra sobre a ilicitude do fato e, se o erro for evitável, responderá por culpa.</li>
+                <li><input type="radio" name="q81" value="b"> O agente erra sobre elementos fáticos da excludente de ilicitude, acreditando que sua ação é legítima.</li>
+                <li><input type="radio" name="q81" value="c"> O agente erra sobre a existência de um direito legítimo ao cometer o crime, mas não é responsável por isso.</li>
+                <li><input type="radio" name="q81" value="d"> O erro de tipo permissivo ocorre quando o agente, mesmo errando sobre a ilicitude, não é punido se a conduta for evitável.</li>
+                <li><input type="radio" name="q81" value="e"> O erro de tipo permissivo ocorre quando o agente se arrepende imediatamente de sua conduta e evita o resultado ilícito.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O erro de tipo permissivo ocorre quando o agente erra sobre os elementos fáticos da excludente de ilicitude, acreditando que sua ação é legítima.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c" id="82">
+            <h3>82) O que caracteriza o erro de proibição indireto?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q82" value="a"> O agente erra sobre os meios utilizados para a consumação do crime.</li>
+                <li><input type="radio" name="q82" value="b"> O agente erra sobre a existência de um direito legítimo que o justifique a praticar o crime.</li>
+                <li><input type="radio" name="q82" value="c"> O erro de proibição indireto ocorre quando o agente acredita estar em uma situação de excludente de ilicitude, como a legítima defesa, quando, na verdade, não está.</li>
+                <li><input type="radio" name="q82" value="d"> O erro de proibição indireto ocorre quando o agente comete um crime sem saber que o fato é proibido.</li>
+                <li><input type="radio" name="q82" value="e"> O erro de proibição indireto ocorre quando o agente age sem saber que sua ação é ilícita, mas por omissão.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O erro de proibição indireto ocorre quando o agente acredita estar em uma situação de excludente de ilicitude, como a legítima defesa, quando, na realidade, não está.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d" id="83">
+            <h3>83) O que caracteriza o Estado de Necessidade, conforme o Art. 24 do Código Penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q83" value="a"> O Estado de Necessidade ocorre quando alguém pratica um ato para salvar um direito próprio, que foi provocado por sua própria ação.</li>
+                <li><input type="radio" name="q83" value="b"> O Estado de Necessidade ocorre quando alguém pratica um ato para salvar um direito de outra pessoa, causando um dano irracional a alguém.</li>
+                <li><input type="radio" name="q83" value="c"> O Estado de Necessidade ocorre quando alguém pratica um ato para salvar um direito próprio ou alheio, de perigo atual, que não provocou e não podia evitar.</li>
+                <li><input type="radio" name="q83" value="d"> O Estado de Necessidade ocorre quando o agente, diante de um risco iminente, decide sacrificar um direito de outra pessoa para preservar um bem maior.</li>
+                <li><input type="radio" name="q83" value="e"> O Estado de Necessidade ocorre apenas quando o perigo é causado diretamente pela ação do agente, sem relação com direitos de outras pessoas.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Estado de Necessidade ocorre quando alguém pratica um ato para salvar um direito próprio ou alheio, de perigo atual, que não provocou e não podia evitar, sendo irracional exigir o sacrifício desse direito nas circunstâncias.</div>
+        </div>
+        
+        <div class="question-box" data-answer="a" id="84">
+            <h3>84) Se o erro sobre a excludente de ilicitude for evitável, qual será a consequência para o agente?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q84" value="a"> O agente responderá por culpa, se prevista legalmente.</li>
+                <li><input type="radio" name="q84" value="b"> O agente será isento de pena, uma vez que o erro é inevitável.</li>
+                <li><input type="radio" name="q84" value="c"> O agente não responderá por crime algum, já que o erro é considerado irrelevante.</li>
+                <li><input type="radio" name="q84" value="d"> O agente responderá por crime doloso, se houver a intenção de cometer o crime.</li>
+                <li><input type="radio" name="q84" value="e"> O agente será absolvido, sem necessidade de análise de culpa ou dolo.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Se o erro sobre a excludente de ilicitude for evitável, o agente responderá por culpa, caso essa modalidade esteja prevista legalmente.</div>
+        </div>
+        <div class="question-box" data-answer="a" id="85">
+            <h3>85) Qual é a diferença entre o Estado de Necessidade Justificante e o Estado de Necessidade Exculpante?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q85" value="a"> No Estado de Necessidade Justificante, o bem sacrificado é menor que o bem salvo, excluindo a ilicitude. No Estado de Necessidade Exculpante, o bem sacrificado é igual ou maior que o bem salvo, excluindo a culpabilidade.</li>
+                <li><input type="radio" name="q85" value="b"> O Estado de Necessidade Justificante exclui a culpabilidade, enquanto o Estado de Necessidade Exculpante exclui a ilicitude.</li>
+                <li><input type="radio" name="q85" value="c"> O Estado de Necessidade Justificante se aplica apenas a crimes cometidos em legítima defesa, enquanto o Estado de Necessidade Exculpante é um conceito de defesa pessoal.</li>
+                <li><input type="radio" name="q85" value="d"> O Estado de Necessidade Exculpante aplica-se quando o bem sacrificado é menor que o bem salvo, enquanto o Estado de Necessidade Justificante aplica-se em qualquer situação emergencial.</li>
+                <li><input type="radio" name="q85" value="e"> O Estado de Necessidade Justificante ocorre quando a ação é permitida por um dever legal, enquanto o Exculpante é aplicado em situações emergenciais.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Estado de Necessidade Justificante exclui a ilicitude quando o bem sacrificado é menor que o bem salvo, enquanto o Estado de Necessidade Exculpante exclui a culpabilidade quando o bem sacrificado é igual ou maior que o bem salvo.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b" id="86">
+            <h3>86) O que é exigido para o Estrito Cumprimento do Dever Legal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q86" value="a"> O ato deve ser realizado em cumprimento a uma ordem ética ou moral.</li>
+                <li><input type="radio" name="q86" value="b"> O ato deve ser realizado em cumprimento a uma ordem legal, dentro dos limites legais estabelecidos, geralmente por um servidor público.</li>
+                <li><input type="radio" name="q86" value="c"> O ato pode ser praticado sem necessidade de uma ordem legal, desde que em benefício do interesse público.</li>
+                <li><input type="radio" name="q86" value="d"> O ato pode ultrapassar os limites legais estabelecidos, pois a situação de emergência justifica o excesso.</li>
+                <li><input type="radio" name="q86" value="e"> O ato deve ser praticado apenas em situações de extrema urgência, sem necessidade de autorização legal prévia.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Estrito Cumprimento do Dever Legal exige que o ato seja realizado em cumprimento a uma ordem legal, dentro dos limites legais estabelecidos, geralmente por um servidor público.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c" id="87">
+            <h3>87) O que são ofendículos?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q87" value="a"> São objetos utilizados apenas para proteção contra furtos e roubos, sem valor jurídico.</li>
+                <li><input type="radio" name="q87" value="b"> São artifícios usados para a defesa de bens patrimoniais, como alarmes ou dispositivos eletrônicos de segurança.</li>
+                <li><input type="radio" name="q87" value="c"> São objetos ou artifícios utilizados para a defesa pessoal ou da propriedade, como cacos de vidro no muro.</li>
+                <li><input type="radio" name="q87" value="d"> São dispositivos que servem para a prática de crimes, como armas de fogo e explosivos.</li>
+                <li><input type="radio" name="q87" value="e"> São elementos de prova usados em investigações criminais, como ferramentas de arrombamento.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Ofendículos são objetos ou artifícios utilizados para a defesa pessoal ou da propriedade, como cacos de vidro no muro.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d" id="88">
+            <h3>88) O que é a culpabilidade, conforme a teoria tripartite do Código Penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q88" value="a"> A culpabilidade é a análise da prova do crime cometido, considerando as circunstâncias do delito.</li>
+                <li><input type="radio" name="q88" value="b"> A culpabilidade é o juízo sobre a legalidade da conduta do agente, verificando se há algum tipo de defesa legítima.</li>
+                <li><input type="radio" name="q88" value="c"> A culpabilidade é uma análise da moralidade do agente, levando em consideração seus antecedentes criminais.</li>
+                <li><input type="radio" name="q88" value="d"> A culpabilidade é o juízo de reprovação sobre a conduta do autor, considerando sua capacidade de entender o ato e agir conforme a lei.</li>
+                <li><input type="radio" name="q88" value="e"> A culpabilidade é a determinação do tipo penal aplicável a um crime cometido com dolo ou culpa.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A culpabilidade é o juízo de reprovação sobre a conduta do autor, considerando sua capacidade de entender o ato e agir conforme a lei.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e" id="89">
+            <h3>89) O que acontece quando um ato é realizado em estrito cumprimento do dever legal, mas excede os limites legais?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q89" value="a"> O ato será considerado lícito e não implicará em qualquer punição.</li>
+                <li><input type="radio" name="q89" value="b"> O ato será considerado ilícito, mas a punição será atenuada devido ao cumprimento do dever legal.</li>
+                <li><input type="radio" name="q89" value="c"> O ato será considerado legítimo, mas o agente poderá ser punido caso a ação ultrapasse os limites necessários.</li>
+                <li><input type="radio" name="q89" value="d"> O ato será completamente ilegal, independentemente da situação, e o agente será punido com a máxima pena.</li>
+                <li><input type="radio" name="q89" value="e"> O ato será considerado ilícito, e o agente será punido, mesmo que o excesso seja inevitável.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Se o ato exceder os limites legais, ele será considerado ilícito, e o excesso será punido, mesmo que o ato tenha sido realizado em estrito cumprimento de dever legal.</div>
+        </div>
+        <div class="question-box" data-answer="a" id="90">
+            <h3>90) Qual é a diferença fundamental entre a Teoria Bipartite e a Teoria Tripartite do crime?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q90" value="a"> Na Teoria Bipartite, o crime é composto apenas pela tipicidade e ilicitude, e a culpabilidade é um pressuposto para a aplicação da pena. Já na Teoria Tripartite, a culpabilidade é parte da definição do crime.</li>
+                <li><input type="radio" name="q90" value="b"> Na Teoria Bipartite, o crime é composto apenas pela tipicidade e culpabilidade, enquanto na Teoria Tripartite, a ilicitude é dispensável para a aplicação da pena.</li>
+                <li><input type="radio" name="q90" value="c"> A Teoria Bipartite considera que a culpabilidade não é necessária para a definição do crime, enquanto na Teoria Tripartite, a culpabilidade é irrelevante para a classificação do crime.</li>
+                <li><input type="radio" name="q90" value="d"> A Teoria Bipartite engloba a culpabilidade como parte essencial da definição do crime, mas a Teoria Tripartite não a reconhece como tal.</li>
+                <li><input type="radio" name="q90" value="e"> Ambas as teorias afirmam que a culpabilidade é irrelevante para a tipificação do crime, concentrando-se apenas na ilicitude e tipicidade.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A Teoria Bipartite considera o crime como composto por tipicidade e ilicitude, com a culpabilidade sendo um pressuposto para a pena. Já a Teoria Tripartite inclui a culpabilidade como parte integrante da definição do crime.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b" id="91">
+            <h3>91) Qual é o conceito de imputabilidade no direito penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q91" value="a"> A imputabilidade refere-se à capacidade do agente de compreender a ilicitude de seu ato e de agir de acordo com essa compreensão.</li>
+                <li><input type="radio" name="q91" value="b"> A imputabilidade refere-se à incapacidade de um agente em agir conforme as leis, devido a um erro sobre os elementos fáticos do crime.</li>
+                <li><input type="radio" name="q91" value="c"> A imputabilidade trata da capacidade de um agente de se defender judicialmente, sem considerar a sua capacidade de entendimento do crime.</li>
+                <li><input type="radio" name="q91" value="d"> A imputabilidade está relacionada à possibilidade de o agente evitar um crime, desde que ele tenha consciência de sua ação.</li>
+                <li><input type="radio" name="q91" value="e"> A imputabilidade significa a ausência de qualquer capacidade de compreensão do ato, o que exclui a responsabilidade penal de qualquer agente.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A imputabilidade se refere à capacidade do agente de compreender a ilicitude de seu ato e de agir de acordo com essa compreensão.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c" id="92">
+            <h3>92) O que significa "Potencial Consciência da Ilicitude" no contexto da culpabilidade?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q92" value="a"> O agente deve saber que sua conduta é permitida por lei, mas age de maneira contrária por um erro de interpretação.</li>
+                <li><input type="radio" name="q92" value="b"> O agente deve ter a consciência de que sua conduta é ilícita, mas age em uma situação onde a ilicitude é irrelevante.</li>
+                <li><input type="radio" name="q92" value="c"> O agente deve ter consciência de que sua conduta é ilícita e ainda assim realiza a ação, sem qualquer erro sobre a ilicitude.</li>
+                <li><input type="radio" name="q92" value="d"> O agente não precisa ter consciência da ilicitude, sendo irrelevante o erro sobre a legalidade do ato.</li>
+                <li><input type="radio" name="q92" value="e"> O agente erra sobre a licitude do ato, mas pode ser responsabilizado mesmo sem saber da ilicitude.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A Potencial Consciência da Ilicitude se refere ao fato de que o agente deve ter consciência de que sua conduta é ilícita, mas pode não agir de acordo com essa compreensão.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d" id="93">
+            <h3>93) O que é a "Exigibilidade de Conduta Diversa" no contexto da culpabilidade?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q93" value="a"> O agente deve agir de acordo com as exigências morais, mesmo quando não há possibilidade de agir de forma diferente.</li>
+                <li><input type="radio" name="q93" value="b"> O agente não tem necessidade de agir de forma diferente, desde que sua ação não seja estritamente proibida por lei.</li>
+                <li><input type="radio" name="q93" value="c"> O agente deve agir conforme a vontade da sociedade, mas não precisa ter a possibilidade de agir de outra maneira.</li>
+                <li><input type="radio" name="q93" value="d"> O agente deve ter a possibilidade de agir de forma diferente para que sua conduta seja considerada moralmente reprovável e passível de punição.</li>
+                <li><input type="radio" name="q93" value="e"> A exigibilidade de conduta diversa é irrelevante se o agente agir por impulso, sem intenção de infringir a lei.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A Exigibilidade de Conduta Diversa significa que o agente deve ter a possibilidade de agir de forma diferente para que sua conduta seja considerada moralmente reprovável.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e" id="94">
+            <h3>94) O que acontece se algum dos três elementos da culpabilidade (imputabilidade, potencial consciência da ilicitude e exigibilidade de conduta diversa) faltar?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q94" value="a"> O agente poderá ser punido com base em outros fatores, como a gravidade do crime e as circunstâncias.</li>
+                <li><input type="radio" name="q94" value="b"> A ausência de qualquer um desses elementos exclui a imputabilidade, tornando o agente isento de pena.</li>
+                <li><input type="radio" name="q94" value="c"> A ausência de um desses elementos não altera a culpabilidade, mas diminui a pena aplicável.</li>
+                <li><input type="radio" name="q94" value="d"> A ausência de qualquer um desses elementos reduz a pena, mas o agente ainda pode ser responsabilizado.</li>
+                <li><input type="radio" name="q94" value="e"> A ausência de qualquer um desses elementos exclui a culpabilidade, e o agente não pode ser punido.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Se algum dos três elementos da culpabilidade faltar, não há culpabilidade, e o agente não poderá ser punido, pois sua conduta não será considerada moralmente reprovável.</div>
+        </div>
+        <div class="question-box" data-answer="a" id="95">
+            <h3>95) O que caracteriza a excludente de culpabilidade por "Inimputabilidade"?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q95" value="a"> A inimputabilidade ocorre quando o agente não tem capacidade de entender o caráter ilícito de sua ação devido a doenças mentais ou distúrbios psicológicos.</li>
+                <li><input type="radio" name="q95" value="b"> A inimputabilidade ocorre quando o agente está consciente da ilicitude de sua ação, mas age de maneira irracional devido a pressões externas.</li>
+                <li><input type="radio" name="q95" value="c"> A inimputabilidade é aplicável quando o agente não tem a intenção de cometer o crime, mas é induzido por outras pessoas.</li>
+                <li><input type="radio" name="q95" value="d"> A inimputabilidade se aplica quando o agente comete o crime por erro de julgamento, mas ainda tem plena consciência da ilicitude do ato.</li>
+                <li><input type="radio" name="q95" value="e"> A inimputabilidade ocorre quando o agente age sob forte pressão emocional, mas ainda possui entendimento da ilicitude de sua conduta.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A inimputabilidade ocorre quando o agente não tem capacidade de entender o caráter ilícito de sua ação devido a doenças mentais ou distúrbios psicológicos.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b" id="96">
+            <h3>96) Qual é a principal diferença entre erro direto e erro indireto no contexto do erro de proibição?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q96" value="a"> O erro direto ocorre quando o agente acredita estar agindo legalmente, enquanto o erro indireto ocorre quando o agente sabe da proibição, mas acredita que há permissão para a conduta.</li>
+                <li><input type="radio" name="q96" value="b"> O erro direto ocorre quando o agente sabe da proibição, mas acredita que há permissão para a conduta, enquanto o erro indireto ocorre quando o agente acredita estar agindo legalmente.</li>
+                <li><input type="radio" name="q96" value="c"> O erro direto envolve um engano sobre a permissão legal para a conduta, enquanto o erro indireto ocorre apenas quando o agente ignora a proibição legal.</li>
+                <li><input type="radio" name="q96" value="d"> O erro direto é relacionado a um desconhecimento completo da norma, enquanto o erro indireto ocorre quando o agente se baseia em informações falsas sobre a conduta.</li>
+                <li><input type="radio" name="q96" value="e"> O erro indireto ocorre quando o agente acredita que sua conduta é legal, mas não considera as consequências jurídicas de seu ato.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">No erro direto, o agente acredita estar agindo legalmente, enquanto no erro indireto, o agente sabe da proibição, mas acredita que há permissão para a conduta.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c" id="97">
+            <h3>97) Qual é o impacto da excludente de culpabilidade por "Obediência Hierárquica"?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q97" value="a"> A obediência hierárquica exclui a ilicitude, pois o agente é isento de responsabilidade penal por seguir ordens superiores.</li>
+                <li><input type="radio" name="q97" value="b"> A obediência hierárquica exclui a culpabilidade, pois o agente age sem intenção criminosa ao seguir ordens superiores legítimas.</li>
+                <li><input type="radio" name="q97" value="c"> A obediência hierárquica pode excluir a culpabilidade, se a ordem superior for legítima, mesmo que o ato tenha resultado em um crime.</li>
+                <li><input type="radio" name="q97" value="d"> A obediência hierárquica não exclui a responsabilidade penal, pois o agente deve sempre avaliar a legalidade da ordem recebida.</li>
+                <li><input type="radio" name="q97" value="e"> A obediência hierárquica exclui a responsabilidade penal de maneira irrestrita, independentemente da natureza da ordem dada.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A obediência hierárquica pode excluir a culpabilidade se a ordem superior for legítima, e o agente não tiver a intenção criminosa.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d" id="98">
+            <h3>98) Qual é a principal diferença entre **Feminicídio** e **Femicídio**?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q98" value="a"> O feminicídio é qualquer homicídio praticado contra a mulher, independentemente do motivo, enquanto o femicídio ocorre apenas por razões do sexo feminino.</li>
+                <li><input type="radio" name="q98" value="b"> O femicídio é um homicídio praticado contra a mulher, independentemente das circunstâncias, enquanto o feminicídio é especificamente por razões de misoginia.</li>
+                <li><input type="radio" name="q98" value="c"> O femicídio é uma forma mais grave de homicídio contra a mulher, enquanto o feminicídio não exige motivações específicas.</li>
+                <li><input type="radio" name="q98" value="d"> O feminicídio ocorre quando o homicídio é praticado contra a mulher por razões do sexo feminino, enquanto o femicídio é qualquer homicídio contra a mulher, sem motivos específicos.</li>
+                <li><input type="radio" name="q98" value="e"> O femicídio é uma forma de homicídio contra a mulher, e o feminicídio é quando o crime é motivado por violência doméstica.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O feminicídio ocorre quando o homicídio é praticado contra a mulher por razões do sexo feminino, enquanto o femicídio é qualquer homicídio contra a mulher, sem motivos específicos.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e" id="99">
+            <h3>99) O que se entende por **aborto** legalmente praticado por médico?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q99" value="a"> O aborto é legal quando realizado por qualquer médico, sem a necessidade de autorização judicial.</li>
+                <li><input type="radio" name="q99" value="b"> O aborto é sempre ilegal, mesmo quando praticado por médico, sem a devida justificativa legal.</li>
+                <li><input type="radio" name="q99" value="c"> O aborto praticado por médico só é legal se houver autorização judicial prévia.</li>
+                <li><input type="radio" name="q99" value="d"> O aborto é legal quando realizado por médico, sem necessidade de autorização judicial, desde que seja justificado por risco à vida da mãe.</li>
+                <li><input type="radio" name="q99" value="e"> O aborto praticado por médico é legal quando realizado dentro das hipóteses previstas na lei, sem a exigência de autorização judicial.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O aborto é legal quando realizado por médico dentro das hipóteses previstas pela lei, sem a exigência de autorização judicial.</div>
+        </div>
+        <div class="question-box" data-answer="a" id="100">
+            <h3>100) O que caracteriza a **calúnia** no Código Penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q100" value="a"> A calúnia é a imputação falsa de um crime a alguém, com o objetivo de ofender a honra objetiva da pessoa.</li>
+                <li><input type="radio" name="q100" value="b"> A calúnia é a ofensa à dignidade ou decoro de alguém, sem imputação de crime específico.</li>
+                <li><input type="radio" name="q100" value="c"> A calúnia é um crime exclusivamente cometido por funcionários públicos em exercício de suas funções.</li>
+                <li><input type="radio" name="q100" value="d"> A calúnia refere-se a qualquer ofensa que prejudique a reputação de alguém, sem envolvimento de imputação criminosa.</li>
+                <li><input type="radio" name="q100" value="e"> A calúnia se refere a ofensas a características pessoais, sem envolvimento de crimes.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A calúnia é a imputação falsa de um crime a alguém, com o objetivo de ofender a honra objetiva da pessoa.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b" id="101">
+            <h3>101) Qual é a principal diferença entre **calúnia** e **denunciação caluniosa**?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q101" value="a"> A calúnia é a imputação falsa de um crime com a intenção de prejudicar a honra, enquanto a denunciação caluniosa envolve a falsa imputação perante autoridades para prejudicar a administração da justiça.</li>
+                <li><input type="radio" name="q101" value="b"> A calúnia é cometida apenas contra a honra subjetiva, enquanto a denunciação caluniosa se refere a ofensas à honra objetiva.</li>
+                <li><input type="radio" name="q101" value="c"> A calúnia não admite tentativa, mas a denunciação caluniosa sempre admite tentativa.</li>
+                <li><input type="radio" name="q101" value="d"> A denunciação caluniosa sempre envolve a imputação de crimes não previstos na legislação penal.</li>
+                <li><input type="radio" name="q101" value="e"> A calúnia é um crime de ação pública, enquanto a denunciação caluniosa é um crime de ação privada.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A calúnia é a imputação falsa de um crime com a intenção de prejudicar a honra, enquanto a denunciação caluniosa envolve a falsa imputação perante autoridades para prejudicar a administração da justiça.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c" id="102">
+            <h3>102) Qual é a pena prevista para o crime de **difamação**?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q102" value="a"> A pena para o crime de difamação é detenção de 1 a 6 meses e multa.</li>
+                <li><input type="radio" name="q102" value="b"> A pena para o crime de difamação é detenção de 3 meses a 1 ano e multa.</li>
+                <li><input type="radio" name="q102" value="c"> A pena para o crime de difamação é prisão de 2 a 5 anos.</li>
+                <li><input type="radio" name="q102" value="d"> A pena para o crime de difamação é multa, sem detenção.</li>
+                <li><input type="radio" name="q102" value="e"> A pena para o crime de difamação é apenas advertência verbal.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A pena para o crime de difamação é detenção de 3 meses a 1 ano e multa, conforme o Art. 139 do Código Penal.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d" id="103">
+            <h3>103) Qual é a principal diferença entre **furto mediante fraude** e **estelionato**?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q103" value="a"> No furto mediante fraude, a vítima não percebe que está sendo enganada, enquanto no estelionato, a vítima entrega o bem ao agente por meio de engano.</li>
+                <li><input type="radio" name="q103" value="b"> No furto mediante fraude, a fraude é utilizada para enganar a vítima, enquanto no estelionato a fraude visa a burlar a vigilância da vítima sem a entrega voluntária do bem.</li>
+                <li><input type="radio" name="q103" value="c"> O furto mediante fraude envolve sempre uma ação de subtração furtiva, enquanto o estelionato é caracterizado por engano pessoal entre as partes.</li>
+                <li><input type="radio" name="q103" value="d"> No furto mediante fraude, a vítima tem sua propriedade subtraída sem perceber, enquanto no estelionato, a vítima é enganada a entregar o bem ao agente.</li>
+                <li><input type="radio" name="q103" value="e"> O furto mediante fraude envolve o uso de violência, enquanto o estelionato é um crime sem violência física.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">No furto mediante fraude, a vítima tem sua propriedade subtraída sem perceber, enquanto no estelionato, a vítima é enganada a entregar o bem ao agente.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e" id="104">
+            <h3>104) Qual é a diferença entre **injúria** e **difamação**?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q104" value="a"> A injúria envolve a imputação de fato ofensivo à reputação de alguém, enquanto a difamação se refere a ofensas à honra subjetiva de uma pessoa.</li>
+                <li><input type="radio" name="q104" value="b"> A injúria envolve ofensas verbais, enquanto a difamação envolve apenas ofensas escritas.</li>
+                <li><input type="radio" name="q104" value="c"> A injúria ofende a honra objetiva, enquanto a difamação ofende a honra subjetiva de alguém.</li>
+                <li><input type="radio" name="q104" value="d"> A injúria envolve a imputação de fato ofensivo, enquanto a difamação se baseia em xingamentos ou insultos pessoais.</li>
+                <li><input type="radio" name="q104" value="e"> A injúria ofende a dignidade pessoal de alguém, enquanto a difamação ofende a reputação da pessoa.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A injúria ofende a dignidade pessoal de alguém, enquanto a difamação ofende a reputação da pessoa, como previsto no Código Penal.</div>
+        </div>
+        <div class="question-box" data-answer="a" id="105">
+            <h3>105) Qual é a principal diferença entre o **roubo próprio** e o **roubo impróprio**?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q105" value="a"> No roubo próprio, a violência ocorre antes ou durante a subtração do bem, enquanto no roubo impróprio, ela ocorre após a subtração para garantir a posse do bem.</li>
+                <li><input type="radio" name="q105" value="b"> No roubo próprio, a violência ocorre após a subtração, enquanto no roubo impróprio, ela ocorre antes da subtração do bem.</li>
+                <li><input type="radio" name="q105" value="c"> O roubo próprio é cometido exclusivamente com arma de fogo, enquanto o roubo impróprio é praticado apenas com violência física.</li>
+                <li><input type="radio" name="q105" value="d"> O roubo impróprio envolve violência psicológica, enquanto o roubo próprio envolve apenas violência física.</li>
+                <li><input type="radio" name="q105" value="e"> No roubo impróprio, a violência é exercida para assegurar a posse do bem durante o ato de subtração.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">No roubo próprio, a violência ocorre antes ou durante a subtração do bem, enquanto no roubo impróprio, ela ocorre após a subtração para garantir a posse do bem.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b" id="106">
+            <h3>106) O que caracteriza a **extorsão**?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q106" value="a"> A extorsão envolve obter vantagem ilícita por meio de fraude ou engano.</li>
+                <li><input type="radio" name="q106" value="b"> A extorsão ocorre quando alguém faz com que a vítima entregue um bem ou valor mediante violência ou ameaça.</li>
+                <li><input type="radio" name="q106" value="c"> A extorsão envolve um agente público exigindo vantagem econômica em troca de benefícios legais.</li>
+                <li><input type="radio" name="q106" value="d"> A extorsão é caracterizada pelo abuso de autoridade por parte de um funcionário público.</li>
+                <li><input type="radio" name="q106" value="e"> A extorsão é um crime relacionado à subtração de bens sem o uso de violência ou ameaça.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A extorsão ocorre quando alguém faz com que a vítima entregue um bem ou valor mediante violência ou ameaça, visando vantagem indevida.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c" id="107">
+            <h3>107) Qual é a definição de **peculato** no Código Penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q107" value="a"> Peculato é o crime cometido por um funcionário público que usa seu cargo para praticar fraude em contratos administrativos.</li>
+                <li><input type="radio" name="q107" value="b"> Peculato é o crime cometido por um funcionário público ao se apropriar de bens públicos ou privados que estão sob sua posse devido ao cargo.</li>
+                <li><input type="radio" name="q107" value="c"> Peculato é o ato de desviar verbas públicas para benefício próprio sem a necessidade de cargo público.</li>
+                <li><input type="radio" name="q107" value="d"> Peculato envolve a subtração de bens de um particular, feita por um funcionário público.</li>
+                <li><input type="radio" name="q107" value="e"> Peculato é o ato de apropriar-se de bens ou valores públicos para realizar pagamentos fraudulentos a terceiros.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Peculato é o crime cometido por um funcionário público ao se apropriar de bens públicos ou privados que estão sob sua posse devido ao cargo.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d" id="108">
+            <h3>108) O que caracteriza o **crime de concussão**?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q108" value="a"> Concussão é exigir, de forma indevida, vantagem econômica de um particular sem o uso de violência.</li>
+                <li><input type="radio" name="q108" value="b"> Concussão é exigir, para si ou para outra pessoa, vantagem ilícita diretamente relacionada a uma função pública, mesmo que fora da função.</li>
+                <li><input type="radio" name="q108" value="c"> Concussão é o abuso de poder de um funcionário público para obter vantagens em processos legais.</li>
+                <li><input type="radio" name="q108" value="d"> Concussão é exigir, direta ou indiretamente, vantagem indevida, ainda que fora da função, mas em razão dela.</li>
+                <li><input type="radio" name="q108" value="e"> Concussão é a prática de um crime cometido por um funcionário público que altera dados administrativos.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Concussão é exigir, direta ou indiretamente, vantagem indevida, ainda que fora da função, mas em razão dela, por parte de um funcionário público.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e" id="109">
+            <h3>109) O que caracteriza um **inquérito policial**?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q109" value="a"> O inquérito policial é um procedimento administrativo conduzido pela polícia, com valor de prova judicial para a ação penal.</li>
+                <li><input type="radio" name="q109" value="b"> O inquérito policial é obrigatório e precisa ser instaurado antes de qualquer ação penal, independentemente das circunstâncias.</li>
+                <li><input type="radio" name="q109" value="c"> O inquérito policial é um processo judicial que garante o julgamento imediato de um crime.</li>
+                <li><input type="radio" name="q109" value="d"> O inquérito policial é sigiloso, mas sua instauração é pública, sendo necessário para qualquer tipo de ação penal.</li>
+                <li><input type="radio" name="q109" value="e"> O inquérito policial é um procedimento administrativo conduzido pela polícia, visando apurar infrações penais e identificar autores, mas não é obrigatório e não tem valor de prova judicial.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O inquérito policial é um procedimento administrativo conduzido pela polícia, visando apurar infrações penais e identificar autores, mas não é obrigatório e não tem valor de prova judicial.</div>
+        </div>
+        <div class="question-box" data-answer="a" id="110">
+            <h3>110) Qual é a principal função **preservadora** do inquérito policial?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q110" value="a"> Evitar processos sem fundamento e proteger a imagem do investigado.</li>
+                <li><input type="radio" name="q110" value="b"> Auxiliar na formação de opinião do Ministério Público.</li>
+                <li><input type="radio" name="q110" value="c"> Reunir provas que garantam a acusação do réu em juízo.</li>
+                <li><input type="radio" name="q110" value="d"> Proteger a vítima e testemunhas durante o processo.</li>
+                <li><input type="radio" name="q110" value="e"> Criar um banco de dados sobre crimes para futuras investigações.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A função preservadora do inquérito policial visa evitar processos sem fundamento e proteger a imagem do investigado.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b" id="111">
+            <h3>111) Qual é a **finalidade** do inquérito policial?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q111" value="a"> Convocar testemunhas para o julgamento de um processo judicial.</li>
+                <li><input type="radio" name="q111" value="b"> Reunir informações sobre autoria e materialidade do crime para subsidiar o início de um possível processo judicial.</li>
+                <li><input type="radio" name="q111" value="c"> Definir a pena do réu de forma antecipada.</li>
+                <li><input type="radio" name="q111" value="d"> Realizar a defesa do investigado em processo judicial.</li>
+                <li><input type="radio" name="q111" value="e"> Propor ações judiciais em nome da vítima.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A finalidade do inquérito policial é reunir informações sobre autoria e materialidade do crime para subsidiar o início de um possível processo judicial.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c" id="112">
+            <h3>112) Qual das alternativas descreve uma característica **discricionária** do inquérito policial?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q112" value="a"> O inquérito é conduzido por uma autoridade pública escolhida pelo Ministério Público.</li>
+                <li><input type="radio" name="q112" value="b"> O inquérito é iniciado exclusivamente por delação da vítima.</li>
+                <li><input type="radio" name="q112" value="c"> A autoridade policial decide os rumos da investigação, de acordo com sua conveniência.</li>
+                <li><input type="radio" name="q112" value="d"> O inquérito é obrigatório para todos os crimes, sem exceção.</li>
+                <li><input type="radio" name="q112" value="e"> A investigação precisa ser conduzida em audiência pública.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A característica discricionária do inquérito policial é que a autoridade policial decide os rumos da investigação, de acordo com sua conveniência.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d" id="113">
+            <h3>113) Qual é a **característica inquisitorial** do inquérito policial?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q113" value="a"> O contraditório e a ampla defesa são obrigatórios durante a investigação.</li>
+                <li><input type="radio" name="q113" value="b"> A autoridade policial pode decidir sobre a inocência do investigado durante o inquérito.</li>
+                <li><input type="radio" name="q113" value="c"> O inquérito é conduzido por um juiz, que verifica as provas apresentadas.</li>
+                <li><input type="radio" name="q113" value="d"> Não há contraditório nem ampla defesa no inquérito policial, sendo sigiloso.</li>
+                <li><input type="radio" name="q113" value="e"> O inquérito é feito em audiência pública para garantir o direito de defesa.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A característica inquisitorial do inquérito policial é que não há contraditório nem ampla defesa, sendo o processo sigiloso e conduzido sem a participação da defesa.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e" id="114">
+            <h3>114) O que caracteriza a **Delatio Criminis Simples**?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q114" value="a"> A vítima apresenta uma queixa formal ao Ministério Público para iniciar a investigação.</li>
+                <li><input type="radio" name="q114" value="b"> O crime é comunicado diretamente ao juiz, sem necessidade de formalidade.</li>
+                <li><input type="radio" name="q114" value="c"> A delação é feita por uma testemunha, sem qualquer ligação com a vítima.</li>
+                <li><input type="radio" name="q114" value="d"> A delação é feita exclusivamente por um advogado que representa a parte envolvida.</li>
+                <li><input type="radio" name="q114" value="e"> Qualquer pessoa pode comunicar o crime à autoridade policial, sem necessidade de representação da vítima.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A Delatio Criminis Simples ocorre quando qualquer pessoa comunica o crime à autoridade, sem necessidade de representação da vítima.</div>
+        </div>
+        <div class="question-box" data-answer="b" id="115">
+            <h3>115) Qual o prazo para conclusão do **inquérito policial** quando o investigado está **preso**, de acordo com a regra geral do CPP?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q115" value="a"> 20 dias</li>
+                <li><input type="radio" name="q115" value="b"> 10 dias</li>
+                <li><input type="radio" name="q115" value="c"> 15 dias</li>
+                <li><input type="radio" name="q115" value="d"> 30 dias</li>
+                <li><input type="radio" name="q115" value="e"> 60 dias</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">De acordo com a regra geral do CPP, o prazo para conclusão do inquérito policial é de 10 dias quando o investigado está preso.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c" id="116">
+            <h3>116) Qual é o prazo para conclusão do **inquérito policial** em um caso de **inquérito policial militar** para um investigado **solto**?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q116" value="a"> 30 + 30 dias</li>
+                <li><input type="radio" name="q116" value="b"> 40 + 20 dias</li>
+                <li><input type="radio" name="q116" value="c"> 40 dias</li>
+                <li><input type="radio" name="q116" value="d"> 20 + 20 dias</li>
+                <li><input type="radio" name="q116" value="e"> 15 + 15 dias</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Em um caso de inquérito policial militar para um investigado solto, o prazo é de 40 + 20 dias.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d" id="117">
+            <h3>117) Qual é o prazo para conclusão do **inquérito policial** relacionado à **Lei de Drogas** quando o investigado está **preso**?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q117" value="a"> 15 + 15 dias</li>
+                <li><input type="radio" name="q117" value="b"> 30 dias</li>
+                <li><input type="radio" name="q117" value="c"> 40 dias</li>
+                <li><input type="radio" name="q117" value="d"> 30 + 30 dias</li>
+                <li><input type="radio" name="q117" value="e"> 90 + 90 dias</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">No caso da Lei de Drogas, o prazo para conclusão do inquérito policial quando o investigado está preso é de 30 + 30 dias.</div>
+        </div>
+        
+        <div class="question-box" data-answer="a" id="118">
+            <h3>118) Qual é a principal característica da **Ação Penal Privada**?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q118" value="a"> Somente se procede mediante queixa, e o titular da ação penal é o ofendido.</li>
+                <li><input type="radio" name="q118" value="b"> Depende da manifestação do Ministério Público para ser iniciada.</li>
+                <li><input type="radio" name="q118" value="c"> O Ministério Público é o titular da ação, independentemente da vítima.</li>
+                <li><input type="radio" name="q118" value="d"> A ação penal é pública e não depende de representação.</li>
+                <li><input type="radio" name="q118" value="e"> Não é necessário formalizar uma queixa para iniciar a ação.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A principal característica da Ação Penal Privada é que somente se procede mediante queixa, e o titular da ação penal é o ofendido.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e" id="119">
+            <h3>119) Qual é o prazo de **decadência** para a extinção da ação penal pública condicionada e ação penal privada?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q119" value="a"> 3 meses, contados do conhecimento da autoria.</li>
+                <li><input type="radio" name="q119" value="b"> 1 ano, contados do conhecimento da autoria.</li>
+                <li><input type="radio" name="q119" value="c"> 6 meses, contados da data do crime.</li>
+                <li><input type="radio" name="q119" value="d"> 12 meses, contados do conhecimento da autoria.</li>
+                <li><input type="radio" name="q119" value="e"> 6 meses, contados do conhecimento da autoria.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O prazo de decadência para a extinção da ação penal pública condicionada e ação penal privada é de 6 meses, contados do conhecimento da autoria.</div>
+        </div>
+        <div class="question-box" data-answer="c" id="120">
+            <h3>120) Qual das características abaixo é correta sobre a **renúncia** em relação ao direito de ação penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q120" value="a"> A renúncia é irrevogável e não admite renúncia tácita.</li>
+                <li><input type="radio" name="q120" value="b"> A renúncia é divisível, ou seja, pode ser aplicada a um único envolvido.</li>
+                <li><input type="radio" name="q120" value="c"> A renúncia é irretratável, mas admite renúncia tácita.</li>
+                <li><input type="radio" name="q120" value="d"> A renúncia é divisível e pode ser revogada a qualquer momento.</li>
+                <li><input type="radio" name="q120" value="e"> A renúncia pode ser desfeita a qualquer tempo.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A renúncia é irretratável, mas admite renúncia tácita, conforme o artigo 57 do CPP.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b" id="121">
+            <h3>121) Qual é a **finalidade** da prova no processo penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q121" value="a"> Formar a convicção do réu sobre os fatos do processo.</li>
+                <li><input type="radio" name="q121" value="b"> Formar a convicção do juiz sobre a verdade dos fatos.</li>
+                <li><input type="radio" name="q121" value="c"> Garantir que todas as partes do processo apresentem provas válidas.</li>
+                <li><input type="radio" name="q121" value="d"> Substituir o juiz na tomada de decisões.</li>
+                <li><input type="radio" name="q121" value="e"> Assegurar a apresentação de novas evidências por ambas as partes.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A finalidade da prova no processo penal é formar a convicção do juiz sobre a verdade dos fatos.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e" id="122">
+            <h3>122) Quais **fatos** a seguir independem de **prova** no processo penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q122" value="a"> Fatos intuitivos e fatos que são presunções legais absolutas.</li>
+                <li><input type="radio" name="q122" value="b"> Fatos que são notórios, irrelevantes ou de conhecimento exclusivo de uma parte.</li>
+                <li><input type="radio" name="q122" value="c"> Fatos impossíveis e fatos que envolvem apenas presunção legal relativa.</li>
+                <li><input type="radio" name="q122" value="d"> Apenas os fatos impossíveis e irrelevantes não precisam de prova.</li>
+                <li><input type="radio" name="q122" value="e"> Fatos impossíveis, intuitivos, irrelevantes, notórios e com presunção legal absoluta.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Fatos impossíveis, intuitivos, irrelevantes, notórios e com presunção legal absoluta não necessitam de prova no processo penal.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d" id="123">
+            <h3>123) Qual **princípio** da prova no processo penal garante que as partes podem utilizar a mesma prova?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q123" value="a"> Princípio da Imparcialidade.</li>
+                <li><input type="radio" name="q123" value="b"> Princípio da Autonomia das Provas.</li>
+                <li><input type="radio" name="q123" value="c"> Princípio da Exclusividade da Prova.</li>
+                <li><input type="radio" name="q123" value="d"> Princípio da Comunhão da Prova.</li>
+                <li><input type="radio" name="q123" value="e"> Princípio da Oralidade das Provas.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Princípio da Comunhão da Prova garante que a prova pertence ao processo e pode ser utilizada por ambas as partes.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b" id="124">
+            <h3>124) Qual é o princípio da prova no processo penal que afirma que ninguém pode ser obrigado a produzir prova contra si mesmo?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q124" value="a"> Princípio da Busca da Verdade.</li>
+                <li><input type="radio" name="q124" value="b"> Princípio do Nemo Tenetur Se Detegere.</li>
+                <li><input type="radio" name="q124" value="c"> Princípio da Imparcialidade.</li>
+                <li><input type="radio" name="q124" value="d"> Princípio da Oralidade.</li>
+                <li><input type="radio" name="q124" value="e"> Princípio da Autorresponsabilidade das Partes.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O Princípio do Nemo Tenetur Se Detegere afirma que ninguém é obrigado a produzir prova contra si mesmo.</div>
+        </div>
+        <div class="question-box" data-answer="a" id="125">
+            <h3>125) Qual é a classificação das **medidas cautelares** de acordo com o Código de Processo Penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q125" value="a"> Natureza pessoal, patrimonial e probatória.</li>
+                <li><input type="radio" name="q125" value="b"> Natureza processual, material e informativa.</li>
+                <li><input type="radio" name="q125" value="c"> Natureza preventiva, corretiva e punitiva.</li>
+                <li><input type="radio" name="q125" value="d"> Natureza jurídica, administrativa e de execução.</li>
+                <li><input type="radio" name="q125" value="e"> Natureza preventiva, patrimonial e de probatória.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">As medidas cautelares são classificadas em natureza pessoal, patrimonial e probatória, conforme o artigo 282 do CPP.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b" id="126">
+            <h3>126) Qual é o objetivo das **medidas cautelares de natureza probatória**?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q126" value="a"> Garantir a prisão do acusado antes do julgamento.</li>
+                <li><input type="radio" name="q126" value="b"> Assegurar a coleta e preservação das provas no processo.</li>
+                <li><input type="radio" name="q126" value="c"> Impedir que o acusado se ausente durante o processo.</li>
+                <li><input type="radio" name="q126" value="d"> Promover a reparação de danos à vítima.</li>
+                <li><input type="radio" name="q126" value="e"> Restringir os direitos do acusado até a condenação final.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">As medidas cautelares de natureza probatória visam assegurar a coleta e preservação das provas no processo.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c" id="127">
+            <h3>127) Qual é a **prisão cautelar** no processo penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q127" value="a"> Prisão que ocorre após o trânsito em julgado da sentença.</li>
+                <li><input type="radio" name="q127" value="b"> Prisão para execução da pena definitiva após condenação.</li>
+                <li><input type="radio" name="q127" value="c"> Prisão realizada antes do trânsito em julgado, durante a investigação ou processo.</li>
+                <li><input type="radio" name="q127" value="d"> Prisão aplicada apenas após julgamento do recurso.</li>
+                <li><input type="radio" name="q127" value="e"> Prisão que ocorre para garantir o cumprimento de sentença final.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A prisão cautelar ocorre antes do trânsito em julgado, durante a investigação ou processo.</div>
+        </div>
+        
+        <div class="question-box" data-answer="a" id="128">
+            <h3>128) Qual é o tipo de **prisão** que ocorre após o trânsito em julgado da sentença?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q128" value="a"> Prisão penal.</li>
+                <li><input type="radio" name="q128" value="b"> Prisão cautelar.</li>
+                <li><input type="radio" name="q128" value="c"> Prisão de segurança máxima.</li>
+                <li><input type="radio" name="q128" value="d"> Prisão militar.</li>
+                <li><input type="radio" name="q128" value="e"> Prisão provisória.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A prisão penal ocorre após o trânsito em julgado da sentença, durante a execução da pena definitiva.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e" id="129">
+            <h3>129) Qual das **prisões** abaixo não é considerada como **prisão cautelar** no processo penal?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q129" value="a"> Prisão militar.</li>
+                <li><input type="radio" name="q129" value="b"> Prisão provisória.</li>
+                <li><input type="radio" name="q129" value="c"> Prisão preventiva.</li>
+                <li><input type="radio" name="q129" value="d"> Prisão temporária.</li>
+                <li><input type="radio" name="q129" value="e"> Prisão penal.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">A prisão penal ocorre após o trânsito em julgado, enquanto as demais são prisões cautelares realizadas durante a investigação ou processo.</div>
+        </div>
+        <div class="question-box" data-answer="a" id="130">
+            <h3>130) Qual a principal característica do **flagrante facultativo**?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q130" value="a"> Qualquer pessoa pode prender quem esteja cometendo um crime, atuando no exercício regular do direito.</li>
+                <li><input type="radio" name="q130" value="b"> Apenas a autoridade policial pode prender quem esteja cometendo um crime.</li>
+                <li><input type="radio" name="q130" value="c"> A prisão deve ser feita somente após a investigação do crime.</li>
+                <li><input type="radio" name="q130" value="d"> O flagrante é feito apenas quando o criminoso é capturado imediatamente após o crime.</li>
+                <li><input type="radio" name="q130" value="e"> A prisão ocorre quando o suspeito é encontrado com provas do crime, mas sem perseguição.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O flagrante facultativo permite que qualquer pessoa prenda quem esteja cometendo um crime, desde que no exercício regular do direito.</div>
+        </div>
+        
+        <div class="question-box" data-answer="b" id="131">
+            <h3>131) O que caracteriza o **flagrante obrigatório**?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q131" value="a"> A prisão pode ser feita por qualquer pessoa, desde que a lei permita.</li>
+                <li><input type="radio" name="q131" value="b"> A prisão deve ser realizada pelas autoridades policiais ou seus agentes, no cumprimento do dever legal.</li>
+                <li><input type="radio" name="q131" value="c"> A prisão ocorre sempre após a sentença judicial.</li>
+                <li><input type="radio" name="q131" value="d"> A prisão deve ser decretada pelo juiz a requerimento do Ministério Público.</li>
+                <li><input type="radio" name="q131" value="e"> A prisão deve ser feita apenas com o consentimento da vítima.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O flagrante obrigatório exige que as autoridades policiais ou seus agentes realizem a prisão, no cumprimento do dever legal.</div>
+        </div>
+        
+        <div class="question-box" data-answer="c" id="132">
+            <h3>132) O que caracteriza o **flagrante impróprio**?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q132" value="a"> O criminoso é capturado imediatamente após a prática do crime.</li>
+                <li><input type="radio" name="q132" value="b"> A prisão é feita com base em provas materiais de um crime ocorrido.</li>
+                <li><input type="radio" name="q132" value="c"> O suspeito é perseguido imediatamente após cometer o crime, com circunstâncias que fazem presumir a autoria.</li>
+                <li><input type="radio" name="q132" value="d"> A prisão é feita após o flagrante ser forjado para incriminar uma pessoa.</li>
+                <li><input type="radio" name="q132" value="e"> A prisão ocorre sem a necessidade de perseguição e sem provas materiais do crime.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O flagrante impróprio ocorre quando o suspeito é perseguido logo após cometer o crime, com indícios que indicam a autoria.</div>
+        </div>
+        
+        <div class="question-box" data-answer="d" id="133">
+            <h3>133) O que caracteriza o **flagrante forjado**?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q133" value="a"> A prisão é feita com base em provas forjadas para incriminar um inocente.</li>
+                <li><input type="radio" name="q133" value="b"> A prisão é feita de forma legal, sem manipulação de provas.</li>
+                <li><input type="radio" name="q133" value="c"> A prisão é realizada apenas após a sentença judicial.</li>
+                <li><input type="radio" name="q133" value="d"> O flagrante forjado é considerado legal, desde que o criminoso tenha sido pego em flagrante.</li>
+                <li><input type="radio" name="q133" value="e"> A prisão é realizada pelo juiz sem necessidade de provas ou flagrante.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">O flagrante forjado ocorre quando a prisão é fabricada com o objetivo de incriminar uma pessoa inocente, sendo ilegal e passível de relaxamento.</div>
+        </div>
+        
+        <div class="question-box" data-answer="e" id="134">
+            <h3>134) Qual é o prazo da **prisão temporária** para crimes hediondos?</h3>
+            <p>Selecione a alternativa correta:</p>
+            <ul>
+                <li><input type="radio" name="q134" value="a"> 5 dias, podendo ser prorrogado por mais 5 dias.</li>
+                <li><input type="radio" name="q134" value="b"> 10 dias, com prorrogação de 10 dias.</li>
+                <li><input type="radio" name="q134" value="c"> 30 dias, sem possibilidade de prorrogação.</li>
+                <li><input type="radio" name="q134" value="d"> 30 dias, podendo ser prorrogado por mais 30 dias.</li>
+                <li><input type="radio" name="q134" value="e"> 15 dias, com prorrogação de 15 dias.</li>
+            </ul>
+            <button class="button" onclick="verificarResposta(this)">Enviar Resposta</button>
+            <div class="explanation">Para crimes hediondos, o prazo da prisão temporária é de 30 dias, podendo ser prorrogado por mais 30 dias.</div>
+        </div>
+                                                                                                                                                                                                                          
+    </div>
+
+    <script>
+        function verificarResposta(botao) {
+            let questionBox = botao.parentElement;
+            let respostaSelecionada = questionBox.querySelector('input[type=radio]:checked');
+            if (respostaSelecionada) {
+                let respostaCorreta = questionBox.getAttribute('data-answer');
+                questionBox.querySelectorAll('li').forEach(li => li.classList.remove('correct', 'incorrect'));
+                let resposta = respostaSelecionada.value;
+                let itemSelecionado = respostaSelecionada.parentElement;
+                if (resposta === respostaCorreta) {
+                    itemSelecionado.classList.add('correct');
+                } else {
+                    itemSelecionado.classList.add('incorrect');
+                    questionBox.querySelector('.explanation').style.display = 'block';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
